@@ -1,5 +1,71 @@
 // Начальные стили для инициализации
+/****VARIABLES*****/
+/****FONTS*****/
+$font-primary : 'Open Sans', sans-serif;
 
-body {
-  background: black;
+/****COLORS*****/
+$color-primary: #318CCA;
+
+
+/*STYLES*/
+.ds {
+  background: #c0c0c0;
+}
+
+.ds-title {
+	width: 100%;
+	font-size: 24px;
+	text-align: center;
+}
+.ds-wrapper {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.ds-wrapper > div {
+	margin: 0 20px 20px 0;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: $font-primary;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/******SVG-icons*******/
+
+/******HTML-icons*******/
+.burger {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 14px;
+	height: 8.5px;
+	.burger-line {
+		position: absolute;
+		width: 100%;
+		height: 1.5px;
+		background: #fff;
+		border-radius: 0.75px;
+	}
+	.burger-line:nth-child(1) {
+		top: 0;
+	}
+	.burger-line:nth-child(3) {
+		bottom: 0;
+	}
+}
+
+/******TEXT*******/
+.link {
+	font-family: $font-primary;
+	color: $color-primary;
+	text-decoration: none;
+	cursor: pointer;
+	outline: none;
 }
