@@ -6,6 +6,9 @@ $font-primary : 'Open Sans', sans-serif;
 /****COLORS*****/
 $color-primary: #318CCA;
 
+/****TRANSITION*****/
+$transition-primary: 0.3s ease-in-out;
+
 
 /*STYLES*/
 .ds {
@@ -25,6 +28,11 @@ $color-primary: #318CCA;
 .ds-wrapper > div {
 	margin: 0 20px 20px 0;
 }
+.ds-wrapper > svg {
+	width: 50px;
+	height: 50px;
+	margin: 0 20px 20px 0;
+}
 
 * {
 	box-sizing: border-box;
@@ -37,7 +45,566 @@ ul {
 }
 
 /******SVG-icons*******/
+symbol {
+	path {
+		transition: $transition-primary;
+	}
+}
 
+symbol.active {
+	.p-FF9100 {
+		fill: #FF9100;
+	}
+	.p-FFDA2D {
+		fill: #FFDA2D;
+	}
+	.p-FFDE55 {
+		fill: #FFDE55;
+	}
+	.p-FDBF00 {
+		fill: #FDBF00;
+	}
+	.p-68544F {
+		fill: #68544F;
+	}
+	.p-53433F {
+		fill: #53433F;
+	}
+	.p-B9DFFC {
+		fill: #B9DFFC;
+	}
+	.p-DDC2B7 {
+		fill: #DDC2B7;
+	}
+	.p-FFE9E0 {
+		fill: #FFE9E0;
+	}
+	.p-3E322E {
+		fill: #3E322E;
+	}
+	.p-FF9F00 {
+		fill: #FF9F00;
+	}
+	.p-8C493B {
+		fill: #8C493B;
+	}
+	.p-774135 {
+		fill: #774135;
+	}
+	.p-A1D1FD {
+		fill: #A1D1FD;
+	}
+	.p-F6C958 {
+		fill: #F6C958;
+	}
+	.p-58ADE5 {
+		fill: #58ADE5;
+	}
+	.p-4D98CB {
+		fill: #4D98CB;
+	}
+	.p-E5BC53 {
+		fill: #E5BC53;
+	}
+	.p-F5F6F6 {
+		fill: #F5F6F6;
+	}
+	.p-E5E5E5 {
+		fill: #E5E5E5;
+	}
+	.p-95E9D2 {
+		fill: #95E9D2;
+	}
+	.p-D85397 {
+		fill: #D85397;
+	}
+	.p-FFB64C {
+		fill: #FFB64C;
+	}
+	.p-FF914A {
+		fill: #FF914A;
+	}
+	.p-AF5D5B {
+		fill: #AF5D5B;
+	}
+	.p-974C4E {
+		fill: #974C4E;
+	}
+	.p-783541 {
+		fill: #783541;
+	}
+	.p-FFD396 {
+		fill: #FFD396;
+	}
+	.p-FF637B {
+		fill: #FF637B;
+	}
+	.p-E63950 {
+		fill: #E63950;
+	}
+	.p-F2F2F2 {
+		fill: #F2F2F2;
+	}
+	.p-D3D3D8 {
+		fill: #D3D3D8;
+	}
+	.p-FBC56D {
+		fill: #FBC56D;
+	}
+	.p-EBAE56 {
+		fill: #EBAE56;
+	}
+	.p-AE2538 {
+		fill: #AE2538;
+	}
+	.p-AF2768 {
+		fill: #AF2768;
+	}
+	.p-EA348B {
+		fill: #EA348B;
+	}
+	.p-751A46 {
+		fill: #751A46;
+	}
+	.p-BCE4F9 {
+		fill: #BCE4F9;
+	}
+	.p-7BCEFC {
+		fill: #7BCEFC;
+	}
+	.p-FBDA35 {
+		fill: #FBDA35;
+	}
+	.p-F7BA35 {
+		fill: #F7BA35;
+	}
+	.p-B29A7E {
+		fill: #B29A7E;
+	}
+	.p-A58868 {
+		fill: #A58868;
+	}
+	.p-947859 {
+		fill: #947859;
+	}
+	.p-BFA993 {
+		fill: #BFA993;
+	}
+	.p-88888F {
+		fill: #88888F;
+	}
+	.p-EBE4DD {
+		fill: #EBE4DD;
+	}
+	.p-D8CCBC {
+		fill: #D8CCBC;
+	}
+	.p-564541 {
+		fill: #564541;
+	}
+	.p-FF4040 {
+		fill: #FF4040;
+	}
+	.p-E10000 {
+		fill: #E10000;
+	}
+	.p-00AAF0 {
+		fill: #00AAF0;
+	}
+	.p-CCEFFF {
+		fill: #CCEFFF;
+	}
+	.p-ACE3FC {
+		fill: #ACE3FC;
+	}
+	.p-D6702B {
+		fill: #D6702B;
+	}
+	.p-BF6015 {
+		fill: #BF6015;
+	}
+	.p-E08344 {
+		fill: #E08344;
+	}
+	.p-FEDBAB {
+		fill: #FEDBAB;
+	}
+	.p-FEC478 {
+		fill: #FEC478;
+	}
+	.p-FEA832 {
+		fill: #FEA832;
+	}
+	.p-FD4B2D {
+		fill: #FD4B2D;
+	}
+	.p-E8130F {
+	fill: #E8130F;
+	}
+	.p-FF6849 {
+		fill: #FF6849;
+	}
+	.p-FFEA84 {
+		fill: #FFEA84;
+	}
+	.p-FFDC40 {
+		fill: #FFDC40;
+	}
+	.p-FFAB15 {
+		fill: #FFAB15;
+	}
+	.p-00C3FF {
+		fill: #00C3FF;
+	}
+	.p-DCF4FF {
+		fill: #DCF4FF;
+	}
+	.p-87E694 {
+		fill: #87E694;
+	}
+	.p-66CC70 {
+		fill: #66CC70;
+	}
+	.p-FF7452 {
+		fill: #FF7452;
+	}
+	.p-FB9D46 {
+		fill: #FB9D46;
+	}
+	.p-F7EDBC {
+		fill: #F7EDBC;
+	}
+	.p-FFFFFF {
+		fill: #FFFFFF;
+	}
+	.p-E24642 {
+		fill: #E24642;
+	}
+	.p-F15D4A {
+		fill: #F15D4A;
+	}
+	.p-C42725 {
+		fill: #C42725;
+	}
+	.p-D33734 {
+		fill: #D33734;
+	}
+	.p-FF641A {
+		fill: #FF641A;
+	}
+	.p-FFF5F5 {
+		fill: #FFF5F5;
+	}
+	.p-EFE2DD {
+		fill: #EFE2DD;
+	}
+	.p-9CDD05 {
+		fill: #9CDD05;
+	}
+	.p-CDBFBA {
+		fill: #CDBFBA;
+	}
+	.p-54469D {
+		fill: #54469D;
+	}
+	.p-463B85 {
+		fill: #463B85;
+	}
+	.p-CB75F6 {
+		fill: #CB75F6;
+	}
+	.p-C6E2E7 {
+		fill: #C6E2E7;
+	}
+	.p-392E6E {
+		fill: #392E6E;
+	}
+	.p-DEECF1 {
+		fill: #DEECF1;
+	}
+	.p-FFE470 {
+		fill: #FFE470;
+	}
+	.p-FFD400 {
+		fill: #FFD400;
+	}
+	.p-E0F4FE {
+		fill: #E0F4FE;
+	}
+	.p-BCDBFD {
+		fill: #BCDBFD;
+	}
+	.p-FED843 {
+		fill: #FED843;
+	}
+	.p-FD7EB8 {
+		fill: #FD7EB8;
+	}
+	.p-2D3C72 {
+		fill: #2D3C72;
+	}
+	.p-1A2958 {
+		fill: #1A2958;
+	}
+	.p-1AAA94 {
+		fill: #1AAA94;
+	}
+	.p-149084 {
+		fill: #149084;
+	}
+	.p-EDBE2B {
+		fill: #EDBE2B;
+	}
+	.p-9BBAD9 {
+		fill: #9BBAD9;
+	}
+	.p-62739A {
+		fill: #62739A;
+	}
+	.p-00D7DF {
+		fill: #00D7DF;
+	}
+	.p-CCF7F9 {
+		fill: #CCF7F9;
+	}
+	.p-FFE98F {
+		fill: #FFE98F;
+	}
+	.p-565659 {
+		fill: #565659;
+	}
+	.p-FF9811 {
+		fill: #FF9811;
+	}
+	.p-FFDA44 {
+		fill: #FFDA44;
+	}
+	.p-CDCDD0 {
+		fill: #CDCDD0;
+	}
+	.p-ACABB1 {
+		fill: #ACABB1;
+	}
+	.p-663325 {
+		fill: #663325;
+	}
+	.p-582B1F {
+		fill: #582B1F;
+	}
+	.p-FAECD8 {
+		fill: #FAECD8;
+	}
+	.p-F9D8B4 {
+		fill: #F9D8B4;
+	}
+	.p-804231 {
+		fill: #804231;
+	}
+	.p-FF4B00 {
+		fill: #FF4B00;
+	}
+	.p-DD3400 {
+		fill: #DD3400;
+	}
+	.p-7C8388 {
+		fill: #7C8388;
+	}
+	.p-575F64 {
+		fill: #575F64;
+	}
+	.p-32393F {
+		fill: #32393F;
+	}
+	.p-FF4F1A {
+		fill: #FF4F1A;
+	}
+	.p-60DD4E {
+		fill: #60DD4E;
+	}
+	.p-00BB64 {
+		fill: #00BB64;
+	}
+	.p-CA1C00 {
+		fill: #CA1C00;
+	}
+	.p-DE0418 {
+		fill: #DE0418;
+	}
+	.p-A3021A {
+		fill: #A3021A;
+	}
+	.p-FF6536 {
+		fill: #FF6536;
+	}
+	.p-BBDCFF {
+		fill: #BBDCFF;
+	}
+	.p-9ABADB {
+		fill: #9ABADB;
+	}
+	.p-E0F4FF {
+		fill: #E0F4FF;
+	}
+	.p-FF5E5B {
+		fill: #FF5E5B;
+	}
+	.p-ED3E3C {
+		fill: #ED3E3C;
+	}
+	.p-F7DC4D {
+		fill: #F7DC4D;
+	}
+	.p-EDA637 {
+		fill: #EDA637;
+	}
+	.p-94B4D7 {
+		fill: #94B4D7;
+	}
+	.p-FF3C7D {
+		fill: #FF3C7D;
+	}
+	.p-FFA2C1 {
+		fill: #FFA2C1;
+	}
+	.p-04303E {
+		fill: #04303E;
+	}
+	.p-2FC0F0 {
+		fill: #2FC0F0;
+	}
+	.p-0FA9DD {
+		fill: #0FA9DD;
+	}
+	.p-09607D {
+		fill: #09607D;
+	}
+	.p-FF3939 {
+		fill: #FF3939;
+	}
+	.p-CCFC5C {
+		fill: #CCFC5C;
+	}
+	.p-2682FF {
+		fill: #2682FF;
+	}
+	.p-00CC76 {
+		fill: #00CC76;
+	}
+	.p-8CBCFF {
+		fill: #8CBCFF;
+	}
+	.p-B4D2D7 {
+		fill: #B4D2D7;
+	}
+	.p-E1EBF0 {
+		fill: #E1EBF0;
+	}
+	.p-3440DB {
+		fill: #3440DB;
+	}
+	.p-FFC9D0 {
+		fill: #FFC9D0;
+	}
+	.p-F4E2E2 {
+		fill: #F4E2E2;
+	}
+	.p-F7B239 {
+		fill: #F7B239;
+	}
+	.p-0B799D {
+		fill: #0B799D;
+	}
+	.p-2197D8 {
+		fill: #2197D8;
+	}
+	.p-E09B2D {
+		fill: #E09B2D;
+	}
+	.p-F95428 {
+		fill: #F95428;
+	}
+	.p-E59278 {
+		fill: #E59278;
+	}
+	.p-DF6246 {
+		fill: #DF6246;
+	}
+	.p-D1E5F5 {
+		fill: #D1E5F5;
+	}
+	.p-E8F4FC {
+		fill: #E8F4FC;
+	}
+	.p-2BA5F7 {
+		fill: #2BA5F7;
+	}
+	.p-07485E {
+		fill: #07485E;
+	}
+	.p-FFA7B3 {
+		fill: #FFA7B3;
+	}
+	.p-FFDECF {
+		fill: #FFDECF;
+	}
+	.p-FF415B {
+		fill: #FF415B;
+	}
+	.p-FF8E8E {
+		fill: #FF8E8E;
+	}
+	.p-DAC4BB {
+		fill: #DAC4BB;
+	}
+	.p-FF6C6C {
+		fill: #FF6C6C;
+	}
+	.p-E3D0C9 {
+		fill: #E3D0C9;
+	}
+	.p-BEEBFA {
+		fill: #BEEBFA;
+	}
+	.p-FF648D {
+		fill: #FF648D;
+	}
+	.p-FD387E {
+		fill: #FD387E;
+	}
+	.p-EBECEC {
+		fill: #EBECEC;
+	}
+	.p-C7EAF0 {
+		fill: #C7EAF0;
+	}
+	.p-BB2A5C {
+		fill: #BB2A5C;
+	}
+	.p-88DEE0 {
+		fill: #88DEE0;
+	}
+	.p-E57E25 {
+		fill: #E57E25;
+	}
+	.p-F18D46 {
+		fill: #F18D46;
+	}
+	.p-F1995B {
+		fill: #F1995B;
+	}
+	.p-F0C419 {
+		fill: #F0C419;
+	}
+	.p-C03A2B {
+		fill: #C03A2B;
+	}
+	.p-F3D55B {
+		fill: #F3D55B;
+	}
+	.p-E64C3C {
+		fill: #E64C3C;
+	}
+}
 /******HTML-icons*******/
 .burger {
 	position: relative;
