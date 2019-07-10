@@ -1531,6 +1531,34 @@ symbol.active {
 	}
 }
 
+.arrow-01 {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	background: #3FA8EF;
+	opacity: 0.5;
+	border-radius: 50%;
+	&:before, &:after {
+		position: absolute;
+		content: '';
+		height: 2px;
+		width: 13px;
+		border-radius: 5.5px;
+		background: #fff;
+		left: 12px;
+	}
+	&:before {
+		transform: rotate(45deg) translateY(-5.7px);
+	}
+	&:after {
+		transform: rotate(-45deg) translateY(5.5px);
+	}
+
+}
+
 /******TEXT*******/
 .link {
 	font-family: $font-primary;
