@@ -1559,6 +1559,34 @@ symbol.active {
 
 }
 
+.mode-01 {
+	position: relative;
+	display: flex;
+	align-items: center;
+	width: 30px;
+	height: 16px;
+	background: #BAB9B9;
+	border-radius: 50px;
+	transition: $transition-primary;
+	&:before {
+		content: '';
+		position: absolute;
+		width: 12px;
+		height: 12px;
+		background: #fff;
+		border-radius: 50%;
+		left: 2px;
+		transition: $transition-primary;
+	}
+	&.is-active {
+		background: $color-primary;
+		&:before {
+			left: auto;
+			right: 2px;
+		}
+	}
+}
+
 /******TEXT*******/
 .link {
 	font-family: $font-primary;
