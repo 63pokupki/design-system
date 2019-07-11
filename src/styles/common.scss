@@ -25,7 +25,7 @@ $transition-primary: 0.3s ease-in-out;
 	flex-direction: row;
 	flex-wrap: wrap;
 }
-.ds-wrapper > div {
+.ds-wrapper > div, .ds-wrapper > a {
 	margin: 0 20px 20px 0;
 }
 .ds-wrapper > svg {
@@ -1595,9 +1595,14 @@ symbol.active {
 	cursor: pointer;
 	outline: none;
 }
+.tag {
+	font-family: $font-primary;
+	color: $color-primary;
+	font-weight: bold;
+}
 
 /******ITEMS*******/
-.ds-wrapper .search {
+.ds-wrapper .search, .ds-wrapper .purchaseGather {
 	max-width: 200px;
 }
 .search {
@@ -1626,3 +1631,107 @@ symbol.active {
 		}
 	}
 }
+.purchaseStatus {
+	position: relative;
+	display: flex;
+	align-items: center;
+	font-weight: 800;
+	color: #0DC53D;
+	&-icon {
+		width: 40px;
+		height: 30px;
+		margin-right: 10px;
+	}
+	&-date {
+		margin-left: 5px;
+		color: inherit;
+	}
+	&_soon {
+		color: #FF8000;
+		.purchaseStatus-icon path {
+			fill: #FF8000;
+		}
+	}
+}
+.rating {
+	display: flex;
+	align-items: center;
+	&-icon {
+		height: 12px;
+		width: 12px;
+	}
+	&-value {
+		margin-left: 8px;
+		font-weight: bold;
+		color: #FFB21C;
+	}
+}
+.purchaseGather {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	&-status {
+		position: relative;
+		display: flex;
+		align-items: center;
+		width: 100%;
+		height: 18px;
+		padding: 2px 9px;
+		background: rgba(49, 140, 202, 0.5);
+		border-radius: 12px;
+		&:before {
+			content: '';
+			position: absolute;
+			width: 96px;
+			height: 100%;
+			left: 0;
+			border-radius: 12px;
+			background: $color-primary;
+		}
+	}
+	&-value {
+		position: relative;
+		display: flex;
+		align-items: center;
+		font-size: 10px;
+		font-weight: 600;
+		color: #FFF;
+		z-index: 1;
+	}
+	&-event {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		padding: 9px 0 0 10px;
+		font-size: 10px;
+		line-height: 14px;
+		color: #4b4b4b;
+	}
+	&-eventCount {
+		margin-right: 3px;
+		font-weight: bold;
+	}
+	&-currentValue, &-endValue {
+		margin: 0 2.5px;
+	}
+}
+.like {
+	display: flex;
+	align-items: center;
+	font-size: 10px;
+	line-height: 12px;
+	color: #979797;
+	&-text {
+		width: 68px;
+		margin-left: 10px;
+	}
+	&-icon {
+		cursor: pointer;
+	}
+	&.is-active {
+		.like-icon path {
+			fill: $color-primary;
+		}
+	}
+}
+
