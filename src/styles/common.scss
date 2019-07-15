@@ -1531,7 +1531,7 @@ symbol.active {
 	}
 }
 
-.arrow-01 {
+.arrow-01, .arrow-02 {
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -1557,6 +1557,14 @@ symbol.active {
 		transform: rotate(-45deg) translateY(5.5px);
 	}
 
+}
+
+.arrow-02 {
+	border-radius: 0;
+	background: rgba(256,256,256,0.7);
+	&:before, &:after {
+		background: $color-primary;
+	}
 }
 
 .mode-01 {
