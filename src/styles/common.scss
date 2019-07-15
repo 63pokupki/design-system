@@ -1,5 +1,1745 @@
 // Начальные стили для инициализации
+/****VARIABLES*****/
+/****FONTS*****/
+$font-primary : 'Open Sans', sans-serif;
 
-body {
-  background: black;
+/****COLORS*****/
+$color-primary: #318CCA;
+
+/****TRANSITION*****/
+$transition-primary: 0.3s ease-in-out;
+
+
+/*STYLES*/
+.ds {
+  background: #c0c0c0;
 }
+
+.ds-title {
+	width: 100%;
+	font-size: 24px;
+	text-align: center;
+}
+.ds-wrapper {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.ds-wrapper > div, .ds-wrapper > a {
+	margin: 0 20px 20px 0;
+}
+.ds-wrapper > svg {
+	width: 50px;
+	height: 50px;
+	margin: 0 20px 20px 0;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: $font-primary;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/******SVG-icons*******/
+symbol {
+	path {
+		transition: $transition-primary;
+	}
+}
+
+symbol.active {
+	.p-FF9100 {
+		fill: #FF9100;
+	}
+	.p-FFDA2D {
+		fill: #FFDA2D;
+	}
+	.p-FF4C04 {
+		fill: #FF4C04;
+	}
+	.p-C9001C {
+		fill: #C9001C;
+	}
+	.p-F2F2FC {
+		fill: #F2F2FC;
+	}
+	.p-FF8597 {
+		fill: #FF8597;
+	}
+	.p-FF9468 {
+		fill: #FF9468;
+	}
+	.p-D8D8FC {
+		fill: #D8D8FC;
+	}
+	.p-FFD2FE {
+		fill: #FFD2FE;
+	}
+	.p-FFB6FA {
+		fill: #FFB6FA;
+	}
+	.p-A3A3D1 {
+		fill: #A3A3D1;
+	}
+	.p-FF9AC9 {
+		fill: #FF9AC9;
+	}
+	.p-815638 {
+		fill: #815638;
+	}
+	.p-64422A {
+		fill: #64422A;
+	}
+	.p-7FEFEF {
+		fill: #7FEFEF;
+	}
+	.p-03232E {
+		fill: #03232E;
+	}
+	.p-8EA8D4 {
+		fill: #8EA8D4;
+	}
+	.p-6ACCCA {
+		fill: #6ACCCA;
+	}
+	.p-DABBA6 {
+		fill: #DABBA6;
+	}
+	.p-F4D7AF {
+		fill: #F4D7AF;
+	}
+	.p-FF7A53 {
+		fill: #FF7A53;
+	}
+	.p-D0A973 {
+		fill: #D0A973;
+	}
+	.p-FF3B62 {
+		fill: #FF3B62;
+	}
+	.p-FFDE55 {
+		fill: #FFDE55;
+	}
+	.p-FDBF00 {
+		fill: #FDBF00;
+	}
+	.p-E4BF24 {
+		fill: #E4BF24;
+	}
+	.p-966641 {
+		fill: #966641;
+	}
+	.p-FF7816 {
+		fill: #FF7816;
+	}
+	.p-7E5436 {
+		fill: #7E5436;
+	}
+	.p-FDE4E4 {
+		fill: #FDE4E4;
+	}
+	.p-FCCED3 {
+		fill: #FCCED3;
+	}
+	.p-FDD0D0 {
+		fill: #FDD0D0;
+	}
+	.p-9BFCFF {
+		fill: #9BFCFF;
+	}
+	.p-76E2F8 {
+		fill: #76E2F8;
+	}
+	.p-28CBF7 {
+		fill: #28CBF7;
+	}
+	.p-B04617 {
+		fill: #B04617;
+	}
+	.p-BDF052 {
+		fill: #BDF052;
+	}
+	.p-83360B {
+		fill: #83360B;
+	}
+	.p-4C1A03 {
+		fill: #4C1A03;
+	}
+	.p-63C92F {
+		fill: #63C92F;
+	}
+	.p-61D7A8 {
+		fill: #61D7A8;
+	}
+	.p-00AB94 {
+		fill: #00AB94;
+	}
+	.p-C5D3DD {
+		fill: #C5D3DD;
+	}
+	.p-537983 {
+		fill: #537983;
+	}
+	.p-9FACBA {
+		fill: #9FACBA;
+	}
+	.p-3E5959 {
+		fill: #3E5959;
+	}
+	.p-68544F {
+		fill: #68544F;
+	}
+	.p-53433F {
+		fill: #53433F;
+	}
+	.p-5AAAE7 {
+		fill: #5AAAE7;
+	}
+	.p-78B9EB {
+		fill: #78B9EB;
+	}
+	.p-B9DFFC {
+		fill: #B9DFFC;
+	}
+	.p-F83E5B {
+		fill: #F83E5B;
+	}
+	.p-DDC2B7 {
+		fill: #DDC2B7;
+	}
+	.p-FFE9E0 {
+		fill: #FFE9E0;
+	}
+	.p-714C2F {
+		fill: #714C2F;
+	}
+	.p-523522 {
+		fill: #523522;
+	}
+	.p-ECECF1 {
+		fill: #ECECF1;
+	}
+	.p-3E322E {
+		fill: #3E322E;
+	}
+	.p-FF9F00 {
+		fill: #FF9F00;
+	}
+	.p-8C493B {
+		fill: #8C493B;
+	}
+	.p-774135 {
+		fill: #774135;
+	}
+	.p-A1D1FD {
+		fill: #A1D1FD;
+	}
+	.p-F6C958 {
+		fill: #F6C958;
+	}
+	.p-58ADE5 {
+		fill: #58ADE5;
+	}
+	.p-4D98CB {
+		fill: #4D98CB;
+	}
+	.p-E5BC53 {
+		fill: #E5BC53;
+	}
+	.p-F5F6F6 {
+		fill: #F5F6F6;
+	}
+	.p-E5E5E5 {
+		fill: #E5E5E5;
+	}
+	.p-95E9D2 {
+		fill: #95E9D2;
+	}
+	.p-D85397 {
+		fill: #D85397;
+	}
+	.p-FFB64C {
+		fill: #FFB64C;
+	}
+	.p-FF914A {
+		fill: #FF914A;
+	}
+	.p-AF5D5B {
+		fill: #AF5D5B;
+	}
+	.p-974C4E {
+		fill: #974C4E;
+	}
+	.p-783541 {
+		fill: #783541;
+	}
+	.p-FFD396 {
+		fill: #FFD396;
+	}
+	.p-F23055 {
+		fill: #F23055;
+	}
+	.p-596C76 {
+		fill: #596C76;
+	}
+	.p-465A61 {
+		fill: #465A61;
+	}
+	.p-FF637B {
+		fill: #FF637B;
+	}
+	.p-87A0AF {
+		fill: #87A0AF;
+	}
+	.p-FFCEBF {
+		fill: #FFCEBF;
+	}
+	.p-FFB99C {
+		fill: #FFB99C;
+	}
+	.p-FF620B {
+		fill: #FF620B;
+	}
+	.p-E63950 {
+		fill: #E63950;
+	}
+	.p-FAAAAA {
+		fill: #FAAAAA;
+	}
+	.p-55FBFF {
+		fill: #55FBFF;
+	}
+	.p-00D9E0 {
+		fill: #00D9E0;
+	}
+	.p-00A6FF {
+		fill: #00A6FF;
+	}
+	.p-FFB74F {
+		fill: #FFB74F;
+	}
+	.p-B8E0F9 {
+		fill: #B8E0F9;
+	}
+	.p-FF9A00 {
+		fill: #FF9A00;
+	}
+	.p-006EF5 {
+		fill: #006EF5;
+	}
+	.p-CCF8F3 {
+		fill: #CCF8F3;
+	}
+	.p-BE1E33 {
+		fill: #BE1E33;
+	}
+	.p-F89FAD {
+		fill: #F89FAD;
+	}
+	.p-F2F2F2 {
+		fill: #F2F2F2;
+	}
+	.p-D3D3D8 {
+		fill: #D3D3D8;
+	}
+	.p-FBC56D {
+		fill: #FBC56D;
+	}
+	.p-EBAE56 {
+		fill: #EBAE56;
+	}
+	.p-BABAC0 {
+		fill: #BABAC0;
+	}
+	.p-94E368 {
+		fill: #94E368;
+	}
+	.p-55BF60 {
+		fill: #55BF60;
+	}
+	.p-CC9249 {
+		fill: #CC9249;
+	}
+	.p-895D3C {
+		fill: #895D3C;
+	}
+	.p-E2E2E7 {
+		fill: #E2E2E7;
+	}
+	.p-AE2538 {
+		fill: #AE2538;
+	}
+	.p-FF5093 {
+		fill: #FF5093;
+	}
+	.p-AF2768 {
+		fill: #AF2768;
+	}
+	.p-FFDAEE {
+		fill: #FFDAEE;
+	}
+	.p-FF7CB9 {
+		fill: #FF7CB9;
+	}
+	.p-FF5E95 {
+		fill: #FF5E95;
+	}
+	.p-FCB9D1 {
+		fill: #FCB9D1;
+	}
+	.p-CE0963 {
+		fill: #CE0963;
+	}
+	.p-EA348B {
+		fill: #EA348B;
+	}
+	.p-751A46 {
+		fill: #751A46;
+	}
+	.p-BCE4F9 {
+		fill: #BCE4F9;
+	}
+	.p-006C70 {
+		fill: #006C70;
+	}
+	.p-7BCEFC {
+		fill: #7BCEFC;
+	}
+	.p-FBDA35 {
+		fill: #FBDA35;
+	}
+	.p-F7BA35 {
+		fill: #F7BA35;
+	}
+	.p-B29A7E {
+		fill: #B29A7E;
+	}
+	.p-A58868 {
+		fill: #A58868;
+	}
+	.p-947859 {
+		fill: #947859;
+	}
+	.p-BFA993 {
+		fill: #BFA993;
+	}
+	.p-88888F {
+		fill: #88888F;
+	}
+	.p-EBE4DD {
+		fill: #EBE4DD;
+	}
+	.p-D8CCBC {
+		fill: #D8CCBC;
+	}
+	.p-564541 {
+		fill: #564541;
+	}
+	.p-FF4040 {
+		fill: #FF4040;
+	}
+	.p-E10000 {
+		fill: #E10000;
+	}
+	.p-00AAF0 {
+		fill: #00AAF0;
+	}
+	.p-CCEFFF {
+		fill: #CCEFFF;
+	}
+	.p-ACE3FC {
+		fill: #ACE3FC;
+	}
+	.p-D6702B {
+		fill: #D6702B;
+	}
+	.p-BF6015 {
+		fill: #BF6015;
+	}
+	.p-E08344 {
+		fill: #E08344;
+	}
+	.p-FEDBAB {
+		fill: #FEDBAB;
+	}
+	.p-FEC478 {
+		fill: #FEC478;
+	}
+	.p-FEA832 {
+		fill: #FEA832;
+	}
+	.p-FD4B2D {
+		fill: #FD4B2D;
+	}
+	.p-E8130F {
+	fill: #E8130F;
+	}
+	.p-FF6849 {
+		fill: #FF6849;
+	}
+	.p-C5C9F7 {
+		fill: #C5C9F7;
+	}
+	.p-98A0F0 {
+		fill: #98A0F0;
+	}
+	.p-97A1F0 {
+		fill: #97A1F0;
+	}
+	.p-6D76E7 {
+		fill: #6D76E7;
+	}
+	.p-E1E4FC {
+		fill: #E1E4FC;
+	}
+	.p-FFEA84 {
+		fill: #FFEA84;
+	}
+	.p-FFDC40 {
+		fill: #FFDC40;
+	}
+	.p-FFAB15 {
+		fill: #FFAB15;
+	}
+	.p-00C3FF {
+		fill: #00C3FF;
+	}
+	.p-DBB924 {
+		fill: #DBB924;
+	}
+	.p-DCF4FF {
+		fill: #DCF4FF;
+	}
+	.p-87E694 {
+		fill: #87E694;
+	}
+	.p-66CC70 {
+		fill: #66CC70;
+	}
+	.p-FF7452 {
+		fill: #FF7452;
+	}
+	.p-FB9D46 {
+		fill: #FB9D46;
+	}
+	.p-F7EDBC {
+		fill: #F7EDBC;
+	}
+	.p-FFFFFF {
+		fill: #FFFFFF;
+	}
+	.p-E24642 {
+		fill: #E24642;
+	}
+	.p-F15D4A {
+		fill: #F15D4A;
+	}
+	.p-C42725 {
+		fill: #C42725;
+	}
+	.p-D33734 {
+		fill: #D33734;
+	}
+	.p-FF641A {
+		fill: #FF641A;
+	}
+	.p-FFF5F5 {
+		fill: #FFF5F5;
+	}
+	.p-EFE2DD {
+		fill: #EFE2DD;
+	}
+	.p-9CDD05 {
+		fill: #9CDD05;
+	}
+	.p-BDADA8 {
+		fill: #BDADA8;
+	}
+	.p-DCCBC5 {
+		fill: #DCCBC5;
+	}
+	.p-CDBFBA {
+		fill: #CDBFBA;
+	}
+	.p-D2C5C2 {
+		fill: #D2C5C2;
+	}
+	.p-BDACA8 {
+		fill: #BDACA8;
+	}
+	.p-DD7D00 {
+		fill: #DD7D00;
+	}
+	.p-D6C4BE {
+		fill: #D6C4BE;
+	}
+	.p-EEBF00 {
+		fill: #EEBF00;
+	}
+	.p-FEE195 {
+		fill: #FEE195;
+	}
+	.p-009184 {
+		fill: #009184;
+	}
+	.p-8F562F {
+		fill: #8F562F;
+	}
+	.p-4C250B {
+		fill: #4C250B;
+	}
+	.p-00C8C8 {
+		fill: #00C8C8;
+	}
+	.p-1CADB5 {
+		fill: #1CADB5;
+	}
+	.p-64E1DC {
+		fill: #64E1DC;
+	}
+	.p-895D3C {
+		fill: #895D3C;
+	}
+	.p-3B4A51 {
+		fill: #3B4A51;
+	}
+	.p-F5C23B {
+		fill: #F5C23B;
+	}
+	.p-FD935C {
+		fill: #FD935C;
+	}
+	.p-FD7560 {
+		fill: #FD7560;
+	}
+	.p-54469D {
+		fill: #54469D;
+	}
+	.p-463B85 {
+		fill: #463B85;
+	}
+	.p-CB75F6 {
+		fill: #CB75F6;
+	}
+	.p-C6E2E7 {
+		fill: #C6E2E7;
+	}
+	.p-392E6E {
+		fill: #392E6E;
+	}
+	.p-5A5A5A {
+		fill: #5A5A5A;
+	}
+	.p-B4EAF5 {
+		fill: #B4EAF5;
+	}
+	.p-00ADEA {
+		fill: #00ADEA;
+	}
+	.p-C83C50 {
+		fill: #C83C50;
+	}
+	.p-A9DA40 {
+		fill: #A9DA40;
+	}
+	.p-444444 {
+		fill: #444444;
+	}
+	.p-B03244 {
+		fill: #B03244;
+	}
+	.p-DEECF1 {
+		fill: #DEECF1;
+	}
+	.p-FFE470 {
+		fill: #FFE470;
+	}
+	.p-A8D3D8 {
+		fill: #A8D3D8;
+	}
+	.p-99503D {
+		fill: #99503D;
+	}
+	.p-3F6199 {
+		fill: #3F6199;
+	}
+	.p-979FEF {
+		fill: #979FEF;
+	}
+	.p-7984EB {
+		fill: #7984EB;
+	}
+	.p-2B4160 {
+		fill: #2B4160;
+	}
+	.p-FF583E {
+		fill: #FF583E;
+	}
+	.p-E82E21 {
+		fill: #E82E21;
+	}
+	.p-E9EDF5 {
+		fill: #E9EDF5;
+	}
+	.p-73BCFF {
+		fill: #73BCFF;
+	}
+	.p-575F64 {
+		fill: #575F64;
+	}
+	.p-0095FF {
+		fill: #0095FF;
+	}
+	.p-006EFF {
+		fill: #006EFF;
+	}
+	.p-FFD400 {
+		fill: #FFD400;
+	}
+	.p-8EBAC5 {
+		fill: #8EBAC5;
+	}
+	.p-E0F4FE {
+		fill: #E0F4FE;
+	}
+	.p-FED2A4 {
+		fill: #FED2A4;
+	}
+	.p-90E36A {
+		fill: #90E36A;
+	}
+	.p-56C225 {
+		fill: #56C225;
+	}
+	.p-384949 {
+		fill: #384949;
+	}
+	.p-BC5F19 {
+		fill: #BC5F19;
+	}
+	.p-96C8EF {
+		fill: #96C8EF;
+	}
+	.p-CB671B {
+		fill: #CB671B;
+	}
+	.p-F6A96C {
+		fill: #F6A96C;
+	}
+	.p-FFBD86 {
+		fill: #FFBD86;
+	}
+	.p-AB7B26 {
+		fill: #AB7B26;
+	}
+	.p-BCDBFD {
+		fill: #BCDBFD;
+	}
+	.p-E1BB78 {
+		fill: #E1BB78;
+	}
+	.p-90C225 {
+		fill: #90C225;
+	}
+	.p-C9E36A {
+		fill: #C9E36A;
+	}
+	.p-FED843 {
+		fill: #FED843;
+	}
+	.p-FD7EB8 {
+		fill: #FD7EB8;
+	}
+	.p-2D3C72 {
+		fill: #2D3C72;
+	}
+	.p-1A2958 {
+		fill: #1A2958;
+	}
+	.p-1AAA94 {
+		fill: #1AAA94;
+	}
+	.p-149084 {
+		fill: #149084;
+	}
+	.p-EDBE2B {
+		fill: #EDBE2B;
+	}
+	.p-9BBAD9 {
+		fill: #9BBAD9;
+	}
+	.p-62739A {
+		fill: #62739A;
+	}
+	.p-00D7DF {
+		fill: #00D7DF;
+	}
+	.p-CCF7F9 {
+		fill: #CCF7F9;
+	}
+	.p-FFE98F {
+		fill: #FFE98F;
+	}
+	.p-00A0A6 {
+		fill: #00A0A6;
+	}
+	.p-EBFCFC {
+		fill: #EBFCFC;
+	}
+	.p-565659 {
+		fill: #565659;
+	}
+	.p-FF9811 {
+		fill: #FF9811;
+	}
+	.p-088690 {
+		fill: #088690;
+	}
+	.p-0BAEBC {
+		fill: #0BAEBC;
+	}
+	.p-B5CDDF {
+		fill: #B5CDDF;
+	}
+	.p-C9E5F9 {
+		fill: #C9E5F9;
+	}
+	.p-EE2712 {
+		fill: #EE2712;
+	}
+	.p-515BE0 {
+		fill: #515BE0;
+	}
+	.p-00347B {
+		fill: #00347B;
+	}
+	.p-65B3E7 {
+		fill: #65B3E7;
+	}
+	.p-E1D3CE {
+		fill: #E1D3CE;
+	}
+	.p-BDFDFF {
+		fill: #BDFDFF;
+	}
+	.p-7ED8F6 {
+		fill: #7ED8F6;
+	}
+	.p-E30000 {
+		fill: #E30000;
+	}
+	.p-FF6426 {
+		fill: #FF6426;
+	}
+	.p-F30051 {
+		fill: #F30051;
+	}
+	.p-D20041 {
+		fill: #D20041;
+	}
+	.p-FF0059 {
+		fill: #FF0059;
+	}
+	.p-FF3980 {
+		fill: #FF3980;
+	}
+	.p-FF5CA8 {
+		fill: #FF5CA8;
+	}
+	.p-FF5D3D {
+		fill: #FF5D3D;
+	}
+	.p-FF6498 {
+		fill: #FF6498;
+	}
+	.p-B35F49 {
+		fill: #B35F49;
+	}
+	.p-FED966 {
+		fill: #FED966;
+	}
+	.p-8CD95B {
+		fill: #8CD95B;
+	}
+	.p-61C27C {
+		fill: #61C27C;
+	}
+	.p-FFC170 {
+		fill: #FFC170;
+	}
+	.p-8C4A37 {
+		fill: #8C4A37;
+	}
+	.p-3C1B13 {
+		fill: #3C1B13;
+	}
+	.p-99EFF2 {
+		fill: #99EFF2;
+	}
+	.p-FFDA44 {
+		fill: #FFDA44;
+	}
+	.p-CDCDD0 {
+		fill: #CDCDD0;
+	}
+	.p-ACABB1 {
+		fill: #ACABB1;
+	}
+	.p-663325 {
+		fill: #663325;
+	}
+	.p-582B1F {
+		fill: #582B1F;
+	}
+	.p-FAECD8 {
+		fill: #FAECD8;
+	}
+	.p-EA9B58 {
+		fill: #EA9B58;
+	}
+	.p-F9D8B4 {
+		fill: #F9D8B4;
+	}
+	.p-804231 {
+		fill: #804231;
+	}
+	.p-FF4B00 {
+		fill: #FF4B00;
+	}
+	.p-DD3400 {
+		fill: #DD3400;
+	}
+	.p-7C8388 {
+		fill: #7C8388;
+	}
+	.p-575F64 {
+		fill: #575F64;
+	}
+	.p-32393F {
+		fill: #32393F;
+	}
+	.p-FF4F1A {
+		fill: #FF4F1A;
+	}
+	.p-60DD4E {
+		fill: #60DD4E;
+	}
+	.p-00BB64 {
+		fill: #00BB64;
+	}
+	.p-B6EFAB {
+		fill: #B6EFAB;
+	}
+	.p-95E0BA {
+		fill: #95E0BA;
+	}
+	.p-FFDC2D {
+		fill: #FFDC2D;
+	}
+	.p-FFC002 {
+		fill: #FFC002;
+	}
+	.p-CA1C00 {
+		fill: #CA1C00;
+	}
+	.p-DE0418 {
+		fill: #DE0418;
+	}
+	.p-F1E7DF {
+		fill: #F1E7DF;
+	}
+	.p-DFCDBD {
+		fill: #DFCDBD;
+	}
+	.p-8A6746 {
+		fill: #8A6746;
+	}
+	.p-644B31 {
+		fill: #644B31;
+	}
+	.p-A3021A {
+		fill: #A3021A;
+	}
+	.p-FF6536 {
+		fill: #FF6536;
+	}
+	.p-BBDCFF {
+		fill: #BBDCFF;
+	}
+	.p-9ABADB {
+		fill: #9ABADB;
+	}
+	.p-E0F4FF {
+		fill: #E0F4FF;
+	}
+	.p-B2D1F2 {
+		fill: #B2D1F2;
+	}
+	.p-A2C7EE {
+		fill: #A2C7EE;
+	}
+	.p-E3584B {
+		fill: #E3584B;
+	}
+	.p-FF5E5B {
+		fill: #FF5E5B;
+	}
+	.p-4398D1 {
+		fill: #4398D1;
+	}
+	.p-D6D9DB {
+		fill: #D6D9DB;
+	}
+	.p-3E8DC2 {
+		fill: #3E8DC2;
+	}
+	.p-FFC24F {
+		fill: #FFC24F;
+	}
+	.p-FFB64F {
+		fill: #FFB64F;
+	}
+	.p-FC641C {
+		fill: #FC641C;
+	}
+	.p-DE5718 {
+		fill: #DE5718;
+	}
+	.p-FA6823 {
+		fill: #FA6823;
+	}
+	.p-FFA217 {
+		fill: #FFA217;
+	}
+	.p-CF4E42 {
+		fill: #CF4E42;
+	}
+	.p-FF7230 {
+		fill: #FF7230;
+	}
+	.p-ED3E3C {
+		fill: #ED3E3C;
+	}
+	.p-00C0F1 {
+		fill: #00C0F1;
+	}
+	.p-80D0E1 {
+		fill: #80D0E1;
+	}
+	.p-51B3DA {
+		fill: #51B3DA;
+	}
+	.p-FF423D {
+		fill: #FF423D;
+	}
+	.p-39A3DB {
+		fill: #39A3DB;
+	}
+	.p-F7DC4D {
+		fill: #F7DC4D;
+	}
+	.p-EDA637 {
+		fill: #EDA637;
+	}
+	.p-94B4D7 {
+		fill: #94B4D7;
+	}
+	.p-FF3C7D {
+		fill: #FF3C7D;
+	}
+	.p-FFA2C1 {
+		fill: #FFA2C1;
+	}
+	.p-04303E {
+		fill: #04303E;
+	}
+	.p-2FC0F0 {
+		fill: #2FC0F0;
+	}
+	.p-0FA9DD {
+		fill: #0FA9DD;
+	}
+	.p-09607D {
+		fill: #09607D;
+	}
+	.p-FF3939 {
+		fill: #FF3939;
+	}
+	.p-CCFC5C {
+		fill: #CCFC5C;
+	}
+	.p-F5CF2D {
+		fill: #F5CF2D;
+	}
+	.p-2682FF {
+		fill: #2682FF;
+	}
+	.p-00CC76 {
+		fill: #00CC76;
+	}
+	.p-8CBCFF {
+		fill: #8CBCFF;
+	}
+	.p-B4D2D7 {
+		fill: #B4D2D7;
+	}
+	.p-E1EBF0 {
+		fill: #E1EBF0;
+	}
+	.p-3440DB {
+		fill: #3440DB;
+	}
+	.p-E47700 {
+		fill: #E47700;
+	}
+	.p-984D00 {
+		fill: #984D00;
+	}
+	.p-71390F {
+		fill: #71390F;
+	}
+	.p-607882 {
+		fill: #607882;
+	}
+	.p-723802 {
+		fill: #723802;
+	}
+	.p-FFA900 {
+		fill: #FFA900;
+	}
+	.p-FF8800 {
+		fill: #FF8800;
+	}
+	.p-FBBF00 {
+		fill: #FBBF00;
+	}
+	.p-FFC9D0 {
+		fill: #FFC9D0;
+	}
+	.p-E5B728 {
+		fill: #E5B728;
+	}
+	.p-FFD75A {
+		fill: #FFD75A;
+	}
+	.p-146D47 {
+		fill: #146D47;
+	}
+	.p-A3EBFE {
+		fill: #A3EBFE;
+	}
+	.p-1B7CD5 {
+		fill: #1B7CD5;
+	}
+	.p-57AEFF {
+		fill: #57AEFF;
+	}
+	.p-545AC3 {
+		fill: #545AC3;
+	}
+	.p-404AA2 {
+		fill: #404AA2;
+	}
+	.p-85D3FD {
+		fill: #85D3FD;
+	}
+	.p-22B8F9 {
+		fill: #22B8F9;
+	}
+	.p-293939 {
+		fill: #293939;
+	}
+	.p-F03800 {
+		fill: #F03800;
+	}
+	.p-FFEA84 {
+		fill: #FFEA84;
+	}
+	.p-8FE673 {
+		fill: #8FE673;
+	}
+	.p-76CC5B {
+		fill: #76CC5B;
+	}
+	.p-599944 {
+		fill: #599944;
+	}
+	.p-888890 {
+		fill: #888890;
+	}
+	.p-56535A {
+		fill: #56535A;
+	}
+	.p-299B6A {
+		fill: #299B6A;
+	}
+	.p-F4E2E2 {
+		fill: #F4E2E2;
+	}
+	.p-F7B239 {
+		fill: #F7B239;
+	}
+	.p-0B799D {
+		fill: #0B799D;
+	}
+	.p-2197D8 {
+		fill: #2197D8;
+	}
+	.p-E09B2D {
+		fill: #E09B2D;
+	}
+	.p-F95428 {
+		fill: #F95428;
+	}
+	.p-E59278 {
+		fill: #E59278;
+	}
+	.p-DF6246 {
+		fill: #DF6246;
+	}
+	.p-666666 {
+		fill: #666666;
+	}
+	.p-D33924 {
+		fill: #D33924;
+	}
+	.p-D1E5F5 {
+		fill: #D1E5F5;
+	}
+	.p-4D4D4D {
+		fill: #4D4D4D;
+	}
+	.p-333333 {
+		fill: #333333;
+	}
+	.p-79D60D {
+		fill: #79D60D;
+	}
+	.p-3CC602 {
+		fill: #3CC602;
+	}
+	.p-F1F1F2 {
+		fill: #F1F1F2;
+	}
+	.p-E6E6E6 {
+		fill: #E6E6E6;
+	}
+	.p-3CC602 {
+		fill: #3CC602;
+	}
+	.p-E8F4FC {
+		fill: #E8F4FC;
+	}
+	.p-00AC00 {
+		fill: #00AC00;
+	}
+	.p-2BA5F7 {
+		fill: #2BA5F7;
+	}
+	.p-07485E {
+		fill: #07485E;
+	}
+	.p-FFA7B3 {
+		fill: #FFA7B3;
+	}
+	.p-FFDECF {
+		fill: #FFDECF;
+	}
+	.p-FF415B {
+		fill: #FF415B;
+	}
+	.p-FF8E8E {
+		fill: #FF8E8E;
+	}
+	.p-DAC4BB {
+		fill: #DAC4BB;
+	}
+	.p-FF6C6C {
+		fill: #FF6C6C;
+	}
+	.p-E3D0C9 {
+		fill: #E3D0C9;
+	}
+	.p-BEEBFA {
+		fill: #BEEBFA;
+	}
+	.p-FF648D {
+		fill: #FF648D;
+	}
+	.p-FD387E {
+		fill: #FD387E;
+	}
+	.p-EBECEC {
+		fill: #EBECEC;
+	}
+	.p-F8E99B {
+		fill: #F8E99B;
+	}
+	.p-F5DC60 {
+		fill: #F5DC60;
+	}
+	.p-99A1EA {
+		fill: #99A1EA;
+	}
+	.p-717AE1 {
+		fill: #717AE1;
+	}
+	.p-F8BD6F {
+		fill: #F8BD6F;
+	}
+	.p-CB9237 {
+		fill: #CB9237;
+	}
+	.p-808080 {
+		fill: #808080;
+	}
+	.p-58575D {
+		fill: #58575D;
+	}
+	.p-C7EAF0 {
+		fill: #C7EAF0;
+	}
+	.p-BB2A5C {
+		fill: #BB2A5C;
+	}
+	.p-88DEE0 {
+		fill: #88DEE0;
+	}
+	.p-E57E25 {
+		fill: #E57E25;
+	}
+	.p-F18D46 {
+		fill: #F18D46;
+	}
+	.p-F1995B {
+		fill: #F1995B;
+	}
+	.p-F0C419 {
+		fill: #F0C419;
+	}
+	.p-C03A2B {
+		fill: #C03A2B;
+	}
+	.p-F3D55B {
+		fill: #F3D55B;
+	}
+	.p-E64C3C {
+		fill: #E64C3C;
+	}
+	.p-DFD7D5 {
+		fill: #DFD7D5;
+	}
+	.p-83878C {
+		fill: #83878C;
+	}
+	.p-000000 {
+		fill: #000000;
+	}
+	.p-202833 {
+		fill: #202833;
+	}
+	.p-414851 {
+		fill: #414851;
+	}
+	.p-62676F {
+		fill: #62676F;
+	}
+	.p-A4A6AA {
+		fill: #A4A6AA;
+	}
+	.p-DBFFFC {
+		fill: #DBFFFC;
+	}
+	.p-47568C {
+		fill: #47568C;
+	}
+	.p-2C3B73 {
+		fill: #2C3B73;
+	}
+	.p-61729B {
+		fill: #61729B;
+	}
+	.p-CD0000 {
+		fill: #CD0000;
+	}
+	.p-4A696F {
+		fill: #4A696F;
+	}
+	.p-CAE8F9 {
+		fill: #CAE8F9;
+	}
+	.p-7FC8F1 {
+		fill: #7FC8F1;
+	}
+	.p-3A4DE3 {
+		fill: #3A4DE3;
+	}
+	.p-0088FF {
+		fill: #0088FF;
+	}
+	.p-EDEAE4 {
+		fill: #EDEAE4;
+	}
+	.p-DDDAD0 {
+		fill: #DDDAD0;
+	}
+	.p-6EC030 {
+		fill: #6EC030;
+	}
+	.p-378900 {
+		fill: #378900;
+	}
+	.p-FD2D12 {
+		fill: #FD2D12;
+	}
+	.p-DE0E0E {
+		fill: #DE0E0E;
+	}
+	.p-FF672A {
+		fill: #FF672A;
+	}
+	.p-F2F2F4 {
+		fill: #F2F2F4;
+	}
+	.p-FF6A52 {
+		fill: #FF6A52;
+	}
+	.p-F0384A {
+		fill: #F0384A;
+	}
+	.p-EBEBEC {
+		fill: #EBEBEC;
+	}
+	.p-CACACD {
+		fill: #CACACD;
+	}
+	.p-64DDE0 {
+		fill: #64DDE0;
+	}
+	.p-A9A8AE {
+		fill: #A9A8AE;
+	}
+	.p-808081 {
+		fill: #808081;
+	}
+	.p-00C2C7 {
+		fill: #00C2C7;
+	}
+	.p-00A5AD {
+		fill: #00A5AD;
+	}
+	.p-64DDE0 {
+		fill: #64DDE0;
+	}
+	.p-5BC980 {
+		fill: #5BC980;
+	}
+	.p-00A38B {
+		fill: #00A38B;
+	}
+	.p-81EAAC {
+		fill: #81EAAC;
+	}
+	.p-FC756B {
+		fill: #FC756B;
+	}
+	.p-FE4F34 {
+		fill: #FE4F34;
+	}
+	.p-FEC356 {
+		fill: #FEC356;
+	}
+	.p-FEB020 {
+		fill: #FEB020;
+	}
+	.p-FE4E33 {
+		fill: #FE4E33;
+	}
+	.p-FE1600 {
+		fill: #FE1600;
+	}
+}
+
+/******HTML-icons*******/
+.burger {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 14px;
+	height: 8.5px;
+	.burger-line {
+		position: absolute;
+		width: 100%;
+		height: 1.5px;
+		background: #fff;
+		border-radius: 0.75px;
+	}
+	.burger-line:nth-child(1) {
+		top: 0;
+	}
+	.burger-line:nth-child(3) {
+		bottom: 0;
+	}
+}
+
+.close{
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	border: 1px solid #4195CE;
+	box-shadow: 0px 0px 1px #4195CE;
+	cursor: pointer;
+	&:before, &:after {
+		position: absolute;
+		content: '';
+		width: 1.2px;
+		height: 20px;
+		background: #fff;
+	}
+	&:before{
+		transform: rotate(45deg);
+	}
+	&:after{
+		transform: rotate(-45deg);
+	}
+}
+
+.slider-dots {
+	display: flex;
+	align-items: center;
+	.slider-dot {
+		width: 8px;
+		height: 8px;
+		margin-right: 9px;
+		background: #EDECEE;
+		border-radius: 50%;
+		transition: $transition-primary;
+		&:last-child {
+			margin-right: 0;
+		}
+		&:hover, &.is-active {
+			background: #4195CE;
+		}
+	}
+}
+
+.arrow-01, .arrow-02 {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	background: #3FA8EF;
+	opacity: 0.5;
+	border-radius: 50%;
+	&:before, &:after {
+		position: absolute;
+		content: '';
+		height: 2px;
+		width: 13px;
+		border-radius: 5.5px;
+		background: #fff;
+		left: 12px;
+	}
+	&:before {
+		transform: rotate(45deg) translateY(-5.7px);
+	}
+	&:after {
+		transform: rotate(-45deg) translateY(5.5px);
+	}
+
+}
+
+.arrow-02 {
+	border-radius: 0;
+	background: rgba(256,256,256,0.7);
+	&:before, &:after {
+		background: $color-primary;
+	}
+}
+
+.mode-01 {
+	position: relative;
+	display: flex;
+	align-items: center;
+	width: 30px;
+	height: 16px;
+	background: #BAB9B9;
+	border-radius: 50px;
+	transition: $transition-primary;
+	&:before {
+		content: '';
+		position: absolute;
+		width: 12px;
+		height: 12px;
+		background: #fff;
+		border-radius: 50%;
+		left: 2px;
+		transition: $transition-primary;
+	}
+	&.is-active {
+		background: $color-primary;
+		&:before {
+			left: auto;
+			right: 2px;
+		}
+	}
+}
+
+/******TEXT*******/
+.link {
+	font-family: $font-primary;
+	color: $color-primary;
+	text-decoration: none;
+	cursor: pointer;
+	outline: none;
+}
+.tag {
+	font-family: $font-primary;
+	color: $color-primary;
+	font-weight: bold;
+}
+
+/******ITEMS*******/
+.ds-wrapper .search, .ds-wrapper .purchaseGather {
+	max-width: 200px;
+}
+.search {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 24px;
+	padding: 0 10px;
+	border: 1px solid rgba(49, 140, 202, 0.75);
+	background: #fff;
+	border-radius: 12px;
+	.search-icon {
+		height: 20px;
+		width: 20px;
+	}
+	.search-input {
+		outline: none;
+		box-shadow: none;
+		border: none;
+		&::placeholder {
+			font-size: 12px;
+			line-height: 14px;
+			color: #A2A3A5;
+		}
+	}
+}
+.purchaseStatus {
+	position: relative;
+	display: flex;
+	align-items: center;
+	font-weight: 800;
+	color: #0DC53D;
+	&-icon {
+		width: 40px;
+		height: 30px;
+		margin-right: 10px;
+	}
+	&-date {
+		margin-left: 5px;
+		color: inherit;
+	}
+	&_soon {
+		color: #FF8000;
+		.purchaseStatus-icon path {
+			fill: #FF8000;
+		}
+	}
+}
+.rating {
+	display: flex;
+	align-items: center;
+	&-icon {
+		height: 12px;
+		width: 12px;
+	}
+	&-value {
+		margin-left: 8px;
+		font-weight: bold;
+		color: #FFB21C;
+	}
+}
+.purchaseGather {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	&-status {
+		position: relative;
+		display: flex;
+		align-items: center;
+		width: 100%;
+		height: 18px;
+		padding: 2px 9px;
+		background: rgba(49, 140, 202, 0.5);
+		border-radius: 12px;
+		&:before {
+			content: '';
+			position: absolute;
+			width: 96px;
+			height: 100%;
+			left: 0;
+			border-radius: 12px;
+			background: $color-primary;
+		}
+	}
+	&-value {
+		position: relative;
+		display: flex;
+		align-items: center;
+		font-size: 10px;
+		font-weight: 600;
+		color: #FFF;
+		z-index: 1;
+	}
+	&-event {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		padding: 9px 0 0 10px;
+		font-size: 10px;
+		line-height: 14px;
+		color: #4b4b4b;
+	}
+	&-eventCount {
+		margin-right: 3px;
+		font-weight: bold;
+	}
+	&-currentValue, &-endValue {
+		margin: 0 2.5px;
+	}
+}
+.like {
+	display: flex;
+	align-items: center;
+	font-size: 10px;
+	line-height: 12px;
+	color: #979797;
+	&-text {
+		width: 68px;
+		margin-left: 10px;
+	}
+	&-icon {
+		cursor: pointer;
+	}
+	&.is-active {
+		.like-icon path {
+			fill: $color-primary;
+		}
+	}
+}
+
