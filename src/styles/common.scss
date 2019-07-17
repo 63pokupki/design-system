@@ -25,6 +25,9 @@ $transition-primary: 0.3s ease-in-out;
 	flex-direction: row;
 	flex-wrap: wrap;
 }
+.ds-wrapper_items {
+	padding-bottom: 200px;
+}
 .ds-wrapper > div, .ds-wrapper > a {
 	margin: 0 20px 20px 0;
 }
@@ -1739,6 +1742,62 @@ symbol.active {
 	&.is-active {
 		.like-icon path {
 			fill: $color-primary;
+		}
+	}
+}
+.ds-wrapper .has-prompt {
+	background: red;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.has-prompt {
+	position: relative;
+	&:hover {
+		.prompt {
+			bottom: -8px;
+			opacity: 1;
+		}
+	}
+}
+.prompt {
+	position: absolute;
+	right: 0;
+	bottom: -100%;
+	display: flex;
+	flex-wrap: wrap;
+	right: -16px;
+	width: 157px;
+	padding: 11px 15px 13px;
+	background-color: rgba(49, 140, 202, 0.15);
+	border-radius: 6px;
+	transform: translateY(100%);
+	transition: $transition-primary;
+	opacity: 0;
+	&:before {
+		content: '';
+		position: absolute;
+		top: -4px;
+		right: 16px;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 4px 4px 4px;
+		border-color: transparent transparent rgba(49, 140, 202, 0.15) transparent;
+	}
+	&-item {
+		width: 100%;
+		margin-bottom: 4px;
+		font-size: 10px;
+		line-height: 14px;
+		color: #606266;
+		transition: $transition-primary;
+		cursor: pointer;
+		&:hover {
+			color: $color-primary;
+		}
+		&:last-child {
+			margin-bottom: 0;
 		}
 	}
 }
