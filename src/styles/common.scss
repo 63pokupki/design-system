@@ -12,7 +12,8 @@ $transition-primary: 0.3s ease-in-out;
 
 /*STYLES*/
 .ds {
-  background: #c0c0c0;
+	background: #c0c0c0;
+	overflow-x: hidden;
 }
 
 .ds-title {
@@ -24,9 +25,6 @@ $transition-primary: 0.3s ease-in-out;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-}
-.ds-wrapper_items {
-	padding-bottom: 200px;
 }
 .ds-wrapper > div, .ds-wrapper > a {
 	margin: 0 20px 20px 0;
@@ -1514,6 +1512,31 @@ symbol.active {
 		transform: rotate(-45deg);
 	}
 }
+.close-02{
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	&:hover {
+		opacity: 0.7;
+	}
+	&:before, &:after {
+		position: absolute;
+		content: '';
+		width: 2px;
+		height: 20px;
+		background: #000;
+	}
+	&:before{
+		transform: rotate(45deg);
+	}
+	&:after{
+		transform: rotate(-45deg);
+	}
+}
 
 .slider-dots {
 	display: flex;
@@ -1757,16 +1780,16 @@ symbol.active {
 		.prompt {
 			bottom: -8px;
 			opacity: 1;
+			&-container {
+				max-height: 500px;
+			}
 		}
 	}
 }
 .prompt {
 	position: absolute;
-	right: 0;
-	bottom: -100%;
-	display: flex;
-	flex-wrap: wrap;
 	right: -16px;
+	bottom: -100%;
 	width: 157px;
 	padding: 11px 15px 13px;
 	background-color: rgba(49, 140, 202, 0.15);
@@ -1774,6 +1797,7 @@ symbol.active {
 	transform: translateY(100%);
 	transition: $transition-primary;
 	opacity: 0;
+	cursor: pointer;
 	&:before {
 		content: '';
 		position: absolute;
@@ -1784,6 +1808,12 @@ symbol.active {
 		border-style: solid;
 		border-width: 0 4px 4px 4px;
 		border-color: transparent transparent rgba(49, 140, 202, 0.15) transparent;
+	}
+	&-container {
+		display: flex;
+		flex-wrap: wrap;
+		max-height: 1px;
+		overflow: hidden;
 	}
 	&-item {
 		width: 100%;
@@ -1801,4 +1831,42 @@ symbol.active {
 		}
 	}
 }
-
+.checkbox-01 {
+	position: relative;
+	display: flex;
+	align-items: center;
+	padding-left: 28px;
+	font-size: 10px;
+	line-height: 14px;
+	color: #606266;
+	margin-bottom: 6px;
+	svg {
+		position: absolute;
+		left: 2px;
+	}
+	&.is-active {
+		.arrow {
+			fill: #318CCA;
+		}
+	}
+}
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 24px;
+	max-width: 124px;
+	font-size: 10px;
+	line-height: 14px;
+	border-radius: 40px;
+	text-decoration: none;
+	&_01 {
+		background: #fff;
+		color: $color-primary;
+	}
+	&_02 {
+		background: $color-primary;
+		color: #ffffff;
+	}
+}
