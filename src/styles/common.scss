@@ -12,7 +12,8 @@ $transition-primary: 0.3s ease-in-out;
 
 /*STYLES*/
 .ds {
-  background: #c0c0c0;
+	background: #c0c0c0;
+	overflow-x: hidden;
 }
 
 .ds-title {
@@ -1511,6 +1512,31 @@ symbol.active {
 		transform: rotate(-45deg);
 	}
 }
+.close-02{
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	&:hover {
+		opacity: 0.7;
+	}
+	&:before, &:after {
+		position: absolute;
+		content: '';
+		width: 2px;
+		height: 20px;
+		background: #000;
+	}
+	&:before{
+		transform: rotate(45deg);
+	}
+	&:after{
+		transform: rotate(-45deg);
+	}
+}
 
 .slider-dots {
 	display: flex;
@@ -1742,4 +1768,105 @@ symbol.active {
 		}
 	}
 }
-
+.ds-wrapper .has-prompt {
+	background: red;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.has-prompt {
+	position: relative;
+	&:hover {
+		.prompt {
+			bottom: -8px;
+			opacity: 1;
+			&-container {
+				max-height: 500px;
+			}
+		}
+	}
+}
+.prompt {
+	position: absolute;
+	right: -16px;
+	bottom: -100%;
+	width: 157px;
+	padding: 11px 15px 13px;
+	background-color: rgba(49, 140, 202, 0.15);
+	border-radius: 6px;
+	transform: translateY(100%);
+	transition: $transition-primary;
+	opacity: 0;
+	cursor: pointer;
+	&:before {
+		content: '';
+		position: absolute;
+		top: -4px;
+		right: 16px;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 4px 4px 4px;
+		border-color: transparent transparent rgba(49, 140, 202, 0.15) transparent;
+	}
+	&-container {
+		display: flex;
+		flex-wrap: wrap;
+		max-height: 1px;
+		overflow: hidden;
+	}
+	&-item {
+		width: 100%;
+		margin-bottom: 4px;
+		font-size: 10px;
+		line-height: 14px;
+		color: #606266;
+		transition: $transition-primary;
+		cursor: pointer;
+		&:hover {
+			color: $color-primary;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+.checkbox-01 {
+	position: relative;
+	display: flex;
+	align-items: center;
+	padding-left: 28px;
+	font-size: 10px;
+	line-height: 14px;
+	color: #606266;
+	margin-bottom: 6px;
+	svg {
+		position: absolute;
+		left: 2px;
+	}
+	&.is-active {
+		.arrow {
+			fill: #318CCA;
+		}
+	}
+}
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 24px;
+	max-width: 124px;
+	font-size: 10px;
+	line-height: 14px;
+	border-radius: 40px;
+	text-decoration: none;
+	&_01 {
+		background: #fff;
+		color: $color-primary;
+	}
+	&_02 {
+		background: $color-primary;
+		color: #ffffff;
+	}
+}
