@@ -5,83 +5,138 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const entry = require('./entry.js'); //файл с точками входа
 
 module.exports = {
+    mode: "development", //режим сборки
     entry: entry, //объект с точками входа
     output: {
-        path: path.join(__dirname, 'dist/'), //общий путь для выходных файлов
-        filename: "js/[name].js" //в этом параметре мы индивидуально добавляем необходимую директорию перед именем файлов
-    },
-    devServer: {
-        compress: true
+        path: path.join(__dirname, 'build/'), //общий путь для выходных файлов
+        filename: "js/[name].js?[hash]" //в этом параметре мы индивидуально добавляем необходимую директорию перед именем файлов
     },
     watch: true, //Слежение за изменениями
     watchOptions: {
         ignored: /node_modules/, //исключения в слежении
-        poll: 200 //интервал обновления
+        poll: 500 //интервал обновления
     },
-    devtool: false, //Инструменты разработчика
+    devtool: "inline-source-map", //Инструменты разработчика
     resolve: {
+        alias: { //краткие имена путей для импортов
+            'vue$': 'vue/dist/vue.esm.js',
+            styles: path.resolve(__dirname, 'src/styles'),
+            images: path.resolve(__dirname, 'src/images'),
+            fonts: path.resolve(__dirname, 'src/fonts'),
+        },
         modules: ['node_modules', 'src'], //папки доступные для сканирования
+        extensions: ['.tsx', '.ts', '.js']
     },
     resolveLoader: {
         modules: ['node_modules'],
         moduleExtensions: ['-loader']
     },
     module: { //Загрузчики
-        rules: [
-            {
-                test: /\.scss$/,
-                use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader']
-
-            },
-            {
-                test: /\.css$/,
-                use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader']
-
-            },
-            {
-                test: /\.html$/,
-                use: [{
-                    loader: 'html-loader',
-                    options: {
-                        minimize: false,
-                        removeComments: false,
-                        collapseWhitespace: false,
-                        attrs: ['img:src']
-                    }
-                }]
-            },
-            {
-                test: /fonts.*\.(woff|woff2|eot|ttf|svg){1}$/,
-                use: {
-                    loader: 'file',
-                    query: {
-                        useRelativePath: false,
-                        publicPath: '',
-                        name: 'fonts/[name].[ext]'
-                    }
-                }
-            },
-            {
-                test: /images.*\.(jpg|png|gif|svg){1}$/,
-                use: {
-                    loader: 'url',
-                    options: {
-                        limit: 8192,
-                        publicPath: '',
-                        name: 'images/[name].[ext]'
-                    }
-                }
-            },
-            {
-                test: /icons.*\.svg$/,
-                loader: 'svg-sprite-loader',
-                options: {}
+        rules: [{
+            test: /\.js$/,
+            loader: 'babel-loader',
+            exclude: '/(node_modules|bower_components)/',
+            query: {
+                presets: ['@babel/preset-env']
             }
+        },
+        {
+            test: /\.(scss|sass)$/,
+            use: [
+                "style-loader",
+                {
+                    loader: MiniCssExtractPlugin.loader,
+                    options: {
+                        publicPath: "../"
+                    }
+                },
+                {
+                    loader: "css-loader",
+                    options: {
+                        sourceMap: true
+                    }
+                },
+                {
+                    loader: "postcss-loader",
+                    options: {
+                        sourceMap: true
+                    }
+                },
+                {
+                    loader: "sass-loader",
+                    options: {
+                        sourceMap: true
+                    }
+                }
+            ]
+        },
+        {
+            test: /\.css$/,
+            use: [
+                "style-loader",
+                {
+                    loader: MiniCssExtractPlugin.loader,
+                    options: {
+                        publicPath: "../"
+                    }
+                },
+                {
+                    loader: "css-loader",
+                    options: {
+                        sourceMap: true
+                    }
+                },
+                {
+                    loader: "postcss-loader",
+                    options: {
+                        sourceMap: true
+                    }
+                }  
+            ]
+        },
+        {
+            test: /\.html$/,
+            use: [{
+                loader: 'html-loader',
+                options: {
+                    minimize: false,
+                    removeComments: false,
+                    collapseWhitespace: false,
+                    attrs: ['img:src', 'svg:src']
+                }
+            }]
+        },
+        {
+            test: /images\/.*\.(jpg|png|gif|svg)$/,
+            use: {
+                loader: "file",
+                options: {
+                    limit: 2048,
+                    name: "images/[name].[ext]"
+                }
+            }
+        },
+        {
+            test: /fonts\/.*\.(woff|woff2|eot|ttf|svg)$/,
+            use: {
+                loader: "file",
+                query: {
+                    publicPath: "../",
+                    limit: 2048,
+                    name: "fonts/[name].[ext]"
+                }
+            }
+        },
+        {
+            test: /icons.*\.svg$/,
+            loader: 'svg-sprite-loader',
+            options: {}
+        }
         ]
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'css/[name].css',
+            filename: 'css/[name].css?[hash]',
         }),
         new HtmlWebpackPlugin({
             filename: 'index.html',
@@ -96,6 +151,11 @@ module.exports = {
         mergeDuplicateChunks: true,
         removeEmptyChunks: true,
         removeAvailableModules: true,
+        splitChunks: {
+            name: 'common',
+            chunks: 'all',
+            minChunks: 2
+        },
         noEmitOnErrors: true,
         concatenateModules: true
     }
