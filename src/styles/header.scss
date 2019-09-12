@@ -1,0 +1,331 @@
+@import "~styles/utils";
+
+// ----------------
+
+.semi-bold {
+    font-weight: 600;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.link {
+    cursor: pointer;
+    color: $color-text-base;
+    text-decoration: none;
+
+    &:hover,
+    &_hover {
+        color: $color-primary;
+        text-decoration: underline;
+    }
+
+    &_colored {
+        color: $color-primary;
+    }
+}
+
+.search {
+    position: relative;
+    width: 500px; // убрать потом!
+
+    &__bar {
+        background: #ffffff;
+        border: 1.5px solid #36a6f2;
+        border-radius: 48px;
+        padding-left: 20px;
+        padding-right: 50px;
+        min-height: 35px;
+        width: 100%;
+
+        &:focus {
+            outline: unset;
+        }
+    }
+
+    &__button {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        border-radius: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__category {
+        top: 50%;
+        right: 50px;
+        transform: translateY(-50%);
+        position: absolute;
+    }
+}
+
+.search-category {
+    cursor: pointer;
+    position: relative;
+    color: $color-text-base;
+    font-size: 12px;
+
+    &__list {
+        display: none;
+        background-color: $background-color-primary;
+        box-shadow: 0px 0px 16px rgba(105, 153, 247, 0.35);
+        border-radius: 8px;
+        cursor: initial;
+    }
+
+    &__list-item {
+        line-height: 1.5;
+        cursor: pointer;
+        padding-bottom: 8px;
+        &:last-child {
+            padding-bottom: unset;
+        }
+    }
+
+    &:before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 0;
+        left: -13px;
+        top: calc(50% + 3px);
+        transform: translateY(-50%);
+        display: block;
+        border: 4px solid transparent;
+        border-top: 4px solid $color-text-base;
+        z-index: 2;
+    }
+}
+
+.search-category:hover, .search-category_expanded {
+    .search-category__current {
+        display: none;
+    }
+
+    .search-category__list {
+        display: block;
+        position: relative;
+        right: -10px;
+        top: -13px;
+        padding: 5px 10px 5px 20px;
+        transform: translateY(50%);
+    }
+
+    &:before {
+        left: 17px;
+    }
+}
+
+.btn {
+    cursor: pointer;
+    background-color: $background-color-primary;
+    border: unset;
+    padding: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    &:focus {
+        outline: unset;
+    }
+}
+
+// шапка сайта
+.header {
+    // в макете нет структуры, отступы заданы жестко :(
+    width: 100%;
+    background-color: white;
+    padding-top: 10px;
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 35px;
+        margin-bottom: 20px;
+    }
+
+    &__col {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    &__links-eq {
+        margin-left: 65px;
+        font-size: 13px;
+
+        a {
+            &:nth-child(1) {
+                margin-right: 27px;
+            }
+            &:nth-child(2) {
+                margin-right: 46px;
+            }
+        }
+    }
+
+    &__links-diff {
+        font-size: 12px;
+        width: 228px;
+    }
+
+    &__logo {
+        width: 200px;
+        height: 68px;
+    }
+}
+
+.icon {
+    cursor: pointer;
+}
+
+// блок круглой иконки с дополнительной информацией - tooltip
+.icon-info {
+    @extend .icon;
+}
+
+// блок информации о техподдержке
+.support-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: baseline;
+
+    &__tel {
+        text-decoration: none;
+        white-space: nowrap;
+        font-weight: 600;
+        font-size: $font-size-primary-text;
+        color: $color-text-base;
+        margin-right: 10px;
+    }
+
+    &__hours {
+        font-size: 10px;
+        color: $color-text-base;
+        opacity: 0.75;
+        font-weight: $font-weight-primary;
+        margin-right: 10px;
+    }
+
+    &__tooltip {
+        width: 195px;
+    }
+}
+
+// визуальное выделение строчного элемента
+.is-highlighted {
+    background: $color-primary;
+    color: white;
+    border-radius: 24px;
+    padding: 4px 14px;
+    text-decoration: none;
+    &:hover {
+        background: $color-primary;
+        color: white;
+        text-decoration: none;
+    }
+}
+
+// класс ставится на элемент который имеет подсказку
+.has-tooltip {
+    position: relative;
+    &:hover > .tooltip,
+    &:focus > .tooltip {
+        visibility: visible;
+        opacity: 1;
+        z-index: 100;
+        transition: opacity $transition-primary, visibility $transition-primary;
+    }
+}
+
+// всплывающая подсказка
+// стандартное положение - снизу под элементом, без треугольника
+.tooltip {
+    visibility: hidden;
+    z-index: 0;
+    opacity: 0;
+    position: absolute;
+    background-color: $tooltip-background-color;
+    padding: 10px;
+    line-height: 15px;
+    color: $color-text-base;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: $font-weight-primary;
+    line-height: 16px;
+    font-style: normal;
+    bottom: -5px;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    transition: opacity $transition-primary, visibility $transition-primary;
+
+    * {
+        font-size: inherit;
+    }
+
+    // добавляет треугольник-указатель к всплывающей подсказке
+    &.tooltip_triangle {
+        bottom: -10px;
+        &:before {
+            content: "";
+            display: block;
+            width: $tooltip-triangle-size;
+            height: $tooltip-triangle-size;
+            position: absolute;
+            left: calc(50% - #{$tooltip-triangle-size}/ 2);
+            top: -3px;
+            background-color: $tooltip-background-color;
+            transform: rotate(45deg);
+        }
+    }
+
+    // позиция подсказки снизу - стандартное положение
+    &.tooltip_bottom {
+        @extend .tooltip;
+    }
+
+    // позиция подсказки сверху
+    &.tooltip_top {
+        bottom: auto;
+        top: -10px;
+        transform: translate(-50%, -100%);
+        &:before {
+            left: calc(50% - #{$tooltip-triangle-size}/ 2);
+            right: auto;
+            top: auto;
+            bottom: -3px;
+        }
+    }
+
+    // позиция подсказки справа
+    &.tooltip_right {
+        bottom: 50%;
+        right: -10px;
+        left: auto;
+        transform: translate(100%, 50%);
+        &:before {
+            right: auto;
+            left: -3px;
+            top: calc(50% - #{$tooltip-triangle-size}/ 2);
+            bottom: auto;
+        }
+    }
+
+    // позиция подсказки слева
+    &.tooltip_left {
+        bottom: 50%;
+        right: auto;
+        left: -10px;
+        transform: translate(-100%, 50%);
+        &:before {
+            left: auto;
+            right: -3px;
+            top: calc(50% - #{$tooltip-triangle-size}/ 2);
+            bottom: auto;
+        }
+    }
+}

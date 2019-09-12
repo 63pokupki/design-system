@@ -23,21 +23,48 @@
 					</i>
 				</div>
 				<nav class="header__col header__links-eq">
-					<a class="link bold is-highlighted" href="#">Помощь</a>
-					<a class="link bold" href="#">Доставка</a>
-					<a class="link bold" href="#">Пункты выдачи</a>
+					<a class="link semi-bold is-highlighted" href="#">Помощь</a>
+					<a class="link semi-bold" href="#">Доставка</a>
+					<a class="link semi-bold" href="#">Пункты выдачи</a>
 				</nav>
 				<nav class="header__col header__links-diff">
-					<a class="link bold" href="#">Пристрой</a>
-					<a class="link bold" href="#">Бренды</a>
-					<a class="link bold" href="#">Форум</a>
+					<a class="link semi-bold" href="#">Пристрой</a>
+					<a class="link semi-bold" href="#">Бренды</a>
+					<a class="link semi-bold" href="#">Форум</a>
 				</nav>
 			</div>
 			<div class="header__row">
+				<!-- логотип -->
 				<div class="logo header__logo">
 					<a class="logo__link" href="#">
 						<img class="logo__img" src="~images/logotype.svg"></img>
 					</a>
+				</div>
+				<!-- блок поиска -->
+				<div class="search">
+					<!-- строка поиска -->
+					<input class="search__bar" type="text" placeholder="Поиск">
+					<!-- кнопка поиска -->
+					<button class="btn search__button">
+						<img class="btn__icon" src="~images/icon-search.svg">
+					</button>
+					<!-- блок выпадающей категории поиска -->
+					<div class="search__category">
+						<!-- добавить .search-category_expanded для раскрытия меню категорий -->
+						<div class="search-category">
+							<!-- текущее значение -->
+							<span class="search-category__current">По товарам</span>
+							<!-- лист всех значений -->
+							<ul class="search-category__list">
+								<li class="search-category__list-item">По товарам</li>
+								<li class="search-category__list-item">По форуму</li>
+								<li class="search-category__list-item">По товарам</li>
+								<li class="search-category__list-item">По форуму</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div>
 				</div>
 			</div>
 			<div class="header__row"></div>
