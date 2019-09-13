@@ -28,7 +28,7 @@
 
 .search {
     position: relative;
-    width: 500px; // убрать потом!
+    width: 100%; // убрать потом!
 
     &__bar {
         background: #ffffff;
@@ -36,25 +36,30 @@
         border-radius: 48px;
         padding-left: 20px;
         padding-right: 50px;
-        min-height: 35px;
+        height: 40px;
         width: 100%;
 
         &:focus {
             outline: unset;
+        }
+
+        &::placeholder {
+            color: #a2a3a5;
+            font-size: 12px;
         }
     }
 
     &__button {
         position: absolute;
         top: 50%;
-        right: 10px;
+        right: 15px;
         border-radius: 50%;
         transform: translateY(-50%);
     }
 
     &__category {
         top: 50%;
-        right: 50px;
+        right: 55px;
         transform: translateY(-50%);
         position: absolute;
     }
@@ -75,11 +80,14 @@
     }
 
     &__list-item {
-        line-height: 1.5;
         cursor: pointer;
-        padding-bottom: 8px;
+        padding-bottom: 2px;
+        margin-bottom: 6px;
+        &:first-child {
+            border-bottom: 1px solid #36a6f275;
+        }
         &:last-child {
-            padding-bottom: unset;
+            margin-bottom: unset;
         }
     }
 
@@ -98,7 +106,8 @@
     }
 }
 
-.search-category:hover, .search-category_expanded {
+.search-category:hover,
+.search-category_expanded {
     .search-category__current {
         display: none;
     }
@@ -154,7 +163,7 @@
     }
 
     &__links-eq {
-        margin-left: 65px;
+        margin-left: 60px;
         font-size: 13px;
 
         a {
@@ -176,15 +185,103 @@
         width: 200px;
         height: 68px;
     }
+
+    &__search {
+        max-width: 530px;
+        margin-left: 60px;
+    }
+
+    &__icon {
+        margin-right: 15px;
+
+        &:first-child {
+            margin-left: 20px;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__icons {
+        display: flex;
+    }
+
+    .caption-icon .icon-heart {
+        &:before {
+            color: #ff4e4e;
+        }
+    }
+
+    .caption-icon:hover .icon-heart {
+        &:before {
+            color: #ff4e4e;
+            content: "\e906";
+        }
+    }
 }
 
-.icon {
+// блок иконки с подписью снизу
+.caption-icon {
     cursor: pointer;
+    font-family: "Open Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-decoration-color: unset;
+    color: $color-text-base;
+
+    &__icon {
+        font-size: 22px;
+        margin-bottom: 3px;
+        text-decoration: none;
+        text-decoration-color: unset;
+    }
+
+    &__text {
+        font-size: 10px;
+        color: inherit;
+        text-decoration: none;
+        text-decoration-color: unset;
+        max-width: 60px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    &:hover {
+        color: #36a6f2;
+    }
 }
 
-// блок круглой иконки с дополнительной информацией - tooltip
-.icon-info {
-    @extend .icon;
+// иконка с календарем и пометкой о количестве событий
+.icon-calendar {
+    position: relative;
+
+    &__notification-count {
+        font-family: "Open Sans", sans-serif !important;
+        position: absolute;
+        display: block;
+        padding: 3px;
+        font-size: 10px;
+        background-color: #ff4e4e;
+        border-radius: 13px;
+        color: white;
+        font-weight: bold;
+        white-space: nowrap;
+        right: 10px;
+        bottom: -2px;
+        transform: translate(100%, 0);
+        min-width: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            color: white;
+        }
+    }
 }
 
 // блок информации о техподдержке
