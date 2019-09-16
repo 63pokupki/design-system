@@ -64,6 +64,9 @@
         right: 15px;
         border-radius: 50%;
         transform: translateY(-50%);
+        &:active {
+            transform: translateY(-50%) scale(0.8);
+        }
     }
 
     &__category {
@@ -296,6 +299,12 @@
         color: $color-primary;
         font-size: 14px;
     }
+
+    &:active {
+        .menu-btn__icon {
+            @include volume-click();
+        }
+    }
 }
 
 // иконка бургера
@@ -316,11 +325,15 @@
     }
 }
 
-// шапка сайта
-.header {
-    // в макете нет структуры, отступы заданы жестко :(
+// блок шапки, содержит touch и desctop блоки
+.ds-header {
     width: 100%;
     background-color: white;
+}
+
+// дестоп шапка сайта
+.ds-header-desctop {
+    // в макете нет структуры, отступы заданы жестко :(
     padding-top: 10px;
 
     &__row {
@@ -427,6 +440,12 @@
 
     &:hover {
         color: #36a6f2;
+    }
+
+    &:active {
+        .caption-icon__icon {
+           @include volume-click();
+        }
     }
 }
 
