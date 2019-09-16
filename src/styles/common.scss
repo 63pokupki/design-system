@@ -1462,27 +1462,6 @@ symbol.active {
 }
 
 /******HTML-icons*******/
-.burger {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 14px;
-    height: 8.5px;
-    .burger-line {
-        position: absolute;
-        width: 100%;
-        height: 1.5px;
-        background: #fff;
-        border-radius: 0.75px;
-    }
-    .burger-line:nth-child(1) {
-        top: 0;
-    }
-    .burger-line:nth-child(3) {
-        bottom: 0;
-    }
-}
 
 .close {
     position: relative;
