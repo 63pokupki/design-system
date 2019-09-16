@@ -3,7 +3,7 @@
 
 /*STYLES*/
 .ds {
-    background: #c0c0c0;
+    background: #b9b9b9;
     overflow-x: hidden;
 }
 
@@ -16,6 +16,8 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    max-width: 1184px;
+    margin: 0 auto;
 }
 
 .ds-wrapper > svg {

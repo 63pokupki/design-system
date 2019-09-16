@@ -10,6 +10,10 @@
     font-weight: 700;
 }
 
+.normal {
+    font-weight: normal;
+}
+
 .link {
     cursor: pointer;
     color: $color-text-base;
@@ -141,6 +145,90 @@
     }
 }
 
+.categories-menu {
+    display: inline-block;
+    background: $background-color-primary;
+    padding: 30px;
+    font-size: 14px;
+    font-weight: normal;
+    color: $color-text-base;
+    box-shadow: 0px 1px 16px rgba(105, 153, 247, 0.35);
+    position: relative;
+
+    &__column {
+        padding-right: 20px;
+        position: relative;
+        min-height: 350px;
+        display: inline-block;
+    }
+    &__column_sub {
+        display: none;
+    }
+    &__heading {
+        text-transform: uppercase;
+        margin-right: 50px;
+    }
+    &__all {
+        font-size: 12px;
+    }
+    &__list {
+        margin-top: 20px;
+    }
+    &__item {
+        margin-bottom: 10px;
+        &:last-child {
+            margin-bottom: unset;
+        }
+    }
+    &__item:hover {
+        .categories-menu__column_sub {
+            visibility: visible;
+            opacity: 1;
+            z-index: 2;
+            transition: opacity $transition-medium, visibility $transition-medium;
+        }
+    }
+
+    // состояния
+
+    // треугольник сверху
+    &_has-triangle {
+        &:before {
+            position: absolute;
+            content: "";
+            width: 0;
+            height: 0;
+            left: 20px;
+            top: -20px;
+            border: 10px solid transparent;
+            border-bottom: 10px solid $background-color-primary;
+        }
+    }
+
+    // если имеет подкатегории
+    &_has-subcategories {
+        display: block;
+        width: 100%;
+        max-width: 600px;
+        .categories-menu__column {
+            border-right: 1px solid #e3e3e3;
+        }
+        .categories-menu__column_sub {
+            display: block;
+            border-right: unset;
+            visibility: hidden;
+            opacity: 0;
+            z-index: 0;
+            position: absolute;
+            top: 0;
+            right: -20px;
+            width: 125%;
+            transform: translate(100%, 0%);
+            transition: opacity $transition-medium, visibility $transition-medium;
+        }
+    }
+}
+
 // меню с категориями на десктопе
 .categories-bar {
     background: #d7edfc;
@@ -151,10 +239,18 @@
     align-items: center;
     width: 100%;
     padding: 0 32px;
+    position: relative;
 
     &__button {
         margin-right: 50px;
         flex-shrink: 0;
+    }
+
+    // при клике на кнопку раскрывает подменю с категориями
+    &__button:focus ~ .categories-bar__menu {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity $transition-medium, visibility $transition-medium;
     }
 
     &__list {
@@ -169,6 +265,26 @@
 
     &__item:last-child {
         margin-right: unset;
+    }
+
+    &__menu {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        left: 12px;
+        bottom: 0;
+        transform: translateY(100%);
+        transition: opacity $transition-medium, visibility $transition-medium;
+    }
+
+    // состояния
+
+    &_is-expanded {
+        .categories-bar__menu {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity $transition-medium, visibility $transition-medium;
+        }
     }
 }
 
