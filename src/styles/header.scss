@@ -2,18 +2,22 @@
 
 // ----------------
 
+// полужирный шрифт
 .semi-bold {
     font-weight: 600;
 }
 
+// жирный шрифт
 .bold {
     font-weight: 700;
 }
 
+// обычный шрифт
 .normal {
     font-weight: normal;
 }
 
+// отображение ссылки
 .link {
     cursor: pointer;
     color: $color-text-base;
@@ -30,6 +34,7 @@
     }
 }
 
+// input типа поиск
 .search {
     position: relative;
     width: 100%;
@@ -69,6 +74,7 @@
     }
 }
 
+// выпадающая плашка с выбором категорий поиска
 .search-category {
     cursor: pointer;
     position: relative;
@@ -110,6 +116,7 @@
     }
 }
 
+// состояние .search-category
 .search-category:hover,
 .search-category_expanded {
     .search-category__current {
@@ -130,6 +137,7 @@
     }
 }
 
+// базовая кнопка, сброс стилей
 .btn {
     cursor: pointer;
     background-color: transparent;
@@ -229,7 +237,7 @@
     }
 }
 
-// меню с категориями на десктопе
+// меню с категориями
 .categories-bar {
     background: #d7edfc;
     border-radius: 24px;
@@ -241,16 +249,16 @@
     padding: 0 32px;
     position: relative;
 
-    &__button {
-        margin-right: 50px;
-        flex-shrink: 0;
-    }
-
     // при клике на кнопку раскрывает подменю с категориями
     &__button:focus ~ .categories-bar__menu {
         visibility: visible;
         opacity: 1;
         transition: opacity $transition-medium, visibility $transition-medium;
+    }
+
+    &__button {
+        margin-right: 50px;
+        flex-shrink: 0;
     }
 
     &__list {
@@ -276,18 +284,9 @@
         transform: translateY(100%);
         transition: opacity $transition-medium, visibility $transition-medium;
     }
-
-    // состояния
-
-    &_is-expanded {
-        .categories-bar__menu {
-            visibility: visible;
-            opacity: 1;
-            transition: opacity $transition-medium, visibility $transition-medium;
-        }
-    }
 }
 
+// кнопка с категориями
 .menu-btn {
     &__icon {
         margin-right: 10px;
@@ -460,7 +459,7 @@
     }
 }
 
-// блок информации о техподдержке
+// блок информации о техподдержке - номер телефона, время работы, икнока помощи
 .support-info {
     display: flex;
     flex-wrap: wrap;
