@@ -157,13 +157,12 @@
 }
 
 .categories-menu {
-    display: inline-block;
+    display: block;
     background: $background-color-primary;
     padding: 30px;
     font-size: 14px;
     font-weight: normal;
     color: $color-text-base;
-    box-shadow: 0px 1px 16px rgba(105, 153, 247, 0.35);
     position: relative;
 
     &__column {
@@ -174,6 +173,11 @@
     }
     &__column_sub {
         display: none;
+    }
+    &__heading-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
     &__heading {
         text-transform: uppercase;
@@ -255,7 +259,10 @@
     // при клике на кнопку раскрывает подменю с категориями
     &__button:focus ~ .categories-bar__menu {
         visibility: visible;
+        overflow: visible;
+        max-height: initial;
         opacity: 1;
+        padding: 30px;
         transition: opacity $transition-medium, visibility $transition-medium;
     }
 
@@ -281,10 +288,15 @@
     &__menu {
         visibility: hidden;
         opacity: 0;
+        max-height: 0;
+        padding: 0;
+        overflow: hidden;
         position: absolute;
         left: 12px;
         bottom: 0;
+        z-index: 10;
         transform: translateY(100%);
+        box-shadow: 0px 1px 16px rgba(105, 153, 247, 0.35);
         transition: opacity $transition-medium, visibility $transition-medium;
     }
 }
@@ -326,13 +338,109 @@
 }
 
 // блок шапки, содержит touch и desctop блоки
-.ds-header {
+.header {
     width: 100%;
     background-color: white;
+
+    .header-touch {
+        display: block;
+    }
+
+    .sidebar-menu-touch {
+        display: block;
+    }
+
+    .header-desctop {
+        display: none;
+    }
+
+    @media screen and (min-width: 1024px) {
+        .header-desctop {
+            display: block;
+        }
+
+        .header-touch {
+            display: none;
+        }
+
+        .sidebar-menu-touch {
+            display: none;
+        }
+    }
+}
+
+.header-touch {
+    padding: 10px 15px;
+    position: relative;
+    border-bottom: 1px solid rgba(49, 140, 202, 0.25);
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo {
+        width: 100px;
+    }
+}
+
+.outlined-links {
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        &:last-child {
+            margin-bottom: unset;
+        }
+    }
+    &__link {
+        display: inline-block;
+        border: 1px solid $color-primary;
+        border-radius: 24px;
+        padding: 6px 10px;
+        min-width: 128px;
+        text-align: center;
+    }
+}
+
+.sidebar_slide-left {
+}
+
+.sidebar_slide-right {
+}
+
+.sidebar-menu-touch {
+    background: $background-color-primary;
+    width: 300px;
+    font-size: 14px;
+    border-right: 1px solid rgba(49, 140, 202, 0.25); //удалить
+    padding: 0 15px;
+
+    &__categories-menu {
+        padding: 0;
+        .categories-menu__column {
+            padding-right: unset;
+            display: block;
+        }
+        .categories-menu__heading-wrapper {
+            padding: 8px 0px 8px 15px;
+            border-bottom: 1px solid rgba(49,140,202,.25);
+        }        
+        
+    }
+
+    &__section {
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(49, 140, 202, 0.25);
+    }
+}
+
+.sidebar {
 }
 
 // дестоп шапка сайта
-.ds-header-desctop {
+.header-desctop {
     // в макете нет структуры, отступы заданы жестко :(
     padding-top: 10px;
 
@@ -372,6 +480,7 @@
     &__logo {
         width: 200px;
         height: 68px;
+        flex-shrink: 0.3;
     }
 
     &__search {
@@ -406,6 +515,17 @@
             color: #ff4e4e;
             content: "\e906";
         }
+    }
+}
+
+.logo {
+    &__link {
+        width: 100%;
+        height: 100%;
+    }
+    &__img {
+        width: 100%;
+        height: auto;
     }
 }
 
@@ -444,7 +564,7 @@
 
     &:active {
         .caption-icon__icon {
-           @include volume-click();
+            @include volume-click();
         }
     }
 }
