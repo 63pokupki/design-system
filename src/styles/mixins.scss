@@ -1,4 +1,4 @@
 // уменьшение при клике
-@mixin volume-click($scale: 0.8) {
+@mixin deep-click($scale: 0.8) {
     transform: scale($scale);
 }
