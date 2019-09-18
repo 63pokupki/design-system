@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Design System</title>
     </head>
-    <body class="ds">
+    <body class="ds disable-scroll">
         <h1 class="ds-title">Header</h1>
         <div class="ds-wrapper">
             <header class="header">
@@ -212,127 +212,126 @@
                         </div>
                     </div>
                 </div>
-
-                <aside class="sidebar header__sidebar">
-                    <div class="sidebar__body sidebar-menu-touch">
-                        <!-- блок поиска -->
-                        <div class="search sidebar-menu-touch__section">
-                            <!-- строка поиска -->
-                            <input class="search__bar" type="text" placeholder="Поиск" />
-                            <!-- кнопка поиска -->
-                            <button class="btn search__button">
-                                <img class="btn__icon" src="~images/icon-search.svg" />
-                            </button>
-                            <!-- блок выпадающей категории поиска -->
-                            <div class="search__category">
-                                <!-- добавить .search-category_expanded для раскрытия меню категорий -->
-                                <div class="search-category">
-                                    <!-- текущее значение -->
-                                    <span class="search-category__current">По товарам</span>
-                                    <!-- лист всех значений -->
-                                    <ul class="search-category__list">
-                                        <li class="search-category__list-item">По товарам</li>
-                                        <li class="search-category__list-item">По форуму</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="outlined-links sidebar-menu-touch__section">
-                            <div class="outlined-links__row">
-                                <a class="link outlined-links__link" href="#">Новые закупки</a>
-                                <a class="link outlined-links__link" href="#">Распродажи</a>
-                            </div>
-                            <div class="outlined-links__row">
-                                <a class="link outlined-links__link" href="#">Скоро стоп</a>
-                                <a class="link outlined-links__link" href="#">Орг. сбор 0%</a>
-                            </div>
-                        </div>
-
-                        <nav class="categories-menu sidebar-menu-touch__categories-menu">
-                            <div class="categories-menu__column">
-                                <div class="categories-menu__heading-wrapper">
-                                    <span class="categories-menu__heading semi-bold">Категории</span>
-                                    <a class="link link_colored categories-menu__all" href="#">Смотреть все</a>
-                                </div>
-                                <ul class="categories-menu__list">
-                                    <li class="categories-menu__item">
-                                        <i class="icomoon-old-for-woman categories-menu__icon"></i>
-                                        <a class="link" href="#">Одежда и обувь для женщин</a>
-                                    </li>
-                                    <li class="categories-menu__item">
-                                        <i class="icomoon-old-for-man categories-menu__icon"></i>
-                                        <a class="link" href="#">Одежда и обувь для мужчин</a>
-                                    </li>
-                                    <li class="categories-menu__item">
-                                        <i class="icomoon-old-for-child categories-menu__icon"></i>
-                                        <a class="link" href="#">Одежда и обувь для детей</a>
-                                    </li>
-                                    <li class="categories-menu__item">
-                                        <i class="icomoon-old-sport categories-menu__icon"></i>
-                                        <a class="link" href="#">Спорт, отдых, здоровье</a>
-                                    </li>
-                                    <li class="categories-menu__item">
-                                        <i class="icomoon-old-for-children categories-menu__icon"></i>
-                                        <a class="link" href="#">Товары для детей</a>
-                                    </li>
-                                    <li class="categories-menu__item">
-                                        <i class="icomoon-old-accessories categories-menu__icon"></i>
-                                        <a class="link" href="#">Кожгалантерея и аксессуары</a>
-                                    </li>
-                                    <li class="categories-menu__item">
-                                        <i class="icomoon-old-zoo categories-menu__icon"></i>
-                                        <a class="link" href="#">Товары для животных</a>
-                                    </li>
-                                    <li class="categories-menu__item">
-                                        <i class="icomoon-old-cosmetics categories-menu__icon"></i>
-                                        <a class="link" href="#">Косметика и парфюмерия</a>
-                                    </li>
-                                    <li class="categories-menu__item">
-                                        <i class="icomoon-old-for-auto categories-menu__icon"></i>
-                                        <a class="link" href="#">Товары для автомобиля</a>
-                                    </li>
-                                    <li class="categories-menu__item">
-                                        <i class="icomoon-old-home categories-menu__icon"></i>
-                                        <a class="link" href="#">Товары для дома</a>
-                                    </li>
-                                    <li class="categories-menu__item">
-                                        <i class="icomoon-old-prises categories-menu__icon"></i>
-                                        <a class="link" href="#">Подарки и сувениры</a>
-                                    </li>
-                                    <li class="categories-menu__item">
-                                        <i class="icomoon-old-for-garden categories-menu__icon"></i>
-                                        <a class="link" href="#">Товары для сада</a>
-                                    </li>
-                                    <li class="categories-menu__item">
-                                        <i class="icomoon-old-appliances categories-menu__icon"></i>
-                                        <a class="link" href="#">Электроника и бытовая техника</a>
-                                    </li>
-                                    <li class="categories-menu__item">
-                                        <i class="icomoon-old-products categories-menu__icon"></i>
-                                        <a class="link" href="#">Продукты</a>
-                                    </li>
-                                    <li class="categories-menu__item">
-                                        <i class="icomoon-old-books categories-menu__icon"></i>
-                                        <a class="link" href="#">Книги и канцтовары</a>
-                                    </li>
-                                    <li class="categories-menu__item">
-                                        <i class="icomoon-old-hobby categories-menu__icon"></i>
-                                        <a class="link" href="#">Хобби</a>
-                                    </li>
+            </header>
+            <aside class="sidebar touch-only">
+                <div class="sidebar__body sidebar-menu-touch">
+                    <!-- блок поиска -->
+                    <div class="search sidebar-menu-touch__section">
+                        <!-- строка поиска -->
+                        <input class="search__bar" type="text" placeholder="Поиск" />
+                        <!-- кнопка поиска -->
+                        <button class="btn search__button">
+                            <img class="btn__icon" src="~images/icon-search.svg" />
+                        </button>
+                        <!-- блок выпадающей категории поиска -->
+                        <div class="search__category">
+                            <!-- добавить .search-category_expanded для раскрытия меню категорий -->
+                            <div class="search-category">
+                                <!-- текущее значение -->
+                                <span class="search-category__current">По товарам</span>
+                                <!-- лист всех значений -->
+                                <ul class="search-category__list">
+                                    <li class="search-category__list-item">По товарам</li>
+                                    <li class="search-category__list-item">По форуму</li>
                                 </ul>
                             </div>
-                        </nav>
-
-                        <div class="sidebar-menu-touch__links sidebar-menu-touch__section">
-                            <a href="#" class="link">Пристрой</a>
-                            <a href="#" class="link">Бренды</a>
-                            <a href="#" class="link">Форум</a>
                         </div>
                     </div>
-                    <div class="sidebar__background"></div>
-                    <button class="btn sidebar__close"></button>
-                </aside>
-            </header>
+                    <div class="outlined-links sidebar-menu-touch__section">
+                        <div class="outlined-links__row">
+                            <a class="link outlined-links__link" href="#">Новые закупки</a>
+                            <a class="link outlined-links__link" href="#">Распродажи</a>
+                        </div>
+                        <div class="outlined-links__row">
+                            <a class="link outlined-links__link" href="#">Скоро стоп</a>
+                            <a class="link outlined-links__link" href="#">Орг. сбор 0%</a>
+                        </div>
+                    </div>
+
+                    <nav class="categories-menu sidebar-menu-touch__categories-menu">
+                        <div class="categories-menu__column">
+                            <div class="categories-menu__heading-wrapper">
+                                <span class="categories-menu__heading semi-bold">Категории</span>
+                                <a class="link link_colored categories-menu__all" href="#">Смотреть все</a>
+                            </div>
+                            <ul class="categories-menu__list">
+                                <li class="categories-menu__item">
+                                    <i class="icomoon-old-for-woman categories-menu__icon"></i>
+                                    <a class="link" href="#">Одежда и обувь для женщин</a>
+                                </li>
+                                <li class="categories-menu__item">
+                                    <i class="icomoon-old-for-man categories-menu__icon"></i>
+                                    <a class="link" href="#">Одежда и обувь для мужчин</a>
+                                </li>
+                                <li class="categories-menu__item">
+                                    <i class="icomoon-old-for-child categories-menu__icon"></i>
+                                    <a class="link" href="#">Одежда и обувь для детей</a>
+                                </li>
+                                <li class="categories-menu__item">
+                                    <i class="icomoon-old-sport categories-menu__icon"></i>
+                                    <a class="link" href="#">Спорт, отдых, здоровье</a>
+                                </li>
+                                <li class="categories-menu__item">
+                                    <i class="icomoon-old-for-children categories-menu__icon"></i>
+                                    <a class="link" href="#">Товары для детей</a>
+                                </li>
+                                <li class="categories-menu__item">
+                                    <i class="icomoon-old-accessories categories-menu__icon"></i>
+                                    <a class="link" href="#">Кожгалантерея и аксессуары</a>
+                                </li>
+                                <li class="categories-menu__item">
+                                    <i class="icomoon-old-zoo categories-menu__icon"></i>
+                                    <a class="link" href="#">Товары для животных</a>
+                                </li>
+                                <li class="categories-menu__item">
+                                    <i class="icomoon-old-cosmetics categories-menu__icon"></i>
+                                    <a class="link" href="#">Косметика и парфюмерия</a>
+                                </li>
+                                <li class="categories-menu__item">
+                                    <i class="icomoon-old-for-auto categories-menu__icon"></i>
+                                    <a class="link" href="#">Товары для автомобиля</a>
+                                </li>
+                                <li class="categories-menu__item">
+                                    <i class="icomoon-old-home categories-menu__icon"></i>
+                                    <a class="link" href="#">Товары для дома</a>
+                                </li>
+                                <li class="categories-menu__item">
+                                    <i class="icomoon-old-prises categories-menu__icon"></i>
+                                    <a class="link" href="#">Подарки и сувениры</a>
+                                </li>
+                                <li class="categories-menu__item">
+                                    <i class="icomoon-old-for-garden categories-menu__icon"></i>
+                                    <a class="link" href="#">Товары для сада</a>
+                                </li>
+                                <li class="categories-menu__item">
+                                    <i class="icomoon-old-appliances categories-menu__icon"></i>
+                                    <a class="link" href="#">Электроника и бытовая техника</a>
+                                </li>
+                                <li class="categories-menu__item">
+                                    <i class="icomoon-old-products categories-menu__icon"></i>
+                                    <a class="link" href="#">Продукты</a>
+                                </li>
+                                <li class="categories-menu__item">
+                                    <i class="icomoon-old-books categories-menu__icon"></i>
+                                    <a class="link" href="#">Книги и канцтовары</a>
+                                </li>
+                                <li class="categories-menu__item">
+                                    <i class="icomoon-old-hobby categories-menu__icon"></i>
+                                    <a class="link" href="#">Хобби</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+
+                    <div class="sidebar-menu-touch__links sidebar-menu-touch__section">
+                        <a href="#" class="link">Пристрой</a>
+                        <a href="#" class="link">Бренды</a>
+                        <a href="#" class="link">Форум</a>
+                    </div>
+                </div>
+                <div class="sidebar__background"></div>
+                <button class="btn sidebar__close"></button>
+            </aside>
         </div>
         <!--  -->
         <!--  -->
