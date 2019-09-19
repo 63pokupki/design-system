@@ -20,11 +20,17 @@
                 text-align: center;
             }
             .ds-wrapper {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
                 max-width: 1184px;
                 margin: 0 auto;
+                padding: 10px 0;
+            }
+
+            .ds-wrapper.light {
+                background-color: white;
+            }
+
+            .ds-divider {
+                margin: 20px;
             }
 
             .ds-wrapper > svg {
@@ -36,7 +42,37 @@
     </head>
     <!-- disable-scroll для отключения пролистывания -->
     <body class="ds">
-        <h1 class="ds-title">Header</h1>
+        <h1 class="ds-title">Дизайн система</h1>
+        <!--  -->
+        <h2 class="ds-title">Кнопки</h2>
+        <div class="ds-wrapper">
+            <button class="btn menu-btn categories-bar__button">
+                <div class="burger menu-btn__icon">
+                    <div class="burger__line"></div>
+                    <div class="burger__line"></div>
+                    <div class="burger__line"></div>
+                </div>
+                <span class="btn__text menu-btn__text bold">Все закупки</span>
+            </button>
+        </div>
+        
+        <h2 class="ds-title">Ссылки</h2>
+        <div class="ds-wrapper light">
+            <div class="ds-divider">
+                <a class="link" href="#">Обычная ссылка</a>
+            </div>
+            <div class="ds-divider">
+                <a class="link link_hover" href="#">Ссылка при наведении</a>
+            </div>
+            <div class="ds-divider">
+                <a class="link link_colored" href="#">Окрашенная ссылка</a>
+            </div>
+            <div class="ds-divider">
+                <a class="link link_is-highlighted" href="#">Выделенная ссылка</a>
+            </div>
+        </div>
+
+        <h2 class="ds-title">Header</h2>
         <div class="ds-wrapper">
             <header class="header">
                 <!-- шапка под десктоп -->
@@ -367,7 +403,7 @@
         </div>
         <!--  -->
         <!--  -->
-        <h1 class="ds-title">SVG</h1>
+        <h2 class="ds-title">SVG</h2>
         <!-- ds-title -->
         <div class="ds-wrapper">
             <svg class="svg-cat-accessories-adult">
