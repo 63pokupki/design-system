@@ -7,6 +7,7 @@ $tooltip-triangle-size: 6px;
 
 // класс ставится на элемент который имеет подсказку
 .has-tooltip {
+    cursor: pointer;
     position: relative;
     &:hover > .tooltip,
     &:focus > .tooltip {
@@ -37,6 +38,7 @@ $tooltip-triangle-size: 6px;
     left: 50%;
     transform: translate(-50%, 100%);
     transition: opacity $transition-primary, visibility $transition-primary;
+    box-shadow: 0 0 5px 0px rgba(0,0,0,0.2);
 
     * {
         font-size: inherit;
@@ -52,7 +54,7 @@ $tooltip-triangle-size: 6px;
             height: $tooltip-triangle-size;
             position: absolute;
             left: calc(50% - #{$tooltip-triangle-size}/ 2);
-            top: -3px;
+            top: -5px;
             background-color: $tooltip-background-color;
             transform: rotate(45deg);
         }
@@ -72,7 +74,7 @@ $tooltip-triangle-size: 6px;
             left: calc(50% - #{$tooltip-triangle-size}/ 2);
             right: auto;
             top: auto;
-            bottom: -3px;
+            bottom: -5px;
         }
     }
 
@@ -84,7 +86,7 @@ $tooltip-triangle-size: 6px;
         transform: translate(100%, 50%);
         &:before {
             right: auto;
-            left: -3px;
+            left: -5px;
             top: calc(50% - #{$tooltip-triangle-size}/ 2);
             bottom: auto;
         }
@@ -98,7 +100,7 @@ $tooltip-triangle-size: 6px;
         transform: translate(-100%, 50%);
         &:before {
             left: auto;
-            right: -3px;
+            right: -5px;
             top: calc(50% - #{$tooltip-triangle-size}/ 2);
             bottom: auto;
         }
