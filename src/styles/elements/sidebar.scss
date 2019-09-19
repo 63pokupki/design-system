@@ -1,0 +1,117 @@
+// боковая панель
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: transform $transition-primary, opacity $transition-primary, visibility $transition-primary;
+
+    .sidebar__body {
+        top: 0;
+        left: 0;
+        position: fixed;
+        overflow: auto;
+        height: 100vh;
+        z-index: 50;
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(-100%);
+        transition: transform $transition-primary, opacity $transition-primary, visibility $transition-primary;
+    }
+
+    .sidebar__background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 40;
+        background: rgba(96, 98, 102, 0.7);
+    }
+
+    .sidebar__close {
+        position: fixed;
+        right: 5px;
+        top: 25px;
+        width: 20px;
+        height: 20px;
+        z-index: 60;
+
+        &:active {
+            @include deep-click();
+        }
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 5px;
+            background: white;
+            transform: rotate(45deg);
+        }
+
+        &:after {
+            transform: rotate(-45deg);
+        }
+    }
+
+    @media screen and (min-width: $mobile) {
+        .sidebar__close {
+            right: 15px;
+            top: 10px;
+            width: 35px;
+            height: 35px;
+        }
+    }
+}
+
+// положение сайдбара справа
+.sidebar_right {
+    left: auto;
+    right: 0;
+
+    .sidebar__body {
+        left: auto;
+        right: 0;
+        transform: translate(100%);
+    }
+
+    .sidebar__background {
+        left: auto;
+        right: 0;
+    }
+
+    .sidebar__close {
+        right: auto;
+        left: 5px;
+    }
+
+    @media screen and (min-width: $mobile) {
+        .sidebar__close {
+            left: 15px;
+            top: 10px;
+            width: 35px;
+            height: 35px;
+        }
+    }
+}
+
+// состояние активного сайдбара
+.sidebar_is-active {
+    opacity: 1;
+    visibility: visible;
+    transition: transform $transition-primary, opacity $transition-primary, visibility $transition-primary;
+
+    .sidebar__body {
+        transform: translate(0%);
+        opacity: 1;
+        visibility: visible;
+        transition: transform $transition-primary, opacity $transition-primary, visibility $transition-primary;
+    }
+}

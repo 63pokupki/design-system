@@ -1,0 +1,30 @@
+// отображение ссылки
+.link {
+    cursor: pointer;
+    color: $color-text-base;
+    text-decoration: none;
+
+    &:hover,
+    &_hover {
+        color: $color-primary;
+        text-decoration: underline;
+    }
+
+    &_colored {
+        color: $color-primary;
+    }
+
+    // визуальное выделение строчного элемента
+    &_is-highlighted {
+        background: $color-primary;
+        color: white;
+        border-radius: 24px;
+        padding: 4px 14px;
+        text-decoration: none;
+        &:hover {
+            background: $color-primary;
+            color: white;
+            text-decoration: none;
+        }
+    }
+}

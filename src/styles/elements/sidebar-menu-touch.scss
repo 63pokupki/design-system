@@ -1,0 +1,63 @@
+// меню с поиском и категориями
+.sidebar-menu-touch {
+    background: $background-color-primary;
+    font-size: 14px;
+    border-right: 1px solid rgba(49, 140, 202, 0.25);
+    padding: 0 15px;
+    width: 290px;
+
+    &__categories-menu {
+        padding: 0;
+        border-bottom: 1px solid rgba(49, 140, 202, 0.25);
+
+        .categories-menu__column {
+            padding-right: unset;
+            display: block;
+        }
+        .categories-menu__heading-wrapper {
+            padding: 8px 0px 8px 15px;
+            border-bottom: 1px solid rgba(49, 140, 202, 0.25);
+        }
+        .categories-menu__item {
+            margin-bottom: 15px;
+        }
+        .categories-menu__icon {
+            font-size: 22px;
+        }
+    }
+
+    &__section {
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(49, 140, 202, 0.25);
+        &:last-child {
+            border-bottom: unset;
+        }
+    }
+
+    &__links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+// блок обертка
+.outlined-links {
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        &:last-child {
+            margin-bottom: unset;
+        }
+    }
+    &__link {
+        display: inline-block;
+        border: 1px solid $color-primary;
+        border-radius: 24px;
+        padding: 6px 10px;
+        min-width: 128px;
+        text-align: center;
+    }
+}

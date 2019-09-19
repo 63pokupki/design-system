@@ -1,4 +1,4 @@
-// импорт нужных svg иконок для склейки в будущий sprite
+// только иконки для категорий закупок
 import svgCatAccessoriesAdult from './svg-cat-accessories-adult.svg'
 import svgCatAccessoriesBags from './svg-cat-accessories-bags.svg';
 import svgCatAccessoriesBags2 from './svg-cat-accessories-bags2.svg'
@@ -139,9 +139,3 @@ import svgCatWomenHomewear from './svg-cat-women-homewear.svg'
 import svgCatWomenOutwear from './svg-cat-women-outwear.svg'
 import svgCatWomenShoes from './svg-cat-women-shoes.svg'
 import svgCatWomenUnderwear from './svg-cat-women-underwear.svg'
-import svgArrow2 from './svg-arrow-02.svg'
-import svgArrow3 from './svg-arrow-03.svg'
-import svgBox from './svg-box.svg'
-import svgHeart from './svg-heart.svg'
-import svgSearch from './svg-search.svg'
-import svgStar from './svg-star.svg'

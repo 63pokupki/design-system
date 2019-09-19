@@ -1,0 +1,39 @@
+// блок иконки с подписью снизу
+.caption-icon {
+    cursor: pointer;
+    font-family: "Open Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-decoration-color: unset;
+    color: $color-text-base;
+
+    &__icon {
+        font-size: 22px;
+        margin-bottom: 3px;
+        text-decoration: none;
+        text-decoration-color: unset;
+    }
+
+    &__text {
+        font-size: 10px;
+        color: inherit;
+        text-decoration: none;
+        text-decoration-color: unset;
+        max-width: 60px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    &:hover {
+        color: #36a6f2;
+    }
+
+    &:active {
+        .caption-icon__icon {
+            @include deep-click();
+        }
+    }
+}

@@ -1,0 +1,15 @@
+// шапка для сенсорных устройств
+.header-touch {
+    padding: 10px 15px;
+    position: relative;
+    border-bottom: 1px solid rgba(49, 140, 202, 0.25);
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo {
+        width: 100px;
+    }
+}

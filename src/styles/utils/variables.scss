@@ -1,4 +1,3 @@
-// Начальные стили для инициализации
 /****VARIABLES*****/
 /****FONTS*****/
 $font-primary: "Open Sans", sans-serif;
@@ -17,14 +16,9 @@ $transition-slow: 0.5s ease-in-out;
 // BACKGROUND-COLORS
 $background-color-primary: #ffffff;
 
-// .TOOLTIP
-$tooltip-background-color: #e0eef7;
-$tooltip-triangle-size: 6px;
 
-// MEDIA
+
+// Общие точки медиа запросов
 $desctop: 1024px;
 $tablet: 768px;
 $mobile: 480px;
-
-// HEADER
-$header-height: 60px;

@@ -22,6 +22,7 @@ module.exports = {
             'vue$': 'vue/dist/vue.esm.js',
             styles: path.resolve(__dirname, 'src/styles'),
             images: path.resolve(__dirname, 'src/images'),
+            icons: path.resolve(__dirname, 'src/icons'),
             fonts: path.resolve(__dirname, 'src/fonts'),
         },
         modules: ['node_modules', 'src'], //папки доступные для сканирования
@@ -41,7 +42,7 @@ module.exports = {
             }
         },
         {
-            test: /\.(scss|sass)$/,
+            test: /\.scss$/,
             use: [
                 "style-loader",
                 {
@@ -128,7 +129,7 @@ module.exports = {
             }
         },
         {
-            test: /icons.*\.svg$/,
+            test: /categories-icons-sprite\/.*\.svg$/,
             loader: 'svg-sprite-loader',
             options: {}
         }
@@ -140,7 +141,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: 'index.html'
+            template: 'index.html' 
         })
     ],
     optimization: { //настройки оптимизации и минификации
