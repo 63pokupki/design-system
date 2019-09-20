@@ -1,6 +1,7 @@
 // десктоп шапка сайта
 .header-desctop {
     // в макете нет структуры, отступы заданы жестко :(
+    background: $background-color-primary;
     padding-top: 10px;
 
     &__row {

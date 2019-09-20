@@ -1,0 +1,64 @@
+/* Внутренние стили дизайн системы - они не должны включаться в конечную сборку! */
+
+body {
+    background: #e2e2e2;
+    margin: 0;
+    padding: 0;
+}
+
+.ds-title {
+    width: 100%;
+    text-align: center;
+}
+
+.ds-wrapper,
+.ds-text {
+    max-width: 1300px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.ds-code-wrapper {
+    max-width: 1300px;
+    margin: 20px auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4);
+}
+
+.ds-divider {
+    margin: 20px;
+}
+
+.ds-wrapper > svg {
+    width: 50px;
+    height: 50px;
+    margin: 0 20px 20px 0;
+}
+
+.ds-сontent-list {
+    list-style-type: circle;
+    li {
+        margin-bottom: 5px;
+    }
+}
+
+.ds-highlight {
+    font-weight: 600;
+    background: gold;
+    padding: 2px 5px;
+}
+
+// переопределение кнопки "Copy" в примерах кода
+.code-toolbar > .toolbar button {
+    color: black !important;
+    font-weight: bold !important;
+    padding: 0.5em 0.6em !important;
+    background: rgb(235, 234, 234) !important;
+    cursor: pointer !important;
+}
+
+pre[class*=language-] {
+    padding: 2em !important;
+}

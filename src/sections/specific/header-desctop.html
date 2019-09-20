@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Шапка для десктопа</title>
+    </head>
+    <body>
+        <h2 class="ds-title">Десктопная шапка</h2>
+        <div class="ds-wrapper">
+            <!-- шапка под десктоп -->
+            <div class="header-desctop">
+                <div class="header-desctop__row">
+                    <div class="support-info header-desctop__col">
+                        <a class="support-info__tel" href="tel:+78007006301">8 (800) 700-63-01</a>
+                        <span class="support-info__hours">8:00 - 20:00</span>
+                        <i class="icon-info support-info__icon has-tooltip">
+                            <span class="tooltip tooltip_triangle support-info__tooltip"
+                                >Если у вас возникли проблемы с регистрацией или входом на форум - пишите на адрес
+                                службы поддержки
+                                <a class="link link_colored bold" href="mailto:support@63pokupki.ru"
+                                    >support@63pokupki.ru</a
+                                >
+                            </span>
+                        </i>
+                    </div>
+                    <nav class="header-desctop__col header-desctop__links-eq">
+                        <a class="link semi-bold link_is-highlighted" href="#">Помощь</a>
+                        <a class="link semi-bold" href="#">Доставка</a>
+                        <a class="link semi-bold" href="#">Пункты выдачи</a>
+                    </nav>
+                    <nav class="header-desctop__col header-desctop__links-diff">
+                        <a class="link semi-bold" href="#">Пристрой</a>
+                        <a class="link semi-bold" href="#">Бренды</a>
+                        <a class="link semi-bold" href="#">Форум</a>
+                    </nav>
+                </div>
+                <div class="header-desctop__row">
+                    <!-- логотип -->
+                    <div class="logo header-desctop__logo">
+                        <a class="logo__link" href="#">
+                            <img class="logo__img" src="~images/logotype.svg" />
+                        </a>
+                    </div>
+                    <!-- блок поиска -->
+                    <div class="search header-desctop__search">
+                        <!-- строка поиска -->
+                        <input class="search__bar" type="text" placeholder="Поиск" />
+                        <!-- кнопка поиска -->
+                        <button class="btn search__button">
+                            <img class="btn__icon" src="~images/icons/icon-search.svg" />
+                        </button>
+                        <!-- блок выпадающей категории поиска -->
+                        <div class="search__category">
+                            <!-- добавить .search-category_expanded для раскрытия меню категорий -->
+                            <div class="dropdown-fixed-list">
+                                <!-- текущее значение -->
+                                <span class="dropdown-fixed-list__current">По товарам</span>
+                                <!-- лист всех значений -->
+                                <ul class="dropdown-fixed-list__list">
+                                    <li class="dropdown-fixed-list__list-item">По товарам</li>
+                                    <li class="dropdown-fixed-list__list-item">По форуму</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-desctop__icons">
+                        <a class="header-desctop__icon" href="#">
+                            <div class="caption-icon">
+                                <i class="icon icon-heart caption-icon__icon"></i>
+                                <span href="#" class="caption-icon__text">Избранное</span>
+                            </div>
+                        </a>
+                        <a class="header-desctop__icon" href="#">
+                            <div class="caption-icon">
+                                <i class="icon icon-personal caption-icon__icon"></i>
+                                <span href="#" class="caption-icon__text">Sergioels..</span>
+                            </div>
+                        </a>
+                        <a class="header-desctop__icon" href="#">
+                            <div class="caption-icon">
+                                <i class="icon icon-calendar caption-icon__icon">
+                                    <span class="icon-calendar__notification-count">0</span>
+                                </i>
+                                <span href="#" class="caption-icon__text">Календарь</span>
+                            </div>
+                        </a>
+                        <a class="header-desctop__icon" href="#">
+                            <div class="caption-icon">
+                                <i class="icon icon-cart caption-icon__icon"></i>
+                                <span href="#" class="caption-icon__text">Корзина</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <nav class="categories-bar">
+                    <button class="btn menu-btn categories-bar__button">
+                        <div class="burger menu-btn__icon">
+                            <div class="burger__line"></div>
+                            <div class="burger__line"></div>
+                            <div class="burger__line"></div>
+                        </div>
+                        <span class="btn__text menu-btn__text bold">Все закупки</span>
+                    </button>
+                    <ul class="categories-bar__list">
+                        <li class="categories-bar__item">
+                            <a href="" class="link semi-bold">Одежда, обувь, акксесуары</a>
+                        </li>
+                        <li class="categories-bar__item">
+                            <a href="" class="link semi-bold">Товары для детей</a>
+                        </li>
+                        <li class="categories-bar__item">
+                            <a href="" class="link semi-bold">Косметика и парфюмерия</a>
+                        </li>
+                        <li class="categories-bar__item">
+                            <a href="" class="link semi-bold">Спорт, отдых, здоровье</a>
+                        </li>
+                        <li class="categories-bar__item">
+                            <a href="" class="link semi-bold">Сад и огород</a>
+                        </li>
+                    </ul>
+                    <!-- .categories-menu_has-triangle для отображения треугольника сверху -->
+                    <!-- .categories-menu_has-subcategories для отображения подкатегорий -->
+                    <nav
+                        class="categories-menu categories-bar__menu categories-menu_has-triangle categories-menu_has-subcategories"
+                    >
+                        <div class="categories-menu__column">
+                            <span class="categories-menu__heading semi-bold">Категории</span>
+                            <a class="link link_colored categories-menu__all" href="#">Смотреть все</a>
+                            <ul class="categories-menu__list">
+                                <li class="categories-menu__item">
+                                    <a class="link" href="#">Одежда и обувь для женщин</a>
+                                    <!-- начало подкатегории -->
+                                    <div class="categories-menu__column categories-menu__column_sub">
+                                        <span class="categories-menu__heading semi-bold">Подкатегории</span>
+                                        <a class="link link_colored categories-menu__all" href="#">Смотреть все</a>
+                                        <ul class="categories-menu__list">
+                                            <li class="categories-menu__item">
+                                                <a class="link" href="#">Одежда и обувь для женщин</a>
+                                            </li>
+                                            <li class="categories-menu__item">
+                                                <a class="link" href="#">Одежда и обувь для мужчин</a>
+                                            </li>
+                                            <li class="categories-menu__item">
+                                                <a class="link" href="#">Одежда и обувь для детей</a>
+                                            </li>
+                                            <li class="categories-menu__item">
+                                                <a class="link" href="#">Кожгалантерея и аксессуары</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- конец подкатегории -->
+                                </li>
+                                <li class="categories-menu__item">
+                                    <a class="link" href="#">Одежда и обувь для мужчин</a>
+                                    <!-- начало подкатегории -->
+                                    <div class="categories-menu__column categories-menu__column_sub">
+                                        <span class="categories-menu__heading semi-bold">Подкатегории</span>
+                                        <a class="link link_colored categories-menu__all" href="#">Смотреть все</a>
+                                        <ul class="categories-menu__list">
+                                            <li class="categories-menu__item">
+                                                <a class="link" href="#">Уход за кожей</a>
+                                            </li>
+                                            <li class="categories-menu__item">
+                                                <a class="link" href="#">Уход за волосами</a>
+                                            </li>
+                                            <li class="categories-menu__item">
+                                                <a class="link" href="#">Декоративная косметика</a>
+                                            </li>
+                                            <li class="categories-menu__item">
+                                                <a class="link" href="#">Средства для гигиены</a>
+                                            </li>
+                                            <li class="categories-menu__item">
+                                                <a class="link" href="#">Аппаратная косметология</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- конец подкатегории -->
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </nav>
+            </div>
+        </div>
+    </body>
+</html>
