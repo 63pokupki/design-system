@@ -6,9 +6,16 @@ body {
     padding: 0;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    color: rgb(48, 48, 48);
+    margin-block-start: 1em;
+    margin-block-end: 1.5em;
+}
+
 .ds-title {
     width: 100%;
     text-align: center;
+    color: rgb(48, 48, 48);
 }
 
 .ds-wrapper,

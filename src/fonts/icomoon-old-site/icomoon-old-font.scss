@@ -13,6 +13,7 @@
 [class^="icomoon-old-"], [class*=" icomoon-old"],
 [class^="icomoon-old-"]:before, [class*=" icomoon-old"]:before {
   /* use !important to prevent issues with browser extensions that change fonts */
+  cursor: pointer;
   font-family: 'icomoon-old-site' !important;
   text-decoration: none;
   speak: none;

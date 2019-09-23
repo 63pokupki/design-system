@@ -27,4 +27,15 @@
             text-decoration: none;
         }
     }
+
+    // стиль обычного текста
+    &_text {
+        cursor: pointer;
+        color: unset;
+        text-decoration: none;
+        &:hover {
+            color: unset;
+            text-decoration: none;
+        }
+    }
 }
