@@ -1,5 +1,5 @@
-// вертикальный блок меню с категориями
-.categories-menu {
+// многоуровневое вложенное меню
+.multi-level-menu {
     display: block;
     background: $background-color-primary;
     padding: 30px;
@@ -14,9 +14,7 @@
         min-height: 350px;
         display: inline-block;
     }
-    &__column_sub {
-        display: none;
-    }
+
     &__heading-wrapper {
         display: flex;
         justify-content: space-between;
@@ -46,51 +44,48 @@
             margin-bottom: unset;
         }
     }
-    &__item:hover {
-        .categories-menu__column_sub {
-            visibility: visible;
-            opacity: 1;
-            z-index: 2;
-            transition: opacity $transition-medium, visibility $transition-medium;
-        }
+
+}
+
+// треугольник сверху
+.multi-level-menu_has-triangle {
+    &:before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 0;
+        left: 20px;
+        top: -20px;
+        border: 10px solid transparent;
+        border-bottom: 10px solid $background-color-primary;
+    }
+}
+
+.multi-level-menu_has-subcategories {
+
+    .multi-level-menu__column {
+        border-right: 1px solid #e3e3e3;
     }
 
-    // состояния
-
-    // треугольник сверху
-    &_has-triangle {
-        &:before {
-            position: absolute;
-            content: "";
-            width: 0;
-            height: 0;
-            left: 20px;
-            top: -20px;
-            border: 10px solid transparent;
-            border-bottom: 10px solid $background-color-primary;
-        }
-    }
-
-    // если имеет подкатегории
-    &_has-subcategories {
-        display: block;
-        width: 100%;
-        max-width: 600px;
-        .categories-menu__column {
-            border-right: 1px solid #e3e3e3;
-        }
-        .categories-menu__column_sub {
-            display: block;
-            border-right: unset;
+    .multi-level-menu__item {
+        .multi-level-menu__column {
             visibility: hidden;
             opacity: 0;
             z-index: 0;
             position: absolute;
             top: 0;
             right: -20px;
-            width: 125%;
+            min-width: 280px;
             transform: translate(100%, 0%);
             transition: opacity $transition-medium, visibility $transition-medium;
         }
+    }
+
+    .multi-level-menu__item:hover > .multi-level-menu__column,
+    .multi-level-menu__column.multi-level-menu__column_is-expanded {
+        visibility: visible;
+        opacity: 1;
+        z-index: 2;
+        transition: opacity $transition-medium, visibility $transition-medium;
     }
 }

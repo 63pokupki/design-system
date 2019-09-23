@@ -6,22 +6,22 @@
     padding: 0 15px;
     width: 290px;
 
-    &__categories-menu {
+    &__multi-level-menu {
         padding: 0;
         border-bottom: 1px solid rgba(49, 140, 202, 0.25);
 
-        .categories-menu__column {
+        .multi-level-menu__column {
             padding-right: unset;
             display: block;
         }
-        .categories-menu__heading-wrapper {
+        .multi-level-menu__heading-wrapper {
             padding: 8px 0px 8px 15px;
             border-bottom: 1px solid rgba(49, 140, 202, 0.25);
         }
-        .categories-menu__item {
+        .multi-level-menu__item {
             margin-bottom: 15px;
         }
-        .categories-menu__icon {
+        .multi-level-menu__icon {
             font-size: 22px;
         }
     }

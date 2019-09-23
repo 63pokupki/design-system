@@ -7,16 +7,17 @@
         <title>Меню</title>
     </head>
     <body>
-        <h2 class="ds-title">Горизонтальное меню с категориями</h2>
-        <div class="ds-wrapper light">
+        <h2 class="ds-title">Меню</h2>
+        <h3 class="ds-title">Горизонтальное меню с категориями</h3>
+        <div class="ds-wrapper">
             <nav class="categories-bar">
-                <button class="btn menu-btn categories-bar__button">
+                <button class="menu-btn categories-bar__button">
                     <div class="burger menu-btn__icon">
                         <div class="burger__line"></div>
                         <div class="burger__line"></div>
                         <div class="burger__line"></div>
                     </div>
-                    <span class="btn__text menu-btn__text bold">Все закупки</span>
+                    <span class="menu-btn__text bold">Все закупки</span>
                 </button>
                 <ul class="categories-bar__list">
                     <li class="categories-bar__item">
@@ -38,19 +39,146 @@
             </nav>
         </div>
 
-        <h2 class="ds-title">Вертикальное меню с категориями без направляющего треугольника</h2>
-        <div class="ds-wrapper">
-            <!-- .categories-menu_has-triangle для отображения треугольника сверху -->
-            <!-- .categories-menu_has-subcategories для отображения подкатегорий -->
-            <nav class="categories-menu">
-                <div class="categories-menu__column">
-                    <span class="categories-menu__heading semi-bold">Категории</span>
-                    <a class="link link_colored categories-menu__all" href="#">Смотреть все</a>
-                    <ul class="categories-menu__list">
-                        <li class="categories-menu__item">
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <nav class="categories-bar">
+                    <button class="menu-btn categories-bar__button">
+                        <div class="burger menu-btn__icon">
+                            <div class="burger__line"></div>
+                            <div class="burger__line"></div>
+                            <div class="burger__line"></div>
+                        </div>
+                        <span class="menu-btn__text bold">Все закупки</span>
+                    </button>
+                    <ul class="categories-bar__list">
+                        <li class="categories-bar__item">
+                            <a href="" class="link semi-bold">Одежда, обувь, акксесуары</a>
+                        </li>
+                        <li class="categories-bar__item">
+                            <a href="" class="link semi-bold">Товары для детей</a>
+                        </li>
+                        <li class="categories-bar__item">
+                            <a href="" class="link semi-bold">Косметика и парфюмерия</a>
+                        </li>
+                        <li class="categories-bar__item">
+                            <a href="" class="link semi-bold">Спорт, отдых, здоровье</a>
+                        </li>
+                        <li class="categories-bar__item">
+                            <a href="" class="link semi-bold">Сад и огород</a>
+                        </li>
+                    </ul>
+                </nav>
+            </script>
+        </div>
+
+        <h3 class="ds-title">Многоуровневое меню без вложенных подменю</h3>
+        <div class="ds-wrapper no-padding">
+            <!-- .multi-level-menu_has-triangle для отображения треугольника сверху -->
+            <!-- .multi-level-menu_has-subcategories для отображения подменю при их наличии -->
+            <nav class="multi-level-menu">
+                <div class="multi-level-menu__column">
+                    <span class="multi-level-menu__heading semi-bold">Категории</span>
+                    <a class="link link_colored multi-level-menu__all" href="#">Смотреть все</a>
+                    <ul class="multi-level-menu__list">
+                        <li class="multi-level-menu__item">
                             <a class="link" href="#">Одежда и обувь для женщин</a>
                         </li>
-                        <li class="categories-menu__item">
+                        <li class="multi-level-menu__item">
+                            <a class="link" href="#">Одежда и обувь для мужчин</a>
+                        </li>
+                        <li class="multi-level-menu__item">
+                            <a class="link" href="#">......................................</a>
+                        </li>
+                        <li class="multi-level-menu__item">
+                            <a class="link" href="#">...............</a>
+                        </li>
+                        <li class="multi-level-menu__item">
+                            <a class="link" href="#">......................................</a>
+                        </li>
+                        <li class="multi-level-menu__item">
+                            <a class="link" href="#">...............</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <!-- .multi-level-menu_has-triangle для отображения треугольника сверху -->
+                <!-- .multi-level-menu_has-subcategories для отображения подменю при их наличии -->
+                <nav class="multi-level-menu multi-level-menu_has-triangle">
+                    <div class="multi-level-menu__column">
+                        <span class="multi-level-menu__heading semi-bold">Категории</span>
+                        <a class="link link_colored multi-level-menu__all" href="#">Смотреть все</a>
+                        <ul class="multi-level-menu__list">
+                            <li class="multi-level-menu__item">
+                                <a class="link" href="#">Одежда и обувь для женщин</a>
+                            </li>
+                            <li class="multi-level-menu__item">
+                                <a class="link" href="#">Одежда и обувь для мужчин</a>
+                            </li>
+                            <li class="multi-level-menu__item">
+                                <a class="link" href="#">......................................</a>
+                            </li>
+                            <li class="multi-level-menu__item">
+                                <a class="link" href="#">...............</a>
+                            </li>
+                            <li class="multi-level-menu__item">
+                                <a class="link" href="#">......................................</a>
+                            </li>
+                            <li class="multi-level-menu__item">
+                                <a class="link" href="#">...............</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </script>
+        </div>
+
+        <h3 class="ds-title">Многоуровневое меню со вложенными подменю (много уровней вложенности)</h3>
+        <p class="ds-text ds-hl">Подменю открываются при наведении на содержащий их пункт</p>
+        <div class="ds-wrapper no-padding">
+            <!-- .multi-level-menu_has-triangle для отображения треугольника сверху -->
+            <!-- .multi-level-menu_has-subcategories для отображения подменю при их наличии-->
+            <!-- .multi-level-menu__column_is-expanded к колонке для постоянного отображения колонки -->
+            <nav class="multi-level-menu multi-level-menu_has-triangle multi-level-menu_has-subcategories">
+                <div class="multi-level-menu__column">
+                    <span class="multi-level-menu__heading semi-bold">Категории</span>
+                    <a class="link link_colored multi-level-menu__all" href="#">Смотреть все</a>
+                    <ul class="multi-level-menu__list">
+                        <li class="multi-level-menu__item">
+                            <a class="link" href="#">Одежда и обувь для женщин</a>
+                            <!-- начало вложенного подменю -->
+                            <div class="multi-level-menu__column">
+                                <span class="multi-level-menu__heading semi-bold">Подменю</span>
+                                <a class="link link_colored multi-level-menu__all" href="#">Смотреть все</a>
+                                <ul class="multi-level-menu__list">
+                                    <li class="multi-level-menu__item">
+                                        <a class="link" href="#">Одежда и обувь для женщин</a>
+                                        <!-- начало следующего вложенного подменю -->
+                                        <div class="multi-level-menu__column">
+                                            <span class="multi-level-menu__heading semi-bold">Еще подменю</span>
+                                            <a class="link link_colored multi-level-menu__all" href="#">Смотреть все</a>
+                                            <ul class="multi-level-menu__list">
+                                                <li class="multi-level-menu__item">
+                                                    <a class="link" href="#">Одежда и обувь для женщин</a>
+                                                </li>
+                                                <li class="multi-level-menu__item">
+                                                    <a class="link" href="#">Одежда и обувь для мужчин</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- конец следующего вложенного подменю -->
+                                    </li>
+                                    <li class="multi-level-menu__item">
+                                        <a class="link" href="#">Одежда и обувь для мужчин</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- конец вложенного подменю -->
+                        </li>
+                        <li class="multi-level-menu__item">
                             <a class="link" href="#">Одежда и обувь для мужчин</a>
                         </li>
                     </ul>
@@ -58,67 +186,54 @@
             </nav>
         </div>
 
-        <h2 class="ds-title">Вертикальное меню с подкатегориями и направляющим треугольником</h2>
-        <div class="ds-wrapper">
-            <!-- .categories-menu_has-triangle для отображения треугольника сверху -->
-            <!-- .categories-menu_has-subcategories для отображения подкатегорий -->
-            <nav class="categories-menu categories-menu_has-triangle categories-menu_has-subcategories">
-                <div class="categories-menu__column">
-                    <span class="categories-menu__heading semi-bold">Категории</span>
-                    <a class="link link_colored categories-menu__all" href="#">Смотреть все</a>
-                    <ul class="categories-menu__list">
-                        <li class="categories-menu__item">
-                            <a class="link" href="#">Одежда и обувь для женщин</a>
-                            <!-- начало подкатегории -->
-                            <div class="categories-menu__column categories-menu__column_sub">
-                                <span class="categories-menu__heading semi-bold">Подкатегории</span>
-                                <a class="link link_colored categories-menu__all" href="#">Смотреть все</a>
-                                <ul class="categories-menu__list">
-                                    <li class="categories-menu__item">
-                                        <a class="link" href="#">Одежда и обувь для женщин</a>
-                                    </li>
-                                    <li class="categories-menu__item">
-                                        <a class="link" href="#">Одежда и обувь для мужчин</a>
-                                    </li>
-                                    <li class="categories-menu__item">
-                                        <a class="link" href="#">Одежда и обувь для детей</a>
-                                    </li>
-                                    <li class="categories-menu__item">
-                                        <a class="link" href="#">Кожгалантерея и аксессуары</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- конец подкатегории -->
-                        </li>
-                        <li class="categories-menu__item">
-                            <a class="link" href="#">Одежда и обувь для мужчин</a>
-                            <!-- начало подкатегории -->
-                            <div class="categories-menu__column categories-menu__column_sub">
-                                <span class="categories-menu__heading semi-bold">Подкатегории</span>
-                                <a class="link link_colored categories-menu__all" href="#">Смотреть все</a>
-                                <ul class="categories-menu__list">
-                                    <li class="categories-menu__item">
-                                        <a class="link" href="#">Уход за кожей</a>
-                                    </li>
-                                    <li class="categories-menu__item">
-                                        <a class="link" href="#">Уход за волосами</a>
-                                    </li>
-                                    <li class="categories-menu__item">
-                                        <a class="link" href="#">Декоративная косметика</a>
-                                    </li>
-                                    <li class="categories-menu__item">
-                                        <a class="link" href="#">Средства для гигиены</a>
-                                    </li>
-                                    <li class="categories-menu__item">
-                                        <a class="link" href="#">Аппаратная косметология</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- конец подкатегории -->
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <!-- .multi-level-menu_has-triangle для отображения треугольника сверху -->
+                <!-- .multi-level-menu_has-subcategories для отображения подменю при их наличии-->
+                <!-- .multi-level-menu__column_is-expanded к колонке для постоянного отображения колонки -->
+                <nav class="multi-level-menu multi-level-menu_has-triangle multi-level-menu_has-subcategories">
+                    <div class="multi-level-menu__column">
+                        <span class="multi-level-menu__heading semi-bold">Категории</span>
+                        <a class="link link_colored multi-level-menu__all" href="#">Смотреть все</a>
+                        <ul class="multi-level-menu__list">
+                            <li class="multi-level-menu__item">
+                                <a class="link" href="#">Одежда и обувь для женщин</a>
+                                <!-- начало вложенного подменю -->
+                                <div class="multi-level-menu__column">
+                                    <span class="multi-level-menu__heading semi-bold">Подменю</span>
+                                    <a class="link link_colored multi-level-menu__all" href="#">Смотреть все</a>
+                                    <ul class="multi-level-menu__list">
+                                        <li class="multi-level-menu__item">
+                                            <a class="link" href="#">Одежда и обувь для женщин</a>
+                                            <!-- начало следующего вложенного подменю -->
+                                            <div class="multi-level-menu__column">
+                                                <span class="multi-level-menu__heading semi-bold">Еще подменю</span>
+                                                <a class="link link_colored multi-level-menu__all" href="#">Смотреть все</a>
+                                                <ul class="multi-level-menu__list">
+                                                    <li class="multi-level-menu__item">
+                                                        <a class="link" href="#">Одежда и обувь для женщин</a>
+                                                    </li>
+                                                    <li class="multi-level-menu__item">
+                                                        <a class="link" href="#">Одежда и обувь для мужчин</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- конец следующего вложенного подменю -->
+                                        </li>
+                                        <li class="multi-level-menu__item">
+                                            <a class="link" href="#">Одежда и обувь для мужчин</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- конец вложенного подменю -->
+                            </li>
+                            <li class="multi-level-menu__item">
+                                <a class="link" href="#">Одежда и обувь для мужчин</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </script>
         </div>
     </body>
 </html>

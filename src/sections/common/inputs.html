@@ -7,20 +7,71 @@
         <title>Элементы ввода, текстовые поля, поиск</title>
     </head>
     <body>
-        <h2 class="ds-title">Поиск</h2>
-        <div class="ds-wrapper light">
-            <div class="ds-divider">
-                <!-- блок поиска -->
+        <h2 class="ds-title">Элементы ввода, текстовые поля, поиск</h2>
+        <h3 class="ds-title">Поиск</h3>
+        <div class="ds-wrapper">
+            <!-- блок поиска -->
+            <div class="search">
+                <!-- строка поиска -->
+                <input class="search__bar" type="text" placeholder="Поиск" />
+                <!-- кнопка поиска -->
+                <button class="search__button">
+                    <img src="~images/icons/icon-search.svg" />
+                </button>
+            </div>
+        </div>
+
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
                 <div class="search">
                     <!-- строка поиска -->
                     <input class="search__bar" type="text" placeholder="Поиск" />
                     <!-- кнопка поиска -->
-                    <button class="btn search__button">
-                        <img class="btn__icon" src="~images/icons/icon-search.svg" />
+                    <button class="search__button">
+                        <img src="~images/icons/icon-search.svg" />
+                    </button>
+                </div>
+            </script>
+        </div>
+
+        <h3 class="ds-title">Поиск с категориями</h3>
+        <div class="ds-wrapper">
+            <!-- блок поиска -->
+            <div class="search">
+                <!-- строка поиска -->
+                <input class="search__bar" type="text" placeholder="Поиск" />
+                <!-- кнопка поиска -->
+                <button class="search__button">
+                    <img src="~images/icons/icon-search.svg" />
+                </button>
+                <!-- блок выпадающей категории поиска -->
+                <div class="search__category">
+                    <!-- добавить .dropdown-fixed-list_expanded для раскрытия меню категорий -->
+                    <div class="dropdown-fixed-list">
+                        <!-- текущее значение -->
+                        <span class="dropdown-fixed-list__current">По товарам</span>
+                        <!-- лист всех значений -->
+                        <ul class="dropdown-fixed-list__list">
+                            <li class="dropdown-fixed-list__list-item">По товарам</li>
+                            <li class="dropdown-fixed-list__list-item">По форуму</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <div class="search">
+                    <!-- строка поиска -->
+                    <input class="search__bar" type="text" placeholder="Поиск" />
+                    <!-- кнопка поиска -->
+                    <button class="search__button">
+                        <img src="~images/icons/icon-search.svg" />
                     </button>
                     <!-- блок выпадающей категории поиска -->
                     <div class="search__category">
-                        <!-- добавить .dropdown-fixed-list_expanded для раскрытия меню категорий -->
+                        <!-- добавить .dropdown-fixed-list_expanded для раскрытия меню категорий, также раскрывается при hover -->
                         <div class="dropdown-fixed-list">
                             <!-- текущее значение -->
                             <span class="dropdown-fixed-list__current">По товарам</span>
@@ -32,7 +83,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </script>
         </div>
     </body>
 </html>

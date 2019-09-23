@@ -18,13 +18,17 @@ h1, h2, h3, h4, h5, h6 {
     color: rgb(48, 48, 48);
 }
 
-.ds-wrapper,
-.ds-text {
+.ds-wrapper {
     max-width: 1300px;
     margin: 20px auto;
     padding: 20px;
     background-color: white;
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.ds-text {
+    max-width: 1300px;
+    margin: 20px auto;
 }
 
 .ds-code-wrapper {
@@ -51,10 +55,14 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-.ds-highlight {
+.ds-hl {
     font-weight: 600;
     background: gold;
     padding: 2px 5px;
+}
+
+.no-padding {
+    padding: 0;
 }
 
 // переопределение кнопки "Copy" в примерах кода
