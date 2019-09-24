@@ -1,0 +1,28 @@
+// блок информации о техподдержке - номер телефона, время работы, икнока помощи
+.support-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: baseline;
+
+    &__tel {
+        text-decoration: none;
+        white-space: nowrap;
+        font-weight: 600;
+        font-size: $font-size-primary-text;
+        color: $color-text-base;
+        margin-right: 10px;
+    }
+
+    &__hours {
+        font-size: 10px;
+        color: $color-text-base;
+        opacity: 0.75;
+        font-weight: $font-weight-primary;
+        margin-right: 10px;
+    }
+
+    &__tooltip {
+        width: 235px;
+    }
+}

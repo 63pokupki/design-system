@@ -1,0 +1,67 @@
+// меню с категориями горизонтальное
+.categories-bar {
+    background: #d7edfc;
+    border-radius: 24px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 15px 32px 12px;
+    position: relative;
+    flex-wrap: wrap;
+
+    &__button {
+        margin-right: 50px;
+        flex-shrink: 0;
+        margin-bottom: 5px;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        width: calc(100% - 170px);
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        flex-wrap: wrap;
+    }
+    &__item {
+        margin-right: 30px;
+        margin-bottom: 5px;
+    }
+
+    &__item:last-child {
+        margin-right: unset;
+    }
+
+    .categories-bar__menu {
+        visibility: hidden;
+        opacity: 0;
+        max-height: 0;
+        padding: 0;
+        overflow: hidden;
+        position: absolute;
+        left: 12px;
+        bottom: 0;
+        z-index: 10;
+        width: 600px;
+        transform: translateY(100%);
+        box-shadow: 0px 1px 16px rgba(105, 153, 247, 0.35);
+        transition: opacity $transition-medium, visibility $transition-medium;
+    }
+
+    .multi-level-menu__item > .multi-level-menu__column {
+        border: unset;
+    }
+
+    // при клике на кнопку раскрывает подменю с категориями
+    &__button:focus ~ .categories-bar__menu {
+        visibility: visible;
+        overflow: visible;
+        max-height: initial;
+        opacity: 1;
+        padding: 30px;
+        transition: opacity $transition-medium, visibility $transition-medium;
+    }
+}

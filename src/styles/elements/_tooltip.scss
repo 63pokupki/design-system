@@ -1,0 +1,108 @@
+// .TOOLTIP
+$tooltip-background-color: #e0eef7;
+$tooltip-triangle-size: 6px;
+
+
+// всплывающая подсказка при наведении
+
+// класс ставится на элемент который имеет подсказку
+.has-tooltip {
+    cursor: pointer;
+    position: relative;
+    &:hover > .tooltip,
+    &:focus > .tooltip {
+        visibility: visible;
+        opacity: 1;
+        z-index: 100;
+        transition: opacity $transition-primary, visibility $transition-primary;
+    }
+}
+
+// всплывающая подсказка
+// стандартное положение - снизу под элементом, без треугольника
+.tooltip {
+    visibility: hidden;
+    z-index: 0;
+    opacity: 0;
+    position: absolute;
+    background-color: $tooltip-background-color;
+    padding: 10px;
+    line-height: 15px;
+    color: $color-text-base;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: $font-weight-primary;
+    line-height: 16px;
+    font-style: normal;
+    bottom: -5px;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    transition: opacity $transition-primary, visibility $transition-primary;
+    box-shadow: 0 0 5px 0px rgba(0,0,0,0.2);
+
+    * {
+        font-size: inherit;
+    }
+
+    // добавляет треугольник-указатель к всплывающей подсказке
+    &.tooltip_triangle {
+        bottom: -10px;
+        &:before {
+            content: "";
+            display: block;
+            width: $tooltip-triangle-size;
+            height: $tooltip-triangle-size;
+            position: absolute;
+            left: calc(50% - #{$tooltip-triangle-size}/ 2);
+            top: -5px;
+            background-color: $tooltip-background-color;
+            transform: rotate(45deg);
+        }
+    }
+
+    // позиция подсказки снизу - стандартное положение
+    &.tooltip_bottom {
+        @extend .tooltip;
+    }
+
+    // позиция подсказки сверху
+    &.tooltip_top {
+        bottom: auto;
+        top: -10px;
+        transform: translate(-50%, -100%);
+        &:before {
+            left: calc(50% - #{$tooltip-triangle-size}/ 2);
+            right: auto;
+            top: auto;
+            bottom: -5px;
+        }
+    }
+
+    // позиция подсказки справа
+    &.tooltip_right {
+        bottom: 50%;
+        right: -10px;
+        left: auto;
+        transform: translate(100%, 50%);
+        &:before {
+            right: auto;
+            left: -5px;
+            top: calc(50% - #{$tooltip-triangle-size}/ 2);
+            bottom: auto;
+        }
+    }
+
+    // позиция подсказки слева
+    &.tooltip_left {
+        bottom: 50%;
+        right: auto;
+        left: -10px;
+        transform: translate(-100%, 50%);
+        &:before {
+            left: auto;
+            right: -5px;
+            top: calc(50% - #{$tooltip-triangle-size}/ 2);
+            bottom: auto;
+        }
+    }
+}

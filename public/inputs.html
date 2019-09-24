@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Элементы ввода, текстовые поля, поиск</title>
+    <link href="css/_highlight-syntax.css?96b79b80253ac85a0609" rel="stylesheet"><link href="css/_ds-utils.css?96b79b80253ac85a0609" rel="stylesheet"><link href="css/ds-ui-kit.css?96b79b80253ac85a0609" rel="stylesheet"></head>
+    <body>
+        <h1 class="ds-title">Элементы ввода, текстовые поля, поиск</h1>
+        <h3 class="ds-title">Поиск</h3>
+        <div class="ds-wrapper">
+            <!-- блок поиска -->
+            <div class="search">
+                <!-- строка поиска -->
+                <input class="search__bar" type="text" placeholder="Поиск" />
+                <!-- кнопка поиска -->
+                <button class="search__button">
+                    <img src="images/icon-search.svg" />
+                </button>
+            </div>
+        </div>
+
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <div class="search">
+                    <!-- строка поиска -->
+                    <input class="search__bar" type="text" placeholder="Поиск" />
+                    <!-- кнопка поиска -->
+                    <button class="search__button">
+                        <img src="images/icon-search.svg" />
+                    </button>
+                </div>
+            </script>
+        </div>
+
+        <h3 class="ds-title">Поиск с категориями</h3>
+        <div class="ds-wrapper">
+            <!-- блок поиска -->
+            <div class="search">
+                <!-- строка поиска -->
+                <input class="search__bar" type="text" placeholder="Поиск" />
+                <!-- кнопка поиска -->
+                <button class="search__button">
+                    <img src="images/icon-search.svg" />
+                </button>
+                <!-- блок выпадающей категории поиска -->
+                <div class="search__category">
+                    <!-- добавить .dropdown-fixed-list_expanded для раскрытия меню категорий -->
+                    <div class="dropdown-fixed-list">
+                        <!-- текущее значение -->
+                        <span class="dropdown-fixed-list__current">По товарам</span>
+                        <!-- лист всех значений -->
+                        <ul class="dropdown-fixed-list__list">
+                            <li class="dropdown-fixed-list__list-item">По товарам</li>
+                            <li class="dropdown-fixed-list__list-item">По форуму</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <div class="search">
+                    <!-- строка поиска -->
+                    <input class="search__bar" type="text" placeholder="Поиск" />
+                    <!-- кнопка поиска -->
+                    <button class="search__button">
+                        <img src="images/icon-search.svg" />
+                    </button>
+                    <!-- блок выпадающей категории поиска -->
+                    <div class="search__category">
+                        <!-- добавить .dropdown-fixed-list_expanded для раскрытия меню категорий, также раскрывается при hover -->
+                        <div class="dropdown-fixed-list">
+                            <!-- текущее значение -->
+                            <span class="dropdown-fixed-list__current">По товарам</span>
+                            <!-- лист всех значений -->
+                            <ul class="dropdown-fixed-list__list">
+                                <li class="dropdown-fixed-list__list-item">По товарам</li>
+                                <li class="dropdown-fixed-list__list-item">По форуму</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </script>
+        </div>
+    <script type="text/javascript" src="js/_highlight-syntax.js?96b79b80253ac85a0609"></script><script type="text/javascript" src="js/_ds-utils.js?96b79b80253ac85a0609"></script><script type="text/javascript" src="js/categories-icons-sprite.js?96b79b80253ac85a0609"></script><script type="text/javascript" src="js/ds-ui-kit.js?96b79b80253ac85a0609"></script></body>
+</html>

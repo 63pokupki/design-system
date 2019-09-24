@@ -1,0 +1,80 @@
+// десктоп шапка сайта
+.header-desctop {
+    // в макете нет структуры, отступы заданы жестко :(
+    background: $background-color-primary;
+    padding-top: 10px;
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 35px;
+        margin-bottom: 20px;
+    }
+
+    &__col {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    &__links-eq {
+        margin-left: 60px;
+        font-size: 13px;
+
+        a {
+            &:nth-child(1) {
+                margin-right: 27px;
+            }
+            &:nth-child(2) {
+                margin-right: 46px;
+            }
+        }
+    }
+
+    &__links-diff {
+        font-size: 12px;
+        width: 228px;
+    }
+
+    &__logo {
+        width: 200px;
+        height: 68px;
+        flex-shrink: 0.3;
+    }
+
+    &__search {
+        max-width: 530px;
+        margin-left: 60px;
+    }
+
+    &__icon {
+        margin-right: 15px;
+        text-decoration: none;
+
+        &:first-child {
+            margin-left: 20px;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__icons {
+        display: flex;
+    }
+
+    .caption-icon .icon-heart {
+        &:before {
+            color: #ff4e4e;
+        }
+    }
+
+    .caption-icon:hover .icon-heart {
+        &:before {
+            color: #ff4e4e;
+            content: "\e906";
+        }
+    }
+}

@@ -1,0 +1,28 @@
+// иконка с календарем и пометкой о количестве событий
+.icon-calendar {
+    position: relative;
+
+    &__notification-count {
+        font-family: "Open Sans", sans-serif !important;
+        position: absolute;
+        display: block;
+        padding: 3px;
+        font-size: 10px;
+        background-color: #ff4e4e;
+        border-radius: 13px;
+        color: white;
+        font-weight: bold;
+        white-space: nowrap;
+        right: 10px;
+        bottom: -2px;
+        transform: translate(100%, 0);
+        min-width: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            color: white;
+        }
+    }
+}

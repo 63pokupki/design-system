@@ -1,0 +1,145 @@
+// это старые иконки с основного сайта
+@font-face {
+  font-family: 'icomoon-old-site';
+  src:  url('~fonts/icomoon-old-site/icomoon-old.eot?j5dd0u');
+  src:  url('~fonts/icomoon-old-site/icomoon-old.eot?j5dd0u#iefix') format('embedded-opentype'),
+    url('~fonts/icomoon-old-site/icomoon-old.woff?j5dd0u') format('woff'),
+    url('~fonts/icomoon-old-site/icomoon-old.ttf?j5dd0u') format('truetype'),
+    url('~fonts/icomoon-old-site/icomoon-old.svg?j5dd0u#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icomoon-old-"], [class*=" icomoon-old"],
+[class^="icomoon-old-"]:before, [class*=" icomoon-old"]:before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  cursor: pointer;
+  font-family: 'icomoon-old-site' !important;
+  text-decoration: none;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icomoon-old-mail:before {
+  content: "\e921";
+}
+.icomoon-old-bell:before {
+  content: "\e922";
+}
+.icomoon-old-back:before {
+  content: "\e91c";
+}
+.icomoon-old-cross:before {
+  content: "\e91d";
+}
+.icomoon-old-menu:before {
+  content: "\e91e";
+}
+.icomoon-old-phone:before {
+  content: "\e91f";
+}
+.icomoon-old-search:before {
+  content: "\e920";
+}
+.icomoon-old-home:before {
+  content: "\e906";
+}
+.icomoon-old-youtube:before {
+  content: "\e902";
+}
+.icomoon-old-arrow-to-bottom:before {
+  content: "\e903";
+}
+.icomoon-old-arrow-to-left:before {
+  content: "\e904";
+  transform: rotate(180deg);
+  display: inline-block;
+}
+.icomoon-old-arrow-to-right:before {
+  content: "\e904";
+}
+.icomoon-old-arrow-to-top:before {
+  content: "\e907";
+}
+.icomoon-old-calendar:before {
+  content: "\e908";
+}
+.icomoon-old-info:before {
+  content: "\e909";
+}
+.icomoon-old-inst:before {
+  content: "\e90a";
+}
+.icomoon-old-map-mark:before {
+  content: "\e90b";
+}
+.icomoon-old-ok:before {
+  content: "\e90d";
+}
+.icomoon-old-profit:before {
+  content: "\e914";
+}
+.icomoon-old-question:before {
+  content: "\e915";
+}
+.icomoon-old-shopping-cart:before {
+  content: "\e916";
+}
+.icomoon-old-user:before {
+  content: "\e91a";
+}
+.icomoon-old-vk:before {
+  content: "\e91b";
+}
+.icomoon-old-accessories:before {
+  content: "\e900";
+}
+.icomoon-old-appliances:before {
+  content: "\e901";
+}
+.icomoon-old-books:before {
+  content: "\e905";
+}
+.icomoon-old-cosmetics:before {
+  content: "\e90c";
+}
+.icomoon-old-for-auto:before {
+  content: "\e90e";
+}
+.icomoon-old-for-child:before {
+  content: "\e90f";
+}
+.icomoon-old-for-children:before {
+  content: "\e910";
+}
+.icomoon-old-for-garden:before {
+  content: "\e911";
+}
+.icomoon-old-for-man:before {
+  content: "\e912";
+}
+.icomoon-old-for-woman:before {
+  content: "\e913";
+}
+.icomoon-old-hobby:before {
+  content: "\e917";
+}
+.icomoon-old-prises:before {
+  content: "\e918";
+}
+.icomoon-old-products:before {
+  content: "\e919";
+}
+.icomoon-old-sport:before {
+  content: "\e924";
+}
+.icomoon-old-zoo:before {
+  content: "\e927";
+}
