@@ -1,12 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Боковое меню</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Боковое меню контейнер</title>
+    </head>
+    <body>
+        <h1 class="ds-title">Боковое меню (контейнер)</h1>
+        <div class="ds-wrapper">
+            <p class="semi-bold">
+                Контейнер для бокового меню. Содержит затемняющий фон, кнопку закрытия и саму панель
+            </p>
+            <p>
+                По умолчанию выезжает слева. Для выезжания справа добавить класс модификатор
+                <span class="ds-hl">.sidebar_right</span>
+            </p>
+            <p>Для активации меню добавить класс модификатор <span class="ds-hl">.sidebar_is-active</span></p>
+            <p>
+                Для отображения только на сенсорных устройствах (до 1024px) добавить служебный класс
+                <span class="ds-hl">.touch-only</span>
+            </p>
+            <p>
+                В <span class="ds-hl">.sidebar__body</span> находится контент панели - внутрь класть все содержимое.
+                Максимальная ширина 90vw
+            </p>
+            <hr />
+            <p class="ds-hl">Для отображения уменьшить ширину браузера</p>
+        </div>
+
+        <aside class="sidebar sidebar_is-active touch-only">
+            <div class="sidebar__body">
+                <div class="ds-divider">
+                    <p>В <span class="ds-hl">.sidebar__body</span> находится контент панели</p>
+                    <p>Максимальная ширина 90vw</p>
+                </div>
+            </div>
+
+            <div class="sidebar__background"></div>
+            <button class="sidebar__close"></button>
+        </aside>
+
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <aside class="sidebar sidebar_is-active touch-only">
+                    <!-- Содержимое бокового меню -->
+                    <div class="sidebar__body"></div>
+                    <!-- Затемняющий фон -->
+                    <div class="sidebar__background"></div>
+                    <!-- Кнопка закрытия -->
+                    <button class="sidebar__close"></button>
+                </aside>
+            </script>
+        </div>
+    </body>
 </html>

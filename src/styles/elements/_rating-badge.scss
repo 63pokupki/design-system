@@ -1,0 +1,25 @@
+// Значок рейтинга
+.rating-badge {
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 1px 8px;
+    user-select: none;
+    color: white;
+    font-size: 16px;
+    
+    &_level-0 {
+        background: #e9d0b3;
+    }
+
+    &_level-1 {
+        background: #cdcdcd;
+    }
+
+    &_level-2 {
+        background: #FFCE22;
+    }
+
+    &_level-3 {
+        background: #349ce9;
+    }
+}

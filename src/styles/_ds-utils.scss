@@ -8,8 +8,6 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     color: rgb(48, 48, 48);
-    margin-block-start: 1em;
-    margin-block-end: 1.5em;
 }
 
 .ds-title {
@@ -57,12 +55,18 @@ h1, h2, h3, h4, h5, h6 {
 
 .ds-hl {
     font-weight: 600;
-    background: gold;
-    padding: 2px 5px;
+    background: rgb(255, 229, 85);
+    padding: 2px 7px;
 }
 
 .no-padding {
     padding: 0;
+}
+
+.ds-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 // переопределение кнопки "Copy" в примерах кода
@@ -75,5 +79,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 pre[class*=language-] {
-    padding: 2em !important;
+    padding: 2rem !important;
+    font-size: 1rem !important;
 }

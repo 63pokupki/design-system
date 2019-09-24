@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     display: flex;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     z-index: 100;
     opacity: 0;
@@ -16,11 +16,13 @@
         left: 0;
         position: fixed;
         overflow: auto;
+        max-width: 90vw;
         height: 100vh;
         z-index: 50;
         opacity: 0;
         visibility: hidden;
         transform: translate(-100%);
+        background: $background-color-primary;
         transition: transform $transition-primary, opacity $transition-primary, visibility $transition-primary;
     }
 

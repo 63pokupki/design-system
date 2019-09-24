@@ -1,0 +1,25 @@
+// Вертикальное простое меню
+
+.vertical-menu {
+    display: inline-block;
+    background: $background-color-primary;
+
+    &__section {
+        border-bottom: 1px solid rgba(49, 140, 202, 0.25);
+        padding: 15px;
+    }
+
+    &__section:last-child {
+        border-bottom: unset;
+    }
+
+    &__item {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__item:last-child {
+        margin-bottom: unset;
+    }
+}
