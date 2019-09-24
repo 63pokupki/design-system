@@ -3,6 +3,8 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const fs = require("fs");
 
+const entry = require('./entry.js');
+
 // объединяем общие и индивидуальные компоненты
 const htmlPagesReusableComponents = generateHtmlPages('./src/sections/common');
 const htmlPagesIndividualComponents = generateHtmlPages('./src/sections/specific');
@@ -10,29 +12,7 @@ const pages = htmlPagesReusableComponents.concat(htmlPagesIndividualComponents);
 
 module.exports = {
     mode: "development", //режим сборки
-    entry: {
-        // подсветка синтаксиса разметки - не включается в конечную сборку
-        "_highlight-syntax": [
-            "./node_modules/clipboard/dist/clipboard.min.js",
-            "./node_modules/prismjs/prism.js",
-            "./node_modules/prismjs/components/prism-markdown.min.js",
-            "./node_modules/prismjs/components/prism-wiki.min.js",
-            "./node_modules/prismjs/plugins/unescaped-markup/prism-unescaped-markup.min.js",
-            "./node_modules/prismjs/plugins/unescaped-markup/prism-unescaped-markup.css",
-            "./node_modules/prismjs/themes/prism.css",
-            "./node_modules/prismjs/themes/prism-okaidia.css",
-            "./node_modules/prismjs/plugins/toolbar/prism-toolbar.min.js",
-            "./node_modules/prismjs/plugins/toolbar/prism-toolbar.css",
-            "./node_modules/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js",
-            "./node_modules/prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"
-        ],
-        // Внутренние стили дизайн системы - не включается в конечную сборку
-        "_ds-utils": ["./src/styles/_ds-utils.scss"],
-        // Иконки для категорий закупок
-        "categories-icons-sprite": ["./src/categories-icons-sprite/categories/categories-icons.js"],
-         // Итоговые стили дизайн системы - включаются в конечную сборку
-        "ds-ui-kit": ["./src/styles/ds-ui-kit.scss"],
-    }, //объект с точками входа
+    entry: entry, //объект с точками входа
     output: {
         path: path.join(__dirname, "build/"), //общий путь для выходных файлов
         filename: "js/[name].js?[hash]" //в этом параметре мы индивидуально добавляем необходимую директорию перед именем файлов

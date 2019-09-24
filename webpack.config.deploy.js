@@ -3,6 +3,8 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const fs = require("fs");
 
+const entry = require('./entry.js');
+
 // объединяем общие и индивидуальные компоненты
 const htmlPagesReusableComponents = generateHtmlPages('./src/sections/common');
 const htmlPagesIndividualComponents = generateHtmlPages('./src/sections/specific');
@@ -10,12 +12,7 @@ const pages = htmlPagesReusableComponents.concat(htmlPagesIndividualComponents);
 
 module.exports = {
     mode: "production", //режим сборки
-    entry: {
-        // Иконки для категорий закупок
-        "categories-icons-sprite": ["./src/categories-icons-sprite/categories/categories-icons.js"],
-         // Итоговые стили дизайн системы - включаются в конечную сборку
-        "ds-ui-kit": ["./src/styles/ds-ui-kit.scss"],
-    }, //объект с точками входа
+    entry: entry, //объект с точками входа
     output: {
         path: path.join(__dirname, "dist/"), //общий путь для выходных файлов
         filename: "js/[name].js?[hash]" //в этом параметре мы индивидуально добавляем необходимую директорию перед именем файлов
