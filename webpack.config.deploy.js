@@ -3,6 +3,11 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const fs = require("fs");
 
+// объединяем общие и индивидуальные компоненты
+const htmlPagesReusableComponents = generateHtmlPages('./src/sections/common');
+const htmlPagesIndividualComponents = generateHtmlPages('./src/sections/specific');
+const pages = htmlPagesReusableComponents.concat(htmlPagesIndividualComponents);
+
 module.exports = {
     mode: "production", //режим сборки
     entry: {
@@ -179,8 +184,3 @@ function generateHtmlPages(templateDir) {
         });
     });
 }
-
-// объединяем общие и индивидуальные компоненты
-const htmlPagesReusableComponents = generateHtmlPages('./src/sections/common');
-const htmlPagesIndividualComponents = generateHtmlPages('./src/sections/specific');
-const pages = htmlPagesReusableComponents.concat(htmlPagesIndividualComponents);
