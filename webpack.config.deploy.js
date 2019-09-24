@@ -14,7 +14,7 @@ module.exports = {
     mode: "production", //режим сборки
     entry: entry, //объект с точками входа
     output: {
-        path: path.join(__dirname, "dist/"), //общий путь для выходных файлов
+        path: path.join(__dirname, "public/"), //общий путь для выходных файлов
         filename: "js/[name].js?[hash]" //в этом параметре мы индивидуально добавляем необходимую директорию перед именем файлов
     },
     watch: false, //Слежение за изменениями
