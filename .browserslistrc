@@ -2,10 +2,7 @@
 # Для вывода списка - 'npx browserslist'
 
 # prod
-# > 0.1%
-# last 10 version
-# not dead
-# ie >= 8
+> 0.05%, last 5 version, not dead, ie >= 9
 
 # dev
-last 3 Chrome versions
+# last 3 Chrome versions

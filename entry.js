@@ -3,6 +3,8 @@ module.exports = {
     "_highlight-syntax": [
         "./node_modules/clipboard/dist/clipboard.min.js",
         "./node_modules/prismjs/prism.js",
+        "./node_modules/prismjs/components/prism-markdown.min.js",
+        "./node_modules/prismjs/components/prism-wiki.min.js",
         "./node_modules/prismjs/plugins/unescaped-markup/prism-unescaped-markup.min.js",
         "./node_modules/prismjs/plugins/unescaped-markup/prism-unescaped-markup.css",
         "./node_modules/prismjs/themes/prism.css",
@@ -17,5 +19,5 @@ module.exports = {
     // Иконки для категорий закупок
     "categories-icons-sprite": ["./src/categories-icons-sprite/categories/categories-icons.js"],
      // Итоговые стили дизайн системы - включаются в конечную сборку
-    "ds-style": ["./src/styles/ds-style.scss"],
+    "ds-ui-kit": ["./src/styles/ds-ui-kit.scss"],
 };

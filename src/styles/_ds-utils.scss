@@ -1,7 +1,7 @@
 /* Внутренние стили дизайн системы - они не должны включаться в конечную сборку! */
 
 body {
-    background: #e2e2e2;
+    background: #f1f1f1;
     margin: 0;
     padding: 0;
 }
@@ -47,9 +47,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .ds-сontent-list {
-    list-style-type: circle;
     li {
         margin-bottom: 5px;
+        font-size: 16px;
     }
 }
 

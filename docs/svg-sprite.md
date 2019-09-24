@@ -1,20 +1,8 @@
-## Работа с SVG
+## SVG спрайт используется только для иконок категорий
 
-### Добавление SVG в проект
-
-Для добавления нового SVG-элемента необходимо положить его в **src/icons**, задать имя с префиксом **svg-**.
-
-После этого, необходимо сделать import в файле  **src/icons/icons.js**.
-
-```javascript
-import example from './example.svg'
-```
-
-Делаем **deploy**.
-
-```bash
-npm run deploy
-```
+На выходе после сборки в папке **dist** лежит файл **categories-icons-sprite.js**
+Его надо подключить к странице где используются иконки категорий
+Он инъектит все svg при загрузке страницы сам
 
 ### Использование SVG
 
@@ -24,7 +12,7 @@ npm run deploy
 
 ```html
 <svg>
-	<use xlink:href="#svg-example"></use></svg>
+    <use xlink:href="#svg-example"></use>
 </svg>
 ```
 
