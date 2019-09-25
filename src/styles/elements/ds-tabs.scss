@@ -1,0 +1,16 @@
+.tabs {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 45px;
+    padding: 15px;
+    cursor: pointer;
+    &.is-selected {
+        color: $color-primary;
+        font-weight: 600;
+    }
+    &:hover {
+        color: $color-primary;
+    }
+}
+

@@ -1,0 +1,29 @@
+.ds-statusbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 18px;
+    border: 1px solid $color-primary;
+    border-radius: 15px;
+    font-size: 10px;
+    color: $statusbar_empty-color-txt;  
+    &__line {
+        @extend .ds-statusbar;
+        padding-left: 7px;
+        background: $color-primary;        
+        span {
+            margin: 0 3px;
+        }
+    }
+}
+.ds-statusbar.is-filled {
+    background: $statusbar_filled-color-bg;
+    border: none;
+    color: $statusbar-color-txt;
+    .ds-statusbar__line {
+        color: #fff;
+        transition: width .3s;
+    }
+    
+}
+

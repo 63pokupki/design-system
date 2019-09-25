@@ -8,7 +8,8 @@ const entry = require('./entry.js');
 // объединяем общие и индивидуальные компоненты
 const htmlPagesReusableComponents = generateHtmlPages('./src/sections/common');
 const htmlPagesIndividualComponents = generateHtmlPages('./src/sections/specific');
-const pages = htmlPagesReusableComponents.concat(htmlPagesIndividualComponents);
+const htmlPagesOtherComponents = generateHtmlPages('./src/sections/other');
+const pages = htmlPagesReusableComponents.concat(htmlPagesIndividualComponents).concat(htmlPagesOtherComponents);
 
 module.exports = {
     mode: "development", //режим сборки

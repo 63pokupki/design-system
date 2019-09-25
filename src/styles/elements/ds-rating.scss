@@ -1,0 +1,14 @@
+.rating {
+	display: flex;
+    align-items: center;
+    height: 12px;
+	&-icon {
+		height: 12px;
+		width: 12px;
+	}
+	&-value {
+		margin-left: 8px;
+		font-weight: bold;
+		color: #FFB21C;
+	}
+}
