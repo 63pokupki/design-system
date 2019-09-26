@@ -16,8 +16,36 @@
         cursor: pointer;
         transition: width .3s ease-in-out;
         p {
-            
+            font-size: 12px;
+            text-overflow: ellipsis;
+            width: 90px; 
+            white-space: nowrap;
+            overflow: hidden;
+            &::after {
+                content: attr(data-full-name);
+                visibility: hidden;
+                opacity: 0;
+                position: absolute;
+                left: 0;
+                top: -8px;
+                background: #fff;
+                border-radius: 2px;
+                box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.3);
+                padding: 4px 2px;
+                transition: .3s;
+                font-size: 12px;
+                font-weight: 600;
+                transition: .3s;                     
+            }
+            &:hover::after {
+                visibility: visible;
+                opacity: 1;                                               
+            }
+
         }
+    }
+    .rating-value {
+        font-size: 14px;
     }
 }
 
