@@ -54,8 +54,8 @@
                     блоку <span class="ds-hl">modal</span> </div>
             <div class="ds-divider">
                 <!-- Для отображения окна, присвоить класс .is-visible, блоку modal-sort__back -->
-                <div class="modal">
-                    <div class="modal__wrap">
+                <div class="modal is-visible" style="position: relative">
+                    <div class="modal__wrap" style="margin: 10px">
                         <div class="modal__btn-close"></div>
                         <div class="modal__header">Имя окна</div>
                         <form class="modal__form" action="">
@@ -70,6 +70,53 @@
                                 <div class="modal__btn-close"></div>
                             <div class="modal__header">Имя окна</div>
                             <form class="modal__form" action="">
+                            </form>
+                        </div>
+                    </div>            
+                </script>
+            </div>
+        </div>
+        <div class="ds-wrapper">
+                <div class="ds-text">Пример модалки</div>
+
+            <div class="ds-divider">
+                <!-- Для отображения окна, присвоить класс .is-visible, блоку modal-sort__back -->
+                <div class="modal is-visible" style="position: relative">
+                    <div class="modal__wrap" style="margin: 10px">
+                        <div class="modal__btn-close"></div>
+                        <div class="modal__header">Имя окна</div>
+                        <form class="modal__form" action="">
+                            <div class="inputs-group">
+                                <input type="checkbox" id="ex-1">
+                                <label class="inputs-group__label-checkbox" for="ex-1"></label>
+                                <label class="inputs-group__label-title" for="ex-1">label-title</label>
+                            </div>
+                            <div class="inputs-group">
+                                <input type="checkbox" id="ex-2">
+                                <label class="inputs-group__label-checkbox" for="ex-2"></label>
+                                <label class="inputs-group__label-title" for="ex-2">label-title</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>    
+            </div>
+            <div class="ds-code-wrapper">
+                <script type="text/plain" class="language-markup">
+                    <div class="modal">
+                        <div class="modal__wrap">
+                                <div class="modal__btn-close"></div>
+                            <div class="modal__header">Имя окна</div>
+                            <form class="modal__form" action="">
+                                <div class="inputs-group">
+                                    <input type="checkbox" id="fmch-1">
+                                    <label class="inputs-group__label-checkbox" for="fmch-1"></label>
+                                    <label class="inputs-group__label-title" for="fmch-1">label-title</label>
+                                </div>
+                                <div class="inputs-group">
+                                    <input type="checkbox" id="fmch-1">
+                                    <label class="inputs-group__label-checkbox" for="fmch-1"></label>
+                                    <label class="inputs-group__label-title" for="fmch-1">label-title</label>
+                                </div>            
                             </form>
                         </div>
                     </div>            
