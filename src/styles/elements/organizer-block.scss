@@ -9,12 +9,13 @@
         font-size: 12px;
         line-height: 17px;
         text-align: justify;
-        color: $org-name-color;
+        // color: $org-name-color;
+        color: aquamarine;
         overflow: hidden;
         max-height: 15px;
         width: 90px;
         cursor: pointer;
-        transition: width .3s ease-in-out;
+        // transition: width .3s ease-in-out;
         p {
             font-size: 12px;
             text-overflow: ellipsis;

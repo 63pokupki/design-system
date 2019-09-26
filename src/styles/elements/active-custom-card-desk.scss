@@ -13,6 +13,19 @@ h1 {
     &:hover {
         box-shadow: 1px 1px 6px rgba(65, 149, 206, 0.4);
         transition: box-shadow .5s;
+    }  
+    //ОТображает изображения в подкатергориях
+    &.desktop-subcat {
+        .card-active-custom__img-subcategory {
+            display: flex;
+        }
+        .card-active-custom__img-wrap {
+            width: 100%;
+            min-width: 544px;
+        }
+        .card-active-custom__img-desktop {
+            display: none;
+        }
     }    
 }
 .card-active-custom__wrap.is-toggle {
@@ -341,7 +354,7 @@ h1 {
 .card-active-custom {
 
     &__img-subcategory {
-        display: flex;
+        display: none;
         position: relative;
         max-width: 152px;
         max-height: 152px;
