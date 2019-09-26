@@ -4,14 +4,22 @@
     flex-direction: row;
     align-items: center;
     margin: 3px;
-    &_no-tittle {
-        .inputs-group__label-tittle {
+    //Скрывает тайтлы
+    &_no-ttl {
+        .inputs-group__label-title {
             display: none;
         }        
     }
-    &_no-checkbox {
+    //Скрывает чексбоксы
+    &_no-chx {
         .inputs-group__label-checkbox {
             display: none;
+        }
+    }
+    //Делает чекбоксы круглыми
+    &_chx-circle {
+        .inputs-group__label-checkbox {
+            border-radius: 50px;
         }
     }
     input {
@@ -59,7 +67,7 @@
             white-space: nowrap;
         }
     }
-    &__label-tittle {
+    &__label-title {
         height: auto;
         font-size: 10px;
         cursor: pointer;
