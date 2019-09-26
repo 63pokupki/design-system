@@ -26,8 +26,9 @@
 	}
 	&:hover {
         &:before, &:after {
-            background: $color-primary;
+			background: $color-primary;
         }
+		cursor: pointer;
     }
 
 
