@@ -1,0 +1,25 @@
+.organizer-block {
+    display: flex;
+    position: relative;
+    &__name-wrap {
+        display: flex;
+        margin-bottom: 5px;
+    }
+    &__name {
+        font-size: 12px;
+        line-height: 17px;
+        text-align: justify;
+        color: $org-name-color;
+        overflow: hidden;
+        max-height: 15px;
+        width: 90px;
+        cursor: pointer;
+        transition: width .3s ease-in-out;
+        p {
+            
+        }
+    }
+}
+
+
+
