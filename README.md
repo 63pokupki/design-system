@@ -1,4 +1,4 @@
-[![NPM version](https://img.shields.io/npm/v/@63pokupki/design-system?color=green)](https://63pokupki.github.io/design-system/public/)
+[![NPM version](https://img.shields.io/npm/v/@63pokupki/design-system?color=green)](https://63pokupki.github.io/design-system/public/) [![Build Status](https://travis-ci.com/63pokupki/design-system.svg?branch=master)](https://travis-ci.com/63pokupki/design-system)
 
 # Дизайн-система компонентов 63 Pokupki
 
