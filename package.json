@@ -1,6 +1,6 @@
 {
-  "name": "design-system",
-  "version": "1.0.0",
+  "name": "@63pokupki/design-system",
+  "version": "0.0.1",
   "description": "UI component kit and design-system for 63 Pokupki project",
   "main": "entry.js",
   "scripts": {
@@ -8,8 +8,10 @@
     "build": "webpack --config webpack.config.build.js",
     "deploy": "webpack --config webpack.config.deploy.js"
   },
+  "homepage": "https://github.com/63pokupki/design-system",
   "repository": {
-    "type": "git"
+    "type": "git",
+    "url": "git+https://github.com/63pokupki/design-system.git"
   },
   "devDependencies": {
     "@babel/cli": "7.6.2",
@@ -47,6 +49,11 @@
     "webpack-cli": "3.3.9",
     "webpack-dev-server": "3.8.1"
   },
+  "keywords": [
+    "ui-kit",
+    "design-system",
+    "components-kit"
+  ],
   "author": "63pokupki",
   "license": "BSD-3-Clause",
   "dependencies": {
