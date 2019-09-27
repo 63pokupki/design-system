@@ -64,6 +64,13 @@
         }
         &__organizer-block {
             margin-bottom: 0;
+            .organizer-block {
+                display: flex;
+                flex-direction: row;
+                p {
+                    margin-right: 5px;
+                }
+            }
             .organizer-block__name {
                 display: flex;
                 flex-direction: row;
