@@ -91,6 +91,20 @@ $main-padding-modal: 20px;
             top: 0;
             right: 0;
             cursor: pointer;
+            &:hover {
+                &:after, &:before {
+                    background-color: $color-primary;
+                }
+            }
+            &:active {
+                &:before {
+                    width: 15px;
+                }
+                &:after {
+                    width: 15px;
+                    left: 10px;
+                }
+            }
             &:after, &:before {
                 content: "";
                 position: absolute;
