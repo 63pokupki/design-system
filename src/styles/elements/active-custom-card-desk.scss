@@ -80,6 +80,17 @@
             .arrow-02 {
                 width: 20px;
                 height: 25px;
+                &:after, &:before {
+                    // background: #000;
+                    background: $light-gray-color;
+                }
+            }
+            &:hover {
+                .arrow-02 {
+                    &:after, &:before {
+                        background: $color-primary;
+                    }
+                }
             }
         }        
     }
@@ -303,6 +314,9 @@
             padding-right: 40px;                         
             overflow: hidden; //фиксирует высоту и ширину
             cursor: pointer;
+            &:active {
+                overflow: auto;
+            }
         }    
     }
 }
