@@ -1,6 +1,6 @@
 module.exports = {
     // подсветка синтаксиса разметки - не включается в конечную сборку
-    "_highlight-syntax": [
+    "highlight-syntax": [
         "./node_modules/clipboard/dist/clipboard.min.js",
         "./node_modules/prismjs/prism.js",
         "./node_modules/prismjs/components/prism-markdown.min.js",
@@ -15,7 +15,7 @@ module.exports = {
         "./node_modules/prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"
     ],
     // Внутренние стили дизайн системы - не включается в конечную сборку
-    "_ds-utils": ["./src/styles/_ds-utils.scss"],
+    "ds-utils": ["./src/styles/_ds-utils.scss"],
     // Иконки для категорий закупок
     "categories-icons-sprite": ["./src/categories-icons-sprite/categories/categories-icons.js"],
      // Итоговые стили дизайн системы - включаются в конечную сборку
