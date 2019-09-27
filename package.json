@@ -5,8 +5,7 @@
   "main": "dist/css/ds-ui-kit.css",
   "scripts": {
     "live": "webpack-dev-server --config webpack.config.js",
-    "build": "webpack --config webpack.config.build.js",
-    "deploy": "webpack --config webpack.config.deploy.js"
+    "build": "webpack --config webpack.config.build.js && webpack --config webpack.config.deploy.js"
   },
   "homepage": "https://github.com/63pokupki/design-system",
   "repository": {
