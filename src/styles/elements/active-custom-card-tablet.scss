@@ -45,21 +45,10 @@
             .card-active-custom__status-block {
                 flex-direction: row;
                 justify-content: flex-start;
+                align-items: baseline;
                 p {
-                    margin-right: 5px;
+                    margin: 0 5px 0 0;                     
                     font-size: 12px;
-                }
-                .organizer-block {
-                    display: flex;
-                    align-items: flex-end;
-                    margin: 0 30px 14px 0;
-                    &__name-wrap {
-                        margin: 0;
-                    }
-                    p {
-                        font-weight: 600;
-                        font-size: 12px;
-                    }
                 }
             }           
         }
