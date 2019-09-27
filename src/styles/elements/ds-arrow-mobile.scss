@@ -5,7 +5,8 @@
     justify-content: center;
     width: 30px;
     height: 30px;
-    border-radius: 50%;
+    // border-radius: 50%;
+    // border: 1px solid grey;
     &:before, &:after {
         position: absolute;
         content: '';
@@ -14,9 +15,12 @@
         border-radius: 5.5px;
         background: #858585;
         left: 12px;
-        &:hover {
-            background: #751d1d;
+    }
+    &:hover {
+        &:before, &:after {
+            background: $color-primary;
         }
+        cursor: pointer;
     }
     &:before {
         transform: rotate(45deg) translateY(-3.7px);

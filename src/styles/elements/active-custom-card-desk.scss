@@ -1,6 +1,4 @@
-h1 {
-    color: $color-primary;
-}
+
 // Карточка активных закупок DESKTOP
 .card-active-custom__wrap {
     display: flex;
@@ -13,6 +11,24 @@ h1 {
     &:hover {
         box-shadow: 1px 1px 6px rgba(65, 149, 206, 0.4);
         transition: box-shadow .5s;
+    }  
+    //ОТображает изображения в подкатергориях
+    &.desktop-subcat {
+        .card-active-custom__img-subcategory {
+            display: flex;
+        }
+        .card-active-custom__img-wrap {
+            width: 100%;
+            min-width: 544px;
+        }
+        .card-active-custom__img-desktop {
+            display: none;
+        }
+        .card-active-custom__description {
+            .suitable-catalogs {
+                display: flex;             
+            }
+        } 
     }    
 }
 .card-active-custom__wrap.is-toggle {
@@ -64,6 +80,17 @@ h1 {
             .arrow-02 {
                 width: 20px;
                 height: 25px;
+                &:after, &:before {
+                    // background: #000;
+                    background: $light-gray-color;
+                }
+            }
+            &:hover {
+                .arrow-02 {
+                    &:after, &:before {
+                        background: $color-primary;
+                    }
+                }
             }
         }        
     }
@@ -171,71 +198,12 @@ h1 {
             font-weight: 600;
         }
     }
-    &__organizer-block {
-        margin: 0 30px 10px 0;
-        position: relative;
-        .organizer-block {
-            &__name-wrap {
-                display: flex;
-                margin-bottom: 5px;
-            }
-            &__name {
-               font-size: 12px;
-               line-height: 17px;
-               text-align: justify;
-               color: $org-name-color;
-               overflow: hidden;
-               max-height: 15px;
-               width: 90px;
-               cursor: pointer;
-               transition: width .3s ease-in-out;
-               p {
-                    font-size: 12px;
-                    text-overflow: ellipsis;
-                    width: 90px; 
-                    white-space: nowrap;
-                    overflow: hidden;
-                    &::after {
-                        content: attr(data-full-name);
-                        visibility: hidden;
-                        opacity: 0;
-                        position: absolute;
-                        left: 0;
-                        top: -8px;
-                        background: #fff;
-                        border-radius: 2px;
-                        box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.3);
-                        padding: 4px 2px;
-                        transition: .3s;
-                        font-size: 12px;
-                        font-weight: 600;
-                        transition: .3s;                     
-                    }
-                    &:hover::after {
-                        visibility: visible;
-                        opacity: 1;                                               
-                    }
-                } 
-            }
-            .rating-value {
-                font-size: 14px;
-            }           
-        }
-        p {
-            margin: 0;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 10px;
-            line-height: 12px;
-        }
-    }
     &__like {
         .icon-like {
            stroke-width: 2; 
         }
     }    
 }
-
 //Выпадающий нижний блок
 .card-active-custom {
     &__toggle-block {
@@ -251,6 +219,14 @@ h1 {
         opacity: 0;
         transition: max-height .3s;
     }
+    &__toggle-left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        max-height: 220px;
+    }
     &__description {
         display: flex;
         width: 100%;
@@ -262,11 +238,21 @@ h1 {
         opacity: 0;
         transition: max-height .3;
     }     
-    &__img {
+    &__img-wrap {
         display: flex;
-        width: 544px;
-        max-width: 544px;
-        max-height: 152px;       
+        justify-content: center;
+        align-items: flex-end;
+        // position: absolute;
+        // width: 544px;
+        // max-width: 544px;
+        // max-height: 152px;
+        height: 100%;
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: 100%;
+        }
     }
     &__description {        
         display: flex;
@@ -328,6 +314,9 @@ h1 {
             padding-right: 40px;                         
             overflow: hidden; //фиксирует высоту и ширину
             cursor: pointer;
+            &:active {
+                overflow: auto;
+            }
         }    
     }
 }
@@ -335,7 +324,7 @@ h1 {
 .card-active-custom {
 
     &__img-subcategory {
-        display: flex;
+        display: none;
         position: relative;
         max-width: 152px;
         max-height: 152px;
@@ -383,7 +372,7 @@ h1 {
     }
     &__description {
         .suitable-catalogs {
-            display: flex;
+            display: none;
             // max-width: 520px;
             height: 55px;
             margin-top: 10px;

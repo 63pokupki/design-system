@@ -1,4 +1,4 @@
-.ds-statusbar {
+.statusbar {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -8,7 +8,7 @@
     font-size: 10px;
     color: $statusbar_empty-color-txt;  
     &__line {
-        @extend .ds-statusbar;
+        @extend .statusbar;
         padding-left: 7px;
         background: $color-primary;        
         span {
@@ -16,11 +16,11 @@
         }
     }
 }
-.ds-statusbar.is-filled {
+.statusbar.is-filled {
     background: $statusbar_filled-color-bg;
     border: none;
     color: $statusbar-color-txt;
-    .ds-statusbar__line {
+    .statusbar__line {
         color: #fff;
         transition: width .3s;
     }

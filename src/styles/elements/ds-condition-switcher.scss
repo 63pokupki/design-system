@@ -1,6 +1,6 @@
 .condition-switcher {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
     // background: rgba(49, 140, 202, 0.1);
     width: 100%;
@@ -50,7 +50,7 @@
         &:checked ~ .condition-switcher__btn {
             transform: translateX(15px);
             border: 2px solid $color-primary;           
-        }        
+        }
     }    
     &__input:checked + label {
         background: $color-primary;        
