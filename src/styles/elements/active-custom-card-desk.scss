@@ -29,7 +29,16 @@
                 display: flex;             
             }
         } 
-    }    
+    }
+    &.tablet-subcat {
+        .card-active-custom__img-subcategory {
+            display: flex;
+        }
+        .card-active-custom__img-tablet {
+            display: none;
+        }
+    }
+
 }
 .card-active-custom__wrap.is-toggle {
     .card-active-custom__toggle-block {
