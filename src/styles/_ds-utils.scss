@@ -1,19 +1,15 @@
 /* Внутренние стили дизайн системы - они не должны включаться в конечную сборку! */
 
 body {
-    background: #f1f1f1;
+    background: #eef2f4;
     margin: 0;
     padding: 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    color: rgb(48, 48, 48);
 }
 
 .ds-title {
     width: 100%;
     text-align: center;
-    color: rgb(48, 48, 48);
+    color: #343b4c;
 }
 
 .ds-wrapper {
