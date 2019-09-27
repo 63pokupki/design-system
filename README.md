@@ -1,3 +1,5 @@
+[![NPM version](https://img.shields.io/npm/v/@63pokupki/design-system?color=green)](https://63pokupki.github.io/design-system/public/)
+
 # Дизайн-система компонентов 63 Pokupki
 
 **[Просмотр в интерактивном режиме](https://63pokupki.github.io/design-system/public/)**
