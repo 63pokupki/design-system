@@ -1,8 +1,9 @@
 .organizer-block {
     display: flex;
+    flex-direction: column;
     position: relative;
     &__name-wrap {
-        display: flex;
+        display: flex;        
         margin-bottom: 5px;
     }
     &__name {
