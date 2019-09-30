@@ -8,6 +8,7 @@
     </head>
     <body>
         <h1 class="ds-title">Категории закупок</h1>
+
         <h3 class="ds-title">Карточка для категории закупки</h3>
         <div class="ds-wrapper">
             <a class="category-card" href="#">
@@ -20,27 +21,19 @@
 
         <div class="ds-code-wrapper">
             <script type="text/plain" class="language-markup">
-                <nav class="breadcrumb">
-                    <ol class="breadcrumb__list">
-                        <li class="breadcrumb__item">
-                            <a class="link" href="#">Новые...</a>
-                        </li>
-                        <li class="breadcrumb__item">
-                            <a class="link" href="#">Список...</a>
-                        </li>
-                        <!-- активная крошка имеет модификатор active -->
-                        <li class="breadcrumb__item breadcrumb__item_active">
-                            <a class="link" href="#">Цель</a>
-                        </li>
-                    </ol>
-                </nav>
+                <a class="category-card" href="#">
+                    <svg class="category-card__icon">
+                        <use xlink:href="#svg-cat-hobby"></use>
+                    </svg>
+                    <span class="category-card__text">Одежда и обувь для мужчин</span>
+                </a>
             </script>
         </div>
 
         <h3 class="ds-title">Иконки для категорий закупок</h3>
         <!-- ds-title -->
         <div class="ds-wrapper">
-            <svg class="svg-cat-accessories-adult">
+            <svg>
                 <use xlink:href="#svg-cat-accessories-adult"></use>
             </svg>
             <svg>
