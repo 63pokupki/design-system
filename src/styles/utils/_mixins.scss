@@ -1,5 +1,0 @@
-// миксины
-// уменьшение при клике
-@mixin deep-click($scale: 0.8) {
-    transform: scale($scale);
-}
