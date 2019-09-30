@@ -1,0 +1,22 @@
+// контейнер карточек категорий
+.category-card-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3px 3px 0px 3px;
+
+    &__item {
+        margin-right: 5px;
+        margin-bottom: 5px;
+        flex-shrink: 0;
+    }
+
+    // отменяет перенос карточек
+    &_no-wrap {
+        flex-wrap: nowrap;
+    }
+
+    // вертикальное отображение
+    &_vertical {
+        flex-direction: column;
+    }
+}
