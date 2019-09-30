@@ -53,10 +53,12 @@
         &__purchaseStatus {
             font-size: 12px;
         }
-        &__ds-statusbar {
+        &__statusbar {
+            display: flex;
             flex-direction: row;
+            flex-wrap: nowrap;
             margin: 0 0 25px 0;
-            .ds-statusbar {
+            .statusbar {
                 width: 100%;
                 height: 25px;
                 margin-right: 10px;
