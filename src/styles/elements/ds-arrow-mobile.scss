@@ -1,12 +1,10 @@
-.arrow-02-mobile {
+.arrow-mobile {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 30px;
     height: 30px;
-    // border-radius: 50%;
-    // border: 1px solid grey;
     &:before, &:after {
         position: absolute;
         content: '';
@@ -28,5 +26,21 @@
 
     &:after {
         transform: rotate(-45deg) translateY(3.5px);
-    }        
+    }
+    //Направления кнопки
+	// Для выбора нужного направления, присвоить соответствующий класс блоку arrow
+	// например arrow arrow_up 
+	&_right {
+		transform: rotate(0deg);
+	}
+	&_down {
+		transform: rotate(90deg);
+	}
+	&_left {
+		transform: rotate(180deg);
+	}
+	&_up {
+		transform: rotate(270deg);
+
+	}        
 }
