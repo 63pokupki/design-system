@@ -125,6 +125,15 @@ module.exports = {
                 }
             },
             {
+                test: /favicon\.ico/,
+                use: {
+                    loader: "file",
+                    options: {
+                        name: "favicon.ico"
+                    }
+                }
+            },
+            {
                 test: /fonts\/.*\.(woff|woff2|eot|ttf|svg)$/,
                 use: {
                     loader: "file",

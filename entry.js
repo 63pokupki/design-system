@@ -15,7 +15,7 @@ module.exports = {
         "./node_modules/prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"
     ],
     // Внутренние стили дизайн системы - не включается в конечную сборку
-    "ds-utils": ["./src/styles/_ds-utils.scss"],
+    "ds-utils": ["./src/styles/_ds-utils.scss", "./favicon.ico"],
     // Иконки для категорий закупок
     "categories-icons-sprite": ["./src/categories-icons-sprite/categories/categories-icons.js"],
      // Итоговые стили дизайн системы - включаются в конечную сборку
