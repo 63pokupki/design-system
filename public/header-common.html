@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Шапка общий компонент</title>
+    <link href="css/highlight-syntax.css?7b02d401fd5fd4320509" rel="stylesheet"><link href="css/ds-utils.css?7b02d401fd5fd4320509" rel="stylesheet"><link href="css/ds-ui-kit.css?7b02d401fd5fd4320509" rel="stylesheet"></head>
+    <body>
+        <h1 class="ds-title">Десктопная + мобильная шапка</h2>
+
+           
+        <div class="ds-wrapper">
+            <header class="header">
+                <!-- шапка под десктоп -->
+               <!-- шапка под десктоп -->
+<div class="header-desctop">
+    <div class="header-desctop__row">
+        <div class="support-info header-desctop__col">
+            <a class="support-info__tel" href="tel:+78007006301">8 (800) 700-63-01</a>
+            <span class="support-info__hours">8:00 - 20:00</span>
+            <i class="icon icon-info support-info__icon has-tooltip">
+                <span class="tooltip tooltip_triangle support-info__tooltip"
+                    >Если у вас возникли проблемы с регистрацией или входом на форум - пишите на адрес
+                    службы поддержки
+                    <a class="link link_colored bold" href="mailto:support@63pokupki.ru"
+                        >support@63pokupki.ru</a
+                    >
+                </span>
+            </i>
+        </div>
+        <nav class="header-desctop__col header-desctop__links-eq">
+            <a class="link semi-bold link_is-highlighted" href="#">Помощь</a>
+            <a class="link semi-bold" href="#">Доставка</a>
+            <a class="link semi-bold" href="#">Пункты выдачи</a>
+        </nav>
+        <nav class="header-desctop__col header-desctop__links-diff">
+            <a class="link semi-bold" href="#">Пристрой</a>
+            <a class="link semi-bold" href="#">Бренды</a>
+            <a class="link semi-bold" href="#">Форум</a>
+        </nav>
+    </div>
+    <div class="header-desctop__row">
+        <!-- логотип -->
+        <div class="logo header-desctop__logo">
+            <a class="logo__link" href="#">
+                <img class="logo__img" src="images/logotype.svg" />
+            </a>
+        </div>
+        <!-- блок поиска -->
+        <div class="search header-desctop__search">
+            <!-- строка поиска -->
+            <input class="search__bar" type="text" placeholder="Поиск" />
+            <!-- кнопка поиска -->
+            <button class="btn search__button">
+                <img class="btn__icon" src="images/search.svg" />
+            </button>
+            <!-- блок выпадающей категории поиска -->
+            <div class="search__category">
+                <!-- добавить .search-category_expanded для раскрытия меню категорий -->
+                <div class="dropdown-fixed-list">
+                    <!-- текущее значение -->
+                    <span class="dropdown-fixed-list__current">По товарам</span>
+                    <!-- лист всех значений -->
+                    <ul class="dropdown-fixed-list__list">
+                        <li class="dropdown-fixed-list__list-item">По товарам</li>
+                        <li class="dropdown-fixed-list__list-item">По форуму</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header-desctop__icons">
+            <a class="header-desctop__icon" href="#">
+                <div class="caption-icon">
+                    <i class="icon icon-heart caption-icon__icon"></i>
+                    <span href="#" class="caption-icon__text">Избранное</span>
+                </div>
+            </a>
+            <a class="header-desctop__icon" href="#">
+                <div class="caption-icon">
+                    <i class="icon icon-account caption-icon__icon"></i>
+                    <span href="#" class="caption-icon__text">Sergioels..</span>
+                </div>
+            </a>
+            <a class="header-desctop__icon" href="#">
+                <div class="caption-icon">
+                    <i class="icon icon-calendar caption-icon__icon">
+                        <span class="icon-calendar__notification-count">0</span>
+                    </i>
+                    <span href="#" class="caption-icon__text">Календарь</span>
+                </div>
+            </a>
+            <a class="header-desctop__icon" href="#">
+                <div class="caption-icon">
+                    <i class="icon icon-cart caption-icon__icon"></i>
+                    <span href="#" class="caption-icon__text">Корзина</span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <nav class="categories-bar">
+        <button class="menu-btn categories-bar__button">
+            <i class="icon icon-burger menu-btn__icon"></i>
+            <span class="btn__text menu-btn__text bold">Все закупки</span>
+        </button>
+        <ul class="categories-bar__list">
+            <li class="categories-bar__item">
+                <a href="" class="link semi-bold">Одежда, обувь, акксесуары</a>
+            </li>
+            <li class="categories-bar__item">
+                <a href="" class="link semi-bold">Товары для детей</a>
+            </li>
+            <li class="categories-bar__item">
+                <a href="" class="link semi-bold">Косметика и парфюмерия</a>
+            </li>
+            <li class="categories-bar__item">
+                <a href="" class="link semi-bold">Спорт, отдых, здоровье</a>
+            </li>
+            <li class="categories-bar__item">
+                <a href="" class="link semi-bold">Сад и огород</a>
+            </li>
+        </ul>
+        <!-- .multi-level-menu_has-triangle для отображения треугольника сверху -->
+        <!-- .multi-level-menu_has-subcategories для отображения подменю при их наличии-->
+        <!-- .multi-level-menu__column_is-expanded к колонке для постоянного отображения колонки -->
+        <nav
+            class="multi-level-menu categories-bar__menu multi-level-menu_has-triangle multi-level-menu_has-subcategories"
+        >
+            <div class="multi-level-menu__column">
+                <span class="multi-level-menu__heading semi-bold">Категории</span>
+                <a class="link link_colored multi-level-menu__all" href="#">Смотреть все</a>
+                <ul class="multi-level-menu__list">
+                    <li class="multi-level-menu__item">
+                        <a class="link" href="#">Одежда и обувь для женщин</a>
+                        <!-- начало вложенного подменю -->
+                        <div class="multi-level-menu__column">
+                            <span class="multi-level-menu__heading semi-bold">Подменю</span>
+                            <a class="link link_colored multi-level-menu__all" href="#">Смотреть все</a>
+                            <ul class="multi-level-menu__list">
+                                <li class="multi-level-menu__item">
+                                    <a class="link" href="#">Одежда и обувь для женщин</a>
+                                </li>
+                                <li class="multi-level-menu__item">
+                                    <a class="link" href="#">Одежда и обувь для мужчин</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- конец вложенного подменю -->
+                    </li>
+                    <li class="multi-level-menu__item">
+                        <a class="link" href="#">Одежда и обувь для мужчин</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </nav>
+</div>
+                <!-- шапка под touch устройства -->
+                <div class="header-touch">
+                    <div class="header-touch__row">
+                        <div class="caption-icon click-menu">
+                            <i class="icon icon-menu caption-icon__icon"></i>
+                            <span href="#" class="caption-icon__text">Меню</span>
+                        </div>
+                        <div class="caption-icon">
+                            <i class="icon icon-account caption-icon__icon"></i>
+                            <span href="#" class="caption-icon__text">Sergioels..</span>
+                        </div>
+                        <div class="logo header-touch__logo">
+                            <a class="logo__link" href="#">
+                                <img class="logo__img" src="images/logotype.svg" />
+                            </a>
+                        </div>
+                        <div class="caption-icon">
+                            <i class="icon icon-calendar caption-icon__icon">
+                                <span class="icon-calendar__notification-count">0</span>
+                            </i>
+                            <span href="#" class="caption-icon__text">Календарь</span>
+                        </div>
+                        <div class="caption-icon">
+                            <i class="icon icon-cart caption-icon__icon"></i>
+                            <span href="#" class="caption-icon__text">Корзина</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <aside class="sidebar touch-only">
+                    <div class="sidebar__body sidebar-menu-touch">
+                        <!-- блок поиска -->
+                        <div class="search sidebar-menu-touch__section">
+                            <!-- строка поиска -->
+                            <input class="search__bar" type="text" placeholder="Поиск" />
+                            <!-- кнопка поиска -->
+                            <button class="search__button">
+                                <img src="images/search.svg" />
+                            </button>
+                            <!-- блок выпадающей категории поиска -->
+                            <div class="search__category">
+                                <!-- добавить .dropdown-fixed-list_expanded для раскрытия меню категорий -->
+                                <div class="dropdown-fixed-list">
+                                    <!-- текущее значение -->
+                                    <span class="dropdown-fixed-list__current">По товарам</span>
+                                    <!-- лист всех значений -->
+                                    <ul class="dropdown-fixed-list__list">
+                                        <li class="dropdown-fixed-list__list-item">По товарам</li>
+                                        <li class="dropdown-fixed-list__list-item">По форуму</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="outlined-links sidebar-menu-touch__section">
+                            <div class="outlined-links__row">
+                                <a class="link outlined-links__link" href="#">Новые закупки</a>
+                                <a class="link outlined-links__link" href="#">Распродажи</a>
+                            </div>
+                            <div class="outlined-links__row">
+                                <a class="link outlined-links__link" href="#">Скоро стоп</a>
+                                <a class="link outlined-links__link" href="#">Орг. сбор 0%</a>
+                            </div>
+                        </div>
+        
+                        <nav class="multi-level-menu sidebar-menu-touch__multi-level-menu">
+                            <div class="multi-level-menu__column">
+                                <div class="multi-level-menu__heading-wrapper">
+                                    <span class="multi-level-menu__heading semi-bold">Категории</span>
+                                    <a class="link link_colored multi-level-menu__all" href="#">Смотреть все</a>
+                                </div>
+                                <ul class="multi-level-menu__list">
+                                    <li class="multi-level-menu__item">
+                                        <i class="icomoon-old-for-woman multi-level-menu__icon"></i>
+                                        <a class="link" href="#">Одежда и обувь для женщин</a>
+                                    </li>
+                                    <li class="multi-level-menu__item">
+                                        <i class="icomoon-old-for-man multi-level-menu__icon"></i>
+                                        <a class="link" href="#">Одежда и обувь для мужчин</a>
+                                    </li>
+                                    <li class="multi-level-menu__item">
+                                        <i class="icomoon-old-for-child multi-level-menu__icon"></i>
+                                        <a class="link" href="#">Одежда и обувь для детей</a>
+                                    </li>
+                                    <li class="multi-level-menu__item">
+                                        <i class="icomoon-old-sport multi-level-menu__icon"></i>
+                                        <a class="link" href="#">Спорт, отдых, здоровье</a>
+                                    </li>
+                                    <li class="multi-level-menu__item">
+                                        <i class="icomoon-old-for-children multi-level-menu__icon"></i>
+                                        <a class="link" href="#">Товары для детей</a>
+                                    </li>
+                                    <li class="multi-level-menu__item">
+                                        <i class="icomoon-old-accessories multi-level-menu__icon"></i>
+                                        <a class="link" href="#">Кожгалантерея и аксессуары</a>
+                                    </li>
+                                    <li class="multi-level-menu__item">
+                                        <i class="icomoon-old-zoo multi-level-menu__icon"></i>
+                                        <a class="link" href="#">Товары для животных</a>
+                                    </li>
+                                    <li class="multi-level-menu__item">
+                                        <i class="icomoon-old-cosmetics multi-level-menu__icon"></i>
+                                        <a class="link" href="#">Косметика и парфюмерия</a>
+                                    </li>
+                                    <li class="multi-level-menu__item">
+                                        <i class="icomoon-old-for-auto multi-level-menu__icon"></i>
+                                        <a class="link" href="#">Товары для автомобиля</a>
+                                    </li>
+                                    <li class="multi-level-menu__item">
+                                        <i class="icomoon-old-home multi-level-menu__icon"></i>
+                                        <a class="link" href="#">Товары для дома</a>
+                                    </li>
+                                    <li class="multi-level-menu__item">
+                                        <i class="icomoon-old-prises multi-level-menu__icon"></i>
+                                        <a class="link" href="#">Подарки и сувениры</a>
+                                    </li>
+                                    <li class="multi-level-menu__item">
+                                        <i class="icomoon-old-for-garden multi-level-menu__icon"></i>
+                                        <a class="link" href="#">Товары для сада</a>
+                                    </li>
+                                    <li class="multi-level-menu__item">
+                                        <i class="icomoon-old-appliances multi-level-menu__icon"></i>
+                                        <a class="link" href="#">Электроника и бытовая техника</a>
+                                    </li>
+                                    <li class="multi-level-menu__item">
+                                        <i class="icomoon-old-products multi-level-menu__icon"></i>
+                                        <a class="link" href="#">Продукты</a>
+                                    </li>
+                                    <li class="multi-level-menu__item">
+                                        <i class="icomoon-old-books multi-level-menu__icon"></i>
+                                        <a class="link" href="#">Книги и канцтовары</a>
+                                    </li>
+                                    <li class="multi-level-menu__item">
+                                        <i class="icomoon-old-hobby multi-level-menu__icon"></i>
+                                        <a class="link" href="#">Хобби</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+        
+                        <div class="sidebar-menu-touch__links sidebar-menu-touch__section">
+                            <a href="#" class="link">Пристрой</a>
+                            <a href="#" class="link">Бренды</a>
+                            <a href="#" class="link">Форум</a>
+                        </div>
+                    </div>
+        
+                    <div class="sidebar__background"></div>
+                    <button class="sidebar__close"></button>
+                </aside>
+        </div>
+
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <header class="header">
+                    <!-- шапка под десктоп -->
+                    <div class="header-desctop">
+                        <div class="header-desctop__row">
+                            <div class="support-info header-desctop__col">
+                                <a class="support-info__tel" href="tel:+78007006301">8 (800) 700-63-01</a>
+                                <span class="support-info__hours">8:00 - 20:00</span>
+                                <i class="icon-info support-info__icon has-tooltip">
+                                    <span class="tooltip tooltip_triangle support-info__tooltip"
+                                        >Если у вас возникли проблемы с регистрацией или входом на форум - пишите на адрес
+                                        службы поддержки
+                                        <a class="link link_colored bold" href="mailto:support@63pokupki.ru"
+                                            >support@63pokupki.ru</a
+                                        >
+                                    </span>
+                                </i>
+                            </div>
+                            <nav class="header-desctop__col header-desctop__links-eq">
+                                <a class="link semi-bold link_is-highlighted" href="#">Помощь</a>
+                                <a class="link semi-bold" href="#">Доставка</a>
+                                <a class="link semi-bold" href="#">Пункты выдачи</a>
+                            </nav>
+                            <nav class="header-desctop__col header-desctop__links-diff">
+                                <a class="link semi-bold" href="#">Пристрой</a>
+                                <a class="link semi-bold" href="#">Бренды</a>
+                                <a class="link semi-bold" href="#">Форум</a>
+                            </nav>
+                        </div>
+                        <div class="header-desctop__row">
+                            <!-- логотип -->
+                            <div class="logo header-desctop__logo">
+                                <a class="logo__link" href="#">
+                                    <img class="logo__img" src="images/logotype.svg" />
+                                </a>
+                            </div>
+                            <!-- блок поиска -->
+                            <div class="search header-desctop__search">
+                                <!-- строка поиска -->
+                                <input class="search__bar" type="text" placeholder="Поиск" />
+                                <!-- кнопка поиска -->
+                                <button class="btn search__button">
+                                    <img class="btn__icon" src="images/search.svg" />
+                                </button>
+                                <!-- блок выпадающей категории поиска -->
+                                <div class="search__category">
+                                    <!-- добавить .search-category_expanded для раскрытия меню категорий -->
+                                    <div class="dropdown-fixed-list">
+                                        <!-- текущее значение -->
+                                        <span class="dropdown-fixed-list__current">По товарам</span>
+                                        <!-- лист всех значений -->
+                                        <ul class="dropdown-fixed-list__list">
+                                            <li class="dropdown-fixed-list__list-item">По товарам</li>
+                                            <li class="dropdown-fixed-list__list-item">По форуму</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header-desctop__icons">
+                                <a class="header-desctop__icon" href="#">
+                                    <div class="caption-icon">
+                                        <i class="icon icon-heart caption-icon__icon"></i>
+                                        <span href="#" class="caption-icon__text">Избранное</span>
+                                    </div>
+                                </a>
+                                <a class="header-desctop__icon" href="#">
+                                    <div class="caption-icon">
+                                        <i class="icon icon-personal caption-icon__icon"></i>
+                                        <span href="#" class="caption-icon__text">Sergioels..</span>
+                                    </div>
+                                </a>
+                                <a class="header-desctop__icon" href="#">
+                                    <div class="caption-icon">
+                                        <i class="icon icon-calendar caption-icon__icon">
+                                            <span class="icon-calendar__notification-count">0</span>
+                                        </i>
+                                        <span href="#" class="caption-icon__text">Календарь</span>
+                                    </div>
+                                </a>
+                                <a class="header-desctop__icon" href="#">
+                                    <div class="caption-icon">
+                                        <i class="icon icon-cart caption-icon__icon"></i>
+                                        <span href="#" class="caption-icon__text">Корзина</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <nav class="categories-bar">
+                            <button class="btn menu-btn categories-bar__button">
+                                <div class="burger menu-btn__icon">
+                                    <div class="burger__line"></div>
+                                    <div class="burger__line"></div>
+                                    <div class="burger__line"></div>
+                                </div>
+                                <span class="btn__text menu-btn__text bold">Все закупки</span>
+                            </button>
+                            <ul class="categories-bar__list">
+                                <li class="categories-bar__item">
+                                    <a href="" class="link semi-bold">Одежда, обувь, акксесуары</a>
+                                </li>
+                                <li class="categories-bar__item">
+                                    <a href="" class="link semi-bold">Товары для детей</a>
+                                </li>
+                                <li class="categories-bar__item">
+                                    <a href="" class="link semi-bold">Косметика и парфюмерия</a>
+                                </li>
+                                <li class="categories-bar__item">
+                                    <a href="" class="link semi-bold">Спорт, отдых, здоровье</a>
+                                </li>
+                                <li class="categories-bar__item">
+                                    <a href="" class="link semi-bold">Сад и огород</a>
+                                </li>
+                            </ul>
+                            <nav
+                                class="multi-level-menu categories-bar__menu multi-level-menu_has-triangle multi-level-menu_has-subcategories"
+                            >
+                                <div class="multi-level-menu__column">
+                                    <span class="multi-level-menu__heading semi-bold">Категории</span>
+                                    <a class="link link_colored multi-level-menu__all" href="#">Смотреть все</a>
+                                    <ul class="multi-level-menu__list">
+                                        <li class="multi-level-menu__item">
+                                            <a class="link" href="#">Одежда и обувь для женщин</a>
+                                            <!-- начало вложенного подменю -->
+                                            <div class="multi-level-menu__column">
+                                                <span class="multi-level-menu__heading semi-bold">Подменю</span>
+                                                <a class="link link_colored multi-level-menu__all" href="#">Смотреть все</a>
+                                                <ul class="multi-level-menu__list">
+                                                    <li class="multi-level-menu__item">
+                                                        <a class="link" href="#">Одежда и обувь для женщин</a>
+                                                    </li>
+                                                    <li class="multi-level-menu__item">
+                                                        <a class="link" href="#">Одежда и обувь для мужчин</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- конец вложенного подменю -->
+                                        </li>
+                                        <li class="multi-level-menu__item">
+                                            <a class="link" href="#">Одежда и обувь для мужчин</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </nav>
+                    </div>
+                    <!-- шапка под touch устройства -->
+                    <div class="header-touch">
+                        <div class="header-touch__row">
+                            <div class="caption-icon">
+                                <i class="icon icon-menu-search caption-icon__icon"></i>
+                                <span href="#" class="caption-icon__text">Меню</span>
+                            </div>
+                            <div class="caption-icon">
+                                <i class="icon icon-personal caption-icon__icon"></i>
+                                <span href="#" class="caption-icon__text">Sergioels..</span>
+                            </div>
+                            <div class="logo header-touch__logo">
+                                <a class="logo__link" href="#">
+                                    <img class="logo__img" src="images/logotype.svg" />
+                                </a>
+                            </div>
+                            <div class="caption-icon">
+                                <i class="icon icon-calendar caption-icon__icon">
+                                    <span class="icon-calendar__notification-count">0</span>
+                                </i>
+                                <span href="#" class="caption-icon__text">Календарь</span>
+                            </div>
+                            <div class="caption-icon">
+                                <i class="icon icon-cart caption-icon__icon"></i>
+                                <span href="#" class="caption-icon__text">Корзина</span>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </script>
+        </div>
+
+        <script>
+            var menu = document.querySelector('.click-menu');
+            var sidebar = document.querySelector('.sidebar');
+            var sidebar_back = document.querySelector('.sidebar__background');
+            var sidebar_close = document.querySelector('.sidebar__close');
+
+            menu.addEventListener('click', function() {
+                sidebar.classList.toggle('sidebar_is-active');
+            });
+
+            sidebar_back.addEventListener('click', function() {
+                sidebar.classList.toggle('sidebar_is-active');
+            });
+
+            sidebar_close.addEventListener('click', function() {
+                sidebar.classList.toggle('sidebar_is-active');
+            });
+            
+        </script>
+    <script type="text/javascript" src="js/highlight-syntax.js?7b02d401fd5fd4320509"></script><script type="text/javascript" src="js/ds-utils.js?7b02d401fd5fd4320509"></script><script type="text/javascript" src="js/categories-icons-sprite.js?7b02d401fd5fd4320509"></script><script type="text/javascript" src="js/ds-ui-kit.js?7b02d401fd5fd4320509"></script></body>
+</html>
