@@ -1,3 +1,7 @@
+
+.icon-menu:before {
+  content: "\e92d";
+}
 .icon-account:before {
   content: "\e900";
 }
@@ -27,25 +31,6 @@
 }
 .icon-car:before {
   content: "\e909";
-}
-.icon-cards .path1:before {
-  content: "\e90a";
-  color: rgb(255, 255, 255);
-}
-.icon-cards .path2:before {
-  content: "\e90b";
-  margin-left: -1.142578125em;
-  color: rgb(49, 140, 202);
-}
-.icon-cards .path3:before {
-  content: "\e90c";
-  margin-left: -1.142578125em;
-  color: rgb(255, 255, 255);
-}
-.icon-cards .path4:before {
-  content: "\e90d";
-  margin-left: -1.142578125em;
-  color: rgb(49, 140, 202);
 }
 .icon-cart:before {
   content: "\e90e";
@@ -86,35 +71,6 @@
 .icon-map-mark:before {
   content: "\e91a";
 }
-.icon-message .path1:before {
-  content: "\e91b";
-  color: rgb(224, 238, 247);
-}
-.icon-message .path2:before {
-  content: "\e91c";
-  margin-left: -1.1787109375em;
-  color: rgb(49, 140, 202);
-}
-.icon-message .path3:before {
-  content: "\e91d";
-  margin-left: -1.1787109375em;
-  color: rgb(49, 140, 202);
-}
-.icon-message .path4:before {
-  content: "\e91e";
-  margin-left: -1.1787109375em;
-  color: rgb(49, 140, 202);
-}
-.icon-message .path5:before {
-  content: "\e91f";
-  margin-left: -1.1787109375em;
-  color: rgb(49, 140, 202);
-}
-.icon-message .path6:before {
-  content: "\e920";
-  margin-left: -1.1787109375em;
-  color: rgb(49, 140, 202);
-}
 .icon-ok:before {
   content: "\e921";
 }
@@ -126,21 +82,6 @@
 }
 .icon-sandglass:before {
   content: "\e924";
-}
-.icon-search .path1:before {
-  content: "\e925";
-  color: rgb(54, 166, 242);
-}
-.icon-search .path2:before {
-  content: "\e926";
-  margin-left: -1em;
-  color: rgb(54, 166, 242);
-}
-.icon-search .path3:before {
-  content: "\e927";
-  margin-left: -1em;
-  color: rgb(54, 166, 242);
-  opacity: 0.35;
 }
 .icon-sort:before {
   content: "\e928";
