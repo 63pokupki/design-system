@@ -215,7 +215,6 @@
         </div>
 
         <!-- Блок организатора -->
-        <div class="ds-wrapper">
             <h1 class="ds-title">Блок организатора</h1>
             <div class="ds-wrapper">
                 <div class="ds-divider">
@@ -260,6 +259,31 @@
                     </div>    
                 </script>
             </div>
+
+        <!-- Статус-бар -->
+        <h1 class="ds-title">Статус бар</h1>
+        <div class="ds-wrapper">
+            <div class="ds-text">Если ширина <span class="ds-hl">statusbar__line</span>  больше 0, добавить класс <span class="ds-hl">.is-filled</span>  </div>
+            <div class="ds-text">У элемента 3 размера: стандартный, средний и большой. Для изменения размера со стандартного, 
+                необходимо добавить соответствующий класс <span class="ds-hl">.statusbar_middle</span> для среднего и <span class="ds-hl">.statusbar_large</span>
+                для большого. 
+            </div>
+            <!-- Статус бар -->
+            <!-- Если ширина statusbar__line больше 0, добавить класс is-filled -->
+            <div class="statusbar is-filled">
+                <div class="statusbar__line" style="width: 25%">
+                    Собрано <span>0</span> из <span>15000</span> руб.
+                </div>
+            </div>
+        </div>
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <div class="statusbar is-filled">
+                    <div class="statusbar__line" style="width: 25%">
+                        Собрано <span>0</span> из <span>15000</span> руб.
+                    </div>
+                </div>
+            </script>
         </div>
     
 

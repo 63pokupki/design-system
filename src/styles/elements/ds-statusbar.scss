@@ -6,6 +6,7 @@
     border: 1px solid $color-primary;
     border-radius: 15px;
     font-size: 10px;
+    font-weight: 600;
     color: $statusbar_empty-color-txt;  
     &__line {
         @extend .statusbar;
@@ -15,12 +16,19 @@
             margin: 0 3px;
         }
     }
+    &_middle {
+        height: 25px;
+    }
+    &_large {
+        height: 30px;
+    }
 }
 .statusbar.is-filled {
     background: $statusbar_filled-color-bg;
     border: none;
     color: $statusbar-color-txt;
-    .statusbar__line {
+    .statusbar__line { 
+        height: 100%;       
         color: #fff;
         transition: width .3s;
     }
