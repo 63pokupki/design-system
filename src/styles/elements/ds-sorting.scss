@@ -1,67 +1,71 @@
-.container-sorting {
-    display: flex;
+.sorting {
+    display: inline-flex;
     flex-direction: column;
     justify-content: flex-start;
-    &.is-active {
-        //Example: open popover
-    }
+    
     &.is-selected {
-        .btn-sorting {
-            &:before {
-                display: flex;
-            }
-            &__selected-position {
-                display: flex;
-                &_mobile {
-                    display: none;
-                }
-            }
+        .sorting__selected-position {
+            display: flex;
+        }
+        .sorting__btn:before {                 
+            display: inline-flex; 
         }
     }
-}
-.btn-sorting {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    &:hover {
-        color: $color-primary;
-        cursor: pointer;
+    //Помещает позицию в столбец
+    &_col {
+        .sorting__btn {
+            flex-direction: column;
+        }
+        .sorting__selected-position {
+            font-size: 10px;
+            color: #606266;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        &:hover {
+            color: $color-primary;
+            cursor: pointer;
+            &:after {
+                background: url("~images/active_custom_card/arrow-point-to-down-hover.svg");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+        }
+        //Галочка слева, при выбранной позиции
+        &:before {
+            content: "";
+            display: none;
+            width: 10px;
+            height: 8px;
+            background-image: url("~images/active_custom_card/checked.svg");
+            position: absolute;
+            top: 5px;
+            left: -15px;
+        }
+        //Треугольник справа
         &:after {
-            background: url("~images/active_custom_card/arrow-point-to-down-hover.svg");
+            content: "";
+            position: absolute;
+            display: flex;
+            width: 8px;
+            height: 8px;
+            top: 6px;
+            right: -10px;
+            background: url("~images/active_custom_card/arrow-point-to-down.png");
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
+            opacity: 0.6;               
+            cursor: pointer;
         }
+        // Название элемента сортировки 
     }
-    //Галочка слева, при выбранной позиции
-    &:before {
-        content: "";
-        display: none;
-        width: 10px;
-        height: 8px;
-        background-image: url("~images/active_custom_card/checked.svg");
-        position: absolute;
-        top: 5px;
-        left: -15px;
-    }
-    //Треугольник справа
-    &:after {
-        content: "";
-        position: absolute;
-        display: flex;
-        width: 8px;
-        height: 8px;
-        top: 6px;
-        right: -10px;
-        background: url("~images/active_custom_card/arrow-point-to-down.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        opacity: 0.6;               
-        cursor: pointer;
-    }
-    // Название элемента сортировки 
-    &__filter-name {
+    &__name {
         display: flex;
         white-space: nowrap;
         margin-right: 5px;
@@ -69,28 +73,6 @@
     //Выбранная позиция(span)
     &__selected-position {
         display: none;
-        //Выбранная позиция(span), отображаемая только на планшетах и телефонах
-        &_mobile {
-            display: none;
-            margin-left: 10px;
-            font-size: 10px;
-            color: $light-gray-color;
-        }
-    }
-}
-
-@media ( max-width: 992px ) {
-    .container-sorting {
-        &.is-selected {
-            .btn-sorting {
-                &__selected-position {
-                    display: none;
-                    &_mobile {
-                        display: flex;
-                    }
-                }
-                
-            }
-        }
-    }
+        border-bottom: 1px solid $color-primary;
+    } 
 }
