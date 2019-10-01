@@ -1,14 +1,12 @@
-.arrow-02 {
+.arrow {
 	position: relative;
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 	width: 44px;
 	height: 44px;
-	// background: #3FA8EF;
-	// opacity: 0.5;
-	border-radius: 0;
-	background: rgba(256,256,256,0.7);
+	// border-radius: 0;
+	background: #d7d7d7;
 	&:before, &:after {
 		position: absolute;
 		content: '';
@@ -18,18 +16,34 @@
 		background: #fff;
 		left: 12px;
 	}
+
+	&:hover {
+        &:before, &:after {
+			background: $color-primary;
+        }
+		cursor: pointer;
+	}
 	&:before {
 		transform: rotate(45deg) translateY(-5.7px);
 	}
 	&:after {
 		transform: rotate(-45deg) translateY(5.5px);
 	}
-	&:hover {
-        &:before, &:after {
-			background: $color-primary;
-        }
-		cursor: pointer;
-    }
+	//Направления кнопки
+	// Для выбора нужного направления, присвоить соответствующий класс блоку arrow
+	// например arrow arrow_up 
+	&_right {
+		transform: rotate(0deg);
+	}
+	&_down {
+		transform: rotate(90deg);
+	}
+	&_left {
+		transform: rotate(180deg);
+	}
+	&_up {
+		transform: rotate(270deg);
 
+	}
 
 }

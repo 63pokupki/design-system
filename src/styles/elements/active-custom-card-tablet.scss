@@ -49,6 +49,7 @@
                 p {
                     margin: 0 5px 0 0;                     
                     font-size: 12px;
+                    
                 }
             }           
         }
@@ -64,16 +65,28 @@
         }
 
         //Выпадающий блок
+        .card-active-custom__toggle-left {
+            min-width: 350px;
+            max-height: 220px;
+        }
+        .card-active-custom__description {
+            min-width: 330px;
+        }
+        .card-active-custom__img-wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 350px;
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                width: auto;
+                height: 100%;
+            }
+        }
         .card-active-custom__toggle-block {
 
-            .card-active-custom__img {
-                width: 96%;
-                max-width: 350px;
-                img {
-                    width: 100%;
-                    height: auto;
-                }
-            }
             .card-active-custom__access-lvl {
                 display: none;
             }
@@ -82,7 +95,7 @@
             }
             //Подкатегории
             .card-active-custom__img-subcategory {
-                display: flex;
+                // display: none;
                 position: relative;
                 max-width: 152px;
                 max-height: 152px;

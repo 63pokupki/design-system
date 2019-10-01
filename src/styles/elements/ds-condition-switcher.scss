@@ -1,62 +1,39 @@
-.condition-switcher {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    // background: rgba(49, 140, 202, 0.1);
-    width: 100%;
-    height: 35px;
-    // padding: 0 25px;
-    &__container {
-        display: flex;
-        width: 30px;
-        height: 16px;
-        position: relative;
-        margin: 0 5px;
-    }
-    &__wrap-btn {
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        width: 30px;
-        height: auto;
-        background: #DADADA;
-        border-radius: 50px;
-        transition: all .3s;
-        cursor: pointer;
-    }   
-    &__btn {
-        position: absolute;
-        display: flex;
-        width: 16px;
-        height: 16px;
-        background: #fff;
-        border: 2px solid #DADADA;
-        border-radius: 50%;
-        transition: all .3s;
-        transform: translateX(0px);
-        cursor: pointer;
-        z-index: 999;
-    }
-    &__txt {
-        font-size: 11px;
-        color: $light-gray-color;
-    }
+.switcher {
+    display: inline-flex;
     
-    &__input {
+    &__checkbox {
         display: none;
-        position: absolute;
-        &:checked ~ .condition-switcher__btn {
-            transform: translateX(15px);
-            border: 2px solid $color-primary;           
-        }
-    }    
-    &__input:checked + label {
-        background: $color-primary;        
     }
-
+    &__checkbox:checked ~ .switcher__label:after {
+        transform: translateX(12px);
+        transition: transform .3s;
+    }
+    &__checkbox:checked ~ .switcher__label {
+        background: #318CCA;
+        transition: background-color .3s;
+    }
+    //Обёртка кнопки
+    &__label {
+        display: inline-flex;
+        align-items: baseline;
+        width: 28px;
+        padding: 2px;
+        background-color: #BAB9B9;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all .3s;
+    }
+    //Кнопка
+    &__label:after {
+        content: "";
+        display: inline-flex;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #fff;
+        border: 1px solid transparent;
+        cursor: pointer;
+        transform: translateX(0px);
+        transition: transform .3s;
+    }
 }
-
-
-

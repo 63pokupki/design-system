@@ -1,41 +1,42 @@
-
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Модальные окна</title>
 </head>
+
 <body>
-        <h1 class="ds-title">Модальные окна</h1>
-        <div class="ds-wrapper">
-            <h3 class="ds-title">Модалка-информер</h3>
-            <div class="ds-text">Внутрь можно поместить необходимые 
-                элементы, например чекбоксы или просто текст</div>
-            <div class="ds-divider" style="width: 120px">
-                <div class="ds-popover">
-                </div>
-            </div>
-            <div class="ds-code-wrapper">
-                <script type="text/plain" class="language-markup">
-                    <div class="ds-popover"></div>
-                </script>
-        
+    <h1 class="ds-title">Модальные окна</h1>
+    <div class="ds-wrapper">
+        <h3 class="ds-title">Модалка-информер popover</h3>
+        <div class="ds-text">Внутрь можно поместить необходимые
+            элементы, например чекбоксы или просто текст</div>
+        <div class="ds-divider" style="width: 120px">
+            <div class="ds-popover">
             </div>
         </div>
-        <div class="ds-wrapper">
-            <div class="ds-divider">
-                <div class="ds-popover" style="width: 120px">
-                    <div class="inputs-group">
-                        <input type="checkbox" id="fmch-1">
-                        <label class="inputs-group__label-checkbox" for="fmch-1"></label>
-                        <label class="inputs-group__label-title" for="fmch-1">label-title</label>
-                    </div> 
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                    <div class="ds-popover"></div>
+                </script>
+
+        </div>
+    </div>
+    <div class="ds-wrapper">
+        <div class="ds-divider">
+            <div class="ds-popover" style="width: 120px">
+                <div class="inputs-group">
+                    <input type="checkbox" id="fmch-1">
+                    <label class="inputs-group__label-checkbox" for="fmch-1"></label>
+                    <label class="inputs-group__label-title" for="fmch-1">label-title</label>
                 </div>
             </div>
-            <div class="ds-code-wrapper">
-                <script type="text/plain" class="language-markup">
+        </div>
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
                     <div class="ds-popover">
                         <div class="inputs-group">
                             <input type="checkbox" id="fmch-1">
@@ -43,28 +44,28 @@
                             <label class="inputs-group__label-title" for="fmch-1">label-title</label>
                         </div>
                     </div>
-                </script>        
+                </script>
+        </div>
+    </div>
+
+    <!-- Модалка -->
+    <h1 class="ds-title">Модальное окно с фоном, всплывающее по центру</h1>
+    <div class="ds-wrapper">
+        <div class="ds-text">Для отображения окна, присвоить класс <span class="ds-hl">.is-visible</span>,
+            блоку <span class="ds-hl">modal</span> </div>
+        <div class="ds-divider">
+            <!-- Для отображения окна, присвоить класс .is-visible, блоку modal -->
+            <div class="modal is-visible" style="position: relative">
+                <div class="modal__wrap" style="margin: 10px">
+                    <div class="modal__btn-close"></div>
+                    <div class="modal__header">Имя окна</div>
+                    <form class="modal__form" action="">
+                    </form>
+                </div>
             </div>
         </div>
-
-        <!-- Модалка -->
-        <h1 class="ds-title">Модальное окно с фоном, всплывающее по центру</h1>
-        <div class="ds-wrapper">
-                <div class="ds-text">Для отображения окна, присвоить класс <span class="ds-hl">.is-visible</span>, 
-                    блоку <span class="ds-hl">modal</span> </div>
-            <div class="ds-divider">
-                <!-- Для отображения окна, присвоить класс .is-visible, блоку modal -->
-                <div class="modal is-visible" style="position: relative">
-                    <div class="modal__wrap" style="margin: 10px">
-                        <div class="modal__btn-close"></div>
-                        <div class="modal__header">Имя окна</div>
-                        <form class="modal__form" action="">
-                        </form>
-                    </div>
-                </div>    
-            </div>
-            <div class="ds-code-wrapper">
-                <script type="text/plain" class="language-markup">
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
                     <div class="modal is-visible">
                         <div class="modal__wrap">
                                 <div class="modal__btn-close"></div>
@@ -74,34 +75,34 @@
                         </div>
                     </div>            
                 </script>
+        </div>
+    </div>
+    <div class="ds-wrapper">
+        <div class="ds-text">Пример модалки</div>
+
+        <div class="ds-divider">
+            <!-- Для отображения окна, присвоить класс .is-visible, блоку modal-sort__back -->
+            <div class="modal is-visible" style="position: relative">
+                <div class="modal__wrap" style="margin: 10px">
+                    <div class="modal__btn-close"></div>
+                    <div class="modal__header">Имя окна</div>
+                    <form class="modal__form" action="">
+                        <div class="inputs-group">
+                            <input type="checkbox" id="ex-1">
+                            <label class="inputs-group__label-checkbox" for="ex-1"></label>
+                            <label class="inputs-group__label-title" for="ex-1">label-title</label>
+                        </div>
+                        <div class="inputs-group">
+                            <input type="checkbox" id="ex-2">
+                            <label class="inputs-group__label-checkbox" for="ex-2"></label>
+                            <label class="inputs-group__label-title" for="ex-2">label-title</label>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-        <div class="ds-wrapper">
-                <div class="ds-text">Пример модалки</div>
-
-            <div class="ds-divider">
-                <!-- Для отображения окна, присвоить класс .is-visible, блоку modal-sort__back -->
-                <div class="modal is-visible" style="position: relative">
-                    <div class="modal__wrap" style="margin: 10px">
-                        <div class="modal__btn-close"></div>
-                        <div class="modal__header">Имя окна</div>
-                        <form class="modal__form" action="">
-                            <div class="inputs-group">
-                                <input type="checkbox" id="ex-1">
-                                <label class="inputs-group__label-checkbox" for="ex-1"></label>
-                                <label class="inputs-group__label-title" for="ex-1">label-title</label>
-                            </div>
-                            <div class="inputs-group">
-                                <input type="checkbox" id="ex-2">
-                                <label class="inputs-group__label-checkbox" for="ex-2"></label>
-                                <label class="inputs-group__label-title" for="ex-2">label-title</label>
-                            </div>
-                        </form>
-                    </div>
-                </div>    
-            </div>
-            <div class="ds-code-wrapper">
-                <script type="text/plain" class="language-markup">
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
                     <div class="modal">
                         <div class="modal__wrap">
                                 <div class="modal__btn-close"></div>
@@ -121,13 +122,11 @@
                         </div>
                     </div>            
                 </script>
-            </div>
         </div>
+    </div>
 
 
 
 </body>
+
 </html>
-
-
-
