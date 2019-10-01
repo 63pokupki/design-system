@@ -8,39 +8,473 @@
     </head>
     <body>
         <h1 class="ds-title">Категории закупок</h1>
+
         <h3 class="ds-title">Карточка для категории закупки</h3>
         <div class="ds-wrapper">
             <a class="category-card" href="#">
                 <svg class="category-card__icon">
                     <use xlink:href="#svg-cat-hobby"></use>
                 </svg>
-                <span class="category-card__text">Одежда и обувь для мужчин</span>
+                <span class="category-card__text">Заголовок карточки категории</span>
             </a>
         </div>
 
         <div class="ds-code-wrapper">
             <script type="text/plain" class="language-markup">
-                <nav class="breadcrumb">
-                    <ol class="breadcrumb__list">
-                        <li class="breadcrumb__item">
-                            <a class="link" href="#">Новые...</a>
-                        </li>
-                        <li class="breadcrumb__item">
-                            <a class="link" href="#">Список...</a>
-                        </li>
-                        <!-- активная крошка имеет модификатор active -->
-                        <li class="breadcrumb__item breadcrumb__item_active">
-                            <a class="link" href="#">Цель</a>
-                        </li>
-                    </ol>
-                </nav>
+                <a class="category-card" href="#">
+                    <svg class="category-card__icon">
+                        <use xlink:href="#svg-cat-hobby"></use>
+                    </svg>
+                    <span class="category-card__text">Заголовок карточки категории</span>
+                </a>
+            </script>
+        </div>
+
+        <h3 class="ds-title">Контейнер и слайдер карточек категорий закупки</h3>
+        <div class="ds-wrapper">
+            <!-- добавить модификатор slider_fading для затухания в конце -->
+            <div class="slider slider_fading">
+                <!-- добавить класс is-inactive для скрытия кнопки -->
+                <button class="slider__prev is-inactive">
+                    <i class="icon icon-arrow-left"></i>
+                </button>
+                <!-- прокрутка зависит от значения left -->
+                <div class="slider__body" style="left: 0%;">
+                    <!-- добавить модификатор category-card-list_no-wrap для запрета переноса карточек -->
+                    <div class="category-card-list category-card-list_no-wrap">
+                        <a class="category-card category-card-list__item" href="#">
+                            <svg class="category-card__icon">
+                                <use xlink:href="#svg-cat-accessories-adult"></use>
+                            </svg>
+                            <span class="category-card__text">Длинный заголовок</span>
+                        </a>
+                        <a class="category-card category-card-list__item" href="#">
+                            <svg class="category-card__icon">
+                                <use xlink:href="#svg-cat-accessories-bags"></use>
+                            </svg>
+                            <span class="category-card__text">Еще более длинный заголовок</span>
+                        </a>
+                        <a class="category-card category-card-list__item" href="#">
+                            <svg class="category-card__icon">
+                                <use xlink:href="#svg-cat-accessories-bags2"></use>
+                            </svg>
+                            <span class="category-card__text">Короткий</span>
+                        </a>
+                        <a class="category-card category-card-list__item" href="#">
+                            <svg class="category-card__icon">
+                                <use xlink:href="#svg-cat-accessories-bijouterie"></use>
+                            </svg>
+                            <span class="category-card__text">Снова длинный заголовок в карточке</span>
+                        </a>
+                        <a class="category-card category-card-list__item" href="#">
+                            <svg class="category-card__icon">
+                                <use xlink:href="#svg-cat-accessories-child"></use>
+                            </svg>
+                            <span class="category-card__text">Длинный заголовок</span>
+                        </a>
+                        <a class="category-card category-card-list__item" href="#">
+                            <svg class="category-card__icon">
+                                <use xlink:href="#svg-cat-accessories-glasses"></use>
+                            </svg>
+                            <span class="category-card__text">Еще более длинный заголовок</span>
+                        </a>
+                        <a class="category-card category-card-list__item" href="#">
+                            <svg class="category-card__icon">
+                                <use xlink:href="#svg-cat-accessories-jewelry"></use>
+                            </svg>
+                            <span class="category-card__text">Короткий</span>
+                        </a>
+                        <a class="category-card category-card-list__item" href="#">
+                            <svg class="category-card__icon">
+                                <use xlink:href="#svg-cat-accessories-woman-bags"></use>
+                            </svg>
+                            <span class="category-card__text">Снова длинный заголовок в карточке</span>
+                        </a>
+                    </div>
+                    <!-- добавить модификатор category-card-list_no-wrap для запрета переноса карточек -->
+                    <div class="category-card-list category-card-list_no-wrap">
+                        <a class="category-card category-card-list__item" href="#">
+                            <svg class="category-card__icon">
+                                <use xlink:href="#svg-cat-child-underwear"></use>
+                            </svg>
+                            <span class="category-card__text">Короткий</span>
+                        </a>
+                        <a class="category-card category-card-list__item" href="#">
+                            <svg class="category-card__icon">
+                                <use xlink:href="#svg-cat-books-study"></use>
+                            </svg>
+                            <span class="category-card__text">Еще более длинный заголовок</span>
+                        </a>
+                        <a class="category-card category-card-list__item" href="#">
+                            <svg class="category-card__icon">
+                                <use xlink:href="#svg-cat-cosmetics-skin"></use>
+                            </svg>
+                            <span class="category-card__text">Длинный заголовок</span>
+                        </a>
+                        <a class="category-card category-card-list__item" href="#">
+                            <svg class="category-card__icon">
+                                <use xlink:href="#svg-cat-garden-decor"></use>
+                            </svg>
+                            <span class="category-card__text">Короткий</span>
+                        </a>
+                        <a class="category-card category-card-list__item" href="#">
+                            <svg class="category-card__icon">
+                                <use xlink:href="#svg-cat-hobby-scrap"></use>
+                            </svg>
+                            <span class="category-card__text">Снова длинный заголовок в карточке</span>
+                        </a>
+                        <a class="category-card category-card-list__item" href="#">
+                            <svg class="category-card__icon">
+                                <use xlink:href="#svg-cat-sport-command"></use>
+                            </svg>
+                            <span class="category-card__text">Длинный заголовок</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- добавить класс is-inactive для скрытия кнопки -->
+                <button class="slider__next">
+                    <i class="icon icon-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <!-- добавить модификатор slider_fading для затухания в конце -->
+                <div class="slider slider_fading">
+                    <!-- добавить класс is-inactive для скрытия кнопки -->
+                    <button class="slider__prev is-inactive">
+                        <i class="icon icon-arrow-left"></i>
+                    </button>
+                    <!-- прокрутка зависит от значения left -->
+                    <div class="slider__body" style="left: 0%;">
+                        <!-- добавить модификатор category-card-list_no-wrap для запрета переноса карточек -->
+                        <div class="category-card-list category-card-list_no-wrap">
+                            <a class="category-card category-card-list__item" href="#">
+                                <svg class="category-card__icon">
+                                    <use xlink:href="#svg-cat-accessories-adult"></use>
+                                </svg>
+                                <span class="category-card__text">Длинный заголовок</span>
+                            </a>
+                            <a class="category-card category-card-list__item" href="#">
+                                <svg class="category-card__icon">
+                                    <use xlink:href="#svg-cat-accessories-bags"></use>
+                                </svg>
+                                <span class="category-card__text">Еще более длинный заголовок</span>
+                            </a>
+                            <a class="category-card category-card-list__item" href="#">
+                                <svg class="category-card__icon">
+                                    <use xlink:href="#svg-cat-accessories-bags2"></use>
+                                </svg>
+                                <span class="category-card__text">Короткий</span>
+                            </a>
+                            <a class="category-card category-card-list__item" href="#">
+                                <svg class="category-card__icon">
+                                    <use xlink:href="#svg-cat-accessories-bijouterie"></use>
+                                </svg>
+                                <span class="category-card__text">Снова длинный заголовок в карточке</span>
+                            </a>
+                            <a class="category-card category-card-list__item" href="#">
+                                <svg class="category-card__icon">
+                                    <use xlink:href="#svg-cat-accessories-child"></use>
+                                </svg>
+                                <span class="category-card__text">Длинный заголовок</span>
+                            </a>
+                            <a class="category-card category-card-list__item" href="#">
+                                <svg class="category-card__icon">
+                                    <use xlink:href="#svg-cat-accessories-glasses"></use>
+                                </svg>
+                                <span class="category-card__text">Еще более длинный заголовок</span>
+                            </a>
+                            <a class="category-card category-card-list__item" href="#">
+                                <svg class="category-card__icon">
+                                    <use xlink:href="#svg-cat-accessories-jewelry"></use>
+                                </svg>
+                                <span class="category-card__text">Короткий</span>
+                            </a>
+                            <a class="category-card category-card-list__item" href="#">
+                                <svg class="category-card__icon">
+                                    <use xlink:href="#svg-cat-accessories-woman-bags"></use>
+                                </svg>
+                                <span class="category-card__text">Снова длинный заголовок в карточке</span>
+                            </a>
+                        </div>
+                        <!-- добавить модификатор category-card-list_no-wrap для запрета переноса карточек -->
+                        <div class="category-card-list category-card-list_no-wrap">
+                            <a class="category-card category-card-list__item" href="#">
+                                <svg class="category-card__icon">
+                                    <use xlink:href="#svg-cat-child-underwear"></use>
+                                </svg>
+                                <span class="category-card__text">Короткий</span>
+                            </a>
+                            <a class="category-card category-card-list__item" href="#">
+                                <svg class="category-card__icon">
+                                    <use xlink:href="#svg-cat-books-study"></use>
+                                </svg>
+                                <span class="category-card__text">Еще более длинный заголовок</span>
+                            </a>
+                            <a class="category-card category-card-list__item" href="#">
+                                <svg class="category-card__icon">
+                                    <use xlink:href="#svg-cat-cosmetics-skin"></use>
+                                </svg>
+                                <span class="category-card__text">Длинный заголовок</span>
+                            </a>
+                            <a class="category-card category-card-list__item" href="#">
+                                <svg class="category-card__icon">
+                                    <use xlink:href="#svg-cat-garden-decor"></use>
+                                </svg>
+                                <span class="category-card__text">Короткий</span>
+                            </a>
+                            <a class="category-card category-card-list__item" href="#">
+                                <svg class="category-card__icon">
+                                    <use xlink:href="#svg-cat-hobby-scrap"></use>
+                                </svg>
+                                <span class="category-card__text">Снова длинный заголовок в карточке</span>
+                            </a>
+                            <a class="category-card category-card-list__item" href="#">
+                                <svg class="category-card__icon">
+                                    <use xlink:href="#svg-cat-sport-command"></use>
+                                </svg>
+                                <span class="category-card__text">Длинный заголовок</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- добавить класс is-inactive для скрытия кнопки -->
+                    <button class="slider__next">
+                        <i class="icon icon-arrow-right"></i>
+                    </button>
+                </div>
+            </script>
+        </div>
+
+        <h3 class="ds-title">Горизонтальный вид - контейнер для карточек категорий закупки</h3>
+        <div class="ds-wrapper">
+            <!-- добавить модификатор category-card-list_no-wrap для запрета переноса карточек -->
+            <div class="category-card-list">
+                <a class="category-card category-card-list__item" href="#">
+                    <svg class="category-card__icon">
+                        <use xlink:href="#svg-cat-accessories-adult"></use>
+                    </svg>
+                    <span class="category-card__text">Длинный заголовок</span>
+                </a>
+                <a class="category-card category-card-list__item" href="#">
+                    <svg class="category-card__icon">
+                        <use xlink:href="#svg-cat-accessories-bags"></use>
+                    </svg>
+                    <span class="category-card__text">Еще более длинный заголовок</span>
+                </a>
+                <a class="category-card category-card-list__item" href="#">
+                    <svg class="category-card__icon">
+                        <use xlink:href="#svg-cat-accessories-bags2"></use>
+                    </svg>
+                    <span class="category-card__text">Короткий</span>
+                </a>
+                <a class="category-card category-card-list__item" href="#">
+                    <svg class="category-card__icon">
+                        <use xlink:href="#svg-cat-accessories-bijouterie"></use>
+                    </svg>
+                    <span class="category-card__text">Снова длинный заголовок в карточке</span>
+                </a>
+                <a class="category-card category-card-list__item" href="#">
+                    <svg class="category-card__icon">
+                        <use xlink:href="#svg-cat-accessories-child"></use>
+                    </svg>
+                    <span class="category-card__text">Длинный заголовок</span>
+                </a>
+                <a class="category-card category-card-list__item" href="#">
+                    <svg class="category-card__icon">
+                        <use xlink:href="#svg-cat-accessories-glasses"></use>
+                    </svg>
+                    <span class="category-card__text">Еще более длинный заголовок</span>
+                </a>
+                <a class="category-card category-card-list__item" href="#">
+                    <svg class="category-card__icon">
+                        <use xlink:href="#svg-cat-accessories-jewelry"></use>
+                    </svg>
+                    <span class="category-card__text">Короткий</span>
+                </a>
+                <a class="category-card category-card-list__item" href="#">
+                    <svg class="category-card__icon">
+                        <use xlink:href="#svg-cat-accessories-woman-bags"></use>
+                    </svg>
+                    <span class="category-card__text">Снова длинный заголовок в карточке</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <!-- добавить модификатор category-card-list_no-wrap для запрета переноса карточек -->
+                <div class="category-card-list">
+                    <a class="category-card category-card-list__item" href="#">
+                        <svg class="category-card__icon">
+                            <use xlink:href="#svg-cat-accessories-adult"></use>
+                        </svg>
+                        <span class="category-card__text">Длинный заголовок</span>
+                    </a>
+                    <a class="category-card category-card-list__item" href="#">
+                        <svg class="category-card__icon">
+                            <use xlink:href="#svg-cat-accessories-bags"></use>
+                        </svg>
+                        <span class="category-card__text">Еще более длинный заголовок</span>
+                    </a>
+                    <a class="category-card category-card-list__item" href="#">
+                        <svg class="category-card__icon">
+                            <use xlink:href="#svg-cat-accessories-bags2"></use>
+                        </svg>
+                        <span class="category-card__text">Короткий</span>
+                    </a>
+                    <a class="category-card category-card-list__item" href="#">
+                        <svg class="category-card__icon">
+                            <use xlink:href="#svg-cat-accessories-bijouterie"></use>
+                        </svg>
+                        <span class="category-card__text">Снова длинный заголовок в карточке</span>
+                    </a>
+                    <a class="category-card category-card-list__item" href="#">
+                        <svg class="category-card__icon">
+                            <use xlink:href="#svg-cat-accessories-child"></use>
+                        </svg>
+                        <span class="category-card__text">Длинный заголовок</span>
+                    </a>
+                    <a class="category-card category-card-list__item" href="#">
+                        <svg class="category-card__icon">
+                            <use xlink:href="#svg-cat-accessories-glasses"></use>
+                        </svg>
+                        <span class="category-card__text">Еще более длинный заголовок</span>
+                    </a>
+                    <a class="category-card category-card-list__item" href="#">
+                        <svg class="category-card__icon">
+                            <use xlink:href="#svg-cat-accessories-jewelry"></use>
+                        </svg>
+                        <span class="category-card__text">Короткий</span>
+                    </a>
+                    <a class="category-card category-card-list__item" href="#">
+                        <svg class="category-card__icon">
+                            <use xlink:href="#svg-cat-accessories-woman-bags"></use>
+                        </svg>
+                        <span class="category-card__text">Снова длинный заголовок в карточке</span>
+                    </a>
+                </div>
+            </script>
+        </div>
+
+        <h3 class="ds-title">Вертикальный вид - контейнер для карточек категорий закупки</h3>
+        <div class="ds-wrapper">
+            <div class="ds-center" style="width: 280px; margin: 0 auto;">
+                <!-- добавить модификатор category-card-list_no-wrap для запрета переноса карточек -->
+                <div class="category-card-list category-card-list_vertical">
+                    <a class="category-card category-card-list__item" href="#">
+                        <svg class="category-card__icon">
+                            <use xlink:href="#svg-cat-accessories-adult"></use>
+                        </svg>
+                        <span class="category-card__text">Длинный заголовок</span>
+                    </a>
+                    <a class="category-card category-card-list__item" href="#">
+                        <svg class="category-card__icon">
+                            <use xlink:href="#svg-cat-accessories-bags"></use>
+                        </svg>
+                        <span class="category-card__text">Еще более длинный заголовок</span>
+                    </a>
+                    <a class="category-card category-card-list__item" href="#">
+                        <svg class="category-card__icon">
+                            <use xlink:href="#svg-cat-accessories-bags2"></use>
+                        </svg>
+                        <span class="category-card__text">Короткий</span>
+                    </a>
+                    <a class="category-card category-card-list__item" href="#">
+                        <svg class="category-card__icon">
+                            <use xlink:href="#svg-cat-accessories-bijouterie"></use>
+                        </svg>
+                        <span class="category-card__text">Снова длинный заголовок в карточке</span>
+                    </a>
+                    <a class="category-card category-card-list__item" href="#">
+                        <svg class="category-card__icon">
+                            <use xlink:href="#svg-cat-accessories-child"></use>
+                        </svg>
+                        <span class="category-card__text">Длинный заголовок</span>
+                    </a>
+                    <a class="category-card category-card-list__item" href="#">
+                        <svg class="category-card__icon">
+                            <use xlink:href="#svg-cat-accessories-glasses"></use>
+                        </svg>
+                        <span class="category-card__text">Еще более длинный заголовок</span>
+                    </a>
+                    <a class="category-card category-card-list__item" href="#">
+                        <svg class="category-card__icon">
+                            <use xlink:href="#svg-cat-accessories-jewelry"></use>
+                        </svg>
+                        <span class="category-card__text">Короткий</span>
+                    </a>
+                    <a class="category-card category-card-list__item" href="#">
+                        <svg class="category-card__icon">
+                            <use xlink:href="#svg-cat-accessories-woman-bags"></use>
+                        </svg>
+                        <span class="category-card__text">Снова длинный заголовок в карточке</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <!-- добавить модификатор category-card-list_no-wrap для запрета переноса карточек -->
+                <div class="category-card-list">
+                    <a class="category-card category-card-list__item" href="#">
+                        <svg class="category-card__icon">
+                            <use xlink:href="#svg-cat-accessories-adult"></use>
+                        </svg>
+                        <span class="category-card__text">Длинный заголовок</span>
+                    </a>
+                    <a class="category-card category-card-list__item" href="#">
+                        <svg class="category-card__icon">
+                            <use xlink:href="#svg-cat-accessories-bags"></use>
+                        </svg>
+                        <span class="category-card__text">Еще более длинный заголовок</span>
+                    </a>
+                    <a class="category-card category-card-list__item" href="#">
+                        <svg class="category-card__icon">
+                            <use xlink:href="#svg-cat-accessories-bags2"></use>
+                        </svg>
+                        <span class="category-card__text">Короткий</span>
+                    </a>
+                    <a class="category-card category-card-list__item" href="#">
+                        <svg class="category-card__icon">
+                            <use xlink:href="#svg-cat-accessories-bijouterie"></use>
+                        </svg>
+                        <span class="category-card__text">Снова длинный заголовок в карточке</span>
+                    </a>
+                    <a class="category-card category-card-list__item" href="#">
+                        <svg class="category-card__icon">
+                            <use xlink:href="#svg-cat-accessories-child"></use>
+                        </svg>
+                        <span class="category-card__text">Длинный заголовок</span>
+                    </a>
+                    <a class="category-card category-card-list__item" href="#">
+                        <svg class="category-card__icon">
+                            <use xlink:href="#svg-cat-accessories-glasses"></use>
+                        </svg>
+                        <span class="category-card__text">Еще более длинный заголовок</span>
+                    </a>
+                    <a class="category-card category-card-list__item" href="#">
+                        <svg class="category-card__icon">
+                            <use xlink:href="#svg-cat-accessories-jewelry"></use>
+                        </svg>
+                        <span class="category-card__text">Короткий</span>
+                    </a>
+                    <a class="category-card category-card-list__item" href="#">
+                        <svg class="category-card__icon">
+                            <use xlink:href="#svg-cat-accessories-woman-bags"></use>
+                        </svg>
+                        <span class="category-card__text">Снова длинный заголовок в карточке</span>
+                    </a>
+                </div>
             </script>
         </div>
 
         <h3 class="ds-title">Иконки для категорий закупок</h3>
         <!-- ds-title -->
         <div class="ds-wrapper">
-            <svg class="svg-cat-accessories-adult">
+            <svg>
                 <use xlink:href="#svg-cat-accessories-adult"></use>
             </svg>
             <svg>
@@ -923,7 +1357,7 @@
             </script>
         </div>
 
-        <!-- для анимирования иконок -->
+        <!-- для анимирования иконок, демонстрация -->
         <script>
             var elems = document.querySelectorAll(".category-card"); //ищем все svg
 
@@ -946,6 +1380,25 @@
                     }
                 });
             }
+        </script>
+
+        <!-- прокрутка слайдера, только для демонстрации-->
+        <script>
+            var slider_body = document.querySelector(".slider__body");
+            var slider_button_next = document.querySelector(".slider__next");
+            var slider_button_prev = document.querySelector(".slider__prev");
+
+            slider_button_next.addEventListener("click", function() {
+                slider_body.style.left = "-100%";
+                slider_button_next.classList.toggle("is-inactive");
+                slider_button_prev.classList.toggle("is-inactive");
+            });
+
+            slider_button_prev.addEventListener("click", function() {
+                slider_body.style.left = "0%";
+                slider_button_prev.classList.toggle("is-inactive");
+                slider_button_next.classList.toggle("is-inactive");
+            });
         </script>
     </body>
 </html>

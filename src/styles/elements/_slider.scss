@@ -1,0 +1,73 @@
+.slider {
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    // тело слайдера
+    &__body {
+        position: relative;
+        top: 0;
+        bottom: 0;
+        transition: left $transition-slow, right $transition-slow;
+    }
+
+    // стрелочки прокрутки
+    &__prev,
+    &__next {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background: rgb(63, 169, 239);
+        border-radius: 50%;
+        transform: translateY(-50%);
+        top: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+
+        i {
+            color: white;
+            font-size: 16px;
+            &:hover {
+                color: white;
+            }
+        }
+
+        &:active {
+            transform: translateY(-50%) scale(0.8);
+        }
+    }
+
+    &__prev {
+        left: 0;
+
+        &.is-inactive {
+            display: none;
+        }
+    }
+
+    &__next {
+        right: 0;
+
+        &.is-inactive {
+            display: none;
+        }
+    }
+
+    // добавляет затухание в конце
+    &_fading {
+        position: relative;
+
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 5%;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+        }
+    }
+}
