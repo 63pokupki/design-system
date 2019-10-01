@@ -1,14 +1,10 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const fs = require("fs");
 
 const entry = require('./entry.js');
 
-// объединяем общие и индивидуальные компоненты
-const htmlPagesReusableComponents = generateHtmlPages('./src/sections/common');
-const htmlPagesIndividualComponents = generateHtmlPages('./src/sections/specific');
-const pages = htmlPagesReusableComponents.concat(htmlPagesIndividualComponents);
+const { templates } = require('./util.js');
 
 module.exports = {
     mode: "production", //режим сборки
@@ -159,7 +155,7 @@ module.exports = {
             filename: "index.html",
             template: "index.html"
         })
-    ].concat(pages),
+    ].concat(templates()),
     optimization: {
         //настройки оптимизации и минификации
         flagIncludedChunks: true,
@@ -173,20 +169,3 @@ module.exports = {
         concatenateModules: true
     }
 };
-
-// функция возвращающая массив html-webpack-plugin для шаблонов html по директории
-function generateHtmlPages(templateDir) {
-    // Read files in template directory
-    const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
-    return templateFiles.map(item => {
-        // Split names and extension
-        const parts = item.split(".");
-        const name = parts[0];
-        const extension = parts[1];
-        // Create new HTMLWebpackPlugin with options
-        return new HtmlWebpackPlugin({
-            filename: `${name}.html`,
-            template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`)
-        });
-    });
-}
