@@ -1,41 +1,42 @@
-
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Модальные окна</title>
 </head>
+
 <body>
-        <h1 class="ds-title">Модальные окна</h1>
-        <div class="ds-wrapper">
-            <h3 class="ds-title">Модалка-информер</h3>
-            <div class="ds-text">Внутрь можно поместить необходимые 
-                элементы, например чекбоксы или просто текст</div>
-            <div class="ds-divider" style="width: 120px">
-                <div class="ds-popover">
-                </div>
-            </div>
-            <div class="ds-code-wrapper">
-                <script type="text/plain" class="language-markup">
-                    <div class="ds-popover"></div>
-                </script>
-        
+    <h1 class="ds-title">Модальные окна</h1>
+    <div class="ds-wrapper">
+        <h3 class="ds-title">Модалка-информер</h3>
+        <div class="ds-text">Внутрь можно поместить необходимые
+            элементы, например чекбоксы или просто текст</div>
+        <div class="ds-divider" style="width: 120px">
+            <div class="ds-popover">
             </div>
         </div>
-        <div class="ds-wrapper">
-            <div class="ds-divider">
-                <div class="ds-popover" style="width: 120px">
-                    <div class="inputs-group">
-                        <input type="checkbox" id="fmch-1">
-                        <label class="inputs-group__label-checkbox" for="fmch-1"></label>
-                        <label class="inputs-group__label-title" for="fmch-1">label-title</label>
-                    </div> 
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                    <div class="ds-popover"></div>
+                </script>
+
+        </div>
+    </div>
+    <div class="ds-wrapper">
+        <div class="ds-divider">
+            <div class="ds-popover" style="width: 120px">
+                <div class="inputs-group">
+                    <input type="checkbox" id="fmch-1">
+                    <label class="inputs-group__label-checkbox" for="fmch-1"></label>
+                    <label class="inputs-group__label-title" for="fmch-1">label-title</label>
                 </div>
             </div>
-            <div class="ds-code-wrapper">
-                <script type="text/plain" class="language-markup">
+        </div>
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
                     <div class="ds-popover">
                         <div class="inputs-group">
                             <input type="checkbox" id="fmch-1">
@@ -43,28 +44,28 @@
                             <label class="inputs-group__label-title" for="fmch-1">label-title</label>
                         </div>
                     </div>
-                </script>        
+                </script>
+        </div>
+    </div>
+
+    <!-- Модалка -->
+    <h1 class="ds-title">Модальное окно с фоном, всплывающее по центру</h1>
+    <div class="ds-wrapper">
+        <div class="ds-text">Для отображения окна, присвоить класс <span class="ds-hl">.is-visible</span>,
+            блоку <span class="ds-hl">modal</span> </div>
+        <div class="ds-divider">
+            <!-- Для отображения окна, присвоить класс .is-visible, блоку modal -->
+            <div class="modal is-visible" style="position: relative">
+                <div class="modal__wrap" style="margin: 10px">
+                    <div class="modal__btn-close"></div>
+                    <div class="modal__header">Имя окна</div>
+                    <form class="modal__form" action="">
+                    </form>
+                </div>
             </div>
         </div>
-
-        <!-- Модалка -->
-        <h1 class="ds-title">Модальное окно с фоном, всплывающее по центру</h1>
-        <div class="ds-wrapper">
-                <div class="ds-text">Для отображения окна, присвоить класс <span class="ds-hl">.is-visible</span>, 
-                    блоку <span class="ds-hl">modal</span> </div>
-            <div class="ds-divider">
-                <!-- Для отображения окна, присвоить класс .is-visible, блоку modal -->
-                <div class="modal is-visible" style="position: relative">
-                    <div class="modal__wrap" style="margin: 10px">
-                        <div class="modal__btn-close"></div>
-                        <div class="modal__header">Имя окна</div>
-                        <form class="modal__form" action="">
-                        </form>
-                    </div>
-                </div>    
-            </div>
-            <div class="ds-code-wrapper">
-                <script type="text/plain" class="language-markup">
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
                     <div class="modal is-visible">
                         <div class="modal__wrap">
                                 <div class="modal__btn-close"></div>
@@ -74,34 +75,34 @@
                         </div>
                     </div>            
                 </script>
+        </div>
+    </div>
+    <div class="ds-wrapper">
+        <div class="ds-text">Пример модалки</div>
+
+        <div class="ds-divider">
+            <!-- Для отображения окна, присвоить класс .is-visible, блоку modal-sort__back -->
+            <div class="modal is-visible" style="position: relative">
+                <div class="modal__wrap" style="margin: 10px">
+                    <div class="modal__btn-close"></div>
+                    <div class="modal__header">Имя окна</div>
+                    <form class="modal__form" action="">
+                        <div class="inputs-group">
+                            <input type="checkbox" id="ex-1">
+                            <label class="inputs-group__label-checkbox" for="ex-1"></label>
+                            <label class="inputs-group__label-title" for="ex-1">label-title</label>
+                        </div>
+                        <div class="inputs-group">
+                            <input type="checkbox" id="ex-2">
+                            <label class="inputs-group__label-checkbox" for="ex-2"></label>
+                            <label class="inputs-group__label-title" for="ex-2">label-title</label>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-        <div class="ds-wrapper">
-                <div class="ds-text">Пример модалки</div>
-
-            <div class="ds-divider">
-                <!-- Для отображения окна, присвоить класс .is-visible, блоку modal-sort__back -->
-                <div class="modal is-visible" style="position: relative">
-                    <div class="modal__wrap" style="margin: 10px">
-                        <div class="modal__btn-close"></div>
-                        <div class="modal__header">Имя окна</div>
-                        <form class="modal__form" action="">
-                            <div class="inputs-group">
-                                <input type="checkbox" id="ex-1">
-                                <label class="inputs-group__label-checkbox" for="ex-1"></label>
-                                <label class="inputs-group__label-title" for="ex-1">label-title</label>
-                            </div>
-                            <div class="inputs-group">
-                                <input type="checkbox" id="ex-2">
-                                <label class="inputs-group__label-checkbox" for="ex-2"></label>
-                                <label class="inputs-group__label-title" for="ex-2">label-title</label>
-                            </div>
-                        </form>
-                    </div>
-                </div>    
-            </div>
-            <div class="ds-code-wrapper">
-                <script type="text/plain" class="language-markup">
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
                     <div class="modal">
                         <div class="modal__wrap">
                                 <div class="modal__btn-close"></div>
@@ -121,13 +122,98 @@
                         </div>
                     </div>            
                 </script>
-            </div>
         </div>
+    </div>
+
+    <div class="ds-wrapper">
+        <div class="ds-divider">
+            <div class="item-modal 768">
+                <div class="item-modal-bg"></div>
+                <div class="item-modal-window item-modal-window_addToCart item-modal-window_error">
+                    <div class="item-modal-close"></div>
+                    <!-- /.item-modal-close -->
+                    <form class="item-contentWrapper">
+                        <div class="item-addition-row">
+                            <p class="item-addition-name">Цвет:</p>
+                            <div class="item-addition-container">
+                                <input type="radio" name="color" class="item-addition-valueInput"
+                                    id="item-addition-valueInput-21111">
+                                <label for="item-addition-valueInput-21111" class="item-addition-value">черный</label>
+                                <input type="radio" name="color" class="item-addition-valueInput"
+                                    id="item-addition-valueInput-21121">
+                                <label for="item-addition-valueInput-21121" class="item-addition-value">красный</label>
+                                <input type="radio" name="color" class="item-addition-valueInput"
+                                    id="item-addition-valueInput-21131">
+                                <label for="item-addition-valueInput-21131" class="item-addition-value">бежевый</label>
+                                <span class="item-addition-clue">Чтобы добавить товар в корзину, выберите необходимый
+                                    параметр</span>
+                            </div>
+                            <!-- /.item-addition-container -->
+                            <a href="" class="item-addition-more">Ещё <span>148 000</span> цветов...</a>
+                        </div>
+                        <div class="item-addition-row">
+                            <p class="item-addition-name">Размер:</p>
+                            <div class="item-addition-container active">
+                                <input type="radio" name="size" class="item-addition-valueInput"
+                                    id="item-addition-valueInput-11111">
+                                <label class="item-addition-value" for="item-addition-valueInput-11111">35</label>
+                                <input type="radio" name="size" class="item-addition-valueInput"
+                                    id="item-addition-valueInput-11121">
+                                <label class="item-addition-value" for="item-addition-valueInput-11121">36</label>
+                                <input type="radio" name="size" class="item-addition-valueInput"
+                                    id="item-addition-valueInput-11131">
+                                <label class="item-addition-value" for="item-addition-valueInput-11131">37</label>
+                                <input type="radio" name="size" class="item-addition-valueInput"
+                                    id="item-addition-valueInput-11141">
+                                <label class="item-addition-value" for="item-addition-valueInput-11141">38</label>
+                                <input type="radio" name="size" class="item-addition-valueInput"
+                                    id="item-addition-valueInput-11151">
+                                <label class="item-addition-value" for="item-addition-valueInput-11151">39</label>
+                                <input type="radio" name="size" class="item-addition-valueInput"
+                                    id="item-addition-valueInput-11161">
+                                <label class="item-addition-value" for="item-addition-valueInput-11161">40</label>
+                                <input type="radio" name="size" class="item-addition-valueInput"
+                                    id="item-addition-valueInput-11171">
+                                <label class="item-addition-value" for="item-addition-valueInput-11171">41</label>
+                                <span class="item-addition-clue">Чтобы добавить товар в корзину, выберите необходимый
+                                    параметр</span>
+                            </div>
+                            <!-- /.item-addition-container -->
+                            <a href="" class="item-addition-more">Ещё <span>148 000</span> размеров...</a>
+                        </div>
+                        <div class="item-addition-row">
+                            <div class="item-addition-amount">
+                                <span class="minus"></span>
+                                <input type="text" class="value" value="128">
+                                <span class="plus"></span>
+                            </div>
+                            <!-- /.item-addition-amount -->
+                            <button type="submit" class="btn btn_secondary">В корзину<i
+                                    class="sp-icon-cart"></i></button>
+                            <input type="checkbox" class="item-addition-likeInput" id="item-addition-like-3">
+                            <label for="item-addition-like-3" class="item-addition-likeLabel">
+                                <i class="sp-icon-heart"></i>
+                            </label>
+                        </div>
+                        <!-- /.item-addition-row -->
+                    </form>
+                    <!-- /.item-contentWrapper -->
+                </div>
+                <!-- /.item-modal-cart -->
+            </div>
+
+        </div>
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+
+                </script>
+        </div>
+    </div>
+
+
 
 
 
 </body>
+
 </html>
-
-
-
