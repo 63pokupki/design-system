@@ -324,9 +324,6 @@
             padding-right: 40px;                         
             overflow: hidden; //фиксирует высоту и ширину
             cursor: pointer;
-            &:active {
-                overflow: auto;
-            }
         }    
     }
 }
