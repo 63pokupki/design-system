@@ -32,4 +32,5 @@ npm publish --access public
 1. [Правила наименования](./docs/naming.md)
 1. [Стилизация](./docs/styling.md)
 1. [Как пользоваться дизайн-системой](./docs/how.md)
+1. [Как пользоваться шрифтовыми иконками](./docs/fonts-icons.md)
 1. [Работа с svg-спрайтом](./docs/svg-sprite.md)
