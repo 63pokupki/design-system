@@ -5,9 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Кнопки</title>
-    <link href="css/_highlight-syntax.css?96b79b80253ac85a0609" rel="stylesheet"><link href="css/_ds-utils.css?96b79b80253ac85a0609" rel="stylesheet"><link href="css/ds-ui-kit.css?96b79b80253ac85a0609" rel="stylesheet"></head>
+    <link href="css/highlight-syntax.css?5bf0cc83bf88ab88fc08" rel="stylesheet"><link href="css/ds-utils.css?5bf0cc83bf88ab88fc08" rel="stylesheet"><link href="css/ds-ui-kit.css?5bf0cc83bf88ab88fc08" rel="stylesheet"></head>
     <body>
         <h1 class="ds-title">Кнопки</h1>
+        <!-- Бургер -->
         <div class="ds-wrapper">
             <div class="ds-divider">
                 <button class="menu-btn">
@@ -33,5 +34,84 @@
                 </button>
             </script>
         </div>
-    <script type="text/javascript" src="js/_highlight-syntax.js?96b79b80253ac85a0609"></script><script type="text/javascript" src="js/_ds-utils.js?96b79b80253ac85a0609"></script><script type="text/javascript" src="js/categories-icons-sprite.js?96b79b80253ac85a0609"></script><script type="text/javascript" src="js/ds-ui-kit.js?96b79b80253ac85a0609"></script></body>
+
+       <!-- Кнопка сортировки -->
+        <div class="ds-wrapper">
+            <div class="ds-text">Если выбрана позиция (в модальном окне например), присвоить класс <span class="ds-hl">.is-selected</span>  контейнеру <span class="ds-hl">container-sorting</span>.</div>
+            <div class="ds-divider">
+                <div class="container-sorting">
+                    <div class="btn-sorting">
+                        <div class="btn-sorting__filter-name">Сортировка по:</div>
+                        <span class="btn-sorting__selected-position">Позиция 1 на десктопе</span>
+                    </div>
+                    <span class="btn-sorting__selected-position_mobile">Позиция 1 на мобильных устройствах</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <div class="container-sorting">
+                    <div class="btn-sorting">
+                        <div class="btn-sorting__filter-name">Сортировка по:</div>
+                        <span class="btn-sorting__selected-position">Позиция 1 на десктопе</span>
+                    </div>
+                    <span class="btn-sorting__selected-position_mobile">Позиция 1 на мобильных устройствах</span>
+                </div>            
+            </script>
+        </div>
+
+        <!-- Кнопка влево/вправо DESK-->
+        <div class="ds-wrapper">
+            <div class="ds-text">Кнопка влево/вправо десктоп</div>
+            <div class="ds-divider" style="background: grey; width: 44px">
+                <div class="arrow-02"></div>
+            </div>
+        </div>
+
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <div class="arrow-02"></div>
+            </script>
+        </div>
+
+        <!-- Кнопка влево/вправо Mobile-->
+        <div class="ds-wrapper">
+            <div class="ds-text">Кнопка влево/вправо мобильные устройства</div>
+            <div class="ds-divider">
+                <div class="arrow-02-mobile"></div>            
+            </div>
+        </div>        
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <div class="arrow-02-mobile"></div>            
+            </script>
+        </div>
+        
+        <!-- Переключатель состояния -->
+        <div class="ds-wrapper">
+            <div class="condition-switcher">
+                <div class="condition-switcher__container">
+                    <input class="condition-switcher__input" type="checkbox" name="" id="condition-switcher">
+                    <label class="condition-switcher__wrap-btn" for="condition-switcher">
+                    </label>
+                    <label for="condition-switcher" class="condition-switcher__btn"></label>
+                </div>
+            </div>
+        </div>
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <div class="condition-switcher">
+                    <div class="condition-switcher__container">
+                        <input class="condition-switcher__input" type="checkbox" name="" id="condition-switcher">
+                        <label class="condition-switcher__wrap-btn" for="condition-switcher">
+                        </label>
+                        <div class="condition-switcher__btn"></div>
+                    </div>
+                </div>
+            </script>            
+        </div>
+
+
+    <script type="text/javascript" src="js/highlight-syntax.js?5bf0cc83bf88ab88fc08"></script><script type="text/javascript" src="js/ds-utils.js?5bf0cc83bf88ab88fc08"></script><script type="text/javascript" src="js/categories-icons-sprite.js?5bf0cc83bf88ab88fc08"></script><script type="text/javascript" src="js/ds-ui-kit.js?5bf0cc83bf88ab88fc08"></script></body>
 </html>
