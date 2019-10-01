@@ -1,36 +1,39 @@
 .switcher {
     display: inline-flex;
-}
-input {
-    display: none;
-}
-input:checked ~ .switcher__label:after {
-    transform: translateX(12px);
-    transition: transform .3s;
-}
-input:checked ~ .switcher__label {
-    background: #318CCA;
-    transition: all .3s;
-}
-.switcher__label {
-    display: inline-flex;
-    align-items: baseline;
-    width: 28px;
-    padding: 2px;
-    background: #BAB9B9;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all .3s;
-}
-.switcher__label:after {
-    content: "";
-    display: inline-flex;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #fff;
-    border: 1px solid transparent;
-    cursor: pointer;
-    transform: translateX(0px);
-    transition: transform .3s;
+    
+    &__checkbox {
+        display: none;
+    }
+    &__checkbox:checked ~ .switcher__label:after {
+        transform: translateX(12px);
+        transition: transform .3s;
+    }
+    &__checkbox:checked ~ .switcher__label {
+        background: #318CCA;
+        transition: background-color .3s;
+    }
+    //Обёртка кнопки
+    &__label {
+        display: inline-flex;
+        align-items: baseline;
+        width: 28px;
+        padding: 2px;
+        background-color: #BAB9B9;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all .3s;
+    }
+    //Кнопка
+    &__label:after {
+        content: "";
+        display: inline-flex;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #fff;
+        border: 1px solid transparent;
+        cursor: pointer;
+        transform: translateX(0px);
+        transition: transform .3s;
+    }
 }
