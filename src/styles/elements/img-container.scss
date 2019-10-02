@@ -2,13 +2,47 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 500px;
-    min-width: 300px;
-    max-height: 300px;
-    min-height: 100px;
+    //Опции: Изменение размера в зависимости от экрана или потребностей
+    //Резиновый
+    &_resp {
+        width: 100%;
+    }
+    //Для очень больших экранов
+    &_extra-large {
+        max-width: 1000px;
+        min-width: 300px;
+        max-height: 500px;
+        min-height: 100px;
+    }
+    //Для больших
+    &_large {
+        max-width: 500px;
+        min-width: 300px;
+        max-height: 300px;
+        min-height: 100px;
+    }
+    //Для средних
+    &_middle {
+        max-width: 250px;
+        min-width: 150px;
+        max-height: 150px;
+        min-height: 50px;
+    }
+    //Для маленьких
+    &_small {
+        max-width: 100px;
+        min-width: 50px;
+        max-height: 50px;
+        min-height: 25px;
+    }
+    &_extra-large, &_large, &_middle, &_small, &_resp {
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
     img {
-        max-width: 100%;
-        height: auto;
+        display: none;
     }
 }
 
