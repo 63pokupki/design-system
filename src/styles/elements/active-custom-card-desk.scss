@@ -47,7 +47,6 @@
         max-height: 1000px; 
         visibility: visible;
         opacity: 1;
-        margin-top: 15px;
         transition: max-height .8s;
  
     }
@@ -223,15 +222,16 @@
         display: flex;
         // height: 0;
         max-height: 0;
+        margin-top: 15px;
         visibility: hidden;
         opacity: 0;
         transition: max-height .3s;
     }
-    &__toggle-block div {
-        visibility: hidden;
-        opacity: 0;
-        transition: max-height .3s;
-    }
+    // &__toggle-block div {
+    //     visibility: hidden;
+    //     opacity: 0;
+    //     transition: max-height .3s;
+    // }
     &__toggle-left {
         display: flex;
         justify-content: center;
@@ -240,12 +240,6 @@
         width: 100%;
         max-height: 220px;
     }
-    &__toggle-block div { 
-        // max-height: 0;       
-        visibility: hidden;
-        opacity: 0;
-        transition: max-height .3;
-    }     
     &__img-wrap {
         display: flex;
         justify-content: center;
