@@ -17,7 +17,8 @@ module.exports.templates = function templates(templateDirectoryArray = ["src/sec
             templates.push(
                 new HtmlWebpackPlugin({
                     filename: `${name}.html`,
-                    template: path.resolve(__dirname, `${dir}/${name}.${extension}`)
+                    template: path.resolve(__dirname, `${dir}/${name}.${extension}`),
+                    favicon: path.resolve(__dirname, "favicon.ico")
                 })
             );
         });
