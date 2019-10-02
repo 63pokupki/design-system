@@ -50,17 +50,16 @@
         transition: max-height .8s;
  
     }
-    .card-active-custom__toggle-block div { 
-        visibility: visible;
-        opacity: 1; 
-        transition: .5s;       
-    }
-    .card-active-custom__arrow-wrap {
-        transform: rotate(90deg);
-        transition: .3s;
-    }
+    // .card-active-custom__toggle-block div { 
+    //     visibility: visible;
+    //     opacity: 1; 
+    //     transition: .5s;       
+    // }
     .btn-toggle {
-        transform: rotate(90deg);            
+        .arrow {
+            transform: rotate(270deg);
+            transition: transform .3s;
+        }
 
     }
 }
@@ -83,10 +82,10 @@
             border: none;
             background: transparent;
             cursor: pointer;
-            appearance: none;
-            transform: rotate(270deg);            
-            transition: .3s;
-            .arrow {               
+            appearance: none; 
+            .arrow { 
+                transform: rotate(90deg);
+                transition: .3s;              
                 background: transparent;
                 &:after, &:before {
                     background: $light-gray-color;
