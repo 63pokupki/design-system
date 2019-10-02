@@ -6,6 +6,11 @@ body {
     padding: 0;
 }
 
+h1, h2, h3, h4, h5 {
+    margin-block-start: 2em;
+    margin-block-end: 2em;
+}
+
 .ds-title {
     width: 100%;
     text-align: center;
@@ -27,9 +32,9 @@ body {
 
 .ds-code-wrapper {
     max-width: 1300px;
-    margin: 20px auto;
-    border-radius: 5px;
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4);
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.5);
 }
 
 .ds-divider {
@@ -78,4 +83,5 @@ pre[class*=language-] {
     padding: 2rem !important;
     font-size: 1rem !important;
     background: #171717 !important;
+    border-radius: 10px !important;
 }
