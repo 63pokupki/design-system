@@ -1,17 +1,15 @@
-// @media (min-width: 1075px) {
-//     .tablet {
-//         display: none;
-//     }
-// }
-// @media (max-width: 768px) {
-//     .tablet {
-//         display: none;
-//     }
-// }
-// @media (max-width: 1075px) {
 .card-active-custom__wrap {
     &.tablet {
         min-width: 768px;
+
+        &.is-toggle {
+            .card-active-custom__toggle-block {
+                max-height: 1000px;
+                visibility: visible;
+                opacity: 1;
+                transition: max-height .3s;
+            }
+        }
 
         .card-active-custom__header {
             position: relative;
@@ -117,22 +115,6 @@
             }
         }
 
-        // .card-active-custom__ds-statusbar {
-        //     flex-direction: row;
-        //     align-items: center;
-        //     width: 100%;
-        //     margin: 10px 0 20px 0;
-
-        //     .ds-statusbar {
-        //         width: 50%;
-        //         height: 25px;
-        //     }
-
-        //     .like-icon {
-        //         margin: 0 7px;
-        //     }
-        // }
-
         //Правый блок шапки
         .card-active-custom__header-right-block {
             display: flex;
@@ -206,30 +188,6 @@
         }
 
         //Выпадающий блок
-        .card-active-custom__toggle-left {
-            min-width: 350px;
-            max-height: 220px;
-        }
-
-        .card-active-custom__description {
-            min-width: 330px;
-        }
-
-        .card-active-custom__img-wrap {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            max-width: 350px;
-
-            img {
-                max-width: 100%;
-                max-height: 100%;
-                width: auto;
-                height: 100%;
-            }
-        }
-
         .card-active-custom__toggle-block {
             display: flex;
             max-height: 0;
@@ -298,6 +256,105 @@
                 }
             }
         }
+        .card-active-custom__hashtags {
+            display: flex;
+            width: 100%;
+            justify-content: flex-start;
+
+            a {
+                margin-right: 15px;
+                color: $color-primary;
+                font-weight: 600;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            &.hidden {
+                display: none;
+            }
+        }
+        .card-active-custom__description-status {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 37px;
+        }
+        .card-active-custom__delivery-date,
+        .card-active-custom__access-lvl,
+        .card-active-custom__payment-method,
+        .card-active-custom__comments {
+            display: flex;
+            flex-direction: column;
+            margin-right: 35px;
+
+            p {
+                font-size: 11px;
+                font-weight: 600;
+                margin-bottom: 2px;
+            }
+
+            span {
+                font-size: 12px;
+                color: $dark-grey-color;
+            }
+
+            a {
+                color: $color-primary;
+            }
+        }
+        .card-active-custom__description-txt {
+            display: flex;
+            max-height: 40px;
+            height: auto;
+            font-Size: 12px;
+            line-height: 16px;
+            text-align: left;
+
+            //Класс is-toggle открывает полное описание по клику
+            &.is-toggle {
+                max-height: 200px;
+            }
+
+            p {
+                padding-right: 40px;
+                overflow: hidden; //фиксирует высоту и ширину
+                cursor: pointer;
+            }
+        }
+
+
+        .card-active-custom__toggle-left {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            min-width: 350px;
+            max-height: 220px;
+        }
+
+        .card-active-custom__description {
+            min-width: 330px;
+        }
+
+        .card-active-custom__img-wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 350px;
+            height: 100%;
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                width: auto;
+                height: 100%;
+            }
+        }
+
     }
 }
 
