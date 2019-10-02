@@ -7,6 +7,11 @@
 	// height: 55px;
 	height: auto;
 	background: #edf5fa;
+	&.no-btn {
+		.btn-l, .btn-r {
+			display: none;
+		}
+	}
 	.btn-l, .btn-r {
 		display: flex;
 		width: 25px;
