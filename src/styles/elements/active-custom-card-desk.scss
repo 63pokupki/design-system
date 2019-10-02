@@ -64,7 +64,7 @@
     }
     .organizer-block__rating {
         .rating {
-            visibility: visible;
+            display: flex;
         }
     }
 }
@@ -183,11 +183,10 @@
             align-items: flex-start;
         }
     }
-    &__ds-statusbar {
+    &__statusbar {
         display: flex;
         flex-direction: column;
-        margin-right: 30px;
-        // min-width: 195px;        
+        margin-right: 45px;
         p {
             font-style: normal;
             font-size: 11px;
@@ -221,7 +220,7 @@
     }
     &__organizer-block {
         .rating {
-            visibility: hidden;
+            display: none;
         }
     }    
 }
