@@ -157,7 +157,8 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             filename: "index.html",
-            template: "index.html"
+            template: "index.html",
+            favicon: path.resolve(__dirname, "favicon.ico")
         })
     ].concat(templates()),
     optimization: {
