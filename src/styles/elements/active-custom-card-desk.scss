@@ -62,6 +62,11 @@
         }
 
     }
+    .organizer-block__rating {
+        .rating {
+            visibility: visible;
+        }
+    }
 }
 // Шапка карточки__левый блок
 .card-active-custom {
@@ -212,6 +217,11 @@
     &__like {
         .icon-like {
            stroke-width: 2; 
+        }
+    }
+    &__organizer-block {
+        .rating {
+            visibility: hidden;
         }
     }    
 }
