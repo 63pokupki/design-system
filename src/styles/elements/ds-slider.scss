@@ -3,6 +3,7 @@
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
+	min-width: 280px;
 	height: 55px;
 	background: #edf5fa;
 	.btn-l, .btn-r {
@@ -36,7 +37,7 @@
 	.slider-wrap {
 		display: flex;
 		flex-direction: row;
-		max-width: 400px;
+		// max-width: 400px;
 		transform: translateX(-20px);
 		transition: transform .3s ease;
 		.slider-items {
