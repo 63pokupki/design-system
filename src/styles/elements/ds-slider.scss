@@ -4,7 +4,6 @@
 	justify-content: space-between;
 	width: 100%;
 	min-width: 280px;
-	// height: 55px;
 	height: auto;
 	background: #edf5fa;
 	&.no-btn {
@@ -47,6 +46,7 @@
 		// max-width: 400px;
 		transform: translateX(-20px);
 		transition: transform .3s ease;
+		margin-bottom: 10px;
 		.slider-items {
 			display: flex;
 			flex-direction: row;

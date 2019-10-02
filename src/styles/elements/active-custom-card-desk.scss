@@ -15,23 +15,25 @@
 
     //ОТображает изображения в подкатергориях
     &.desktop-subcat {
-        .card-active-custom__img-subcategory {
-            display: flex;
-            min-width: 152px;
-        }
-
-        .card-active-custom__img-wrap {
-            width: 100%;
-            max-width: 544px;
-        }
-
-        .card-active-custom__img-desktop {
-            display: none;
-        }
-
-        .card-active-custom__description {
-            .suitable-catalogs {
+        &.desktop {
+            .card-active-custom__img-subcategory {
                 display: flex;
+                min-width: 152px;
+            }
+    
+            .card-active-custom__img-wrap {
+                width: 100%;
+                max-width: 544px;
+            }
+    
+            .card-active-custom__img-desktop {
+                display: none;
+            }
+    
+            .card-active-custom__description {
+                .suitable-catalogs {
+                    display: flex;
+                }
             }
         }
     }
