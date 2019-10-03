@@ -2,25 +2,42 @@
     display: inline-flex;
     justify-content: flex-start;
     align-items: center;
+    width: 100%;
     height: 18px;
     border: 1px solid $color-primary;
     border-radius: 15px;
     font-size: 10px;
+    font-weight: 600;
     color: $statusbar_empty-color-txt;  
     &__line {
         @extend .statusbar;
+        height: 100%;   
         padding-left: 7px;
         background: $color-primary;        
         span {
             margin: 0 3px;
         }
     }
+    &_middle {
+        height: 25px;
+        .statusbar {
+            font-size: 12px;
+        }
+
+    }
+    &_large {
+        height: 30px;
+        .statusbar {
+            font-size: 14px;
+        }
+
+    }
 }
 .statusbar.is-filled {
     background: $statusbar_filled-color-bg;
     border: none;
     color: $statusbar-color-txt;
-    .statusbar__line {
+    .statusbar__line { 
         color: #fff;
         transition: width .3s;
     }

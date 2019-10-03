@@ -77,10 +77,11 @@ $main-padding-modal: 20px;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        width: 265px;
-        // height: 310px;
+        max-width: 90vw;
+        max-height: 90vh;
         background: #fff;
         padding: $main-padding-modal;
+        overflow: auto;
         .modal__btn-close {
             position: absolute;
             display: flex;
@@ -151,7 +152,12 @@ $main-padding-modal: 20px;
         button {
             max-width: 180px;
             cursor: pointer;
-        }  
+        }
+          
+    }
+    &__content {
+        display: flex;
+        overflow-y: auto;
     }   
 
 }

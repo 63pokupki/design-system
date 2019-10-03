@@ -1,107 +1,234 @@
-@media (min-width: 1075px) {
-    .tablet {
-        display: none;
-    }
-}
-@media (max-width: 768px) {
-    .tablet {
-        display: none;
-    }
-}
-@media (max-width: 1075px) {
-    .tablet {
+@import "variables.scss";
+.card-active-custom__wrap {
+    &.tablet {
         min-width: 768px;
-        .card-active-custom__header {
-            .btn-toggle-wrap {
-                min-width: 30px;
+
+        &.is-toggle {
+            .card-active-custom__toggle-block {
+                max-height: 1000px;
+                visibility: visible;
+                opacity: 1;
+                transition: max-height .3s;
             }
-            .btn-toggle {
-                top: 80px;
+            .organizer-block__rating {
+                visibility: visible;
+            }
+            .card-active-custom__header {
+                .btn-toggle {
+                    .arrow {
+                        transform: rotate(270deg);
+                        transition: transform .3s;
+                    }
+                }
             }
         }
+
+        .card-active-custom__header {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            .btn-toggle {
+                position: absolute;
+                right: -30px;
+                top: 50px;
+                padding-right: 15px;
+                border: none;
+                background: transparent;
+                cursor: pointer;
+                appearance: none;
+                .arrow {
+                    transform: rotate(90deg);
+                    transition: transform .3s;
+                    background: transparent;
+
+                    &:after,
+                    &:before {
+                        background: $light-gray-color;
+                    }
+
+                    &:hover {
+
+                        &:after,
+                        &:before {
+                            background: $color-primary;
+                        }
+                    }
+                }
+            }
+        }
+
+        .card-active-custom__heading {
+            display: flex;
+            align-items: flex-start;
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 19px;
+
+            a {
+                color: $dark-brown-color;
+                text-decoration: none;
+
+                &:visited {
+                    color: #906;
+                }
+            }
+
+            .rating {
+                margin-left: 10px;
+            }
+
+            .rating-icon {
+                width: 15px;
+                height: 15px;
+            }
+
+            .rating-value {
+                font-size: 16px;
+            }
+
+        }
+
+
         //Левый блок шапки
         .card-active-custom__header-left-block {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 545px;
             min-width: 460px;
-            .rating {
-                margin-bottom: 15px;
+            margin-right: 33px;
+        }
+        .card-active-custom__collection {
+            display: flex;
+            margin: 5px 0;
+        }
+        .card-active-custom__collection.start {
+            .purchaseStatus-icon {
+                stroke: #0DC53D;
             }
-            .card-active-custom__ds-statusbar {
-                flex-direction: row;
-                align-items: center;
-                width: 100%;
-                margin: 10px 0 20px 0;
-                .ds-statusbar {
-                    width: 50%;
-                    height: 25px;
-                }
-                .like-icon {
-                    margin: 0 7px;
-                }
+
+            .purchaseStatus_soon {
+                color: #0DC53D;
             }
         }
+
+        .card-active-custom__collection.stop {
+            .purchaseStatus-icon {
+                stroke: #ff8000;
+
+            }
+
+            .purchaseStatus_soon {
+                color: #ff8000;
+            }
+        }
+
         //Правый блок шапки
         .card-active-custom__header-right-block {
+            display: flex;
+            flex-direction: column;
             padding-left: 5%;
+            margin-right: 20px;
+
             .card-active-custom__status-block {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;    
                 flex-direction: row;
                 justify-content: flex-start;
                 align-items: baseline;
+                .like {
+                    display: flex;
+                    align-items: flex-start;
+                }    
+
                 p {
-                    margin: 0 5px 0 0;                     
-                    font-size: 12px;
-                    
+                    margin: 0 5px 0 0;
+                    font-size: 11px;                    
                 }
-            }           
+            }
+            
+            
         }
-        .card-active-custom__purchase-block {
-            font-size: 12px;
+        .organizer-block__rating {
+            visibility: hidden;
+        }
+        .card-active-custom__statusbar {
+            display: inline-flex;
+            width: 100%;
+            max-width: 270px;
+            margin-right: 45px;
+            .statusbar {
+                margin-right: 10px;
+            }
+
             p {
-                margin-top: 0;
+                font-style: normal;
+                font-size: 11px;
+                line-height: 15px;
+
+                span {
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .card-active-custom__purchase-block {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 10px 0;
+            font-size: 10px;
+
+            p {
+                margin: 0 0 0 5px;
                 color: $dark-grey-color;
             }
+
             span {
+                color: $dark-brown-color;
                 font-weight: 600;
+            }
+        }
+        .card-active-custom__like {
+            .icon-like {
+                stroke-width: 2;
             }
         }
 
         //Выпадающий блок
-        .card-active-custom__toggle-left {
-            min-width: 350px;
-            max-height: 220px;
-        }
-        .card-active-custom__description {
-            min-width: 330px;
-        }
-        .card-active-custom__img-wrap {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            max-width: 350px;
-            img {
-                max-width: 100%;
-                max-height: 100%;
-                width: auto;
-                height: 100%;
-            }
-        }
         .card-active-custom__toggle-block {
+            display: flex;
+            max-height: 0;
+            margin-top: 15px;
+            visibility: hidden;
+            opacity: 0;
+            transition: max-height .3s;
 
             .card-active-custom__access-lvl {
                 display: none;
             }
+
             .card-active-custom__comments {
                 margin-right: 10px;
             }
+
             //Подкатегории
             .card-active-custom__img-subcategory {
-                // display: none;
+                display: flex;
                 position: relative;
                 max-width: 152px;
                 max-height: 152px;
                 margin-right: 20px;
+
                 .hover-translucend {
-                    display: flex;            
+                    display: flex;
                     flex-direction: row;
                     justify-content: space-between;
                     align-items: center;
@@ -114,32 +241,149 @@
                     height: 45px;
                     background: rgba(255, 255, 255, 0.8);
                     transition: .4s;
-                    cursor: pointer;                   
+                    visibility: visible;
+                    cursor: pointer;
+
                     p {
                         visibility: visible;
                         margin: 0;
                         font-size: 12px;
                         font-weight: normal;
                         line-height: 14px;
-                        text-align: center;                                        
+                        text-align: center;
                     }
+
                     p:nth-child(1) {
                         max-width: 50%;
-                    }        
+                    }
                 }
+
                 img {
                     width: auto;
                 }
-        
+
             }
+
             //Слайдер
             .ds-slider {
                 .slider-wrap {
                     max-width: 305px;
                 }
-            }     
+            }
+        }
+        .card-active-custom__hashtags {
+            display: flex;
+            width: 100%;
+            justify-content: flex-start;
+
+            a {
+                margin-right: 15px;
+                color: $color-primary;
+                font-size: 12px;
+                font-weight: 700;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            &.hidden {
+                display: none;
+            }
+        }
+        .card-active-custom__description-status {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 37px;
+            
+        }
+        .card-active-custom__delivery-date,
+        .card-active-custom__access-lvl,
+        .card-active-custom__payment-method,
+        .card-active-custom__comments {
+            display: flex;
+            flex-direction: column;
+            margin-right: 35px;
+
+            p {
+                font-size: 11px;
+                font-weight: 600;
+                margin-bottom: 2px;
+                color: $dark-brown-color;
+            }
+
+            span {
+                font-size: 12px;
+                color: $dark-grey-color;
+            }
+
+            a {
+                color: $color-primary;
+                span {
+                    color: $color-primary;
+                }
+            }
+        }
+        .card-active-custom__description-txt {
+            display: flex;
+            max-height: 40px;
+            height: auto;
+            font-Size: 12px;
+            line-height: 16px;
+            text-align: left;            
+
+            //Класс is-toggle открывает полное описание по клику
+            &.is-toggle {
+                max-height: 200px;
+                p {
+                    white-space: normal;
+                }
+
+            }
+
+            p {
+                padding-right: 40px;
+                overflow: hidden; //фиксирует высоту и ширину
+                cursor: pointer;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                transition: all .3s;
+            }
         }
 
-    }//tablet
-}//media
+
+        .card-active-custom__toggle-left {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            min-width: 350px;
+            max-height: 220px;
+        }
+
+        .card-active-custom__description {
+            min-width: 330px;
+            max-width: 650px;
+        }
+
+        .card-active-custom__img-wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 350px;
+            height: 100%;
+
+            // img {
+            //     max-width: 100%;
+            //     max-height: 100%;
+            //     width: auto;
+            //     height: 100%;
+            // }
+        }
+
+    }
+}
 
