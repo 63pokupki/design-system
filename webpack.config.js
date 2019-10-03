@@ -13,7 +13,6 @@ module.exports = {
         path: path.join(__dirname, "build/"), //общий путь для выходных файлов
         filename: "js/[name].js?[hash]" //в этом параметре мы индивидуально добавляем необходимую директорию перед именем файлов
     },
-    watch: true, //Слежение за изменениями
     watchOptions: {
         ignored: /node_modules/, //исключения в слежении
         poll: 500 //интервал обновления

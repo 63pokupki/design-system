@@ -1,17 +1,16 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
 const entry = require('./entry.js');
-
-const { templates } = require('./util.js');
 
 module.exports = {
     mode: "production", //режим сборки
-    entry: entry, //объект с точками входа
+    entry: {
+        "ds-ui-kit" : entry["ds-ui-kit"],
+        "categories-icons-sprite" : entry["categories-icons-sprite"]
+    }, //объект с точками входа
     output: {
-        path: path.join(__dirname, "public/"), //общий путь для выходных файлов
-        filename: "js/[name].js?[hash]" //в этом параметре мы индивидуально добавляем необходимую директорию перед именем файлов
+        path: path.join(__dirname, "dist/"), //общий путь для выходных файлов
+        filename: "js/[name].js" //в этом параметре мы индивидуально добавляем необходимую директорию перед именем файлов
     },
     watch: false, //Слежение за изменениями
     devtool: "source-map", //Инструменты разработчика
@@ -121,15 +120,6 @@ module.exports = {
                 }
             },
             {
-                test: /favicon\.ico/,
-                use: {
-                    loader: "file",
-                    options: {
-                        name: "favicon.ico"
-                    }
-                }
-            },
-            {
                 test: /fonts\/.*\.(woff|woff2|eot|ttf|svg)$/,
                 use: {
                     loader: "file",
@@ -149,14 +139,9 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: "css/[name].css?[hash]"
-        }),
-        new HtmlWebpackPlugin({
-            filename: "index.html",
-            template: "index.html",
-            favicon: path.resolve(__dirname, "favicon.ico")
-        })
-    ].concat(templates()),
+            filename: "css/[name].css"
+        }) 
+    ],
     optimization: {
         //настройки оптимизации и минификации
         flagIncludedChunks: true,

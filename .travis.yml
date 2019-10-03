@@ -1,12 +1,12 @@
 language: node_js
 node_js:
-  - 10.15.2
+  - 10.15.3
 script: npm run build
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GH_PAGES
-  local_dir: public
+  local_dir: build
   keep_history: true
   on:
     branch: master

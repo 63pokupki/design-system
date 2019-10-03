@@ -4,9 +4,10 @@
   "description": "UI component kit and design-system for 63 Pokupki project",
   "main": "dist/css/ds-ui-kit.css",
   "scripts": {
-    "live": "webpack-dev-server --config webpack.config.js",
-    "build": "webpack --config webpack.config.build.js && webpack --config webpack.config.deploy.js",
-    "test": "echo Nothing but wanted"
+    "live": "webpack-dev-server --config webpack.config.js -w",
+    "build": "webpack --config webpack.config.js",
+    "dist": "webpack --config webpack.config.dist.js",
+    "test": "echo Nothing"
   },
   "homepage": "https://github.com/63pokupki/design-system",
   "repository": {
