@@ -1,3 +1,4 @@
+@import "variables.scss";
 .card-active-custom__wrap {
     &.tablet {
         min-width: 768px;
@@ -8,6 +9,9 @@
                 visibility: visible;
                 opacity: 1;
                 transition: max-height .3s;
+            }
+            .organizer-block__rating {
+                visibility: visible;
             }
         }
 
@@ -20,7 +24,7 @@
             .btn-toggle {
                 position: absolute;
                 right: -30px;
-                top: 80px;
+                top: 50px;
                 padding-right: 15px;
                 border: none;
                 background: transparent;
@@ -57,7 +61,7 @@
             line-height: 19px;
 
             a {
-                color: #000;
+                color: $dark-brown-color;
                 text-decoration: none;
 
                 &:visited {
@@ -121,6 +125,7 @@
             display: flex;
             flex-direction: column;
             padding-left: 5%;
+            margin-right: 20px;
 
             .card-active-custom__status-block {
                 display: flex;
@@ -137,12 +142,14 @@
 
                 p {
                     margin: 0 5px 0 0;
-                    font-size: 12px;
-
+                    font-size: 11px;                    
                 }
             }
             
             
+        }
+        .organizer-block__rating {
+            visibility: hidden;
         }
         .card-active-custom__statusbar {
             display: inline-flex;
@@ -169,14 +176,15 @@
             flex-direction: row;
             align-items: center;
             margin: 10px 0;
-            font-size: 12px;
+            font-size: 10px;
 
             p {
-                margin: 0 0 0 10px;
+                margin: 0 0 0 5px;
                 color: $dark-grey-color;
             }
 
             span {
+                color: $dark-brown-color;
                 font-weight: 600;
             }
         }
@@ -263,7 +271,8 @@
             a {
                 margin-right: 15px;
                 color: $color-primary;
-                font-weight: 600;
+                font-size: 12px;
+                font-weight: 700;
                 text-decoration: none;
 
                 &:hover {
@@ -279,6 +288,7 @@
             display: flex;
             justify-content: space-between;
             margin-top: 37px;
+            
         }
         .card-active-custom__delivery-date,
         .card-active-custom__access-lvl,
@@ -292,6 +302,7 @@
                 font-size: 11px;
                 font-weight: 600;
                 margin-bottom: 2px;
+                color: $dark-brown-color;
             }
 
             span {
@@ -301,6 +312,9 @@
 
             a {
                 color: $color-primary;
+                span {
+                    color: $color-primary;
+                }
             }
         }
         .card-active-custom__description-txt {
@@ -309,17 +323,24 @@
             height: auto;
             font-Size: 12px;
             line-height: 16px;
-            text-align: left;
+            text-align: left;            
 
             //Класс is-toggle открывает полное описание по клику
             &.is-toggle {
                 max-height: 200px;
+                p {
+                    white-space: normal;
+                }
+
             }
 
             p {
                 padding-right: 40px;
                 overflow: hidden; //фиксирует высоту и ширину
                 cursor: pointer;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                transition: all .3s;
             }
         }
 
@@ -336,6 +357,7 @@
 
         .card-active-custom__description {
             min-width: 330px;
+            max-width: 650px;
         }
 
         .card-active-custom__img-wrap {
@@ -346,15 +368,14 @@
             max-width: 350px;
             height: 100%;
 
-            img {
-                max-width: 100%;
-                max-height: 100%;
-                width: auto;
-                height: 100%;
-            }
+            // img {
+            //     max-width: 100%;
+            //     max-height: 100%;
+            //     width: auto;
+            //     height: 100%;
+            // }
         }
 
     }
 }
 
-// }

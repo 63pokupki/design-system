@@ -7,7 +7,7 @@
             margin-bottom: 5px;
         }
         &__name {
-           font-size: 12px;
+           font-size: 11px;
            line-height: 17px;
            text-align: justify;
            color: $org-name-color;
@@ -21,6 +21,9 @@
                text-decoration: none;
                &:visited {
                    color: #990066;
+               }
+               p {
+                  font-weight: 700;
                }
            }
            p {
