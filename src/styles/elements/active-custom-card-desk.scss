@@ -34,20 +34,12 @@
                 .suitable-catalogs {
                     display: flex;
                 }
+                .slider {
+                    display: flex;
+                }
             }
         }
     }
-
-    &.tablet-subcat {
-        .card-active-custom__img-subcategory {
-            display: flex;
-        }
-
-        .card-active-custom__img-tablet {
-            display: none;
-        }
-    }
-
 }
 
 .card-active-custom__wrap.is-toggle {
@@ -72,6 +64,10 @@
             .organizer-block__rating {
                 .rating {
                     display: flex;
+                    .rating-value {
+                        margin-bottom: 4px;
+                        margin-right: 5px;
+                    }
                 }
             }
         }
@@ -96,7 +92,6 @@
                 position: absolute;
                 right: 0;
                 top: -15px;
-                padding-right: 15px;
                 border: none;
                 background: transparent;
                 cursor: pointer;
@@ -130,7 +125,7 @@
             align-items: flex-start;
             width: 545px;
             min-width: 545px;
-            margin-right: 33px;
+            // margin-right: 33px;
 
             &.subcategory {
                 margin-right: 0;
@@ -223,6 +218,7 @@
             flex-direction: column;
             align-items: center;
             width: 190px;
+            margin-bottom: 10px;
 
             p {
                 font-style: normal;
@@ -246,6 +242,7 @@
                 color: $dark-grey-color;
                 margin: 0 0 0 5px;
                 white-space: nowrap;
+                color: $dark-brown-color;
             }
 
             span {
@@ -262,8 +259,21 @@
         }
 
         .card-active-custom__organizer-block {
+            display: flex;
+            flex-direction: column;
             margin-bottom: 10px;
             .rating {
+                display: none;
+            }
+        }
+        @media (max-width: 1148px) {
+            .card-active-custom__organizer-block {
+                flex-direction: row-reverse;
+                p {
+                    margin-right: 5px;
+                }               
+            }
+            .card-active-custom__access-lvl {
                 display: none;
             }
         }
@@ -289,6 +299,7 @@
             align-items: center;
             position: relative;
             width: 100%;
+            min-width: 545px;
             max-height: 220px;
         }
 
@@ -302,12 +313,12 @@
             // max-height: 152px;
             height: 100%;
 
-            img {
-                max-width: 100%;
-                max-height: 100%;
-                width: auto;
-                height: 100%;
-            }
+            // img {
+            //     max-width: 100%;
+            //     max-height: 100%;
+            //     width: auto;
+            //     height: 100%;
+            // }
         }
 
         .card-active-custom__description {
@@ -317,9 +328,9 @@
             max-width: 100%;
             padding-right: 30px;
             overflow: hidden;
-            // .slider .slider-wrap {
-            //     max-width: 350px;
-            // }
+            .slider  {
+                display: none;
+            }
 
         }
 
@@ -331,7 +342,7 @@
             a {
                 margin-right: 15px;
                 color: $color-primary;
-                font-weight: 600;
+                font-weight: 700;
                 text-decoration: none;
 
                 &:hover {
@@ -362,6 +373,7 @@
                 font-size: 11px;
                 font-weight: 600;
                 margin-bottom: 2px;
+                color: $dark-brown-color;
             }
 
             span {
@@ -371,6 +383,9 @@
 
             a {
                 color: $color-primary;
+                span {
+                    color: $color-primary;
+                }
             }
         }
 
@@ -391,6 +406,10 @@
                 padding-right: 40px;
                 overflow: hidden; //фиксирует высоту и ширину
                 cursor: pointer;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                transition: all .3s;
+
             }
         }
     }
@@ -442,10 +461,12 @@
                     visibility: hidden;
                 }
 
-                &:hover {
+            }
+            &:hover { 
+                .hover-translucend {
                     visibility: visible;
                     background: rgba(255, 255, 255, 0.8);
-
+    
                     p {
                         visibility: visible;
                     }
