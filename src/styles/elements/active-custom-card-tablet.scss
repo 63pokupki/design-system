@@ -14,6 +14,7 @@
         .card-active-custom__header {
             position: relative;
             display: flex;
+            justify-content: space-between;
             width: 100%;
 
             .btn-toggle {
@@ -120,8 +121,6 @@
             display: flex;
             flex-direction: column;
             padding-left: 5%;
-            position: absolute;
-            right: 30px;
 
             .card-active-custom__status-block {
                 display: flex;
