@@ -1,4 +1,4 @@
-[![NPM version](https://img.shields.io/npm/v/@63pokupki/design-system?color=green)](https://www.npmjs.com/package/@63pokupki/design-system) [![Build Status](https://travis-ci.com/63pokupki/design-system.svg?branch=master)](https://travis-ci.com/63pokupki/design-system) ![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/63pokupki/design-system?color=blue)
+[![NPM version](https://img.shields.io/npm/v/@63pokupki/design-system?color=green)](https://www.npmjs.com/package/@63pokupki/design-system) [![Build Status](https://travis-ci.com/63pokupki/design-system.svg?branch=master)](https://travis-ci.com/63pokupki/design-system) ![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/63pokupki/design-system?color=cadetblue) ![GitHub contributors](https://img.shields.io/github/contributors/63pokupki/design-system?color=%23318cca)
 
 <p align="center">
   <a href="https://63pokupki.github.io/design-system/">
