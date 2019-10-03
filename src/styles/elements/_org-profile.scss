@@ -1,0 +1,45 @@
+// блок профиля организатора
+.org-profile {
+    display: flex;
+    align-items: center;
+
+    &__image-wrapper {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-right: 15px;
+        width: 36px;
+        height: 36px;
+        flex-shrink: 0;
+    }
+
+    &__image {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 8px;
+    }
+
+    &__rating {
+        position: absolute;
+        bottom: -3px;
+        right: -10px;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        color: #606266;
+        max-width: 125px;
+    }
+
+    &__name {
+        font-size: 12px;
+        font-weight: bold;
+        margin-bottom: 3px;
+    }
+
+    &__status {
+        font-size: 10px;
+    }
+}

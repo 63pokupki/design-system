@@ -1,0 +1,17 @@
+// звездочка с рейтингом
+.rating-star {
+    color: #ffb21c;
+    font-size: 28px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &__num {
+        position: absolute;
+        margin-top: 1px;
+        color: #510000;
+        font-weight: bold;
+        font-size: 0.35em;
+    }
+}

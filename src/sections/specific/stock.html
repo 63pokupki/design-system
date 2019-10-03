@@ -9,6 +9,88 @@
     <body>
         <h1 class="ds-title">Компоненты статичной страницы закупки</h1>
 
+        <h3 class="ds-title">Контейнер картинки закупки</h3>
+
+        <div class="ds-center">
+            <div class="stock-img-wrapper">
+                <img src="~images/banner.png" class="stock-img-wrapper__img"></img>
+            </div>
+        </div>
+
+        <h3 class="ds-title">Условия закупки</h3>
+        
+        <div class="ds-center">
+            <div class="stock-cond">
+                <div class="stock-cond__row stock-cond__heading">Условия закупки:</div>
+                <img class="stock-cond__row stock-cond__bar" src="~images/sb.png" />
+                <div class="stock-cond__row">
+                    <span class="stock-cond__name">Орг. сбор:</span>
+                    <span class="stock-cond__value">16 % (не менее 16 р.)</span>
+                    <i class="icon icon-info has-tooltip">
+                        <span class="tooltip tooltip_triangle">
+                            Что такое орг. сбор вы можете прочитать <a class="link link_hover" href="#">здесь</a>
+                        </span>
+                    </i>
+                </div>
+                <div class="stock-cond__row">
+                    <span class="stock-cond__name">Ряды:</span>
+                    <span class="stock-cond__value">Есть</span>
+                    <i class="icon icon-info has-tooltip">
+                        <span class="tooltip tooltip_triangle">
+                            Что такое ряды вы можете прочитать <a class="link link_hover" href="#">здесь</a>
+                        </span>
+                    </i>
+                </div>
+                <div class="stock-cond__row">
+                    <span class="stock-cond__name">Форма оплаты:</span>
+                    <span class="stock-cond__value">Расчетный счет</span>
+                </div>
+                <div class="stock-cond__row">
+                    <span class="stock-cond__name">Страна производитель:</span>
+                    <span class="stock-cond__value">Россия</span>
+                </div>
+                <div class="stock-cond__row">
+                    <span class="stock-cond__name">Средний срок поставки:</span>
+                    <span class="stock-cond__value">45 дней</span>
+                    <i class="icon icon-info has-tooltip">
+                        <span class="tooltip tooltip_triangle">
+                            Что такое средний срок поставки вы можете прочитать
+                            <a class="link link_hover" href="#">здесь</a>
+                        </span>
+                    </i>
+                </div>
+                <div class="stock-cond__row">
+                    <span class="stock-cond__name">Дополнит. транспортные расходы:</span>
+                    <span class="stock-cond__value"
+                        >Доставка Москва - Самара + доставка по горо-ду (груз габаритный). Примерный расчет: Доставка
+                        комплекта постельного белья в жесткой подарочной упаковке и покрывала примерно до 30 рублей,
+                        подушки - до 30 руб., одеяло - до 30 руб., крупные наборы полотенец до 20 рублей, скатерти до 10
+                        руб., небольшие наборы 3-10 руб., наборы чехлов 25 руб.</span
+                    >
+                </div>
+                <div class="stock-cond__row">
+                    <span class="stock-cond__name">Срок оплаты:</span>
+                    <span class="stock-cond__value">2 дня</span>
+                </div>
+                <div class="stock-cond__row">
+                    <span class="stock-cond__name">Откуда поедет груз:</span>
+                    <span class="stock-cond__value">Самара</span>
+                </div>
+                <br />
+                <div class="stock-cond__row">
+                    <span class="stock-cond__value"
+                        >* Общие условия проведения закупок на сайте читайте в правилах сайта</span
+                    >
+                </div>
+            </div>
+        </div>
+
+        <!--  -->
+        <!--  -->
+        <!--  -->
+        <!--  -->
+        <!--  -->
+
         <div class="ds-wrapper">
             <p>
                 Добавить модификатор <span class="ds-hl">stock-brief_disabled</span> к классу
@@ -27,20 +109,30 @@
             <div class="stock-brief">
                 <div class="stock-brief__col stock-brief__left">
                     <div class="stock-brief__row">
-                        <span class="stock-brief__tag">#SALE</span>
+                        <span class="stock-brief__tag has-tooltip"
+                            >#SALE
+                            <span class="tooltip tooltip_top tooltip_triangle tooltip_ta-c">Распродажа</span>
+                        </span>
                         <span class="stock-brief__data">21 выкуп стартовал 25 августа</span>
                     </div>
                     <div class="stock-brief__row stock-brief__row-heading">
-                        <span class="stock-brief__tag">#0 %</span>
+                        <span class="stock-brief__tag has-tooltip"
+                            >#0 %
+                            <span class="tooltip tooltip_top tooltip_triangle tooltip_ta-c">Орг. сбор 0%</span>
+                        </span>
                         <span class="stock-brief__heading"
                             >Dimma fashion studio. Распродажа. Модный бренд для мам
-                            <i class="icon icon-star rating-star stock-brief__rating">
-                                <span>4.7</span>
+                            <i class="icon icon-star rating-star stock-brief__rating has-tooltip">
+                                <span class="rating-star__num">4.7</span>
+                                <span class="tooltip tooltip_top tooltip_triangle tooltip_ta-c">Рейтинг закупки</span>
                             </i>
                         </span>
                     </div>
                     <div class="stock-brief__row">
-                        <span class="stock-brief__tag">#TOP</span>
+                        <span class="stock-brief__tag has-tooltip"
+                            >#TOP
+                            <span class="tooltip tooltip_top tooltip_triangle tooltip_ta-c">Топ-закупка</span>
+                        </span>
                         <span class="stock-status green stock-brief__status">
                             <i class="icon icon-box stock-status__icon"></i>
                             <span class="stock-status__text">Сбор с 30.05.2018</span>
@@ -54,8 +146,9 @@
                                 <a href="#">
                                     <img class="org-profile__image" src="~images/avatar.png" />
                                 </a>
-                                <i class="icon icon-star rating-star org-profile__rating">
-                                    <span>4.7</span>
+                                <i class="icon icon-star rating-star org-profile__rating has-tooltip">
+                                    <span class="rating-star__num">4.7</span>
+                                    <span class="tooltip tooltip_top tooltip_triangle tooltip_ta-c">Рейтинг орг-а</span>
                                 </i>
                             </div>
                             <div class="org-profile__text">
@@ -94,23 +187,33 @@
             <div class="stock-brief stock-brief_disabled">
                 <div class="stock-brief__col stock-brief__left">
                     <div class="stock-brief__row">
-                        <span class="stock-brief__tag">#SALE</span>
+                        <span class="stock-brief__tag has-tooltip"
+                            >#SALE
+                            <span class="tooltip tooltip_top tooltip_triangle tooltip_ta-c">Распродажа</span>
+                        </span>
                         <span class="stock-brief__data">21 выкуп стартовал 25 августа</span>
                     </div>
                     <div class="stock-brief__row stock-brief__row-heading">
-                        <span class="stock-brief__tag">#0 %</span>
+                        <span class="stock-brief__tag has-tooltip"
+                            >#0 %
+                            <span class="tooltip tooltip_top tooltip_triangle tooltip_ta-c">Орг. сбор 0%</span>
+                        </span>
                         <span class="stock-brief__heading"
                             >Dimma fashion studio. Распродажа. Модный бренд для мам
-                            <i class="icon icon-star rating-star stock-brief__rating">
-                                <span>4.7</span>
+                            <i class="icon icon-star rating-star stock-brief__rating has-tooltip">
+                                <span class="rating-star__num">4.7</span>
+                                <span class="tooltip tooltip_top tooltip_triangle tooltip_ta-c">Рейтинг закупки</span>
                             </i>
                         </span>
                     </div>
                     <div class="stock-brief__row">
-                        <span class="stock-brief__tag">#TOP</span>
+                        <span class="stock-brief__tag has-tooltip"
+                            >#TOP
+                            <span class="tooltip tooltip_top tooltip_triangle tooltip_ta-c">Топ-закупка</span>
+                        </span>
                         <span class="stock-brief__status bold">
                             Сбор закрыт. Чтобы не пропустить открытие
-                            <a href="#" class="link link_hover">добавьте закупку в избранное</a>
+                            <a class="link link_hover" href="#"> добавьте закупку в избранное</a>
                         </span>
                     </div>
                 </div>
@@ -121,8 +224,9 @@
                                 <a href="#">
                                     <img class="org-profile__image" src="~images/avatar.png" />
                                 </a>
-                                <i class="icon icon-star rating-star org-profile__rating">
-                                    <span>4.7</span>
+                                <i class="icon icon-star rating-star org-profile__rating has-tooltip">
+                                    <span class="rating-star__num">4.7</span>
+                                    <span class="tooltip tooltip_top tooltip_triangle tooltip_ta-c">Рейтинг орг-а</span>
                                 </i>
                             </div>
                             <div class="org-profile__text">
@@ -271,7 +375,6 @@
             </script>
         </div>
 
-
         <h3 class="ds-title">Количество обсуждений</h3>
         <div class="ds-wrapper">
             <span class="num-of-discussions">
@@ -286,7 +389,6 @@
                 </span>
             </script>
         </div>
-
 
         <h3 class="ds-title">Статус закупки</h3>
         <div class="ds-wrapper">
@@ -316,7 +418,7 @@
                         <img class="org-profile__image" src="~images/avatar.png" />
                     </a>
                     <i class="icon icon-star rating-star org-profile__rating">
-                        <span>4.8</span>
+                        <span class="rating-star__num">4.8</span>
                     </i>
                 </div>
                 <div class="org-profile__text">
@@ -334,7 +436,7 @@
                             <img class="org-profile__image" src="~images/avatar.png" />
                         </a>
                         <i class="icon icon-star rating-star org-profile__rating">
-                            <span>4.8</span>
+                            <span class="rating-star__num">4.8</span>
                         </i>
                     </div>
                     <div class="org-profile__text">
@@ -348,14 +450,14 @@
         <h3 class="ds-title">Значок рейтинга со звездой</h3>
         <div class="ds-wrapper">
             <i class="icon icon-star rating-star">
-                <span>4.8</span>
+                <span class="rating-star__num">4.8</span>
             </i>
         </div>
 
         <div class="ds-code-wrapper">
             <script type="text/plain" class="language-markup">
                 <i class="icon icon-star rating-star">
-                    <span>4.8</span>
+                    <span class="rating-star__num">4.8</span>
                 </i>
             </script>
         </div>
