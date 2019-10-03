@@ -1,13 +1,9 @@
-@media (min-width: 769px) {
-    .mobile {
-        display: none;
-    }
-}
 
 .mobile {
     display: flex;
     flex-direction: column;
     min-width: 320px;
+    max-width: 650px;
     margin: 0;
     padding: 0;
     .card-active-custom__wrap.is-toggle {
@@ -15,7 +11,8 @@
             margin-top: 0;
         }       
     }
-    .card-active-custom {        
+    .card-active-custom { 
+        .mobile {       
         &__header {
             flex-direction: column;
             padding: 15px;
@@ -222,6 +219,7 @@
         &__description-status {
             margin-top: 0;
         }
+    }
     }
 }
 //Кнопка "галка" в хедере
