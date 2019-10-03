@@ -168,11 +168,18 @@
         .card-active-custom__collection {
             display: flex;
             margin: 5px 0;
+
+        }
+        .purchaseStatus {
+            &__icon {
+                font-size: 38px;
+                color: #0DC53D;
+            }
         }
 
         .card-active-custom__collection.start {
-            .purchaseStatus-icon {
-                stroke: #0DC53D;
+            .purchaseStatus__icon {
+                
             }
 
             .purchaseStatus_soon {
@@ -181,8 +188,8 @@
         }
 
         .card-active-custom__collection.stop {
-            .purchaseStatus-icon {
-                stroke: #ff8000;
+            .purchaseStatus__icon {
+                
 
             }
 

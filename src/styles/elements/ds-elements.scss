@@ -64,27 +64,3 @@
 @import "~styles/elements/static-shit.scss";
 @import "~styles/elements/img-container.scss";
 
-// Блок дата закупки(Модуль)
-.purchaseStatus {
-	position: relative;
-	display: flex;
-	align-items: center;
-	font-weight: 800;
-	color: #0DC53D;
-	&-icon {
-		width: 40px;
-		height: 30px;
-		margin-right: 10px;
-	}
-	&-date {
-		margin-left: 5px;
-		color: inherit;
-	}
-	&_soon {
-		color: #FF8000;
-		.purchaseStatus-icon path {
-			fill: #FF8000;
-		}
-	}
-}
-
