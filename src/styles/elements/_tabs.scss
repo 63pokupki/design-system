@@ -1,0 +1,51 @@
+.stock-tabs {
+    width: 100%;
+    background: white;
+
+    // заголовки
+    &__labels {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        padding: 5px 0 15px;
+    }
+
+    // заголовок
+    &__label {
+        color: #1e2023;
+        padding: 5px;
+        user-select: none;
+
+        &.is-active {
+            border-bottom: 1px solid $color-primary;
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        &:active {
+            @include deep-click(0.95);
+        }
+    }
+
+    // секции с контентом
+    &__sections {
+        color: #606266;
+    }
+
+    // одна секция
+    &__section {
+        display: none;
+        
+        &.is-active {
+            display: block;
+        }
+    }
+
+    &__heading {
+        font-weight: 600;
+        color: rgb(51, 51, 51);
+    }
+}

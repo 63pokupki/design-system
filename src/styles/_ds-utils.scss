@@ -6,15 +6,12 @@ body {
     padding: 0;
 }
 
-h1, h2, h3, h4, h5 {
-    margin-block-start: 2em;
-    margin-block-end: 2em;
-}
-
 .ds-title {
     width: 100%;
     text-align: center;
     color: #343b4c;
+    margin-block-start: 2em;
+    margin-block-end: 2em;
 }
 
 .ds-wrapper {

@@ -7,6 +7,10 @@
         font-size: 28px;
         color: #318cca;
         margin-right: 10px;
+
+        &:active {
+            @include deep-click(0.9);
+        }
     }
 
     &__text {
@@ -19,6 +23,10 @@
         font-size: 12px;
         justify-content: flex-start;
         text-align: left;
+
+        &:active {
+            @include deep-click(0.975);
+        }
     }
 
     &__already {
