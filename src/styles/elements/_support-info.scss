@@ -1,9 +1,13 @@
-// блок информации о техподдержке - номер телефона, время работы, икнока помощи
+// блок информации о техподдержке - номер телефона, время работы, иконка помощи
 .support-info {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: baseline;
+
+    &__icon {
+        color: $color-primary;
+    }
 
     &__tel {
         text-decoration: none;

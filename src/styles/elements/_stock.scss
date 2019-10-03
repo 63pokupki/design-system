@@ -1,0 +1,49 @@
+.stock-img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 832px;
+    max-height: 200px;
+    overflow: hidden;
+
+    &__img {
+        max-width: 100%;
+        max-height: 100%;
+        height: auto;
+        width: auto;
+    }
+}
+
+
+
+.stock-cond {
+    background: white;
+    font-size: 12px;
+    color: #4B4B4B;
+    max-width: 256px;
+
+    &__row {
+        margin-bottom: 9px;
+        &:last-child {
+            margin-bottom: unset;
+        }
+    }
+
+    &__heading {
+        font-weight: bold;
+        font-size: 13px;
+        color: #3a3a3a;
+        margin-bottom: 13px;
+    }
+
+    &__name {
+        font-weight: 600;
+        margin-right: 5px;
+        line-height: 20px;
+    }
+
+    &__value {
+        color: rgb(102, 102, 102);
+        margin-right: 5px;
+    }
+}

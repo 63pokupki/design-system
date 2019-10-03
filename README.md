@@ -1,6 +1,13 @@
 [![NPM version](https://img.shields.io/npm/v/@63pokupki/design-system?color=green)](https://www.npmjs.com/package/@63pokupki/design-system) [![Build Status](https://travis-ci.com/63pokupki/design-system.svg?branch=master)](https://travis-ci.com/63pokupki/design-system)
 
-# Дизайн-система компонентов 63 Pokupki
+<p align="center">
+  <a href="https://63pokupki.github.io/design-system/">
+    <img src="logo.png"></img>
+  </a>
+</p>
+
+<h2 align="center">Дизайн система компонентов 63 Pokupki</h2>
+<br>
 
 **[Просмотр в интерактивном режиме](https://63pokupki.github.io/design-system/)**
 
@@ -32,4 +39,5 @@ npm publish --access public
 1. [Правила наименования](./docs/naming.md)
 1. [Стилизация](./docs/styling.md)
 1. [Как пользоваться дизайн-системой](./docs/how.md)
+1. [Как пользоваться шрифтовыми иконками](./docs/fonts-icons.md)
 1. [Работа с svg-спрайтом](./docs/svg-sprite.md)

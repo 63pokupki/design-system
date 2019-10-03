@@ -1,0 +1,21 @@
+// плашка числа обсуждений
+.num-of-discussions {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 9px;
+    line-height: 14px;
+    color: #ffffff;
+    background: #318cca;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+
+    &__num {
+        position: absolute;
+    }
+}

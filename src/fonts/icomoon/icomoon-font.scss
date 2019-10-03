@@ -1,19 +1,21 @@
+@import "~fonts/icomoon/style";
+// в файле style.css оставляем только символы (кодировки) иконок
+
+// здесь ничего не меняем
 @font-face {
     font-family: "icomoon";
-    src: url("~fonts/icomoon/icomoon.eot?h8acmp");
-    src: url("~fonts/icomoon/icomoon.eot?h8acmp#iefix") format("embedded-opentype"),
-        url("~fonts/icomoon/icomoon.woff?h8acmp") format("woff"),
-        url("~fonts/icomoon/icomoon.ttf?h8acmp") format("truetype"),
-        url("~fonts/icomoon/icomoon.svg?h8acmp#icomoon") format("svg");
+    src: url("~fonts/icomoon/fonts/icomoon.eot");
+    src: url("~fonts/icomoon/fonts/icomoon.eot?s7qw8t#iefix") format("embedded-opentype"),
+        url("~fonts/icomoon/fonts/icomoon.ttf") format("truetype"),
+        url("~fonts/icomoon/fonts/icomoon.woff") format("woff"),
+        url("~fonts/icomoon/fonts/icomoon.svg?s7qw8t#icomoon") format("svg");
     font-weight: normal;
     font-style: normal;
     font-display: block;
 }
 
-[class^="icon-"],
-[class*=" icon-"],
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
+.icon,
+.icon:before {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: "icomoon" !important;
     cursor: pointer;
@@ -29,42 +31,7 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon_hover {
-    &:hover {
-        color: #318cca;
-    }
-}
-
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
-    color: inherit;
-}
-
-.icon-box:before {
-    content: "\e900";
-}
-.icon-star:before {
-    content: "\e901";
-}
-.icon-heart-filled:before {
-  content: "\e906";
-}
-.icon-personal:before {
-    content: "\e902";
-}
-.icon-menu-search:before {
-  content: "\e905";
-}
-.icon-calendar:before {
-    content: "\e903";
-}
-.icon-cart:before {
-    content: "\e904";
-}
-.icon-heart:before {
-    content: "\e907";
-}
-.icon-info:before {
-    content: "\e908";
+.icon-info {
     color: #318cca;
+    font-size: 14px;
 }

@@ -16,12 +16,14 @@ button {
 
 // кнопка с категориями
 .menu-btn {
+    color: $color-primary;
+    
     &__icon {
         margin-right: 10px;
+        font-size: 16px;
     }
 
     &__text {
-        color: $color-primary;
         font-size: 14px;
     }
 
