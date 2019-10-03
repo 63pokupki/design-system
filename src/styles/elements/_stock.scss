@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    padding: 15px 40px;
+    padding: 18px 40px;
     width: 100%;
     max-width: 1120px;
     background-color: white;
@@ -92,6 +92,10 @@
     .stock-brief__heading {
         color: #c4c4c4;
     }
+
+    .stock-brief__status {
+        font-size: 12px;
+    }
 }
 
 .num-of-discussions {
@@ -152,7 +156,7 @@
     align-items: center;
     position: relative;
 
-    span {
+    &__num {
         position: absolute;
         margin-top: 1px;
         color: #510000;
