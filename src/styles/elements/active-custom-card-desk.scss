@@ -139,7 +139,7 @@
 
         .card-active-custom__heading {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             font-family: Open Sans;
             font-style: normal;
             font-weight: bold;
@@ -221,7 +221,8 @@
         .card-active-custom__statusbar {
             display: flex;
             flex-direction: column;
-            margin-right: 45px;
+            align-items: center;
+            width: 190px;
 
             p {
                 font-style: normal;
