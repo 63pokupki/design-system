@@ -1,0 +1,29 @@
+// блок добавить в избранное
+.favorite {
+    display: flex;
+    align-items: center;
+
+    &__icon {
+        font-size: 28px;
+        color: #318cca;
+        margin-right: 10px;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__action {
+        font-weight: 600;
+        font-size: 12px;
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    &__already {
+        font-size: 10px;
+        line-height: 18px;
+        color: rgba(96, 98, 102, 0.75);
+    }
+}

@@ -1,0 +1,20 @@
+// статус закупки
+.stock-status {
+    display: flex;
+    align-items: center;
+
+    // ВРЕМЕННЫЙ ЦВЕТ!
+    &.green {
+        color: #00c533;
+    }
+
+    &__icon {
+        font-size: 34px;
+    }
+
+    &__text {
+        font-size: 14px;
+        margin-left: 10px;
+        font-weight: bold;
+    }
+}
