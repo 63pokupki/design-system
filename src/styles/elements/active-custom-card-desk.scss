@@ -1,11 +1,11 @@
+@import "variables.scss";
 // Карточка активных закупок DESKTOP
 .card-active-custom__wrap {
     display: flex;
     flex-direction: column;
-    // max-height: 270px;
+    min-width: 875px;
     padding: 35px;
     background: $card-color-bg;
-    // overflow: hidden;
     transition: box-shadow .3s;
 
     &:hover {
@@ -147,7 +147,7 @@
             line-height: 19px;
 
             a {
-                color: #000;
+                color: $dark-brown-color;
                 text-decoration: none;
 
                 &:visited {
@@ -239,18 +239,18 @@
             flex-direction: row;
             align-items: center;
             margin: 10px 0;
-
+            
             p {
                 font-size: 10px;
                 color: $dark-grey-color;
-                margin-left: 5px;
-                margin-bottom: 0;
                 margin: 0 0 0 5px;
+                white-space: nowrap;
             }
 
             span {
                 font-size: 10px;
                 font-weight: 600;
+                white-space: nowrap;
             }
         }
 
@@ -261,6 +261,7 @@
         }
 
         .card-active-custom__organizer-block {
+            margin-bottom: 10px;
             .rating {
                 display: none;
             }

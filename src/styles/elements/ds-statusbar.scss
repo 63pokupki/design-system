@@ -6,7 +6,7 @@
     height: 18px;
     border: 1px solid $color-primary;
     border-radius: 15px;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 600;
     color: $statusbar_empty-color-txt;  
     &__line {
@@ -20,9 +20,17 @@
     }
     &_middle {
         height: 25px;
+        .statusbar {
+            font-size: 12px;
+        }
+
     }
     &_large {
         height: 30px;
+        .statusbar {
+            font-size: 14px;
+        }
+
     }
 }
 .statusbar.is-filled {
