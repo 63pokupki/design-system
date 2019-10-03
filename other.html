@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Прочие компоненты</title>
-    <link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?ff2b6496557decfc921a" rel="stylesheet"><link href="css/ds-utils.css?ff2b6496557decfc921a" rel="stylesheet"><link href="css/ds-ui-kit.css?ff2b6496557decfc921a" rel="stylesheet"></head>
+    <link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?0ff03d66a7af7296037f" rel="stylesheet"><link href="css/ds-utils.css?0ff03d66a7af7296037f" rel="stylesheet"><link href="css/ds-ui-kit.css?0ff03d66a7af7296037f" rel="stylesheet"></head>
     <body>
         <h1 class="ds-title">Прочие компоненты</h1>
 
@@ -215,7 +215,6 @@
         </div>
 
         <!-- Блок организатора -->
-        <div class="ds-wrapper">
             <h1 class="ds-title">Блок организатора</h1>
             <div class="ds-wrapper">
                 <div class="ds-divider">
@@ -260,9 +259,34 @@
                     </div>    
                 </script>
             </div>
+
+        <!-- Статус-бар -->
+        <h1 class="ds-title">Статус бар</h1>
+        <div class="ds-wrapper">
+            <div class="ds-text">Если ширина <span class="ds-hl">statusbar__line</span>  больше 0, добавить класс <span class="ds-hl">.is-filled</span>  </div>
+            <div class="ds-text">У элемента 3 размера: стандартный, средний и большой. Для изменения размера со стандартного, 
+                необходимо добавить соответствующий класс <span class="ds-hl">.statusbar_middle</span> для среднего и <span class="ds-hl">.statusbar_large</span>
+                для большого. 
+            </div>
+            <!-- Статус бар -->
+            <!-- Если ширина statusbar__line больше 0, добавить класс is-filled -->
+            <div class="statusbar is-filled">
+                <div class="statusbar__line" style="width: 25%">
+                    Собрано <span>0</span> из <span>15000</span> руб.
+                </div>
+            </div>
+        </div>
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <div class="statusbar is-filled">
+                    <div class="statusbar__line" style="width: 25%">
+                        Собрано <span>0</span> из <span>15000</span> руб.
+                    </div>
+                </div>
+            </script>
         </div>
     
 
 
-    <script type="text/javascript" src="js/highlight-syntax.js?ff2b6496557decfc921a"></script><script type="text/javascript" src="js/ds-utils.js?ff2b6496557decfc921a"></script><script type="text/javascript" src="js/categories-icons-sprite.js?ff2b6496557decfc921a"></script><script type="text/javascript" src="js/ds-ui-kit.js?ff2b6496557decfc921a"></script></body>
+    <script type="text/javascript" src="js/highlight-syntax.js?0ff03d66a7af7296037f"></script><script type="text/javascript" src="js/ds-utils.js?0ff03d66a7af7296037f"></script><script type="text/javascript" src="js/categories-icons-sprite.js?0ff03d66a7af7296037f"></script><script type="text/javascript" src="js/ds-ui-kit.js?0ff03d66a7af7296037f"></script></body>
 </html>
