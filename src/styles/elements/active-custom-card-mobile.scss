@@ -85,6 +85,9 @@
 
     .card-active-custom__purchaseStatus {
         font-size: 12px;
+        .stock-status__text {
+            font-size: 12px;
+        }
     }
 
     .card-active-custom__statusbar {
@@ -96,7 +99,10 @@
         .statusbar {
             width: 100%;
             height: 25px;
-            margin-right: 10px;
+            margin-right: 25px;
+            &__line {
+                font-size: 12px;
+            }
         }
     }
 
