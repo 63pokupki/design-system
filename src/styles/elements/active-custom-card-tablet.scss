@@ -22,12 +22,53 @@
                 }
             }
         }
+        //ОТображает изображения в подкатергориях
+        &.desktop-subcat {
+            &.desktop {
+                .card-active-custom__img-subcategory {
+                    display: flex;
+                    min-width: 152px;
+                }
+        
+                .card-active-custom__img-wrap {
+                    width: 100%;
+                    max-width: 544px;
+                }
+        
+                .card-active-custom__img-tablet {
+                    display: none;
+                }
+        
+                .card-active-custom__description {
+                    .suitable-catalogs {
+                        display: flex;
+                    }
+                    .slider {
+                        display: flex;
+                    }
+                }
+            }
+        }
+
 
         .card-active-custom__header {
             position: relative;
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
             width: 100%;
+            &-heading {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+            &-collection{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
 
             .btn-toggle {
                 position: absolute;
@@ -57,6 +98,25 @@
                     }
                 }
             }
+            .card-active-custom__status-block {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                align-items: baseline;
+                flex-shrink: 0;
+                width: 210px;
+                .like {
+                    display: flex;
+                    align-items: flex-start;
+                }    
+
+                p {
+                    margin: 0 5px 0 0;
+                    font-size: 11px;                    
+                }
+            }
+
         }
 
         .card-active-custom__heading {
@@ -67,6 +127,7 @@
             font-weight: bold;
             font-size: 14px;
             line-height: 19px;
+            flex-shrink: 2;
 
             a {
                 color: $dark-brown-color;
@@ -108,22 +169,31 @@
             margin: 5px 0;
         }
         .card-active-custom__collection.start {
-            .purchaseStatus-icon {
-                stroke: #0DC53D;
+            .stock-status__text {
+                color: #0DC53D;
+                &:before {
+                    content: "Сбор ";
+                    color: #0DC53D;
+
+                }
+
             }
 
-            .purchaseStatus_soon {
+            .stock-status__icon {
                 color: #0DC53D;
             }
         }
 
         .card-active-custom__collection.stop {
-            .purchaseStatus-icon {
-                stroke: #ff8000;
+            .stock-status__text {
+                color: #ff8000;
+                &:before {
+                    content: "Скоро стоп ";
+                }
 
             }
 
-            .purchaseStatus_soon {
+            .stock-status__icon {
                 color: #ff8000;
             }
         }
@@ -135,24 +205,24 @@
             padding-left: 5%;
             margin-right: 20px;
 
-            .card-active-custom__status-block {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: space-between;    
-                flex-direction: row;
-                justify-content: flex-start;
-                align-items: baseline;
-                .like {
-                    display: flex;
-                    align-items: flex-start;
-                }    
+            // .card-active-custom__status-block {
+            //     display: flex;
+            //     flex-direction: row;
+            //     flex-wrap: wrap;
+            //     justify-content: space-between;    
+            //     flex-direction: row;
+            //     justify-content: flex-start;
+            //     align-items: baseline;
+            //     .like {
+            //         display: flex;
+            //         align-items: flex-start;
+            //     }    
 
-                p {
-                    margin: 0 5px 0 0;
-                    font-size: 11px;                    
-                }
-            }
+            //     p {
+            //         margin: 0 5px 0 0;
+            //         font-size: 11px;                    
+            //     }
+            // }
             
             
         }
@@ -182,9 +252,12 @@
         .card-active-custom__purchase-block {
             display: flex;
             flex-direction: row;
+            justify-content: flex-start;
             align-items: center;
-            margin: 10px 0;
+            flex-shrink: 0;
+            width: 210px;
             font-size: 10px;
+            margin: 5px 0 0 40px;
 
             p {
                 margin: 0 0 0 5px;
