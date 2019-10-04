@@ -7,9 +7,7 @@
     width: 100vw;
     height: 100vh;
     z-index: 100;
-    opacity: 0;
     visibility: hidden;
-    transition: transform $transition-primary, opacity $transition-primary, visibility $transition-primary;
 
     .sidebar__body {
         top: 0;
@@ -19,21 +17,25 @@
         max-width: 90vw;
         height: 100vh;
         z-index: 50;
-        opacity: 0;
         visibility: hidden;
-        transform: translate(-100%);
+        transform: translateX(-100%);
         background: $background-color-primary;
-        transition: transform $transition-primary, opacity $transition-primary, visibility $transition-primary;
+        transition: transform $transition-primary, visibility $transition-primary;
+        will-change: transform;
     }
 
     .sidebar__background {
         position: fixed;
         top: 0;
+        visibility: hidden;
         left: 0;
         width: 100vw;
         height: 100vh;
         z-index: 40;
-        background: rgba(96, 98, 102, 0.7);
+        background: rgb(96, 98, 102);
+        opacity: 0;
+        transition: opacity $transition-primary, visibility $transition-primary;
+        will-change: opacity;
     }
 
     .sidebar__close {
@@ -81,7 +83,7 @@
     .sidebar__body {
         left: auto;
         right: 0;
-        transform: translate(100%);
+        transform: translateX(100%);
     }
 
     .sidebar__background {
@@ -106,14 +108,16 @@
 
 // состояние активного сайдбара
 .sidebar_is-active {
-    opacity: 1;
     visibility: visible;
-    transition: transform $transition-primary, opacity $transition-primary, visibility $transition-primary;
 
     .sidebar__body {
-        transform: translate(0%);
-        opacity: 1;
+        transform: translateX(0%);
         visibility: visible;
-        transition: transform $transition-primary, opacity $transition-primary, visibility $transition-primary;
+        transition: transform $transition-primary, visibility $transition-primary;
+    }
+
+    .sidebar__background {
+        opacity: 0.7;
+        visibility: visible;
     }
 }
