@@ -4,9 +4,9 @@
   "description": "UI component kit and design-system for 63 Pokupki project",
   "main": "dist/css/ds-ui-kit.css",
   "scripts": {
-    "live": "webpack-dev-server --config webpack.config.js -w",
-    "build": "webpack --config webpack.config.js",
-    "dist": "webpack --config webpack.config.dist.js",
+    "live": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js -w",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
+    "dist": "cross-env NODE_ENV=production webpack --config webpack.config.dist.js",
     "test": "echo Nothing"
   },
   "homepage": "https://github.com/63pokupki/design-system",
@@ -14,16 +14,26 @@
     "type": "git",
     "url": "git+https://github.com/63pokupki/design-system.git"
   },
+  "browserslist": {
+    "production": [
+      "> 0.05%",
+      "last 10 version",
+      "not dead",
+      "ie >= 7"
+    ],
+    "development": [
+      "last 3 Chrome versions"
+    ]
+  },
   "devDependencies": {
-    "@babel/cli": "7.6.2",
     "@babel/core": "7.6.2",
+    "@babel/plugin-transform-runtime": "^7.6.2",
     "@babel/preset-env": "7.6.2",
-    "@babel/register": "7.6.2",
-    "@babel/runtime": "7.6.2",
     "autoprefixer": "9.6.1",
     "babel-loader": "8.0.6",
     "babel-plugin-transform-object-rest-spread": "6.26.0",
     "copy-webpack-plugin": "5.0.4",
+    "cross-env": "^6.0.3",
     "css-loader": "3.2.0",
     "css-mqpacker": "7.0.0",
     "cssnano": "4.1.10",
@@ -58,6 +68,7 @@
   "author": "63pokupki",
   "license": "BSD-3-Clause",
   "dependencies": {
+    "@babel/runtime": "^7.6.2",
     "browserslist": "4.7.0",
     "clipboard": "^2.0.4",
     "prismjs": "^1.17.1"

@@ -2,12 +2,11 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-const { templates } = require('./util.js');
+const { templates } = require("./util.js");
 
-const entry = require('./entry.js');
+const entry = require("./entry.js");
 
 module.exports = {
-    mode: "development", //режим сборки
     entry: entry, //объект с точками входа
     output: {
         path: path.join(__dirname, "build/"), //общий путь для выходных файлов
@@ -17,7 +16,7 @@ module.exports = {
         ignored: /node_modules/, //исключения в слежении
         poll: 500 //интервал обновления
     },
-    devtool: "inline-source-map", //Инструменты разработчика
+    devtool: "eval-source-map", //Инструменты разработчика
     resolve: {
         alias: {
             //краткие имена путей для импортов
@@ -39,10 +38,13 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/,
-                loader: "babel-loader",
-                exclude: "/(node_modules|bower_components)/",
-                query: {
-                    presets: ["@babel/preset-env"]
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        presets: ["@babel/preset-env"],
+                        plugins: ["@babel/plugin-transform-runtime"]
+                    }
                 }
             },
             {
@@ -162,14 +164,6 @@ module.exports = {
     ].concat(templates()),
     optimization: {
         //настройки оптимизации и минификации
-        flagIncludedChunks: true,
-        minimize: false,
-        namedModules: true,
-        namedChunks: true,
-        mergeDuplicateChunks: true,
-        removeEmptyChunks: true,
-        removeAvailableModules: true,
         noEmitOnErrors: true,
-        concatenateModules: true
     }
 };

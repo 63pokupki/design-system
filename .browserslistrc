@@ -1,8 +1,0 @@
-# Поддержка браузеров:
-# Для вывода списка - 'npx browserslist'
-
-# prod
-> 0.05%, last 5 version, not dead, ie >= 9
-
-# dev
-# last 3 Chrome versions
