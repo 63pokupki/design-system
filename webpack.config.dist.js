@@ -35,10 +35,13 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/,
-                loader: "babel-loader",
-                exclude: "/(node_modules|bower_components)/",
-                query: {
-                    presets: ["@babel/preset-env"]
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        presets: ["@babel/preset-env"],
+                        plugins: ["@babel/plugin-transform-runtime"]
+                    }
                 }
             },
             {
@@ -144,14 +147,6 @@ module.exports = {
     ],
     optimization: {
         //настройки оптимизации и минификации
-        flagIncludedChunks: true,
-        minimize: true,
-        namedModules: true,
-        namedChunks: true,
-        mergeDuplicateChunks: true,
-        removeEmptyChunks: true,
-        removeAvailableModules: true,
-        noEmitOnErrors: true,
-        concatenateModules: true
+        minimize: true
     }
 };
