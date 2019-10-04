@@ -1,9 +1,8 @@
 .rating-star-org {
-	display: flex;
+	display: inline-flex;
     align-items: center;
     height: 15px;
 	&__icon {
-		height: 15px;
 		width: 12px;
 		color: #FFB21C;
 	}

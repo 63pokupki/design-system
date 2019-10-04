@@ -116,7 +116,16 @@
                 }
     
             }
+    
         }
+        .rating-star-org {
+            align-items: baseline;
+            height: 17px;
+            &__icon {
+                font-size: 11px;
+            }
+        }
+
     }
 
     .card-active-custom__toggle-block {
