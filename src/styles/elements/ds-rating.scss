@@ -1,13 +1,13 @@
-.rating {
+.rating-star-org {
 	display: flex;
     align-items: center;
-    height: 12px;
-	&-icon {
-		height: 12px;
+    height: 15px;
+	&__icon {
+		height: 15px;
 		width: 12px;
 		color: #FFB21C;
 	}
-	&-value {
+	&__value {
 		margin-left: 8px;
 		font-weight: bold;
 		color: #FFB21C;

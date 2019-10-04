@@ -4,6 +4,7 @@
     .organizer-block {
         &__name-wrap {
             display: flex;
+            align-items: flex-end;
             margin-bottom: 5px;
         }
         &__name {
@@ -53,7 +54,7 @@
                     opacity: 1;                                               
                 }
             } 
-        }
+        }        
         .rating-value {
             font-size: 14px;
         }           
