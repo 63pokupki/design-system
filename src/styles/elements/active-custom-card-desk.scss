@@ -62,9 +62,9 @@
             }
     
             .organizer-block__rating {
-                .rating {
+                .rating-star-org {
                     display: flex;
-                    .rating-value {
+                    .rating-star-org__value {
                         margin-right: 5px;  
                     }
                 }
@@ -268,7 +268,7 @@
             display: flex;
             flex-direction: column;
             margin-bottom: 10px;
-            .rating {
+            .rating-star-org {
                 display: none;
             }
         }
