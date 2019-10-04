@@ -235,8 +235,15 @@
     }
 
     .card-active-custom__hashtags {
+        display: inline-flex;
         position: relative;
-        justify-content: center;
+        justify-content: space-evenly;
+
+        a {
+            color: $color-primary;
+            font-weight: 700;
+            text-decoration: none;
+        }
 
         &:before,
         &:after {
@@ -270,8 +277,11 @@
     .card-active-custom__description-txt {
         p {
             padding-right: 0;
+            font-size: 12px;
+            color: $dark-brown-color;
             white-space: nowrap;
             text-overflow: ellipsis;
+            overflow: hidden;
         }
 
         &.is-toggle p {
@@ -297,7 +307,6 @@
     .card-active-custom__comments {
         display: flex;
         flex-direction: column;
-        margin-right: 35px;
 
         p {
             font-size: 10px;
