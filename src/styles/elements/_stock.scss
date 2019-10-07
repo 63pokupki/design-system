@@ -1,3 +1,17 @@
+// Сообщение что нет активного сбора, строка
+.no-active-message-bar {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: #e0eef7;
+    padding: 15px;
+
+    &__link {
+        margin-left: 5px;
+    }
+}
+
 // Карточка с основной информацией о закупке
 .stock-full {
     background: white;
