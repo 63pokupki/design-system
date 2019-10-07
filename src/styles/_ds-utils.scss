@@ -5,13 +5,13 @@ body {
     margin: 0;
     padding: 0;
     &::-webkit-scrollbar {
-        width: 9px;
-        padding: 0 2px;
+        width: 10px;
         background-color: #dbdbdb;
     }
 
     &::-webkit-scrollbar-thumb {
         background-color: #318cca;
+        border-radius: 4px;
     }
 }
 

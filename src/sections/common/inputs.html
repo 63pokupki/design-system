@@ -5,9 +5,192 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Элементы ввода, текстовые поля, поиск</title>
+        <style>
+            .checkbox {
+                margin-right: 20px;
+            }
+        </style>
     </head>
     <body>
-        <h1 class="ds-title">Элементы ввода, текстовые поля, поиск</h1>
+        <h1 class="ds-title">Элементы ввода, текстовые поля, поиск, чекбоксы</h1>
+
+        <h1 class="ds-title">Чекбоксы</h1>
+
+        <div class="ds-wrapper">
+            <p>Все состояния и виды меняются с помощью <span class="ds-hl"> классов-модификаторов:</span></p>
+            <ul class="ds-сontent-list">
+                <li>checkbox_accent</li>
+                <li>checkbox_inverted</li>
+                <li>checkbox_circle</li>
+                <li>checkbox_no-chx</li>
+            </ul>
+            <p>При отсутствии текста необходимо оставить элемент label и стереть только сам текст внутри.</p>
+        </div>
+
+        <h3 class="ds-title">Стандартный чекбокс</h3>
+
+        <div class="ds-wrapper">
+            <div class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="chx-01" />
+                <label class="checkbox__label" for="chx-01">Стандартный</label>
+            </div>
+            <div class="checkbox">
+                <input checked="checked" class="checkbox__input" type="checkbox" id="chx-011" />
+                <label class="checkbox__label" for="chx-011">Стандартный нажатый</label>
+            </div>
+            <div class="checkbox checkbox_circle">
+                <input checked="checked" class="checkbox__input" type="checkbox" id="chx-012" />
+                <label class="checkbox__label" for="chx-012">Стандартный нажатый круглый</label>
+            </div>
+        </div>
+
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <div class="checkbox">
+                    <input class="checkbox__input" type="checkbox" id="chx-01" />
+                    <label class="checkbox__label" for="chx-01">Стандартный</label>
+                </div>
+
+                <div class="checkbox">
+                    <input checked="checked" class="checkbox__input" type="checkbox" id="chx-011" />
+                    <label class="checkbox__label" for="chx-011">Стандартный нажатый</label>
+                </div>
+
+                <div class="checkbox checkbox_circle">
+                    <input checked="checked" class="checkbox__input" type="checkbox" id="chx-012" />
+                    <label class="checkbox__label" for="chx-012">Стандартный нажатый круглый</label>
+                </div>
+            </script>
+        </div>
+
+        <h3 class="ds-title">Акцентный чекбокс</h3>
+
+        <div class="ds-wrapper">
+            <div class="checkbox checkbox_accent">
+                <input class="checkbox__input" type="checkbox" id="chx-02" />
+                <label class="checkbox__label" for="chx-02">Акцентный</label>
+            </div>
+            <div class="checkbox checkbox_accent">
+                <input checked="checked" class="checkbox__input" type="checkbox" id="chx-022" />
+                <label class="checkbox__label" for="chx-022">Акцентный нажатый</label>
+            </div>
+            <div class="checkbox checkbox_accent checkbox_circle">
+                <input checked="checked" class="checkbox__input" type="checkbox" id="chx-023" />
+                <label class="checkbox__label" for="chx-023">Акцентный нажатый круглый</label>
+            </div>
+        </div>
+
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <div class="checkbox checkbox_accent">
+                    <input class="checkbox__input" type="checkbox" id="chx-02" />
+                    <label class="checkbox__label" for="chx-02">Акцентный</label>
+                </div>
+
+                <div class="checkbox checkbox_accent">
+                    <input checked="checked" class="checkbox__input" type="checkbox" id="chx-022" />
+                    <label class="checkbox__label" for="chx-022">Акцентный нажатый</label>
+                </div>
+
+                <div class="checkbox checkbox_accent checkbox_circle">
+                    <input checked="checked" class="checkbox__input" type="checkbox" id="chx-023" />
+                    <label class="checkbox__label" for="chx-023">Акцентный нажатый круглый</label>
+                </div>
+            </script>
+        </div>
+
+        <h3 class="ds-title">Инвертированный чекбокс</h3>
+
+        <div class="ds-wrapper">
+            <div class="checkbox checkbox_inverted">
+                <input class="checkbox__input" type="checkbox" id="chx-03" />
+                <label class="checkbox__label" for="chx-03">Инвертированный</label>
+            </div>
+            <div class="checkbox checkbox_inverted">
+                <input checked="checked" class="checkbox__input" type="checkbox" id="chx-031" />
+                <label class="checkbox__label" for="chx-031">Инвертированный нажатый</label>
+            </div>
+            <div class="checkbox checkbox_inverted checkbox_circle">
+                <input checked="checked" class="checkbox__input" type="checkbox" id="chx-032" />
+                <label class="checkbox__label" for="chx-032">Инвертированный нажатый круглый</label>
+            </div>
+        </div>
+
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <div class="checkbox checkbox_inverted">
+                    <input class="checkbox__input" type="checkbox" id="chx-03" />
+                    <label class="checkbox__label" for="chx-03">Инвертированный</label>
+                </div>
+
+                <div class="checkbox checkbox_inverted">
+                    <input checked="checked" class="checkbox__input" type="checkbox" id="chx-031" />
+                    <label class="checkbox__label" for="chx-031">Инвертированный нажатый</label>
+                </div>
+
+                <div class="checkbox checkbox_inverted checkbox_circle">
+                    <input checked="checked" class="checkbox__input" type="checkbox" id="chx-032" />
+                    <label class="checkbox__label" for="chx-032">Инвертированный нажатый круглый</label>
+                </div>
+            </script>
+        </div>
+
+        <h3 class="ds-title">Чекбокс без значка, только текст</h3>
+
+        <div class="ds-wrapper">
+            <div class="checkbox checkbox_no-chx">
+                <input class="checkbox__input" type="checkbox" id="chx-04" />
+                <label class="checkbox__label" for="chx-04">Без значка</label>
+            </div>
+        </div>
+
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <div class="checkbox checkbox_no-chx">
+                    <input class="checkbox__input" type="checkbox" id="chx-04" />
+                    <label class="checkbox__label" for="chx-04">Без значка</label>
+                </div>
+            </script>
+        </div>
+
+        <h3 class="ds-title">Чекбокс без текста, только значки</h3>
+
+        <div class="ds-wrapper">
+            <div class="checkbox">
+                <input checked="checked" class="checkbox__input" type="checkbox" id="chx-05" />
+                <label class="checkbox__label" for="chx-05"></label>
+            </div>
+
+            <div class="checkbox checkbox_accent">
+                <input checked="checked" class="checkbox__input" type="checkbox" id="chx-06" />
+                <label class="checkbox__label" for="chx-06"></label>
+            </div>
+
+            <div class="checkbox checkbox_accent checkbox_circle">
+                <input checked="checked" class="checkbox__input" type="checkbox" id="chx-07" />
+                <label class="checkbox__label" for="chx-07"></label>
+            </div>
+        </div>
+
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <div class="checkbox">
+                    <input checked="checked" class="checkbox__input" type="checkbox" id="chx-05" />
+                    <label class="checkbox__label" for="chx-05"></label>
+                </div>
+
+                <div class="checkbox checkbox_accent">
+                    <input checked="checked" class="checkbox__input" type="checkbox" id="chx-06" />
+                    <label class="checkbox__label" for="chx-06"></label>
+                </div>
+
+                <div class="checkbox checkbox_accent checkbox_circle">
+                    <input checked="checked" class="checkbox__input" type="checkbox" id="chx-07" />
+                    <label class="checkbox__label" for="chx-07"></label>
+                </div>
+            </script>
+        </div>
+
         <h3 class="ds-title">Поиск</h3>
         <div class="ds-wrapper">
             <!-- блок поиска -->
@@ -83,30 +266,6 @@
                             </ul>
                         </div>
                     </div>
-                </div>
-            </script>
-        </div>
-
-        <h3 class="ds-title">Группа чекбоксов</h3>
-        <div class="ds-text">
-            Для круглых чекбоксов, добавить элементу <span class="ds-hl">inputs-group</span> класс -
-            <span class="ds-hl">inputs-group_chx-circle</span>, для скрытия чекбоксов -
-            <span class="ds-hl">inputs-group_no-chx</span>, для скрытия тайтлов
-            <span class="ds-hl">inputs-group_no-ttl</span>
-        </div>
-        <div class="ds-divider">
-            <div class="inputs-group">
-                <input type="checkbox" id="fmch-1" />
-                <label class="inputs-group__label-checkbox" for="fmch-1"></label>
-                <label class="inputs-group__label-title" for="fmch-1">label-title</label>
-            </div>
-        </div>
-        <div class="ds-code-wrapper">
-            <script type="text/plain" class="language-markup">
-                <div class="inputs-group">
-                    <input type="checkbox" id="fmch-1">
-                    <label class="inputs-group__label-checkbox" for="fmch-1"></label>
-                    <label class="inputs-group__label-title" for="fmch-1">label-title</label>
                 </div>
             </script>
         </div>
