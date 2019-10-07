@@ -29,11 +29,9 @@
                                 <a href="#" target="_blank">Indola- профессиональная косметика для волос. Орг сбор
                                     0%</a>
                                 <!-- Рейтинг -->
-                                <div class="rating">
-                                    <svg class="rating-icon">
-                                        <use xlink:href="#svg-star"></use>
-                                    </svg>
-                                    <div class="rating-value">4.9</div>
+                                <div class="rating-star-org">
+                                    <i class="rating-star-org__icon icon icon-star "></i>
+                                    <div class="rating-star-org__value">4.9</div>
                                 </div>
                             </div>
                             <!-- Для изменения статуса закупки(цвет иконки-коробки и цвета текста), 
@@ -41,14 +39,10 @@
                                         элементу card-active-custom__collection. -->
                             <div class="card-active-custom__collection">
                                 <div class="card-active-custom__purchaseStatus purchaseStatus purchaseStatus_soon">
-                                    <svg class="purchaseStatus-icon">
-                                        <use xlink:href="#svg-box"></use>
-                                    </svg>
-                                    <!-- /.purchaseStatus-icon -->
-                                    <div class="purchaseStatus-title">Скоро стоп с</div>
-                                    <!-- /.purchaseStatus-title -->
-                                    <div class="purchaseStatus-date">30.05.2018</div>
-                                    <!-- /.purchaseStatus-date -->
+                                    <span class="stock-status green">
+                                        <i class="icon icon-box stock-status__icon"></i>
+                                        <span class="stock-status__text">Сбор с 30.05.2018</span>
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -75,12 +69,9 @@
                                             </a>
                                         </div>
                                         <div class="organizer-block__rating">
-                                            <div class="rating">
-                                                <svg class="rating-icon">
-                                                    <use xlink:href="#svg-star"></use>
-                                                </svg>
-                                                </svg>
-                                                <div class="rating-value">4.9</div>
+                                            <div class="rating-star-org">
+                                                <i class="rating-star-org__icon icon icon-star"></i>
+                                                <div class="rating-star-org__value">4.9</div>
                                             </div>
                                         </div>
                                     </div>
@@ -203,22 +194,21 @@
 
         <div class="ds-code-wrapper">
             <script type="text/plain" class="language-markup">
-                        <!-- Карточка активных закупок	DESKTOP -->
+                <!-- Карточка активных закупок	DESKTOP -->
             <!-- Для раскрытия нижнего блока card-active-custom__toggle-block, добавить класс .is-toggle,
                             элементу  card-active-custom__wrap(лучше по клику на card-active-custom__header) -->
             <!-- Для отображения опциональных елементов блока подкатегорий, добавить класс .desktop-subcat
                             главному блоку  card-active-custom__wrap -->
-            <div class="card-active-custom__wrap is-toggle desktop is-visible">
+            <div class="card-active-custom__wrap is-toggle desktop">
                 <div class="card-active-custom__header">
                     <div class="card-active-custom__header-left-block">
                         <div class="card-active-custom__heading">
-                            <a href="#" target="_blank">Indola- профессиональная косметика для волос. Орг сбор 0%</a>
+                            <a href="#" target="_blank">Indola- профессиональная косметика для волос. Орг сбор
+                                0%</a>
                             <!-- Рейтинг -->
-                            <div class="rating">
-                                <svg class="rating-icon">
-                                    <use xlink:href="#svg-star"></use>
-                                </svg>
-                                <div class="rating-value">4.9</div>
+                            <div class="rating-star-org">
+                                <i class="rating-star-org__icon icon icon-star "></i>
+                                <div class="rating-star-org__value">4.9</div>
                             </div>
                         </div>
                         <!-- Для изменения статуса закупки(цвет иконки-коробки и цвета текста), 
@@ -226,14 +216,10 @@
                                         элементу card-active-custom__collection. -->
                         <div class="card-active-custom__collection">
                             <div class="card-active-custom__purchaseStatus purchaseStatus purchaseStatus_soon">
-                                <svg class="purchaseStatus-icon">
-                                    <use xlink:href="#svg-box"></use>
-                                </svg>
-                                <!-- /.purchaseStatus-icon -->
-                                <div class="purchaseStatus-title">Скоро стоп с</div>
-                                <!-- /.purchaseStatus-title -->
-                                <div class="purchaseStatus-date">30.05.2018</div>
-                                <!-- /.purchaseStatus-date -->
+                                <span class="stock-status green">
+                                    <i class="icon icon-box stock-status__icon"></i>
+                                    <span class="stock-status__text">Сбор с 30.05.2018</span>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -242,7 +228,7 @@
                             <!-- Статус бар -->
                             <!-- Если ширина statusbar__line больше 0, добавить класс is-filled элементу statusbar -->
                             <div class="card-active-custom__statusbar">
-                                <div class="statusbar">
+                                <div class="statusbar is-filled">
                                     <div class="statusbar__line" style="width: 25%">
                                         Собрано <span>0</span> из <span>15000</span> руб.
                                     </div>
@@ -260,12 +246,9 @@
                                         </a>
                                     </div>
                                     <div class="organizer-block__rating">
-                                        <div class="rating">
-                                            <svg class="rating-icon">
-                                                <use xlink:href="#svg-star"></use>
-                                            </svg>
-                                            </svg>
-                                            <div class="rating-value">4.9</div>
+                                        <div class="rating-star-org">
+                                            <i class="rating-star-org__icon icon icon-star"></i>
+                                            <div class="rating-star-org__value">4.9</div>
                                         </div>
                                     </div>
                                 </div>
@@ -297,28 +280,33 @@
                 <div class="card-active-custom__toggle-block">
                     <div class="card-active-custom__toggle-left">
                         <div class="card-active-custom__img-wrap">
-                            <img class="card-active-custom__img-desktop" src="~images/1.jpg" alt="">
+                            <div class="card-active-custom__img-desktop">
+                                <div class="img-container_middle"><img src="~images/1.jpg" alt="Car"></div>
+                            </div>
                             <div class="card-active-custom__img-subcategory">
                                 <div class="hover-translucend">
                                     <p>Мини-маска для лица</p>
                                     <p><span>85,00</span>руб.</p>
                                 </div>
-                                <div class="img-container_resp"><img src="~images/active_custom_card/meela-img3.png" alt="Car"></div>
+                                <div class="img-container_middle"><img src="~images/img1.png" alt="Car"></div>
+                                <!-- <img src="~images/active_custom_card/meela-img3.png" alt=""> -->
+                            </div>
+                            <div class="card-active-custom__img-subcategory">
+                                <div class="hover-translucend">
+                                    <p>Мини-маска для лица</p>
+                                    <p><span>85,00</span>руб.</p>
+                                </div>
+                                <div class="img-container_middle"><img src="~images/img1.png" alt="Car"></div>
+                                <!-- <img src="~images/active_custom_card/meela-img3.png" alt=""> -->
+                            </div>
+                            <div class="card-active-custom__img-subcategory">
+                                <div class="hover-translucend">
+                                    <p>Мини-маска для лица</p>
+                                    <p><span>85,00</span>руб.</p>
+                                </div>
+                                <div class="img-container_middle"><img src="~images/img1.png" alt="Car"></div>
 
-                            </div>
-                            <div class="card-active-custom__img-subcategory">
-                                <div class="hover-translucend">
-                                    <p>Мини-маска для лица</p>
-                                    <p><span>85,00</span>руб.</p>
-                                </div>
-                                <div class="img-container_resp"><img src="~images/active_custom_card/meela-img3.png" alt="Car"></div>
-                            </div>
-                            <div class="card-active-custom__img-subcategory">
-                                <div class="hover-translucend">
-                                    <p>Мини-маска для лица</p>
-                                    <p><span>85,00</span>руб.</p>
-                                </div>
-                                <div class="img-container_resp"><img src="~images/active_custom_card/meela-img3.png" alt="Car"></div>
+                                <!-- <img src="~images/active_custom_card/meela-img3.png" alt=""> -->
                             </div>
                         </div>
                     </div>
@@ -340,7 +328,8 @@
                         <!-- Подкатегории -->
                         <!-- Slider -->
                         <div class="slider">
-                            <div class="btn-l "><img src="~images/active_custom_card/slide-left.svg" alt=""></div>
+                            <div class="btn-l "><img src="~images/active_custom_card/slide-left.svg" alt="">
+                            </div>
                             <div class="slider-viewing">
                                 <p>Подходящие каталоги внутри закупки(<span>8</span>):</p>
                                 <div class="slider-wrap">
@@ -350,7 +339,8 @@
                                     <div class="slider-items"><a href="#">Уход за кожей</a></div>
                                 </div>
                             </div>
-                            <div class="btn-r"> <img src="~images/active_custom_card/slide-left.svg" alt=""> </div>
+                            <div class="btn-r"> <img src="~images/active_custom_card/slide-left.svg" alt="">
+                            </div>
                         </div>
                         <!-- End  slider -->
 
@@ -381,54 +371,49 @@
         </div>
     </div>
 
-
     <div class="ds-wrapper">
-        <h3 class="ds-title">Карточка активных закупок десктоп/подкатегории</h3>
+        <h3 class="ds-title">Карточка активных закупок десктоп</h3>
         <div class="ds-wrapper">
             <div class="ds-text">
                 Для отображения карточки подкатегорий, присвоить класс
                 <span class="ds-hl">.desktop-subcat</span> блоку <span class="ds-hl">card-active-custom__wrap</span>
             </div>
             <div class="ds-divider">
-                <!-- Карточка активных закупок(подкатегории) DESKTOP -->
+                <!-- Карточка активных закупок	DESKTOP -->
                 <!-- Для раскрытия нижнего блока card-active-custom__toggle-block, добавить класс .is-toggle,
-	                элементу  card-active-custom__wrap(лучше по клику на card-active-custom__header) -->
+                            элементу  card-active-custom__wrap(лучше по клику на card-active-custom__header) -->
+                <!-- Для отображения опциональных елементов блока подкатегорий, добавить класс .desktop-subcat
+                            главному блоку  card-active-custom__wrap -->
                 <div class="card-active-custom__wrap is-toggle desktop desktop-subcat">
                     <div class="card-active-custom__header">
-                        <div class="card-active-custom__header-left-block subcategory">
+                        <div class="card-active-custom__header-left-block">
                             <div class="card-active-custom__heading">
                                 <a href="#" target="_blank">Indola- профессиональная косметика для волос. Орг сбор
                                     0%</a>
                                 <!-- Рейтинг -->
-                                <div class="rating">
-                                    <svg class="rating-icon">
-                                        <use xlink:href="#svg-star"></use>
-                                    </svg>
-                                    <div class="rating-value">4.9</div>
+                                <div class="rating-star-org">
+                                    <i class="rating-star-org__icon icon icon-star "></i>
+                                    <div class="rating-star-org__value">4.9</div>
                                 </div>
                             </div>
                             <!-- Для изменения статуса закупки(цвет иконки-коробки и цвета текста), 
-					присвоить классы: .start - Сбор(зелёный), .stop - Скоро стоп(оранжевый)
-					элементу card-active-custom__collection. -->
+                                        присвоить классы: .start - Сбор(зелёный), .stop - Скоро стоп(оранжевый)
+                                        элементу card-active-custom__collection. -->
                             <div class="card-active-custom__collection">
                                 <div class="card-active-custom__purchaseStatus purchaseStatus purchaseStatus_soon">
-                                    <svg class="purchaseStatus-icon">
-                                        <use xlink:href="#svg-box"></use>
-                                    </svg>
-                                    <!-- /.purchaseStatus-icon -->
-                                    <div class="purchaseStatus-title">Скоро стоп с</div>
-                                    <!-- /.purchaseStatus-title -->
-                                    <div class="purchaseStatus-date">30.05.2018</div>
-                                    <!-- /.purchaseStatus-date -->
+                                    <span class="stock-status green">
+                                        <i class="icon icon-box stock-status__icon"></i>
+                                        <span class="stock-status__text">Сбор с 30.05.2018</span>
+                                    </span>
                                 </div>
                             </div>
                         </div>
                         <div class="card-active-custom__header-right-block">
                             <div class="card-active-custom__status-block">
                                 <!-- Статус бар -->
-                                <!-- Если ширина ds-statusbar__line больше 0, добавить класс is-filled элементу ds-statusbar -->
-                                <div class="card-active-custom__ds-statusbar">
-                                    <div class="statusbar">
+                                <!-- Если ширина statusbar__line больше 0, добавить класс is-filled элементу statusbar -->
+                                <div class="card-active-custom__statusbar">
+                                    <div class="statusbar is-filled">
                                         <div class="statusbar__line" style="width: 25%">
                                             Собрано <span>0</span> из <span>15000</span> руб.
                                         </div>
@@ -446,12 +431,9 @@
                                             </a>
                                         </div>
                                         <div class="organizer-block__rating">
-                                            <div class="rating">
-                                                <svg class="rating-icon">
-                                                    <use xlink:href="#svg-star"></use>
-                                                </svg>
-                                                </svg>
-                                                <div class="rating-value">4.9</div>
+                                            <div class="rating-star-org">
+                                                <i class="rating-star-org__icon icon icon-star"></i>
+                                                <div class="rating-star-org__value">4.9</div>
                                             </div>
                                         </div>
                                     </div>
@@ -481,36 +463,54 @@
                     </div>
                     <!-- Выпадающий нижний блок -->
                     <div class="card-active-custom__toggle-block">
-                        <div class="card-active-custom__img-wrap">
-                            <div class="card-active-custom__img-subcategory">
-                                <div class="hover-translucend">
-                                    <p>Мини-маска для лица</p>
-                                    <p><span>85,00</span>руб.</p>
+                        <div class="card-active-custom__toggle-left">
+                            <div class="card-active-custom__img-wrap">
+                                <div class="card-active-custom__img-desktop">
+                                    <div class="img-container_middle"><img src="~images/1.jpg" alt="Car"></div>
                                 </div>
-                                <div class="img-container_resp"><img src="~images/active_custom_card/meela-img3.png" alt="Car"></div>
-                            </div>
-                            <div class="card-active-custom__img-subcategory">
-                                <div class="hover-translucend">
-                                    <p>Мини-маска для лица</p>
-                                    <p><span>85,00</span>руб.</p>
+                                <div class="card-active-custom__img-subcategory">
+                                    <div class="hover-translucend">
+                                        <p>Мини-маска для лица</p>
+                                        <p><span>85,00</span>руб.</p>
+                                    </div>
+                                    <div class="img-container_middle"><img src="~images/img1.png" alt="Car"></div>
+                                    <!-- <img src="~images/active_custom_card/meela-img3.png" alt=""> -->
                                 </div>
-                                <div class="img-container_resp"><img src="~images/active_custom_card/meela-img3.png" alt="Car"></div>
-                            </div>
-                            <div class="card-active-custom__img-subcategory">
-                                <div class="hover-translucend">
-                                    <p>Мини-маска для лица</p>
-                                    <p><span>85,00</span>руб.</p>
+                                <div class="card-active-custom__img-subcategory">
+                                    <div class="hover-translucend">
+                                        <p>Мини-маска для лица</p>
+                                        <p><span>85,00</span>руб.</p>
+                                    </div>
+                                    <div class="img-container_middle"><img src="~images/img1.png" alt="Car"></div>
+                                    <!-- <img src="~images/active_custom_card/meela-img3.png" alt=""> -->
                                 </div>
-                                <div class="img-container_resp"><img src="~images/active_custom_card/meela-img3.png" alt="Car"></div>
+                                <div class="card-active-custom__img-subcategory">
+                                    <div class="hover-translucend">
+                                        <p>Мини-маска для лица</p>
+                                        <p><span>85,00</span>руб.</p>
+                                    </div>
+                                    <div class="img-container_middle"><img src="~images/img1.png" alt="Car"></div>
+
+                                    <!-- <img src="~images/active_custom_card/meela-img3.png" alt=""> -->
+                                </div>
                             </div>
                         </div>
                         <div class="card-active-custom__description">
-                            <!-- Для раскрытия полного описания, добавить класс is-toggle, блоку
-					card-active-custom__description-txt  -->
-                            <div class="card-active-custom__description-txt">
-                                <p> Создатели Meela Meelo используют в своем продукте только натуральные ингредиенты.
-                                    Попробуйте продукцию Meela Meelo и убедитесь, что можно получить потрясающий..</p>
+                            <!-- Если необходимо скрыть блок с тегами, присвоить ему класс .hidden -->
+                            <div class="card-active-custom__hashtags">
+                                <a href="">#SALE</a>
+                                <a href="">#TOP</a>
+                                <a href="">#0%</a>
                             </div>
+                            <!-- Для раскрытия полного описания, добавить класс is-toggle, блоку
+                                        card-active-custom__description-txt  -->
+                            <div class="card-active-custom__description-txt">
+                                <p> Добро пожаловать в закупку качественных и эффективных
+                                    средств, которые помогут Вам поправить, поддержать и
+                                    укрепить здоровье. Препараты от компании Фитосила -
+                                    это только натуральные, естественные компоненты.</p>
+                            </div>
+                            <!-- Подкатегории -->
                             <!-- Slider -->
                             <div class="slider">
                                 <div class="btn-l "><img src="~images/active_custom_card/slide-left.svg" alt="">
@@ -528,6 +528,7 @@
                                 </div>
                             </div>
                             <!-- End  slider -->
+
                             <div class="card-active-custom__description-status">
                                 <div class="card-active-custom__delivery-date">
                                     <p>Срок поставки:</p>
@@ -550,54 +551,46 @@
                         <div class="btn-toggle-wrap"></div>
                     </div>
                 </div>
-
-
-                <!-- Карточка активных закупок(подкатегории) окончание -->
-
-
             </div>
         </div>
 
         <div class="ds-code-wrapper">
             <script type="text/plain" class="language-markup">
-                <!-- Карточка активных закупок(подкатегории) DESKTOP -->
+                <!-- Карточка активных закупок	DESKTOP -->
             <!-- Для раскрытия нижнего блока card-active-custom__toggle-block, добавить класс .is-toggle,
-	                элементу  card-active-custom__wrap(лучше по клику на card-active-custom__header) -->
-            <div class="card-active-custom__wrap is-toggle desktop desktop-subcat">
+                            элементу  card-active-custom__wrap(лучше по клику на card-active-custom__header) -->
+            <!-- Для отображения опциональных елементов блока подкатегорий, добавить класс .desktop-subcat
+                            главному блоку  card-active-custom__wrap -->
+            <div class="card-active-custom__wrap is-toggle desktop">
                 <div class="card-active-custom__header">
-                    <div class="card-active-custom__header-left-block subcategory">
+                    <div class="card-active-custom__header-left-block">
                         <div class="card-active-custom__heading">
-                            <a href="#" target="_blank">Indola- профессиональная косметика для волос. Орг сбор 0%</a>
+                            <a href="#" target="_blank">Indola- профессиональная косметика для волос. Орг сбор
+                                0%</a>
                             <!-- Рейтинг -->
-                            <div class="rating">
-                                <svg class="rating-icon">
-                                    <use xlink:href="#svg-star"></use>
-                                </svg>
-                                <div class="rating-value">4.9</div>
+                            <div class="rating-star-org">
+                                <i class="rating-star-org__icon icon icon-star "></i>
+                                <div class="rating-star-org__value">4.9</div>
                             </div>
                         </div>
                         <!-- Для изменения статуса закупки(цвет иконки-коробки и цвета текста), 
-                        присвоить классы: .start - Сбор(зелёный), .stop - Скоро стоп(оранжевый)
-                        элементу card-active-custom__collection. -->
+                                        присвоить классы: .start - Сбор(зелёный), .stop - Скоро стоп(оранжевый)
+                                        элементу card-active-custom__collection. -->
                         <div class="card-active-custom__collection">
                             <div class="card-active-custom__purchaseStatus purchaseStatus purchaseStatus_soon">
-                                <svg class="purchaseStatus-icon">
-                                    <use xlink:href="#svg-box"></use>
-                                </svg>
-                                <!-- /.purchaseStatus-icon -->
-                                <div class="purchaseStatus-title">Скоро стоп с</div>
-                                <!-- /.purchaseStatus-title -->
-                                <div class="purchaseStatus-date">30.05.2018</div>
-                                <!-- /.purchaseStatus-date -->
+                                <span class="stock-status green">
+                                    <i class="icon icon-box stock-status__icon"></i>
+                                    <span class="stock-status__text">Сбор с 30.05.2018</span>
+                                </span>
                             </div>
                         </div>
                     </div>
                     <div class="card-active-custom__header-right-block">
                         <div class="card-active-custom__status-block">
                             <!-- Статус бар -->
-                            <!-- Если ширина ds-statusbar__line больше 0, добавить класс is-filled элементу ds-statusbar -->
-                            <div class="card-active-custom__ds-statusbar">
-                                <div class="statusbar">
+                            <!-- Если ширина statusbar__line больше 0, добавить класс is-filled элементу statusbar -->
+                            <div class="card-active-custom__statusbar">
+                                <div class="statusbar is-filled">
                                     <div class="statusbar__line" style="width: 25%">
                                         Собрано <span>0</span> из <span>15000</span> руб.
                                     </div>
@@ -615,12 +608,9 @@
                                         </a>
                                     </div>
                                     <div class="organizer-block__rating">
-                                        <div class="rating">
-                                            <svg class="rating-icon">
-                                                <use xlink:href="#svg-star"></use>
-                                            </svg>
-                                            </svg>
-                                            <div class="rating-value">4.9</div>
+                                        <div class="rating-star-org">
+                                            <i class="rating-star-org__icon icon icon-star"></i>
+                                            <div class="rating-star-org__value">4.9</div>
                                         </div>
                                     </div>
                                 </div>
@@ -650,36 +640,54 @@
                 </div>
                 <!-- Выпадающий нижний блок -->
                 <div class="card-active-custom__toggle-block">
-                    <div class="card-active-custom__img-wrap">
-                        <div class="card-active-custom__img-subcategory">
-                            <div class="hover-translucend">
-                                <p>Мини-маска для лица</p>
-                                <p><span>85,00</span>руб.</p>
+                    <div class="card-active-custom__toggle-left">
+                        <div class="card-active-custom__img-wrap">
+                            <div class="card-active-custom__img-desktop">
+                                <div class="img-container_middle"><img src="~images/1.jpg" alt="Car"></div>
                             </div>
-                            <div class="img-container_resp"><img src="~images/active_custom_card/meela-img3.png" alt="Car"></div>
-                        </div>
-                        <div class="card-active-custom__img-subcategory">
-                            <div class="hover-translucend">
-                                <p>Мини-маска для лица</p>
-                                <p><span>85,00</span>руб.</p>
+                            <div class="card-active-custom__img-subcategory">
+                                <div class="hover-translucend">
+                                    <p>Мини-маска для лица</p>
+                                    <p><span>85,00</span>руб.</p>
+                                </div>
+                                <div class="img-container_middle"><img src="~images/img1.png" alt="Car"></div>
+                                <!-- <img src="~images/active_custom_card/meela-img3.png" alt=""> -->
                             </div>
-                            <div class="img-container_resp"><img src="~images/active_custom_card/meela-img3.png" alt="Car"></div>
-                        </div>
-                        <div class="card-active-custom__img-subcategory">
-                            <div class="hover-translucend">
-                                <p>Мини-маска для лица</p>
-                                <p><span>85,00</span>руб.</p>
+                            <div class="card-active-custom__img-subcategory">
+                                <div class="hover-translucend">
+                                    <p>Мини-маска для лица</p>
+                                    <p><span>85,00</span>руб.</p>
+                                </div>
+                                <div class="img-container_middle"><img src="~images/img1.png" alt="Car"></div>
+                                <!-- <img src="~images/active_custom_card/meela-img3.png" alt=""> -->
                             </div>
-                            <div class="img-container_resp"><img src="~images/active_custom_card/meela-img3.png" alt="Car"></div>
+                            <div class="card-active-custom__img-subcategory">
+                                <div class="hover-translucend">
+                                    <p>Мини-маска для лица</p>
+                                    <p><span>85,00</span>руб.</p>
+                                </div>
+                                <div class="img-container_middle"><img src="~images/img1.png" alt="Car"></div>
+
+                                <!-- <img src="~images/active_custom_card/meela-img3.png" alt=""> -->
+                            </div>
                         </div>
                     </div>
                     <div class="card-active-custom__description">
-                        <!-- Для раскрытия полного описания, добавить класс is-toggle, блоку
-                        card-active-custom__description-txt  -->
-                        <div class="card-active-custom__description-txt">
-                            <p> Создатели Meela Meelo используют в своем продукте только натуральные ингредиенты.
-                                Попробуйте продукцию Meela Meelo и убедитесь, что можно получить потрясающий..</p>
+                        <!-- Если необходимо скрыть блок с тегами, присвоить ему класс .hidden -->
+                        <div class="card-active-custom__hashtags">
+                            <a href="">#SALE</a>
+                            <a href="">#TOP</a>
+                            <a href="">#0%</a>
                         </div>
+                        <!-- Для раскрытия полного описания, добавить класс is-toggle, блоку
+                                        card-active-custom__description-txt  -->
+                        <div class="card-active-custom__description-txt">
+                            <p> Добро пожаловать в закупку качественных и эффективных
+                                средств, которые помогут Вам поправить, поддержать и
+                                укрепить здоровье. Препараты от компании Фитосила -
+                                это только натуральные, естественные компоненты.</p>
+                        </div>
+                        <!-- Подкатегории -->
                         <!-- Slider -->
                         <div class="slider">
                             <div class="btn-l "><img src="~images/active_custom_card/slide-left.svg" alt="">
@@ -697,6 +705,7 @@
                             </div>
                         </div>
                         <!-- End  slider -->
+
                         <div class="card-active-custom__description-status">
                             <div class="card-active-custom__delivery-date">
                                 <p>Срок поставки:</p>

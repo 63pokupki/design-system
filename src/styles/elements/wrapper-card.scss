@@ -7,13 +7,15 @@
     width: 100%;
     margin: 0 auto;
     background: $bg-wrapper-card-color;
-    overflow: hidden;
-    overflow-y: auto;
-    // padding: 23px;
+    // padding: 5px;
+    .card-active-custom__wrap {
+        max-width: 100%;
+    }
     &__header {
         display: flex;
         flex-direction: column;
         width: 100%;
+        position: sticky;
     }
     &__tabs {
         display: flex;
@@ -21,12 +23,12 @@
         justify-content: flex-start;
         align-items: center;
         width: 100%;
-        padding: 0 40px 0 25px;
+        padding: 0 25px 0 25px;
         background: $card-color-bg;
         font-size: 13px;
         color: #000;
         border-top: 1px solid transparent;
-        border-bottom: 1px solid transparent;
+        border-bottom: 2px solid $bg-wrapper-card-color;
     }
     &__tab {
         display: flex;
@@ -46,6 +48,7 @@
     &__sort {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
         position: relative;
         width: 100%;
         background: #fff;
@@ -62,326 +65,40 @@
             margin-right: 5px;
         }
     }
-    //popover
-    &__sort-modal {
+    &__container-sorting {
         display: flex;
-        position: absolute;
-        visibility: hidden;
-        opacity: 0;
-        top: 30px;
-        right: -30px;
-        color: #000;
-        .btn-block {
-            display: flex;
-            width: 100%;
-            margin-top: 30px;
-            height: 0;
-            visibility: hidden;
-            opacity: 0;
-            .btn-apply {
-                height: 24px;
-                background-color: #fff;
-                font-size: 10px;
-                color: $color-primary;
-            }
-            &:before {
-                content: "";
-                position: absolute;
-                bottom: 50px;
-                width: 100%;// Прибавляем padding-left и padding-right блока modal-sort__wrap
-                height: 1px;
-                background-color: $sky-blue-color;
-                opacity: .2;
-                right: 0;
-                bottom: 55px;                
-            }
-        }
- 
+        margin-top: 2px;
     }
-    &__btn {
-        //Сортировка
-        &-sorting {
-            display: flex;
-            position: relative;
-            font-size: 12px;
-            cursor: pointer;
-            &:hover {
-                color: $color-primary;
-                &:after {
-                    background: url("~images/active_custom_card/arrow-point-to-down-hover.svg");
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: cover;
-                }
-            }
-            .selected-position.desktop {
-                display: none;
-            }          
-            &:before {
-                content: "";
-                display: none;
-                width: 10px;
-                height: 8px;
-                background-image: url("~images/active_custom_card/checked.svg");
-                position: absolute;
-                top: 5px;
-                left: -15px;
-            }
-            &:after {
-                content: "";
-                position: absolute;
-                display: flex;
-                width: 8px;
-                height: 8px;
-                top: 6px;
-                right: -15px;
-                background: url("~images/active_custom_card/arrow-point-to-down.png");
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: cover;
-                opacity: 0.6;               
-                cursor: pointer;
-            }
-            //Сортировка-контейнер
-            &-container {
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                width: 50%;
-                .selected-position.tablet-mobile {
-                    display: none;
-                    font-size: 10px;
-                    color: $light-gray-color;
-                }
-                &.is-selected {
-                    .wrapper-card__btn-filter {
-                        &:before {
-                            display: flex;
-                        }
-                    }
-                    .btn-apply {
-                        background-color: $color-primary;
-                        color: #fff;                        
-                        cursor: pointer;                        
-                    }
-                    .selected-position.desktop {
-                        display: flex;
-                    }
-
-                }
-                &.is-active {                    
-                    .wrapper-card__btn-sorting {
-                        color: $color-primary;
-                        &:after {
-                            background: url("~images/active_custom_card/arrow-point-to-down-active.svg");
-                            background-repeat: no-repeat;
-                            background-position: center;
-                            background-size: cover;
-                            transform: rotate(180deg);
-                            transition: .3s ease-in-out;
-                        }
-
-                    }                    
-                    .wrapper-card__sort-modal {                        
-                        height: auto;
-                        max-height: 500px;
-                        visibility: visible;
-                        transition: all .3s ease-in-out;
-                        opacity: 1;
-                    }                   
-                }
-
-            }
-        }
-        //Фильтр
-        &-filter {
-            display: flex;
-            position: relative;
-            font-size: 12px;
-            cursor: pointer;
-            .selected-position.desktop {
-                display: none;
-                font-size: 12px;
-                text-decoration: underline;
-            }
-            &:hover {
-                color: $color-primary;
-                &:after {
-                    background: url("~images/active_custom_card/arrow-point-to-down-hover.svg");
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: cover;
-                }
-            }
-            &:before {
-                content: "";
-                display: none;
-                width: 10px;
-                height: 8px;
-                background-image: url("~images/active_custom_card/checked.svg");
-                position: absolute;
-                top: 5px;
-                left: -15px;
-            }
-            &:after {
-                content: "";
-                position: absolute;
-                display: flex;
-                width: 8px;
-                height: 8px;
-                top: 6px;
-                right: -15px;
-                background: url("~images/active_custom_card/arrow-point-to-down.png");
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: cover;
-                transition: transform .3s ease-in-out;
-                opacity: 0.6;               
-                cursor: pointer;
-            }
-            //Фильтр-контейнер
-            &-container {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                position: relative;
-                width: 50%;                
-                .selected-position.tablet-mobile {
-                    display: none;
-                    font-size: 10px;
-                    color: $light-gray-color;
-                }
-                &.is-selected {
-                    .wrapper-card__btn-filter {
-                        &:before {
-                            display: flex;
-                        }
-                        .selected-position.desktop {
-                            display: flex;
-                        }
-                    }          
-                    .btn-block {
-                        .btn-apply {
-                            background-color: $color-primary;
-                            color: #fff;
-                            cursor: pointer;
-                        }
-                    }    
-                }
-                //Отображает popover
-                &.is-active {                    
-                    .wrapper-card__btn-filter {
-                        color: $color-primary;
-                        &:after {
-                            background: url("~images/active_custom_card/arrow-point-to-down-active.svg");
-                            background-repeat: no-repeat;
-                            background-position: center;
-                            background-size: cover;
-                            transform: rotate(180deg);
-                            transition: transform .3s ease-in-out;
-                        } 
-                    }                    
-                    .wrapper-card__filter-modal {                        
-                        height: auto;
-                        max-height: 500px;
-                        visibility: visible;
-                        transition: all .3s ease-in-out;
-                        opacity: 1;
-                    }
-                    .btn-block {
-                        height: auto;
-                        visibility: visible;
-                        opacity: 1;
-                        button {
-                            cursor: default;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    //popover
-    &__filter-modal {
-        position: absolute;
+    &__container-switcher {
         display: flex;
-        visibility: hidden;
-        height: 0;
-        opacity: 0;
-        top: 30px;
-        color: #000;     
-        .btn-block {
-            display: flex;
-            width: 100%;
-            margin-top: 30px;
-            height: 0;
-            visibility: hidden;
-            opacity: 0;
-            .btn-apply {
-                height: 24px;
-                background-color: #fff;
-                font-size: 10px;
-                color: $color-primary;
-                cursor: pointer;
-            }
-            &:before {
-                content: "";
-                position: absolute;
-                bottom: 50px;
-                width: 100%;// Прибавляем padding-left и padding-right блока modal-sort__wrap
-                height: 1px;
-                background-color: $sky-blue-color;
-                opacity: .2;
-                right: 0;
-                bottom: 55px;                
-            }
-        }
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        height: 40px;
+        background: $bg-wrapper-card-color;
+
+    }
+    &__sorting {
+        margin-right: 100px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-size: 12px;
+        font-weight: 600;
+        color: $sorting-color;
     }
     &__switcher {
-        display: flex;
-        width: 30%;
-        &-tablet {
-            display: none;
+        margin-right: 10px;
+        height: 16px;
+        &-name {
+            margin-left: 10px;
+            font-size: 12px;
+            color: $light-gray-color;
         }
-    }
-
-    &__heading {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 40px;
-        color: $light-gray-color;
-        background: #E0EEF7;
+        input:checked ~ .wrapper-card__switcher-name {
+            color: $color-primary;
+        }        
     }
 }
 
-@media (max-width: 1075px) {
-    .wrapper-card {        
-        &__switcher {
-            visibility: hidden;
-            &-tablet {
-                display: flex;
-            }           
-        }
-        &__btn-sorting-container {
-            span:nth-child(1) {
-                display: none;
-            }
-            span:nth-child(2) {
-                display: flex;
-            }
-        }
-        &__btn-filter-container {
-            span:nth-child(1) {
-                display: none;
-            }
-            span:nth-child(2) {
-                display: flex;
-            }
-        }
-
-    }
-}
 
 

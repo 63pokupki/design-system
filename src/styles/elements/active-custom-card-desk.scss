@@ -1,4 +1,5 @@
 @import "variables.scss";
+
 // Карточка активных закупок DESKTOP
 .card-active-custom__wrap {
     display: flex;
@@ -7,71 +8,96 @@
     padding: 35px;
     background: $card-color-bg;
     transition: box-shadow .3s;
-
     &:hover {
         box-shadow: 1px 1px 6px rgba(65, 149, 206, 0.4);
         transition: box-shadow .5s;
     }
 
+
     //ОТображает изображения в подкатергориях
     &.desktop-subcat {
         &.desktop {
-            .card-active-custom__img-subcategory {
-                display: flex;
-                min-width: 152px;
-            }
-    
-            .card-active-custom__img-wrap {
-                width: 100%;
-                max-width: 544px;
-            }
-    
-            .card-active-custom__img-desktop {
-                display: none;
-            }
-    
-            .card-active-custom__description {
-                .suitable-catalogs {
+            .card-active-custom__toggle-block {
+                .card-active-custom__img-wrap {
                     display: flex;
+                    width: 100%;
+                    max-width: 544px;
                 }
-                .slider {
+
+                .card-active-custom__img-subcategory {
                     display: flex;
+                    min-width: 152px;
+                }
+
+
+                .card-active-custom__img-desktop {
+                    display: none;
+                }
+
+                .card-active-custom__description {
+                    .suitable-catalogs {
+                        display: flex;
+                    }
+
+                    .slider {
+                        display: flex;
+                    }
                 }
             }
         }
     }
 }
+// .card-active-custom__wrap.is-toggle:first-child {
 
+// }
 .card-active-custom__wrap.is-toggle {
+    margin: 10px 0;
+    &:hover {
+        box-shadow: none;    
+    }
     &.desktop {
         .card-active-custom__toggle-block {
-            height: auto;
             max-height: 1000px;
             visibility: visible;
             opacity: 1;
-            transition: max-height .8s;
+            transition: all .8s;
 
+            .img-container_middle {
+                height: auto;
+                visibility: visible;
+                opacity: 1;
+                transition: all 1s;
+
+                img {
+                    visibility: visible;
+                    height: auto;
+                    opacity: 1;
+                    transition: all 2s;
+                }
+            }
         }
+
         .card-active-custom__header {
             .btn-toggle {
                 .arrow {
                     transform: rotate(270deg);
                     transition: transform .3s;
                 }
-    
+
             }
-    
+
             .organizer-block__rating {
-                .rating {
+                .rating-star-org {
                     display: flex;
-                    .rating-value {
-                        margin-bottom: 4px;
+
+                    .rating-star-org__value {
                         margin-right: 5px;
                     }
                 }
             }
         }
     }
+
 }
 
 // Шапка карточки__левый блок
@@ -150,16 +176,16 @@
                 }
             }
 
-            .rating {
+            .rating-star-org {
                 margin-left: 10px;
             }
 
-            .rating-icon {
+            .rating-star-org__icon {
                 width: 15px;
                 height: 15px;
             }
 
-            .rating-value {
+            .rating-star-org__value {
                 font-size: 16px;
             }
 
@@ -168,12 +194,17 @@
         .card-active-custom__collection {
             display: flex;
             margin: 5px 0;
+
+        }
+
+        .purchaseStatus {
+            &__icon {
+                font-size: 38px;
+                color: #0DC53D;
+            }
         }
 
         .card-active-custom__collection.start {
-            .purchaseStatus-icon {
-                stroke: #0DC53D;
-            }
 
             .purchaseStatus_soon {
                 color: #0DC53D;
@@ -181,15 +212,16 @@
         }
 
         .card-active-custom__collection.stop {
-            .purchaseStatus-icon {
-                stroke: #ff8000;
+            // .purchaseStatus__icon {
 
-            }
+
+            // }
 
             .purchaseStatus_soon {
                 color: #ff8000;
             }
         }
+
     }
 }
 
@@ -207,6 +239,7 @@
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-between;
+
             .like {
                 display: flex;
                 align-items: flex-start;
@@ -236,7 +269,7 @@
             flex-direction: row;
             align-items: center;
             margin: 10px 0;
-            
+
             p {
                 font-size: 10px;
                 color: $dark-grey-color;
@@ -253,6 +286,8 @@
         }
 
         .card-active-custom__like {
+            margin-bottom: 15px;
+
             .icon-like {
                 stroke-width: 2;
             }
@@ -262,17 +297,21 @@
             display: flex;
             flex-direction: column;
             margin-bottom: 10px;
-            .rating {
+
+            .rating-star-org {
                 display: none;
             }
         }
+
         @media (max-width: 1148px) {
             .card-active-custom__organizer-block {
                 flex-direction: row-reverse;
+
                 p {
                     margin-right: 5px;
-                }               
+                }
             }
+
             .card-active-custom__access-lvl {
                 display: none;
             }
@@ -290,7 +329,21 @@
             margin-top: 15px;
             visibility: hidden;
             opacity: 0;
-            transition: max-height .3s;
+            transition: all .5s;
+
+            .img-container_middle {
+                height: 0;
+                visibility: hidden;
+                opacity: 0;
+                transition: all .5s;
+
+                img {
+                    visibility: hidden;
+                    height: 0;
+                    transition: all .5s;
+
+                }
+            }
         }
 
         .card-active-custom__toggle-left {
@@ -307,18 +360,66 @@
             display: flex;
             justify-content: center;
             align-items: flex-end;
-            // position: absolute;
-            // width: 544px;
-            // max-width: 544px;
-            // max-height: 152px;
             height: 100%;
 
-            // img {
-            //     max-width: 100%;
-            //     max-height: 100%;
-            //     width: auto;
-            //     height: 100%;
-            // }
+            .card-active-custom__img-subcategory {
+                display: none;
+                position: relative;
+                max-width: 152px;
+                max-height: 152px;
+                margin-right: 20px;
+
+                .hover-translucend {
+                    display: flex;
+                    visibility: hidden;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 100%;
+                    background: rgba(255, 255, 255, 0);
+                    transition: .4s;
+                    cursor: pointer;
+
+                    p:nth-child(1) {
+                        max-width: 140px;
+                        font-weight: 700;
+                        font-size: 12px;
+                        line-height: 14px;
+                        margin-bottom: 50px;
+                        text-align: center;
+                        color: $dark-grey-color;
+                    }
+
+                    p:nth-child(2) {
+                        font-weight: 700;
+                        font-size: 14px;
+                        line-height: 14px;
+                    }
+
+                    p {
+                        visibility: hidden;
+                    }
+
+                }
+
+                &:hover {
+                    .hover-translucend {
+                        visibility: visible;
+                        background: rgba(255, 255, 255, 0.8);
+
+                        p {
+                            visibility: visible;
+                        }
+                    }
+                }
+
+            }
+
         }
 
         .card-active-custom__description {
@@ -328,7 +429,8 @@
             max-width: 100%;
             padding-right: 30px;
             overflow: hidden;
-            .slider  {
+
+            .slider {
                 display: none;
             }
 
@@ -383,6 +485,7 @@
 
             a {
                 color: $color-primary;
+
                 span {
                     color: $color-primary;
                 }
@@ -417,71 +520,74 @@
 
 // Карточка активных закупок (подкатегории) DESKTOP
 .card-active-custom__wrap {
-    &.desktop {
-        .card-active-custom__img-subcategory {
-            display: none;
-            position: relative;
-            max-width: 152px;
-            max-height: 152px;
-            margin-right: 20px;
+    &.desktop-subcat {
+        .card-active-custom__toggle-block {
+            .card-active-custom__img-subcategory {
+                // display: none;
+                // position: relative;
+                // max-width: 152px;
+                // max-height: 152px;
+                // margin-right: 20px;
 
-            .hover-translucend {
-                display: flex;
-                visibility: hidden;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                width: 100%;
-                background: rgba(255, 255, 255, 0);
-                transition: .4s;
-                cursor: pointer;
-
-                p:nth-child(1) {
-                    max-width: 140px;
-                    font-weight: 700;
-                    font-size: 12px;
-                    line-height: 14px;
-                    margin-bottom: 50px;
-                    text-align: center;
-                    color: $dark-grey-color;
-                }
-
-                p:nth-child(2) {
-                    font-weight: 700;
-                    font-size: 14px;
-                    line-height: 14px;
-                }
-
-                p {
-                    visibility: hidden;
-                }
-
-            }
-            &:hover { 
                 .hover-translucend {
-                    visibility: visible;
-                    background: rgba(255, 255, 255, 0.8);
-    
+                    display: flex;
+                    visibility: hidden;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 100%;
+                    background: rgba(255, 255, 255, 0);
+                    transition: .4s;
+                    cursor: pointer;
+
+                    p:nth-child(1) {
+                        max-width: 140px;
+                        font-weight: 700;
+                        font-size: 12px;
+                        line-height: 14px;
+                        margin-bottom: 50px;
+                        text-align: center;
+                        color: $dark-grey-color;
+                    }
+
+                    p:nth-child(2) {
+                        font-weight: 700;
+                        font-size: 14px;
+                        line-height: 14px;
+                    }
+
                     p {
+                        visibility: hidden;
+                    }
+
+                }
+
+                &:hover {
+                    .hover-translucend {
                         visibility: visible;
+                        background: rgba(255, 255, 255, 0.8);
+
+                        p {
+                            visibility: visible;
+                        }
                     }
                 }
+
             }
 
-        }
-
-        .card-active-custom__description {
-            .suitable-catalogs {
-                display: none;
-                // max-width: 520px;
-                height: 55px;
-                margin-top: 10px;
-                transform: translateX(-25px);
+            .card-active-custom__description {
+                .suitable-catalogs {
+                    display: none;
+                    // max-width: 520px;
+                    height: 55px;
+                    margin-top: 10px;
+                    transform: translateX(-25px);
+                }
             }
         }
     }
