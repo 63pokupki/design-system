@@ -24,6 +24,8 @@
             }
             .organizer-block__rating {
                 visibility: visible;
+                opacity: 1;
+                transition: all .3s;
             }
             .card-active-custom__header {
                 .btn-toggle {
@@ -243,6 +245,8 @@
         }
         .organizer-block__rating {
             visibility: hidden;
+            opacity: 0;
+            transition: all .3s;
         }
 
         .card-active-custom__purchase-block {
