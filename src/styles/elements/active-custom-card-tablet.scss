@@ -5,10 +5,23 @@
 
         &.is-toggle {
             .card-active-custom__toggle-block {
+                height: auto;
                 max-height: 1000px;
                 visibility: visible;
                 opacity: 1;
-                transition: max-height .3s;
+                transition: max-height .8s;
+                .img-container_middle {
+                    height: auto;
+                    visibility: visible;
+                    opacity: 1;
+                    transition: all 1s;
+                    img {
+                        visibility: visible;
+                        height: auto;
+                        opacity: 1;
+                        transition: all 2s;    
+                    }
+                }
             }
             .organizer-block__rating {
                 visibility: visible;
@@ -16,11 +29,12 @@
             .card-active-custom__header {
                 .btn-toggle {
                     .arrow {
-                        transform: rotate(270deg);
+                        transform: rotate(90deg);
                         transition: transform .3s;
                     }
                 }
             }
+            
         }
         //ОТображает изображения в подкатергориях
         &.desktop-subcat {
@@ -69,35 +83,57 @@
                 justify-content: space-between;
                 align-items: center;
             }
-
-            .btn-toggle {
-                position: absolute;
-                right: -30px;
-                top: 50px;
-                padding-right: 15px;
-                border: none;
-                background: transparent;
-                cursor: pointer;
-                appearance: none;
-                .arrow {
-                    transform: rotate(90deg);
-                    transition: transform .3s;
-                    background: transparent;
-
-                    &:after,
-                    &:before {
-                        background: $light-gray-color;
-                    }
-
-                    &:hover {
-
-                        &:after,
-                        &:before {
-                            background: $color-primary;
+            &-statusbar {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-wrap: nowrap;
+                position: relative;
+                .statusbar {
+                    display: inline-flex;
+                    width: 40%;
+                    max-width: 270px;
+                    margin-right: 10px;        
+                    p {
+                        font-style: normal;
+                        font-size: 11px;
+                        line-height: 15px;
+        
+                        span {
+                            font-weight: bold;
                         }
                     }
+        
                 }
+                .btn-toggle {
+                    position: absolute;
+                    right: -30px;
+                    padding-right: 15px;
+                    border: none;
+                    background: transparent;
+                    cursor: pointer;
+                    appearance: none;
+                    .arrow {
+                        transform: rotate(270deg);
+                        transition: transform .3s;
+                        background: transparent;
+    
+                        &:after,
+                        &:before {
+                            background: $light-gray-color;
+                        }
+    
+                        &:hover {
+    
+                            &:after,
+                            &:before {
+                                background: $color-primary;
+                            }
+                        }
+                    }
+                }    
             }
+
             .card-active-custom__status-block {
                 display: flex;
                 flex-direction: row;
@@ -118,7 +154,7 @@
             }
 
         }
-
+    
         .card-active-custom__heading {
             display: flex;
             align-items: flex-start;
@@ -203,50 +239,10 @@
             display: flex;
             flex-direction: column;
             padding-left: 5%;
-            margin-right: 20px;
-
-            // .card-active-custom__status-block {
-            //     display: flex;
-            //     flex-direction: row;
-            //     flex-wrap: wrap;
-            //     justify-content: space-between;    
-            //     flex-direction: row;
-            //     justify-content: flex-start;
-            //     align-items: baseline;
-            //     .like {
-            //         display: flex;
-            //         align-items: flex-start;
-            //     }    
-
-            //     p {
-            //         margin: 0 5px 0 0;
-            //         font-size: 11px;                    
-            //     }
-            // }
-            
-            
+            margin-right: 20px;            
         }
         .organizer-block__rating {
             visibility: hidden;
-        }
-        .card-active-custom__statusbar {
-            display: inline-flex;
-            width: 100%;
-            max-width: 270px;
-            margin-right: 45px;
-            .statusbar {
-                margin-right: 10px;
-            }
-
-            p {
-                font-style: normal;
-                font-size: 11px;
-                line-height: 15px;
-
-                span {
-                    font-weight: bold;
-                }
-            }
         }
 
         .card-active-custom__purchase-block {
@@ -278,11 +274,12 @@
         //Выпадающий блок
         .card-active-custom__toggle-block {
             display: flex;
+            height: auto;
             max-height: 0;
             margin-top: 15px;
             visibility: hidden;
             opacity: 0;
-            transition: max-height .3s;
+            transition: all .5s;
 
             .card-active-custom__access-lvl {
                 display: none;
@@ -290,6 +287,18 @@
 
             .card-active-custom__comments {
                 margin-right: 10px;
+            }
+            .img-container_middle {
+                height: 0;
+                visibility: hidden;
+                opacity: 0;
+                transition: all .5s;
+                img {
+                    visibility: hidden;
+                    height: 0;
+                    transition: all .5s;
+
+                }
             }
 
             //Подкатегории
