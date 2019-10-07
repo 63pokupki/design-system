@@ -9,6 +9,8 @@
     font-size: 10px;
     font-weight: 600;
     color: $statusbar_empty-color-txt;  
+    user-select: none;
+    
     &__line {
         @extend .statusbar;
         height: 100%;   
