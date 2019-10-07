@@ -45,12 +45,22 @@
 .card-active-custom__wrap.is-toggle {
     &.desktop {
         .card-active-custom__toggle-block {
-            height: auto;
             max-height: 1000px;
             visibility: visible;
             opacity: 1;
-            transition: max-height .8s;
-
+            transition: all .8s;
+            .img-container_middle {
+                height: auto;
+                visibility: visible;
+                opacity: 1;
+                transition: all 1s;
+                img {
+                    visibility: visible;
+                    height: auto;
+                    opacity: 1;
+                    transition: all 2s;    
+                }
+            }
         }
         .card-active-custom__header {
             .btn-toggle {
@@ -177,9 +187,6 @@
         }
 
         .card-active-custom__collection.start {
-            // .purchaseStatus__icon {
-                
-            // }
 
             .purchaseStatus_soon {
                 color: #0DC53D;
@@ -259,6 +266,7 @@
         }
 
         .card-active-custom__like {
+            margin-bottom: 15px;
             .icon-like {
                 stroke-width: 2;
             }
@@ -267,6 +275,7 @@
         .card-active-custom__organizer-block {
             display: flex;
             flex-direction: column;
+            align-items: center;
             margin-bottom: 10px;
             .rating-star-org {
                 display: none;
@@ -296,7 +305,19 @@
             margin-top: 15px;
             visibility: hidden;
             opacity: 0;
-            transition: max-height .3s;
+            transition: all .5s;
+            .img-container_middle {
+                height: 0;
+                visibility: hidden;
+                opacity: 0;
+                transition: all .5s;
+                img {
+                    visibility: hidden;
+                    height: 0;
+                    transition: all .5s;
+
+                }
+            }
         }
 
         .card-active-custom__toggle-left {

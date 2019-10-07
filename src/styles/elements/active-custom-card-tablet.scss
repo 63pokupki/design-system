@@ -5,11 +5,10 @@
 
         &.is-toggle {
             .card-active-custom__toggle-block {
-                height: auto;
                 max-height: 1000px;
                 visibility: visible;
                 opacity: 1;
-                transition: max-height .8s;
+                transition: all .8s;
                 .img-container_middle {
                     height: auto;
                     visibility: visible;
