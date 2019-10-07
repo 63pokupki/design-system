@@ -1,3 +1,162 @@
+// Карточка с основной информацией о закупке
+.stock-full {
+    background: white;
+
+    &__wrapper {
+        display: flex;
+        height: 350px;
+        position: relative;
+        overflow-x: visible;
+        overflow-y: hidden;
+
+        &:after {
+            content: "";
+            width: 100%;
+            height: 80px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+            background: linear-gradient(0deg, #ffffff 0%, rgba(255, 255, 255, 0) 105.88%);
+        }
+    }
+
+    &__wrapper.is-expanded {
+        height: auto;
+
+        &:after {
+            display: none;
+        }
+    }
+
+    &__col {
+        margin-right: 32px;
+    }
+
+    &__stock-cond {
+        flex-shrink: 0;
+    }
+
+    &__w-expand {
+        padding: 10px 0 20px;
+        text-align: center;
+    }
+
+    &__expand {
+        position: relative;
+        z-index: 3;
+        font-weight: 600;
+        &:active {
+            @include deep-click(0.95);
+        }
+    }
+}
+
+.stock-full.is-disabled {
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: rgba(255, 255, 255, 0.4);
+        z-index: 5;
+    }
+}
+
+// блок отзывов
+.stock-reviews {
+    &__all {
+        display: block;
+        font-weight: 600;
+        font-size: 12px;
+        margin-bottom: 13px;
+    }
+
+    &__review {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 10px;
+    }
+
+    &__info {
+        flex-shrink: 0;
+        margin-right: 15px;
+        min-width: 105px;
+    }
+
+    &__name {
+        display: block;
+        font-weight: 600;
+        font-size: 12px;
+        color: #1d1e1f;
+        margin-bottom: 4px;
+    }
+
+    &__date {
+        font-size: 12px;
+        color: #a2a3a5;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+        color: #666666;
+    }
+
+    &__leave-feedback {
+        display: flex;
+        width: 100%;
+        max-width: 185px;
+        margin: 30px auto 0px;
+    }
+
+    &__more-w {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    &__more {
+        font-size: 12px;
+    }
+
+    &__send {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        .stock-reviews__name {
+            min-width: 100px;
+        }
+    }
+
+    &__textarea {
+        padding: 8px;
+        outline: none;
+        border: 1px solid rgba(49, 140, 202, 0.25);
+        margin: 0 30px 0 25px;
+        width: 60%;
+        height: 105px;
+        resize: none;
+
+        &::placeholder {
+            font-size: 12px;
+            color: rgba(75, 75, 75, 0.4);
+        }
+    }
+
+    &__send-btn {
+        width: 100%;
+        max-width: 192px;
+    }
+}
+
 // блок размерной сетки закупки
 .stock-sizes-grid {
     position: relative;

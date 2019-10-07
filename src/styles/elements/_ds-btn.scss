@@ -17,11 +17,8 @@ $button-border-radius: 24px;
     border-radius: $button-border-radius;
     padding: 7px 18px;
     font-weight: 600;
+    font-size: $button-font-size;
     transition: background $transition-ultra-fast, color $transition-ultra-fast;
-
-    &__text {
-        font-size: $button-font-size;
-    }
 
     &:hover, &_hover {
         color: $button-color-primary;
