@@ -3,7 +3,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 // функция возвращающая массив html-webpack-plugin для шаблонов html по директории
-module.exports.templates = function templates(templateDirectoryArray = ["src/sections/common", "src/sections/specific", "src/sections/other"]) {
+module.exports.templates = function templates(templateDirectoryArray = ["src/sections/common", "src/sections/specific"]) {
     let templates = [];
 
     templateDirectoryArray.forEach(dir => {
