@@ -183,9 +183,9 @@
             transform: translateX(0px);
         }
 
-        // .slider-viewing {
-        //     // margin: 0 auto;
-        // }
+        .slider-viewing {
+            max-width: 320px;
+        }
         .arrow {
             &:after, &:before {
                 background: $color-primary;
