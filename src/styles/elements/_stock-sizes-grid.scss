@@ -1,0 +1,60 @@
+// блок размерной сетки закупки
+.stock-sizes-grid {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__count {
+        position: absolute;
+        left: 0;
+        top: 5px;
+        font-size: 12px;
+        color: #858585;
+    }
+
+    &__prev,
+    &__next {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 28px;
+        color: $color-primary;
+        height: 50px;
+        width: 50px;
+
+        &:hover {
+            background: whitesmoke;
+        }
+
+        &:active {
+            i {
+                @include deep-click();
+            }
+        }
+    }
+
+    &__prev {
+        left: 0;
+    }
+
+    &__next {
+        right: 0;
+    }
+
+    &__images {
+        overflow: hidden;
+    }
+
+    &__img {
+        display: none;
+        max-width: 100%;
+        max-height: 700px;
+
+        &.is-active {
+            display: initial;
+        }
+    }
+}

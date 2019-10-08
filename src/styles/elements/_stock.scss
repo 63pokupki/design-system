@@ -1,385 +1,110 @@
-//  Чекбокс
-.checkbox {
-    display: inline-flex;
-    padding-left: 25px;
-    min-width: 18px;
-    min-height: 14px;
-
-    &__input {
-        display: none;
-    }
-
-    &__label {
-        user-select: none;
-        cursor: pointer;
-        position: relative;
-
-        &:before {
-            content: "";
-            display: block;
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translate(-25px, -50%);
-            background: white;
-            border: 1px solid rgba(49, 140, 202, 0.75);
-            border-radius: 2px;
-            width: 18px;
-            height: 18px;
-        }
-
-        &:after {
-            content: "";
-            display: none;
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translate(-21px, -75%) rotate(-45deg);
-            border-bottom: 2px solid $color-primary;
-            border-left: 2px solid $color-primary;
-            width: 10px;
-            height: 6px;
-        }
-    }
-
-    &__input:checked + &__label {
-        &:after {
-            display: block;
-        }
-    }
-}
-
-.checkbox_no-chx {
-    padding-left: unset;
-
-    .checkbox__label {
-        &:before {
-            display: none;
-        }
-    }
-
-    .checkbox__input:checked + .checkbox__label {
-        &:after {
-            display: none;
-        }
-    }
-}
-
-.checkbox_circle {
-    .checkbox__label {
-        &:before {
-            border-radius: 50%;
-        }
-    }
-}
-
-.checkbox_inverted {
-    .checkbox__label {
-        &:before {
-            background: $color-primary;
-            border: 1px solid $color-primary;
-        }
-        &:after {
-            border-bottom: 2px solid white;
-            border-left: 2px solid white;
-        }
-    }
-}
-
-.checkbox_accent {
-    .checkbox__input:checked + .checkbox__label {
-        &:before {
-            background: $color-primary;
-            border: 1px solid $color-primary;
-        }
-
-        &:after {
-            border-bottom: 2px solid white;
-            border-left: 2px solid white;
-        }
-    }
-}
-
-// Сообщение что нет активного сбора, строка
-.no-active-message-bar {
-    display: flex;
+.stock-aside {
     width: 100%;
-    justify-content: center;
-    align-items: center;
-    background: #e0eef7;
-    padding: 15px;
-
-    &__link {
-        margin-left: 5px;
-    }
-}
-
-// Карточка с основной информацией о закупке
-.stock-full {
-    background: white;
-
-    &__wrapper {
-        display: flex;
-        height: 350px;
-        position: relative;
-        overflow-x: visible;
-        overflow-y: hidden;
-
-        &:after {
-            content: "";
-            width: 100%;
-            height: 80px;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            z-index: 2;
-            background: linear-gradient(0deg, #ffffff 0%, rgba(255, 255, 255, 0) 105.88%);
-        }
-    }
-
-    &__wrapper.is-expanded {
-        height: auto;
-
-        &:after {
-            display: none;
-        }
-    }
-
-    &__col {
-        margin-right: 32px;
-    }
-
-    &__stock-cond {
-        flex-shrink: 0;
-    }
-
-    &__w-expand {
-        padding: 10px 0 20px;
-        text-align: center;
-    }
-
-    &__expand {
-        position: relative;
-        z-index: 3;
-        font-weight: 600;
-        &:active {
-            @include deep-click(0.95);
-        }
-    }
-}
-
-.stock-full.is-disabled {
-    position: relative;
-
-    &:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: block;
-        background: rgba(255, 255, 255, 0.4);
-        z-index: 5;
-    }
-}
-
-// блок отзывов
-.stock-reviews {
-    &__all {
-        display: block;
-        font-weight: 600;
-        font-size: 12px;
-        margin-bottom: 13px;
-    }
-
-    &__review {
-        display: flex;
-        align-items: flex-start;
-        margin-bottom: 10px;
-    }
-
-    &__info {
-        flex-shrink: 0;
-        margin-right: 15px;
-        min-width: 105px;
-    }
-
-    &__name {
-        display: block;
-        font-weight: 600;
-        font-size: 12px;
-        color: #1d1e1f;
-        margin-bottom: 4px;
-    }
-
-    &__date {
-        font-size: 12px;
-        color: #a2a3a5;
-    }
-
-    &__text {
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 20px;
-        color: #666666;
-    }
-
-    &__leave-feedback {
-        display: flex;
-        width: 100%;
-        max-width: 185px;
-        margin: 30px auto 0px;
-    }
-
-    &__more-w {
-        text-align: center;
-        padding: 10px 0;
-    }
-
-    &__more {
-        font-size: 12px;
-    }
-
-    &__send {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        margin-top: 20px;
-
-        .stock-reviews__name {
-            min-width: 100px;
-        }
-    }
-
-    &__textarea {
-        padding: 8px;
-        outline: none;
-        border: 1px solid rgba(49, 140, 202, 0.25);
-        margin: 0 30px 0 25px;
-        width: 60%;
-        height: 105px;
-        resize: none;
-
-        &::placeholder {
-            font-size: 12px;
-            color: rgba(75, 75, 75, 0.4);
-        }
-    }
-
-    &__send-btn {
-        width: 100%;
-        max-width: 192px;
-    }
-}
-
-// блок размерной сетки закупки
-.stock-sizes-grid {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &__count {
-        position: absolute;
-        left: 0;
-        top: 5px;
-        font-size: 12px;
-        color: #858585;
-    }
-
-    &__prev,
-    &__next {
-        display: flex;
-        align-items: center;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 28px;
-        color: $color-primary;
-        height: 50px;
-        width: 50px;
-
-        &:hover {
-            background: whitesmoke;
-        }
-
-        &:active {
-            i {
-                @include deep-click();
-            }
-        }
-    }
-
-    &__prev {
-        left: 0;
-    }
-
-    &__next {
-        right: 0;
-    }
-
-    &__images {
-        overflow: hidden;
-    }
-
-    &__img {
-        display: none;
-        max-width: 100%;
-        max-height: 700px;
-
-        &.is-active {
-            display: initial;
-        }
-    }
-}
-
-// обертка картинки закупки
-.stock-img-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    max-width: 832px;
-    max-height: 200px;
-    overflow: hidden;
-
-    &__img {
-        max-width: 100%;
-        max-height: 100%;
-        height: auto;
-        width: auto;
-    }
-}
-
-// условия закупки
-.stock-cond {
-    background: white;
-    font-size: 12px;
-    color: #4b4b4b;
     max-width: 256px;
 
-    &__row {
-        margin-bottom: 9px;
-        &:last-child {
-            margin-bottom: unset;
+    &__heading {
+        font-weight: 600;
+        font-size: 16px;
+        color: #1d1e1f;
+        margin-right: 30px;
+    }
+
+    &__check-all {
+        font-size: 12px;
+    }
+}
+
+.catalog-list {
+    width: 100%;
+    margin-bottom: 10px;
+
+    &__category {
+        border-top: 1px solid $color-primary;
+        padding: 10px;
+        background: #e8f3f9;
+        font-weight: bold;
+        font-size: 13px;
+        color: #318cca;
+        border-radius: 0px 0px 2px 2px;
+    }
+
+    &__subcategory {
+        padding: 12px 10px 12px;
+        margin: unset;
+        font-size: 12px;
+        font-weight: normal;
+        color: #1d1e1f;
+    }
+
+    &__subcategory-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__item.has-badge {
+        padding-right: 30px;
+
+        .catalog-list__badge-retail-price,
+        .catalog-list__badge-sale {
+            user-select: none;
+            position: absolute;
+            text-align: center;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            top: 6px;
+            right: -14px;
+            width: 50px;
+            font-size: 9px;
+            line-height: 10px;
+            transform: rotate(45deg);
+        }
+
+        .catalog-list__badge-retail-price {
+            background: #318cca;
+            border-bottom: 1px solid #1a6aa1;
+        }
+
+        .catalog-list__badge-sale {
+            background: #ff4242;
+            border-bottom: 1px solid #a83131;
         }
     }
 
-    &__heading {
-        font-weight: bold;
-        font-size: 13px;
-        color: #3a3a3a;
-        margin-bottom: 13px;
+    &__item {
+        padding: 0px 5px 12px 10px;
+        font-size: 11px;
+        color: #606266;
+        overflow: hidden;
+        position: relative;
+
+        &:last-child {
+            padding-bottom: 15px;
+        }
     }
 
-    &__name {
-        font-weight: 600;
-        margin-right: 5px;
-        line-height: 20px;
-    }
+    // переопределяем вид и позицию чекбоксов
+    .checkbox {
+        width: 100%;
 
-    &__value {
-        color: rgb(102, 102, 102);
-        margin-right: 5px;
+        &__label {
+            line-height: 18px;
+            width: 100%;
+
+            &:before {
+                top: 1px;
+                transform: translate(-25px);
+            }
+
+            &:after {
+                top: 6px;
+                transform: translate(-21px) rotate(-45deg);
+            }
+
+            &:hover {
+                color: $color-primary;
+            }
+        }
     }
 }

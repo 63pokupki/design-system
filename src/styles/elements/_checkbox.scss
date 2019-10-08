@@ -1,0 +1,101 @@
+//  Чекбокс
+.checkbox {
+    display: inline-flex;
+    padding-left: 25px;
+    min-width: 18px;
+    min-height: 14px;
+
+    &__input {
+        display: none;
+    }
+
+    &__label {
+        user-select: none;
+        cursor: pointer;
+        position: relative;
+
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(-25px, -50%);
+            background: white;
+            border: 1px solid rgba(49, 140, 202, 0.75);
+            border-radius: 2px;
+            width: 18px;
+            height: 18px;
+        }
+
+        &:after {
+            content: "";
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(-21px, -75%) rotate(-45deg);
+            border-bottom: 2px solid $color-primary;
+            border-left: 2px solid $color-primary;
+            width: 10px;
+            height: 6px;
+        }
+    }
+
+    &__input:checked + &__label {
+        &:after {
+            display: block;
+        }
+    }
+}
+
+.checkbox_no-chx {
+    padding-left: unset;
+
+    .checkbox__label {
+        &:before {
+            display: none;
+        }
+    }
+
+    .checkbox__input:checked + .checkbox__label {
+        &:after {
+            display: none;
+        }
+    }
+}
+
+.checkbox_circle {
+    .checkbox__label {
+        &:before {
+            border-radius: 50%;
+        }
+    }
+}
+
+.checkbox_inverted {
+    .checkbox__label {
+        &:before {
+            background: $color-primary;
+            border: 1px solid $color-primary;
+        }
+        &:after {
+            border-bottom: 2px solid white;
+            border-left: 2px solid white;
+        }
+    }
+}
+
+.checkbox_accent {
+    .checkbox__input:checked + .checkbox__label {
+        &:before {
+            background: $color-primary;
+            border: 1px solid $color-primary;
+        }
+
+        &:after {
+            border-bottom: 2px solid white;
+            border-left: 2px solid white;
+        }
+    }
+}

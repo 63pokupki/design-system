@@ -1,0 +1,32 @@
+// условия закупки
+.stock-cond {
+    background: white;
+    font-size: 12px;
+    color: #4b4b4b;
+    max-width: 256px;
+
+    &__row {
+        margin-bottom: 9px;
+        &:last-child {
+            margin-bottom: unset;
+        }
+    }
+
+    &__heading {
+        font-weight: bold;
+        font-size: 13px;
+        color: #3a3a3a;
+        margin-bottom: 13px;
+    }
+
+    &__name {
+        font-weight: 600;
+        margin-right: 5px;
+        line-height: 20px;
+    }
+
+    &__value {
+        color: rgb(102, 102, 102);
+        margin-right: 5px;
+    }
+}

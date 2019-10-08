@@ -1,0 +1,11 @@
+// Сообщение что нет активного сбора, строка
+.no-active-message-bar {
+    width: 100%;
+    text-align: center;
+    background: #e0eef7;
+    padding: 15px;
+
+    &__link {
+        margin-left: 5px;
+    }
+}
