@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Шапка обёртки карточек активных закупок</title>
+</head>
+
+<body>
+
+    <h1 class="ds-title">Обёртка карточек(закупки)</h1>
+    <div class="ds-wrapper">
+        <h3 class="ds-title">Обёртка карточек(закупки) десктоп</h3>
+        <div class="ds-divider">
+            <div class="header-wrap-card_desktop">
+                <div class="header-wrap-card__tabs">
+                    <!-- Чтобы сделать вкладку активной, необходимо добавить класс .is-selected, соответствующей вкладке -->
+                    <div class="header-wrap-card__tab header-wrap-card__tab_all is-selected">Все закупки</div>
+                    <!-- Если выбранна вкладка "header-wrap-card__tab_unseen", добавить класс .is-visible блоку
+                    header-wrap-card__alert-info -->
+                    <div class="header-wrap-card__tab header-wrap-card__tab_unseen">Непросмотренные закупки</div>
+                </div>
+                <div class="header-wrap-card__sort">
+                    <div class="header-wrap-card__container-sorting">
+                        <div class="header-wrap-card__sorting sorting">
+                            <div class="sorting__btn">
+                                <div class="sorting__name">Сортировка по:</div>
+                                <span class="sorting__selected-position">Позиция 1 на десктопе</span>
+                            </div>
+                        </div>
+                        <div class="header-wrap-card__sorting sorting">
+                            <div class="sorting__btn">
+                                <div class="sorting__name">Фильтр по тегу:</div>
+                                <span class="sorting__selected-position">Позиция 1 на десктопе</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- "header-wrap-card__switcher-desktop нужен для скрытия 
+                        переключателя на экранах меньше десктопа -->
+                    <div class="header-wrap-card__switcher-desktop switcher">
+                        <input class="switcher__checkbox" type="checkbox" name="" id="switcher">
+                        <label class="switcher__label" for="switcher"></label>
+                        <label class="header-wrap-card__switcher-name" for="switcher">Полный режим
+                            отображения</label>
+                    </div>
+                </div>
+                <div class="header-wrap-card__container-switcher">
+                    <div class="header-wrap-card__switcher switcher">
+                        <input class="switcher__checkbox" type="checkbox" name="" id="switcher">
+                        <label class="switcher__label" for="switcher"></label>
+                        <label class="header-wrap-card__switcher-name" for="switcher">Полный режим
+                            отображения</label>
+                    </div>
+                </div>
+                <!-- Если выбрана вкладка "Непросмотренные закупки", отобразить этот блок -->
+                <div class="header-wrap-card__alert-info">Здесь отображаются все закупки, которые вы еще не успели
+                    посмотреть.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
+            <div class="header-wrap-card_desktop">
+                <div class="header-wrap-card__tabs">
+                    <!-- Чтобы сделать вкладку активной, необходимо добавить класс .is-selected, соответствующей вкладке -->
+                    <div class="header-wrap-card__tab allPurchase is-selected">Все закупки</div>
+                    <div class="header-wrap-card__tab unreadPurchase">Непросмотренные закупки</div>
+                </div>
+                <div class="header-wrap-card__sort">
+                    <div class="header-wrap-card__container-sorting">
+                        <div class="header-wrap-card__sorting sorting">
+                            <div class="sorting__btn">
+                                <div class="sorting__name">Сортировка по:</div>
+                                <span class="sorting__selected-position">Позиция 1 на десктопе</span>
+                            </div>
+                        </div>
+                        <div class="header-wrap-card__sorting sorting">
+                            <div class="sorting__btn">
+                                <div class="sorting__name">Фильтр по тегу:</div>
+                                <span class="sorting__selected-position">Позиция 1 на десктопе</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-wrap-card__container-switcher">
+                    <div class="header-wrap-card__switcher switcher">
+                        <input class="switcher__checkbox" type="checkbox" name="" id="switcher">
+                        <label class="switcher__label" for="switcher"></label>
+                        <label class="header-wrap-card__switcher-name" for="switcher">Полный режим
+                            отображения</label>
+                    </div>
+                    <!-- <div class="header-wrap-card__switcher-name">Полный режим отображения</div> -->
+                </div>
+            </div>    
+        </script>
+    </div>
+
+    <!-- Шапка карточек планшет -->
+
+
+
+</body>
+
+</html>
