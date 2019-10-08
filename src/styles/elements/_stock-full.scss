@@ -1,0 +1,70 @@
+// Карточка с основной информацией о закупке
+.stock-full {
+    background: white;
+    border-bottom: 1px solid rgba(49, 140, 202, 0.5);
+
+    &__wrapper {
+        display: flex;
+        height: 310px;
+        position: relative;
+        overflow-x: visible;
+        overflow-y: hidden;
+
+        &:after {
+            content: "";
+            width: 100%;
+            height: 80px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+            background: linear-gradient(0deg, #ffffff 0%, rgba(255, 255, 255, 0) 105.88%);
+        }
+    }
+
+    &__wrapper.is-expanded {
+        height: auto;
+
+        &:after {
+            display: none;
+        }
+    }
+
+    &__col {
+        margin-right: 32px;
+    }
+
+    &__stock-cond {
+        flex-shrink: 0;
+    }
+
+    &__w-expand {
+        padding: 10px 0 20px;
+        text-align: center;
+    }
+
+    &__expand {
+        position: relative;
+        z-index: 3;
+        font-weight: 600;
+        &:active {
+            @include deep-click(0.95);
+        }
+    }
+}
+
+.stock-full.is-disabled {
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: rgba(255, 255, 255, 0.4);
+        z-index: 5;
+    }
+}
