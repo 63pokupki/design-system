@@ -6,10 +6,10 @@
     align-items: center;
     width: 100%;
     margin: 0 auto;
+    padding: 25px;
+    background: $card-color-bg;
 
     //Опции:
-    //При выбранной вкладке "Непросмотренные закупки"
-    //отображаем информационный блок
     &_tablet, &_mobile {
         .header-wrap-card__container-switcher {
             display: flex;
@@ -18,6 +18,18 @@
         .header-wrap-card__switcher-desktop {
             display: none;
         }  
+    }
+    &_mobile {
+        .header-wrap-card__container-switcher {
+            .header-wrap-card__switcher-name {
+                order: 1;
+                margin-right: 10px;
+            }
+            .switcher__label {
+                order: 2;
+            }
+    
+        }
     }
     &__tabs {
         display: flex;
