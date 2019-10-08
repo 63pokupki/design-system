@@ -1,21 +1,35 @@
 
-.wrapper-card {
+.header-wrap-card {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     width: 100%;
     margin: 0 auto;
-    background: $bg-wrapper-card-color;
-    // padding: 5px;
-    .card-active-custom__wrap {
-        max-width: 100%;
+    padding: 0 25px;
+    background: $card-color-bg;
+
+    //Опции:
+    &_tablet, &_mobile {
+        .header-wrap-card__container-switcher {
+            display: flex;
+            width: 100%;
+        }
+        .header-wrap-card__switcher-desktop {
+            display: none;
+        }  
     }
-    &__header {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        position: sticky;
+    &_mobile {
+        .header-wrap-card__container-switcher {
+            .header-wrap-card__switcher-name {
+                order: 1;
+                margin-right: 10px;
+            }
+            .switcher__label {
+                order: 2;
+            }
+    
+        }
     }
     &__tabs {
         display: flex;
@@ -23,7 +37,6 @@
         justify-content: flex-start;
         align-items: center;
         width: 100%;
-        padding: 0 25px 0 25px;
         background: $card-color-bg;
         font-size: 13px;
         color: #000;
@@ -35,7 +48,8 @@
         justify-content: flex-start;
         align-items: center;
         height: 45px;
-        padding: 15px;
+        padding: 15px 0;
+        margin-right: 80px;
         cursor: pointer;
         &.is-selected {
             color: $color-primary;
@@ -49,10 +63,11 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
         position: relative;
         width: 100%;
         background: #fff;
-        padding: 5px 40px;
+        padding: 5px 0px;
         &-container {
             display: flex;
             flex-direction: row;
@@ -70,13 +85,12 @@
         margin-top: 2px;
     }
     &__container-switcher {
-        display: flex;
+        display: none;
         flex-direction: row;
         align-items: center;
         justify-content: flex-end;
         height: 40px;
         background: $bg-wrapper-card-color;
-
     }
     &__sorting {
         margin-right: 100px;
@@ -88,7 +102,6 @@
     }
     &__switcher {
         margin-right: 10px;
-        height: 16px;
         &-name {
             margin-left: 10px;
             font-size: 12px;
@@ -96,9 +109,24 @@
         }
         input:checked ~ .wrapper-card__switcher-name {
             color: $color-primary;
-        }        
+        }
+    }
+    &__alert-info {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        width: 100%;
+        margin-top: 20px;
+        background: $bg-wrapper-card-color;
+        &.is-visible {
+            display: flex;
+        }
     }
 }
+
+
+
 
 
 

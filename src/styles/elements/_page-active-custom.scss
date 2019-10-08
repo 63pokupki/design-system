@@ -1,0 +1,29 @@
+.pac {
+    background: #fff;
+    &__breadcrumb {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 40px;
+        padding: 0 25px;
+        background: #fff;
+    }
+    &__all-categories {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding: 0 25px;
+        background: #fff;
+        .slider {
+            overflow: hidden;
+        }
+    }
+    .wrapper-active-cards {
+        display: block;
+        width: 100%;
+        background: $bg-wrapper-card-color;
+    }
+}
+
+
