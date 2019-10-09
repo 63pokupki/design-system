@@ -183,9 +183,9 @@
             transform: translateX(0px);
         }
 
-        // .slider-viewing {
-        //     // margin: 0 auto;
-        // }
+        .slider-viewing {
+            max-width: 320px;
+        }
         .arrow {
             &:after, &:before {
                 background: $color-primary;
@@ -253,9 +253,11 @@
                 visibility: visible;
                 margin: 0;
                 font-size: 12px;
-                font-weight: normal;
+                font-weight: 600;
                 line-height: 14px;
                 text-align: center;
+                color: $dark-grey-color;
+
             }
 
             p:nth-child(1) {
@@ -312,7 +314,7 @@
         width: 100%;
         max-width: 100%;
         padding-right: 30px;
-        margin: 0;
+        margin: 10px 0 0 0;
         padding: 0 15px 15px 15px;
     }
 
