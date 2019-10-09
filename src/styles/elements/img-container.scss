@@ -5,6 +5,9 @@
     //Опции: Изменение размера в зависимости от экрана или потребностей
     //Резиновый
     &_resp {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 100%;
     }
     //Для очень больших экранов

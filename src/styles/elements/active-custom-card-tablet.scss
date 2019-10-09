@@ -77,12 +77,14 @@
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: flex-start;
+                margin-right: 20px;
             }
             &-collection{
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
+                margin-right: 20px;
             }
             &-statusbar {
                 display: flex;
@@ -106,6 +108,13 @@
                         }
                     }
         
+                }             
+                .icon-heart {
+                    font-size: 24px;
+                    color: $color-primary;
+                    &:hover {
+                        @extend .icon-heart-filled
+                    }                    
                 }
                 .btn-toggle {
                     position: absolute;
@@ -166,6 +175,7 @@
             font-size: 14px;
             line-height: 19px;
             flex-shrink: 2;
+            max-width: 50%;
 
             a {
                 color: $dark-brown-color;
@@ -309,9 +319,11 @@
             .card-active-custom__img-subcategory {
                 display: flex;
                 position: relative;
-                max-width: 152px;
-                max-height: 152px;
+                max-width: 190px;
+                max-height: 190px;
                 margin-right: 20px;
+                min-width: 185px;
+                min-height: 185px;
 
                 .hover-translucend {
                     display: flex;
@@ -319,10 +331,9 @@
                     justify-content: space-between;
                     align-items: center;
                     position: absolute;
-                    top: 71%;
                     // left: 0;
                     // right: 0;
-                    // bottom: 0;
+                    bottom: 0;
                     width: 100%;
                     height: 45px;
                     background: rgba(255, 255, 255, 0.8);
@@ -382,7 +393,7 @@
         .card-active-custom__description-status {
             display: flex;
             justify-content: space-between;
-            margin-top: 37px;
+            margin-top: 25px;
             
         }
         .card-active-custom__delivery-date,
@@ -416,6 +427,7 @@
             display: flex;
             max-height: 40px;
             height: auto;
+            margin-bottom: 5px;
             font-Size: 12px;
             line-height: 16px;
             text-align: left;            
@@ -446,12 +458,12 @@
             align-items: center;
             position: relative;
             width: 100%;
-            min-width: 350px;
+            // min-width: 350px;
             max-height: 220px;
         }
 
         .card-active-custom__description {
-            min-width: 330px;
+            min-width: 305px;
             max-width: 650px;
         }
 
@@ -460,7 +472,7 @@
             justify-content: center;
             align-items: center;
             width: 100%;
-            max-width: 350px;
+            // max-width: 350px;
             height: 100%;
 
             // img {
