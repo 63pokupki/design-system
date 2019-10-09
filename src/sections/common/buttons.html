@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Кнопки</title>
-    </head>
 
-    <body>
-        <h1 class="ds-title">Кнопки</h1>
-        <h3 class="ds-title">Стандартные кнопки</h3>
-        <div class="ds-wrapper">
-            <div class="ds-divider">
-                <button class="ds-btn">
-                    <div class="ds-btn__text">Стандартная кнопка</div>
-                </button>
-            </div>
-            <div class="ds-divider">
-                <button class="ds-btn ds-btn_hover">
-                    <div class="ds-btn__text">Кнопка при наведении</div>
-                </button>
-            </div>
-            <div class="ds-divider">
-                <button class="ds-btn ds-btn_flex">
-                    <div class="ds-btn__text">Кнопка на всю ширину</div>
-                </button>
-            </div>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Кнопки</title>
+</head>
+
+<body>
+    <h1 class="ds-title">Кнопки</h1>
+    <h3 class="ds-title">Стандартные кнопки</h3>
+    <div class="ds-wrapper">
+        <div class="ds-divider">
+            <button class="ds-btn">
+                <div class="ds-btn__text">Стандартная кнопка</div>
+            </button>
         </div>
-        <div class="ds-code-wrapper">
-            <script type="text/plain" class="language-markup">
+        <div class="ds-divider">
+            <button class="ds-btn ds-btn_hover">
+                <div class="ds-btn__text">Кнопка при наведении</div>
+            </button>
+        </div>
+        <div class="ds-divider">
+            <button class="ds-btn ds-btn_flex">
+                <div class="ds-btn__text">Кнопка на всю ширину</div>
+            </button>
+        </div>
+    </div>
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
                 <button class="ds-btn">
                     <div class="ds-btn__text">Стандартная кнопка</div>
                 </button>
@@ -41,67 +42,67 @@
                     <div class="ds-btn__text">Кнопка на всю ширину</div>
                 </button>
             </script>
+    </div>
+    <!-- Бургер -->
+    <div class="ds-wrapper">
+        <div class="ds-divider">
+            <button class="menu-btn">
+                <i class="icon icon-burger menu-btn__icon"></i>
+                <span class="menu-btn__text bold">Все закупки</span>
+            </button>
         </div>
-        <!-- Бургер -->
-        <div class="ds-wrapper">
-            <div class="ds-divider">
-                <button class="menu-btn">
-                    <i class="icon icon-burger menu-btn__icon"></i>
-                    <span class="menu-btn__text bold">Все закупки</span>
-                </button>
-            </div>
-        </div>
+    </div>
 
-        <div class="ds-code-wrapper">
-            <script type="text/plain" class="language-markup">
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
                 <button class="menu-btn">
                     <i class="icon icon-burger menu-btn__icon"></i>
                     <span class="menu-btn__text bold">Все закупки</span>
                 </button>
             </script>
-        </div>
+    </div>
 
-        <!-- Кнопка сортировки -->
-        <div class="ds-wrapper">
-            <div class="ds-text">
-                Если выбрана позиция (в модальном окне например), присвоить класс
-                <span class="ds-hl">.is-selected</span> контейнеру <span class="ds-hl">sorting</span>.
+    <!-- Кнопка сортировки -->
+    <div class="ds-wrapper">
+        <div class="ds-text">
+            Если выбрана позиция (в модальном окне например), присвоить класс
+            <span class="ds-hl">.is-selected</span> контейнеру <span class="ds-hl">sorting</span>.
+        </div>
+        <div class="ds-divider">
+            <div class="sorting">
+                <div class="sorting__btn">
+                    <div class="sorting__name">Сортировка по:</div>
+                    <span class="sorting__selected-position">Позиция 1 на десктопе</span>
+                </div>
             </div>
-            <div class="ds-divider">
+        </div>
+    </div>
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
                 <div class="sorting">
                     <div class="sorting__btn">
                         <div class="sorting__name">Сортировка по:</div>
                         <span class="sorting__selected-position">Позиция 1 на десктопе</span>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="ds-code-wrapper">
-            <script type="text/plain" class="language-markup">
-                <div class="sorting">
-                    <div class="sorting__btn">
-                        <div class="sorting__name">Сортировка по:</div>
-                        <span class="sorting__selected-position">Позиция 1 на десктопе</span>
-                    </div>
-                </div>
             </script>
+    </div>
+    <div class="ds-wrapper">
+        <div class="ds-text">
+            Для отображения выбранных позиций в столбец, добавить класс<span class="ds-hl">sorting_col</span>
+            контейнеру <span class="ds-hl">sorting</span>.
         </div>
-        <div class="ds-wrapper">
-            <div class="ds-text">
-                Для отображения выбранных позиций в столбец, добавить класс<span class="ds-hl">sorting_col</span>
-                контейнеру <span class="ds-hl">sorting</span>.
-            </div>
-            <div class="ds-divider">
-                <div class="sorting sorting_col">
-                    <div class="sorting__btn">
-                        <div class="sorting__name">Сортировка по:</div>
-                        <span class="sorting__selected-position">Позиция 1 на десктопе</span>
-                    </div>
+        <div class="ds-divider">
+            <div class="sorting sorting_col">
+                <div class="sorting__btn">
+                    <div class="sorting__name">Сортировка по:</div>
+                    <span class="sorting__selected-position">Позиция 1 на десктопе</span>
                 </div>
             </div>
         </div>
-        <div class="ds-code-wrapper">
-            <script type="text/plain" class="language-markup">
+    </div>
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
                 <div class="sorting sorting_mobile">
                     <div class="sorting__btn">
                         <div class="sorting__name">Сортировка по:</div>
@@ -109,59 +110,93 @@
                     </div>
                 </div>
             </script>
-        </div>
+    </div>
 
-        <!-- Кнопка влево/вправо DESK-->
-        <div class="ds-wrapper">
-            <div class="ds-text">Кнопка влево/вправо десктоп</div>
-            <div class="ds-text">
-                Для выбора нужного направления, присвоить соответствующий класс блоку <span class="ds-hl">arrow</span>,
-                например "<span class="ds-hl">arrow</span> <span class="ds-hl">arrow_up</span>"
-            </div>
-            <div class="ds-divider">
-                <div class="arrow arrow_right"></div>
-            </div>
+    <!-- Кнопка влево/вправо DESK-->
+    <div class="ds-wrapper">
+        <div class="ds-text">Кнопка влево/вправо десктоп</div>
+        <div class="ds-text">
+            Для выбора нужного направления, присвоить соответствующий класс блоку <span class="ds-hl">arrow</span>,
+            например "<span class="ds-hl">arrow</span> <span class="ds-hl">arrow_up</span>"
         </div>
+        <div class="ds-divider">
+            <div class="arrow arrow_right"></div>
+        </div>
+    </div>
 
-        <div class="ds-code-wrapper">
-            <script type="text/plain" class="language-markup">
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
                 <div class="arrow arrow_right"></div>
             </script>
+    </div>
+
+    <!-- Кнопка влево/вправо Mobile-->
+    <div class="ds-wrapper">
+        <div class="ds-text">Кнопка влево/вправо мобильные устройства</div>
+        <div class="ds-text">
+            Для выбора нужного направления, присвоить соответствующий класс блоку
+            <span class="ds-hl">arrow-mobile</span>, например "<span class="ds-hl">arrow-mobile</span>
+            <span class="ds-hl">arrow-mobile_up</span>"
         </div>
 
-        <!-- Кнопка влево/вправо Mobile-->
-        <div class="ds-wrapper">
-            <div class="ds-text">Кнопка влево/вправо мобильные устройства</div>
-            <div class="ds-text">
-                Для выбора нужного направления, присвоить соответствующий класс блоку
-                <span class="ds-hl">arrow-mobile</span>, например "<span class="ds-hl">arrow-mobile</span>
-                <span class="ds-hl">arrow-mobile_up</span>"
-            </div>
-
-            <div class="ds-divider">
-                <div class="arrow-mobile arrow-mobile_right"></div>
-            </div>
+        <div class="ds-divider">
+            <div class="arrow-mobile arrow-mobile_right"></div>
         </div>
-        <div class="ds-code-wrapper">
-            <script type="text/plain" class="language-markup">
+    </div>
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
                 <div class="arrow-mobile arrow-mobile_right"></div>
             </script>
-        </div>
+    </div>
 
-        <!-- Переключатель состояния -->
-        <div class="ds-wrapper">
-            <div class="switcher">
-                <input class="switcher__checkbox" type="checkbox" name="" id="switcher" />
-                <label class="switcher__label" for="switcher"></label>
-            </div>
+    <!-- Переключатель состояния -->
+    <div class="ds-wrapper">
+        <div class="switcher">
+            <input class="switcher__checkbox" type="checkbox" name="" id="switcher" />
+            <label class="switcher__label" for="switcher"></label>
         </div>
-        <div class="ds-code-wrapper">
-            <script type="text/plain" class="language-markup">
+    </div>
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
                 <div class="switcher">
                     <input class="switcher__checkbox" type="checkbox" name="" id="switcher">
                     <label class="switcher__label" for="switcher"></label>
                 </div>
             </script>
-        </div>
-    </body>
+    </div>
+
+    <!-- Пагинация -->
+    <div class="ds-wrapper">
+        <ul class="pagination">
+            <li class="pagination__item arrow-mobile arrow-mobile_left"></li>
+            <li class="pagination__item"><a href="">1</a></li>
+            <li class="pagination__item"><a href="">2</a></li>
+            <li class="pagination__item"><a href="">3</a></li>
+            <li class="pagination__item"><a href="">4</a></li>
+            <li class="pagination__item"><a href="">5</a></li>
+            <li class="pagination__item"><a href="">...</a></li>
+            <li class="pagination__item"><a href="">23</a></li>            
+            <li class="pagination__item arrow-mobile arrow-mobile_right"></li>
+        </ul>
+    </div>
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
+            <ul class="pagination">
+                <li class="pagination__item arrow-mobile arrow-mobile_left"></li>
+                <li class="pagination__item"><a href="">1</a></li>
+                <li class="pagination__item"><a href="">2</a></li>
+                <li class="pagination__item"><a href="">3</a></li>
+                <li class="pagination__item"><a href="">4</a></li>
+                <li class="pagination__item"><a href="">5</a></li>
+                <li class="pagination__item"><a href="">...</a></li>
+                <li class="pagination__item"><a href="">23</a></li>            
+                <li class="pagination__item arrow-mobile arrow-mobile_right"></li>
+            </ul>
+        </script>
+    </div>
+
+
+
+</body>
+
 </html>
