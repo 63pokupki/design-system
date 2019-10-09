@@ -11,7 +11,6 @@ body {
 
     &::-webkit-scrollbar-thumb {
         background-color: #318cca;
-        border-radius: 4px;
     }
 }
 
@@ -28,7 +27,7 @@ body {
     margin: 20px auto;
     padding: 20px;
     background-color: white;
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
 }
 
 .ds-text {
@@ -41,6 +40,44 @@ body {
     margin: 40px auto;
     border-radius: 10px;
     box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.5);
+}
+
+// обозначение интерактивности элемента
+.ds-i {
+    position: relative;
+
+    &:before {
+        content: "Интерактивный элемент";
+        display: block;
+        position: absolute;
+        background: #36a6f2;
+        padding: 10px 12px;
+        line-height: 15px;
+        color: white;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 600;
+        font-style: normal;
+        min-width: 120px;
+        box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.1);
+        bottom: 50%;
+        right: -15px;
+        left: auto;
+        transform: translate(100%, 50%);
+        text-align: center;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        background: #36a6f2;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        transform: translateY(-50%) rotate(45deg);
+        right: -21px;
+        top: 50%;
+    }
 }
 
 .ds-divider {
@@ -85,8 +122,6 @@ body {
     cursor: pointer !important;
 }
 
-
-
 pre[class*="language-"] {
     padding: 2rem !important;
     font-size: 1rem !important;
@@ -94,7 +129,6 @@ pre[class*="language-"] {
     border-radius: 10px !important;
     max-height: 500px !important;
     &::-webkit-scrollbar {
-        border-radius: 3px;
         width: 5px;
         height: 5px;
         padding: 0 2px;
@@ -102,7 +136,6 @@ pre[class*="language-"] {
     }
 
     &::-webkit-scrollbar-thumb {
-        border-radius: 3px;
         background-color: #318cca;
     }
 }
