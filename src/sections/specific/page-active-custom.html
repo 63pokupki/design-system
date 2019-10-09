@@ -306,7 +306,7 @@
                     элементу  card-active-custom__wrap(лучше по клику на card-active-custom__header) -->
             <!-- Для отображения опциональных елементов блока подкатегорий, добавить класс .desktop-subcat
                     главному блоку  card-active-custom__wrap -->
-            <div class="card-active-custom__wrap is-toggle desktop">
+            <div class="card-active-custom__wrap desktop">
                 <div class="card-active-custom__header">
                     <div class="card-active-custom__header-left-block">
                         <div class="card-active-custom__heading">
@@ -642,7 +642,7 @@
                 </div>
             </div>
 
-            <div class="card-active-custom__wrap is-toggle desktop desktop-subcat">
+            <div class="card-active-custom__wrap desktop desktop-subcat">
                 <div class="card-active-custom__header">
                     <div class="card-active-custom__header-left-block">
                         <div class="card-active-custom__heading">
@@ -858,6 +858,20 @@
             slider_button_prev.classList.toggle("is-inactive");
             slider_button_next.classList.toggle("is-inactive");
         });
+    </script>
+
+    <!-- Toggle block -->
+    <script>
+        let btnToggle   = document.querySelectorAll(".btn-toggle"),
+            toggleBlock = document.querySelectorAll(".card-active-custom__wrap");
+
+        for (let bt = 0; bt < btnToggle.length; bt++) {
+            for (let tb = 0; tb < toggleBlock.length; tb++) {
+                btnToggle[tb].addEventListener("click", () => {
+                    toggleBlock[tb].classList.toggle("is-toggle");
+                });                
+            }
+        }
     </script>
 
 
