@@ -811,6 +811,23 @@
             </div>
         </div><!-- wrapper-active-cards -->
 
+        <footer>
+            <div class="pagination-container">
+                <ul class="pagination">
+                    <li class="pagination__item"><i class="icon icon-arrow-left"></i></li>
+                    <li class="pagination__item"><a href="">1</a></li>
+                    <li class="pagination__item"><a href="">2</a></li>
+                    <li class="pagination__item"><a href="">3</a></li>
+                    <li class="pagination__item"><a href="">4</a></li>
+                    <li class="pagination__item"><a href="">5</a></li>
+                    <li class="pagination__item"><a href="">...</a></li>
+                    <li class="pagination__item"><a href="">23</a></li>
+                    <li class="pagination__item"><i class="icon icon-arrow-right"></i></li>
+                </ul>
+            </div>
+            <div class="footer-img"></div>
+        </footer>
+
     </div>
 
 
@@ -862,8 +879,8 @@
 
     <!-- Toggle block -->
     <script>
-        let btnToggle   = document.querySelectorAll(".btn-toggle"),
-            switcher    = document.querySelector(".switcher__label"),
+        let btnToggle = document.querySelectorAll(".btn-toggle"),
+            switcher = document.querySelector(".switcher__label"),
             toggleBlock = document.querySelectorAll(".card-active-custom__wrap");
 
         for (let bt = 0; bt < btnToggle.length; bt++) {
@@ -877,7 +894,7 @@
                 switcher.addEventListener('click', () => {
                     console.log("Click");
                     toggleBlock[tb].classList.toggle("is-toggle");
-                });                
+                });
             }
         }
 
