@@ -863,16 +863,26 @@
     <!-- Toggle block -->
     <script>
         let btnToggle   = document.querySelectorAll(".btn-toggle"),
+            switcher    = document.querySelector(".switcher__label"),
             toggleBlock = document.querySelectorAll(".card-active-custom__wrap");
 
         for (let bt = 0; bt < btnToggle.length; bt++) {
             for (let tb = 0; tb < toggleBlock.length; tb++) {
+                //Разворачиваем конкретную карточку
                 btnToggle[tb].addEventListener("click", () => {
+                    toggleBlock[tb].classList.toggle("is-toggle");
+                });
+
+                //Разворачиваем все карточки
+                switcher.addEventListener('click', () => {
+                    console.log("Click");
                     toggleBlock[tb].classList.toggle("is-toggle");
                 });                
             }
         }
+
     </script>
+
 
 
 </body>
