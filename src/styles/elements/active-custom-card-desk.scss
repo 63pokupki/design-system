@@ -308,6 +308,7 @@
         @media (max-width: 1148px) {
             .card-active-custom__organizer-block {
                 flex-direction: row-reverse;
+                max-height: 18px;
 
                 p {
                     margin-right: 5px;
