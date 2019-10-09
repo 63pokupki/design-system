@@ -5,27 +5,325 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Компоненты статичной страницы закупки</title>
-    <link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?0d69ff0fd87d872fc79f" rel="stylesheet"><link href="css/ds-utils.css?0d69ff0fd87d872fc79f" rel="stylesheet"><link href="css/ds-ui-kit.css?0d69ff0fd87d872fc79f" rel="stylesheet"></head>
+    <link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?61716beb7bd5ca95a992" rel="stylesheet"><link href="css/ds-utils.css?61716beb7bd5ca95a992" rel="stylesheet"><link href="css/ds-ui-kit.css?61716beb7bd5ca95a992" rel="stylesheet"></head>
     <body>
         <h1 class="ds-title">Компоненты статичной страницы закупки</h1>
 
         <h3 class="ds-title">Боковая секция стат. страницы (недоделано)</h3>
 
-        <div class="ds-wrapper">
+        <div class="ds-center">
             <aside class="stock-aside">
                 <div>
                     <span class="stock-aside__heading">Каталоги товаров</span>
                     <a class="link link_colored stock-aside__check-all" href="#">Выбрать все</a>
                 </div>
                 <div class="stock-aside__catalogs">
-                    <div class="catalog-list"></div>
+                    <div class="catalog-list">
+                        <div class="catalog-list__category">
+                            <div class="checkbox checkbox_inverted">
+                                <input checked="checked" class="checkbox__input" type="checkbox" id="c-01z" />
+                                <label class="checkbox__label" for="c-01z">Одежда и обувь для детей</label>
+                            </div>
+                        </div>
+                        <div class="catalog-list__subcategory">
+                            <div class="checkbox">
+                                <input checked="checked" class="checkbox__input" type="checkbox" id="c-02z" />
+                                <label class="checkbox__label" for="c-02z">Обувь для детей</label>
+                            </div>
+                        </div>
+                        <ul class="catalog-list__subcategory-list">
+                            <li class="catalog-list__item has-badge">
+                                <div class="checkbox">
+                                    <input checked="checked" class="checkbox__input" type="checkbox" id="c-03z" />
+                                    <label class="checkbox__label" for="c-03z"
+                                        >Зимняя ортопедическая детская обувь</label
+                                    >
+                                </div>
+                                <span title="Скидка" class="catalog-list__badge-sale">SALE</span>
+                            </li>
+                            <li class="catalog-list__item has-badge">
+                                <div class="checkbox">
+                                    <input checked="checked" class="checkbox__input" type="checkbox" id="c-04z" />
+                                    <label class="checkbox__label" for="c-04z">Детские ортопедические туфли</label>
+                                </div>
+                                <span title="Розничная цена" class="catalog-list__badge-retail-price">РЦ</span>
+                            </li>
+                            <li class="catalog-list__item">
+                                <div class="checkbox">
+                                    <input checked="checked" class="checkbox__input" type="checkbox" id="c-05z" />
+                                    <label class="checkbox__label" for="c-05z">Демисезонная ортопедическая</label>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="catalog-list__subcategory">
+                            <div class="checkbox">
+                                <input checked="checked" class="checkbox__input" type="checkbox" id="c-06z" />
+                                <label class="checkbox__label" for="c-06z">Верхняя одежда для детей</label>
+                            </div>
+                        </div>
+                        <ul class="catalog-list__subcategory-list">
+                            <li class="catalog-list__item">
+                                <div class="checkbox">
+                                    <input checked="checked" class="checkbox__input" type="checkbox" id="c-07z" />
+                                    <label class="checkbox__label" for="c-07z"
+                                        >Зимняя ортопедическая детская обувь</label
+                                    >
+                                </div>
+                            </li>
+                            <li class="catalog-list__item">
+                                <div class="checkbox">
+                                    <input checked="checked" class="checkbox__input" type="checkbox" id="c-08z" />
+                                    <label class="checkbox__label" for="c-08z">Детские ортопедические туфли</label>
+                                </div>
+                            </li>
+                            <li class="catalog-list__item">
+                                <div class="checkbox">
+                                    <input checked="checked" class="checkbox__input" type="checkbox" id="c-09z" />
+                                    <label class="checkbox__label" for="c-09z"
+                                        >Демисезонная ортопедическая детская</label
+                                    >
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="link link_hover stock-aside__show-all">Показать все</button>
                 </div>
+
+                <div class="stock-aside__filters"></div>
             </aside>
         </div>
 
+        <h3 class="ds-title">Фильтр</h3>
+
+        <div class="ds-wrapper ds-i" style="max-width: 296px">
+            <div class="stock-dropdown-filter">
+                <div class="stock-dropdown-filter__head">
+                    <div class="stock-dropdown-filter__heading">Размер</div>
+                    <div class="stock-dropdown-filter__meta">XL, M, XXXL, Большой, средний, малый..</div>
+                </div>
+                <div class="stock-dropdown-filter__bar">
+                    <span class="stock-dropdown-filter__num">Несколько позиций</span>
+                    <button class="link link_colored stock-dropdown-filter__all">выбрать все</button>
+                    <button class="link stock-dropdown-filter__clear">очистить</button>
+                </div>
+                <div class="stock-dropdown-filter__body">
+                    <ul class="item-params-list">
+                        <li class="item-params-list__item">36</li>
+                        <li class="item-params-list__item">37</li>
+                        <li class="item-params-list__item">38</li>
+                        <li class="item-params-list__item">39</li>
+                        <li class="item-params-list__item">40</li>
+                        <li class="item-params-list__item">40</li>
+                        <li class="item-params-list__item">Большой</li>
+                        <li class="item-params-list__item">XL</li>
+                        <li class="item-params-list__item">L</li>
+                        <li class="item-params-list__item">S</li>
+                        <li class="item-params-list__item">HNFG</li>
+                        <li class="item-params-list__item">40</li>
+                        <li class="item-params-list__item">Большой</li>
+                        <li class="item-params-list__item">Большой</li>
+                        <li class="item-params-list__item">XL</li>
+                        <li class="item-params-list__item">L</li>
+                        <li class="item-params-list__item">S</li>
+                        <li class="item-params-list__item">36</li>
+                        <li class="item-params-list__item">37</li>
+                        <li class="item-params-list__item">38</li>
+                        <li class="item-params-list__item">39</li>
+                        <li class="item-params-list__item">40</li>
+                        <li class="item-params-list__item">40</li>
+                        <li class="item-params-list__item">Большой</li>
+                        <li class="item-params-list__item">XL</li>
+                        <li class="item-params-list__item">L</li>
+                        <li class="item-params-list__item">S</li>
+                        <li class="item-params-list__item">HNFG</li>
+                        <li class="item-params-list__item">40</li>
+                        <li class="item-params-list__item">Большой</li>
+                        <li class="item-params-list__item">Большой</li>
+                        <li class="item-params-list__item">XL</li>
+                        <li class="item-params-list__item">L</li>
+                        <li class="item-params-list__item">S</li>
+                    </ul>
+                    <button class="link link_hover stock-dropdown-filter__toggle">Показать все</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="ds-wrapper">
+            <p>
+                Для раскрытия фильтра добавить класс
+                <span class="ds-hl">is-expanded</span> элементу <span class="ds-hl">stock-dropdown-filter</span>
+            </p>
+            <p>
+                Внутри находится блок item-params-list, поведение для него смотреть ниже
+            </p>
+        </div>
+
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <div class="stock-dropdown-filter">
+                    <div class="stock-dropdown-filter__head">
+                        <div class="stock-dropdown-filter__heading">Размер</div>
+                        <div class="stock-dropdown-filter__meta">XL, M, XXXL, Большой, средний, малый..</div>
+                    </div>
+                    <div class="stock-dropdown-filter__bar">
+                        <span class="stock-dropdown-filter__num">Несколько позиций</span>
+                        <button class="link link_colored stock-dropdown-filter__all">выбрать все</button>
+                        <button class="link stock-dropdown-filter__clear">очистить</button>
+                    </div>
+                    <div class="stock-dropdown-filter__body">
+                        <ul class="item-params-list">
+                            <li class="item-params-list__item">36</li>
+                            <li class="item-params-list__item">37</li>
+                            <li class="item-params-list__item">38</li>
+                            <li class="item-params-list__item">39</li>
+                            <li class="item-params-list__item">40</li>
+                            <li class="item-params-list__item">40</li>
+                            <li class="item-params-list__item">Большой</li>
+                            <li class="item-params-list__item">XL</li>
+                            <li class="item-params-list__item">L</li>
+                            <li class="item-params-list__item">S</li>
+                            <li class="item-params-list__item">HNFG</li>
+                            <li class="item-params-list__item">40</li>
+                            <li class="item-params-list__item">Большой</li>
+                            <li class="item-params-list__item">Большой</li>
+                            <li class="item-params-list__item">XL</li>
+                            <li class="item-params-list__item">L</li>
+                            <li class="item-params-list__item">S</li>
+                            <li class="item-params-list__item">36</li>
+                            <li class="item-params-list__item">37</li>
+                            <li class="item-params-list__item">38</li>
+                            <li class="item-params-list__item">39</li>
+                            <li class="item-params-list__item">40</li>
+                            <li class="item-params-list__item">40</li>
+                            <li class="item-params-list__item">Большой</li>
+                            <li class="item-params-list__item">XL</li>
+                            <li class="item-params-list__item">L</li>
+                            <li class="item-params-list__item">S</li>
+                            <li class="item-params-list__item">HNFG</li>
+                            <li class="item-params-list__item">40</li>
+                            <li class="item-params-list__item">Большой</li>
+                            <li class="item-params-list__item">Большой</li>
+                            <li class="item-params-list__item">XL</li>
+                            <li class="item-params-list__item">L</li>
+                            <li class="item-params-list__item">S</li>
+                        </ul>
+                        <button class="link link_hover stock-dropdown-filter__toggle">Показать все</button>
+                    </div>
+                </div>
+            </script>
+        </div>
+
+        <!--  -->
+        <!--  -->
+        <!--  -->
+        <!--  -->
+        <!--  -->
+
+        <h3 class="ds-title">Блок параметров товара</h3>
+
+        <div class="ds-wrapper ds-i" style="max-width: 296px">
+            <ul class="item-params-list">
+                <li class="item-params-list__item">36</li>
+                <li class="item-params-list__item">37</li>
+                <li class="item-params-list__item">38</li>
+                <li class="item-params-list__item">39</li>
+                <li class="item-params-list__item">40</li>
+                <li class="item-params-list__item">40</li>
+                <li class="item-params-list__item">Большой</li>
+                <li class="item-params-list__item">XL</li>
+                <li class="item-params-list__item">L</li>
+                <li class="item-params-list__item">S</li>
+                <li class="item-params-list__item">HNFG</li>
+                <li class="item-params-list__item">40</li>
+                <li class="item-params-list__item">Большой</li>
+                <li class="item-params-list__item">Большой</li>
+                <li class="item-params-list__item">XL</li>
+                <li class="item-params-list__item">L</li>
+                <li class="item-params-list__item">S</li>
+                <li class="item-params-list__item">36</li>
+                <li class="item-params-list__item">37</li>
+                <li class="item-params-list__item">38</li>
+                <li class="item-params-list__item">39</li>
+                <li class="item-params-list__item">40</li>
+                <li class="item-params-list__item">40</li>
+                <li class="item-params-list__item">Большой</li>
+                <li class="item-params-list__item">XL</li>
+                <li class="item-params-list__item">L</li>
+                <li class="item-params-list__item">S</li>
+                <li class="item-params-list__item">HNFG</li>
+                <li class="item-params-list__item">40</li>
+                <li class="item-params-list__item">Большой</li>
+                <li class="item-params-list__item">Большой</li>
+                <li class="item-params-list__item">XL</li>
+                <li class="item-params-list__item">L</li>
+                <li class="item-params-list__item">S</li>
+            </ul>
+            <button class="link link_hover stock-dropdown-filter__toggle">Скрыть/Раскрыть</button>
+        </div>
+
+        <div class="ds-wrapper">
+            <p>
+                Изначально вмещает в себя 3 строки с параметрами. Для раскрытия блока добавить класс
+                <span class="ds-hl">is-expanded</span> элементу <span class="ds-hl">item-params-list</span>
+            </p>
+            <p>
+                Для выбора параметра добавить класс <span class="ds-hl">is-selected</span> элементу
+                <span class="ds-hl">item-params-list__item</span>
+            </p>
+        </div>
+
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <ul class="item-params-list">
+                    <li class="item-params-list__item">36</li>
+                    <li class="item-params-list__item">37</li>
+                    <li class="item-params-list__item">38</li>
+                    <li class="item-params-list__item">39</li>
+                    <li class="item-params-list__item">40</li>
+                    <li class="item-params-list__item">40</li>
+                    <li class="item-params-list__item">Большой</li>
+                    <li class="item-params-list__item">XL</li>
+                    <li class="item-params-list__item">L</li>
+                    <li class="item-params-list__item">S</li>
+                    <li class="item-params-list__item">HNFG</li>
+                    <li class="item-params-list__item">40</li>
+                    <li class="item-params-list__item">Большой</li>
+                    <li class="item-params-list__item">Большой</li>
+                    <li class="item-params-list__item">XL</li>
+                    <li class="item-params-list__item">L</li>
+                    <li class="item-params-list__item">S</li>
+                    <li class="item-params-list__item">36</li>
+                    <li class="item-params-list__item">37</li>
+                    <li class="item-params-list__item">38</li>
+                    <li class="item-params-list__item">39</li>
+                    <li class="item-params-list__item">40</li>
+                    <li class="item-params-list__item">40</li>
+                    <li class="item-params-list__item">Большой</li>
+                    <li class="item-params-list__item">XL</li>
+                    <li class="item-params-list__item">L</li>
+                    <li class="item-params-list__item">S</li>
+                    <li class="item-params-list__item">HNFG</li>
+                    <li class="item-params-list__item">40</li>
+                    <li class="item-params-list__item">Большой</li>
+                    <li class="item-params-list__item">Большой</li>
+                    <li class="item-params-list__item">XL</li>
+                    <li class="item-params-list__item">L</li>
+                    <li class="item-params-list__item">S</li>
+                </ul>
+                <button class="link link_hover stock-dropdown-filter__toggle">Скрыть/Раскрыть</button>
+            </script>
+        </div>
+
+        <!--  -->
+        <!--  -->
+        <!--  -->
+        <!--  -->
+        <!--  -->
+
         <h3 class="ds-title">Секция каталогов</h3>
 
-        <div class="ds-wrapper" style="max-width: 296px;">
+        <div class="ds-wrapper ds-i" style="max-width: 296px;">
             <div class="catalog-list">
                 <div class="catalog-list__category">
                     <div class="checkbox checkbox_inverted">
@@ -160,6 +458,10 @@
                     </li>
                 </ul>
             </div>
+        </div>
+
+        <div class="ds-wrapper">
+            <p>Для добавления значка дописать класс<span class="ds-hl">has-badge</span> элементу <span class="ds-hl">catalog-list__item.</span> Внутрь вставить нужный значок (смотри пример)</p>
         </div>
 
         <div class="ds-code-wrapper">
@@ -305,8 +607,8 @@
 
         <div class="ds-center">
             <div class="no-active-message-bar semi-bold">
-                <span>Сейчас нет активного сбора. Чтобы не пропустить открытие</span>
-                <a href="#" class="link link_hover no-active-message-bar__link"> добавьте закупку в избранное</a>
+                <span>Сейчас нет активного сбора. Чтобы не пропустить открытие,</span>
+                <a href="#" class="link link_hover no-active-message-bar__link">добавьте закупку в избранное.</a>
             </div>
         </div>
 
@@ -1602,5 +1904,25 @@
         <!--  -->
         <!--  -->
         <!--  -->
-    <script type="text/javascript" src="js/highlight-syntax.js?0d69ff0fd87d872fc79f"></script><script type="text/javascript" src="js/ds-utils.js?0d69ff0fd87d872fc79f"></script><script type="text/javascript" src="js/categories-icons-sprite.js?0d69ff0fd87d872fc79f"></script><script type="text/javascript" src="js/ds-ui-kit.js?0d69ff0fd87d872fc79f"></script></body>
+
+        <!-- демонстрация, не использовать в проекте -->
+        <script>
+            const stock_dropdown_filter = document.querySelectorAll(".stock-dropdown-filter");
+            stock_dropdown_filter.forEach(filter => {
+                const heading = filter.querySelector(".stock-dropdown-filter__head");
+                heading.addEventListener("click", () => filter.classList.toggle("is-expanded"));
+            });
+
+            const item_params_list__items = document.querySelectorAll(".item-params-list__item");
+            item_params_list__items.forEach(item => {
+                item.addEventListener("click", () => item.classList.toggle("is-selected"));
+            });
+
+            const item_params_list = document.querySelectorAll(".item-params-list");
+            item_params_list.forEach(list => {
+                const link = list.nextElementSibling;
+                link.addEventListener("click", () => list.classList.toggle("is-expanded"));
+            });
+        </script>
+    <script type="text/javascript" src="js/highlight-syntax.js?61716beb7bd5ca95a992"></script><script type="text/javascript" src="js/ds-utils.js?61716beb7bd5ca95a992"></script><script type="text/javascript" src="js/categories-icons-sprite.js?61716beb7bd5ca95a992"></script><script type="text/javascript" src="js/ds-ui-kit.js?61716beb7bd5ca95a992"></script></body>
 </html>
