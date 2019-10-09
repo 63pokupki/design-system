@@ -16,25 +16,22 @@
             text-decoration: none;
             color: $pagination-txt-color;
         }
+
         &:hover, &:active {
             background: $color-primary;
             a {
                 color: #fff;
             }
-            &.arrow-mobile {
-                &:before, &:after {
-                    background: #fff;
+            .icon-arrow {
+                &-left, &-right {
+                    color: #fff;
                 }
             }
-
         }
-
-        &.arrow-mobile {
-            &:before, &:after {
-               height: 2px; 
-               left: 10px;
-            }
-
+    }
+    .icon-arrow {
+        &-left, &-right {
+            color: $pagination-txt-color;
         }
     }
 }
