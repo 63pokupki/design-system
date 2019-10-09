@@ -9,8 +9,10 @@
     background: $card-color-bg;
     transition: box-shadow .3s;
     &:hover {
+        position: relative;
         box-shadow: 1px 1px 6px rgba(65, 149, 206, 0.4);
         transition: box-shadow .5s;
+        z-index: 999;
     }
 
 
