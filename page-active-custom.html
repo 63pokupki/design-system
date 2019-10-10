@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Активные закупки</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?62eef7cd147cf5f2dc5d" rel="stylesheet"><link href="css/ds-utils.css?62eef7cd147cf5f2dc5d" rel="stylesheet"><link href="css/ds-ui-kit.css?62eef7cd147cf5f2dc5d" rel="stylesheet"></head>
+<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?101c007ecf14b8055c7c" rel="stylesheet"><link href="css/ds-utils.css?101c007ecf14b8055c7c" rel="stylesheet"><link href="css/ds-ui-kit.css?101c007ecf14b8055c7c" rel="stylesheet"></head>
 
 <body style="background: #fff;">
     <h1 class="ds-title">Страница активных закупок десктоп</h1>
@@ -266,12 +266,44 @@
                         <div class="sorting__btn">
                             <div id="btn_sorting" class="sorting__name">Сортировка по:</div>
                             <span class="sorting__selected-position">Позиция 1 на десктопе</span>
+                            <!-- Всплывающая сортировка -->
+                            <div class="ds-popover_sorting ds-popover">
+                                <div class="checkbox_no-chx">
+                                    <input class="checkbox__input" type="checkbox" id="chx-s-01" />
+                                    <label class="checkbox__label" for="chx-s-01">дате добавления</label>
+                                </div>
+                                <div class="checkbox_no-chx">
+                                    <input class="checkbox__input" type="checkbox" id="chx-s-02" />
+                                    <label class="checkbox__label" for="chx-s-02">релевантности</label>
+                                </div>
+                                <div class="checkbox_no-chx">
+                                    <input class="checkbox__input" type="checkbox" id="chx-s-03" />
+                                    <label class="checkbox__label" for="chx-s-03">рейтингу закупки</label>
+                                </div>
+                                <div class="checkbox_no-chx">
+                                    <input class="checkbox__input" type="checkbox" id="chx-s-04" />
+                                    <label class="checkbox__label" for="chx-s-04">среднему сроку доставки</label>
+                                </div>
+                                <div class="checkbox_no-chx">
+                                    <input class="checkbox__input" type="checkbox" id="chx-s-05" />
+                                    <label class="checkbox__label" for="chx-s-05">собранности</label>
+                                </div>
+                                <div class="checkbox_no-chx">
+                                    <input class="checkbox__input" type="checkbox" id="chx-s-06" />
+                                    <label class="checkbox__label" for="chx-s-06">организатору</label>
+                                </div>
+                                <div class="checkbox_no-chx">
+                                    <input class="checkbox__input" type="checkbox" id="chx-s-07" />
+                                    <label class="checkbox__label" for="chx-s-07">рейтингу организатора</label>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div id="sorting_cont" class="header-wrap-card__sorting sorting">
                         <div class="sorting__btn">
                             <div id="btn_filter" class="sorting__name">Фильтр по тегу:</div>
                             <span class="sorting__selected-position">Позиция 1 на десктопе</span>
+                            <!-- Всплывающий фильтр -->
                             <div class="ds-popover_filter ds-popover">
                                 <div class="checkbox">
                                     <input class="checkbox__input" type="checkbox" id="chx-01" />
@@ -937,20 +969,29 @@
 
     </script>
 
-    <!-- Всплывашка-фильтр -->
+    <!-- Всплывающий-фильтр -->
     <script>
-        let btn_filter     = document.querySelector("#btn_filter"),
+        let btn_filter = document.querySelector("#btn_filter"),
             popover_filter = document.querySelector(".ds-popover_filter");
 
-            btn_filter.addEventListener("click", () => {
-                console.log("Click");
-                popover_filter.classList.toggle("is-visible");
-            });
+        btn_filter.addEventListener("click", () => {
+            console.log("Click");
+            popover_filter.classList.toggle("is-visible");
+        });
+    </script>
 
+    <!-- Всплывающая сортировка -->
+    <script>
+        let btn_sorting = document.querySelector("#btn_sorting"),
+            popover_sorting = document.querySelector(".ds-popover_sorting");
+
+        btn_sorting.addEventListener("click", () => {
+            console.log("Click");
+            popover_sorting.classList.toggle("is-visible");
+        });
     </script>
 
 
-
-<script type="text/javascript" src="js/highlight-syntax.js?62eef7cd147cf5f2dc5d"></script><script type="text/javascript" src="js/ds-utils.js?62eef7cd147cf5f2dc5d"></script><script type="text/javascript" src="js/categories-icons-sprite.js?62eef7cd147cf5f2dc5d"></script><script type="text/javascript" src="js/ds-ui-kit.js?62eef7cd147cf5f2dc5d"></script></body>
+<script type="text/javascript" src="js/highlight-syntax.js?101c007ecf14b8055c7c"></script><script type="text/javascript" src="js/ds-utils.js?101c007ecf14b8055c7c"></script><script type="text/javascript" src="js/categories-icons-sprite.js?101c007ecf14b8055c7c"></script><script type="text/javascript" src="js/ds-ui-kit.js?101c007ecf14b8055c7c"></script></body>
 
 </html>
