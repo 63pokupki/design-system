@@ -21,6 +21,9 @@
             &:hover {
                 color: $color-primary;
             }
+            &:active {
+                color: $click-load-color;
+            }
         }
     }
 
