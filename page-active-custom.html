@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Активные закупки</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?61716beb7bd5ca95a992" rel="stylesheet"><link href="css/ds-utils.css?61716beb7bd5ca95a992" rel="stylesheet"><link href="css/ds-ui-kit.css?61716beb7bd5ca95a992" rel="stylesheet"></head>
+<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?004a043b9f45ea30c2ef" rel="stylesheet"><link href="css/ds-utils.css?004a043b9f45ea30c2ef" rel="stylesheet"><link href="css/ds-ui-kit.css?004a043b9f45ea30c2ef" rel="stylesheet"></head>
 
 <body style="background: #fff;">
     <h1 class="ds-title">Страница активных закупок десктоп</h1>
@@ -264,14 +264,51 @@
                 <div class="header-wrap-card__container-sorting">
                     <div class="header-wrap-card__sorting sorting">
                         <div class="sorting__btn">
-                            <div class="sorting__name">Сортировка по:</div>
+                            <div id="btn_sorting" class="sorting__name">Сортировка по:</div>
                             <span class="sorting__selected-position">Позиция 1 на десктопе</span>
                         </div>
                     </div>
-                    <div class="header-wrap-card__sorting sorting">
+                    <div id="sorting_cont" class="header-wrap-card__sorting sorting">
                         <div class="sorting__btn">
-                            <div class="sorting__name">Фильтр по тегу:</div>
+                            <div id="btn_filter" class="sorting__name">Фильтр по тегу:</div>
                             <span class="sorting__selected-position">Позиция 1 на десктопе</span>
+                            <div class="ds-popover_filter ds-popover">
+                                <div class="checkbox">
+                                    <input class="checkbox__input" type="checkbox" id="chx-01" />
+                                    <label class="checkbox__label" for="chx-01">топ закупки</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input class="checkbox__input" type="checkbox" id="chx-02" />
+                                    <label class="checkbox__label" for="chx-02">распродажи</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input class="checkbox__input" type="checkbox" id="chx-03" />
+                                    <label class="checkbox__label" for="chx-03">орг. сбор 0%</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input class="checkbox__input" type="checkbox" id="chx-04" />
+                                    <label class="checkbox__label" for="chx-04">скоро стоп</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input class="checkbox__input" type="checkbox" id="chx-05" />
+                                    <label class="checkbox__label" for="chx-05">конкурс</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input class="checkbox__input" type="checkbox" id="chx-06" />
+                                    <label class="checkbox__label" for="chx-06">впервые на сайте</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input class="checkbox__input" type="checkbox" id="chx-07" />
+                                    <label class="checkbox__label" for="chx-07">твары в пристрое</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input class="checkbox__input" type="checkbox" id="chx-08" />
+                                    <label class="checkbox__label" for="chx-08">премиум</label>
+                                </div>
+                                <button class="ds-btn-f ds-btn-f_disabled">
+                                    <div class="ds-btn__text">Применить</div>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -811,6 +848,23 @@
             </div>
         </div><!-- wrapper-active-cards -->
 
+        <footer>
+            <div class="pagination-container">
+                <ul class="pagination">
+                    <li class="pagination__item"><i class="icon icon-arrow-left"></i></li>
+                    <li class="pagination__item"><a href="">1</a></li>
+                    <li class="pagination__item"><a href="">2</a></li>
+                    <li class="pagination__item"><a href="">3</a></li>
+                    <li class="pagination__item"><a href="">4</a></li>
+                    <li class="pagination__item"><a href="">5</a></li>
+                    <li class="pagination__item"><a href="">...</a></li>
+                    <li class="pagination__item"><a href="">23</a></li>
+                    <li class="pagination__item"><i class="icon icon-arrow-right"></i></li>
+                </ul>
+            </div>
+            <div class="footer-img"></div>
+        </footer>
+
     </div>
 
 
@@ -862,8 +916,8 @@
 
     <!-- Toggle block -->
     <script>
-        let btnToggle   = document.querySelectorAll(".btn-toggle"),
-            switcher    = document.querySelector(".switcher__label"),
+        let btnToggle = document.querySelectorAll(".btn-toggle"),
+            switcher = document.querySelector(".switcher__label"),
             toggleBlock = document.querySelectorAll(".card-active-custom__wrap");
 
         for (let bt = 0; bt < btnToggle.length; bt++) {
@@ -877,14 +931,26 @@
                 switcher.addEventListener('click', () => {
                     console.log("Click");
                     toggleBlock[tb].classList.toggle("is-toggle");
-                });                
+                });
             }
         }
 
     </script>
 
+    <!-- Всплывашка-фильтр -->
+    <script>
+        let btn_filter     = document.querySelector("#btn_filter"),
+            popover_filter = document.querySelector(".ds-popover_filter");
+
+            btn_filter.addEventListener("click", () => {
+                console.log("Click");
+                popover_filter.classList.toggle("is-visible");
+            });
+
+    </script>
 
 
-<script type="text/javascript" src="js/highlight-syntax.js?61716beb7bd5ca95a992"></script><script type="text/javascript" src="js/ds-utils.js?61716beb7bd5ca95a992"></script><script type="text/javascript" src="js/categories-icons-sprite.js?61716beb7bd5ca95a992"></script><script type="text/javascript" src="js/ds-ui-kit.js?61716beb7bd5ca95a992"></script></body>
+
+<script type="text/javascript" src="js/highlight-syntax.js?004a043b9f45ea30c2ef"></script><script type="text/javascript" src="js/ds-utils.js?004a043b9f45ea30c2ef"></script><script type="text/javascript" src="js/categories-icons-sprite.js?004a043b9f45ea30c2ef"></script><script type="text/javascript" src="js/ds-ui-kit.js?004a043b9f45ea30c2ef"></script></body>
 
 </html>
