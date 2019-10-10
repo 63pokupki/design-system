@@ -94,6 +94,113 @@
             </aside>
         </div>
 
+        <h3 class="ds-title">Ценовой диапазон (надо обговорить добавление полей ввода под значения для мобильных)</h3>
+
+        <div class="ds-wrapper" style="max-width: 296px">
+            <div class="range-double">
+                <div class="range-double__values">
+                    <span class="range-double__min">0 руб.</span>
+                    <span class="range-double__max">25 000 руб.</span>
+                </div>
+                <div class="range-double__bar">
+                    <div class="range-double__thumb-min" style="left: 0%;"></div>
+                    <div class="range-double__active" style="left: 0%; width: 100%;"></div>
+                    <div class="range-double__thumb-max" style="left: 100%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ds-wrapper" style="max-width: 296px">
+            <div class="range-double">
+                <div class="range-double__values">
+                    <span class="range-double__min">0 руб.</span>
+                    <span class="range-double__max">12 500 руб.</span>
+                </div>
+                <div class="range-double__bar">
+                    <div class="range-double__thumb-min" style="left: 0%;"></div>
+                    <div class="range-double__active" style="left: 0%; width: 50%;"></div>
+                    <div class="range-double__thumb-max" style="left: 50%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ds-wrapper" style="max-width: 296px">
+            <div class="range-double">
+                <div class="range-double__values">
+                    <span class="range-double__min">5000 руб.</span>
+                    <span class="range-double__max">20 000 руб.</span>
+                </div>
+                <div class="range-double__bar">
+                    <div class="range-double__thumb-min" style="left: 25%;"></div>
+                    <div class="range-double__active" style="left: 25%; width: 50%;"></div>
+                    <div class="range-double__thumb-max" style="left: 75%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ds-wrapper">
+            <h3>Как выставлять значения для визуального отображения ценового диапазона:</h3>
+
+            <h4 class="semi-bold">Для ползунков:</h4>
+            <p>
+                Для задания значения левого и правого ползунков надо менять их inline значение
+                <span class="ds-hl">left</span>. <br />
+                0% от максимальной суммы фильтра будет равен left: 0%, а 100% от максимальной суммы фильтра будет равен
+                left: 100%
+            </p>
+
+            <h4 class="semi-bold">Для активной полоски на заднем фоне</h4>
+            <p>
+                Левое положение ставится равным положению ползунка минимума. Правое ставится по inline значению
+                <span class="ds-hl">width</span> (ширина) <br />
+                Ширина высчитывается как:
+                <span class="bold">Значение ползунка максимума - Значение ползунка минимума</span> (смотреть в примерах)
+            </p>
+        </div>
+
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <!-- пример от 0% до 100% -->
+                <div class="range-double">
+                    <div class="range-double__values">
+                        <span class="range-double__min">0 руб.</span>
+                        <span class="range-double__max">25 000 руб.</span>
+                    </div>
+                    <div class="range-double__bar">
+                        <div class="range-double__thumb-min" style="left: 0%;"></div>
+                        <div class="range-double__active" style="left: 0%; width: 100%;"></div>
+                        <div class="range-double__thumb-max" style="left: 100%;"></div>
+                    </div>
+                </div>
+
+                <!-- пример от 0% до 50% -->
+                <div class="range-double">
+                    <div class="range-double__values">
+                        <span class="range-double__min">0 руб.</span>
+                        <span class="range-double__max">12 500 руб.</span>
+                    </div>
+                    <div class="range-double__bar">
+                        <div class="range-double__thumb-min" style="left: 0%;"></div>
+                        <div class="range-double__active" style="left: 0%; width: 50%;"></div>
+                        <div class="range-double__thumb-max" style="left: 50%;"></div>
+                    </div>
+                </div>
+
+                <!-- пример от 25% до 75% -->
+                <div class="range-double">
+                    <div class="range-double__values">
+                        <span class="range-double__min">5000 руб.</span>
+                        <span class="range-double__max">20 000 руб.</span>
+                    </div>
+                    <div class="range-double__bar">
+                        <div class="range-double__thumb-min" style="left: 25%;"></div>
+                        <div class="range-double__active" style="left: 25%; width: 50%;"></div>
+                        <div class="range-double__thumb-max" style="left: 75%;"></div>
+                    </div>
+                </div>
+            </script>
+        </div>
+
         <h3 class="ds-title">Фильтр</h3>
 
         <div class="ds-wrapper ds-i" style="max-width: 296px">
@@ -461,7 +568,10 @@
         </div>
 
         <div class="ds-wrapper">
-            <p>Для добавления значка дописать класс<span class="ds-hl">has-badge</span> элементу <span class="ds-hl">catalog-list__item.</span> Внутрь вставить нужный значок (смотри пример)</p>
+            <p>
+                Для добавления значка дописать класс<span class="ds-hl">has-badge</span> элементу
+                <span class="ds-hl">catalog-list__item.</span> Внутрь вставить нужный значок (смотри пример)
+            </p>
         </div>
 
         <div class="ds-code-wrapper">

@@ -1,3 +1,47 @@
+.range-double {
+    &__values {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 11px;
+        color: #606266;
+        margin-bottom: 10px;
+    }
+    
+
+    &__bar {
+        position: relative;
+        height: 2px;
+        width: 100%;
+        background: rgba(94, 162, 208, 0.5);
+    }
+
+    &__active {
+        position: absolute;
+        height: 100%;
+        background: #36A6F2;
+        max-width: 100%;
+        min-width: 0%;
+    }
+
+    &__thumb-min, &__thumb-max {
+        position: absolute;
+        cursor: pointer;
+        height: 16px;
+        width: 16px;
+        background: #36A6F2;
+        border: 1px solid #FFFFFF;
+        border-radius: 50%;
+        top: 50%;
+        transform: translate(-8px, -50%);
+        z-index: 2;
+
+        &:active {
+            background: #0080F6;
+        }
+    }
+}
+
 .stock-dropdown-filter {
     max-width: 256px;
     border-bottom: 1px solid #e3e3e3;
