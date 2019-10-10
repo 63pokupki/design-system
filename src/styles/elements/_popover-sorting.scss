@@ -1,0 +1,26 @@
+
+.ds-popover_sorting {
+    display: inline-flex;
+    padding: 10px 15px;
+    .checkbox {
+        margin-bottom: 6px;
+
+        &__label {
+            color: $light-gray-txt-color;
+            font-size: 10px;
+            &:after {
+                transform: translate(-24px, -75%) rotate(-45deg);
+            }
+            &:before {
+                width: 12px;
+                height: 12px;                
+            }
+            white-space: nowrap;
+            &:hover {
+                color: $color-primary;
+            }
+        }
+    }
+}
+
+
