@@ -1,0 +1,40 @@
+.pagination {
+    display: flex;
+    flex-direction: row;
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 30px;
+        height: 30px;
+        margin: 0 5px;
+        border-radius: 2px;
+        background: $pagination-color;
+        cursor: pointer;
+        a {
+            font-weight: 600;
+            text-decoration: none;
+            color: $pagination-txt-color;
+        }
+
+        &:hover, &:active {
+            background: $color-primary;
+            a {
+                color: #fff;
+            }
+            .icon-arrow {
+                &-left, &-right {
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .icon-arrow {
+        &-left, &-right {
+            color: $pagination-txt-color;
+        }
+    }
+}
+
+
+
