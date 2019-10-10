@@ -264,15 +264,15 @@
                 <div class="header-wrap-card__container-sorting">
                     <div class="header-wrap-card__sorting sorting">
                         <div class="sorting__btn">
-                            <div class="sorting__name">Сортировка по:</div>
+                            <div id="btn_sorting" class="sorting__name">Сортировка по:</div>
                             <span class="sorting__selected-position">Позиция 1 на десктопе</span>
                         </div>
                     </div>
-                    <div class="header-wrap-card__sorting sorting">
+                    <div id="sorting_cont" class="header-wrap-card__sorting sorting">
                         <div class="sorting__btn">
-                            <div class="sorting__name">Фильтр по тегу:</div>
+                            <div id="btn_filter" class="sorting__name">Фильтр по тегу:</div>
                             <span class="sorting__selected-position">Позиция 1 на десктопе</span>
-                            <div class="ds-popover">
+                            <div class="ds-popover_filter ds-popover">
                                 <div class="checkbox">
                                     <input class="checkbox__input" type="checkbox" id="chx-01" />
                                     <label class="checkbox__label" for="chx-01">топ закупки</label>
@@ -287,25 +287,25 @@
                                 </div>
                                 <div class="checkbox">
                                     <input class="checkbox__input" type="checkbox" id="chx-04" />
-                                    <label class="checkbox__label" for="chx-04">Скоро стоп</label>
+                                    <label class="checkbox__label" for="chx-04">скоро стоп</label>
                                 </div>
                                 <div class="checkbox">
                                     <input class="checkbox__input" type="checkbox" id="chx-05" />
-                                    <label class="checkbox__label" for="chx-05">Конкурс</label>
+                                    <label class="checkbox__label" for="chx-05">конкурс</label>
                                 </div>
                                 <div class="checkbox">
                                     <input class="checkbox__input" type="checkbox" id="chx-06" />
-                                    <label class="checkbox__label" for="chx-06">Впервые на сайте</label>
+                                    <label class="checkbox__label" for="chx-06">впервые на сайте</label>
                                 </div>
                                 <div class="checkbox">
                                     <input class="checkbox__input" type="checkbox" id="chx-07" />
-                                    <label class="checkbox__label" for="chx-07">Твары в пристрое</label>
+                                    <label class="checkbox__label" for="chx-07">твары в пристрое</label>
                                 </div>
                                 <div class="checkbox">
                                     <input class="checkbox__input" type="checkbox" id="chx-08" />
                                     <label class="checkbox__label" for="chx-08">премиум</label>
                                 </div>
-                                <button class="ds-btn ds-btn_hover">
+                                <button class="ds-btn-f ds-btn-f_disabled">
                                     <div class="ds-btn__text">Применить</div>
                                 </button>
                             </div>
@@ -934,6 +934,18 @@
                 });
             }
         }
+
+    </script>
+
+    <!-- Всплывашка-фильтр -->
+    <script>
+        let btn_filter     = document.querySelector("#btn_filter"),
+            popover_filter = document.querySelector(".ds-popover_filter");
+
+            btn_filter.addEventListener("click", () => {
+                console.log("Click");
+                popover_filter.classList.toggle("is-visible");
+            });
 
     </script>
 
