@@ -4,6 +4,8 @@ body {
     background: #eef2f4;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+
     &::-webkit-scrollbar {
         width: 10px;
         background-color: #dbdbdb;
@@ -18,8 +20,8 @@ body {
     width: 100%;
     text-align: center;
     color: #343b4c;
-    margin-block-start: 2em;
-    margin-block-end: 2em;
+    margin-block-start: 1.5em;
+    margin-block-end: 1.5em;
 }
 
 .ds-wrapper {
