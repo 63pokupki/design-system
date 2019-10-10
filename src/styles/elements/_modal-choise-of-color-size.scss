@@ -1,0 +1,17 @@
+
+.modal-choise-of-color-size {
+    .modal {
+        &__wrap {
+            &__btn-container {
+                display: inline-flex;
+               
+            }
+            .ds-btn__text {
+                .icon-cart {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
