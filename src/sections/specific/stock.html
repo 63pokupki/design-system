@@ -97,6 +97,29 @@
         <h3 class="ds-title">Ценовой диапазон (надо обговорить добавление полей ввода под значения для мобильных)</h3>
 
         <div class="ds-wrapper" style="max-width: 296px">
+            <div class="stock-dropdown-filter has-tooltip-force">
+                <div class="stock-dropdown-filter__head">
+                    <div class="stock-dropdown-filter__heading">Ценовой диапазон</div>
+                    <div class="stock-dropdown-filter__meta">От 0 - до 12 500</div>
+                </div>
+                <div class="stock-dropdown-filter__body" style="padding: 0 6px;">
+                    <div class="range-double">
+                        <div class="range-double__values">
+                            <span class="range-double__min">0 руб.</span>
+                            <span class="range-double__max">12 500 руб.</span>
+                        </div>
+                        <div class="range-double__bar">
+                            <div class="range-double__thumb-min" style="left: 0%;"></div>
+                            <div class="range-double__active" style="left: 0%; width: 50%;"></div>
+                            <div class="range-double__thumb-max" style="left: 50%;"></div>
+                        </div>
+                    </div>
+                    <button class="tooltip tooltip_right stock-dropdown-filter__accept">Применить</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="ds-wrapper" style="max-width: 296px">
             <div class="range-double">
                 <div class="range-double__values">
                     <span class="range-double__min">0 руб.</span>
@@ -256,10 +279,68 @@
             </div>
         </div>
 
+        <div class="ds-wrapper" style="max-width: 296px">
+            <div class="stock-dropdown-filter is-expanded has-tooltip-force">
+                <div class="stock-dropdown-filter__head">
+                    <div class="stock-dropdown-filter__heading">Размер</div>
+                    <div class="stock-dropdown-filter__meta">XL, M, XXXL, Большой, средний, малый..</div>
+                </div>
+                <div class="stock-dropdown-filter__bar">
+                    <span class="stock-dropdown-filter__num">1 позиция</span>
+                    <button class="link link_colored stock-dropdown-filter__all">выбрать все</button>
+                    <button class="link stock-dropdown-filter__clear">очистить</button>
+                </div>
+                <div class="stock-dropdown-filter__body">
+                    <ul class="item-params-list">
+                        <li class="item-params-list__item">36</li>
+                        <li class="item-params-list__item">37</li>
+                        <li class="item-params-list__item is-selected">38</li>
+                        <li class="item-params-list__item">39</li>
+                        <li class="item-params-list__item">40</li>
+                        <li class="item-params-list__item">40</li>
+                        <li class="item-params-list__item">Большой</li>
+                        <li class="item-params-list__item">XL</li>
+                        <li class="item-params-list__item">L</li>
+                        <li class="item-params-list__item">S</li>
+                        <li class="item-params-list__item">HNFG</li>
+                        <li class="item-params-list__item">40</li>
+                        <li class="item-params-list__item">Большой</li>
+                        <li class="item-params-list__item">Большой</li>
+                        <li class="item-params-list__item">XL</li>
+                        <li class="item-params-list__item">L</li>
+                        <li class="item-params-list__item">S</li>
+                        <li class="item-params-list__item">36</li>
+                        <li class="item-params-list__item">37</li>
+                        <li class="item-params-list__item">38</li>
+                        <li class="item-params-list__item">39</li>
+                        <li class="item-params-list__item">40</li>
+                        <li class="item-params-list__item">40</li>
+                        <li class="item-params-list__item">Большой</li>
+                        <li class="item-params-list__item">XL</li>
+                        <li class="item-params-list__item">L</li>
+                        <li class="item-params-list__item">S</li>
+                        <li class="item-params-list__item">HNFG</li>
+                        <li class="item-params-list__item">40</li>
+                        <li class="item-params-list__item">Большой</li>
+                        <li class="item-params-list__item">Большой</li>
+                        <li class="item-params-list__item">XL</li>
+                        <li class="item-params-list__item">L</li>
+                        <li class="item-params-list__item">S</li>
+                    </ul>
+                    <button class="link link_hover stock-dropdown-filter__toggle">Показать все</button>
+                    <button class="tooltip tooltip_right stock-dropdown-filter__accept">Применить</button>
+                </div>
+            </div>
+        </div>
+
         <div class="ds-wrapper">
             <p>
                 Для раскрытия фильтра добавить класс
                 <span class="ds-hl">is-expanded</span> элементу <span class="ds-hl">stock-dropdown-filter</span>
+            </p>
+            <p>
+                Для показа кнопки Применить поставить класс <span class="ds-hl"> has-tooltip-force</span> элементу
+                <span class="ds-hl">stock-dropdown-filter</span>
             </p>
             <p>
                 Внутри находится блок item-params-list, поведение для него смотреть ниже
@@ -316,6 +397,7 @@
                             <li class="item-params-list__item">S</li>
                         </ul>
                         <button class="link link_hover stock-dropdown-filter__toggle">Показать все</button>
+                        <button class="tooltip tooltip_right stock-dropdown-filter__accept">Применить</button>
                     </div>
                 </div>
             </script>
@@ -865,7 +947,7 @@
                             <span class="stock-cond__name">Орг. сбор:</span>
                             <span class="stock-cond__value">16 % (не менее 16 р.)</span>
                             <i class="icon icon-info has-tooltip">
-                                <span class="tooltip tooltip_left tooltip_triangle">
+                                <span class="tooltip tooltip_left ">
                                     Что такое орг. сбор вы можете прочитать
                                     <a class="link link_hover" href="#">здесь</a>
                                 </span>
@@ -875,7 +957,7 @@
                             <span class="stock-cond__name">Ряды:</span>
                             <span class="stock-cond__value">Есть</span>
                             <i class="icon icon-info has-tooltip">
-                                <span class="tooltip tooltip_left tooltip_triangle">
+                                <span class="tooltip tooltip_left ">
                                     Что такое ряды вы можете прочитать <a class="link link_hover" href="#">здесь</a>
                                 </span>
                             </i>
@@ -892,7 +974,7 @@
                             <span class="stock-cond__name">Средний срок поставки:</span>
                             <span class="stock-cond__value">45 дней</span>
                             <i class="icon icon-info has-tooltip">
-                                <span class="tooltip tooltip_left tooltip_triangle">
+                                <span class="tooltip tooltip_left ">
                                     Что такое средний срок поставки вы можете прочитать
                                     <a class="link link_hover" href="#">здесь</a>
                                 </span>
@@ -1054,7 +1136,7 @@
                                 <span class="stock-cond__name">Орг. сбор:</span>
                                 <span class="stock-cond__value">16 % (не менее 16 р.)</span>
                                 <i class="icon icon-info has-tooltip">
-                                    <span class="tooltip tooltip_left tooltip_triangle">
+                                    <span class="tooltip tooltip_left ">
                                         Что такое орг. сбор вы можете прочитать
                                         <a class="link link_hover" href="#">здесь</a>
                                     </span>
@@ -1064,7 +1146,7 @@
                                 <span class="stock-cond__name">Ряды:</span>
                                 <span class="stock-cond__value">Есть</span>
                                 <i class="icon icon-info has-tooltip">
-                                    <span class="tooltip tooltip_left tooltip_triangle">
+                                    <span class="tooltip tooltip_left ">
                                         Что такое ряды вы можете прочитать <a class="link link_hover" href="#">здесь</a>
                                     </span>
                                 </i>
@@ -1081,7 +1163,7 @@
                                 <span class="stock-cond__name">Средний срок поставки:</span>
                                 <span class="stock-cond__value">45 дней</span>
                                 <i class="icon icon-info has-tooltip">
-                                    <span class="tooltip tooltip_left tooltip_triangle">
+                                    <span class="tooltip tooltip_left ">
                                         Что такое средний срок поставки вы можете прочитать
                                         <a class="link link_hover" href="#">здесь</a>
                                     </span>
@@ -1503,7 +1585,7 @@
                     <span class="stock-cond__name">Орг. сбор:</span>
                     <span class="stock-cond__value">16 % (не менее 16 р.)</span>
                     <i class="icon icon-info has-tooltip">
-                        <span class="tooltip tooltip_triangle">
+                        <span class="tooltip ">
                             Что такое орг. сбор вы можете прочитать <a class="link link_hover" href="#">здесь</a>
                         </span>
                     </i>
@@ -1512,7 +1594,7 @@
                     <span class="stock-cond__name">Ряды:</span>
                     <span class="stock-cond__value">Есть</span>
                     <i class="icon icon-info has-tooltip">
-                        <span class="tooltip tooltip_triangle">
+                        <span class="tooltip ">
                             Что такое ряды вы можете прочитать <a class="link link_hover" href="#">здесь</a>
                         </span>
                     </i>
@@ -1529,7 +1611,7 @@
                     <span class="stock-cond__name">Средний срок поставки:</span>
                     <span class="stock-cond__value">45 дней</span>
                     <i class="icon icon-info has-tooltip">
-                        <span class="tooltip tooltip_triangle">
+                        <span class="tooltip ">
                             Что такое средний срок поставки вы можете прочитать
                             <a class="link link_hover" href="#">здесь</a>
                         </span>
@@ -1576,7 +1658,7 @@
                         <span class="stock-cond__name">Орг. сбор:</span>
                         <span class="stock-cond__value">16 % (не менее 16 р.)</span>
                         <i class="icon icon-info has-tooltip">
-                            <span class="tooltip tooltip_triangle">
+                            <span class="tooltip ">
                                 Что такое орг. сбор вы можете прочитать <a class="link link_hover" href="#">здесь</a>
                             </span>
                         </i>
@@ -1585,7 +1667,7 @@
                         <span class="stock-cond__name">Ряды:</span>
                         <span class="stock-cond__value">Есть</span>
                         <i class="icon icon-info has-tooltip">
-                            <span class="tooltip tooltip_triangle">
+                            <span class="tooltip ">
                                 Что такое ряды вы можете прочитать <a class="link link_hover" href="#">здесь</a>
                             </span>
                         </i>
@@ -1602,7 +1684,7 @@
                         <span class="stock-cond__name">Средний срок поставки:</span>
                         <span class="stock-cond__value">45 дней</span>
                         <i class="icon icon-info has-tooltip">
-                            <span class="tooltip tooltip_triangle">
+                            <span class="tooltip ">
                                 Что такое средний срок поставки вы можете прочитать
                                 <a class="link link_hover" href="#">здесь</a>
                             </span>
@@ -1661,27 +1743,27 @@
                     <div class="stock-brief__row">
                         <span class="stock-brief__tag has-tooltip"
                             >#SALE
-                            <span class="tooltip tooltip_top tooltip_triangle tooltip_ta-c">Распродажа</span>
+                            <span class="tooltip tooltip_top  tooltip_ta-c">Распродажа</span>
                         </span>
                         <span class="stock-brief__data">21 выкуп стартовал 25 августа</span>
                     </div>
                     <div class="stock-brief__row stock-brief__row-heading">
                         <span class="stock-brief__tag has-tooltip"
                             >#0 %
-                            <span class="tooltip tooltip_top tooltip_triangle tooltip_ta-c">Орг. сбор 0%</span>
+                            <span class="tooltip tooltip_top  tooltip_ta-c">Орг. сбор 0%</span>
                         </span>
                         <span class="stock-brief__heading"
                             >Dimma fashion studio. Распродажа. Модный бренд для мам
                             <i class="icon icon-star rating-star stock-brief__rating has-tooltip">
                                 <span class="rating-star__num">4.7</span>
-                                <span class="tooltip tooltip_top tooltip_triangle tooltip_ta-c">Рейтинг закупки</span>
+                                <span class="tooltip tooltip_top  tooltip_ta-c">Рейтинг закупки</span>
                             </i>
                         </span>
                     </div>
                     <div class="stock-brief__row">
                         <span class="stock-brief__tag has-tooltip"
                             >#TOP
-                            <span class="tooltip tooltip_top tooltip_triangle tooltip_ta-c">Топ-закупка</span>
+                            <span class="tooltip tooltip_top  tooltip_ta-c">Топ-закупка</span>
                         </span>
                         <span class="stock-status green stock-brief__status">
                             <i class="icon icon-box stock-status__icon"></i>
@@ -1698,7 +1780,7 @@
                                 </a>
                                 <i class="icon icon-star rating-star org-profile__rating has-tooltip">
                                     <span class="rating-star__num">4.7</span>
-                                    <span class="tooltip tooltip_top tooltip_triangle tooltip_ta-c">Рейтинг орг-а</span>
+                                    <span class="tooltip tooltip_top  tooltip_ta-c">Рейтинг орг-а</span>
                                 </i>
                             </div>
                             <div class="org-profile__text">
@@ -1739,27 +1821,27 @@
                     <div class="stock-brief__row">
                         <span class="stock-brief__tag has-tooltip"
                             >#SALE
-                            <span class="tooltip tooltip_top tooltip_triangle tooltip_ta-c">Распродажа</span>
+                            <span class="tooltip tooltip_top  tooltip_ta-c">Распродажа</span>
                         </span>
                         <span class="stock-brief__data">21 выкуп стартовал 25 августа</span>
                     </div>
                     <div class="stock-brief__row stock-brief__row-heading">
                         <span class="stock-brief__tag has-tooltip"
                             >#0 %
-                            <span class="tooltip tooltip_top tooltip_triangle tooltip_ta-c">Орг. сбор 0%</span>
+                            <span class="tooltip tooltip_top  tooltip_ta-c">Орг. сбор 0%</span>
                         </span>
                         <span class="stock-brief__heading"
                             >Dimma fashion studio. Распродажа. Модный бренд для мам
                             <i class="icon icon-star rating-star stock-brief__rating has-tooltip">
                                 <span class="rating-star__num">4.7</span>
-                                <span class="tooltip tooltip_top tooltip_triangle tooltip_ta-c">Рейтинг закупки</span>
+                                <span class="tooltip tooltip_top  tooltip_ta-c">Рейтинг закупки</span>
                             </i>
                         </span>
                     </div>
                     <div class="stock-brief__row">
                         <span class="stock-brief__tag has-tooltip"
                             >#TOP
-                            <span class="tooltip tooltip_top tooltip_triangle tooltip_ta-c">Топ-закупка</span>
+                            <span class="tooltip tooltip_top  tooltip_ta-c">Топ-закупка</span>
                         </span>
                         <span class="stock-brief__status bold">
                             Сбор закрыт. Чтобы не пропустить открытие
@@ -1776,7 +1858,7 @@
                                 </a>
                                 <i class="icon icon-star rating-star org-profile__rating has-tooltip">
                                     <span class="rating-star__num">4.7</span>
-                                    <span class="tooltip tooltip_top tooltip_triangle tooltip_ta-c">Рейтинг орг-а</span>
+                                    <span class="tooltip tooltip_top  tooltip_ta-c">Рейтинг орг-а</span>
                                 </i>
                             </div>
                             <div class="org-profile__text">

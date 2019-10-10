@@ -10,7 +10,7 @@ body {
     }
 
     &::-webkit-scrollbar-thumb {
-        background-color: #318cca;
+        background-color: #2ca1f0;
     }
 }
 
@@ -50,10 +50,10 @@ body {
         content: "Интерактивный элемент";
         display: block;
         position: absolute;
-        background: #36a6f2;
+        background: #ffe869;
         padding: 10px 12px;
         line-height: 15px;
-        color: white;
+        color: #171717;
         border-radius: 6px;
         font-size: 14px;
         font-weight: 600;
@@ -70,7 +70,7 @@ body {
     &:after {
         content: "";
         display: block;
-        background: #36a6f2;
+        background: #ffe869;
         width: 10px;
         height: 10px;
         position: absolute;
@@ -99,8 +99,9 @@ body {
 
 .ds-hl {
     font-weight: 600;
-    background: rgb(255, 229, 85);
-    padding: 2px 7px;
+    background: #93d4ff;
+    padding: 2px 8px;
+    margin: 0 3px;
 }
 
 .no-padding {
