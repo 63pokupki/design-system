@@ -22,9 +22,8 @@
         </div>
         <div class="ds-code-wrapper">
             <script type="text/plain" class="language-markup">
-                    <div class="ds-popover is-visible"></div>
-                </script>
-
+                <div class="ds-popover is-visible"></div>
+            </script>
         </div>
     </div>
     <div class="ds-wrapper">
@@ -46,19 +45,19 @@
         </div>
         <div class="ds-code-wrapper">
             <script type="text/plain" class="language-markup">
-                    <div class="ds-popover is-visible">
-                        <div class="inputs-group">
-                            <input type="checkbox" id="fmch-1">
-                            <label class="inputs-group__label-checkbox" for="fmch-1"></label>
-                            <label class="inputs-group__label-title" for="fmch-1">label-title</label>
-                        </div>
-                        <div class="inputs-group">
-                            <input type="checkbox" id="fmch-1">
-                            <label class="inputs-group__label-checkbox" for="fmch-1"></label>
-                            <label class="inputs-group__label-title" for="fmch-1">label-title</label>
-                        </div>
+                <div class="ds-popover is-visible">
+                    <div class="inputs-group">
+                        <input type="checkbox" id="fmch-1">
+                        <label class="inputs-group__label-checkbox" for="fmch-1"></label>
+                        <label class="inputs-group__label-title" for="fmch-1">label-title</label>
                     </div>
-                </script>
+                    <div class="inputs-group">
+                        <input type="checkbox" id="fmch-1">
+                        <label class="inputs-group__label-checkbox" for="fmch-1"></label>
+                        <label class="inputs-group__label-title" for="fmch-1">label-title</label>
+                    </div>
+                </div>
+            </script>
         </div>
     </div>
 
@@ -93,7 +92,7 @@
         <div class="ds-text">Пример модалки</div>
 
         <div class="ds-divider">
-            <!-- Для отображения окна, присвоить класс .is-visible, блоку modal-sort__back -->
+            <!-- Для отображения окна, присвоить класс .is-visible, блоку modal -->
             <div class="modal is-visible" style="position: relative">
                 <div class="modal__wrap" style="margin: 10px">
                     <div class="modal__btn-close"></div>
@@ -115,26 +114,81 @@
         </div>
         <div class="ds-code-wrapper">
             <script type="text/plain" class="language-markup">
-                    <div class="modal is-visible">
-                        <div class="modal__wrap">
-                                <div class="modal__btn-close"></div>
-                            <div class="modal__header">Имя окна</div>
-                            <form class="modal__form" action="">
-                                <div class="inputs-group">
-                                    <input type="checkbox" id="fmch-1">
-                                    <label class="inputs-group__label-checkbox" for="fmch-1"></label>
-                                    <label class="inputs-group__label-title" for="fmch-1">label-title</label>
-                                </div>
-                                <div class="inputs-group">
-                                    <input type="checkbox" id="fmch-1">
-                                    <label class="inputs-group__label-checkbox" for="fmch-1"></label>
-                                    <label class="inputs-group__label-title" for="fmch-1">label-title</label>
-                                </div>            
-                            </form>
-                        </div>
-                    </div>            
-                </script>
+                <div class="modal is-visible">
+                    <div class="modal__wrap">
+                            <div class="modal__btn-close"></div>
+                        <div class="modal__header">Имя окна</div>
+                        <form class="modal__form" action="">
+                            <div class="inputs-group">
+                                <input type="checkbox" id="fmch-1">
+                                <label class="inputs-group__label-checkbox" for="fmch-1"></label>
+                                <label class="inputs-group__label-title" for="fmch-1">label-title</label>
+                            </div>
+                            <div class="inputs-group">
+                                <input type="checkbox" id="fmch-1">
+                                <label class="inputs-group__label-checkbox" for="fmch-1"></label>
+                                <label class="inputs-group__label-title" for="fmch-1">label-title</label>
+                            </div>            
+                        </form>
+                    </div>
+                </div>            
+            </script>
         </div>
+
+        <div class="ds-wrapper">
+            <h1 class="ds-title">Товар добавлен в корзину</h1>
+            <div class="ds-wrapper">
+                <div class="ds-divider">
+                    <!-- Для отображения окна, присвоить класс .is-visible элементу modal -->
+                    <div class="modal modal-added-to-card is-visible" style="position: relative">
+                        <div class="modal__wrap" style="margin: 10px">
+                            <div class="modal__btn-close"></div>
+                            <div class="modal__header">Товар добавлен в корзину</div>
+                            <div class="modal__content">Обратите внимание,
+                                что в этой закупке установлен минимальный орг.
+                                сбор в размере 16 руб.
+                                <a class="link-more" href="" target="_blank">Подробнее о минимальном сборе</a>
+                            </div>
+                            <div class="btn-container">
+                                <button class="ds-btn ds-btn_hover btn-in-card">
+                                    <div class="ds-btn__text">Перейти в корзину</div>
+                                </button>
+                                <button class="ds-btn btn-continue">
+                                    <div class="ds-btn__text">Продолжить покупки</div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ds-code-wrapper">
+                <script type="text/plain" class="language-markup">
+                    <!-- Для отображения окна, присвоить класс .is-visible элементу modal -->
+                    <div class="modal modal-added-to-card is-visible" style="position: relative">
+                        <div class="modal__wrap" style="margin: 10px">
+                            <div class="modal__btn-close"></div>
+                            <div class="modal__header">Товар добавлен в корзину</div>
+                            <div class="modal__content">Обратите внимание,
+                                что в этой закупке установлен минимальный орг.
+                                сбор в размере 16 руб.
+                                <a class="link-more" href="" target="_blank">Подробнее о минимальном сборе</a>
+                            </div>
+                            <div class="btn-container">
+                                <button class="ds-btn ds-btn_hover btn-in-card">
+                                    <div class="ds-btn__text">Перейти в корзину</div>
+                                </button>
+                                <button class="ds-btn btn-continue">
+                                    <div class="ds-btn__text">Продолжить покупки</div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </script>
+            </div>
+        </div>
+
+
     </div>
 
 
