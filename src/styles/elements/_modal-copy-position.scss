@@ -1,0 +1,35 @@
+.modal-copy-position {
+    .modal {
+        &__wrap {}
+
+        &__btn-close {
+            margin: 6px 5px 0 0;
+
+            &:before,
+            &:after {
+                background: $light-gray-link-color;
+            }
+        }
+
+        &__header {
+            font-size: 20px;
+            font-weight: 600;
+            
+        }
+
+        &__position-name {
+            text-align: center;
+            font-weight: 600;
+        }
+        &__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            min-width: 100%;
+            margin: 0 7px 5px 0;
+            overflow: visible;
+
+        }
+    }
+}
+
