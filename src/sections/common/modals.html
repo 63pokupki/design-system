@@ -200,6 +200,12 @@
             <div class="ds-text">Чтобы раскрыть весь список параметров, необходимо присвоить класс
                 <span class="ds-hl">.is-toggle</span> элементу <span class="ds-hl">item-params-list</span>
             </div>
+            <div class="ds-text">
+                При задержке отправки запроса, после нажатия на кнопку "В корзину",
+                добавить класс <span class="ds-hl">.is-load</span> элементу <span
+                    class="ds-hl">modal__btn-container</span>
+
+            </div>
             <div class="ds-wrapper">
                 <div class="ds-divider">
                     <div class="modal modal-choise-of-color-size is-visible" style="position: relative">
@@ -238,12 +244,15 @@
                                     <!-- По нажатию на кнопку .stock-dropdown-filter__toggle, раскрывается полный список параметра -->
                                     <button class="link link_hover stock-dropdown-filter__toggle">Ещё размеры</button>
                                 </div>
+                                <!-- При задержке отправки запроса, после нажатия на кнопку "В корзину",
+                                добавить класс .is-load элементу  modal__btn-container -->                                   
                                 <div class="modal__btn-container">
                                     <div class="modal__sum">
                                         <button class="modal__minus"></button>
                                         <span class="modal__sum-num">128</span>
                                         <button class="modal__plus"></button>
                                     </div>
+                                    <div class="ds-loader"></div>
                                     <button class="ds-btn ds-btn_hover btn-add-to-card">
                                         <div class="ds-btn__text">В корзину <i class="icon icon-cart"></i></div>
                                     </button>

@@ -113,6 +113,19 @@
                 max-height: 32px;
                 min-width: 160px;    
             }
+            .ds-loader {
+                display: none;
+                justify-content: center;
+                min-width: 160px;
+            }
+            &.is-load {
+                .btn-add-to-card {
+                    display: none;
+                }
+                .ds-loader {
+                    display: inline-flex;
+                }
+            }
         }
 
         &__sum {
