@@ -1,0 +1,52 @@
+// двойной ползунок выбора цены
+.range-double {
+    padding-bottom: 20px;
+    &__values {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 11px;
+        color: #606266;
+        margin-bottom: 10px;
+    }
+
+    &__bar {
+        position: relative;
+        height: 2px;
+        width: 100%;
+        background: rgba(94, 162, 208, 0.5);
+    }
+
+    &__active {
+        position: absolute;
+        height: 100%;
+        background: #36a6f2;
+        max-width: 100%;
+        min-width: 0%;
+    }
+
+    &__thumb-min,
+    &__thumb-max {
+        position: absolute;
+        cursor: pointer;
+        height: 16px;
+        width: 16px;
+        background: #318cca;
+        border: 1px solid #ffffff;
+        border-radius: 50%;
+        top: 50%;
+        z-index: 2;
+
+        &:active {
+            background: #0080f6;
+        }
+    }
+
+    &__thumb-min {
+        transform: translate(-2px, -50%);
+    }
+
+    &__thumb-max {
+        transform: translate(-14px, -50%);
+    }
+}

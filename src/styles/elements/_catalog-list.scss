@@ -1,0 +1,94 @@
+.catalog-list {
+    width: 100%;
+    margin-bottom: 10px;
+
+    &__category {
+        border-top: 1px solid $color-primary;
+        padding: 10px;
+        background: #e8f3f9;
+        font-weight: bold;
+        font-size: 13px;
+        color: #318cca;
+        border-radius: 0px 0px 2px 2px;
+    }
+
+    &__subcategory {
+        padding: 12px 10px 12px;
+        margin: unset;
+        font-size: 12px;
+        font-weight: normal;
+        color: #1d1e1f;
+    }
+
+    &__subcategory-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__item.has-badge {
+        padding-right: 30px;
+
+        .catalog-list__badge-retail-price,
+        .catalog-list__badge-sale {
+            user-select: none;
+            position: absolute;
+            text-align: center;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            top: 6px;
+            right: -14px;
+            width: 50px;
+            font-size: 9px;
+            line-height: 10px;
+            transform: rotate(45deg);
+        }
+
+        .catalog-list__badge-retail-price {
+            background: #318cca;
+            border-bottom: 1px solid #1a6aa1;
+        }
+
+        .catalog-list__badge-sale {
+            background: #ff4242;
+            border-bottom: 1px solid #a83131;
+        }
+    }
+
+    &__item {
+        padding: 0px 5px 12px 10px;
+        font-size: 11px;
+        color: #606266;
+        overflow: hidden;
+        position: relative;
+
+        &:last-child {
+            padding-bottom: 15px;
+        }
+    }
+
+    // переопределяем вид и позицию чекбоксов
+    .checkbox {
+        width: 100%;
+
+        &__label {
+            line-height: 18px;
+            width: 100%;
+
+            &:before {
+                top: 1px;
+                transform: translate(-25px);
+            }
+
+            &:after {
+                top: 6px;
+                transform: translate(-21px) rotate(-45deg);
+            }
+
+            &:hover {
+                color: $color-primary;
+            }
+        }
+    }
+}

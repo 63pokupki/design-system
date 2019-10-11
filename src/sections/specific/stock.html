@@ -9,6 +9,55 @@
     <body>
         <h1 class="ds-title">Компоненты статичной страницы закупки</h1>
 
+        <h3 class="ds-title">Рекламный баннер - слайдер</h3>
+
+        <div class="ds-center">
+            <div class="ad-banner-slider">
+                <button class="ad-banner-slider__prev">
+                    <i class="icon icon-arrow-left"></i>
+                </button>
+                <div class="ad-banner-slider__images">
+                    <a href="#">
+                        <img src="~images/ad-top.jpg" class="ad-banner-slider__image" />
+                    </a>
+                    <a href="#">
+                        <img src="~images/ad-top.png" class="ad-banner-slider__image is-active" />
+                    </a>
+                </div>
+                <button class="ad-banner-slider__next">
+                    <i class="icon icon-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="ds-wrapper">
+            <p>
+                Для показа изображения добавить класс <span class="ds-hl">is-active </span> элементу
+                <span class="ds-hl">ad-banner-slider__image</span>
+            </p>
+        </div>
+
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <div class="ad-banner-slider">
+                    <button class="ad-banner-slider__prev">
+                        <i class="icon icon-arrow-left"></i>
+                    </button>
+                    <div class="ad-banner-slider__images">
+                        <a href="#">
+                            <img src="~images/ad-top.jpg" class="ad-banner-slider__image" />
+                        </a>
+                        <a href="#">
+                            <img src="~images/ad-top.png" class="ad-banner-slider__image is-active" />
+                        </a>
+                    </div>
+                    <button class="ad-banner-slider__next">
+                        <i class="icon icon-arrow-right"></i>
+                    </button>
+                </div>
+            </script>
+        </div>
+
         <h3 class="ds-title">Боковая секция стат. страницы</h3>
 
         <div class="ds-wrapper ds-i" style="max-width: 296px;">
