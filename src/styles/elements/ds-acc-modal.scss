@@ -12,7 +12,6 @@ $main-padding-modal: 20px;
     width: 100%;
     min-height: 100%;
     background-color: rgba(0, 0, 0, 0);
-    overflow: auto;
     z-index: 1000;
     transition: all .5s;
     opacity: 0;
@@ -81,7 +80,6 @@ $main-padding-modal: 20px;
         max-height: 90vh;
         background: #fff;
         padding: $main-padding-modal;
-        overflow: auto;
         .modal__btn-close {
             position: absolute;
             display: flex;
@@ -157,7 +155,7 @@ $main-padding-modal: 20px;
     }
     &__content {
         display: flex;
-        overflow-y: auto;
+        overflow: auto;
     }   
 
 }
