@@ -14,7 +14,7 @@
         a {
             font-weight: 600;
             text-decoration: none;
-            color: $pagination-txt-color;
+            color: $light-gray-txt-color;
         }
 
         &:hover, &:active {
@@ -31,7 +31,7 @@
     }
     .icon-arrow {
         &-left, &-right {
-            color: $pagination-txt-color;
+            color: $light-gray-txt-color;
         }
     }
 }
