@@ -191,12 +191,22 @@
         <!-- Модалка выбора цвета и размера -->
         <div class="ds-wrapper">
             <h1 class="ds-title">Модалка выбора цвета и размера</h1>
+            <div class="ds-text">Для отображения окна, присвоить класс
+                <span class="ds-hl">.is-visible</span>, элементу <span class="ds-hl">modal</span>.</div>
+            <div class="ds-text">Если не выбран параметр, присвоить класс <span class="ds-hl">.is-warning</span>,
+                элементу <span class="ds-hl">modal__content-color</span> и/или <span
+                    class="ds-hl">modal__content-size</span>
+            </div>
+            <div class="ds-text">Чтобы раскрыть весь список параметров, необходимо присвоить класс
+                <span class="ds-hl">.is-toggle</span> элементу <span class="ds-hl">item-params-list</span>
+            </div>
             <div class="ds-wrapper">
                 <div class="ds-divider">
                     <div class="modal modal-choise-of-color-size is-visible" style="position: relative">
                         <div class="modal__wrap" style="margin: 10px">
                             <div class="modal__btn-close"></div>
                             <div class="modal__content">
+                                <!-- Если не выбран параметр, присвоить класс .is-warning, элементу modal__content-color -->
                                 <div class="modal__content-color is-warning">
                                     <h5>Цвет:</h5>
                                     <ul class="item-params-list">
@@ -205,9 +215,12 @@
                                         <li class="item-params-list__item">бежевый</li>
                                     </ul>
                                     <div class="ds-popover is-visible">Чтобы добавить товар в корзину,<br>
-                                            выберите необходимый параметр</div>
+                                        выберите необходимый параметр</div>
+                                    <!-- По нажатию на кнопку .stock-dropdown-filter__toggle, раскрывается полный список параметра -->
+
                                     <button class="link link_hover stock-dropdown-filter__toggle">Ещё цвета</button>
                                 </div>
+                                <!-- Если не выбран параметр, присвоить класс .is-warning, элементу modal__content-size -->
                                 <div class="modal__content-size is-warning">
                                     <h5>Размер:</h5>
                                     <ul class="item-params-list ">
@@ -221,13 +234,15 @@
                                         <li class="item-params-list__item">43</li>
                                     </ul>
                                     <div class="ds-popover is-visible">Чтобы добавить товар в корзину,<br>
-                                            выберите необходимый параметр</div>                                    <button class="link link_hover stock-dropdown-filter__toggle">Ещё размеры</button>
+                                        выберите необходимый параметр</div>
+                                    <!-- По нажатию на кнопку .stock-dropdown-filter__toggle, раскрывается полный список параметра -->
+                                    <button class="link link_hover stock-dropdown-filter__toggle">Ещё размеры</button>
                                 </div>
                                 <div class="modal__btn-container">
                                     <div class="modal__sum">
                                         <button class="modal__minus"></button>
                                         <span class="modal__sum-num">128</span>
-                                        <button class="modal__plus"></button>    
+                                        <button class="modal__plus"></button>
                                     </div>
                                     <button class="ds-btn ds-btn_hover btn-add-to-card">
                                         <div class="ds-btn__text">В корзину <i class="icon icon-cart"></i></div>
@@ -241,7 +256,55 @@
 
             <div class="ds-code-wrapper">
                 <script type="text/plain" class="language-markup">
-                    <!-- Скопировать код элемента сюда -->
+                    <div class="modal modal-choise-of-color-size is-visible" style="position: relative">
+                        <div class="modal__wrap" style="margin: 10px">
+                            <div class="modal__btn-close"></div>
+                            <div class="modal__content">
+                                <!-- Если не выбран параметр, присвоить класс .is-warning, элементу modal__content-color -->
+                                <div class="modal__content-color is-warning">
+                                    <h5>Цвет:</h5>
+                                    <ul class="item-params-list">
+                                        <li class="item-params-list__item">чёрный</li>
+                                        <li class="item-params-list__item">красный</li>
+                                        <li class="item-params-list__item">бежевый</li>
+                                    </ul>
+                                    <div class="ds-popover is-visible">Чтобы добавить товар в корзину,<br>
+                                            выберите необходимый параметр</div>
+                                    <!-- По нажатию на кнопку .stock-dropdown-filter__toggle, раскрывается полный список параметра -->
+
+                                    <button class="link link_hover stock-dropdown-filter__toggle">Ещё цвета</button>
+                                </div>
+                                <!-- Если не выбран параметр, присвоить класс .is-warning, элементу modal__content-size -->
+                                <div class="modal__content-size is-warning">
+                                    <h5>Размер:</h5>
+                                    <ul class="item-params-list ">
+                                        <li class="item-params-list__item">36</li>
+                                        <li class="item-params-list__item">37</li>
+                                        <li class="item-params-list__item">38</li>
+                                        <li class="item-params-list__item">39</li>
+                                        <li class="item-params-list__item">40</li>
+                                        <li class="item-params-list__item">41</li>
+                                        <li class="item-params-list__item">42</li>
+                                        <li class="item-params-list__item">43</li>
+                                    </ul>
+                                    <div class="ds-popover is-visible">Чтобы добавить товар в корзину,<br>
+                                            выберите необходимый параметр</div>
+                                    <!-- По нажатию на кнопку .stock-dropdown-filter__toggle, раскрывается полный список параметра -->
+                                    <button class="link link_hover stock-dropdown-filter__toggle">Ещё размеры</button>
+                                </div>
+                                <div class="modal__btn-container">
+                                    <div class="modal__sum">
+                                        <button class="modal__minus"></button>
+                                        <span class="modal__sum-num">128</span>
+                                        <button class="modal__plus"></button>    
+                                    </div>
+                                    <button class="ds-btn ds-btn_hover btn-add-to-card">
+                                        <div class="ds-btn__text">В корзину <i class="icon icon-cart"></i></div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
                 </script>
             </div>
         </div>

@@ -10,6 +10,9 @@
         }
         &__btn-close {
             margin: 6px 5px 0 0;
+            &:before, &:after {
+                background: $light-gray-link-color;
+            }
         }
         &__content {
             display: flex;
@@ -35,6 +38,7 @@
             .item-params-list {
                 max-width: 175px;
                 border: 1px solid transparent;
+                transition: all .5s;
             
                 &__item {
                     list-style: none;
@@ -48,6 +52,10 @@
                     transition: background-color $transition-fast, color $transition-fast;
                     background-color: #318cca;
                     color: white;
+                }
+                &.is-toggle {
+                    max-height: 100px;
+                    transition: all .5s;
                 }
             }
 
@@ -84,7 +92,7 @@
             }
             .ds-popover {
                 position: absolute;
-                top: 50px;
+                bottom: -17px;
                 right: 10px;
                 padding: 5px;
                 box-shadow: none;
