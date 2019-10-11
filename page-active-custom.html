@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Активные закупки</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?718e0a3163c31ff8757b" rel="stylesheet"><link href="css/ds-utils.css?718e0a3163c31ff8757b" rel="stylesheet"><link href="css/ds-ui-kit.css?718e0a3163c31ff8757b" rel="stylesheet"></head>
+<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?9d46ebbeda3b11779ae8" rel="stylesheet"><link href="css/ds-utils.css?9d46ebbeda3b11779ae8" rel="stylesheet"><link href="css/ds-ui-kit.css?9d46ebbeda3b11779ae8" rel="stylesheet"></head>
 
 <body style="background: #fff;">
     <h1 class="ds-title">Страница активных закупок десктоп</h1>
@@ -948,8 +948,9 @@
 
     <!-- Toggle block -->
     <script>
-        let btnToggle = document.querySelectorAll(".btn-toggle"),
-            switcher = document.querySelector(".switcher__label"),
+        let btnToggle   = document.querySelectorAll(".btn-toggle"),
+            switcher    = document.querySelector(".switcher__label"),
+            description = document.querySelectorAll(".card-active-custom__description-txt"), 
             toggleBlock = document.querySelectorAll(".card-active-custom__wrap");
 
         for (let bt = 0; bt < btnToggle.length; bt++) {
@@ -960,12 +961,18 @@
                 });
 
                 //Разворачиваем все карточки
-                switcher.addEventListener('click', () => {
-                    console.log("Click");
+                switcher.addEventListener('click', () => {                    
                     toggleBlock[tb].classList.toggle("is-toggle");
                 });
             }
         }
+        // Раскрываем описание
+        description.forEach((e) => {
+            e.addEventListener("click", () => {
+                console.log("click");
+                e.classList.toggle("is-toggle");
+            });
+        });
 
     </script>
 
@@ -975,7 +982,6 @@
             popover_filter = document.querySelector(".ds-popover_filter");
 
         btn_filter.addEventListener("click", () => {
-            console.log("Click");
             popover_filter.classList.toggle("is-visible");
         });
     </script>
@@ -985,13 +991,12 @@
         let btn_sorting = document.querySelector("#btn_sorting"),
             popover_sorting = document.querySelector(".ds-popover_sorting");
 
-        btn_sorting.addEventListener("click", () => {
-            console.log("Click");
+        btn_sorting.addEventListener("click", () => {            
             popover_sorting.classList.toggle("is-visible");
         });
     </script>
 
 
-<script type="text/javascript" src="js/highlight-syntax.js?718e0a3163c31ff8757b"></script><script type="text/javascript" src="js/ds-utils.js?718e0a3163c31ff8757b"></script><script type="text/javascript" src="js/categories-icons-sprite.js?718e0a3163c31ff8757b"></script><script type="text/javascript" src="js/ds-ui-kit.js?718e0a3163c31ff8757b"></script></body>
+<script type="text/javascript" src="js/highlight-syntax.js?9d46ebbeda3b11779ae8"></script><script type="text/javascript" src="js/ds-utils.js?9d46ebbeda3b11779ae8"></script><script type="text/javascript" src="js/categories-icons-sprite.js?9d46ebbeda3b11779ae8"></script><script type="text/javascript" src="js/ds-ui-kit.js?9d46ebbeda3b11779ae8"></script></body>
 
 </html>

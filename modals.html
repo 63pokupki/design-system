@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Модальные окна</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?718e0a3163c31ff8757b" rel="stylesheet"><link href="css/ds-utils.css?718e0a3163c31ff8757b" rel="stylesheet"><link href="css/ds-ui-kit.css?718e0a3163c31ff8757b" rel="stylesheet"></head>
+<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?9d46ebbeda3b11779ae8" rel="stylesheet"><link href="css/ds-utils.css?9d46ebbeda3b11779ae8" rel="stylesheet"><link href="css/ds-ui-kit.css?9d46ebbeda3b11779ae8" rel="stylesheet"></head>
 
 <body>
     <h1 class="ds-title">Модальные окна</h1>
@@ -22,9 +22,8 @@
         </div>
         <div class="ds-code-wrapper">
             <script type="text/plain" class="language-markup">
-                    <div class="ds-popover is-visible"></div>
-                </script>
-
+                <div class="ds-popover is-visible"></div>
+            </script>
         </div>
     </div>
     <div class="ds-wrapper">
@@ -46,19 +45,19 @@
         </div>
         <div class="ds-code-wrapper">
             <script type="text/plain" class="language-markup">
-                    <div class="ds-popover is-visible">
-                        <div class="inputs-group">
-                            <input type="checkbox" id="fmch-1">
-                            <label class="inputs-group__label-checkbox" for="fmch-1"></label>
-                            <label class="inputs-group__label-title" for="fmch-1">label-title</label>
-                        </div>
-                        <div class="inputs-group">
-                            <input type="checkbox" id="fmch-1">
-                            <label class="inputs-group__label-checkbox" for="fmch-1"></label>
-                            <label class="inputs-group__label-title" for="fmch-1">label-title</label>
-                        </div>
+                <div class="ds-popover is-visible">
+                    <div class="inputs-group">
+                        <input type="checkbox" id="fmch-1">
+                        <label class="inputs-group__label-checkbox" for="fmch-1"></label>
+                        <label class="inputs-group__label-title" for="fmch-1">label-title</label>
                     </div>
-                </script>
+                    <div class="inputs-group">
+                        <input type="checkbox" id="fmch-1">
+                        <label class="inputs-group__label-checkbox" for="fmch-1"></label>
+                        <label class="inputs-group__label-title" for="fmch-1">label-title</label>
+                    </div>
+                </div>
+            </script>
         </div>
     </div>
 
@@ -93,7 +92,7 @@
         <div class="ds-text">Пример модалки</div>
 
         <div class="ds-divider">
-            <!-- Для отображения окна, присвоить класс .is-visible, блоку modal-sort__back -->
+            <!-- Для отображения окна, присвоить класс .is-visible, блоку modal -->
             <div class="modal is-visible" style="position: relative">
                 <div class="modal__wrap" style="margin: 10px">
                     <div class="modal__btn-close"></div>
@@ -115,30 +114,256 @@
         </div>
         <div class="ds-code-wrapper">
             <script type="text/plain" class="language-markup">
-                    <div class="modal is-visible">
-                        <div class="modal__wrap">
-                                <div class="modal__btn-close"></div>
-                            <div class="modal__header">Имя окна</div>
-                            <form class="modal__form" action="">
-                                <div class="inputs-group">
-                                    <input type="checkbox" id="fmch-1">
-                                    <label class="inputs-group__label-checkbox" for="fmch-1"></label>
-                                    <label class="inputs-group__label-title" for="fmch-1">label-title</label>
-                                </div>
-                                <div class="inputs-group">
-                                    <input type="checkbox" id="fmch-1">
-                                    <label class="inputs-group__label-checkbox" for="fmch-1"></label>
-                                    <label class="inputs-group__label-title" for="fmch-1">label-title</label>
-                                </div>            
-                            </form>
-                        </div>
-                    </div>            
-                </script>
+                <div class="modal is-visible">
+                    <div class="modal__wrap">
+                            <div class="modal__btn-close"></div>
+                        <div class="modal__header">Имя окна</div>
+                        <form class="modal__form" action="">
+                            <div class="inputs-group">
+                                <input type="checkbox" id="fmch-1">
+                                <label class="inputs-group__label-checkbox" for="fmch-1"></label>
+                                <label class="inputs-group__label-title" for="fmch-1">label-title</label>
+                            </div>
+                            <div class="inputs-group">
+                                <input type="checkbox" id="fmch-1">
+                                <label class="inputs-group__label-checkbox" for="fmch-1"></label>
+                                <label class="inputs-group__label-title" for="fmch-1">label-title</label>
+                            </div>            
+                        </form>
+                    </div>
+                </div>            
+            </script>
         </div>
+
+        <div class="ds-wrapper">
+            <h1 class="ds-title">Товар добавлен в корзину</h1>
+            <div class="ds-wrapper">
+                <div class="ds-divider">
+                    <!-- Для отображения окна, присвоить класс .is-visible элементу modal -->
+                    <div class="modal modal-added-to-card is-visible" style="position: relative">
+                        <div class="modal__wrap" style="margin: 10px">
+                            <div class="modal__btn-close"></div>
+                            <div class="modal__header">Товар добавлен в корзину</div>
+                            <div class="modal__content">Обратите внимание,
+                                что в этой закупке установлен минимальный орг.
+                                сбор в размере 16 руб.
+                                <a class="link-more" href="" target="_blank">Подробнее о минимальном сборе</a>
+                            </div>
+                            <div class="modal__btn-container">
+                                <button class="ds-btn ds-btn_hover btn-in-card">
+                                    <div class="ds-btn__text">Перейти в корзину</div>
+                                </button>
+                                <button class="ds-btn btn-continue">
+                                    <div class="ds-btn__text">Продолжить покупки</div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ds-code-wrapper">
+                <script type="text/plain" class="language-markup">
+                    <!-- Для отображения окна, присвоить класс .is-visible элементу modal -->
+                <div class="modal modal-added-to-card is-visible" style="position: relative">
+                    <div class="modal__wrap" style="margin: 10px">
+                        <div class="modal__btn-close"></div>
+                        <div class="modal__header">Товар добавлен в корзину</div>
+                        <div class="modal__content">Обратите внимание,
+                            что в этой закупке установлен минимальный орг.
+                            сбор в размере 16 руб.
+                            <a class="link-more" href="" target="_blank">Подробнее о минимальном сборе</a>
+                        </div>
+                        <div class="btn-container">
+                            <button class="ds-btn ds-btn_hover btn-in-card">
+                                <div class="ds-btn__text">Перейти в корзину</div>
+                            </button>
+                            <button class="ds-btn btn-continue">
+                                <div class="ds-btn__text">Продолжить покупки</div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                </script>
+            </div>
+        </div>
+
+        <!-- Модалка выбора цвета и размера -->
+        <div class="ds-wrapper">
+            <h1 class="ds-title">Модалка выбора цвета и размера</h1>
+            <div class="ds-text">Для отображения окна, присвоить класс
+                <span class="ds-hl">.is-visible</span>, элементу <span class="ds-hl">modal</span>.</div>
+            <div class="ds-text">Если не выбран параметр, присвоить класс <span class="ds-hl">.is-warning</span>,
+                элементу <span class="ds-hl">modal__content-color</span> и/или <span
+                    class="ds-hl">modal__content-size</span>
+            </div>
+            <div class="ds-text">Чтобы раскрыть весь список параметров, необходимо присвоить класс
+                <span class="ds-hl">.is-expanded</span> элементу <span class="ds-hl">item-params-list</span>
+            </div>
+            <div class="ds-text">
+                При задержке отправки запроса, после нажатия на кнопку "В корзину",
+                добавить класс <span class="ds-hl">.is-load</span> элементу <span
+                    class="ds-hl">modal__btn-container</span>
+
+            </div>
+            <div class="ds-wrapper">
+                <div class="ds-divider">
+                    <div class="modal modal-choise-of-color-size is-visible" style="position: relative">
+                        <div class="modal__wrap" style="margin: 10px">
+                            <div class="modal__btn-close"></div>
+                            <div class="modal__content">
+                                <!-- Если не выбран параметр, присвоить класс .is-warning, элементу modal__content-color -->
+                                <div class="modal__content-color is-warning">
+                                    <h5>Цвет:</h5>
+                                    <ul class="item-params-list">
+                                        <li class="item-params-list__item">чёрный</li>
+                                        <li class="item-params-list__item">красный</li>
+                                        <li class="item-params-list__item">бежевый</li>
+                                        <li class="item-params-list__item">чёрный</li>
+                                        <li class="item-params-list__item">красный</li>
+                                        <li class="item-params-list__item">бежевый</li>
+                                    </ul>
+                                    <div class="ds-popover is-visible">Чтобы добавить товар в корзину,<br>
+                                        выберите необходимый параметр</div>
+
+                                    <button class="link link_hover">Ещё цвета</button>
+                                </div>
+                                <!-- Если не выбран параметр, присвоить класс .is-warning, элементу modal__content-size -->
+                                <div class="modal__content-size is-warning">
+                                    <h5>Размер:</h5>
+                                    <ul class="item-params-list ">
+                                        <li class="item-params-list__item">36</li>
+                                        <li class="item-params-list__item">37</li>
+                                        <li class="item-params-list__item">38</li>
+                                        <li class="item-params-list__item">39</li>
+                                        <li class="item-params-list__item">40</li>
+                                        <li class="item-params-list__item">41</li>
+                                        <li class="item-params-list__item">42</li>
+                                        <li class="item-params-list__item">43</li>
+                                    </ul>
+                                    <div class="ds-popover is-visible">Чтобы добавить товар в корзину,<br>
+                                        выберите необходимый параметр</div>
+                                    <button class="link link_hover ">Ещё размеры</button>
+                                </div>
+                                <!-- При задержке отправки запроса, после нажатия на кнопку "В корзину",
+                                добавить класс .is-load элементу  modal__btn-container -->
+                                <div class="modal__btn-container">
+                                    <div class="modal__sum">
+                                        <button class="modal__minus"></button>
+                                        <input class="modal__sum-num" value="128">
+                                        <button class="modal__plus"></button>
+                                    </div>
+                                    <div class="ds-loader"></div>
+                                    <button class="ds-btn ds-btn_hover btn-add-to-card">
+                                        <div class="ds-btn__text">В корзину </div>
+                                        <i class="icon icon-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ds-code-wrapper">
+                <script type="text/plain" class="language-markup">
+                    <div class="modal modal-choise-of-color-size is-visible" style="position: relative">
+                        <div class="modal__wrap" style="margin: 10px">
+                            <div class="modal__btn-close"></div>
+                            <div class="modal__content">
+                                <!-- Если не выбран параметр, присвоить класс .is-warning, элементу modal__content-color -->
+                                <div class="modal__content-color is-warning">
+                                    <h5>Цвет:</h5>
+                                    <ul class="item-params-list">
+                                        <li class="item-params-list__item">чёрный</li>
+                                        <li class="item-params-list__item">красный</li>
+                                        <li class="item-params-list__item">бежевый</li>
+                                    </ul>
+                                    <div class="ds-popover is-visible">Чтобы добавить товар в корзину,<br>
+                                            выберите необходимый параметр</div>
+                                    <button class="link link_hover">Ещё цвета</button>
+                                </div>
+                                <!-- Если не выбран параметр, присвоить класс .is-warning, элементу modal__content-size -->
+                                <div class="modal__content-size is-warning">
+                                    <h5>Размер:</h5>
+                                    <ul class="item-params-list ">
+                                        <li class="item-params-list__item">36</li>
+                                        <li class="item-params-list__item">37</li>
+                                        <li class="item-params-list__item">38</li>
+                                        <li class="item-params-list__item">39</li>
+                                        <li class="item-params-list__item">40</li>
+                                        <li class="item-params-list__item">41</li>
+                                        <li class="item-params-list__item">42</li>
+                                        <li class="item-params-list__item">43</li>
+                                    </ul>
+                                    <div class="ds-popover is-visible">Чтобы добавить товар в корзину,<br>
+                                            выберите необходимый параметр</div>
+                                    <button class="link link_hover">Ещё размеры</button>
+                                </div>
+                                <div class="modal__btn-container">
+                                    <div class="modal__sum">
+                                        <button class="modal__minus"></button>
+                                        <span class="modal__sum-num">128</span>
+                                        <button class="modal__plus"></button>    
+                                    </div>
+                                    <button class="ds-btn ds-btn_hover btn-add-to-card">
+                                        <div class="ds-btn__text">В корзину <i class="icon icon-cart"></i></div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </script>
+            </div>
+        </div>
+
+        <!-- Модалка копирование позиции -->
+        <div class="ds-wrapper">
+            <h1 class="ds-title">Модалка копирование позиции</h1>
+            <div class="ds-wrapper">
+                <div class="ds-divider">
+                    <div class="modal modal-copy-position is-visible" style="position: relative">
+                        <div class="modal__wrap" style="margin: 10px">
+                            <div class="modal__btn-close"></div>
+                            <div class="modal__header">Копирование позиции</div>
+                            <div class="modal__content">
+                                <div class="modal__position-name">Самокат NAMELESS START SKL-014-AWS"
+                                     и еще 15<br> названий цветов и прочего
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ds-code-wrapper">
+                <script type="text/plain" class="language-markup">
+                    <!-- Скопировать код элемента сюда -->
+                </script>
+            </div>
+        </div>
+
+
+
     </div>
 
 
+    <!-- Демонстрация, не использовать в проекте -->
+    <script>
+        const item_params_list__items = document.querySelectorAll(".item-params-list__item");
+        item_params_list__items.forEach(item => {
+            item.addEventListener("click", () => item.classList.toggle("is-selected"));
+        });
 
-<script type="text/javascript" src="js/highlight-syntax.js?718e0a3163c31ff8757b"></script><script type="text/javascript" src="js/ds-utils.js?718e0a3163c31ff8757b"></script><script type="text/javascript" src="js/categories-icons-sprite.js?718e0a3163c31ff8757b"></script><script type="text/javascript" src="js/ds-ui-kit.js?718e0a3163c31ff8757b"></script></body>
+        const item_params_list = document.querySelectorAll(".item-params-list");
+        item_params_list.forEach(list => {
+            const link = list.nextElementSibling;
+            link.addEventListener("click", () => list.classList.toggle("is-expanded"));
+        });
+    </script>
+
+
+<script type="text/javascript" src="js/highlight-syntax.js?9d46ebbeda3b11779ae8"></script><script type="text/javascript" src="js/ds-utils.js?9d46ebbeda3b11779ae8"></script><script type="text/javascript" src="js/categories-icons-sprite.js?9d46ebbeda3b11779ae8"></script><script type="text/javascript" src="js/ds-ui-kit.js?9d46ebbeda3b11779ae8"></script></body>
 
 </html>
