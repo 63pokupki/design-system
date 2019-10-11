@@ -1,0 +1,19 @@
+
+.ds-loader {
+    display: inline-flex;
+    &:after {
+        content: "";
+        width: 45px;
+        height: 45px;
+        background: url("~images/loader.png");
+        background-position: center;
+        background-size: contain;
+        animation: rotate 1s infinite linear;
+    }
+}
+
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+

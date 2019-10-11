@@ -501,11 +501,17 @@
             height: auto;
             font-Size: 12px;
             line-height: 16px;
-            text-align: left;
+            text-align: left;            
+            transition: all .3s;
 
             //Класс is-toggle открывает полное описание по клику
             &.is-toggle {
                 max-height: 200px;
+                transition: all .3s;
+                p {
+                    white-space: normal;
+                    
+                }
             }
 
             p {
