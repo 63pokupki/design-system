@@ -9,7 +9,197 @@
     <body>
         <h1 class="ds-title">Компоненты статичной страницы закупки</h1>
 
-        <h2 class="ds-title">Рекламный баннер - одиночный</h3>
+        <h2 class="ds-title">Фильтр товаров</h2>
+
+        <div class="ds-wrapper" style="max-width: 872px;">
+            <div class="stock-items-filter">
+                <div class="stock-items-filter__row top">
+                    <div class="search stock-items-filter__search">
+                        <!-- строка поиска -->
+                        <input class="search__bar" type="text" placeholder="Поиск внутри каталога" />
+                        <!-- кнопка поиска -->
+                        <button class="search__button">
+                            <img src="~images/search.svg" />
+                        </button>
+                    </div>
+                    <div class="stock-items-filter__checkboxes">
+                        <div class="checkbox checkbox_accent checkbox_circle">
+                            <input class="checkbox__input" type="checkbox" id="chx-0m" />
+                            <label class="checkbox__label" for="chx-0m">По названию</label>
+                        </div>
+                        <div class="checkbox checkbox_accent checkbox_circle">
+                            <input class="checkbox__input" type="checkbox" id="chx-1m" />
+                            <label class="checkbox__label" for="chx-1m">По описанию</label>
+                        </div>
+                        <div class="checkbox checkbox_accent checkbox_circle">
+                            <input checked="checked" class="checkbox__input" type="checkbox" id="chx-2m" />
+                            <label class="checkbox__label" for="chx-2m">По характеристикам</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="stock-items-filter__row center">
+                    <div class="sorting stock-items-filter__sorting">
+                        <div class="sorting__btn">
+                            <div class="sorting__name">Сортировка по:</div>
+                            <span class="sorting__selected-position">популярности</span>
+                        </div>
+                        <div class="ds-popover_sorting ds-popover">
+                            <div class="checkbox_no-chx">
+                                <input class="checkbox__input" type="checkbox" id="chx-s-01" />
+                                <label class="checkbox__label" for="chx-s-01">популярности</label>
+                            </div>
+                            <div class="checkbox_no-chx">
+                                <input class="checkbox__input" type="checkbox" id="chx-s-02" />
+                                <label class="checkbox__label" for="chx-s-02">возрастанию цены</label>
+                            </div>
+                            <div class="checkbox_no-chx">
+                                <input class="checkbox__input" type="checkbox" id="chx-s-03" />
+                                <label class="checkbox__label" for="chx-s-03">убыванию цены</label>
+                            </div>
+                            <div class="checkbox_no-chx">
+                                <input class="checkbox__input" type="checkbox" id="chx-s-04" />
+                                <label class="checkbox__label" for="chx-s-04">новизне</label>
+                            </div>
+                            <div class="checkbox_no-chx">
+                                <input class="checkbox__input" type="checkbox" id="chx-s-05" />
+                                <label class="checkbox__label" for="chx-s-05">названию</label>
+                            </div>
+                            <div class="checkbox_no-chx">
+                                <input class="checkbox__input" type="checkbox" id="chx-s-06" />
+                                <label class="checkbox__label" for="chx-s-06">заполненности рядов</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stock-items-filter__mode">
+                        <button class="stock-items-filter__list">
+                            <i class="icon icon-rows"></i>
+                        </button>
+                        <button class="stock-items-filter__matrix is-active">
+                            <i class="icon icon-cols"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="stock-items-filter__row bottom">
+                    <span class="stock-items-filter__displayed">1-36/150 товаров</span>
+                    <div class="show-by">
+                        <span class="show-by__text">показывать по:</span>
+                        <div class="show-by__buttons">
+                            <button class="show-by__item is-selected">30</button>
+                            <button class="show-by__item">60</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <div class="stock-items-filter">
+                    <div class="stock-items-filter__row top">
+                        <div class="search stock-items-filter__search">
+                            <!-- строка поиска -->
+                            <input class="search__bar" type="text" placeholder="Поиск внутри каталога" />
+                            <!-- кнопка поиска -->
+                            <button class="search__button">
+                                <img src="~images/search.svg" />
+                            </button>
+                        </div>
+                        <div class="stock-items-filter__checkboxes">
+                            <div class="checkbox checkbox_accent checkbox_circle">
+                                <input class="checkbox__input" type="checkbox" id="chx-0m" />
+                                <label class="checkbox__label" for="chx-0m">По названию</label>
+                            </div>
+                            <div class="checkbox checkbox_accent checkbox_circle">
+                                <input class="checkbox__input" type="checkbox" id="chx-1m" />
+                                <label class="checkbox__label" for="chx-1m">По описанию</label>
+                            </div>
+                            <div class="checkbox checkbox_accent checkbox_circle">
+                                <input checked="checked" class="checkbox__input" type="checkbox" id="chx-2m" />
+                                <label class="checkbox__label" for="chx-2m">По характеристикам</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stock-items-filter__row center">
+                        <div class="sorting stock-items-filter__sorting">
+                            <div class="sorting__btn">
+                                <div class="sorting__name">Сортировка по:</div>
+                                <span class="sorting__selected-position">популярности</span>
+                            </div>
+                            <div class="ds-popover_sorting ds-popover">
+                                <div class="checkbox_no-chx">
+                                    <input class="checkbox__input" type="checkbox" id="chx-s-01" />
+                                    <label class="checkbox__label" for="chx-s-01">популярности</label>
+                                </div>
+                                <div class="checkbox_no-chx">
+                                    <input class="checkbox__input" type="checkbox" id="chx-s-02" />
+                                    <label class="checkbox__label" for="chx-s-02">возрастанию цены</label>
+                                </div>
+                                <div class="checkbox_no-chx">
+                                    <input class="checkbox__input" type="checkbox" id="chx-s-03" />
+                                    <label class="checkbox__label" for="chx-s-03">убыванию цены</label>
+                                </div>
+                                <div class="checkbox_no-chx">
+                                    <input class="checkbox__input" type="checkbox" id="chx-s-04" />
+                                    <label class="checkbox__label" for="chx-s-04">новизне</label>
+                                </div>
+                                <div class="checkbox_no-chx">
+                                    <input class="checkbox__input" type="checkbox" id="chx-s-05" />
+                                    <label class="checkbox__label" for="chx-s-05">названию</label>
+                                </div>
+                                <div class="checkbox_no-chx">
+                                    <input class="checkbox__input" type="checkbox" id="chx-s-06" />
+                                    <label class="checkbox__label" for="chx-s-06">заполненности рядов</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stock-items-filter__mode">
+                            <button class="stock-items-filter__list">
+                                <i class="icon icon-rows"></i>
+                            </button>
+                            <button class="stock-items-filter__matrix is-active">
+                                <i class="icon icon-cols"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="stock-items-filter__row bottom">
+                        <span class="stock-items-filter__displayed">1-36/150 товаров</span>
+                        <div class="show-by">
+                            <span class="show-by__text">показывать по:</span>
+                            <div class="show-by__buttons">
+                                <button class="show-by__item is-selected">30</button>
+                                <button class="show-by__item">60</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </script>
+        </div>
+
+        <h2 class="ds-title">Показывать по</h2>
+
+        <div class="ds-wrapper" style="max-width: 350px;">
+            <div class="show-by">
+                <span class="show-by__text">показывать по:</span>
+                <div class="show-by__buttons">
+                    <button class="show-by__item is-selected">30</button>
+                    <button class="show-by__item">60</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <div class="show-by">
+                    <span class="show-by__text">показывать по:</span>
+                    <div class="show-by__buttons">
+                        <button class="show-by__item is-selected">30</button>
+                        <button class="show-by__item">60</button>
+                    </div>
+                </div>
+            </script>
+        </div>
+
+        <h2 class="ds-title">Рекламный баннер - одиночный</h2>
 
         <div class="ds-center">
             <div class="ad-banner">
@@ -29,7 +219,7 @@
             </script>
         </div>
 
-        <h2 class="ds-title">Рекламный баннер - слайдер</h3>
+        <h2 class="ds-title">Рекламный баннер - слайдер</h2>
 
         <div class="ds-center">
             <div class="ad-banner-slider">
@@ -78,7 +268,7 @@
             </script>
         </div>
 
-        <h2 class="ds-title">Боковая секция стат. страницы</h3>
+        <h2 class="ds-title">Боковая секция стат. страницы</h2>
 
         <div class="ds-wrapper ds-i" style="max-width: 296px;">
             <aside class="stock-aside">
@@ -614,7 +804,7 @@
             </script>
         </div>
 
-        <h2 class="ds-title">Ценовой диапазон (надо обговорить добавление полей ввода под значения для мобильных)</h3>
+        <h2 class="ds-title">Ценовой диапазон (надо обговорить добавление полей ввода под значения для мобильных)</h2>
 
         <div class="ds-wrapper" style="max-width: 296px">
             <div class="stock-dropdown-filter has-tooltip-force">
@@ -682,7 +872,7 @@
         </div>
 
         <div class="ds-wrapper">
-            <h2>Как выставлять значения для визуального отображения ценового диапазона:</h3>
+            <h2>Как выставлять значения для визуального отображения ценового диапазона:</h2>
 
             <h4 class="semi-bold">Для ползунков:</h4>
             <p>
@@ -744,7 +934,7 @@
             </script>
         </div>
 
-        <h2 class="ds-title">Фильтр</h3>
+        <h2 class="ds-title">Фильтр</h2>
 
         <div class="ds-wrapper ds-i" style="max-width: 296px">
             <div class="stock-dropdown-filter">
@@ -929,7 +1119,7 @@
         <!--  -->
         <!--  -->
 
-        <h2 class="ds-title">Блок параметров товара</h3>
+        <h2 class="ds-title">Блок параметров товара</h2>
 
         <div class="ds-wrapper ds-i" style="max-width: 296px">
             <ul class="item-params-list">
@@ -1030,7 +1220,7 @@
         <!--  -->
         <!--  -->
 
-        <h2 class="ds-title">Секция каталогов</h3>
+        <h2 class="ds-title">Секция каталогов</h2>
 
         <div class="ds-wrapper ds-i" style="max-width: 296px;">
             <div class="catalog-list">
@@ -1315,7 +1505,7 @@
             </script>
         </div>
 
-        <h2 class="ds-title">Сообщение что нет активного сбора, строка</h3>
+        <h2 class="ds-title">Сообщение что нет активного сбора, строка</h2>
 
         <div class="ds-center">
             <div class="no-active-message-bar semi-bold">
@@ -1333,7 +1523,7 @@
             </script>
         </div>
 
-        <h2 class="ds-title">Карточка с основной информацией о закупке</h3>
+        <h2 class="ds-title">Карточка с основной информацией о закупке</h2>
         <div class="ds-wrapper">
             <p>
                 Для неактивного состояния добавить класс <span class="ds-hl">is-disabled</span> элементу
@@ -1364,7 +1554,7 @@
                                     мужской обуви оптом. Обувь на все сезоны: летняя обувь, зимняя обувь, демисезонная
                                     обувь на любой вкус – от модельных до спортивных вариантов. Вся предлагаемая обувь –
                                     высокого качества, это российская обувь и китайская обувь, выполненная в условиях..
-                                    <h2 class="stock-tabs__heading">Прочая информация</h3>
+                                    <h2 class="stock-tabs__heading">Прочая информация</h2>
                                     Понятия натурального меха и искусственного. Натуральный мех - шкура вместе с
                                     шерстью, из которой отшиваются изделия после выделки, это вы можете проверить в
                                     энциклопедиях. Все, что создано искусственно, то есть приклеено/пришито на кожу
@@ -1553,7 +1743,7 @@
                                         мужской обуви оптом. Обувь на все сезоны: летняя обувь, зимняя обувь, демисезонная
                                         обувь на любой вкус – от модельных до спортивных вариантов. Вся предлагаемая обувь –
                                         высокого качества, это российская обувь и китайская обувь, выполненная в условиях..
-                                        <h2 class="stock-tabs__heading">Прочая информация</h3>
+                                        <h2 class="stock-tabs__heading">Прочая информация</h2>
                                         Понятия натурального меха и искусственного. Натуральный мех - шкура вместе с
                                         шерстью, из которой отшиваются изделия после выделки, это вы можете проверить в
                                         энциклопедиях. Все, что создано искусственно, то есть приклеено/пришито на кожу
@@ -1729,7 +1919,7 @@
         <!--  -->
         <!--  -->
 
-        <h2 class="ds-title">Табы закупки - все секции</h3>
+        <h2 class="ds-title">Табы закупки - все секции</h2>
 
         <div class="ds-wrapper">
             <p>
@@ -1756,7 +1946,7 @@
                         оптом. Обувь на все сезоны: летняя обувь, зимняя обувь, демисезонная обувь на любой вкус – от
                         модельных до спортивных вариантов. Вся предлагаемая обувь – высокого качества, это российская
                         обувь и китайская обувь, выполненная в условиях..
-                        <h2 class="stock-tabs__heading">Прочая информация</h3>
+                        <h2 class="stock-tabs__heading">Прочая информация</h2>
                         Понятия натурального меха и искусственного. Натуральный мех - шкура вместе с шерстью, из которой
                         отшиваются изделия после выделки, это вы можете проверить в энциклопедиях. Все, что создано
                         искусственно, то есть приклеено/пришито на кожу называется искусственным мехом, даже если в
@@ -1852,7 +2042,7 @@
                             оптом. Обувь на все сезоны: летняя обувь, зимняя обувь, демисезонная обувь на любой вкус – от
                             модельных до спортивных вариантов. Вся предлагаемая обувь – высокого качества, это российская
                             обувь и китайская обувь, выполненная в условиях..
-                            <h2 class="stock-tabs__heading">Прочая информация</h3>
+                            <h2 class="stock-tabs__heading">Прочая информация</h2>
                             Понятия натурального меха и искусственного. Натуральный мех - шкура вместе с шерстью, из которой
                             отшиваются изделия после выделки, это вы можете проверить в энциклопедиях. Все, что создано
                             искусственно, то есть приклеено/пришито на кожу называется искусственным мехом, даже если в
@@ -1934,7 +2124,7 @@
             </script>
         </div>
 
-        <h2 class="ds-title">Отзывы</h3>
+        <h2 class="ds-title">Отзывы</h2>
 
         <div class="ds-wrapper" style="max-width: 872px;">
             <div class="stock-reviews">
@@ -2028,7 +2218,7 @@
             </script>
         </div>
 
-        <h2 class="ds-title">Размерная сетка</h3>
+        <h2 class="ds-title">Размерная сетка</h2>
 
         <div class="ds-wrapper">
             <p>
@@ -2073,7 +2263,7 @@
             </script>
         </div>
 
-        <h2 class="ds-title">Контейнер картинки закупки</h3>
+        <h2 class="ds-title">Контейнер картинки закупки</h2>
 
         <div class="ds-center">
             <div class="stock-img-wrapper">
@@ -2089,7 +2279,7 @@
             </script>
         </div>
 
-        <h2 class="ds-title">Условия закупки</h3>
+        <h2 class="ds-title">Условия закупки</h2>
 
         <div class="ds-center">
             <div class="stock-cond">
@@ -2254,7 +2444,7 @@
             </p>
         </div>
 
-        <h2 class="ds-title">Краткое отображение информации о закупке</h3>
+        <h2 class="ds-title">Краткое отображение информации о закупке</h2>
 
         <div class="ds-center">
             <!-- Добавить модификатор stock-brief_disabled для неактивной закупки -->
@@ -2333,7 +2523,7 @@
             </div>
         </div>
 
-        <h2 class="ds-title">Неактивное краткое отображение информации о закупке</h3>
+        <h2 class="ds-title">Неактивное краткое отображение информации о закупке</h2>
         <div class="ds-center">
             <!-- Добавить модификатор stock-brief_disabled для неактивной закупки -->
             <div class="stock-brief stock-brief_disabled">
@@ -2479,7 +2669,7 @@
             </script>
         </div>
 
-        <h2 class="ds-title">Блок избранное</h3>
+        <h2 class="ds-title">Блок избранное</h2>
         <div class="ds-wrapper">
             <p>
                 Заменить <span class="ds-hl">icon-heart-bold</span> на <span class="ds-hl">icon-heart-filled</span> для
@@ -2527,7 +2717,7 @@
             </script>
         </div>
 
-        <h2 class="ds-title">Количество обсуждений</h3>
+        <h2 class="ds-title">Количество обсуждений</h2>
         <div class="ds-wrapper">
             <span class="num-of-discussions">
                 <span class="num-of-discussions__num">1024</span>
@@ -2542,7 +2732,7 @@
             </script>
         </div>
 
-        <h2 class="ds-title">Статус закупки</h3>
+        <h2 class="ds-title">Статус закупки</h2>
         <div class="ds-wrapper">
             <p>Класс <span class="ds-hl">green</span> временный! Позже к блоку будут дописаны модификаторы</p>
         </div>
@@ -2562,7 +2752,7 @@
             </script>
         </div>
 
-        <h2 class="ds-title">Профиль организатора</h3>
+        <h2 class="ds-title">Профиль организатора</h2>
         <div class="ds-wrapper">
             <div class="org-profile">
                 <div class="org-profile__image-wrapper">
@@ -2599,7 +2789,7 @@
             </script>
         </div>
 
-        <h2 class="ds-title">Значок рейтинга со звездой</h3>
+        <h2 class="ds-title">Значок рейтинга со звездой</h2>
         <div class="ds-wrapper">
             <i class="icon icon-star rating-star">
                 <span class="rating-star__num">4.8</span>
