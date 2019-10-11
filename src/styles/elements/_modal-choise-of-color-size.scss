@@ -17,9 +17,11 @@
             justify-content: flex-start;
             min-width: 100%;
             margin: 0 7px 5px 0;
+            overflow: visible;
 
             h5 {
                 margin: 0 0 5px 3px;
+                font-weight: 600;
             }
 
             .link_hover {
@@ -52,6 +54,7 @@
             &-color {
                 display: flex;
                 flex-direction: column;
+                position: relative;
                 .item-params-list__item {
                     padding: 3px;
                 }
@@ -66,6 +69,7 @@
                 display: flex;
                 flex-direction: column;
                 margin-bottom: 20px;
+                position: relative;
                 .item-params-list {
                     max-height: 25px;
                 }
@@ -77,6 +81,21 @@
                         border: 1px solid $pink-popover-color;
                     }
                 } 
+            }
+            .ds-popover {
+                position: absolute;
+                top: 50px;
+                right: 10px;
+                padding: 5px;
+                box-shadow: none;
+                font-size: 9px;
+                background: $pink-popover-color;
+                color: $light-gray-txt-color;
+                &:before {
+                    left: 20px;
+                    background: $pink-popover-color;
+                    transform: rotate(45deg) translateX(3px);
+                }
             }
         }
 
