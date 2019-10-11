@@ -9,6 +9,64 @@
     <body>
         <h1 class="ds-title">Компоненты статичной страницы закупки</h1>
 
+        <h2 class="ds-title">Значки товара - ряды, сколько заказали</h2>
+
+        <div class="ds-wrapper">
+            <span class="stock-badge stock-badge_rows">рядами</span>
+            <span class="stock-badge stock-badge_already">заказали 102 раза</span>
+        </div>
+
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <span class="stock-badge stock-badge_rows">рядами</span>
+                <span class="stock-badge stock-badge_already">заказали 102 раза</span>
+            </script>
+        </div>
+
+        <h2 class="ds-title">Карточка товара маленькая</h2>
+
+        <div class="ds-wrapper">
+            <div class="stock-card-vertical">
+                <div class="stock-card-vertical__wrapper">
+                    <div class="stock-card-vertical__images-wrapper">
+                        <button class="stock-card-vertical__prev">
+                            <i class="icon icon-arrow-left"></i>
+                        </button>
+                        <div class="stock-card-vertical__images">
+                            <a href="#">
+                                <img src="~images/card.png" class="stock-card-vertical__image is-active" />
+                            </a>
+                            <a href="#">
+                                <img src="~images/card-2.png" class="stock-card-vertical__image" />
+                            </a>
+                        </div>
+                        <button class="stock-card-vertical__next">
+                            <i class="icon icon-arrow-right"></i>
+                        </button>
+                        <span class="stock-badge stock-badge_rows">рядами</span>
+                        <span class="stock-badge stock-badge_already">заказали 102 раза</span>
+                    </div>
+                    <button class="add-to-favorite-circle stock-card-vertical__favorite">
+                        <i class="icon icon-heart"></i>
+                        <i class="icon icon-heart-filled"></i>
+                    </button>
+                </div>
+                <div class="stock-card-vertical__heading">
+                    Утепленные зимние кроссовки с мехом кого угодно Merge
+                </div>
+                <div class="stock-card-vertical__main">
+                    <div class="stock-card-vertical__price-wrapper">
+                        <div class="stock-card-vertical__price">1 800 руб.</div>
+                        <div class="stock-card-vertical__org">+ Орг. сбор 16%</div>
+                    </div>
+                    <button class="ds-btn stock-card-vertical__buy">
+                        <span class="ds-btn__text">В корзину</span>
+                        <i class="icon icon-cart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
         <h2 class="ds-title">Фильтр товаров</h2>
 
         <div class="ds-wrapper" style="max-width: 872px;">
