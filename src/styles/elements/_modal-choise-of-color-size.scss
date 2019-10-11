@@ -2,11 +2,12 @@
 .modal-choise-of-color-size {
     .modal {
         &__wrap {
-            .ds-btn__text {
-                .icon-cart {
-                    font-size: 15px;
-                }
-            }            
+            .icon-cart {
+                margin: 2px 0 0 3px;
+                font-size: 15px;
+                font-weight: 600;
+            }
+            max-width: 320px;            
         }
         &__btn-close {
             margin: 6px 5px 0 0;
@@ -36,16 +37,15 @@
             }    
 
             .item-params-list {
-                max-width: 175px;
+                max-height: 25px;
                 border: 1px solid transparent;
                 transition: all .5s;
             
                 &__item {
                     list-style: none;
                     color: #858585;
-                    margin-right: 0px;
-                    margin-bottom: 0px;
                     min-width: 20px;
+                    margin-bottom: 5px;
                 }
             
                 &__item.is-selected {
@@ -53,9 +53,10 @@
                     background-color: #318cca;
                     color: white;
                 }
-                &.is-toggle {
-                    max-height: 100px;
-                    transition: all .5s;
+
+                &.is-expanded {
+                    max-height: 250px;
+                    transition: all 1s;
                 }
             }
 
@@ -63,9 +64,6 @@
                 display: flex;
                 flex-direction: column;
                 position: relative;
-                .item-params-list__item {
-                    padding: 3px;
-                }
                 &.is-warning {
                     .item-params-list {                     
                         border: 1px solid $pink-popover-color;
@@ -136,14 +134,19 @@
             margin: 0 30px 0 5px;
             align-items: center;
             &-num {
+                width: 35px;
                 margin: 0 5px;
                 font-size: 16px;
+                appearance: none;
+                border: none;
+                text-align: center;
             }
         }
         &__minus, &__plus {
             position: relative;
             width: 20px;
             height: 20px;
+            min-width: 20px;
             border-radius: 50%;
             background: $light-gray-sum-btn;
             color: #ffffff;
@@ -156,6 +159,9 @@
                 width: 5px;
                 height: 2px;
                 background: #ffffff;
+            }
+            &:hover {
+                background: $color-primary;
             }
 
         }
