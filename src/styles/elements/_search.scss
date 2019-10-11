@@ -8,7 +8,7 @@
         border: 1.5px solid #36a6f2;
         border-radius: 48px;
         padding-left: 20px;
-        padding-right: 145px;
+        padding-right: 50px;
         height: 40px;
         width: 100%;
 
@@ -29,7 +29,7 @@
         border-radius: 50%;
         transform: translateY(-50%);
         &:active {
-            transform: translateY(-50%) scale(0.8);
+            transform: translateY(-50%) scale(0.9);
         }
     }
 
@@ -38,5 +38,11 @@
         right: 55px;
         transform: translateY(-50%);
         position: absolute;
+    }
+}
+
+.search.has-categories {
+    .search__bar {
+        padding-right: 145px;
     }
 }

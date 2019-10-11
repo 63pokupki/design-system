@@ -1,0 +1,42 @@
+.item-params-list {
+    list-style: none;
+    margin: unset;
+    padding: unset;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    max-height: 90px;
+    overflow: hidden;
+
+    &__item {
+        cursor: pointer;
+        user-select: none;
+        font-size: 12px;
+        padding: 3px 5px;
+        border-radius: 12px;
+        color: #858585;
+        margin-right: 5px;
+        margin-bottom: 8px;
+        min-width: 23px;
+        text-align: center;
+        transition: background-color $transition-fast, color $transition-fast;
+
+        &:active {
+            @include deep-click(0.95);
+        }
+
+        &:hover {
+            color: #318cca;
+        }
+    }
+
+    &__item.is-selected {
+        transition: background-color $transition-fast, color $transition-fast;
+        background-color: #318cca;
+        color: white;
+    }
+}
+
+.item-params-list.is-expanded {
+    max-height: unset;
+}

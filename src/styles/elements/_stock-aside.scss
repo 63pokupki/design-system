@@ -1,0 +1,42 @@
+.stock-aside {
+    width: 100%;
+    background: white;
+
+    &__heading {
+        font-weight: 600;
+        font-size: 16px;
+        color: #1d1e1f;
+        margin-right: 30px;
+    }
+
+    &__check-all {
+        font-size: 12px;
+    }
+
+    &__catalogs {
+        margin-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #e3e3e3;
+    }
+
+    &__filters {
+        margin-bottom: 15px;
+    }
+
+    &__filters-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 8px;
+    }
+
+    &__filters-heading {
+        font-size: 14px;
+        line-height: 45px;
+        color: #1d1e1f;
+    }
+
+    &__uncheck-all {
+        font-size: 12px;
+    }
+}

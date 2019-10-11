@@ -1,0 +1,55 @@
+.ad-banner-slider {
+    position: relative;
+    width: 100%;
+    max-height: 100px;
+    max-width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    &__prev,
+    &__next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $color-primary-light;
+        font-size: 28px;
+        width: 50px;
+        height: 100%;
+
+        &:active {
+            transform: translateY(-50%) scale(0.9);
+        }
+    }
+
+    &__prev {
+        left: 0;
+    }
+
+    &__next {
+        right: 0;
+    }
+
+    &__images {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        max-height: 100px;
+        max-width: 800px;
+    }
+
+    &__image {
+        display: none;
+        height: auto;
+        width: auto;
+        max-width: 100%;
+        max-height: 100%;
+
+        &.is-active {
+            display: block;
+        }
+    }
+}

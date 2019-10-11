@@ -1,0 +1,42 @@
+.show-by {
+    display: flex;
+    align-items: flex-end;
+    &__text {
+        font-size: 12px;
+        line-height: 17px;
+        color: #606266;
+        margin-right: 15px;
+    }
+
+    &__item {
+        margin-right: 4px;
+        color: #c4c4c4;
+        font-size: 14px;
+
+        &:hover {
+            color: $color-primary;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:active {
+            @include deep-click(0.9);
+        }
+
+        &.is-selected {
+            position: relative;
+            color: #606266;
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                left: -3px;
+                height: 1px;
+                width: 23px;
+                background: $color-primary;
+            }
+        }
+    }
+}
