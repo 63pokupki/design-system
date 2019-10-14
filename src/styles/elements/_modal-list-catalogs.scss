@@ -1,0 +1,93 @@
+.modal-list-catalogs {
+    .modal {
+        &__content {
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            box-shadow: 0px 0px 5px 0px rgba(97, 97, 97, 0.14); 
+
+            h3 {
+                font-size: 14px;
+                margin-top: 0;
+                margin: 0 0 15px 25px;
+            }
+
+            &-row {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                max-height: 190px;
+                overflow-y: auto;
+                overflow-x: hidden;
+
+                .checkbox {
+                    flex-basis: 33.33%;
+                    flex-shrink: 1;
+                    margin-bottom: 5px;
+
+                    &__label {
+                        p { 
+                            margin: 0;
+                            white-space: nowrap;
+                            width: 260px;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            color: $dark-grey-color;
+                            &:hover {
+                                color: $color-primary;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .link_hover {
+                justify-content: flex-start;
+                margin: 15px 0 25px 25px;
+            }
+        }
+        &__footer {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 10px 10px 10px 40px;
+            box-shadow: 0px 0px 5px 0px rgba(97, 97, 97, 0.14); 
+
+            &-row {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                margin: 5px 0;
+                color: $dark-grey-color;
+
+                .link_hover {
+                    margin: 0 0 0 20px;
+                    font-size: 14px;
+                    white-space: nowrap;
+                }
+            }
+            .ds-btn_hover {
+                min-width: 160px;
+                height: 30px;
+                margin-left: 40px;
+            }
+            span {
+                white-space: nowrap;
+            }
+        }
+        &__selected-catalog {            
+            width: 415px;
+            margin: 0 12px 0 5px;
+            overflow: hidden;
+            font-weight: 600;
+            text-overflow: ellipsis;
+            color: $dark-brown-color;
+        }
+
+    }
+}
+
+
+
+
