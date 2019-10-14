@@ -50,14 +50,22 @@
         }
         &__select {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             position: relative;
             min-width: 485px;
             min-height: 50px;
+            margin-bottom: 20px;
+            padding: 0 15px;
             border: 2px solid $click-load-color;
             border-radius: 3px;
-            margin-bottom: 20px;
+            cursor: pointer;
+            &.is-toggle {
+                .modal__toggle-list {
+                    opacity: 1;
+                    max-height: 180px;
+                }
+            }
             &:after {
                 content: "";
                 position: absolute;
@@ -77,13 +85,47 @@
             &-catalog:after {
                 content: "Каталог";
             }
+            .ds-triangle {
+                &:after {
+                    width: 10px;
+                    height: 10px;
+                }
+            }
         }
         &__selected-position {
             font-size: 16px;
             color: $light-gray-txt-color;
+            &:after {
+                content: "";
+
+            }
         }
-        &__toggle-list {
+        &__toggle-list {            
+            min-width: 492px;
+            height: auto;
+            max-height: 0;       
+
+            position: absolute;
+            top: 35px;
+            left: -2px;
+
+            padding: 0;
+
+            background: #fff;
+            border: 2px solid $click-load-color;
+            border-radius: 3px;
+            color: $light-gray-txt-color;
+
             list-style: none;
+            opacity: 0;
+            z-index: 10;
+            overflow-y: auto;
+            li {
+                padding: 5px 0 5px 15px;
+                &:hover {
+                    background: $modal-copy-selected-color;
+                }
+            }  
         }
     }
 }
