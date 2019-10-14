@@ -1,0 +1,11 @@
+// кнопка Редактировать позицию для организатора
+.org-edit-position-btn {
+    background: url("~images/pencil.svg") no-repeat center center;
+    background-size: cover;
+    width: 19px;
+    height: 19px;
+
+    &:active {
+        @include deep-click(0.9);
+    }
+}

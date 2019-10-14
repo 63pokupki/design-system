@@ -1,0 +1,44 @@
+// контейнер для вертикального отображения карточек товаров с разными режимами по несколько шт
+.stock-card-container {
+    // горизонтальное отображение карточек по 1
+    &.horizontal {
+        // пока без реализации
+    }
+
+    // вертикальное отображение карточек по несколько, стандартно по 3
+    &.vertical {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+
+        .stock-card-vertical-wrapper {
+            width: 33.33333%;
+        }
+
+         // отображение по 2
+         &.mode-1 {
+            .stock-card-vertical-wrapper {
+                width: 100%;
+            }
+        }
+
+        // отображение по 2
+        &.mode-2 {
+            .stock-card-vertical-wrapper {
+                width: 49.99999%;
+            }
+        }
+        // отображение по 3
+        &.mode-3 {
+            .stock-card-vertical-wrapper {
+                width: 33.33333%;
+            }
+        }
+        // отображение по 4
+        &.mode-4 {
+            .stock-card-vertical-wrapper {
+                width: 24.99999%;
+            }
+        }
+    }
+}
