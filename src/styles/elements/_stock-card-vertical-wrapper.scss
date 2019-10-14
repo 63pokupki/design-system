@@ -1,0 +1,13 @@
+// обертка для карточки в вертикальном отображении
+.stock-card-vertical-wrapper {
+    &:hover {
+        .stock-card-vertical {
+            box-shadow: 0px 2px 12px rgba(0, 44, 128, 0.2);
+            z-index: 3;
+        }
+        .stock-card-vertical__other {
+            display: block;
+            z-index: 3;
+        }
+    }
+}

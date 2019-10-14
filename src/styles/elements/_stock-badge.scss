@@ -1,0 +1,38 @@
+// значок для карточки товара
+.stock-badge {
+    font-weight: 600;
+    font-size: 10px;
+    color: #ffffff;
+    padding: 1px 7px;
+    position: relative;
+    user-select: none;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: -7px;
+        left: 3px;
+        width: 0;
+        height: 0;
+        border: 7px solid transparent;
+        transform: rotate(-45deg);
+    }
+}
+
+// значок рядов
+.stock-badge_rows {
+    background: #ff4242;
+
+    &:before {
+        border-top: 7px solid #a42c2c;
+    }
+}
+
+// значок "уже заказали"
+.stock-badge_already {
+    background: #318cca;
+
+    &:before {
+        border-top: 7px solid #2c6aa4;
+    }
+}

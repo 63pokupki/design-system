@@ -1,0 +1,25 @@
+// кнопка Подробнее о товаре
+.product-detail-button {
+    color: $color-primary;
+    transition: opacity $transition-fast;
+    opacity: 0.7;
+
+    &:hover,
+    &:active {
+        opacity: 1;
+        transition: opacity $transition-fast;
+    }
+
+    &:active {
+        color: #0077c7;
+    }
+
+    &__icon {
+        margin-right: 10px;
+        font-size: 13px;
+    }
+
+    &__text {
+        font-size: 12px;
+    }
+}
