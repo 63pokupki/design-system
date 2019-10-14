@@ -1,0 +1,18 @@
+
+.ds-triangle {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    &:after {
+        content: "";
+        background: url("~images/buttons/arrow-point-to-down.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 8px;
+        height: 8px;
+    }
+}

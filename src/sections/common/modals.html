@@ -328,9 +328,38 @@
                             <div class="modal__header">Копирование позиции</div>
                             <div class="modal__content">
                                 <div class="modal__position-name">Самокат NAMELESS START SKL-014-AWS"
-                                     и еще 15<br> названий цветов и прочего
+                                    и еще 15<br> названий цветов и прочего
                                 </div>
-
+                                <div class="modal__select modal__select-purchase">
+                                    <span class="modal__selected-position">position-1</span>
+                                    <button class="ds-triangle"></button>
+                                    <ul class="modal__toggle-list">
+                                        <li>position-1</li>
+                                        <li>position-2</li>
+                                        <li>position-3</li>
+                                        <li>position-4</li>
+                                        <li>position-5</li>
+                                    </ul>
+                                </div>
+                                <div class="modal__select modal__select-catalog">
+                                    <span class="modal__selected-position">position-1</span>
+                                    <button class="ds-triangle"></button>
+                                    <ul class="modal__toggle-list">
+                                        <li>position-1</li>
+                                        <li>position-2</li>
+                                        <li>position-3</li>
+                                        <li>position-4</li>
+                                        <li>position-5</li>
+                                    </ul>
+                                </div>
+                                <div class="btn-container">
+                                    <button class="ds-btn ds-btn_hover btn-copy">
+                                        <div class="ds-btn__text">Копировать</div>
+                                    </button>
+                                    <button class="ds-btn modal__btn-cancel">
+                                        <div class="ds-btn__text">Отмена</div>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -339,7 +368,47 @@
 
             <div class="ds-code-wrapper">
                 <script type="text/plain" class="language-markup">
-                    <!-- Скопировать код элемента сюда -->
+                    <div class="modal modal-copy-position is-visible" style="position: relative">
+                        <div class="modal__wrap" style="margin: 10px">
+                            <div class="modal__btn-close"></div>
+                            <div class="modal__header">Копирование позиции</div>
+                            <div class="modal__content">
+                                <div class="modal__position-name">Самокат NAMELESS START SKL-014-AWS"
+                                    и еще 15<br> названий цветов и прочего
+                                </div>
+                                <div class="modal__select modal__select-purchase">
+                                    <span class="modal__selected-position">position-1</span>
+                                    <button class="ds-triangle"></button>
+                                    <ul class="modal__toggle-list">
+                                        <li>position-1</li>
+                                        <li>position-2</li>
+                                        <li>position-3</li>
+                                        <li>position-4</li>
+                                        <li>position-5</li>
+                                    </ul>
+                                </div>
+                                <div class="modal__select modal__select-catalog">
+                                    <span class="modal__selected-position">position-1</span>
+                                    <button class="ds-triangle"></button>
+                                    <ul class="modal__toggle-list">
+                                        <li>position-1</li>
+                                        <li>position-2</li>
+                                        <li>position-3</li>
+                                        <li>position-4</li>
+                                        <li>position-5</li>
+                                    </ul>
+                                </div>
+                                <div class="btn-container">
+                                    <button class="ds-btn ds-btn_hover btn-copy">
+                                        <div class="ds-btn__text">Копировать</div>
+                                    </button>
+                                    <button class="ds-btn modal__btn-cancel">
+                                        <div class="ds-btn__text">Отмена</div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
                 </script>
             </div>
         </div>
@@ -361,6 +430,18 @@
             const link = list.nextElementSibling;
             link.addEventListener("click", () => list.classList.toggle("is-expanded"));
         });
+    </script>
+
+    <!-- Модалка копирование позиции -->
+    <script>
+        let select = document.querySelectorAll(".modal__select"); //кнопка раскрывающая блок
+        //Перебираем все кнопки
+        for (let bt = 0; bt < select.length; bt++) {
+
+            select[bt].addEventListener("click", function () {
+                this.classList.toggle("is-toggle");
+            });
+        }
     </script>
 
 
