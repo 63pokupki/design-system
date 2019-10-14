@@ -1,8 +1,87 @@
+.product-detail-button {
+    color: $color-primary;
+    transition: opacity $transition-fast;
+    opacity: 0.7;
+
+    &:hover, &:active {
+        opacity: 1;
+        transition: opacity $transition-fast;
+    }
+
+    &:active {
+        color: #0077c7;
+    }
+
+    &__icon {
+        margin-right: 10px;
+        font-size: 14px;
+    }
+
+    &__text {
+        font-size: 12px;
+    }
+}
+
+.stock-card-vertical-wrapper {
+    width: 288px;
+    margin: 0 auto;
+
+    &:hover {
+        .stock-card-vertical {
+            box-shadow: 0px 2px 12px rgba(0, 44, 128, 0.2);
+        }
+        .stock-card-vertical__other {
+            display: block;
+        }
+    }
+}
+
 .stock-card-vertical {
     margin: 0 auto;
     padding: 16px;
+    position: relative;
     box-shadow: 0px 2px 12px rgba(0, 44, 128, 0.2);
-    width: 288px;
+
+    &__params-name {
+        font-weight: 600;
+        font-size: 12px;
+        color: #1e2023;
+        margin-right: 2px;
+    }
+
+    &__details {
+        width: 100%;
+    }
+
+    &__params {
+        display: flex;
+        align-items: baseline;
+    }
+
+    &__params-b{
+        margin-bottom: 10px;
+    }
+
+    & .item-params-list__item {
+        margin-right: 2px;
+    }
+
+    & &__item-params-list {
+        max-height: 25px;
+    }
+
+    &__other {
+        display: block;
+        z-index: 1;
+        box-shadow: 0 6px 9px rgba(0,44,128,.15);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 0 16px 16px;
+        transform: translateY(100%);
+        background-color: white;
+    }
 
     &__wrapper {
         display: flex;
@@ -108,6 +187,12 @@
     &__buy {
         width: 100%;
         max-width: 128px;
+        padding: 6px 18px;
+
+        .icon-cart {
+            font-size: 16px;
+            margin-left: 5px;
+        }
     }
 }
 

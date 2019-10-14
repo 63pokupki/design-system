@@ -25,46 +25,100 @@
 
         <h2 class="ds-title">Карточка товара маленькая</h2>
 
-        <div class="ds-wrapper">
-            <div class="stock-card-vertical">
-                <div class="stock-card-vertical__wrapper">
-                    <div class="stock-card-vertical__images-wrapper">
-                        <button class="stock-card-vertical__prev">
-                            <i class="icon icon-arrow-left"></i>
-                        </button>
-                        <div class="stock-card-vertical__images">
-                            <a href="#">
-                                <img src="~images/card.png" class="stock-card-vertical__image is-active" />
-                            </a>
-                            <a href="#">
-                                <img src="~images/card-2.png" class="stock-card-vertical__image" />
-                            </a>
+        <div class="ds-wrapper" style="height: 550px;">
+            <div class="stock-card-vertical-wrapper">
+                <div class="stock-card-vertical">
+                    <div class="stock-card-vertical__wrapper">
+                        <div class="stock-card-vertical__images-wrapper">
+                            <button class="stock-card-vertical__prev">
+                                <i class="icon icon-arrow-left"></i>
+                            </button>
+                            <div class="stock-card-vertical__images">
+                                <a href="#">
+                                    <img src="~images/card.png" class="stock-card-vertical__image is-active" />
+                                </a>
+                                <a href="#">
+                                    <img src="~images/card-2.png" class="stock-card-vertical__image" />
+                                </a>
+                            </div>
+                            <button class="stock-card-vertical__next">
+                                <i class="icon icon-arrow-right"></i>
+                            </button>
+                            <span class="stock-badge stock-badge_rows">рядами</span>
+                            <span class="stock-badge stock-badge_already">заказали 102 раза</span>
                         </div>
-                        <button class="stock-card-vertical__next">
-                            <i class="icon icon-arrow-right"></i>
+                        <button class="add-to-favorite-circle stock-card-vertical__favorite">
+                            <i class="icon icon-heart"></i>
+                            <i class="icon icon-heart-filled"></i>
                         </button>
-                        <span class="stock-badge stock-badge_rows">рядами</span>
-                        <span class="stock-badge stock-badge_already">заказали 102 раза</span>
                     </div>
-                    <button class="add-to-favorite-circle stock-card-vertical__favorite">
-                        <i class="icon icon-heart"></i>
-                        <i class="icon icon-heart-filled"></i>
-                    </button>
-                </div>
-                <div class="stock-card-vertical__heading">
-                    Утепленные зимние кроссовки с мехом кого угодно Merge
-                </div>
-                <div class="stock-card-vertical__main">
-                    <div class="stock-card-vertical__price-wrapper">
-                        <div class="stock-card-vertical__price">1 800 руб.</div>
-                        <div class="stock-card-vertical__org">+ Орг. сбор 16%</div>
+                    <div class="stock-card-vertical__heading">
+                        Утепленные зимние кроссовки с мехом кого угодно Merge
                     </div>
-                    <button class="ds-btn stock-card-vertical__buy">
-                        <span class="ds-btn__text">В корзину</span>
-                        <i class="icon icon-cart"></i>
-                    </button>
+                    <div class="stock-card-vertical__main">
+                        <div class="stock-card-vertical__price-wrapper">
+                            <div class="stock-card-vertical__price">1 800 руб.</div>
+                            <div class="stock-card-vertical__org">+ Орг. сбор 16%</div>
+                        </div>
+                        <button class="ds-btn stock-card-vertical__buy">
+                            <span class="ds-btn__text">В корзину</span>
+                            <i class="icon icon-cart"></i>
+                        </button>
+                    </div>
+                    <div class="stock-card-vertical__other">
+                        <div class="stock-card-vertical__params-b">
+                            <div class="stock-card-vertical__params">
+                                <div class="stock-card-vertical__params-name">Цвет:</div>
+                                <ul class="item-params-list stock-card-vertical__item-params-list">
+                                    <li class="item-params-list__item">черный</li>
+                                    <li class="item-params-list__item">красный</li>
+                                    <li class="item-params-list__item">зеленый</li>
+                                    <li class="item-params-list__item">желтый</li>
+                                    <li class="item-params-list__item">белый</li>
+                                </ul>
+                            </div>
+                            <div class="stock-card-vertical__params">
+                                <div class="stock-card-vertical__params-name">Размеры:</div>
+                                <ul class="item-params-list stock-card-vertical__item-params-list">
+                                    <li class="item-params-list__item">36</li>
+                                    <li class="item-params-list__item">37</li>
+                                    <li class="item-params-list__item">38</li>
+                                    <li class="item-params-list__item">39</li>
+                                    <li class="item-params-list__item">40</li>
+                                    <li class="item-params-list__item">36</li>
+                                    <li class="item-params-list__item">37</li>
+                                    <li class="item-params-list__item">38</li>
+                                    <li class="item-params-list__item">39</li>
+                                    <li class="item-params-list__item">40</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <button class="product-detail-button stock-card-vertical__details">
+                            <i class="icon icon-eye product-detail-button__icon"></i>
+                            <span class="product-detail-button__text">Подробнее о товаре</span>
+                        </button>
+                    </div>
                 </div>
             </div>
+        </div>
+
+        <h2 class="ds-title">Подробнее о товаре</h2>
+
+        <div class="ds-wrapper">
+            <button class="product-detail-button">
+                <i class="icon icon-eye product-detail-button__icon"></i>
+                <span class="product-detail-button__text">Подробнее о товаре</span>
+            </button>
+        </div>
+
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <button class="product-detail-button">
+                    <i class="icon icon-eye product-detail-button__icon"></i>
+                    <span class="product-detail-button__text">Подробнее о товаре</span>
+                </button>
+            </script>
         </div>
 
         <h2 class="ds-title">Фильтр товаров</h2>
