@@ -20,6 +20,7 @@
         &__position-name {
             text-align: center;
             font-weight: 600;
+            margin: 0 0 20px 0;
         }
         &__content {
             display: flex;
@@ -29,6 +30,60 @@
             margin: 0 7px 5px 0;
             overflow: visible;
 
+            .btn {
+                &-container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 10px;
+                    .ds-btn {
+                        width: 160px;
+                        height: 32px;
+                        font-size: 14px;
+                        padding: 0 18px;
+                    }
+                }
+                &-copy {
+                    margin-right: 25px;
+                }
+            }
+        }
+        &__select {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            min-width: 485px;
+            min-height: 50px;
+            border: 2px solid $click-load-color;
+            border-radius: 3px;
+            margin-bottom: 20px;
+            &:after {
+                content: "";
+                position: absolute;
+                left: 13px;
+                top: -11px;
+                background: #fff;
+                width: 70px;
+                height: 15px;
+                text-align: center;
+                font-size: 14px;
+                font-weight: 600;
+                color: $click-load-color
+            }
+            &-purchase:after {
+                content: "Закупка";
+            }
+            &-catalog:after {
+                content: "Каталог";
+            }
+        }
+        &__selected-position {
+            font-size: 16px;
+            color: $light-gray-txt-color;
+        }
+        &__toggle-list {
+            list-style: none;
         }
     }
 }
