@@ -1,14 +1,8 @@
 .modal-copy-position {
     .modal {
-        &__wrap {}
 
         &__btn-close {
             margin: 6px 5px 0 0;
-
-            &:before,
-            &:after {
-                background: $light-gray-link-color;
-            }
         }
 
         &__header {
@@ -65,7 +59,9 @@
                     opacity: 1;
                     max-height: 180px;
                 }
+            
             }
+
             &:after {
                 content: "";
                 position: absolute;
