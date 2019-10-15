@@ -1,0 +1,107 @@
+.modal-short-img {
+    .modal {
+        &__content {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+
+        }
+        &__col {
+            display: flex;
+            flex-direction: column;
+            width: 384px;
+        }
+
+        // Левый блок
+        &__img-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 350px;
+            min-height: 300px;
+            height: auto;
+        }
+
+        &__arrow {
+            position: absolute;
+            top: calc(50% - 22px);
+            background: rgba(255, 255, 255, .7);
+            ;
+
+            &:after,
+            &:before {
+                background: $color-primary;
+            }
+
+            &.arrow_left {
+                left: 0;
+            }
+
+            &.arrow_right {
+                right: 0;
+            }
+        }
+
+        &__slider {
+            display: flex;
+            width: 100%;
+            margin: 12px 0 0 0;
+
+            .img-container_small {
+                display: inline-flex;
+                min-width: 80px;
+                max-width: 80px;
+                min-height: 80px;
+                min-width: 80px;
+                padding: 2px;
+                &.is-active {
+                    border: 2px solid $color-primary;
+                }
+            }
+
+            .slider {
+                background: none;
+                &-wrap {
+                    margin-bottom: 0;
+                    position: absolute;
+                    left: 0px;
+                    top: 0;
+                }
+                &-viewing {
+                    min-height: 85px;
+                }
+
+                &-items {
+                    margin-right: 20px;
+                }
+            }
+        }
+        &__scroll {
+            display: flex;
+            margin: 15px 0 0 0;
+        }
+
+        // Правый блок
+        &__heading {
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 20px;
+        }
+        &__price {
+            p {
+                font-size: 24px;
+                font-weight: 700;
+                margin: 0 0 5px 0;
+            }
+            span {
+                font-size: 16px;
+                color: $light-gray-txt-color;
+            }
+        }
+        &__goods-param {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
