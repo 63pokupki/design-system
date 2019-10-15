@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Разворачивающийся блок</title>
+</head>
+
+<body>
+    <div class="ds-wrapper">
+        <h1 class="ds-title">Разворачивающийся блок</h1>
+        <div class="ds-divider">
+            Для разворачивания/сворачивания блока, необходимо присвоить класс <span class="ds-hl">.is-toggle</span>
+            элементу <span class="ds-hl">collapse-block</span>
+            <div class="collapse-block">
+                <div class="arrow arrow_down"></div>
+                <h2>Заголовок</h2>
+                <div class="collapse-block__header">Текст в шапке</div>
+                <div class="collapse-block__content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit accusantium suscipit maxime aut
+                    aliquid facere enim, itaque deserunt ad quae cupiditate id expedita vero maiores adipisci. Cum saepe
+                    voluptas iure.
+                    Expedita laborum perspiciatis alias ipsa, doloremque recusandae, pariatur perferendis unde adipisci
+                    quis ducimus ex minus! Velit sed quisquam fugiat, architecto inventore, qui unde officiis fuga
+                    assumenda tenetur laboriosam? Vel, nisi.
+                    Id ipsa vel, officia dolor eius, magni aperiam, doloribus labore eaque voluptate maxime.
+                    Reprehenderit veritatis modi possimus odit soluta harum, vitae, exercitationem qui, ullam dolorem
+                    odio blanditiis ratione magnam architecto!
+                    Laudantium impedit cupiditate porro! Blanditiis odio excepturi, libero recusandae nulla distinctio
+                    delectus, quidem eligendi facilis iure repellendus? Odit nihil fuga adipisci optio recusandae quod
+                    quam natus ipsam ab vel! Itaque.
+                    Ullam ipsa cumque perspiciatis corrupti odio unde perferendis autem, eum nihil, atque doloremque
+                    animi mollitia sapiente minima. Porro possimus inventore dolorum esse recusandae nulla minus soluta
+                    est quaerat, eos molestiae.
+                </div>
+            </div>
+        </div>
+
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                    <!-- Скопировать код элемента сюда -->
+                </script>
+        </div>
+    </div>
+
+
+    <!-- Скрипт для демонстрации -->
+    <script>
+        let btnToggle = document.querySelectorAll(".collapse-block"),
+            toggleBlock = document.querySelectorAll(".collapse-block");
+
+        for (let bt = 0; bt < btnToggle.length; bt++) {
+            for (let tb = 0; tb < toggleBlock.length; tb++) {
+                //Разворачиваем конкретную карточку
+                btnToggle[tb].addEventListener("click", () => {
+                    toggleBlock[tb].classList.toggle("is-toggle");
+                });
+            }
+        }    
+    </script>
+
+
+</body>
+
+</html>
