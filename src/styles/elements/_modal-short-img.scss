@@ -1,11 +1,18 @@
 .modal-short-img {
     .modal {
+        &__content {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+
+        }
         &__col {
             display: flex;
             flex-direction: column;
             width: 384px;
         }
 
+        // Левый блок
         &__img-container {
             position: relative;
             display: flex;
@@ -69,6 +76,32 @@
                     margin-right: 20px;
                 }
             }
+        }
+        &__scroll {
+            display: flex;
+            margin: 15px 0 0 0;
+        }
+
+        // Правый блок
+        &__heading {
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 20px;
+        }
+        &__price {
+            p {
+                font-size: 24px;
+                font-weight: 700;
+                margin: 0 0 5px 0;
+            }
+            span {
+                font-size: 16px;
+                color: $light-gray-txt-color;
+            }
+        }
+        &__goods-param {
+            display: flex;
+            flex-direction: column;
         }
     }
 }
