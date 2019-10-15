@@ -1,0 +1,34 @@
+
+.modal-short-img {
+    .modal {
+        &__col {
+            display: flex;
+            width: 384px;
+        }
+        &__img-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 350px;
+            min-height: 300px;
+            height: auto;
+        }
+        &__arrow {
+            position: absolute;
+            top: calc(50% - 22px);            
+            background: rgba(255, 255, 255, .7);;
+            &:after, &:before {
+                background: $color-primary;
+            }
+            &.arrow_left {
+                left: 0;
+            }
+            &.arrow_right {
+                right: 0;
+            }
+        }
+    }
+}
+
+
