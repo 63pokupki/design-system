@@ -20,6 +20,13 @@
                 max-height: 190px;
                 overflow-y: auto;
                 overflow-x: hidden;
+                transition: all .8s;
+
+                &.is-toggle {
+                    max-height: 0;
+                    transition: all .3s;
+                    overflow: hidden;
+                }
 
                 .checkbox {
                     flex-basis: 33.33%;
