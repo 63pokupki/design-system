@@ -1,0 +1,61 @@
+
+.collapse-block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    max-height: 115px;
+    padding: 25px 30px;
+    position: relative;
+    // overflow: hidden;
+    box-shadow: 0px 2px 16px $collapse-block-shadow-color;
+    transition: all .5s ease-in-out;
+    &.is-toggle {
+        height: auto;
+        max-height: 5000px;
+        transition: all 1s ease-in-out;
+        
+        .collapse-block__content {
+            max-height: 4000px;
+            transition: all 1s;
+            opacity: 1;
+        }
+        .arrow {
+            transform: rotate(270deg);
+            transition: all .5s;
+
+        }
+    }
+
+    .arrow {
+        background: transparent;
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        transition: all .5s;
+
+        &:after, &:before {
+            background: $light-gray-color;
+        }
+        &:hover {
+            &:after, &:before {
+                background: $color-primary;
+            }
+        }
+    }
+
+    h2 {
+        margin-top: 0;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        max-height: 0px;
+        overflow: hidden;
+        transition: all .5s;
+        opacity: 0;
+    }
+
+}
+
