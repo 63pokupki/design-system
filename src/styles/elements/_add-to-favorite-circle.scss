@@ -1,0 +1,54 @@
+// кнопка добавить в Избранное круглая в карточке товара
+.add-to-favorite-circle {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 27px;
+    height: 26px;
+    color: $color-primary;
+    background: white;
+    border-radius: 50%;
+
+    &:hover {
+        .icon-heart {
+            display: none;
+        }
+
+        .icon-heart-filled {
+            display: block;
+        }
+    }
+
+    &:active {
+        color: #ff3868;
+        i {
+            @include deep-click(0.9);
+        }
+    }
+
+    i {
+        display: block;
+        margin-top: 2px;
+        font-size: 14px;
+    }
+
+    .icon-heart {
+        display: block;
+    }
+
+    .icon-heart-filled {
+        display: none;
+    }
+
+    &.is-selected {
+        color: #ff3868;
+
+        .icon-heart {
+            display: none;
+        }
+
+        .icon-heart-filled {
+            display: block;
+        }
+    }
+}
