@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Модальные окна</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?cf461b561ea73b8a1874" rel="stylesheet"><link href="css/ds-utils.css?cf461b561ea73b8a1874" rel="stylesheet"><link href="css/ds-ui-kit.css?cf461b561ea73b8a1874" rel="stylesheet"></head>
+<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?bb250e4347f399d82b6e" rel="stylesheet"><link href="css/ds-utils.css?bb250e4347f399d82b6e" rel="stylesheet"><link href="css/ds-ui-kit.css?bb250e4347f399d82b6e" rel="stylesheet"></head>
 
 <body>
     <h1 class="ds-title">Модальные окна</h1>
@@ -759,11 +759,89 @@
 
 
         <!-- Модалка с коротким изображением -->
-        <div class="modal is-visible" style="position: relative">
+        <div class="modal modal-short-img is-visible" style="position: relative">
             <div class="modal__wrap" style="margin: 10px">
                 <div class="modal__btn-close"></div>
-                <div class="modal__header">Имя окна</div>
-                <div class="modal__content">Здесь какой-нибудь контент</div>
+                <div class="modal__content">
+                    <div class="modal__col">
+                        <div class="modal__img-container">
+                            <div class="modal__arrow arrow arrow_left"></div>
+                            <div class="img-container_resp"><img src="images/short-img.jpg" alt="Car">
+                            </div>
+                            <div class="modal__arrow arrow arrow_right"></div>
+                        </div>
+                        <div class="modal__slider">
+                            <div class="slider">
+                                <div class="slider-viewing">
+                                    <div class="slider-wrap">
+                                        <div class="slider-items">
+                                            <div class="img-container_small is-active">
+                                                <img src="images/short-img.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="slider-items">
+                                            <div class="img-container_small">
+                                                <img src="images/short-img.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="slider-items">
+                                            <div class="img-container_small">
+                                                <img src="images/short-img.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="slider-items">
+                                            <div class="img-container_small">
+                                                <img src="images/short-img.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal__scroll">
+                            <div class="ds-scroll_horizontal">
+                                <div class="ds-scroll__slider"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal__col">
+                        <div class="modal__heading">Балетки женские с мехом
+                            козы и вставками осла, серого</div>
+                        <div class="modal__price">
+                            <p>316 руб.</p>
+                            <span>417,6 руб. включая орг. сбор 16% </span>
+                        </div>
+                        <div class="modal__goods-param">
+                            <div class="modal__content-color is-warning">
+                                <h5>Цвет:</h5>
+                                <ul class="item-params-list">
+                                    <li class="item-params-list__item">чёрный</li>
+                                    <li class="item-params-list__item">красный</li>
+                                    <li class="item-params-list__item">бежевый</li>                                
+                                </ul>
+                                <button class="link link_hover">Ещё цвета</button>
+                            </div>
+                            <!-- Если не выбран параметр, присвоить класс .is-warning, элементу modal__content-size -->
+                            <div class="modal__content-size is-warning">
+                                <h5>Размер:</h5>
+                                <ul class="item-params-list ">
+                                    <li class="item-params-list__item">36</li>
+                                    <li class="item-params-list__item">37</li>
+                                    <li class="item-params-list__item">38</li>
+                                    <li class="item-params-list__item">39</li>
+                                    <li class="item-params-list__item">40</li>
+                                    <li class="item-params-list__item">41</li>
+                                    <li class="item-params-list__item">42</li>
+                                    <li class="item-params-list__item">43</li>
+                                </ul>
+                                <button class="link link_hover ">Ещё размеры</button>
+                            </div>
+                        </div>
+                        <div class="modal__added-to-cart"></div>
+                        <div class="modal__goods-info"></div>
+                    </div>
+
+                </div>
             </div>
         </div>
 
@@ -799,6 +877,6 @@
     </script>
 
 
-<script type="text/javascript" src="js/highlight-syntax.js?cf461b561ea73b8a1874"></script><script type="text/javascript" src="js/ds-utils.js?cf461b561ea73b8a1874"></script><script type="text/javascript" src="js/categories-icons-sprite.js?cf461b561ea73b8a1874"></script><script type="text/javascript" src="js/ds-ui-kit.js?cf461b561ea73b8a1874"></script></body>
+<script type="text/javascript" src="js/highlight-syntax.js?bb250e4347f399d82b6e"></script><script type="text/javascript" src="js/ds-utils.js?bb250e4347f399d82b6e"></script><script type="text/javascript" src="js/categories-icons-sprite.js?bb250e4347f399d82b6e"></script><script type="text/javascript" src="js/ds-ui-kit.js?bb250e4347f399d82b6e"></script></body>
 
 </html>
