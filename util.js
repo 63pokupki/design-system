@@ -1,27 +1,26 @@
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const fs = require("fs");
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-// функция возвращающая массив html-webpack-plugin для шаблонов html по директории
-module.exports.templates = function templates(templateDirectoryArray = ["src/sections/common", "src/sections/specific"]) {
-    let templates = [];
-
-    templateDirectoryArray.forEach(dir => {
-        let local_templates = fs.readdirSync(path.resolve(__dirname, dir));
-
-        local_templates.map(file => {
-            const parts = file.split(".");
-            const name = parts[0];
-            const extension = parts[1];
-
-            templates.push(
-                new HtmlWebpackPlugin({
-                    filename: `${name}.html`,
-                    template: path.resolve(__dirname, `${dir}/${name}.${extension}`),
-                    favicon: path.resolve(__dirname, "favicon.ico")
-                })
-            );
-        });
+// функция возвращающая массив html-webpack-plugin для шаблонов html рекурсивно для директории
+module.exports.templates = function templates(dir = "src/templates", fileslist = [], t = []) {
+    let files = fs.readdirSync(dir);
+    files.forEach(file => {
+        if (fs.statSync(path.join(__dirname, dir, file)).isDirectory()) {
+            templates(path.join(dir, file), fileslist, t);
+        } else {
+            fileslist.push(path.join(__dirname, dir, file));
+            if (file.includes(".html")) {
+                t.push(
+                    new HtmlWebpackPlugin({
+                        filename: file,
+                        template: path.resolve(__dirname, `${dir}/${file}`),
+                        favicon: path.resolve(__dirname, "favicon.ico")
+                    })
+                );
+            }
+        }
     });
-    return templates;
-}
+    return t;
+};
+
