@@ -1,0 +1,35 @@
+
+.ds-scroll {
+    &__slider {
+        display: flex;
+        min-width: 10px;
+        width: 50px;
+        background: $color-primary;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+    &_horizontal {
+        display: inline-flex;
+        width: 100%;
+        height: 8px;
+        background: $scroll-bg-color;
+        border-radius: 15px;
+        
+    }
+    
+    &_vertical {
+        display: inline-flex;
+        width: 8px;
+        min-height: 25px;
+        height: 100%;
+        background: $scroll-bg-color;
+        border-radius: 15px;
+        .ds-scroll__slider {
+            min-width: 8px;
+            height: 10px;
+        }
+
+    }
+}
+
