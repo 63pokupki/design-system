@@ -30,11 +30,11 @@
 
     <div class="ds-code-wrapper">
         <script type="text/plain" class="language-markup">
-                <button class="add-to-favorite-circle is-selected">
-                    <i class="icon icon-heart"></i>
-                    <i class="icon icon-heart-filled"></i>
-                </button>
-            </script>
+            <button class="add-to-favorite-circle is-selected">
+                <i class="icon icon-heart"></i>
+                <i class="icon icon-heart-filled"></i>
+            </button>
+        </script>
     </div>
 
     <h2 class="ds-title">Стандартные кнопки</h2>
@@ -58,6 +58,12 @@
         <div class="ds-divider">
             <button class="ds-btn ds-btn_flex">
                 <div class="ds-btn__text">Кнопка на всю ширину</div>
+            </button>
+        </div>
+
+        <div class="ds-divider"> 
+            <button class="ds-btn ds-btn_hover btn-add-to-card">
+                <div class="ds-btn__text">В корзину</div><i class="icon icon-cart"></i>
             </button>
         </div>
     </div>
@@ -243,22 +249,42 @@
         </script>
     </div>
 
-
-
-
     <!-- Треугольник -->
     <h1 class="ds-title">Треугольник</h1>
-        <div class="ds-wrapper">
-            <div class="ds-divider">
-                <button class="ds-triangle"></button>
-            </div>
+    <div class="ds-wrapper">
+        <div class="ds-divider ds-center">
+            <button class="ds-triangle"></button>
         </div>
+    </div>
 
-        <div class="ds-code-wrapper">
-            <script type="text/plain" class="language-markup">
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
                 <button class="ds-triangle"></button>
             </script>
+    </div>
+
+    <!-- Кнопки управления количеством товара -->
+    <h1 class="ds-title">Кнопки управления количеством товара</h1>
+    <div class="ds-wrapper">
+        <div class="ds-divider ds-center">
+            <div class="btn__sum">
+                <button class="btn__minus"></button>
+                <input value="128" class="btn__sum-num"></input>
+                <button class="btn__plus"></button>
+            </div>
         </div>
+    </div>
+
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
+            <div class="btn__sum">
+                <button class="btn__minus"></button>
+                <input value="128" class="btn__sum-num"></input>
+                <button class="btn__plus"></button>
+            </div>
+        </script>
+    </div>
+
 
 
 </body>

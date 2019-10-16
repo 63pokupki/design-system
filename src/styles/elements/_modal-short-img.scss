@@ -1,9 +1,25 @@
 .modal-short-img {
     .modal {
+        &__wrap {
+            //Кнопки влево/вправо
+            .arrow {
+                position: absolute;
+                top: calc(50%-22px);
+                background: #fff;
+                z-index: 10;
+                &_right {
+                    right: -75px;
+                }
+                &_left {
+                    left: -75px;
+                }
+            }  
+        }
         &__content {
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
+            position: relative;
 
         }
         &__col {
@@ -14,6 +30,7 @@
                 margin-left: 20px;
             } 
         }
+        //Кнопка закрыть(крестик)
         &__btn-close {
             &:after, &:before {
                 display: none;
