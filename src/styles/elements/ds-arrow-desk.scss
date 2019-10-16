@@ -7,6 +7,7 @@
 	height: 44px;
 	// border-radius: 0;
 	background: #d7d7d7;
+	cursor: pointer;
 	&:before, &:after {
 		position: absolute;
 		content: '';
@@ -16,12 +17,27 @@
 		background: #fff;
 		left: 12px;
 	}
+	&_default {
+		&:hover {
+			&:before, &:after {
+				background: $color-primary;
+			}			
+		}
+	}
 
-	&:hover {
-        &:before, &:after {
+	//Меняет цвет стрелки
+	&_inverse {
+		&:before, &:after {
 			background: $color-primary;
-        }
-		cursor: pointer;
+		}
+		&:hover {
+			&:before, &:after {
+				background: #fff;
+			}
+		}
+	}
+	&_circle {
+		border-radius: 50%;
 	}
 	&:before {
 		transform: rotate(45deg) translateY(-5.7px);
