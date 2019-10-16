@@ -335,26 +335,26 @@
                                     и еще 15<br> названий цветов и прочего
                                 </div>
                                 <!-- Для раскрытия списка, необходимо присвоить класс .is-toggle, элементу modal__select -->
-                                <div class="modal__select modal__select-purchase" style="position: relative">
+                                <div id="select_purchase" class="modal__select modal__select-purchase" style="position: relative">
                                     <span class="modal__selected-position">position-1</span>
                                     <button class="ds-triangle"></button>
                                     <ul class="modal__toggle-list">
-                                        <li>position-1</li>
-                                        <li>position-2</li>
-                                        <li>position-3</li>
-                                        <li>position-4</li>
-                                        <li>position-5</li>
+                                        <li class="item">position-1</li>
+                                        <li class="item">position-2</li>
+                                        <li class="item">position-3</li>
+                                        <li class="item">position-4</li>
+                                        <li class="item">position-5</li>
                                     </ul>
                                 </div>
-                                <div class="modal__select modal__select-catalog">
+                                <div id="select_catalog" class="modal__select modal__select-catalog">
                                     <span class="modal__selected-position">position-1</span>
                                     <button class="ds-triangle"></button>
                                     <ul class="modal__toggle-list">
-                                        <li>position-1</li>
-                                        <li>position-2</li>
-                                        <li>position-3</li>
-                                        <li>position-4</li>
-                                        <li>position-5</li>
+                                        <li class="item">position-1</li>
+                                        <li class="item">position-2</li>
+                                        <li class="item">position-3</li>
+                                        <li class="item">position-4</li>
+                                        <li class="item">position-5</li>
                                     </ul>
                                 </div>
                                 <div class="btn-container">
@@ -874,6 +874,31 @@
                 this.classList.toggle("is-toggle");
             });
         }
+
+        //Выбор позиции
+        function selection_position(selectID) {
+
+            let selectCont = document.querySelectorAll(".modal__select");
+
+            selectCont.forEach((sc) => {
+                d
+            });
+
+            let select       = document.getElementById(selectID),
+                sel_position = select.querySelector(".modal__selected-position"),
+                li           = select.querySelectorAll("li.item");
+
+            li.forEach((i) => {
+                i.addEventListener("click", () => {
+                    sel_position.innerHTML = i.innerHTML;
+                });    
+            });
+
+        }
+
+        selection_position("select_purchase");
+        selection_position("select_catalog");
+
     </script>
 
 
