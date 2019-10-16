@@ -10,6 +10,16 @@
         <body>
             <h1 class="ds-title">Другие компоненты статичной страницы закупки</h1>
 
+            <h2 class="ds-title">Кнопки количества добавлений</h2>
+
+            <div class="ds-wrapper">
+                <div class="input-t-num">
+                    <button class="input-t-num__minus"></button>
+                    <input class="input-t-num__input" type="text">
+                    <button class="input-t-num__plus"></button>
+                </div>
+            </div>
+
             <h2 class="ds-title">Значки товара - ряды, сколько заказали</h2>
 
             <div class="ds-wrapper">
@@ -146,102 +156,6 @@
                             <i class="icon icon-arrow-right"></i>
                         </button>
                     </div>
-                </script>
-            </div>
-
-            
-            <h2 class="ds-title">Блок параметров товара</h2>
-
-            <div class="ds-wrapper ds-i" style="max-width: 296px">
-                <ul class="item-params-list">
-                    <li class="item-params-list__item">36</li>
-                    <li class="item-params-list__item">37</li>
-                    <li class="item-params-list__item">38</li>
-                    <li class="item-params-list__item">39</li>
-                    <li class="item-params-list__item">40</li>
-                    <li class="item-params-list__item">40</li>
-                    <li class="item-params-list__item">Большой</li>
-                    <li class="item-params-list__item">XL</li>
-                    <li class="item-params-list__item">L</li>
-                    <li class="item-params-list__item">S</li>
-                    <li class="item-params-list__item">HNFG</li>
-                    <li class="item-params-list__item">40</li>
-                    <li class="item-params-list__item">Большой</li>
-                    <li class="item-params-list__item">Большой</li>
-                    <li class="item-params-list__item">XL</li>
-                    <li class="item-params-list__item">L</li>
-                    <li class="item-params-list__item">S</li>
-                    <li class="item-params-list__item">36</li>
-                    <li class="item-params-list__item">37</li>
-                    <li class="item-params-list__item">38</li>
-                    <li class="item-params-list__item">39</li>
-                    <li class="item-params-list__item">40</li>
-                    <li class="item-params-list__item">40</li>
-                    <li class="item-params-list__item">Большой</li>
-                    <li class="item-params-list__item">XL</li>
-                    <li class="item-params-list__item">L</li>
-                    <li class="item-params-list__item">S</li>
-                    <li class="item-params-list__item">HNFG</li>
-                    <li class="item-params-list__item">40</li>
-                    <li class="item-params-list__item">Большой</li>
-                    <li class="item-params-list__item">Большой</li>
-                    <li class="item-params-list__item">XL</li>
-                    <li class="item-params-list__item">L</li>
-                    <li class="item-params-list__item">S</li>
-                </ul>
-                <button class="link link_hover stock-dropdown-filter__toggle">Скрыть/Раскрыть</button>
-            </div>
-
-            <div class="ds-wrapper">
-                <p>
-                    Изначально вмещает в себя 3 строки с параметрами. Для раскрытия блока добавить класс
-                    <span class="ds-hl">is-expanded</span> элементу <span class="ds-hl">item-params-list</span>
-                </p>
-                <p>
-                    Для выбора параметра добавить класс <span class="ds-hl">is-selected</span> элементу
-                    <span class="ds-hl">item-params-list__item</span>
-                </p>
-            </div>
-
-            <div class="ds-code-wrapper">
-                <script type="text/plain" class="language-markup">
-                    <ul class="item-params-list">
-                        <li class="item-params-list__item">36</li>
-                        <li class="item-params-list__item">37</li>
-                        <li class="item-params-list__item">38</li>
-                        <li class="item-params-list__item">39</li>
-                        <li class="item-params-list__item">40</li>
-                        <li class="item-params-list__item">40</li>
-                        <li class="item-params-list__item">Большой</li>
-                        <li class="item-params-list__item">XL</li>
-                        <li class="item-params-list__item">L</li>
-                        <li class="item-params-list__item">S</li>
-                        <li class="item-params-list__item">HNFG</li>
-                        <li class="item-params-list__item">40</li>
-                        <li class="item-params-list__item">Большой</li>
-                        <li class="item-params-list__item">Большой</li>
-                        <li class="item-params-list__item">XL</li>
-                        <li class="item-params-list__item">L</li>
-                        <li class="item-params-list__item">S</li>
-                        <li class="item-params-list__item">36</li>
-                        <li class="item-params-list__item">37</li>
-                        <li class="item-params-list__item">38</li>
-                        <li class="item-params-list__item">39</li>
-                        <li class="item-params-list__item">40</li>
-                        <li class="item-params-list__item">40</li>
-                        <li class="item-params-list__item">Большой</li>
-                        <li class="item-params-list__item">XL</li>
-                        <li class="item-params-list__item">L</li>
-                        <li class="item-params-list__item">S</li>
-                        <li class="item-params-list__item">HNFG</li>
-                        <li class="item-params-list__item">40</li>
-                        <li class="item-params-list__item">Большой</li>
-                        <li class="item-params-list__item">Большой</li>
-                        <li class="item-params-list__item">XL</li>
-                        <li class="item-params-list__item">L</li>
-                        <li class="item-params-list__item">S</li>
-                    </ul>
-                    <button class="link link_hover stock-dropdown-filter__toggle">Скрыть/Раскрыть</button>
                 </script>
             </div>
 

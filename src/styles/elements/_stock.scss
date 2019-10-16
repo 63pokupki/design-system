@@ -1,191 +1,205 @@
-.stock-rows {
-    display: flex;
-    align-items: flex-start;
-
-    // блок нумерации
-    &__numeration {
-        background: rgba(196, 196, 196, 0.25);
-        margin-right: 10px;
-        text-align: center;
-        border-radius: 10px;
-        padding: 5px 1px;
-    }
-
-    // блок с ячейками
-    &__values {
-        padding: 5px 1px;
-    }
-
-    &__org {
-        padding: 5px 1px;
-        display: flex;
-        flex-direction: column;
-    }
-
-    // заголовок нумерации и ячеек
-    &__numeration-label,
-    &__values-label,
-    &__org-label {
-        font-weight: 600;
-        font-size: 12px;
-        color: #606266;
-        line-height: 20px;
-        margin-bottom: 10px;
-    }
-
-    // ряд с ячейками
-    &__row {
-        display: flex;
-        flex-wrap: nowrap;
-        margin-bottom: 4px;
-    }
-
-    // ячейка нумерации
-    &__num {
-        font-weight: 600;
-        font-size: 10px;
-        color: #606266;
-        padding: 0px 2px;
-        user-select: none;
-        border: 1px solid transparent;
-        margin-bottom: 4px;
-    }
-
-    .rows-org-chx {
-        margin-bottom: 4px;
-    }
-}
-
-.rows-org-chx {
+.input-t-num {
     display: inline-flex;
-    padding-left: 30px;
-    min-width: 18px;
-    min-height: 16px;
+    justify-content: center;
 
-    &__input {
-        display: none;
-    }
-
-    &__label {
-        user-select: none;
-        cursor: pointer;
-        position: relative;
-
+    &__minus {
         &:before {
             content: "";
-            display: block;
             position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translate(-25px, -50%);
-            background: url("~images/lock-open.svg") no-repeat center center;
-            border: 1px solid $color-primary;
-            border-radius: 50%;
-            width: 18px;
-            height: 18px;
+            width: 6px;
+            height: 2px;
+            background-color: white;
+        }
+    }
+
+    &__plus {
+        &:before {
+            content: "";
+            width: 8px;
+            height: 2px;
+            position: absolute;
+            background-color: white;
         }
 
         &:after {
             content: "";
-            display: none;
+            width: 2px;
+            height: 8px;
             position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translate(-25px, -50%);
-            background: url("~images/lock.svg") no-repeat center center;
-            width: 18px;
-            height: 18px;
+            background-color: white;
         }
     }
 
-    &__input:checked + &__label {
-        &:before {
-            border: 1px solid #FFAFAF;
-            background: white;
-        }
-        &:after {
-            display: block;
-        }
-    }
-
-    .tooltip {
-        font-size: 12px;
-        text-align: center;
-        min-width: 150px;
-    }
-
-    &__fix {
-        display: block;
-    }
-
-    &__unfix {
-        display: none;
-    }
-
-    &__input:checked ~ &__fix {
-        display: none;
-    }
-
-    &__input:checked ~ &__unfix {
-        display: block;
-    }
-}
-
-// ячейка позиции
-.stock-rows-cell {
-    display: inline-flex;
-    font-weight: 600;
-    font-size: 10px;
-    color: #606266;
-    border-radius: 2px;
-    padding: 0px 2px;
-    margin-right: 4px;
-    user-select: none;
-    border: 1px solid transparent;
-
-    // состояния позиции
-    &.is-free {
-        border: 1px solid rgba(49, 140, 202, 0.6);
-        background: white;
-    }
-
-    &.is-your {
-        background: #318cca;
-        color: white;
-    }
-
-    &.is-busy {
-        background: #e0eef7;
-    }
-
-    &.is-fixed {
-        background: #c5b5ab;
-        color: white;
-    }
-
-    &.is-row {
-        background: rgba(196, 196, 196, 0.25);
-    }
-}
-
-.stock-rows-legend {
-    display: flex;
-    align-items: center;
-
-    .stock-rows-cell {
-        width: 17px;
-        height: 17px;
-    }
-
-    &__item {
+    &__minus,
+    &__plus {
         display: flex;
         align-items: center;
-        margin-right: 25px;
+        justify-content: center;
+        position: relative;
+        border-radius: 50%;
+        background: #c4c4c4;
+        width: 20px;
+        height: 20px;
     }
 
-    &__text {
-        font-size: 11px;
-        color: #606266;
-        margin-left: 3px;
+    &__input {
+    }
+}
+
+.stock-card-horizontal {
+    padding: 16px;
+    background: #ffffff;
+    box-shadow: 0px 2px 16px rgba(0, 44, 128, 0.19);
+    display: flex;
+    align-items: flex-start;
+    width: 864px; //убрать потом
+    margin: 0 auto; //убрать
+
+    &__body {
+        padding-top: 10px;
+    }
+
+    &__price-w {
+        margin-bottom: 12px;
+    }
+
+    &__price {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 18px;
+        color: #1e2023;
+
+        span {
+            font-size: 14px;
+        }
+    }
+
+    &__params-section {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    &__params {
+        max-width: 45%;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    .item-params-list {
+        position: relative;
+        left: -5px;
+        max-height: 50px;
+    }
+
+    .item-params-list__item {
+        margin-bottom: 0;
+        margin-right: 0;
+    }
+
+    &__expand {
+        font-size: 10px;
+        text-decoration-line: underline;
+        color: #a3a4a6;
+    }
+
+    &__params-label {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 17px;
+        color: #1d1e1f;
+        margin-bottom: 5px;
+    }
+
+    &__fee {
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 18px;
+        color: rgba(96, 98, 102, 0.75);
+    }
+
+    &__heading {
+        font-size: 16px;
+        line-height: 20px;
+        color: #1e2023;
+        margin-bottom: 15px;
+    }
+
+    //
+    //
+    // Блок картинки ниже
+    //
+    //
+
+    &__wrapper {
+        display: flex;
+        position: relative;
+        align-items: flex-start;
+        justify-content: center;
+        width: 100%;
+        max-width: 262px;
+        height: 262px;
+        background: white;
+        margin-right: 32px;
+    }
+
+    &__images-wrapper {
+        position: relative;
+    }
+
+    &__prev,
+    &__next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 32px;
+        height: 32px;
+        background-color: rgba(255, 255, 255, 0.6);
+        color: $color-primary;
+        font-size: 18px;
+        z-index: 2;
+
+        &:active {
+            i {
+                @include deep-click();
+            }
+        }
+    }
+
+    &__prev {
+        left: 0;
+    }
+
+    &__next {
+        right: 0;
+    }
+
+    .stock-badge_rows {
+        position: absolute;
+        left: -10px;
+        bottom: 30px;
+    }
+
+    .stock-badge_already {
+        position: absolute;
+        left: -10px;
+        bottom: -5px;
+    }
+
+    &__image {
+        max-width: 100%;
+        max-height: 262px;
+        display: none;
+        margin: 0 auto;
+    }
+
+    &__image.is-active {
+        display: block;
+    }
+
+    &__favorite {
+        position: absolute;
+        top: 10px;
+        right: 10px;
     }
 }
