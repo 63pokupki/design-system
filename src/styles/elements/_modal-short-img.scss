@@ -87,8 +87,10 @@
             display: flex;
             flex-wrap: wrap;
             font-size: 20px;
+            margin-bottom: 15px;
         }
         &__price {
+            margin-bottom: 5px;
             p {
                 font-size: 24px;
                 font-weight: 700;
@@ -103,5 +105,99 @@
             display: flex;
             flex-direction: column;
         }
+        &__content {
+            &-color, &-size {
+                h5 {
+                    margin: 20px 0 5px 0;
+                }
+            }
+            &-size {
+                margin-bottom: 15px;
+            }
+        }
+        &__btn-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            .btn-add-to-card {
+                max-height: 32px;
+                min-width: 160px;
+                margin: 0 15px 0 25px;    
+            }
+            .icon-heart-bold {
+                font-size: 22px;
+                color: $color-primary;
+            }    
+            
+        }
+        &__sum {
+            display: flex;
+            flex-direction: row;
+            width: 80px;
+            align-items: center;
+            &-num {
+                width: 35px;
+                margin: 0 5px;
+                font-size: 16px;
+                appearance: none;
+                border: none;
+                text-align: center;
+            }
+        }
+
+        &__minus, &__plus {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            min-width: 20px;
+            border-radius: 50%;
+            background: $light-gray-sum-btn;
+            color: #ffffff;
+            &:active {
+                transform: scale(.95);
+            }
+            &:after, &:before {
+                content: "";
+                position: absolute;
+                width: 5px;
+                height: 2px;
+                background: #ffffff;
+            }
+            &:hover {
+                background: $color-primary;
+            }
+
+        }
+        &__plus {
+            &:before {
+                width: 8px;
+                transform: rotate(90deg);
+            }
+            &:after {
+                width: 8px;
+            }
+        }
+        &__goods-info {
+            p {
+                font-size: 10px;
+                color: $light-gray-txt-color;
+            }
+            a {
+                font-size: 10px;
+                color: $color-primary;
+                &:visited {
+                    color: $visited-link-active-custom;
+                }
+            }
+        }
+        &__btn-about-goods {
+            font-size: 12px;
+            color: $color-primary;
+            margin: 30px 0 20px 0;
+            .icon-eye {
+                margin-right: 12px;
+            }
+        }
+
     }
 }

@@ -303,7 +303,7 @@
                                 <div class="modal__btn-container">
                                     <div class="modal__sum">
                                         <button class="modal__minus"></button>
-                                        <span class="modal__sum-num">128</span>
+                                        <input value="128" class="modal__sum-num">128</input>
                                         <button class="modal__plus"></button>    
                                     </div>
                                     <button class="ds-btn ds-btn_hover btn-add-to-card">
@@ -335,7 +335,8 @@
                                     и еще 15<br> названий цветов и прочего
                                 </div>
                                 <!-- Для раскрытия списка, необходимо присвоить класс .is-toggle, элементу modal__select -->
-                                <div id="select_purchase" class="modal__select modal__select-purchase" style="position: relative">
+                                <div id="select_purchase" class="modal__select modal__select-purchase"
+                                    style="position: relative">
                                     <span class="modal__selected-position">position-1</span>
                                     <button class="ds-triangle"></button>
                                     <ul class="modal__toggle-list">
@@ -817,7 +818,7 @@
                                 <ul class="item-params-list">
                                     <li class="item-params-list__item">чёрный</li>
                                     <li class="item-params-list__item">красный</li>
-                                    <li class="item-params-list__item">бежевый</li>                                
+                                    <li class="item-params-list__item">бежевый</li>
                                 </ul>
                                 <button class="link link_hover">Ещё цвета</button>
                             </div>
@@ -836,9 +837,26 @@
                                 </ul>
                                 <button class="link link_hover ">Ещё размеры</button>
                             </div>
+                            <div class="modal__btn-container">
+                                <div class="modal__sum">
+                                    <button class="modal__minus"></button>
+                                    <input value="128" class="modal__sum-num"></input>
+                                    <button class="modal__plus"></button>
+                                </div>
+                                <button class="ds-btn ds-btn_hover btn-add-to-card">
+                                    <div class="ds-btn__text">В корзину <i class="icon icon-cart"></i></div>
+                                </button>
+                                <i class="icon icon-heart-bold"></i>
+                            </div>
                         </div>
-                        <div class="modal__added-to-cart"></div>
-                        <div class="modal__goods-info"></div>
+                        <div class="modal__goods-info">
+                            <h5>Информация о товаре</h5>
+                            <p>Ботинки из натуральной кожи черного цвета на устойчивой к подошве 
+                                белого цвета. Декорированы двумя ремешками с собакой
+                            </p>
+                            <a href="" target="_blank">читать подробнее о товаре</a>
+                        </div>
+                        <button class="modal__btn-about-goods"><i class="icon icon-eye"></i>Подробнее о товаре</button>
                     </div>
 
                 </div>
@@ -866,6 +884,7 @@
 
     <!-- Модалка копирование позиции -->
     <script>
+        //Раскрытие списка
         let select = document.querySelectorAll(".modal__select"); //кнопка раскрывающая блок
         //Перебираем все кнопки
         for (let bt = 0; bt < select.length; bt++) {
@@ -876,28 +895,23 @@
         }
 
         //Выбор позиции
-        function selection_position(selectID) {
+        (
+            () => {
+                let selectCont = document.querySelectorAll(".modal__select");
 
-            let selectCont = document.querySelectorAll(".modal__select");
+                selectCont.forEach((sc) => {
+                    let sel_position = sc.querySelector(".modal__selected-position"),
+                        li = sc.querySelectorAll("li.item");
 
-            selectCont.forEach((sc) => {
-                d
-            });
+                    li.forEach((i) => {
+                        i.addEventListener("click", () => {
+                            sel_position.innerHTML = i.innerHTML;
+                        });
+                    });
+                });
+            }
+        )();
 
-            let select       = document.getElementById(selectID),
-                sel_position = select.querySelector(".modal__selected-position"),
-                li           = select.querySelectorAll("li.item");
-
-            li.forEach((i) => {
-                i.addEventListener("click", () => {
-                    sel_position.innerHTML = i.innerHTML;
-                });    
-            });
-
-        }
-
-        selection_position("select_purchase");
-        selection_position("select_catalog");
 
     </script>
 
