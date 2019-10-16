@@ -1,0 +1,51 @@
+.btn {
+
+    &__sum {
+        display: flex;
+        flex-direction: row;
+        width: 80px;
+        align-items: center;
+        &-num {
+            width: 35px;
+            margin: 0 5px;
+            font-size: 16px;
+            appearance: none;
+            border: none;
+            text-align: center;
+        }
+    }
+
+    &__minus, &__plus {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        min-width: 20px;
+        border-radius: 50%;
+        background: $light-gray-sum-btn;
+        color: #ffffff;
+        &:active {
+            transform: scale(.95);
+        }
+        &:after, &:before {
+            content: "";
+            position: absolute;
+            width: 5px;
+            height: 2px;
+            background: #ffffff;
+        }
+        &:hover {
+            background: $color-primary;
+        }
+
+    }
+    &__plus {
+        &:before {
+            width: 8px;
+            transform: rotate(90deg);
+        }
+        &:after {
+            width: 8px;
+        }
+    }
+}
+

@@ -90,10 +90,12 @@ $main-padding-modal: 20px;
             top: 0;
             right: 0;
             cursor: pointer;
-            &:hover {
-                &:after, &:before {
-                    background-color: $color-primary;
-                }
+            .icon-close {
+                &:hover {
+                    &:after, &:before {
+                        background-color: $color-primary;                        
+                    }
+                }                
             }
             &:active {
                 &:before {
@@ -111,7 +113,7 @@ $main-padding-modal: 20px;
                 width: 19px;
                 height: 3px;
                 background-color: #000;
-                
+                display: none;
             }
             &:after {
                 transform: rotate(45deg);

@@ -70,7 +70,7 @@
             <!-- Для отображения окна, присвоить класс .is-visible, блоку modal -->
             <div class="modal is-visible" style="position: relative">
                 <div class="modal__wrap" style="margin: 10px">
-                    <div class="modal__btn-close"></div>
+                    <div class="modal__btn-close"><i class="icon icon-close"></i></div>
                     <div class="modal__header">Имя окна</div>
                     <div class="modal__content">Здесь какой-нибудь контент</div>
                 </div>
@@ -80,7 +80,7 @@
             <script type="text/plain" class="language-markup">
                 <div class="modal is-visible" style="position: relative">
                     <div class="modal__wrap" style="margin: 10px">
-                        <div class="modal__btn-close"></div>
+                        <div class="modal__btn-close"><i class="icon icon-close"></i></div>
                         <div class="modal__header">Имя окна</div>
                         <div class="modal__content">Здесь какой-нибудь контент</div>
                     </div>
@@ -95,7 +95,7 @@
             <!-- Для отображения окна, присвоить класс .is-visible, блоку modal -->
             <div class="modal is-visible" style="position: relative">
                 <div class="modal__wrap" style="margin: 10px">
-                    <div class="modal__btn-close"></div>
+                    <div class="modal__btn-close"><i class="icon icon-close"></i></div>
                     <div class="modal__header">Имя окна</div>
                     <form class="modal__form" action="">
                         <div class="inputs-group">
@@ -116,7 +116,7 @@
             <script type="text/plain" class="language-markup">
                 <div class="modal is-visible">
                     <div class="modal__wrap">
-                            <div class="modal__btn-close"></div>
+                            <div class="modal__btn-close"><i class="icon icon-close"></i></div>
                         <div class="modal__header">Имя окна</div>
                         <form class="modal__form" action="">
                             <div class="inputs-group">
@@ -142,7 +142,7 @@
                     <!-- Для отображения окна, присвоить класс .is-visible элементу modal -->
                     <div class="modal modal-added-to-card is-visible" style="position: relative">
                         <div class="modal__wrap" style="margin: 10px">
-                            <div class="modal__btn-close"></div>
+                            <div class="modal__btn-close"><i class="icon icon-close"></i></div>
                             <div class="modal__header">Товар добавлен в корзину</div>
                             <div class="modal__content">Обратите внимание,
                                 что в этой закупке установлен минимальный орг.
@@ -167,7 +167,7 @@
                     <!-- Для отображения окна, присвоить класс .is-visible элементу modal -->
                 <div class="modal modal-added-to-card is-visible" style="position: relative">
                     <div class="modal__wrap" style="margin: 10px">
-                        <div class="modal__btn-close"></div>
+                        <div class="modal__btn-close"><i class="icon icon-close"></i></div>
                         <div class="modal__header">Товар добавлен в корзину</div>
                         <div class="modal__content">Обратите внимание,
                             что в этой закупке установлен минимальный орг.
@@ -210,7 +210,7 @@
                 <div class="ds-divider">
                     <div class="modal modal-choise-of-color-size is-visible" style="position: relative">
                         <div class="modal__wrap" style="margin: 10px">
-                            <div class="modal__btn-close"></div>
+                            <div class="modal__btn-close"><i class="icon icon-close"></i></div>
                             <div class="modal__content">
                                 <!-- Если не выбран параметр, присвоить класс .is-warning, элементу modal__content-color -->
                                 <div class="modal__content-color is-warning">
@@ -269,7 +269,7 @@
                 <script type="text/plain" class="language-markup">
                     <div class="modal modal-choise-of-color-size is-visible" style="position: relative">
                         <div class="modal__wrap" style="margin: 10px">
-                            <div class="modal__btn-close"></div>
+                            <div class="modal__btn-close"><i class="icon icon-close"></i></div>
                             <div class="modal__content">
                                 <!-- Если не выбран параметр, присвоить класс .is-warning, элементу modal__content-color -->
                                 <div class="modal__content-color is-warning">
@@ -303,7 +303,7 @@
                                 <div class="modal__btn-container">
                                     <div class="modal__sum">
                                         <button class="modal__minus"></button>
-                                        <span class="modal__sum-num">128</span>
+                                        <input value="128" class="modal__sum-num">128</input>
                                         <button class="modal__plus"></button>    
                                     </div>
                                     <button class="ds-btn ds-btn_hover btn-add-to-card">
@@ -328,33 +328,34 @@
                 <div class="ds-divider">
                     <div class="modal modal-copy-position is-visible" style="position: relative">
                         <div class="modal__wrap" style="margin: 10px">
-                            <div class="modal__btn-close"></div>
+                            <div class="modal__btn-close"><i class="icon icon-close"></i></div>
                             <div class="modal__header">Копирование позиции</div>
                             <div class="modal__content">
                                 <div class="modal__position-name">Самокат NAMELESS START SKL-014-AWS"
                                     и еще 15<br> названий цветов и прочего
                                 </div>
                                 <!-- Для раскрытия списка, необходимо присвоить класс .is-toggle, элементу modal__select -->
-                                <div class="modal__select modal__select-purchase" style="position: relative">
+                                <div id="select_purchase" class="modal__select modal__select-purchase"
+                                    style="position: relative">
                                     <span class="modal__selected-position">position-1</span>
                                     <button class="ds-triangle"></button>
                                     <ul class="modal__toggle-list">
-                                        <li>position-1</li>
-                                        <li>position-2</li>
-                                        <li>position-3</li>
-                                        <li>position-4</li>
-                                        <li>position-5</li>
+                                        <li class="item">position-1</li>
+                                        <li class="item">position-2</li>
+                                        <li class="item">position-3</li>
+                                        <li class="item">position-4</li>
+                                        <li class="item">position-5</li>
                                     </ul>
                                 </div>
-                                <div class="modal__select modal__select-catalog">
+                                <div id="select_catalog" class="modal__select modal__select-catalog">
                                     <span class="modal__selected-position">position-1</span>
                                     <button class="ds-triangle"></button>
                                     <ul class="modal__toggle-list">
-                                        <li>position-1</li>
-                                        <li>position-2</li>
-                                        <li>position-3</li>
-                                        <li>position-4</li>
-                                        <li>position-5</li>
+                                        <li class="item">position-1</li>
+                                        <li class="item">position-2</li>
+                                        <li class="item">position-3</li>
+                                        <li class="item">position-4</li>
+                                        <li class="item">position-5</li>
                                     </ul>
                                 </div>
                                 <div class="btn-container">
@@ -375,7 +376,7 @@
                 <script type="text/plain" class="language-markup">
                     <div class="modal modal-copy-position is-visible" style="position: relative">
                         <div class="modal__wrap" style="margin: 10px">
-                            <div class="modal__btn-close"></div>
+                            <div class="modal__btn-close"><i class="icon icon-close"></i></div>
                             <div class="modal__header">Копирование позиции</div>
                             <div class="modal__content">
                                 <div class="modal__position-name">Самокат NAMELESS START SKL-014-AWS"
@@ -429,7 +430,7 @@
                 <div class="ds-divider">
                     <div class="modal modal-list-catalogs is-visible" style="position: relative">
                         <div class="modal__wrap" style="margin: 10px">
-                            <!-- <div class="modal__btn-close"></div> -->
+                            <!-- <div class="modal__btn-close"><i class="icon icon-close"></i></div> -->
                             <div class="modal__content">
                                 <h3>Список доступных каталогов</h3>
                                 <!-- Для сворачивания списка, наобходимо присвоить класс .is-toggle
@@ -595,7 +596,7 @@
                 <script type="text/plain" class="language-markup">
                     <div class="modal modal-list-catalogs is-visible" style="position: relative">
                             <div class="modal__wrap" style="margin: 10px">
-                                <!-- <div class="modal__btn-close"></div> -->
+                                <!-- <div class="modal__btn-close"><i class="icon icon-close"></i></div> -->
                                 <div class="modal__content">
                                     <h3>Список доступных каталогов</h3>
                                     <!-- Для сворачивания списка, наобходимо присвоить класс .is-toggle
@@ -761,7 +762,9 @@
         <!-- Модалка с коротким изображением -->
         <div class="modal modal-short-img is-visible" style="position: relative">
             <div class="modal__wrap" style="margin: 10px">
-                <div class="modal__btn-close"></div>
+                <div class="modal__btn-close"><i class="icon icon-close"></i></div>
+                <div class="arrow arrow_inverse arrow_left arrow_circle"></div>
+                <div class="arrow arrow_inverse arrow_right arrow_circle"></div>
                 <div class="modal__content">
                     <div class="modal__col">
                         <div class="modal__img-container">
@@ -817,7 +820,7 @@
                                 <ul class="item-params-list">
                                     <li class="item-params-list__item">чёрный</li>
                                     <li class="item-params-list__item">красный</li>
-                                    <li class="item-params-list__item">бежевый</li>                                
+                                    <li class="item-params-list__item">бежевый</li>
                                 </ul>
                                 <button class="link link_hover">Ещё цвета</button>
                             </div>
@@ -836,9 +839,27 @@
                                 </ul>
                                 <button class="link link_hover ">Ещё размеры</button>
                             </div>
+                            <div class="modal__btn-container">
+                                <div class="modal__sum">
+                                    <button class="modal__minus"></button>
+                                    <input value="128" class="modal__sum-num"></input>
+                                    <button class="modal__plus"></button>
+                                </div>
+                                <button class="ds-btn ds-btn_hover btn-add-to-card">
+                                    <div class="ds-btn__text">В корзину</div><i class="icon icon-cart"></i>
+                                </button>
+                                <!-- По клику на сердце, присвоить ему класс .icon-heart-filled -->
+                                <i class="icon icon-heart-bold"></i>
+                            </div>
                         </div>
-                        <div class="modal__added-to-cart"></div>
-                        <div class="modal__goods-info"></div>
+                        <div class="modal__goods-info">
+                            <h5>Информация о товаре</h5>
+                            <p>Ботинки из натуральной кожи черного цвета на устойчивой к подошве 
+                                белого цвета. Декорированы двумя ремешками с собакой
+                            </p>
+                            <a href="" target="_blank">читать подробнее о товаре</a>
+                        </div>
+                        <button class="modal__btn-about-goods"><i class="icon icon-eye"></i>Подробнее о товаре</button>
                     </div>
 
                 </div>
@@ -866,6 +887,7 @@
 
     <!-- Модалка копирование позиции -->
     <script>
+        //Раскрытие списка
         let select = document.querySelectorAll(".modal__select"); //кнопка раскрывающая блок
         //Перебираем все кнопки
         for (let bt = 0; bt < select.length; bt++) {
@@ -874,6 +896,26 @@
                 this.classList.toggle("is-toggle");
             });
         }
+
+        //Выбор позиции
+        (
+            () => {
+                let selectCont = document.querySelectorAll(".modal__select");
+
+                selectCont.forEach((sc) => {
+                    let sel_position = sc.querySelector(".modal__selected-position"),
+                        li = sc.querySelectorAll("li.item");
+
+                    li.forEach((i) => {
+                        i.addEventListener("click", () => {
+                            sel_position.innerHTML = i.innerHTML;
+                        });
+                    });
+                });
+            }
+        )();
+
+
     </script>
 
 

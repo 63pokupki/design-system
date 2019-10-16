@@ -12,7 +12,7 @@
         &__btn-close {
             margin: 6px 5px 0 0;
             &:before, &:after {
-                background: $light-gray-link-color;
+                display: none;
             }
         }
         &__content {
