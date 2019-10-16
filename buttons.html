@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Кнопки</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?bb250e4347f399d82b6e" rel="stylesheet"><link href="css/ds-utils.css?bb250e4347f399d82b6e" rel="stylesheet"><link href="css/ds-ui-kit.css?bb250e4347f399d82b6e" rel="stylesheet"></head>
+<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?0d5aefe187a1cc22be84" rel="stylesheet"><link href="css/ds-utils.css?0d5aefe187a1cc22be84" rel="stylesheet"><link href="css/ds-ui-kit.css?0d5aefe187a1cc22be84" rel="stylesheet"></head>
 
 <body>
     <h1 class="ds-title">Кнопки</h1>
@@ -30,11 +30,11 @@
 
     <div class="ds-code-wrapper">
         <script type="text/plain" class="language-markup">
-                <button class="add-to-favorite-circle is-selected">
-                    <i class="icon icon-heart"></i>
-                    <i class="icon icon-heart-filled"></i>
-                </button>
-            </script>
+            <button class="add-to-favorite-circle is-selected">
+                <i class="icon icon-heart"></i>
+                <i class="icon icon-heart-filled"></i>
+            </button>
+        </script>
     </div>
 
     <h2 class="ds-title">Стандартные кнопки</h2>
@@ -58,6 +58,12 @@
         <div class="ds-divider">
             <button class="ds-btn ds-btn_flex">
                 <div class="ds-btn__text">Кнопка на всю ширину</div>
+            </button>
+        </div>
+
+        <div class="ds-divider"> 
+            <button class="ds-btn ds-btn_hover btn-add-to-card">
+                <div class="ds-btn__text">В корзину</div><i class="icon icon-cart"></i>
             </button>
         </div>
     </div>
@@ -150,32 +156,40 @@
     </div>
 
     <!-- Кнопка влево/вправо DESK-->
+    <h2 class="ds-center">Кнопка влево/вправо десктоп</h2>
+    <div class="ds-text">
+        Опция: для выбора нужного направления, присвоить соответствующий класс блоку <span class="ds-hl">arrow</span>,
+        например "<span class="ds-hl">arrow</span> <span class="ds-hl">arrow_up</span>"
+    </div>
+    <div class="ds-text">Опция: для инвертирования цвета стрелок, присвоить модификатор <span
+            class="ds-hl">_inverse</span>
+        элементу <span class="ds-hl">arrow</span>, вместо <span class="ds-hl">_default</span>.
+    </div>
+    <div class="ds-text">Опция: для того, чтобы сделать кнопку круглой, необходимо присвоить модификатор
+        <span class="ds-hl">_circle</span>.
+    </div>
     <div class="ds-wrapper">
-        <div class="ds-text">Кнопка влево/вправо десктоп</div>
-        <div class="ds-text">
-            Для выбора нужного направления, присвоить соответствующий класс блоку <span class="ds-hl">arrow</span>,
-            например "<span class="ds-hl">arrow</span> <span class="ds-hl">arrow_up</span>"
-        </div>
         <div class="ds-divider">
-            <div class="arrow arrow_right"></div>
+            <div class="arrow arrow_default arrow_right"></div>
+            <div class="arrow arrow_default arrow_right arrow_circle"></div>
         </div>
     </div>
 
     <div class="ds-code-wrapper">
         <script type="text/plain" class="language-markup">
-                <div class="arrow arrow_right"></div>
-            </script>
+            <div class="arrow arrow_default arrow_right"></div>
+            <div class="arrow arrow_default arrow_right arrow_circle"></div>
+        </script>
     </div>
 
     <!-- Кнопка влево/вправо Mobile-->
+    <h2 class="ds-center">Кнопка влево/вправо мобильные</h2>
+    <div class="ds-text">
+        Для выбора нужного направления, присвоить соответствующий класс блоку
+        <span class="ds-hl">arrow-mobile</span>, например "<span class="ds-hl">arrow-mobile</span>
+        <span class="ds-hl">arrow-mobile_up</span>"
+    </div>
     <div class="ds-wrapper">
-        <div class="ds-text">Кнопка влево/вправо мобильные устройства</div>
-        <div class="ds-text">
-            Для выбора нужного направления, присвоить соответствующий класс блоку
-            <span class="ds-hl">arrow-mobile</span>, например "<span class="ds-hl">arrow-mobile</span>
-            <span class="ds-hl">arrow-mobile_up</span>"
-        </div>
-
         <div class="ds-divider">
             <div class="arrow-mobile arrow-mobile_right"></div>
         </div>
@@ -235,24 +249,43 @@
         </script>
     </div>
 
-
     <!-- Треугольник -->
+    <h1 class="ds-title">Треугольник</h1>
     <div class="ds-wrapper">
-        <h1 class="ds-title">Треугольник</h1>
-        <div class="ds-wrapper">
-            <div class="ds-divider">
-                <button class="ds-triangle"></button>
-            </div>
-        </div>
-
-        <div class="ds-code-wrapper">
-            <script type="text/plain" class="language-markup">
-                <button class="ds-triangle"></button>
-            </script>
+        <div class="ds-divider ds-center">
+            <button class="ds-triangle"></button>
         </div>
     </div>
 
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
+            <button class="ds-triangle"></button>
+        </script>
+    </div>
 
-<script type="text/javascript" src="js/highlight-syntax.js?bb250e4347f399d82b6e"></script><script type="text/javascript" src="js/ds-utils.js?bb250e4347f399d82b6e"></script><script type="text/javascript" src="js/categories-icons-sprite.js?bb250e4347f399d82b6e"></script><script type="text/javascript" src="js/ds-ui-kit.js?bb250e4347f399d82b6e"></script></body>
+    <!-- Кнопки управления количеством товара -->
+    <h1 class="ds-title">Кнопки управления количеством товара</h1>
+    <div class="ds-wrapper">
+        <div class="ds-divider ds-center">
+            <div class="btn__sum">
+                <button class="btn__minus"></button>
+                <input value="128" class="btn__sum-num"></input>
+                <button class="btn__plus"></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
+            <div class="btn__sum">
+                <button class="btn__minus"></button>
+                <input value="128" class="btn__sum-num"></input>
+                <button class="btn__plus"></button>
+            </div>
+        </script>
+    </div>
+
+
+<script type="text/javascript" src="js/highlight-syntax.js?0d5aefe187a1cc22be84"></script><script type="text/javascript" src="js/ds-utils.js?0d5aefe187a1cc22be84"></script><script type="text/javascript" src="js/categories-icons-sprite.js?0d5aefe187a1cc22be84"></script><script type="text/javascript" src="js/ds-ui-kit.js?0d5aefe187a1cc22be84"></script></body>
 
 </html>
