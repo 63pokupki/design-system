@@ -32,7 +32,7 @@
 		}
 		&:hover {
 			&:before, &:after {
-				background: #fff;
+				background: $light-gray-color;
 			}
 		}
 	}
@@ -56,6 +56,7 @@
 	}
 	&_left {
 		transform: rotate(180deg);
+	
 	}
 	&_up {
 		transform: rotate(270deg);
