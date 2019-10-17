@@ -9,9 +9,26 @@
                 z-index: 10;
                 &-right {
                     right: -75px;
+                    &.has-tooltip {
+                        .tooltip {
+                            left: 135%;
+                            &::before {
+                                left: calc(20% - 3px);
+                            }
+                        }
+                    }
+
                 }
                 &-left {
                     left: -75px;
+                    &.has-tooltip {
+                        .tooltip {
+                            left: -30%;
+                            &::before {
+                                left: calc(80% - 3px);
+                            }
+                        }
+                    }
                 }
             }  
         }
