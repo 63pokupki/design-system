@@ -20,7 +20,8 @@
             flex-direction: row;
             flex-wrap: nowrap;
             position: relative;
-
+            margin-right: 8px;
+            overflow: visible;
         }
         &__col {
             display: flex;
@@ -72,6 +73,16 @@
             display: flex;
             width: 100%;
             margin: 12px 0 0 0;
+            position: relative;
+            &:after {
+                content: "";
+                position: absolute;
+                right: 0;
+                display: flex;
+                min-height: 100%;
+                width: 80px;
+                background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 76%, rgba(255,255,255,1) 100%);            
+            }
 
             .img-container_small {
                 display: inline-flex;
@@ -207,13 +218,25 @@
         }
         &__goods-info {
             margin: 15px 0 0 0;
+            &.is-toggle {
+                & {
+                    p {
+                        max-height: 300px;
+                        overflow: visible;
+                        transition: all 1s;
+                    }
+                }
+            }
             h5 {
                 margin: 20px 0 0 0;
             }
             p {
                 font-size: 10px;
                 color: $light-gray-txt-color;
-                
+                max-height: 30px;
+                overflow: hidden;
+                transition: all .5s;
+
             }
             a {
                 font-size: 10px;

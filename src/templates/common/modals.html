@@ -855,13 +855,14 @@
                         <div class="modal__goods-info">
                             <h5>Информация о товаре</h5>
                             <p>Ботинки из натуральной кожи черного цвета на устойчивой к подошве 
-                                белого цвета. Декорированы двумя ремешками с собакой
+                                белого цвета. Декорированы двумя ремешками с собакой.
+                                Ботинки из натуральной кожи черного цвета на устойчивой к подошве 
+                                белого цвета. Декорированы двумя ремешками с собакой.
                             </p>
                             <a href="" target="_blank">читать подробнее о товаре</a>
                         </div>
                         <button class="modal__btn-about-goods"><i class="icon icon-eye"></i>Подробнее о товаре</button>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -916,6 +917,16 @@
         )();
 
 
+    </script>
+
+    <!-- Карточка товара с коротким изображением -->
+    <script>
+        let btn_toggle = document.querySelector(".modal__btn-about-goods"),
+            toggle_txt_container = document.querySelector(".modal__goods-info");
+
+        btn_toggle.addEventListener("click", () => {
+            toggle_txt_container.classList.toggle("is-toggle");
+        });
     </script>
 
 
