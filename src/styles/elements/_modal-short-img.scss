@@ -31,6 +31,18 @@
                 margin-left: 20px;
             } 
         }
+        //Tooltip 
+        &__tooltip {
+            position: absolute;
+            top: calc(50% - 22px);
+            width: 44px;
+            height: 44px;
+            z-index: 999;
+            &-left {
+                left: 95px;
+            }
+        }
+
         //Кнопка закрыть(крестик)
         &__btn-close {
             &:after, &:before {
@@ -53,7 +65,7 @@
             position: absolute;
             top: calc(50% - 22px);
             background: rgba(255, 255, 255, .7);
-            ;
+            
 
             &:after,
             &:before {

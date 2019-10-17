@@ -8,59 +8,25 @@
 	// border-radius: 0;
 	background: #d7d7d7;
 	cursor: pointer;
-	&:before, &:after {
-		position: absolute;
-		content: '';
-		height: 2px;
-		width: 13px;
-		border-radius: 5.5px;
-		background: #fff;
-		left: 12px;
+	&:active {
+		transform: scale(.95);
 	}
 	&_default {
+		color: $color-primary;
 		&:hover {
-			&:before, &:after {
-				background: $color-primary;
-			}			
+			color: $light-gray-color;
 		}
 	}
 
 	//Меняет цвет стрелки
 	&_inverse {
-		&:before, &:after {
-			background: $color-primary;
-		}
+		color: #fff;
 		&:hover {
-			&:before, &:after {
-				background: $light-gray-color;
-			}
+			color: $color-primary;
 		}
 	}
 	&_circle {
 		border-radius: 50%;
-	}
-	&:before {
-		transform: rotate(45deg) translateY(-5.7px);
-	}
-	&:after {
-		transform: rotate(-45deg) translateY(5.5px);
-	}
-	//Направления кнопки
-	// Для выбора нужного направления, присвоить соответствующий класс блоку arrow
-	// например arrow arrow_up 
-	&_right {
-		transform: rotate(0deg);
-	}
-	&_down {
-		transform: rotate(90deg);
-	}
-	&_left {
-		transform: rotate(180deg);
-	
-	}
-	&_up {
-		transform: rotate(270deg);
-
 	}
 
 }
