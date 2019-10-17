@@ -7,10 +7,10 @@
                 top: calc(50%-22px);
                 background: #fff;
                 z-index: 10;
-                &_right {
+                &-right {
                     right: -75px;
                 }
-                &_left {
+                &-left {
                     left: -75px;
                 }
             }  
@@ -59,26 +59,25 @@
             min-width: 350px;
             min-height: 300px;
             height: auto;
+            .arrow {
+                position: absolute;
+                top: calc(50%-22px);
+                background: #fff;
+                z-index: 10;
+                &-right {
+                    right: 0;
+                }
+                &-left {
+                    left: 0;
+                }
+            }  
+
         }
 
         &__arrow {
             position: absolute;
             top: calc(50% - 22px);
             background: rgba(255, 255, 255, .7);
-            
-
-            &:after,
-            &:before {
-                background: $color-primary;
-            }
-
-            &.arrow_left {
-                left: 0;
-            }
-
-            &.arrow_right {
-                right: 0;
-            }
         }
 
         &__slider {
