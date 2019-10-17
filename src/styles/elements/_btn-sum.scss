@@ -1,19 +1,17 @@
-.btn {
-
-    &__sum {
-        display: flex;
-        flex-direction: row;
-        width: 80px;
-        align-items: center;
-        &-num {
-            width: 35px;
-            margin: 0 5px;
-            font-size: 16px;
-            appearance: none;
-            border: none;
-            text-align: center;
-        }
+.btn-sum {
+    display: flex;
+    flex-direction: row;
+    width: 80px;
+    align-items: center;
+    &__sum-num {
+        width: 35px;
+        margin: 0 5px;
+        font-size: 16px;
+        appearance: none;
+        border: none;
+        text-align: center;
     }
+    
 
     &__minus, &__plus {
         position: relative;

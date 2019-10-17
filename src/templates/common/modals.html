@@ -765,11 +765,11 @@
                 <div class="modal__btn-close"><i class="icon icon-close"></i></div>
                 <button class="modal__arrow arrow arrow-left arrow_default arrow_circle has-tooltip">
                     <i class="icon icon-arrow-left"></i>
-                    <span class="tooltip tooltip_top">Предыдущий товар и его  длинное название...</span>
+                    <span class="tooltip tooltip_top">Предыдущий товар и его длинное название...</span>
                 </button>
                 <button class="modal__arrow arrow arrow-right arrow_default arrow_circle has-tooltip">
                     <i class="icon icon-arrow-right"></i>
-                    <span class="tooltip tooltip_top">Следующий товар и его длинное название...</span>                
+                    <span class="tooltip tooltip_top">Следующий товар и его длинное название...</span>
                 </button>
                 <div class="modal__content">
                     <div class="modal__col">
@@ -851,11 +851,17 @@
                                 <button class="link link_hover ">Ещё размеры</button>
                             </div>
                             <div class="modal__btn-container">
-                                <div class="modal__sum">
+                                <!-- <div class="modal__sum">
                                     <button class="modal__minus minus"></button>
                                     <input value="128" class="modal__sum-num sum-value"></input>
                                     <button class="modal__plus plus"></button>
+                                </div> -->
+                                <div class="btn-sum">
+                                    <button class="btn-sum__minus"></button>
+                                    <input value="128" class="btn-sum__sum-num"></input>
+                                    <button class="btn-sum__plus"></button>
                                 </div>
+
                                 <button class="ds-btn ds-btn_hover btn-add-to-card">
                                     <div class="ds-btn__text">В корзину</div><i class="icon icon-cart"></i>
                                 </button>
@@ -881,90 +887,6 @@
 
 
     </div>
-
-
-    <!-- Демонстрация, не использовать в проекте -->
-    <script>
-        const item_params_list__items = document.querySelectorAll(".item-params-list__item");
-        item_params_list__items.forEach(item => {
-            item.addEventListener("click", () => item.classList.toggle("is-selected"));
-        });
-
-        const item_params_list = document.querySelectorAll(".item-params-list");
-        item_params_list.forEach(list => {
-            const link = list.nextElementSibling;
-            link.addEventListener("click", () => list.classList.toggle("is-expanded"));
-        });
-    </script>
-
-    <!-- Модалка копирование позиции -->
-    <script>
-        //Раскрытие списка
-        let select = document.querySelectorAll(".modal__select"); //кнопка раскрывающая блок
-        //Перебираем все кнопки
-        for (let bt = 0; bt < select.length; bt++) {
-
-            select[bt].addEventListener("click", function () {
-                this.classList.toggle("is-toggle");
-            });
-        }
-
-        //Выбор позиции
-        (
-            () => {
-                let selectCont = document.querySelectorAll(".modal__select");
-
-                selectCont.forEach((sc) => {
-                    let sel_position = sc.querySelector(".modal__selected-position"),
-                        li = sc.querySelectorAll("li.item");
-
-                    li.forEach((i) => {
-                        i.addEventListener("click", () => {
-                            sel_position.innerHTML = i.innerHTML;
-                        });
-                    });
-                });
-            }
-        )();
-
-
-    </script>
-
-    <!-- Карточка товара с коротким изображением -->
-    <script>
-        let btn_toggle = document.querySelector(".modal__btn-about-goods"),
-            toggle_txt_container = document.querySelector(".modal__goods-info");
-
-        btn_toggle.addEventListener("click", () => {
-            toggle_txt_container.classList.toggle("is-toggle");
-        });
-        
-    </script>
-    
-    <!-- Кнопки управления количеством товара -->
-    <script>   
-
-        let minus    = document.querySelector(".minus"),
-            plus     = document.querySelector(".plus"),
-            input    = document.querySelector(".sum-value");
-
-            minus.addEventListener("click", () => {
-                input.value--;
-            });
-            plus.addEventListener("click", () => {
-                input.value++;
-            });
-
-    </script>
-
-    <!-- Сердечко -->
-    <script>
-        let heart = document.querySelector(".icon-heart-bold");
-
-        let click_heart = () => {heart.classList.toggle("icon-heart-filled");}
-
-        heart.addEventListener("click", click_heart);
-    </script>
 
 </body>
 
