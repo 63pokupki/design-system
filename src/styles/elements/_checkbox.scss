@@ -19,8 +19,8 @@
             display: block;
             position: absolute;
             left: 0;
-            top: 50%;
-            transform: translate(-25px, -50%);
+            top: 0;
+            transform: translateX(-25px);
             background: white;
             border: 1px solid rgba(49, 140, 202, 0.75);
             border-radius: 2px;
@@ -33,8 +33,8 @@
             display: none;
             position: absolute;
             left: 0;
-            top: 50%;
-            transform: translate(-21px, -75%) rotate(-45deg);
+            top: 5px;
+            transform: translateX(-21px) rotate(-45deg);
             border-bottom: 2px solid $color-primary;
             border-left: 2px solid $color-primary;
             width: 10px;

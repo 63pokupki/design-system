@@ -3,9 +3,9 @@
     margin: unset;
     padding: unset;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
-    max-height: 90px;
+    max-height: 78px;
     overflow: hidden;
 
     &__item {
@@ -14,9 +14,9 @@
         font-size: 12px;
         padding: 3px 5px;
         border-radius: 12px;
-        color: #858585;
+        color: #606266;
         margin-right: 5px;
-        margin-bottom: 8px;
+        margin-bottom: 3px;
         min-width: 23px;
         text-align: center;
         transition: background-color $transition-fast, color $transition-fast;

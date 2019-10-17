@@ -76,16 +76,6 @@
             line-height: 18px;
             width: 100%;
 
-            &:before {
-                top: 1px;
-                transform: translate(-25px);
-            }
-
-            &:after {
-                top: 6px;
-                transform: translate(-21px) rotate(-45deg);
-            }
-
             &:hover {
                 color: $color-primary;
             }

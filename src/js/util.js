@@ -22,6 +22,7 @@ if (item_params_list__items) {
     });
 }
 
+
 // <!-- Модалка копирование позиции -->
 
     //Раскрытие списка
@@ -89,4 +90,16 @@ if (item_params_list__items) {
     let click_heart = () => { heart.classList.toggle("icon-heart-filled"); }
 
     heart.addEventListener("click", click_heart);
+
+
+
+const collapse_section = document.querySelectorAll(".collapse-section");
+if (collapse_section) {
+    collapse_section.forEach(section => {
+        const heading = section.querySelector('.collapse-section__heading');
+        heading.addEventListener("click", () => section.classList.toggle("is-expanded"));
+    });
+}
+
+
 
