@@ -5,10 +5,66 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Другие компоненты статичной страницы закупки</title>
-    <link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?0d5aefe187a1cc22be84" rel="stylesheet"><link href="css/ds-utils.css?0d5aefe187a1cc22be84" rel="stylesheet"><link href="css/ds-ui-kit.css?0d5aefe187a1cc22be84" rel="stylesheet"></head>
+    <link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?43736732971feabd083d" rel="stylesheet"><link href="css/ds-utils.css?43736732971feabd083d" rel="stylesheet"><link href="css/ds-ui-kit.css?43736732971feabd083d" rel="stylesheet"></head>
     <body>
         <body>
             <h1 class="ds-title">Другие компоненты статичной страницы закупки</h1>
+
+            <h2 class="ds-title">Разворачивающийся блок</h2>
+
+            <div class="ds-wrapper ds-i" style="max-width: 500px;">
+                <div class="collapse-section">
+                    <span class="collapse-section__heading">Описание товара</span>
+                    <div class="collapse-section__body">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor sed officiis non voluptatum,
+                        incidunt, hic dolores cupiditate repellat debitis similique pariatur molestiae facere. Nemo,
+                        suscipit quis nesciunt quisquam eius eaque molestiae. Commodi itaque consequatur illo, veritatis
+                        cumque unde sapiente sit fugit soluta est, similique, dolorem illum quas iure saepe! Suscipit
+                        natus quo distinctio consequuntur quae, esse alias id iste non, magni voluptate, est nisi
+                        molestias sit incidunt maiores dolores sed quaerat fugit sunt ratione hic magnam. Rerum, ea.
+                        Porro perspiciatis iure voluptas laboriosam nihil ipsam molestias saepe inventore? Fugit,
+                        numquam. Officiis accusantium sequi unde veniam rerum similique in, ex ducimus.
+                    </div>
+                </div>
+            </div>
+
+            <div class="ds-wrapper">
+                <p>
+                    Для раскрытия секции добавить класс <span class="ds-hl">is-expanded</span> элементу
+                    <span class="ds-hl">collapse-section</span>
+                </p>
+            </div>
+
+            <div class="ds-code-wrapper">
+                <script type="text/plain" class="language-markup">
+                    <div class="collapse-section">
+                        <span class="collapse-section__heading">Заглавие секции</span>
+                        <div class="collapse-section__body">
+                          Контент
+                        </div>
+                    </div>
+                </script>
+            </div>
+
+            <h2 class="ds-title">Кнопки количества добавлений</h2>
+
+            <div class="ds-wrapper">
+                <div class="input-num">
+                    <button class="input-num__minus"></button>
+                    <input class="input-num__input" value="128" type="text" />
+                    <button class="input-num__plus"></button>
+                </div>
+            </div>
+
+            <div class="ds-code-wrapper">
+                <script type="text/plain" class="language-markup">
+                    <div class="input-num">
+                        <button class="input-num__minus"></button>
+                        <input class="input-num__input" value="128" type="text" />
+                        <button class="input-num__plus"></button>
+                    </div>
+                </script>
+            </div>
 
             <h2 class="ds-title">Значки товара - ряды, сколько заказали</h2>
 
@@ -148,104 +204,6 @@
                     </div>
                 </script>
             </div>
-
-            
-            <h2 class="ds-title">Блок параметров товара</h2>
-
-            <div class="ds-wrapper ds-i" style="max-width: 296px">
-                <ul class="item-params-list">
-                    <li class="item-params-list__item">36</li>
-                    <li class="item-params-list__item">37</li>
-                    <li class="item-params-list__item">38</li>
-                    <li class="item-params-list__item">39</li>
-                    <li class="item-params-list__item">40</li>
-                    <li class="item-params-list__item">40</li>
-                    <li class="item-params-list__item">Большой</li>
-                    <li class="item-params-list__item">XL</li>
-                    <li class="item-params-list__item">L</li>
-                    <li class="item-params-list__item">S</li>
-                    <li class="item-params-list__item">HNFG</li>
-                    <li class="item-params-list__item">40</li>
-                    <li class="item-params-list__item">Большой</li>
-                    <li class="item-params-list__item">Большой</li>
-                    <li class="item-params-list__item">XL</li>
-                    <li class="item-params-list__item">L</li>
-                    <li class="item-params-list__item">S</li>
-                    <li class="item-params-list__item">36</li>
-                    <li class="item-params-list__item">37</li>
-                    <li class="item-params-list__item">38</li>
-                    <li class="item-params-list__item">39</li>
-                    <li class="item-params-list__item">40</li>
-                    <li class="item-params-list__item">40</li>
-                    <li class="item-params-list__item">Большой</li>
-                    <li class="item-params-list__item">XL</li>
-                    <li class="item-params-list__item">L</li>
-                    <li class="item-params-list__item">S</li>
-                    <li class="item-params-list__item">HNFG</li>
-                    <li class="item-params-list__item">40</li>
-                    <li class="item-params-list__item">Большой</li>
-                    <li class="item-params-list__item">Большой</li>
-                    <li class="item-params-list__item">XL</li>
-                    <li class="item-params-list__item">L</li>
-                    <li class="item-params-list__item">S</li>
-                </ul>
-                <button class="link link_hover stock-dropdown-filter__toggle">Скрыть/Раскрыть</button>
-            </div>
-
-            <div class="ds-wrapper">
-                <p>
-                    Изначально вмещает в себя 3 строки с параметрами. Для раскрытия блока добавить класс
-                    <span class="ds-hl">is-expanded</span> элементу <span class="ds-hl">item-params-list</span>
-                </p>
-                <p>
-                    Для выбора параметра добавить класс <span class="ds-hl">is-selected</span> элементу
-                    <span class="ds-hl">item-params-list__item</span>
-                </p>
-            </div>
-
-            <div class="ds-code-wrapper">
-                <script type="text/plain" class="language-markup">
-                    <ul class="item-params-list">
-                        <li class="item-params-list__item">36</li>
-                        <li class="item-params-list__item">37</li>
-                        <li class="item-params-list__item">38</li>
-                        <li class="item-params-list__item">39</li>
-                        <li class="item-params-list__item">40</li>
-                        <li class="item-params-list__item">40</li>
-                        <li class="item-params-list__item">Большой</li>
-                        <li class="item-params-list__item">XL</li>
-                        <li class="item-params-list__item">L</li>
-                        <li class="item-params-list__item">S</li>
-                        <li class="item-params-list__item">HNFG</li>
-                        <li class="item-params-list__item">40</li>
-                        <li class="item-params-list__item">Большой</li>
-                        <li class="item-params-list__item">Большой</li>
-                        <li class="item-params-list__item">XL</li>
-                        <li class="item-params-list__item">L</li>
-                        <li class="item-params-list__item">S</li>
-                        <li class="item-params-list__item">36</li>
-                        <li class="item-params-list__item">37</li>
-                        <li class="item-params-list__item">38</li>
-                        <li class="item-params-list__item">39</li>
-                        <li class="item-params-list__item">40</li>
-                        <li class="item-params-list__item">40</li>
-                        <li class="item-params-list__item">Большой</li>
-                        <li class="item-params-list__item">XL</li>
-                        <li class="item-params-list__item">L</li>
-                        <li class="item-params-list__item">S</li>
-                        <li class="item-params-list__item">HNFG</li>
-                        <li class="item-params-list__item">40</li>
-                        <li class="item-params-list__item">Большой</li>
-                        <li class="item-params-list__item">Большой</li>
-                        <li class="item-params-list__item">XL</li>
-                        <li class="item-params-list__item">L</li>
-                        <li class="item-params-list__item">S</li>
-                    </ul>
-                    <button class="link link_hover stock-dropdown-filter__toggle">Скрыть/Раскрыть</button>
-                </script>
-            </div>
-
-
 
             <h2 class="ds-title">Сообщение что нет активного сбора, строка</h2>
 
@@ -399,7 +357,6 @@
                     </i>
                 </script>
             </div>
-
-        <script type="text/javascript" src="js/highlight-syntax.js?0d5aefe187a1cc22be84"></script><script type="text/javascript" src="js/ds-utils.js?0d5aefe187a1cc22be84"></script><script type="text/javascript" src="js/categories-icons-sprite.js?0d5aefe187a1cc22be84"></script><script type="text/javascript" src="js/ds-ui-kit.js?0d5aefe187a1cc22be84"></script></body>
+        <script type="text/javascript" src="js/highlight-syntax.js?43736732971feabd083d"></script><script type="text/javascript" src="js/ds-utils.js?43736732971feabd083d"></script><script type="text/javascript" src="js/categories-icons-sprite.js?43736732971feabd083d"></script><script type="text/javascript" src="js/ds-ui-kit.js?43736732971feabd083d"></script></body>
     </body>
 </html>
