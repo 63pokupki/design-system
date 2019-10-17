@@ -778,7 +778,7 @@
                                 <i class="icon icon-arrow-left"></i>
                             </button>
 
-                            <div class="img-container_resp"><img src="~images/Pop-up-short-img/short-img.jpg" alt="Car">
+                            <div class="img-container_resp"><img src="~images/Pop-up-short-img/short-img.jpg" alt="">
                             </div>
                             <button class="modal__arrow arrow arrow-right arrow_default">
                                 <i class="icon icon-arrow-right"></i>
@@ -852,9 +852,9 @@
                             </div>
                             <div class="modal__btn-container">
                                 <div class="modal__sum">
-                                    <button class="modal__minus"></button>
-                                    <input value="128" class="modal__sum-num"></input>
-                                    <button class="modal__plus"></button>
+                                    <button class="modal__minus minus"></button>
+                                    <input value="128" class="modal__sum-num sum-value"></input>
+                                    <button class="modal__plus plus"></button>
                                 </div>
                                 <button class="ds-btn ds-btn_hover btn-add-to-card">
                                     <div class="ds-btn__text">В корзину</div><i class="icon icon-cart"></i>
@@ -938,8 +938,33 @@
         btn_toggle.addEventListener("click", () => {
             toggle_txt_container.classList.toggle("is-toggle");
         });
+        
+    </script>
+    
+    <!-- Кнопки управления количеством товара -->
+    <script>   
+
+        let minus    = document.querySelector(".minus"),
+            plus     = document.querySelector(".plus"),
+            input    = document.querySelector(".sum-value");
+
+            minus.addEventListener("click", () => {
+                input.value--;
+            });
+            plus.addEventListener("click", () => {
+                input.value++;
+            });
+
     </script>
 
+    <!-- Сердечко -->
+    <script>
+        let heart = document.querySelector(".icon-heart-bold");
+
+        let click_heart = () => {heart.classList.toggle("icon-heart-filled");}
+
+        heart.addEventListener("click", click_heart);
+    </script>
 
 </body>
 

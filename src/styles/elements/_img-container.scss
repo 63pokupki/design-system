@@ -9,6 +9,9 @@
         justify-content: center;
         align-items: center;
         width: 100%;
+        img {
+            min-width: 100%;
+        }
     }
     //Для очень больших экранов
     &_extra-large {
