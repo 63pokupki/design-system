@@ -763,15 +763,26 @@
         <div class="modal modal-short-img is-visible" style="position: relative">
             <div class="modal__wrap" style="margin: 10px">
                 <div class="modal__btn-close"><i class="icon icon-close"></i></div>
-                <div class="arrow arrow_inverse arrow_left arrow_circle"></div>
-                <div class="arrow arrow_inverse arrow_right arrow_circle"></div>
+                <button class="modal__arrow arrow arrow-left arrow_default arrow_circle has-tooltip">
+                    <i class="icon icon-arrow-left"></i>
+                    <span class="tooltip tooltip_top">Предыдущий товар и его длинное название...</span>
+                </button>
+                <button class="modal__arrow arrow arrow-right arrow_default arrow_circle has-tooltip">
+                    <i class="icon icon-arrow-right"></i>
+                    <span class="tooltip tooltip_top">Следующий товар и его длинное название...</span>
+                </button>
                 <div class="modal__content">
                     <div class="modal__col">
                         <div class="modal__img-container">
-                            <div class="modal__arrow arrow arrow_left"></div>
-                            <div class="img-container_resp"><img src="~images/Pop-up-short-img/short-img.jpg" alt="Car">
+                            <button class="modal__arrow arrow arrow-left arrow_default">
+                                <i class="icon icon-arrow-left"></i>
+                            </button>
+
+                            <div class="img-container_resp"><img src="~images/Pop-up-short-img/short-img.jpg" alt="">
                             </div>
-                            <div class="modal__arrow arrow arrow_right"></div>
+                            <button class="modal__arrow arrow arrow-right arrow_default">
+                                <i class="icon icon-arrow-right"></i>
+                            </button>
                         </div>
                         <div class="modal__slider">
                             <div class="slider">
@@ -840,11 +851,12 @@
                                 <button class="link link_hover ">Ещё размеры</button>
                             </div>
                             <div class="modal__btn-container">
-                                <div class="modal__sum">
-                                    <button class="modal__minus"></button>
-                                    <input value="128" class="modal__sum-num"></input>
-                                    <button class="modal__plus"></button>
+                                <div class="btn-sum">
+                                    <button class="btn-sum__minus"></button>
+                                    <input value="128" class="btn-sum__sum-num"></input>
+                                    <button class="btn-sum__plus"></button>
                                 </div>
+
                                 <button class="ds-btn ds-btn_hover btn-add-to-card">
                                     <div class="ds-btn__text">В корзину</div><i class="icon icon-cart"></i>
                                 </button>
@@ -854,14 +866,15 @@
                         </div>
                         <div class="modal__goods-info">
                             <h5>Информация о товаре</h5>
-                            <p>Ботинки из натуральной кожи черного цвета на устойчивой к подошве 
-                                белого цвета. Декорированы двумя ремешками с собакой
+                            <p>Ботинки из натуральной кожи черного цвета на устойчивой к подошве
+                                белого цвета. Декорированы двумя ремешками с собакой.
+                                Ботинки из натуральной кожи черного цвета на устойчивой к подошве
+                                белого цвета. Декорированы двумя ремешками с собакой.
                             </p>
                             <a href="" target="_blank">читать подробнее о товаре</a>
                         </div>
                         <button class="modal__btn-about-goods"><i class="icon icon-eye"></i>Подробнее о товаре</button>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -869,55 +882,6 @@
 
 
     </div>
-
-
-    <!-- Демонстрация, не использовать в проекте -->
-    <script>
-        const item_params_list__items = document.querySelectorAll(".item-params-list__item");
-        item_params_list__items.forEach(item => {
-            item.addEventListener("click", () => item.classList.toggle("is-selected"));
-        });
-
-        const item_params_list = document.querySelectorAll(".item-params-list");
-        item_params_list.forEach(list => {
-            const link = list.nextElementSibling;
-            link.addEventListener("click", () => list.classList.toggle("is-expanded"));
-        });
-    </script>
-
-    <!-- Модалка копирование позиции -->
-    <script>
-        //Раскрытие списка
-        let select = document.querySelectorAll(".modal__select"); //кнопка раскрывающая блок
-        //Перебираем все кнопки
-        for (let bt = 0; bt < select.length; bt++) {
-
-            select[bt].addEventListener("click", function () {
-                this.classList.toggle("is-toggle");
-            });
-        }
-
-        //Выбор позиции
-        (
-            () => {
-                let selectCont = document.querySelectorAll(".modal__select");
-
-                selectCont.forEach((sc) => {
-                    let sel_position = sc.querySelector(".modal__selected-position"),
-                        li = sc.querySelectorAll("li.item");
-
-                    li.forEach((i) => {
-                        i.addEventListener("click", () => {
-                            sel_position.innerHTML = i.innerHTML;
-                        });
-                    });
-                });
-            }
-        )();
-
-
-    </script>
-
 
 </body>
 
