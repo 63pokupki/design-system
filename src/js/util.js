@@ -21,3 +21,14 @@ if (item_params_list__items) {
         link.addEventListener("click", () => list.classList.toggle("is-expanded"));
     });
 }
+
+
+const collapse_section = document.querySelectorAll(".collapse-section");
+if (collapse_section) {
+    collapse_section.forEach(section => {
+        const heading = section.querySelector('.collapse-section__heading');
+        heading.addEventListener("click", () => section.classList.toggle("is-expanded"));
+    });
+}
+
+
