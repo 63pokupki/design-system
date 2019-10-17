@@ -2,7 +2,11 @@
 .stock-card-container {
     // горизонтальное отображение карточек по 1
     &.horizontal {
-        // пока без реализации
+        display: block;
+
+        .stock-card-horizontal {
+            margin-bottom: 10px;
+        }
     }
 
     // вертикальное отображение карточек по несколько, стандартно по 3

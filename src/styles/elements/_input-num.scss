@@ -1,0 +1,64 @@
+.input-num {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    &__minus {
+        &:before {
+            content: "";
+            position: absolute;
+            width: 6px;
+            height: 2px;
+            background-color: white;
+        }
+    }
+
+    &__plus {
+        &:before {
+            content: "";
+            width: 8px;
+            height: 2px;
+            position: absolute;
+            background-color: white;
+        }
+
+        &:after {
+            content: "";
+            width: 2px;
+            height: 8px;
+            position: absolute;
+            background-color: white;
+        }
+    }
+
+    &__minus,
+    &__plus {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        border-radius: 50%;
+        background: #c4c4c4;
+        width: 20px;
+        height: 20px;
+
+        &:hover {
+            background: $color-primary;
+        }
+
+        &:active {
+            @include deep-click(0.925);
+        }
+    }
+
+    &__input {
+        margin: 0 4px;
+        outline: none;
+        border: none;
+        text-align: center;
+        width: 30px;
+        font-size: 16px;
+        color: #000000;
+        border-bottom: 1px solid #36a6f2;
+    }
+}

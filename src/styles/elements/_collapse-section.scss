@@ -1,0 +1,52 @@
+.collapse-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+
+    &__heading {
+        user-select: none;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 12px;
+        color: #1e2023;
+        position: relative;
+        margin-bottom: 10px;
+        
+        &:after {
+            position: absolute;
+            content: "";
+            top: 45%;
+            right: -15px;
+            transform: translateY(-50%) rotate(-45deg);
+            transition: transform $transition-fast;
+            width: 6px;
+            height: 6px;
+            border-bottom: 1px solid #33363a;
+            border-left: 1px solid #33363a;
+        }
+    }
+
+    &__body {
+        font-size: 12px;
+        width: 100%;
+        color: #606266;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height $transition-primary;
+    }
+}
+
+.collapse-section.is-expanded {
+    .collapse-section__heading {
+        &:after {
+            top: 62%;
+            transform: translateY(-50%) rotate(135deg);
+            transition: transform $transition-fast;
+        }
+    }
+    .collapse-section__body {
+        max-height: 500px;
+        transition: max-height $transition-primary;
+    }
+}

@@ -10,14 +10,60 @@
         <body>
             <h1 class="ds-title">Другие компоненты статичной страницы закупки</h1>
 
+            <h2 class="ds-title">Разворачивающийся блок</h2>
+
+            <div class="ds-wrapper ds-i" style="max-width: 500px;">
+                <div class="collapse-section">
+                    <span class="collapse-section__heading">Описание товара</span>
+                    <div class="collapse-section__body">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor sed officiis non voluptatum,
+                        incidunt, hic dolores cupiditate repellat debitis similique pariatur molestiae facere. Nemo,
+                        suscipit quis nesciunt quisquam eius eaque molestiae. Commodi itaque consequatur illo, veritatis
+                        cumque unde sapiente sit fugit soluta est, similique, dolorem illum quas iure saepe! Suscipit
+                        natus quo distinctio consequuntur quae, esse alias id iste non, magni voluptate, est nisi
+                        molestias sit incidunt maiores dolores sed quaerat fugit sunt ratione hic magnam. Rerum, ea.
+                        Porro perspiciatis iure voluptas laboriosam nihil ipsam molestias saepe inventore? Fugit,
+                        numquam. Officiis accusantium sequi unde veniam rerum similique in, ex ducimus.
+                    </div>
+                </div>
+            </div>
+
+            <div class="ds-wrapper">
+                <p>
+                    Для раскрытия секции добавить класс <span class="ds-hl">is-expanded</span> элементу
+                    <span class="ds-hl">collapse-section</span>
+                </p>
+            </div>
+
+            <div class="ds-code-wrapper">
+                <script type="text/plain" class="language-markup">
+                    <div class="collapse-section">
+                        <span class="collapse-section__heading">Заглавие секции</span>
+                        <div class="collapse-section__body">
+                          Контент
+                        </div>
+                    </div>
+                </script>
+            </div>
+
             <h2 class="ds-title">Кнопки количества добавлений</h2>
 
             <div class="ds-wrapper">
-                <div class="input-t-num">
-                    <button class="input-t-num__minus"></button>
-                    <input class="input-t-num__input" type="text">
-                    <button class="input-t-num__plus"></button>
+                <div class="input-num">
+                    <button class="input-num__minus"></button>
+                    <input class="input-num__input" value="128" type="text" />
+                    <button class="input-num__plus"></button>
                 </div>
+            </div>
+
+            <div class="ds-code-wrapper">
+                <script type="text/plain" class="language-markup">
+                    <div class="input-num">
+                        <button class="input-num__minus"></button>
+                        <input class="input-num__input" value="128" type="text" />
+                        <button class="input-num__plus"></button>
+                    </div>
+                </script>
             </div>
 
             <h2 class="ds-title">Значки товара - ряды, сколько заказали</h2>
@@ -158,8 +204,6 @@
                     </div>
                 </script>
             </div>
-
-
 
             <h2 class="ds-title">Сообщение что нет активного сбора, строка</h2>
 
@@ -313,7 +357,6 @@
                     </i>
                 </script>
             </div>
-
         </body>
     </body>
 </html>
