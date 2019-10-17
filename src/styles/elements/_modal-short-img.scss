@@ -11,9 +11,10 @@
                     right: -75px;
                     &.has-tooltip {
                         .tooltip {
-                            left: 135%;
+                            width: 200px;
+                            left: 225%;
                             &::before {
-                                left: calc(20% - 3px);
+                                left: calc(12% - 3px);
                             }
                         }
                     }
@@ -23,9 +24,10 @@
                     left: -75px;
                     &.has-tooltip {
                         .tooltip {
-                            left: -30%;
+                            width: 200px;
+                            left: -115%;
                             &::before {
-                                left: calc(80% - 3px);
+                                left: calc(87% - 3px);
                             }
                         }
                     }
