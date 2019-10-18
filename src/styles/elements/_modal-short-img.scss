@@ -9,28 +9,9 @@
                 z-index: 10;
                 &-right {
                     right: -75px;
-                    &.has-tooltip {
-                        .tooltip {
-                            width: 200px;
-                            left: 225%;
-                            &::before {
-                                left: calc(12% - 3px);
-                            }
-                        }
-                    }
-
                 }
                 &-left {
                     left: -75px;
-                    &.has-tooltip {
-                        .tooltip {
-                            width: 200px;
-                            left: -115%;
-                            &::before {
-                                left: calc(87% - 3px);
-                            }
-                        }
-                    }
                 }
             }  
         }
@@ -82,7 +63,7 @@
             .arrow {
                 position: absolute;
                 top: calc(50%-22px);
-                background: #fff;
+                background: rgba(255, 255, 255, .7);
                 z-index: 10;
                 &-right {
                     right: 0;
@@ -97,7 +78,6 @@
         &__arrow {
             position: absolute;
             top: calc(50% - 22px);
-            background: rgba(255, 255, 255, .7);
         }
 
         &__slider {
@@ -172,6 +152,21 @@
         &__goods-param {
             display: flex;
             flex-direction: column;
+            .item-params-list {
+                position: relative;
+                left: -5px;
+                max-height: 26px;
+                transition: all .3s;
+                &.is-expanded {
+                    max-height: 300px;
+                    transition: all .9s;
+                }
+            }
+
+        }
+        &__btn-link {
+            color: $light-gray-link-color;
+            font-size: 10px;
         }
         &__content {
             &-color, &-size {
@@ -274,7 +269,7 @@
                 font-size: 10px;
                 color: $color-primary;
                 &:visited {
-                    color: $visited-link-active-custom;
+                    color: $color-primary;
                 }
             }
         }
