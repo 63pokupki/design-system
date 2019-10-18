@@ -6,7 +6,8 @@ module.exports = {
     mode: "production", //режим сборки
     entry: {
         "ds-ui-kit" : entry["ds-ui-kit"],
-        "categories-icons-sprite" : entry["categories-icons-sprite"]
+        "categories-icons-sprite" : entry["categories-icons-sprite"],
+        // "stock" : entry["stock"],
     }, //объект с точками входа
     output: {
         path: path.join(__dirname, "dist/"), //общий путь для выходных файлов
