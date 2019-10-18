@@ -22,12 +22,20 @@ if (item_params_list__items) {
     });
 }
 
+const collapse_section = document.querySelectorAll(".collapse-section");
+if (collapse_section) {
+    collapse_section.forEach(section => {
+        const heading = section.querySelector(".collapse-section__heading");
+        heading.addEventListener("click", () => section.classList.toggle("is-expanded"));
+    });
+}
 
 // <!-- Модалка копирование позиции -->
 
 //Раскрытие списка
 let select = document.querySelectorAll(".modal__select"); //кнопка раскрывающая блок
 //Перебираем все кнопки
+<<<<<<< HEAD
 for (let bt = 0; bt < select.length; bt++) {
 
     select[bt].addEventListener("click", function () {
@@ -45,16 +53,39 @@ for (let bt = 0; bt < select.length; bt++) {
                 li = sc.querySelectorAll("li.item");
 
             li.forEach((i) => {
+=======
+if (select) {
+    for (let bt = 0; bt < select.length; bt++) {
+        select[bt].addEventListener("click", function() {
+            this.classList.toggle("is-toggle");
+        });
+    }
+}
+
+//Выбор позиции
+(() => {
+    let selectCont = document.querySelectorAll(".modal__select");
+    if (selectCont) {
+        selectCont.forEach(sc => {
+            let sel_position = sc.querySelector(".modal__selected-position"),
+                li = sc.querySelectorAll("li.item");
+
+            li.forEach(i => {
+>>>>>>> 681d3e6b95769bc2605223bcc4bc74f5b43f0680
                 i.addEventListener("click", () => {
                     sel_position.innerHTML = i.innerHTML;
                 });
             });
         });
     }
+<<<<<<< HEAD
 )();
 
 
 
+=======
+})();
+>>>>>>> 681d3e6b95769bc2605223bcc4bc74f5b43f0680
 
 // <!-- Карточка товара с коротким изображением -->
 
@@ -66,12 +97,19 @@ if (btn_toggle) {
         toggle_txt_container.classList.toggle("is-toggle");
     });
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 681d3e6b95769bc2605223bcc4bc74f5b43f0680
 
 // <!-- Кнопки управления количеством товара -->
 
+let minus = document.querySelector(".btn-sum__minus"),
+    plus = document.querySelector(".btn-sum__plus"),
+    input = document.querySelector(".btn-sum__sum-num");
 
+<<<<<<< HEAD
 let minus = document.querySelector(".btn-sum__minus"),
     plus = document.querySelector(".btn-sum__plus"),
     input = document.querySelector(".btn-sum__sum-num");
@@ -84,11 +122,24 @@ plus.addEventListener("click", () => {
 });
 
 
+=======
+if (minus) {
+    minus.addEventListener("click", () => {
+        input.value--;
+    });
+}
+if (plus) {
+    plus.addEventListener("click", () => {
+        input.value++;
+    });
+}
+>>>>>>> 681d3e6b95769bc2605223bcc4bc74f5b43f0680
 
 // <!-- Сердечко -->
 
 let heart = document.querySelector(".icon-heart-bold");
 
+<<<<<<< HEAD
 let click_heart = () => {
     heart.classList.toggle("icon-heart-filled");
 }
@@ -104,3 +155,12 @@ if (collapse_section) {
         heading.addEventListener("click", () => section.classList.toggle("is-expanded"));
     });
 }
+=======
+if (heart) {
+    let click_heart = () => {
+        heart.classList.toggle("icon-heart-filled");
+    };
+
+    heart.addEventListener("click", click_heart);
+}
+>>>>>>> 681d3e6b95769bc2605223bcc4bc74f5b43f0680
