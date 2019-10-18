@@ -1,4 +1,15 @@
-
+.icon-arrow-down:before {
+  content: "\e90a";
+}
+.icon-arrow-up:before {
+  content: "\e90b";
+}
+.icon-lock:before {
+  content: "\e90c";
+}
+.icon-lock-open:before {
+  content: "\e90d";
+}
 .icon-menu:before {
   content: "\e92d";
 }
