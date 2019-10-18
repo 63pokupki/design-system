@@ -1,0 +1,18 @@
+.org-edit-catalog-btn {
+    background: rgba(255, 199, 159, 0.75);
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 6px;
+    text-align: center;
+    color: #1d1e1f;
+    width: 100%;
+
+    &:active {
+        @include deep-click(0.95);
+    }
+
+    &__icon {
+        margin-left: 10px;
+    }
+}

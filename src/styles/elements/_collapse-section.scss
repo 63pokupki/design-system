@@ -11,7 +11,6 @@
         font-size: 12px;
         color: #1e2023;
         position: relative;
-        margin-bottom: 10px;
         
         &:after {
             position: absolute;
@@ -33,7 +32,7 @@
         color: #606266;
         max-height: 0;
         overflow: hidden;
-        transition: max-height $transition-primary;
+        transition: max-height $transition-primary, margin-top $transition-slow;
     }
 }
 
@@ -47,6 +46,7 @@
     }
     .collapse-section__body {
         max-height: 500px;
-        transition: max-height $transition-primary;
+        margin-top: 10px;
+        transition: max-height $transition-primary, margin-top $transition-primary;
     }
 }

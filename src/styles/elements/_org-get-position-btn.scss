@@ -1,10 +1,8 @@
 // кнопка Отметить позицию для организатора
 .org-get-position-btn {
-    background: url("~images/arrow-check-panel.svg") no-repeat center center;
-    background-size: cover;
-    width: 28px;
-    height: 22px;
-
+    font-size: 20px;
+    color: $color-primary;
+    
     &:active {
         @include deep-click(0.9);
     }
