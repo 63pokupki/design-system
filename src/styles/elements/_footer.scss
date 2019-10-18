@@ -1,0 +1,142 @@
+
+.footer {
+    display: flex;
+    flex-direction: column;
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+    }
+    &__advantage {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 20px;
+        background: $pale-blue-color;
+        font-size: 13px;
+        color: $color-primary;
+    }
+    &__buy-together, &__cheaper-than-retail, 
+    &__defend-buyer, &__points-near, &__real-comments {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            display: flex;
+            justify-content: center;            
+            width: 44px;
+            height: 44px;
+            margin-right: 5px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+    }
+    &__buy-together {
+        padding-left: 50px; 
+        &:before { 
+            background: url("~images/footer/hands-together.svg");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+    &__cheaper-than-retail {
+        padding-left: 55px;    
+        &:before {  
+            background: url("~images/footer/discount.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+
+        }
+    } 
+    &__defend-buyer {
+        padding-left: 50px;
+        &:before {  
+            background: url("~images/footer/defend.svg");
+            background-position: center;
+            background-size: 60%;
+            background-repeat: no-repeat;
+        }
+    }
+    &__points-near {
+        padding-left: 65px;
+        &:before { 
+            width: 56px;
+            height: 30px; 
+            background: url("~images/footer/PVZ.svg");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+    &__real-comments {
+        padding-left: 80px;
+        &:before { 
+            width: 76px;
+            height: 43px; 
+            background: url("~images/footer/stars-comments.svg");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+    &__links {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        &-site {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+    }
+    &__faq {
+        h5 {
+            opacity: 0;
+        }
+    }
+    &__social {
+        justify-content: space-between;
+        &-icons {
+            display: flex;
+            a {
+                margin-right: 10px;
+            }
+        }
+        img {
+            width: 30px;
+        }
+        .attach:after {
+            content: "ПРИСТРОЙ";
+            position: absolute;
+            bottom: -15px;
+            left: -10px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 10px;
+            color: #3EAAE0;
+            font-weight: 600;    
+        }
+        .attach {
+            position: relative;
+        }
+    }
+    &__copyright {
+        margin-top: 20px;
+        font-size: 12px;
+        color: $light-gray-txt-color;
+    } 
+
+}
+
