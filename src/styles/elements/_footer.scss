@@ -199,3 +199,44 @@
 
 }
 
+//footer tab
+.footer__tab {
+    .footer {
+        &__buy-together, &__cheaper-than-retail, 
+        &__defend-buyer, &__points-near, &__real-comments {
+            font-size: 12px;
+        }
+        &__social {
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 0 30px;
+            .attach:after {
+                left: 30px;
+                top: 6px;
+            }
+            img {
+                width: 20px;
+            }
+            &-icons {
+                justify-content: space-between;
+                margin-top: 5px;
+                margin: 5px 0 0 15px;
+            }
+            a {
+                margin-right: 25px;
+            }
+    
+        }
+        &__links {
+            &-site {
+                padding: 0 30px;
+            }
+        }
+        &__copyright {
+            font-size: 11px;
+            margin: 0 0 0 75px;
+        }
+    }
+}
+
