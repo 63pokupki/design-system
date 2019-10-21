@@ -100,6 +100,7 @@
         display: flex;
         justify-content: center;
         width: 100%;
+        margin: 0 0 15px 0;
         &-site {
             display: flex;
             justify-content: space-between;
@@ -158,24 +159,36 @@
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        padding: 20px 60px;
+        // flex-wrap: wrap;
+        padding: 10px 60px;
         border-top: 3px solid $pale-blue-color;
         border-radius: 15px;
         &-a {
             margin-right: 20px;
             font-size: 12px;
             color: $light-gray-txt-color;
-            text-decoration: none; 
+            text-decoration: none;
+            white-space: nowrap;
+            &:hover {
+                color: $color-primary;
+            } 
+        }
+        &-contacts {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-left: 20px;
+            flex-wrap: wrap;
         }
         &-phone {
-            margin: 0 5px 0 30px;
+            margin: 0 5px 0 0;
             font-size: 14px;
             color: $click-load-color;
             font-weight: 700;
             a[href="tel:8800-700-63-01"] {
                 font-size: 14px;
                 color: $click-load-color;
-                text-decoration: none;
+                text-decoration: none;  
             }
         }
         &-time {
