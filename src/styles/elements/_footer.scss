@@ -1,7 +1,12 @@
 
 .footer {
     display: flex;
+    width: 100%;
+    height: auto;
     flex-direction: column;
+    align-items: center;
+    background: #fff;
+    overflow: hidden;
 
     &__col {
         display: flex;
@@ -93,14 +98,25 @@
     }
     &__links {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         width: 100%;
+        margin: 0 0 15px 0;
         &-site {
             display: flex;
             justify-content: space-between;
             width: 100%;
-        }
+            padding: 0 60px;
 
+        }
+        &-a {
+            margin-bottom: 10px;
+            font-size: 12px;
+            color: $dark-grey-color;
+            text-decoration: none;
+            &:hover {
+                color: $color-primary;
+            }
+        }
     }
     &__faq {
         h5 {
@@ -135,8 +151,116 @@
     &__copyright {
         margin-top: 20px;
         font-size: 12px;
-        color: $light-gray-txt-color;
+        color: $light-gray-link-color;
+    }
+    &__support {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        // flex-wrap: wrap;
+        padding: 10px 60px;
+        border-top: 3px solid $pale-blue-color;
+        border-radius: 15px;
+        &-a {
+            margin-right: 20px;
+            font-size: 12px;
+            color: $light-gray-txt-color;
+            text-decoration: none;
+            white-space: nowrap;
+            &:hover {
+                color: $color-primary;
+            } 
+        }
+        &-contacts {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-left: 20px;
+            flex-wrap: wrap;
+        }
+        &-phone {
+            margin: 0 5px 0 0;
+            font-size: 14px;
+            color: $click-load-color;
+            font-weight: 700;
+            a[href="tel:8800-700-63-01"] {
+                font-size: 14px;
+                color: $click-load-color;
+                text-decoration: none;  
+            }
+        }
+        &-time {
+            font-size: 12px;
+            color: $light-gray-link-color;
+        }
     } 
 
+}
+
+//footer tab
+.footer__tab {
+    .footer {
+        &__buy-together, &__cheaper-than-retail, 
+        &__defend-buyer, &__points-near, &__real-comments {
+            font-size: 12px;
+        }
+        &__social {
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 20px 30px;
+            h5 {
+                margin: 0 15px 0 0;
+                white-space: nowrap;
+            }
+            .attach:after {
+                left: 30px;
+                top: 6px;
+            }
+            img {
+                width: 20px;
+            }
+            &-icons {
+                justify-content: space-between;
+                margin-top: 5px;
+                margin: 5px 75px 0 0;
+            }
+            a {
+                margin-right: 25px;
+            }
+    
+        }
+        &__links {
+            &-site {
+                padding: 0 30px;
+            }
+        }
+        &__copyright {
+            font-size: 11px;
+            margin: 0;
+        }
+        &__support {
+            padding: 10px 30px;
+            background: $pale-blue-color;
+            border: none;
+            &-contacts {
+                min-width: 50%;
+                line-height: 25px;
+
+            }
+            &-links {
+                display: flex;
+            }
+            &-time {
+                margin: 0;
+            }
+            &-a {
+                line-height: 25px;
+            }
+        }
+    }
 }
 
