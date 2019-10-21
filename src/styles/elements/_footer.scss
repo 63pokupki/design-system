@@ -1,8 +1,12 @@
 
 .footer {
     display: flex;
+    width: 100%;
+    height: auto;
     flex-direction: column;
     align-items: center;
+    background: #fff;
+    overflow: hidden;
 
     &__col {
         display: flex;
@@ -154,7 +158,7 @@
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        padding: 0 60px;
+        padding: 20px 60px;
         border-top: 3px solid $pale-blue-color;
         border-radius: 15px;
         &-a {
