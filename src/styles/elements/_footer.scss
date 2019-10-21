@@ -246,13 +246,16 @@
             padding: 10px 30px;
             background: $pale-blue-color;
             border: none;
+            border-radius: 0px;
             &-contacts {
-                min-width: 50%;
+                max-width: 50%;
                 line-height: 25px;
 
             }
             &-links {
                 display: flex;
+                max-width: 50%;
+                flex-wrap: wrap;
             }
             &-time {
                 margin: 0;
@@ -263,4 +266,91 @@
         }
     }
 }
+
+// footer mobile
+.footer__mobile {
+    .footer {
+
+        &__col {
+            width: 50%;
+        }
+
+        &__advantage {
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 0 10px;
+        }
+        &__buy-together, &__cheaper-than-retail, 
+        &__defend-buyer, &__points-near, &__real-comments {
+            font-size: 9px;
+            margin: 15px 0;
+            padding: 0 0 0 50px;
+            &:before { 
+                width: 35px;
+            }
+
+        }
+        &__points-near {
+            margin-top: 10px;
+        }
+        &__real-comments {
+            margin-top: 10px;
+        }
+
+        &__links {
+            padding: 20px;
+            &-a {
+                font-size: 10px;
+            }
+            &-site {
+                flex-direction: row;
+                flex-wrap: wrap;
+                padding: 0;
+            }
+        }
+        &__social {
+            img {
+                width: 25px;
+            }
+            .attach:after {
+                left: 35px;
+                top: 8px;
+            }    
+            &-icons {
+                display: flex;
+                flex-wrap: wrap;
+                width: 50%;
+            }
+
+        }
+        &__support {
+            flex-direction: column;
+            background: $pale-blue-color;
+            padding: 20px;
+            border-radius: 0;
+            border: none;
+            &-a {
+                font-size: 10px;
+            }
+            &-contacts {
+                margin: 0;
+            }
+            &-links {
+                margin-bottom: 10px;
+            }
+            &-phone {
+                font-size: 12px;
+            }
+            &-time {
+                margin: 3px 0 0 0;
+            }
+        }
+
+
+    }
+}
+
+
 
