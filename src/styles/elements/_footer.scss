@@ -2,6 +2,7 @@
 .footer {
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     &__col {
         display: flex;
@@ -93,14 +94,24 @@
     }
     &__links {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         width: 100%;
         &-site {
             display: flex;
             justify-content: space-between;
             width: 100%;
-        }
+            padding: 0 60px;
 
+        }
+        &-a {
+            margin-bottom: 10px;
+            font-size: 12px;
+            color: $dark-grey-color;
+            text-decoration: none;
+            &:hover {
+                color: $color-primary;
+            }
+        }
     }
     &__faq {
         h5 {
@@ -135,7 +146,38 @@
     &__copyright {
         margin-top: 20px;
         font-size: 12px;
-        color: $light-gray-txt-color;
+        color: $light-gray-link-color;
+    }
+    &__support {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 60px;
+        border-top: 3px solid $pale-blue-color;
+        border-radius: 15px;
+        &-a {
+            margin-right: 20px;
+            font-size: 12px;
+            color: $light-gray-txt-color;
+            text-decoration: none; 
+        }
+        &-phone {
+            margin: 0 5px 0 30px;
+            font-size: 14px;
+            color: $click-load-color;
+            font-weight: 700;
+            a[href="tel:8800-700-63-01"] {
+                font-size: 14px;
+                color: $click-load-color;
+                text-decoration: none;
+            }
+        }
+        &-time {
+            font-size: 12px;
+            color: $light-gray-link-color;
+        }
     } 
 
 }
