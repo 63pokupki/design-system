@@ -210,7 +210,12 @@
             flex-direction: row;
             justify-content: flex-start;
             align-items: center;
-            padding: 0 30px;
+            flex-wrap: wrap;
+            padding: 20px 30px;
+            h5 {
+                margin: 0 15px 0 0;
+                white-space: nowrap;
+            }
             .attach:after {
                 left: 30px;
                 top: 6px;
@@ -221,7 +226,7 @@
             &-icons {
                 justify-content: space-between;
                 margin-top: 5px;
-                margin: 5px 0 0 15px;
+                margin: 5px 75px 0 0;
             }
             a {
                 margin-right: 25px;
@@ -235,7 +240,26 @@
         }
         &__copyright {
             font-size: 11px;
-            margin: 0 0 0 75px;
+            margin: 0;
+        }
+        &__support {
+            padding: 10px 30px;
+            background: $pale-blue-color;
+            border: none;
+            &-contacts {
+                min-width: 50%;
+                line-height: 25px;
+
+            }
+            &-links {
+                display: flex;
+            }
+            &-time {
+                margin: 0;
+            }
+            &-a {
+                line-height: 25px;
+            }
         }
     }
 }
