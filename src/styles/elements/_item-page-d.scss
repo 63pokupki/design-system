@@ -1,0 +1,185 @@
+.item-page-d {
+    border-bottom: 1px solid rgba(49, 140, 202, 0.25);
+    padding-bottom: 50px;
+
+    &__stock-name {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    &__lens {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__sku {
+        font-size: 12px;
+        line-height: 22px;
+        color: #606266;
+        margin-bottom: 25px;
+    }
+
+    &__po-w {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    &__message {
+        &:active {
+            @include deep-click(0.9);
+        }
+    }
+
+    &__share {
+        margin-bottom: 24px;
+    }
+
+    &__share-heading {
+        font-weight: bold;
+        font-size: 12px;
+        color: #1e2023;
+        margin-bottom: 15px;
+    }
+
+    &__share-links {
+        display: flex;
+        align-items: center;
+
+        .social-link {
+            margin-right: 15px;
+        }
+    }
+
+    .stock-card-horizontal {
+        padding: unset;
+
+        &:hover {
+            box-shadow: unset;
+        }
+
+        &__wrapper {
+            max-width: 544px;
+            max-height: 649px;
+            height: unset;
+            margin-right: 50px;
+        }
+
+        &__price {
+            font-size: 24px;
+            line-height: unset;
+
+            span {
+                font-size: 24px;
+            }
+        }
+
+        &__params-section {
+            margin-bottom: 20px;
+        }
+
+        &__buttons {
+            margin-bottom: 35px;
+        }
+
+        &__fee {
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        &__image {
+            max-height: 649px;
+        }
+
+        &__heading {
+            font-size: 20px;
+            line-height: 28px;
+            margin-bottom: 10px;
+        }
+
+        &__body {
+            padding-top: 0;
+            max-width: 50%;
+        }
+
+        &__num,
+        &__buy {
+            margin-right: 35px;
+        }
+
+        .collapse-section__heading {
+            font-weight: 600;
+            font-size: 16px;
+            color: #1d1e1f;
+            
+        }
+
+        .stock-badge_already {
+            left: auto;
+            bottom: auto;
+            right: -10px;
+            top: -12px;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 17px;
+            color: #606266;
+            background: #e0eef7;
+            width: 145px;
+            padding: 10px;
+
+            &:before {
+                border-top: 7px solid #abc1cf;
+                transform: rotate(135deg);
+                top: auto;
+                right: 3px;
+                left: auto;
+                bottom: -7px;
+            }
+        }
+    }
+}
+
+.nav-bc-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &__notification {
+        margin-right: 30px;
+    }
+}
+
+.social-link {
+    display: inline-flex;
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+
+    &_vk {
+        background-image: url("~images/vk-icon-grey.svg");
+
+        &:hover {
+            background-image: url("~images/vk-icon-colored.svg");
+        }
+    }
+
+    &_instagram {
+        background-image: url("~images/instagram-icon-grey.svg");
+
+        &:hover {
+            background-image: url("~images/instagram-icon-colored.svg");
+        }
+    }
+
+    &_ok {
+        background-image: url("~images/ok-icon-grey.svg");
+
+        &:hover {
+            background-image: url("~images/ok-icon-colored.svg");
+        }
+    }
+}
