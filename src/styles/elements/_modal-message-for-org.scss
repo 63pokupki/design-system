@@ -153,10 +153,29 @@
             position: absolute;
             top:10px;
             right: 10px;
-            outline:0;
-            opacity:0;
-            pointer-events:none;
-            user-select:none
+            outline: 0;
+            opacity: 0;
+            pointer-events: none;
+            user-select: none;
+            &-wrap {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                display: flex;
+                width: 20px;
+                height: 20px;
+                &:before {
+                    content: "";
+                    display: block;
+                    width: 20px;
+                    height: 20px;
+                    background: url("~images/buttons/clip-before.svg");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                    cursor: pointer;
+                }
+            }
         }
 
         &__toggle-list {
