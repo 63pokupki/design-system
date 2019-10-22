@@ -6,23 +6,22 @@
 
     &:hover,
     &_hover {
-        color: $color-primary;
+        color: $color-primary-light;
         text-decoration: underline;
     }
 
     &_colored {
-        color: $color-primary;
+        color: $color-primary-light;
     }
 
     // визуальное выделение строчного элемента
     &_is-highlighted {
-        background: $color-primary;
+        background: $color-primary-light;
         color: white;
         border-radius: 24px;
         padding: 4px 14px;
         text-decoration: none;
         &:hover {
-            background: $color-primary;
             color: white;
             text-decoration: none;
         }

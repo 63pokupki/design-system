@@ -27,13 +27,27 @@
     width: 100%;
 }
 
+.w-75 {
+    width: 75%;
+}
+
 .w-50 {
     width: 50%;
+}
+
+.w-25 {
+    width: 25%;
 }
 
 // вешается на body чтобы предотвращать пролистывание
 .disable-scroll {
     overflow: hidden;
+}
+
+.disable-transition {
+    * {
+        transition: unset !important;
+    }
 }
 
 // скрывает элементы предназначенные только для сенсорных устройств

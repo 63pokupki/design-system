@@ -86,13 +86,15 @@
 
     .stock-dropdown-filter__accept {
         background: #318cca;
-        right: -35px;
+        right: -5px;
         text-align: center;
         min-width: 105px;
         border-radius: 15px;
         color: white;
         font-weight: 600;
-        box-shadow: 0 0 3px 2px #fff;
+        padding: 7px 10px;
+        border: 2px solid white;
+
         &:before {
             background: #318cca;
         }

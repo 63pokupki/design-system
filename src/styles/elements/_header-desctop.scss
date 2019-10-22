@@ -65,16 +65,21 @@
         display: flex;
     }
 
-    .caption-icon .icon-heart {
+    .caption-icon .icon-heart, .caption-icon .icon-heart-filled{
         &:before {
             color: #ff4e4e;
         }
     }
 
+    .caption-icon .icon-heart-filled {
+        display: none;
+     }
+
     .caption-icon:hover .icon-heart {
-        &:before {
-            color: #ff4e4e;
-            content: "\e916";
-        }
+       display: none;
+    }
+
+    .caption-icon:hover .icon-heart-filled {
+       display: block;
     }
 }
