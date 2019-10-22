@@ -1,0 +1,153 @@
+
+.modal-message-for-org {
+    .modal {
+
+        &__btn-close {
+            margin: 6px 5px 0 0;
+            &:after, &:before {
+                display: none;
+            }
+        }
+
+        &__header {
+            font-size: 20px;
+            font-weight: 600;
+
+        }
+
+        &__position-name {
+            text-align: center;
+            font-weight: 600;
+            margin: 0 0 20px 0;
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            min-width: 100%;
+            margin: 0 7px 5px 0;
+            overflow: visible;
+
+            .btn {
+                &-container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 10px;
+
+                    .ds-btn {
+                        width: 160px;
+                        height: 32px;
+                        font-size: 14px;
+                        padding: 0 18px;
+                    }
+                }
+
+                &-copy {
+                    margin-right: 25px;
+                }
+            }
+        }
+
+        &__select {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            min-width: 485px;
+            min-height: 50px;
+            margin-bottom: 20px;
+            padding: 0 15px;
+            border: 2px solid $light-gray-link-color;
+            border-radius: 3px;
+            cursor: pointer;
+
+            &.is-toggle {
+                border: 2px solid $click-load-color;
+
+                &:after {
+                    color: $click-load-color;
+                }
+
+                .modal__toggle-list {
+                    opacity: 1;
+                    max-height: 180px;
+                }
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                left: 13px;
+                top: -11px;
+                background: #fff;
+                width: 70px;
+                height: 15px;
+                text-align: center;
+                font-size: 14px;
+                font-weight: 600;
+                color: $light-gray-link-color;
+            }
+    
+            &-purchase:after {
+                content: "Закупка";
+            }
+    
+            &-catalog:after {
+                content: "Каталог";
+            }
+    
+            .ds-triangle {
+                &:after {
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+        }
+
+    
+
+        &__selected-position {
+            font-size: 16px;
+            color: $light-gray-txt-color;
+
+            &:after {
+                content: "";
+
+            }
+        }
+
+        &__toggle-list {
+            min-width: 492px;
+            height: auto;
+            max-height: 0;
+
+            position: absolute;
+            top: 35px;
+            left: -2px;
+
+            padding: 0;
+
+            background: #fff;
+            border: 2px solid $click-load-color;
+            border-radius: 3px;
+            color: $light-gray-txt-color;
+
+            list-style: none;
+            opacity: 0;
+            z-index: 10;
+            overflow-y: auto;
+
+            li {
+                padding: 5px 0 5px 15px;
+
+                &:hover {
+                    background: $modal-copy-selected-color;
+                }
+            }
+        }
+    }
+}
+
+
+
