@@ -1,0 +1,37 @@
+@import "~fonts/icomoon/style";
+// в файле style.css оставляем только символы (кодировки) иконок
+
+// здесь ничего не меняем
+@font-face {
+    font-family: "icomoon";
+    src: url("~fonts/icomoon/fonts/icomoon.eot");
+    src: url("~fonts/icomoon/fonts/icomoon.eot?s7qw8t#iefix") format("embedded-opentype"),
+        url("~fonts/icomoon/fonts/icomoon.ttf") format("truetype"),
+        url("~fonts/icomoon/fonts/icomoon.woff") format("woff"),
+        url("~fonts/icomoon/fonts/icomoon.svg?s7qw8t#icomoon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+.icon,
+.icon:before {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: "icomoon" !important;
+    cursor: pointer;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-info {
+    color: #318cca;
+    font-size: 14px;
+}
