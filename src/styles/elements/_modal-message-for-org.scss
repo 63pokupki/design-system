@@ -50,7 +50,7 @@
             }
         }
 
-        &__select {
+        &__select-org {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -63,7 +63,7 @@
             border-radius: 3px;
             cursor: pointer;
 
-            &.is-toggle {
+            &.is-active {
                 border: 2px solid $click-load-color;
 
                 &:after {
@@ -89,6 +89,9 @@
                 font-weight: 600;
                 color: $light-gray-link-color;
             }
+            &-purchase {
+                padding: 0;    
+            }
     
             &-purchase:after {
                 content: "Тема";
@@ -96,12 +99,28 @@
     
             &-catalog:after {
                 content: "Сообщение";
+            }
+            &-catalog {
+                min-height: 100px;
+                padding: 0;
+                .ds-clip-btn {
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    z-index: 999;
+                    .icon-clip {
+                        font-size: 18px;
+                        color: $sky-blue-color;                        
+                    }
+                    &:active {
+                        transform: scale(.95);
+                    }
+                }
             }    
-        }
-
-    
+        }    
 
         &__selected-position {
+            // border: none;
             font-size: 16px;
             color: $light-gray-txt-color;
 
@@ -109,6 +128,26 @@
                 content: "";
 
             }
+        }
+        &__textarea {
+            width: 100%;
+            height: 100px;
+            min-height: 100px;
+            max-height: 100px;
+            padding: 15px 30px 15px 15px;
+            border: none;
+            resize: none;
+            appearance: none;
+            outline: none;
+        }
+
+        &__theme-txt {
+            width: 100%;
+            padding: 15px 30px 15px 15px;
+            border: none;
+            appearance: none;
+            min-height: 50px;
+            outline: none;           
         }
 
         &__toggle-list {
