@@ -1,4 +1,23 @@
 // Вспомогательные функции проекта (демонстрация интерактивности)
+
+// открытие полной инфы о закупке
+window.addEventListener("DOMContentLoaded", () => {
+    const disable_transition = document.querySelector(".disable-transition");
+    if (disable_transition) {
+        disable_transition.classList.toggle('disable-transition');
+    }
+});
+
+// открытие полной инфы о закупке
+const stock_full = document.querySelectorAll(".stock-full");
+if (stock_full) {
+    stock_full.forEach(stock => {
+        const stock_full_wrapper = stock.querySelector(".stock-full__wrapper");
+        const link_open = stock.querySelector(".stock-full__expand");
+        link_open.addEventListener("click", () => stock_full_wrapper.classList.toggle("is-expanded"));
+    });
+}
+
 const stock_dropdown_filter = document.querySelectorAll(".stock-dropdown-filter");
 if (stock_dropdown_filter) {
     stock_dropdown_filter.forEach(filter => {
@@ -18,7 +37,9 @@ const item_params_list = document.querySelectorAll(".item-params-list");
 if (item_params_list__items) {
     item_params_list.forEach(list => {
         const link = list.nextElementSibling;
-        link.addEventListener("click", () => list.classList.toggle("is-expanded"));
+        if (link) {
+            link.addEventListener("click", () => list.classList.toggle("is-expanded"));
+        }
     });
 }
 

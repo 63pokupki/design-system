@@ -1,6 +1,9 @@
 .pagination {
     display: flex;
     flex-direction: row;
+    margin: unset;
+    padding: unset;
+    
     &__item {
         display: flex;
         justify-content: center;
@@ -18,7 +21,7 @@
         }
 
         &:hover, &:active {
-            background: $color-primary;
+            background: $color-primary-light;
             a {
                 color: #fff;
             }
@@ -26,6 +29,13 @@
                 &-left, &-right {
                     color: #fff;
                 }
+            }
+        }
+
+        &.is-active {
+            background: $color-primary;
+            a {
+                color: #fff;
             }
         }
     }
