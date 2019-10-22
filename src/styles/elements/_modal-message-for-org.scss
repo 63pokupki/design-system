@@ -81,7 +81,8 @@
                 left: 13px;
                 top: -11px;
                 background: #fff;
-                width: 70px;
+                width: auto;
+                padding: 0 2%;
                 height: 15px;
                 text-align: center;
                 font-size: 14px;
@@ -90,19 +91,12 @@
             }
     
             &-purchase:after {
-                content: "Закупка";
+                content: "Тема";
             }
     
             &-catalog:after {
-                content: "Каталог";
-            }
-    
-            .ds-triangle {
-                &:after {
-                    width: 10px;
-                    height: 10px;
-                }
-            }
+                content: "Сообщение";
+            }    
         }
 
     
