@@ -4,7 +4,7 @@
 window.addEventListener("DOMContentLoaded", () => {
     const disable_transition = document.querySelector(".disable-transition");
     if (disable_transition) {
-        disable_transition.classList.toggle('disable-transition');
+        disable_transition.classList.toggle("disable-transition");
     }
 });
 
