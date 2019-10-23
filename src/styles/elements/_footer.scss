@@ -357,13 +357,14 @@
                 width: 25px;
             }
             .attach:after {
+                font-size: 8px;
                 left: 35px;
                 top: 8px;
             }    
             &-icons {
                 display: flex;
                 flex-wrap: wrap;
-                width: 50%;
+                width: 75%;
             }
 
         }
@@ -375,6 +376,7 @@
             border: none;
             &-a {
                 font-size: 10px;
+                margin-right: 15px;
             }
             &-contacts {
                 margin: 0;
@@ -388,11 +390,13 @@
                     font-size: 12px;
                 }
             }
-            &-phone {               
+            &-phone {
+                margin: 0 5px 3px 0;               
                 font-size: 12px;                
             }
             &-time {
-                margin: 3px 0 0 0;
+                margin: 0 0 3px 0;               
+
             }
         }
     }
