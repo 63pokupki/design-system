@@ -1,4 +1,34 @@
 
+
+@media (max-width: 992px) {
+    .footer__container {
+        .footer__desk {
+            display: none;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .footer__container {
+        .footer__tab {
+            display: none;
+        }
+    }
+}
+@media (min-width: 993px) {
+    .footer__container {
+        .footer__tab {
+            display: none;
+        }
+    }
+}
+@media (min-width: 769px) {
+    .footer__container {
+        .footer__mobile {
+            display: none;
+        }
+    }
+}
+
 .footer {
     display: flex;
     width: 100%;
@@ -7,6 +37,12 @@
     align-items: center;
     background: #fff;
     overflow: hidden;
+
+    &__container {
+        display: block;
+        width: 100%;
+    }
+
 
     &__col {
         display: flex;
@@ -192,8 +228,7 @@
             font-size: 14px;
             color: $click-load-color;
             font-weight: 700;
-            a[href="tel:8800-700-63-01"] {
-                font-size: 14px;
+            a {
                 color: $click-load-color;
                 text-decoration: none;  
             }
@@ -322,13 +357,14 @@
                 width: 25px;
             }
             .attach:after {
+                font-size: 8px;
                 left: 35px;
                 top: 8px;
             }    
             &-icons {
                 display: flex;
                 flex-wrap: wrap;
-                width: 50%;
+                width: 75%;
             }
 
         }
@@ -340,18 +376,27 @@
             border: none;
             &-a {
                 font-size: 10px;
+                margin-right: 15px;
             }
             &-contacts {
                 margin: 0;
             }
             &-links {
                 margin-bottom: 10px;
+                display: flex;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                a[href="tel:"] {
+                    font-size: 12px;
+                }
             }
             &-phone {
-                font-size: 12px;
+                margin: 0 5px 3px 0;               
+                font-size: 12px;                
             }
             &-time {
-                margin: 3px 0 0 0;
+                margin: 0 0 3px 0;               
+
             }
         }
     }
