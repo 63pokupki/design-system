@@ -45,15 +45,12 @@
 	.slider-wrap {
 		display: flex;
 		flex-direction: row;
-		// max-width: 400px;
 		transform: translateX(0);
-		transition: transform .3s ease;
-		margin-bottom: 10px;
+		
 		.slider-items {
 			display: flex;
 			flex-direction: row;
 			flex-wrap: nowrap;
-			// max-height: 15px;
 			margin-right: 40px;
 			font-size: 12px;
 			white-space: nowrap;

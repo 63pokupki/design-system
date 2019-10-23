@@ -1,0 +1,11 @@
+// строка с хлебными крошками и ссылками на уведомления и сообщения
+.nav-bc-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &__notification {
+        margin-right: 30px;
+    }
+}

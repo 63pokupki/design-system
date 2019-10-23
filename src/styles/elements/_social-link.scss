@@ -1,0 +1,31 @@
+// значки-ссылки на вк, инстаграм, одноклассники
+.social-link {
+    display: inline-flex;
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+
+    &_vk {
+        background-image: url("~images/vk-icon-grey.svg");
+
+        &:hover {
+            background-image: url("~images/vk-icon-colored.svg");
+        }
+    }
+
+    &_instagram {
+        background-image: url("~images/instagram-icon-grey.svg");
+
+        &:hover {
+            background-image: url("~images/instagram-icon-colored.svg");
+        }
+    }
+
+    &_ok {
+        background-image: url("~images/ok-icon-grey.svg");
+
+        &:hover {
+            background-image: url("~images/ok-icon-colored.svg");
+        }
+    }
+}
