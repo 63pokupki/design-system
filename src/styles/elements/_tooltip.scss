@@ -130,4 +130,15 @@ $tooltip-triangle-size: 6px;
             background-color: $tooltip-background-color-accent;
         }
     }
+
+    // вид подсказки с ошибкой
+    &.tooltip_error {
+        background-color: #FFD7D7;
+        color: #606266;
+        font-weight: 400;
+
+        &:before {
+            background-color: #FFD7D7;
+        }
+    }
 }

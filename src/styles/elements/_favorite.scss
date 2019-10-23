@@ -6,7 +6,7 @@
     &__icon {
         font-size: 28px;
         color: #318cca;
-        margin-right: 10px;
+        user-select: none;
 
         &:active {
             @include deep-click(0.9);
@@ -15,6 +15,7 @@
 
     &__text {
         display: flex;
+        margin-left: 10px;
         flex-direction: column;
     }
 

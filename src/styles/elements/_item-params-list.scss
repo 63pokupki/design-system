@@ -8,6 +8,12 @@
     max-height: 78px;
     overflow: hidden;
 
+    &.is-error {
+        border: 1px solid #ffafaf;
+        box-sizing: border-box;
+        border-radius: 4px;
+    }
+
     &__item {
         cursor: pointer;
         user-select: none;

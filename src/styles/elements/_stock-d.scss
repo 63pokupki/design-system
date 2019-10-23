@@ -1,16 +1,5 @@
 .stock-d {
 
-    &__top-w {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
-    }
-
-    &__notification {
-        margin-right: 30px;
-    }
-
     &__banner {
         display: flex;
         align-items: center;
@@ -74,11 +63,5 @@
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-
-    &__hits {
-        .slider-items {
-            // margin-right: 0;
-        }
     }
 }
