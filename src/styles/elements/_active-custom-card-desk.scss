@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     min-width: 875px;
-    padding: 35px;
+    padding: 20px;
     background: $card-color-bg;
     transition: box-shadow .3s;
     &:hover {
@@ -105,12 +105,15 @@
             position: relative;
             display: flex;
             width: 100%;
+            
+        }
 
-            .btn-toggle-wrap {
-                position: relative;
-                display: flex;
-                min-width: 75px;
-            }
+        .btn-toggle-wrap {
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            min-width: 75px;
+            width: 80px;
 
         }
 
@@ -277,6 +280,7 @@
             .card-active-custom__organizer-block {
                 flex-direction: row-reverse;
                 max-height: 18px;
+                align-items: center;
 
                 p {
                     margin-right: 5px;
@@ -398,7 +402,7 @@
             flex-direction: column;
             width: 100%;
             max-width: 100%;
-            padding-right: 30px;
+            // padding-right: 30px;
             overflow: hidden;
 
             .slider {
@@ -440,7 +444,7 @@
         .card-active-custom__comments {
             display: flex;
             flex-direction: column;
-            margin-right: 35px;
+            // margin-right: 35px;
 
             p {
                 font-size: 11px;
@@ -483,7 +487,7 @@
             }
 
             p {
-                padding-right: 40px;
+                // padding-right: 40px;
                 overflow: hidden; //фиксирует высоту и ширину
                 cursor: pointer;
                 text-overflow: ellipsis;
