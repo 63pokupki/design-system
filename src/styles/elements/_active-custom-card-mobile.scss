@@ -1,12 +1,8 @@
 .card-active-custom__wrap.is-toggle {
-    .card-active-custom__toggle-block {
-        margin-top: 0;
-    }
-}
-.card-active-custom__wrap.is-toggle {
     &.mobile {
         .card-active-custom__toggle-block {
             max-height: 1000px;
+            margin-top: 0;
             visibility: visible;
             opacity: 1;
             transition: all .8s;

@@ -49,9 +49,7 @@
         }
     }
 }
-// .card-active-custom__wrap.is-toggle:first-child {
 
-// }
 .card-active-custom__wrap.is-toggle {
     margin: 10px 0;
     &:hover {
@@ -78,15 +76,13 @@
                 }
             }
         }
+        .card-active-custom__btn-toggle {
+            transform: rotate(180deg);
+            transition: all .3s;
+        }
+
 
         .card-active-custom__header {
-            .btn-toggle {
-                .arrow {
-                    transform: rotate(270deg);
-                    transition: transform .3s;
-                }
-
-            }
 
             .organizer-block__rating {
                 .rating-star-org {
@@ -116,34 +112,6 @@
                 min-width: 75px;
             }
 
-            .btn-toggle {
-                position: absolute;
-                right: 0;
-                top: -15px;
-                border: none;
-                background: transparent;
-                cursor: pointer;
-                appearance: none;
-
-                .arrow {
-                    transform: rotate(90deg);
-                    transition: .3s;
-                    background: transparent;
-
-                    &:after,
-                    &:before {
-                        background: $light-gray-color;
-                    }
-
-                    &:hover {
-
-                        &:after,
-                        &:before {
-                            background: $color-primary;
-                        }
-                    }
-                }
-            }
         }
 
         .card-active-custom__header-left-block {
@@ -236,16 +204,16 @@
             width: 50%;
         }
 
+        .card-active-custom__btn-toggle {
+            height: 20px;
+            transition: all .8s;
+        }
+
         .card-active-custom__status-block {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-between;
-
-            .like {
-                display: flex;
-                align-items: flex-start;
-            }
         }
 
         .card-active-custom__statusbar {
