@@ -1,12 +1,8 @@
 .card-active-custom__wrap.is-toggle {
-    .card-active-custom__toggle-block {
-        margin-top: 0;
-    }
-}
-.card-active-custom__wrap.is-toggle {
     &.mobile {
         .card-active-custom__toggle-block {
             max-height: 1000px;
+            margin-top: 0;
             visibility: visible;
             opacity: 1;
             transition: all .8s;
@@ -14,7 +10,8 @@
         }
         .card-active-custom__header {
             .arrow-wrap {
-                transform: rotate(270deg);
+                transform: rotate(180deg);
+                transition: all .3s;
             }
         }
     }
@@ -381,41 +378,8 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    transform: rotate(90deg);
-    transition: .5s
+    transition: all .8s
 }
 
-.arrow-02-mobile {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-
-    &:before,
-    &:after {
-        position: absolute;
-        content: '';
-        height: 1px;
-        width: 8px;
-        border-radius: 5.5px;
-        background: #858585;
-        left: 12px;
-
-        &:hover {
-            background: #751d1d;
-        }
-    }
-
-    &:before {
-        transform: rotate(45deg) translateY(-3.7px);
-    }
-
-    &:after {
-        transform: rotate(-45deg) translateY(3.5px);
-    }
-}
 
 

@@ -27,13 +27,9 @@
                 opacity: 1;
                 transition: all .3s;
             }
-            .card-active-custom__header {
-                .btn-toggle {
-                    .arrow {
-                        transform: rotate(90deg);
-                        transition: transform .3s;
-                    }
-                }
+            .card-active-custom__btn-toggle {
+                transform: rotate(180deg);
+                transition: all .3s;
             }
             
         }
@@ -116,33 +112,6 @@
                         @extend .icon-heart-filled
                     }                    
                 }
-                .btn-toggle {
-                    position: absolute;
-                    right: -30px;
-                    padding-right: 15px;
-                    border: none;
-                    background: transparent;
-                    cursor: pointer;
-                    appearance: none;
-                    .arrow {
-                        transform: rotate(270deg);
-                        transition: transform .3s;
-                        background: transparent;
-    
-                        &:after,
-                        &:before {
-                            background: $light-gray-color;
-                        }
-    
-                        &:hover {
-    
-                            &:after,
-                            &:before {
-                                background: $color-primary;
-                            }
-                        }
-                    }
-                }    
             }
 
             .card-active-custom__status-block {
@@ -165,7 +134,13 @@
             }
 
         }
-    
+        
+        .card-active-custom__btn-toggle {
+            position: absolute;
+            right: 0;
+            transition: all .8s;
+        }
+
         .card-active-custom__heading {
             display: flex;
             align-items: flex-start;

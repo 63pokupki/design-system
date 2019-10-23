@@ -26,7 +26,13 @@
 		}
 	}
 	&_circle {
+		font-size: 10px;
 		border-radius: 50%;
+	}
+	&_transp {
+		font-size: 10px;
+		background: transparent;
+		color: $light-gray-color;
 	}
 
 }
