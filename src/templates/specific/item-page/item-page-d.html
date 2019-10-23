@@ -315,11 +315,12 @@
                             </ul>
                             <button class="link link_hover item-page-d__expand">Скрыть/раскрыть</button>
                         </div>
-                        <div class="item-page-d__params">
+                        <div class="item-page-d__params has-tooltip-force">
                             <div class="item-page-d__params-label">
-                                <span>Размер:</span> <button class="link link_hover item-page-d__size-grid-link">размерная сетка</button>
+                                <span>Размер:</span>
+                                <button class="link link_hover item-page-d__size-grid-link">размерная сетка</button>
                             </div>
-                            <ul class="item-params-list item-page-d__params-list">
+                            <ul class="item-params-list is-error item-page-d__params-list">
                                 <li class="item-params-list__item">36</li>
                                 <li class="item-params-list__item">37</li>
                                 <li class="item-params-list__item">38</li>
@@ -330,7 +331,7 @@
                                 <li class="item-params-list__item">XL</li>
                                 <li class="item-params-list__item">L</li>
                                 <li class="item-params-list__item">S</li>
-                                <li class="item-params-list__item is-selected">40</li>
+                                <li class="item-params-list__item">40</li>
                                 <li class="item-params-list__item">Большой</li>
                                 <li class="item-params-list__item">36</li>
                                 <li class="item-params-list__item">37</li>
@@ -342,6 +343,9 @@
                                 <li class="item-params-list__item">XL</li>
                                 <li class="item-params-list__item">L</li>
                             </ul>
+                            <span class="tooltip tooltip_error"
+                                >Чтобы добавить товар в корзину, выберите необходимый параметр</span
+                            >
                             <button class="link link_hover item-page-d__expand">Скрыть/раскрыть</button>
                         </div>
                     </div>
@@ -740,19 +744,19 @@
 
         <!-- демонстрация, не использовать -->
         <script>
-        const sizes_modal_link = document.querySelector('.item-page-d__size-grid-link');
-        const sizes_modal = document.querySelector('.modal');
-        const modal__btn_close = document.querySelector('.modal__btn-close');
+            const sizes_modal_link = document.querySelector(".item-page-d__size-grid-link");
+            const sizes_modal = document.querySelector(".modal");
+            const modal__btn_close = document.querySelector(".modal__btn-close");
 
-        if (sizes_modal_link && sizes_modal) {
-            sizes_modal_link.addEventListener('click', () => {
-                sizes_modal.classList.toggle('is-visible');
-            })
+            if (sizes_modal_link && sizes_modal) {
+                sizes_modal_link.addEventListener("click", () => {
+                    sizes_modal.classList.toggle("is-visible");
+                });
 
-            modal__btn_close.addEventListener('click', () => {
-                sizes_modal.classList.toggle('is-visible');
-            })
-        }
+                modal__btn_close.addEventListener("click", () => {
+                    sizes_modal.classList.toggle("is-visible");
+                });
+            }
         </script>
     </body>
 </html>

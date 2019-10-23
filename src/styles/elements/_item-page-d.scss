@@ -127,6 +127,12 @@
         max-width: 45%;
         margin-right: 20px;
         margin-bottom: 20px;
+
+        .tooltip {
+            bottom: 12px;
+            width: 100%;
+            left: 49%;
+        }
     }
 
     .item-params-list {
