@@ -65,37 +65,37 @@ if (select) {
 }
 
 //Выбор позиции
-(() => {
-    let selectCont = document.querySelectorAll(".modal__select");
-    if (selectCont) {
-        selectCont.forEach(sc => {
-            let sel_position = sc.querySelector(".modal__selected-position"),
-                li = sc.querySelectorAll("li.item");
 
-            li.forEach(i => {
-                i.addEventListener("click", () => {
-                    sel_position.innerHTML = i.innerHTML;
-                });
+let selectCont = document.querySelectorAll(".modal__select");
+if (selectCont) {
+    selectCont.forEach(sc => {
+        let sel_position = sc.querySelector(".modal__selected-position"),
+            li = sc.querySelectorAll("li.item");
+
+        li.forEach(i => {
+            i.addEventListener("click", () => {
+                sel_position.innerHTML = i.innerHTML;
             });
         });
-    }
-})();
+    });
+}
+
 
 // <!-- Карточка товара с коротким изображением -->
-(() => {
-    let btn_toggle = document.querySelector(".modal__btn-about-goods"),
-        toggle_txt_container = document.querySelector(".modal__goods-info");
+
+let btn_toggle = document.querySelector(".modal__btn-about-goods"),
+    toggle_txt_container = document.querySelector(".modal__goods-info");
+
+if (btn_toggle) {
+    btn_toggle.addEventListener("click", () => {
+        toggle_txt_container.classList.toggle("is-toggle");
+    });
+}
     
-    if (btn_toggle) {
-        btn_toggle.addEventListener("click", () => {
-            toggle_txt_container.classList.toggle("is-toggle");
-        });
-    }
-    
-})()
+
 
 // <!-- Кнопки управления количеством товара -->
-(() => {
+
     let minus = document.querySelector(".btn-sum__minus"),
         plus  = document.querySelector(".btn-sum__plus"),
         input = document.querySelector(".btn-sum__sum-num");
@@ -111,20 +111,18 @@ if (select) {
         });
     }
 
-})()
 
 // <!-- Сердечко -->
-(() => {
-    let heart = document.querySelector(".icon-heart-bold");
-    
-    if (heart) {
-        let click_heart = () => {
-            heart.classList.toggle("icon-heart-filled");
-        };
-    
-        heart.addEventListener("click", click_heart);
-    }
-})()
+
+let heart = document.querySelector(".icon-heart-bold");
+
+if (heart) {
+    let click_heart = () => {
+        heart.classList.toggle("icon-heart-filled");
+    };
+
+    heart.addEventListener("click", click_heart);
+}
 
 //Карточки активных закупок
 (() => {
@@ -143,3 +141,28 @@ if (select) {
         console.log("ЧТо то пошло не так");
     }
 })()
+
+//Модалки
+let modal_bg  = document.querySelectorAll(".modal__bg"),
+    btn_close = document.querySelectorAll(".modal__btn-close"),
+    modal     = document.querySelectorAll(".modal");
+
+if (modal_bg && btn_close && modal) {
+        
+    // clickElem - элемент по которому кликают
+    // eventElem - элемент на котором происходит событие
+    function modal_close(clickElem, eventElem) {
+        for (let i = 0; i < clickElem.length; i++) {
+            for (let p = 0; p < eventElem.length; p++) {
+                clickElem[p].addEventListener("click", function() {
+                    console.log("Click");
+                    eventElem[p].classList.remove("is-visible");
+                });
+    
+            } 
+        }
+        
+    }
+    modal_close(modal_bg, modal);
+    modal_close(btn_close, modal);
+}
