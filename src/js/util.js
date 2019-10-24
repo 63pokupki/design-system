@@ -82,41 +82,64 @@ if (select) {
 })();
 
 // <!-- Карточка товара с коротким изображением -->
-
-let btn_toggle = document.querySelector(".modal__btn-about-goods"),
-    toggle_txt_container = document.querySelector(".modal__goods-info");
-
-if (btn_toggle) {
-    btn_toggle.addEventListener("click", () => {
-        toggle_txt_container.classList.toggle("is-toggle");
-    });
-}
+(() => {
+    let btn_toggle = document.querySelector(".modal__btn-about-goods"),
+        toggle_txt_container = document.querySelector(".modal__goods-info");
+    
+    if (btn_toggle) {
+        btn_toggle.addEventListener("click", () => {
+            toggle_txt_container.classList.toggle("is-toggle");
+        });
+    }
+    
+})()
 
 // <!-- Кнопки управления количеством товара -->
+(() => {
+    let minus = document.querySelector(".btn-sum__minus"),
+        plus  = document.querySelector(".btn-sum__plus"),
+        input = document.querySelector(".btn-sum__sum-num");
+    
+    if (minus) {
+        minus.addEventListener("click", () => {
+            input.value--;
+        });
+    }
+    if (plus) {
+        plus.addEventListener("click", () => {
+            input.value++;
+        });
+    }
 
-let minus = document.querySelector(".btn-sum__minus"),
-    plus = document.querySelector(".btn-sum__plus"),
-    input = document.querySelector(".btn-sum__sum-num");
-
-if (minus) {
-    minus.addEventListener("click", () => {
-        input.value--;
-    });
-}
-if (plus) {
-    plus.addEventListener("click", () => {
-        input.value++;
-    });
-}
+})()
 
 // <!-- Сердечко -->
+(() => {
+    let heart = document.querySelector(".icon-heart-bold");
+    
+    if (heart) {
+        let click_heart = () => {
+            heart.classList.toggle("icon-heart-filled");
+        };
+    
+        heart.addEventListener("click", click_heart);
+    }
+})()
 
-let heart = document.querySelector(".icon-heart-bold");
-
-if (heart) {
-    let click_heart = () => {
-        heart.classList.toggle("icon-heart-filled");
-    };
-
-    heart.addEventListener("click", click_heart);
-}
+//Карточки активных закупок
+(() => {
+    let btn    = document.querySelectorAll(".btn-toggle-wrap"),
+        togl   = document.querySelectorAll(".card-active-custom__wrap");
+    
+    if (btn && togl) {
+        for (let i = 0; i < btn.length; i++) {
+            for (let t = 0; t < togl.length; t++) {
+                btn[t].addEventListener("click", () => {
+                    togl[t].classList.toggle("is-toggle");
+                });
+            }
+        }        
+    } else {
+        console.log("ЧТо то пошло не так");
+    }
+})()

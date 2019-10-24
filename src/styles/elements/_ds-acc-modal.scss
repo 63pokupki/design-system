@@ -1,27 +1,47 @@
 $main-padding-modal: 20px;
 
-.modal {    
+.modal {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    min-height: 100%;
-    background-color: rgba(0, 0, 0, 0);
-    z-index: 1000;
     transition: all .5s;
     opacity: 0;
     visibility: hidden;
+    z-index: 999;
+
     &.is-visible {
         opacity: 1;
         visibility: visible;
         transition: all .5s;
-        background-color: rgba(0, 0, 0, 0.6);
+        .modal__bg {
+            opacity: 1;
+            visibility: visible;
+            transition: all .5s;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
     }
+
+    &__bg {       
+
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        min-height: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        z-index: 1000;
+        transition: all .5s;
+        opacity: 0;
+        visibility: hidden;
+        &.is-visible {
+            opacity: 1;
+            visibility: visible;
+            transition: all .5s;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+    }    
     // Если есть выбранные позиции, кнопка btn-apply становится активной
     &.is-selected.filter-modal {
         .btn-apply {
@@ -80,6 +100,7 @@ $main-padding-modal: 20px;
         max-height: 90vh;
         background: #fff;
         padding: $main-padding-modal;
+        z-index: 1001;
         .modal__btn-close {
             position: absolute;
             display: flex;
@@ -159,17 +180,6 @@ $main-padding-modal: 20px;
         display: flex;
         overflow: auto;
     }
-    &__bg {
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        min-height: 100%;
-        background-color: rgba(0, 0, 0, 0);
-    
-    }   
 
 }
 
