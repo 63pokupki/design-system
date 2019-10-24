@@ -579,3 +579,28 @@
     }
 }
 
+
+
+
+// TEst
+
+.test-card {
+    display: flex;
+    background: #fff;
+    &__wrap {
+        display: flex;
+        width: 100%;
+    }
+    &__row {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        width: 100%;
+        background: grey;
+    }
+    &__left {
+        display: flex;
+        width: 50%;        
+    }
+}
+
