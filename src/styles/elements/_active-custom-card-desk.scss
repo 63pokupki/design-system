@@ -617,6 +617,7 @@
     }
 
     &__left {
+        min-width: 440px;
         margin-right: 30px;
     }
 
@@ -694,6 +695,7 @@
     &__toggle-block-right {
         flex-direction: column;
         justify-content: space-between;
+        overflow: hidden;
     }
 
     &__img {
@@ -705,7 +707,6 @@
     &__toggle-status {
         display: flex;
         justify-content: space-between;
-        margin: 5px;
 
         h5 {
             margin: 0 0 3px 0;
@@ -716,6 +717,9 @@
             margin: 0;
             font-size: 12px;
             color: $dark-grey-color;
+        }
+        > div{
+            margin: 5px;
         }
     }
 
@@ -738,10 +742,15 @@
 
     &__description {
         display: inline-flex;
+        margin: 5px;
+        max-height: 70px;
         text-align: left;
-        margin: 5px 5px 30px 5px;
         font-size: 12px;
         color: $dark-grey-color;
+        overflow: auto;
+    }
+    &__slider {
+        margin: 15px 5px;
     }
 
     &__comments {
@@ -749,6 +758,70 @@
             font-size: 12px;
             color: $color-primary;
         }
+    }
+
+    //Подкатегории
+    &__img-subcategory {      
+        position: relative;
+        max-width: 152px;
+        max-height: 152px;
+        margin-right: 20px;
+
+        .img-container_resp {
+            padding: 5px;
+            border: 1px solid #e3e3e3;
+            border-radius: 4px;
+        }
+
+        .hover-translucend {
+            display: flex;
+            visibility: hidden;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0);
+            transition: .4s;
+            cursor: pointer;
+
+            p:nth-child(1) {
+                max-width: 140px;
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 14px;
+                margin-bottom: 50px;
+                text-align: center;
+                color: $dark-grey-color;
+            }
+
+            p:nth-child(2) {
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 14px;
+            }
+
+            p {
+                visibility: hidden;
+            }
+
+        }
+
+        &:hover {
+            .hover-translucend {
+                visibility: visible;
+                background: rgba(255, 255, 255, 0.8);
+
+                p {
+                    visibility: visible;
+                }
+            }
+        }
+
     }
 
 }
