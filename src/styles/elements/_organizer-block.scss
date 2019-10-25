@@ -57,6 +57,9 @@
         }        
         .rating-value {
             font-size: 14px;
+        }
+        &__rating {
+            display: inline-flex;
         }           
     }
     p {

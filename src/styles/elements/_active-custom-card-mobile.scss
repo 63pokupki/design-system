@@ -102,6 +102,12 @@
             }
         }
     }
+    .card-active-custom__like-single {
+        .icon-heart {
+            font-size: 22px;
+            color: $color-primary;
+        }
+    }
 
     .card-active-custom__organizer-block {
         margin-bottom: 20px;

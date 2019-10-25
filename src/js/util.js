@@ -133,14 +133,7 @@ if (btn_toggle) {
 let minus = document.querySelectorAll(".btn-sum__minus"),
     plus  = document.querySelectoAll(".btn-sum__plus"),
     input = document.querySelectorAll(".btn-sum__sum-num");
-
-window.addEventListener("click", (e) => {
-    let el = e.target;
-
-    if (el && el.classList.contains("btn-sum__minus")) {
-        console.log("Min");
-    }
-});    
+   
 
 
 if (minus) {
@@ -154,9 +147,9 @@ if (minus) {
         }
     }
 
-    minus.addEventListener("click", () => {
-        input.value--;
-    });
+    // minus.addEventListener("click", () => {
+    //     input.value--;
+    // });
 }
 if (plus) {
     plus.addEventListener("click", () => {
@@ -189,7 +182,6 @@ if (btn && togl) {
 } else {
     console.log("ЧТо то пошло не так");
 }
-
 
 //Модалки
 let modal_bg = document.querySelectorAll(".modal__bg"),

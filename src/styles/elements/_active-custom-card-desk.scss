@@ -593,6 +593,7 @@
         width: 100%;
         padding: 15px;
     }
+    //Header
     &__row {
         display: flex;
         justify-content: space-between;
@@ -612,6 +613,7 @@
         font-size: 14px;
         font-weight: 700;
     }
+    //HEader right
     &__rating-star-org {
         color: $gold-star-color;
     }
@@ -622,7 +624,8 @@
         font-weight: 700;
         color: $green-collection-color;
         .icon-box {
-            font-size: 22px;
+            margin-right: 5px;
+            font-size: 28px;
         }
     }
     &__status-block {
@@ -632,11 +635,13 @@
         width: 100%;
     }
     &__statusbar {
-        max-width: 192px;
+        max-width: 192px;        
         text-align: center;
     }
     &__start-date-collection {
         font-size: 10px;
+        margin: 10px 0 0 0;
+        color: $dark-grey-color;
     }
 
     &__statusbar, &__organizer-block,
@@ -647,5 +652,47 @@
         display: flex;
         width: 40px;
     }
+
+    //Toggle block
+    &__toggle-block {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    &__toggle-block-right {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__img {
+        justify-content: center;
+    }
+    &__toggle-status {
+        display: flex;
+        justify-content: space-between;
+        margin: 5px;
+        h5 {
+            margin: 0 0 3px 0;
+            font-size: 11px;
+        }
+        p {
+            margin: 0;
+            font-size: 12px;
+            color: $dark-grey-color;
+        }
+    }
+    &__description {
+        display: inline-flex;
+        text-align: left;
+        margin: 5px;
+        font-size: 12px;
+        color: $dark-grey-color;
+    }
+    &__comments {
+        &-link {
+            font-size: 12px;
+            color: $color-primary;
+        }
+    }
+
 }
 

@@ -1,26 +1,23 @@
 .like {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     height: 25px;
     font-size: 10px;
     line-height: 12px;
     color: #979797;
     cursor: pointer;
-    &-text {
+    &__text {
         width: 68px;
         margin-left: 10px;
     }
-    &-icon {
-        cursor: pointer;
-    }
-    &.is-active {
-        .like-icon path {
-            fill: $color-primary;
-        }
+    &__icon {
+        max-width: 20px;
+        font-size: 20px;
+        color: $color-primary;
     }
     &:hover {
-        .like-icon path {
-            fill: $color-primary;
+        .icon-heart {
+            @extend .icon-heart-filled
         }
     }
 }
