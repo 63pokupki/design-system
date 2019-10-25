@@ -8,6 +8,7 @@
     padding: 20px;
     background: $card-color-bg;
     transition: box-shadow .3s;
+
     &:hover {
         position: relative;
         box-shadow: 1px 1px 6px rgba(65, 149, 206, 0.4);
@@ -52,9 +53,11 @@
 
 .card-active-custom__wrap.is-toggle {
     margin: 10px 0;
+
     &:hover {
-        box-shadow: none;    
+        box-shadow: none;
     }
+
     &.desktop {
         .card-active-custom__toggle-block {
             max-height: 1000px;
@@ -76,6 +79,7 @@
                 }
             }
         }
+
         .card-active-custom__btn-toggle {
             transform: rotate(180deg);
             transition: all .3s;
@@ -105,7 +109,7 @@
             position: relative;
             display: flex;
             width: 100%;
-            
+
         }
 
         .btn-toggle-wrap {
@@ -473,16 +477,17 @@
             height: auto;
             font-Size: 12px;
             line-height: 16px;
-            text-align: left;            
+            text-align: left;
             transition: all .3s;
 
             //Класс is-toggle открывает полное описание по клику
             &.is-toggle {
                 max-height: 200px;
                 transition: all .3s;
+
                 p {
                     white-space: normal;
-                    
+
                 }
             }
 
@@ -558,6 +563,7 @@
                         }
                     }
                 }
+
                 .img-container_middle {
                     padding: 5px;
                     border: 1px solid $border-subcat-img-color;
@@ -587,12 +593,15 @@
 .test-card {
     display: flex;
     background: #fff;
+
     &__wrap {
         display: flex;
         flex-direction: column;
         width: 100%;
+        height: 100%;
         padding: 15px;
     }
+
     //Header
     &__row {
         display: flex;
@@ -600,93 +609,141 @@
         align-items: flex-start;
         width: 100%;
     }
-    &__left, &__right {
+
+    &__left,
+    &__right {
         display: flex;
-        width: 50%;        
+        width: 50%;
     }
+
+    &__left {
+        margin-right: 30px;
+    }
+
     &__heading-wrap {
         display: flex;
         flex-direction: column;
     }
+
     &__heading {
         margin-top: 0;
         font-size: 14px;
         font-weight: 700;
+        color: $dark-brown-color;
     }
+
     //HEader right
     &__rating-star-org {
+        margin-left: 5px;
         color: $gold-star-color;
     }
+
     &__collection {
         display: flex;
         align-items: center;
         font-size: 12px;
         font-weight: 700;
         color: $green-collection-color;
+
         .icon-box {
             margin-right: 5px;
             font-size: 28px;
         }
     }
+
     &__status-block {
         display: flex;
         justify-content: space-between;
+        align-items: flex-start;
         flex-wrap: wrap;
         width: 100%;
     }
+
     &__statusbar {
-        max-width: 192px;        
+        max-width: 192px;
         text-align: center;
     }
+
     &__start-date-collection {
         font-size: 10px;
         margin: 10px 0 0 0;
         color: $dark-grey-color;
     }
 
-    &__statusbar, &__organizer-block,
+    &__statusbar,
+    &__organizer-block,
     &__like {
         margin: 5px;
     }
+
     &__btn-block {
         display: flex;
-        width: 40px;
+        justify-content: center;
+        width: 70px;
+
     }
 
     //Toggle block
     &__toggle-block {
         display: flex;
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: center;
+        min-height: 100%;
     }
+
     &__toggle-block-right {
         flex-direction: column;
         justify-content: space-between;
     }
+
     &__img {
+        display: flex;
         justify-content: center;
+        align-items: center;
     }
+
     &__toggle-status {
         display: flex;
         justify-content: space-between;
         margin: 5px;
+
         h5 {
             margin: 0 0 3px 0;
             font-size: 11px;
         }
+
         p {
             margin: 0;
             font-size: 12px;
             color: $dark-grey-color;
         }
     }
+
+    &__hashtags {
+        display: flex;
+        margin: 5px;
+
+        &-link {
+            margin-right: 15px;
+            color: $color-primary;
+            font-weight: 700;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+        }
+    }
+
     &__description {
         display: inline-flex;
         text-align: left;
-        margin: 5px;
+        margin: 5px 5px 30px 5px;
         font-size: 12px;
         color: $dark-grey-color;
     }
+
     &__comments {
         &-link {
             font-size: 12px;
@@ -695,4 +752,5 @@
     }
 
 }
+
 
