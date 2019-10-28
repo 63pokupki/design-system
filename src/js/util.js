@@ -131,7 +131,7 @@ if (btn_toggle) {
 // <!-- Кнопки управления количеством товара -->
 
 let minus = document.querySelectorAll(".btn-sum__minus"),
-    plus  = document.querySelectoAll(".btn-sum__plus"),
+    plus  = document.querySelectorAll(".btn-sum__plus"),
     input = document.querySelectorAll(".btn-sum__sum-num");
 
 window.addEventListener("click", (e) => {
@@ -143,26 +143,26 @@ window.addEventListener("click", (e) => {
 });    
 
 
-if (minus) {
-    for (let i = 0; i < minus.length; i++) {
-        for (let p = 0; p < input.length; p++) {
-            minus[p].addEventListener("click", function () {
-                console.log("Click");
-                input[p].value--;
-            });
+// if (minus) {
+//     for (let i = 0; i < minus.length; i++) {
+//         for (let p = 0; p < input.length; p++) {
+//             minus[p].addEventListener("click", function () {
+//                 console.log("Click");
+//                 input[p].value--;
+//             });
 
-        }
-    }
+//         }
+//     }
 
-    minus.addEventListener("click", () => {
-        input.value--;
-    });
-}
-if (plus) {
-    plus.addEventListener("click", () => {
-        input.value++;
-    });
-}
+//     minus.addEventListener("click", () => {
+//         input.value--;
+//     });
+// }
+// if (plus) {
+//     plus.addEventListener("click", () => {
+//         input.value++;
+//     });
+// }
 
 
 
