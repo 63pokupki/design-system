@@ -5,6 +5,8 @@
 }
 
 .stock-m-info {
+    border-bottom: 1px solid rgba(49, 140, 202, 0.5);
+    
     &__heading {
         text-align: center;
         font-size: 20px;
@@ -193,6 +195,49 @@
         .stock-reviews__attach-list-img {
             width: 44px;
             height: 44px;
+        }
+    }
+
+    &__org-profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 25px 40px;
+
+        .org-profile {
+            &__image-wrapper {
+                width: 48px;
+                height: 48px;
+            }
+            &__image {
+                border-radius: 50%;
+            }
+        }
+    }
+
+    &__meta-text {
+        font-size: 12px;
+        align-items: center;
+        color: #a2a3a5;
+        margin-bottom: 20px;
+    }
+
+    &__buttons {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__discuss {
+        max-width: 175px;
+        position: relative;
+        margin-right: 30px;
+
+        .num-of-discussions {
+            position: absolute;
+            top: -15px;
+            right: -15px;
         }
     }
 }
