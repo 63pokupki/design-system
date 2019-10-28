@@ -11,688 +11,11 @@
 <body>
     <h2 class="ds-title">Карточка активных закупок десктоп</h2>
     <div class="ds-text">
-        Для отображения карточки подкатегорий, присвоить класс
-        <span class="ds-hl">.desktop-subcat</span> блоку <span class="ds-hl">card-active-custom__wrap</span>
-    </div>
-    <div class="ds-divider">
-        <!-- Карточка активных закупок	DESKTOP -->
-        <!-- Для раскрытия нижнего блока card-active-custom__toggle-block, добавить класс .is-toggle,
-                            элементу  card-active-custom__wrap(лучше по клику на card-active-custom__header) -->
-        <!-- Для отображения опциональных елементов блока подкатегорий, добавить класс .desktop-subcat
-                            главному блоку  card-active-custom__wrap -->
-        <div class="card-active-custom__wrap is-toggle desktop">
-            <div class="card-active-custom__header">
-                <div class="card-active-custom__header-left-block">
-                    <div class="card-active-custom__heading">
-                        <a href="#" target="_blank">Indola- профессиональная косметика для волос. Орг сбор
-                            0%</a>
-                        <!-- Рейтинг -->
-                        <div class="rating-star-org">
-                            <i class="rating-star-org__icon icon icon-star "></i>
-                            <div class="rating-star-org__value">4.9</div>
-                        </div>
-                    </div>
-                    <!-- Для изменения статуса закупки(цвет иконки-коробки и цвета текста), 
-                                        присвоить классы: .start - Сбор(зелёный), .stop - Скоро стоп(оранжевый)
-                                        элементу card-active-custom__collection. -->
-                    <div class="card-active-custom__collection">
-                        <div class="card-active-custom__purchaseStatus purchaseStatus purchaseStatus_soon">
-                            <span class="stock-status green">
-                                <i class="icon icon-box stock-status__icon"></i>
-                                <span class="stock-status__text">Сбор с 30.05.2018</span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-active-custom__header-right-block">
-                    <div class="card-active-custom__status-block">
-                        <!-- Статус бар -->
-                        <!-- Если ширина statusbar__line больше 0, добавить класс is-filled элементу statusbar -->
-                        <div class="card-active-custom__statusbar">
-                            <div class="statusbar is-filled">
-                                <div class="statusbar__line" style="width: 25%">
-                                    Собрано <span>0</span> из <span>15000</span> руб.
-                                </div>
-                            </div>
-                            <div class="card-active-custom__purchase-block">
-                                <span>178 выкуп</span>
-                                <p> стартовал 25 сентября</p>
-                            </div>
-                        </div>
-                        <div class="card-active-custom__organizer-block organizer-block">
-                            <div class="organizer-block__name-wrap">
-                                <div class="organizer-block__name">
-                                    <a href="#" target="_blank">
-                                        <p data-full-name="Наталья Хозяинова">Наталья Хозяинова</p>
-                                    </a>
-                                </div>
-                                <div class="organizer-block__rating">
-                                    <div class="rating-star-org">
-                                        <i class="rating-star-org__icon icon icon-star"></i>
-                                        <div class="rating-star-org__value">4.9</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <p>Орзанизатор</p>
-                        </div>
-                        <!-- Избранное(сердечко с голубой границей) -->
-                        <!-- Если элемент выбран(кликнут), присвоить блоку .like, класс is-active   -->
-                        <div class="like">
-                            <i class="like__icon icon icon-heart"></i>
-                            <div class="like__text">в избранном у <span>2000</span> людей</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="btn-toggle-wrap">
-                    <button class="card-active-custom__btn-toggle arrow arrow-down arrow_inverse arrow_transp">
-                        <i class="icon icon-arrow-down"></i>
-                    </button>
-                </div>
-            </div>
-            <!-- Выпадающий нижний блок -->
-            <div class="card-active-custom__toggle-block">
-                <div class="card-active-custom__toggle-left">
-                    <div class="card-active-custom__img-wrap">
-                        <div class="card-active-custom__img-desktop">
-                            <div class="img-container_middle"><img src="~images/1.jpg" alt="Car"></div>
-                        </div>
-                        <div class="card-active-custom__img-subcategory">
-                            <div class="hover-translucend">
-                                <p>Мини-маска для лица</p>
-                                <p><span>85,00</span>руб.</p>
-                            </div>
-                            <div class="img-container_middle"><img src="~images/img1.png" alt="Car"></div>
-                            <!-- <img src="~images/active_custom_card/meela-img3.png" alt=""> -->
-                        </div>
-                        <div class="card-active-custom__img-subcategory">
-                            <div class="hover-translucend">
-                                <p>Мини-маска для лица</p>
-                                <p><span>85,00</span>руб.</p>
-                            </div>
-                            <div class="img-container_middle"><img src="~images/img1.png" alt="Car"></div>
-                            <!-- <img src="~images/active_custom_card/meela-img3.png" alt=""> -->
-                        </div>
-                        <div class="card-active-custom__img-subcategory">
-                            <div class="hover-translucend">
-                                <p>Мини-маска для лица</p>
-                                <p><span>85,00</span>руб.</p>
-                            </div>
-                            <div class="img-container_middle"><img src="~images/img1.png" alt="Car"></div>
-
-                            <!-- <img src="~images/active_custom_card/meela-img3.png" alt=""> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="card-active-custom__description">
-                    <!-- Если необходимо скрыть блок с тегами, присвоить ему класс .hidden -->
-                    <div class="card-active-custom__hashtags">
-                        <a href="">#SALE</a>
-                        <a href="">#TOP</a>
-                        <a href="">#0%</a>
-                    </div>
-                    <!-- Для раскрытия полного описания, добавить класс is-toggle, блоку
-                                        card-active-custom__description-txt  -->
-                    <div class="card-active-custom__description-txt">
-                        <p> Добро пожаловать в закупку качественных и эффективных
-                            средств, которые помогут Вам поправить, поддержать и
-                            укрепить здоровье. Препараты от компании Фитосила -
-                            это только натуральные, естественные компоненты.</p>
-                    </div>
-                    <!-- Подкатегории -->
-                    <!-- Slider -->
-                    <div class="slider slider-flex">
-                        <div class="btn-l "><img src="~images/active_custom_card/slide-left.svg" alt=""></div>
-                        <div class="slider-viewing">
-                            <p class="slider__heading">Подходящие каталоги внутри закупки(<span>8</span>):</p>
-                            <div class="slider-wrap">
-                                <div class="slider-items"><a href="#">Уход за кожей</a></div>
-                                <div class="slider-items"><a href="#">Уход за волосами</a></div>
-                                <div class="slider-items"><a href="#">Аппаратная косметология</a></div>
-                                <div class="slider-items"><a href="#">Уход за кожей</a></div>
-                            </div>
-                        </div>
-                        <div class="btn-r"> <img src="~images/active_custom_card/slide-left.svg" alt=""> </div>
-                    </div>
-                    <!-- End  slider -->
-
-                    <div class="card-active-custom__description-status">
-                        <div class="card-active-custom__delivery-date">
-                            <p>Срок поставки:</p>
-                            <span>Неизвестно</span>
-                        </div>
-                        <div class="card-active-custom__access-lvl">
-                            <p>Уровень доступа:</p>
-                            <span>0</span>
-                        </div>
-                        <div class="card-active-custom__payment-method">
-                            <p>Способ оплаты:</p>
-                            <span>Расчет.счёт</span>
-                        </div>
-                        <div class="card-active-custom__comments">
-                            <p>Отзывы о закупке:</p>
-                            <a href="#"><span>450</span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="btn-toggle-wrap"></div>
-            </div>
-        </div>
+        Для скрытия/раскрытия выпадающего блока, присвоить класс
+        <span class="ds-hl">.is-toggle</span> блоку <span class="ds-hl">card-active-custom-desktop</span>
     </div>
 
-    <div class="ds-code-wrapper">
-        <script type="text/plain" class="language-markup">
-                <!-- Карточка активных закупок	DESKTOP -->
-        <!-- Для раскрытия нижнего блока card-active-custom__toggle-block, добавить класс .is-toggle,
-                                    элементу  card-active-custom__wrap(лучше по клику на card-active-custom__header) -->
-        <!-- Для отображения опциональных елементов блока подкатегорий, добавить класс .desktop-subcat
-                                    главному блоку  card-active-custom__wrap -->
-        <div class="card-active-custom__wrap is-toggle desktop">
-            <div class="card-active-custom__header">
-                <div class="card-active-custom__header-left-block">
-                    <div class="card-active-custom__heading">
-                        <a href="#" target="_blank">Indola- профессиональная косметика для волос. Орг сбор
-                            0%</a>
-                        <!-- Рейтинг -->
-                        <div class="rating-star-org">
-                            <i class="rating-star-org__icon icon icon-star "></i>
-                            <div class="rating-star-org__value">4.9</div>
-                        </div>
-                    </div>
-                    <!-- Для изменения статуса закупки(цвет иконки-коробки и цвета текста), 
-                                                присвоить классы: .start - Сбор(зелёный), .stop - Скоро стоп(оранжевый)
-                                                элементу card-active-custom__collection. -->
-                    <div class="card-active-custom__collection">
-                        <div class="card-active-custom__purchaseStatus purchaseStatus purchaseStatus_soon">
-                            <span class="stock-status green">
-                                <i class="icon icon-box stock-status__icon"></i>
-                                <span class="stock-status__text">Сбор с 30.05.2018</span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-active-custom__header-right-block">
-                    <div class="card-active-custom__status-block">
-                        <!-- Статус бар -->
-                        <!-- Если ширина statusbar__line больше 0, добавить класс is-filled элементу statusbar -->
-                        <div class="card-active-custom__statusbar">
-                            <div class="statusbar is-filled">
-                                <div class="statusbar__line" style="width: 25%">
-                                    Собрано <span>0</span> из <span>15000</span> руб.
-                                </div>
-                            </div>
-                            <div class="card-active-custom__purchase-block">
-                                <span>178 выкуп</span>
-                                <p> стартовал 25 сентября</p>
-                            </div>
-                        </div>
-                        <div class="card-active-custom__organizer-block organizer-block">
-                            <div class="organizer-block__name-wrap">
-                                <div class="organizer-block__name">
-                                    <a href="#" target="_blank">
-                                        <p data-full-name="Наталья Хозяинова">Наталья Хозяинова</p>
-                                    </a>
-                                </div>
-                                <div class="organizer-block__rating">
-                                    <div class="rating-star-org">
-                                        <i class="rating-star-org__icon icon icon-star"></i>
-                                        <div class="rating-star-org__value">4.9</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <p>Орзанизатор</p>
-                        </div>
-                        <!-- Избранное(сердечко с голубой границей) -->
-                        <!-- Если элемент выбран(кликнут), присвоить блоку .like, класс is-active   -->
-                        <div class="like">
-                            <i class="like__icon icon icon-heart"></i>
-                            <div class="like__text">в избранном у <span>2000</span> людей</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="btn-toggle-wrap">
-                    <button class="card-active-custom__btn-toggle arrow arrow-down arrow_inverse arrow_transp">
-                        <i class="icon icon-arrow-down"></i>
-                    </button>
-                </div>
-            </div>
-            <!-- Выпадающий нижний блок -->
-            <div class="card-active-custom__toggle-block">
-                <div class="card-active-custom__toggle-left">
-                    <div class="card-active-custom__img-wrap">
-                        <div class="card-active-custom__img-desktop">
-                            <div class="img-container_middle"><img src="~images/1.jpg" alt="Car"></div>
-                        </div>
-                        <div class="card-active-custom__img-subcategory">
-                            <div class="hover-translucend">
-                                <p>Мини-маска для лица</p>
-                                <p><span>85,00</span>руб.</p>
-                            </div>
-                            <div class="img-container_middle"><img src="~images/img1.png" alt="Car"></div>
-                            <!-- <img src="~images/active_custom_card/meela-img3.png" alt=""> -->
-                        </div>
-                        <div class="card-active-custom__img-subcategory">
-                            <div class="hover-translucend">
-                                <p>Мини-маска для лица</p>
-                                <p><span>85,00</span>руб.</p>
-                            </div>
-                            <div class="img-container_middle"><img src="~images/img1.png" alt="Car"></div>
-                            <!-- <img src="~images/active_custom_card/meela-img3.png" alt=""> -->
-                        </div>
-                        <div class="card-active-custom__img-subcategory">
-                            <div class="hover-translucend">
-                                <p>Мини-маска для лица</p>
-                                <p><span>85,00</span>руб.</p>
-                            </div>
-                            <div class="img-container_middle"><img src="~images/img1.png" alt="Car"></div>
-
-                            <!-- <img src="~images/active_custom_card/meela-img3.png" alt=""> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="card-active-custom__description">
-                    <!-- Если необходимо скрыть блок с тегами, присвоить ему класс .hidden -->
-                    <div class="card-active-custom__hashtags">
-                        <a href="">#SALE</a>
-                        <a href="">#TOP</a>
-                        <a href="">#0%</a>
-                    </div>
-                    <!-- Для раскрытия полного описания, добавить класс is-toggle, блоку
-                                                card-active-custom__description-txt  -->
-                    <div class="card-active-custom__description-txt">
-                        <p> Добро пожаловать в закупку качественных и эффективных
-                            средств, которые помогут Вам поправить, поддержать и
-                            укрепить здоровье. Препараты от компании Фитосила -
-                            это только натуральные, естественные компоненты.</p>
-                    </div>
-                    <!-- Подкатегории -->
-                    <!-- Slider -->
-                    <div class="slider">
-                        <div class="btn-l "><img src="~images/active_custom_card/slide-left.svg" alt="">
-                        </div>
-                        <div class="slider-viewing">
-                            <p>Подходящие каталоги внутри закупки(<span>8</span>):</p>
-                            <div class="slider-wrap">
-                                <div class="slider-items"><a href="#">Уход за кожей</a></div>
-                                <div class="slider-items"><a href="#">Уход за волосами</a></div>
-                                <div class="slider-items"><a href="#">Аппаратная косметология</a></div>
-                                <div class="slider-items"><a href="#">Уход за кожей</a></div>
-                            </div>
-                        </div>
-                        <div class="btn-r"> <img src="~images/active_custom_card/slide-left.svg" alt="">
-                        </div>
-                    </div>
-                    <!-- End  slider -->
-
-                    <div class="card-active-custom__description-status">
-                        <div class="card-active-custom__delivery-date">
-                            <p>Срок поставки:</p>
-                            <span>Неизвестно</span>
-                        </div>
-                        <div class="card-active-custom__access-lvl">
-                            <p>Уровень доступа:</p>
-                            <span>0</span>
-                        </div>
-                        <div class="card-active-custom__payment-method">
-                            <p>Способ оплаты:</p>
-                            <span>Расчет.счёт</span>
-                        </div>
-                        <div class="card-active-custom__comments">
-                            <p>Отзывы о закупке:</p>
-                            <a href="#"><span>450</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        </script>
-    </div>
-
-    <h2 class="ds-title">Карточка активных закупок десктоп подкатегории</h2>
-    <div class="ds-wrapper">
-        <div class="ds-text">
-            Для отображения карточки подкатегорий, присвоить класс
-            <span class="ds-hl">.desktop-subcat</span> блоку <span class="ds-hl">card-active-custom__wrap</span>
-        </div>
-        <div class="ds-divider">
-            <!-- Карточка активных закупок	DESKTOP -->
-            <!-- Для раскрытия нижнего блока card-active-custom__toggle-block, добавить класс .is-toggle,
-                            элементу  card-active-custom__wrap(лучше по клику на card-active-custom__header) -->
-            <!-- Для отображения опциональных елементов блока подкатегорий, добавить класс .desktop-subcat
-                            главному блоку  card-active-custom__wrap -->
-            <div class="card-active-custom__wrap is-toggle desktop desktop-subcat">
-                <div class="card-active-custom__header">
-                    <div class="card-active-custom__header-left-block">
-                        <div class="card-active-custom__heading">
-                            <a href="#" target="_blank">Indola- профессиональная косметика для волос. Орг сбор
-                                0%</a>
-                            <!-- Рейтинг -->
-                            <div class="rating-star-org">
-                                <i class="rating-star-org__icon icon icon-star "></i>
-                                <div class="rating-star-org__value">4.9</div>
-                            </div>
-                        </div>
-                        <!-- Для изменения статуса закупки(цвет иконки-коробки и цвета текста), 
-                                        присвоить классы: .start - Сбор(зелёный), .stop - Скоро стоп(оранжевый)
-                                        элементу card-active-custom__collection. -->
-                        <div class="card-active-custom__collection">
-                            <div class="card-active-custom__purchaseStatus purchaseStatus purchaseStatus_soon">
-                                <span class="stock-status green">
-                                    <i class="icon icon-box stock-status__icon"></i>
-                                    <span class="stock-status__text">Сбор с 30.05.2018</span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-active-custom__header-right-block">
-                        <div class="card-active-custom__status-block">
-                            <!-- Статус бар -->
-                            <!-- Если ширина statusbar__line больше 0, добавить класс is-filled элементу statusbar -->
-                            <div class="card-active-custom__statusbar">
-                                <div class="statusbar is-filled">
-                                    <div class="statusbar__line" style="width: 25%">
-                                        Собрано <span>0</span> из <span>15000</span> руб.
-                                    </div>
-                                </div>
-                                <div class="card-active-custom__purchase-block">
-                                    <span>178 выкуп</span>
-                                    <p> стартовал 25 сентября</p>
-                                </div>
-                            </div>
-                            <div class="card-active-custom__organizer-block organizer-block">
-                                <div class="organizer-block__name-wrap">
-                                    <div class="organizer-block__name">
-                                        <a href="#" target="_blank">
-                                            <p data-full-name="Наталья Хозяинова">Наталья Хозяинова</p>
-                                        </a>
-                                    </div>
-                                    <div class="organizer-block__rating">
-                                        <div class="rating-star-org">
-                                            <i class="rating-star-org__icon icon icon-star"></i>
-                                            <div class="rating-star-org__value">4.9</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p>Орзанизатор</p>
-                            </div>
-                            <!-- Избранное(сердечко с голубой границей) -->
-                            <!-- Если элемент выбран(кликнут), присвоить блоку .like, класс is-active   -->
-                            <div class="like">
-                                <i class="like__icon icon icon-heart"></i>
-                                <div class="like__text">в избранном у <span>2000</span> людей</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="btn-toggle-wrap">
-                        <button class="card-active-custom__btn-toggle arrow arrow-down arrow_inverse arrow_transp">
-                            <i class="icon icon-arrow-down"></i>
-                        </button>
-                    </div>
-                </div>
-                <!-- Выпадающий нижний блок -->
-                <div class="card-active-custom__toggle-block">
-                    <div class="card-active-custom__toggle-left">
-                        <div class="card-active-custom__img-wrap">
-                            <div class="card-active-custom__img-desktop">
-                                <div class="img-container_middle"><img src="~images/1.jpg" alt="Car"></div>
-                            </div>
-                            <div class="card-active-custom__img-subcategory">
-                                <div class="hover-translucend">
-                                    <p>Мини-маска для лица</p>
-                                    <p><span>85,00</span>руб.</p>
-                                </div>
-                                <div class="img-container_middle"><img src="~images/img1.png" alt="Car"></div>
-                                <!-- <img src="~images/active_custom_card/meela-img3.png" alt=""> -->
-                            </div>
-                            <div class="card-active-custom__img-subcategory">
-                                <div class="hover-translucend">
-                                    <p>Мини-маска для лица</p>
-                                    <p><span>85,00</span>руб.</p>
-                                </div>
-                                <div class="img-container_middle"><img src="~images/img1.png" alt="Car"></div>
-                                <!-- <img src="~images/active_custom_card/meela-img3.png" alt=""> -->
-                            </div>
-                            <div class="card-active-custom__img-subcategory">
-                                <div class="hover-translucend">
-                                    <p>Мини-маска для лица</p>
-                                    <p><span>85,00</span>руб.</p>
-                                </div>
-                                <div class="img-container_middle"><img src="~images/img1.png" alt="Car"></div>
-
-                                <!-- <img src="~images/active_custom_card/meela-img3.png" alt=""> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-active-custom__description">
-                        <!-- Если необходимо скрыть блок с тегами, присвоить ему класс .hidden -->
-                        <div class="card-active-custom__hashtags">
-                            <a href="">#SALE</a>
-                            <a href="">#TOP</a>
-                            <a href="">#0%</a>
-                        </div>
-                        <!-- Для раскрытия полного описания, добавить класс is-toggle, блоку
-                                        card-active-custom__description-txt  -->
-                        <div class="card-active-custom__description-txt">
-                            <p> Добро пожаловать в закупку качественных и эффективных
-                                средств, которые помогут Вам поправить, поддержать и
-                                укрепить здоровье. Препараты от компании Фитосила -
-                                это только натуральные, естественные компоненты.</p>
-                        </div>
-                        <!-- Подкатегории -->
-                        <!-- Slider -->
-                        <div class="slider slider-flex">
-                            <div class="btn-l "><img src="~images/active_custom_card/slide-left.svg" alt=""></div>
-                            <div class="slider-viewing">
-                                <p class="slider__heading">Подходящие каталоги внутри закупки(<span>8</span>):</p>
-                                <div class="slider-wrap">
-                                    <div class="slider-items"><a href="#">Уход за кожей</a></div>
-                                    <div class="slider-items"><a href="#">Уход за волосами</a></div>
-                                    <div class="slider-items"><a href="#">Аппаратная косметология</a></div>
-                                    <div class="slider-items"><a href="#">Уход за кожей</a></div>
-                                </div>
-                            </div>
-                            <div class="btn-r"> <img src="~images/active_custom_card/slide-left.svg" alt=""> </div>
-                        </div>
-                        <!-- End  slider -->
-
-                        <div class="card-active-custom__description-status">
-                            <div class="card-active-custom__delivery-date">
-                                <p>Срок поставки:</p>
-                                <span>Неизвестно</span>
-                            </div>
-                            <div class="card-active-custom__access-lvl">
-                                <p>Уровень доступа:</p>
-                                <span>0</span>
-                            </div>
-                            <div class="card-active-custom__payment-method">
-                                <p>Способ оплаты:</p>
-                                <span>Расчет.счёт</span>
-                            </div>
-                            <div class="card-active-custom__comments">
-                                <p>Отзывы о закупке:</p>
-                                <a href="#"><span>450</span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="btn-toggle-wrap"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="ds-code-wrapper">
-        <script type="text/plain" class="language-markup">
-                <!-- Карточка активных закупок	DESKTOP -->
-        <!-- Для раскрытия нижнего блока card-active-custom__toggle-block, добавить класс .is-toggle,
-                                    элементу  card-active-custom__wrap(лучше по клику на card-active-custom__header) -->
-        <!-- Для отображения опциональных елементов блока подкатегорий, добавить класс .desktop-subcat
-                                    главному блоку  card-active-custom__wrap -->
-        <div class="card-active-custom__wrap is-toggle desktop">
-            <div class="card-active-custom__header">
-                <div class="card-active-custom__header-left-block">
-                    <div class="card-active-custom__heading">
-                        <a href="#" target="_blank">Indola- профессиональная косметика для волос. Орг сбор
-                            0%</a>
-                        <!-- Рейтинг -->
-                        <div class="rating-star-org">
-                            <i class="rating-star-org__icon icon icon-star "></i>
-                            <div class="rating-star-org__value">4.9</div>
-                        </div>
-                    </div>
-                    <!-- Для изменения статуса закупки(цвет иконки-коробки и цвета текста), 
-                                                присвоить классы: .start - Сбор(зелёный), .stop - Скоро стоп(оранжевый)
-                                                элементу card-active-custom__collection. -->
-                    <div class="card-active-custom__collection">
-                        <div class="card-active-custom__purchaseStatus purchaseStatus purchaseStatus_soon">
-                            <span class="stock-status green">
-                                <i class="icon icon-box stock-status__icon"></i>
-                                <span class="stock-status__text">Сбор с 30.05.2018</span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-active-custom__header-right-block">
-                    <div class="card-active-custom__status-block">
-                        <!-- Статус бар -->
-                        <!-- Если ширина statusbar__line больше 0, добавить класс is-filled элементу statusbar -->
-                        <div class="card-active-custom__statusbar">
-                            <div class="statusbar is-filled">
-                                <div class="statusbar__line" style="width: 25%">
-                                    Собрано <span>0</span> из <span>15000</span> руб.
-                                </div>
-                            </div>
-                            <div class="card-active-custom__purchase-block">
-                                <span>178 выкуп</span>
-                                <p> стартовал 25 сентября</p>
-                            </div>
-                        </div>
-                        <div class="card-active-custom__organizer-block organizer-block">
-                            <div class="organizer-block__name-wrap">
-                                <div class="organizer-block__name">
-                                    <a href="#" target="_blank">
-                                        <p data-full-name="Наталья Хозяинова">Наталья Хозяинова</p>
-                                    </a>
-                                </div>
-                                <div class="organizer-block__rating">
-                                    <div class="rating-star-org">
-                                        <i class="rating-star-org__icon icon icon-star"></i>
-                                        <div class="rating-star-org__value">4.9</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <p>Орзанизатор</p>
-                        </div>
-                        <!-- Избранное(сердечко с голубой границей) -->
-                        <!-- Если элемент выбран(кликнут), присвоить блоку .like, класс is-active   -->
-                        <div class="card-active-custom__like like">
-                            <div class="like">
-                                <i class="like__icon icon icon-heart"></i>
-                                <div class="like__text">в избранном у <span>2000</span> людей</div>
-                            </div>
-                            <div class="like-text">в избранном у 2 000 людей</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="btn-toggle-wrap">
-                    <button class="card-active-custom__btn-toggle arrow arrow-down arrow_inverse arrow_transp">
-                        <i class="icon icon-arrow-down"></i>
-                    </button>
-                </div>
-            </div>
-            <!-- Выпадающий нижний блок -->
-            <div class="card-active-custom__toggle-block">
-                <div class="card-active-custom__toggle-left">
-                    <div class="card-active-custom__img-wrap">
-                        <div class="card-active-custom__img-desktop">
-                            <div class="img-container_middle"><img src="~images/1.jpg" alt="Car"></div>
-                        </div>
-                        <div class="card-active-custom__img-subcategory">
-                            <div class="hover-translucend">
-                                <p>Мини-маска для лица</p>
-                                <p><span>85,00</span>руб.</p>
-                            </div>
-                            <div class="img-container_middle"><img src="~images/img1.png" alt="Car"></div>
-                            <!-- <img src="~images/active_custom_card/meela-img3.png" alt=""> -->
-                        </div>
-                        <div class="card-active-custom__img-subcategory">
-                            <div class="hover-translucend">
-                                <p>Мини-маска для лица</p>
-                                <p><span>85,00</span>руб.</p>
-                            </div>
-                            <div class="img-container_middle"><img src="~images/img1.png" alt="Car"></div>
-                            <!-- <img src="~images/active_custom_card/meela-img3.png" alt=""> -->
-                        </div>
-                        <div class="card-active-custom__img-subcategory">
-                            <div class="hover-translucend">
-                                <p>Мини-маска для лица</p>
-                                <p><span>85,00</span>руб.</p>
-                            </div>
-                            <div class="img-container_middle"><img src="~images/img1.png" alt="Car"></div>
-
-                            <!-- <img src="~images/active_custom_card/meela-img3.png" alt=""> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="card-active-custom__description">
-                    <!-- Если необходимо скрыть блок с тегами, присвоить ему класс .hidden -->
-                    <div class="card-active-custom__hashtags">
-                        <a href="">#SALE</a>
-                        <a href="">#TOP</a>
-                        <a href="">#0%</a>
-                    </div>
-                    <!-- Для раскрытия полного описания, добавить класс is-toggle, блоку
-                                                card-active-custom__description-txt  -->
-                    <div class="card-active-custom__description-txt">
-                        <p> Добро пожаловать в закупку качественных и эффективных
-                            средств, которые помогут Вам поправить, поддержать и
-                            укрепить здоровье. Препараты от компании Фитосила -
-                            это только натуральные, естественные компоненты.</p>
-                    </div>
-                    <!-- Подкатегории -->
-                    <!-- Slider -->
-                    <div class="slider slider-flex">
-                        <div class="btn-l "><img src="~images/active_custom_card/slide-left.svg" alt=""></div>
-                        <div class="slider-viewing">
-                            <p class="slider__heading">Подходящие каталоги внутри закупки(<span>8</span>):</p>
-                            <div class="slider-wrap">
-                                <div class="slider-items"><a href="#">Уход за кожей</a></div>
-                                <div class="slider-items"><a href="#">Уход за волосами</a></div>
-                                <div class="slider-items"><a href="#">Аппаратная косметология</a></div>
-                                <div class="slider-items"><a href="#">Уход за кожей</a></div>
-                            </div>
-                        </div>
-                        <div class="btn-r"> <img src="~images/active_custom_card/slide-left.svg" alt=""> </div>
-                    </div>
-                    <!-- End  slider -->
-
-                    <div class="card-active-custom__description-status">
-                        <div class="card-active-custom__delivery-date">
-                            <p>Срок поставки:</p>
-                            <span>Неизвестно</span>
-                        </div>
-                        <div class="card-active-custom__access-lvl">
-                            <p>Уровень доступа:</p>
-                            <span>0</span>
-                        </div>
-                        <div class="card-active-custom__payment-method">
-                            <p>Способ оплаты:</p>
-                            <span>Расчет.счёт</span>
-                        </div>
-                        <div class="card-active-custom__comments">
-                            <p>Отзывы о закупке:</p>
-                            <a href="#"><span>450</span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="btn-toggle-wrap"></div>
-            </div>
-        </div>
-
-        </script>
-    </div>
-
-    <h2 class="ds-title">Обновлённая карточка</h2>
-    <div class="card-active-custom-desktop">
+    <div class="card-active-custom-desktop is-toggle">
         <div class="card-active-custom-desktop__wrap">
             <div class="card-active-custom-desktop__row">
                 <div class="card-active-custom-desktop__left">
@@ -704,7 +27,8 @@
                                 <div class="rating-star-org__value">4.9</div>
                             </div>
                         </h2>
-                        <div class="card-active-custom-desktop__collection"><i class="icon icon-box"></i>Сбор с 30.05.2019</div>
+                        <div class="card-active-custom-desktop__collection"><i class="icon icon-box"></i>Сбор с
+                            30.05.2019</div>
                     </div>
                 </div>
                 <div class="card-active-custom-desktop__right">
@@ -715,7 +39,8 @@
                                     <span>15000</span> руб.
                                 </div>
                             </div>
-                            <p class="card-active-custom-desktop__start-date-collection"><b>178</b> выкуп стартовал 25 сентября</p>
+                            <p class="card-active-custom-desktop__start-date-collection"><b>178</b> выкуп стартовал 25
+                                сентября</p>
                         </div>
                         <div class="card-active-custom-desktop__organizer-block organizer-block">
                             <div class="organizer-block__name-wrap">
@@ -783,9 +108,107 @@
         </div>
     </div>
 
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
+            <div class="card-active-custom-desktop">
+                <div class="card-active-custom-desktop__wrap">
+                    <div class="card-active-custom-desktop__row">
+                        <div class="card-active-custom-desktop__left">
+                            <div class="card-active-custom-desktop__heading-wrap">
+                                <h2 class="card-active-custom-desktop__heading">
+                                    Фитосила - более тысячи товаров для здоровья
+                                    <div class="card-active-custom-desktop__rating-star-org rating-star-org">
+                                        <i class="icon icon-star"></i>
+                                        <div class="rating-star-org__value">4.9</div>
+                                    </div>
+                                </h2>
+                                <div class="card-active-custom-desktop__collection"><i class="icon icon-box"></i>Сбор с
+                                    30.05.2019</div>
+                            </div>
+                        </div>
+                        <div class="card-active-custom-desktop__right">
+                            <div class="card-active-custom-desktop__status-block">
+                                <div class="card-active-custom-desktop__statusbar">
+                                    <div class="statusbar is-filled">
+                                        <div class="statusbar__line" style="width: 25%">Собрано <span>0</span> из
+                                            <span>15000</span> руб.
+                                        </div>
+                                    </div>
+                                    <p class="card-active-custom-desktop__start-date-collection"><b>178</b> выкуп стартовал 25
+                                        сентября</p>
+                                </div>
+                                <div class="card-active-custom-desktop__organizer-block organizer-block">
+                                    <div class="organizer-block__name-wrap">
+                                        <div class="organizer-block__name">
+                                            <p data-full-name="Наталья Хозяинова">Наталья Хозяинова</p>
+                                        </div>
+                                        <div class="organizer-block__rating">
+                                            <div class="rating-star-org">
+                                                <i class="rating-star-org__icon icon icon-star"></i>
+                                                <div class="rating-star-org__value">4.9</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>Орзанизатор</p>
+                                </div>
+                                <div class="card-active-custom-desktop__like like">
+                                    <i class="like__icon icon icon-heart"></i>
+                                    <div class="like__text">в избранном у <span>2000</span> людей</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-active-custom-desktop__btn-block">
+                            <button class="arrow arrow-down arrow_inverse arrow_transp">
+                                <i class="icon icon-arrow-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Toggle block -->
+                    <div class="card-active-custom-desktop__row card-active-custom-desktop__toggle-block">
+                        <div class="card-active-custom-desktop__left card-active-custom-desktop__img">
+                            <div class="img-container_resp"><img src="~images/cac-img.png" alt="Car"></div>
+                        </div>
+                        <div class="card-active-custom-desktop__right card-active-custom-desktop__toggle-block-right">
+                            <div class="card-active-custom-desktop__hashtags">
+                                <a class="card-active-custom-desktop__hashtags-link" href="">#SALE</a>
+                                <a class="card-active-custom-desktop__hashtags-link" href="">#TOP</a>
+                                <a class="card-active-custom-desktop__hashtags-link" href="">#0%</a>
+                            </div>
+                            <div class="card-active-custom-desktop__description">
+                                Добро пожаловать в закупку качественных и эффективных средств,
+                                которые помогут Вам поправить, поддержать и укрепить здоровье.
+                                Препараты от компании Фитосила - это только натуральные, естественные компоненты…
+                            </div>
+                            <div class="card-active-custom-desktop__toggle-status">
+                                <div class="card-active-custom-desktop__delivery-time">
+                                    <h5>Сроки поставки</h5>
+                                    <p>Неизвестно</p>
+                                </div>
+                                <div class="card-active-custom-desktop__access-lvl">
+                                    <h5>Уровень доступа</h5>
+                                    <p>0</p>
+                                </div>
+                                <div class="card-active-custom-desktop__payment-method">
+                                    <h5>Способ оплаты</h5>
+                                    <p>Расчет. счёт</p>
+                                </div>
+                                <div class="card-active-custom-desktop__comments">
+                                    <h5>Отзывы о закупке</h5>
+                                    <a class="card-active-custom-desktop__comments-link" href="#" target="_blank">450</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-active-custom-desktop__btn-block"></div>
+                    </div>
+                </div>
+            </div>
+        
+        </script>
+    </div>
+
+
     <!-- Обновлённая карточка подкатергории -->
-    <h2 class="ds-title">Обновлённая карточка подкатегории</h2>
-    <div class="card-active-custom-desktop">
+    <div class="card-active-custom-desktop is-toggle">
         <div class="card-active-custom-desktop__wrap">
             <div class="card-active-custom-desktop__row">
                 <div class="card-active-custom-desktop__left">
@@ -797,7 +220,8 @@
                                 <div class="rating-star-org__value">4.9</div>
                             </div>
                         </h2>
-                        <div class="card-active-custom-desktop__collection"><i class="icon icon-box"></i>Сбор с 30.05.2019</div>
+                        <div class="card-active-custom-desktop__collection"><i class="icon icon-box"></i>Сбор с
+                            30.05.2019</div>
                     </div>
                 </div>
                 <div class="card-active-custom-desktop__right">
@@ -808,7 +232,8 @@
                                     <span>15000</span> руб.
                                 </div>
                             </div>
-                            <p class="card-active-custom-desktop__start-date-collection"><b>178</b> выкуп стартовал 25 сентября</p>
+                            <p class="card-active-custom-desktop__start-date-collection"><b>178</b> выкуп стартовал 25
+                                сентября</p>
                         </div>
                         <div class="card-active-custom-desktop__organizer-block organizer-block">
                             <div class="organizer-block__name-wrap">
@@ -914,6 +339,141 @@
                 <div class="card-active-custom-desktop__btn-block"></div>
             </div>
         </div>
+    </div>
+
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
+            <div class="card-active-custom-desktop">
+                <div class="card-active-custom-desktop__wrap">
+                    <div class="card-active-custom-desktop__row">
+                        <div class="card-active-custom-desktop__left">
+                            <div class="card-active-custom-desktop__heading-wrap">
+                                <h2 class="card-active-custom-desktop__heading">
+                                    Фитосила - более тысячи товаров для здоровья
+                                    <div class="card-active-custom-desktop__rating-star-org rating-star-org">
+                                        <i class="icon icon-star"></i>
+                                        <div class="rating-star-org__value">4.9</div>
+                                    </div>
+                                </h2>
+                                <div class="card-active-custom-desktop__collection"><i class="icon icon-box"></i>Сбор с 30.05.2019</div>
+                            </div>
+                        </div>
+                        <div class="card-active-custom-desktop__right">
+                            <div class="card-active-custom-desktop__status-block">
+                                <div class="card-active-custom-desktop__statusbar">
+                                    <div class="statusbar is-filled">
+                                        <div class="statusbar__line" style="width: 25%">Собрано <span>0</span> из
+                                            <span>15000</span> руб.
+                                        </div>
+                                    </div>
+                                    <p class="card-active-custom-desktop__start-date-collection"><b>178</b> выкуп стартовал 25 сентября</p>
+                                </div>
+                                <div class="card-active-custom-desktop__organizer-block organizer-block">
+                                    <div class="organizer-block__name-wrap">
+                                        <div class="organizer-block__name">
+                                            <p data-full-name="Наталья Хозяинова">Наталья Хозяинова</p>
+                                        </div>
+                                        <div class="organizer-block__rating">
+                                            <div class="rating-star-org">
+                                                <i class="rating-star-org__icon icon icon-star"></i>
+                                                <div class="rating-star-org__value">4.9</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>Орзанизатор</p>
+                                </div>
+                                <div class="card-active-custom-desktop__like like">
+                                    <i class="like__icon icon icon-heart"></i>
+                                    <div class="like__text">в избранном у <span>2000</span> людей</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-active-custom-desktop__btn-block">
+                            <button class="arrow arrow-down arrow_inverse arrow_transp">
+                                <i class="icon icon-arrow-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Toggle block -->
+                    <div class="card-active-custom-desktop__row card-active-custom-desktop__toggle-block">
+                        <div class="card-active-custom-desktop__left card-active-custom-desktop__img">
+                            <div class="card-active-custom-desktop__img-subcategory">
+                                <div class="hover-translucend">
+                                    <p>Мини-маска для лица</p>
+                                    <p><span>85,00</span>руб.</p>
+                                </div>
+                                <div class="img-container_resp"><img src="~images/img1.png" alt="Car"></div>
+                                <!-- <img src="~images/active_custom_card/meela-img3.png" alt=""> -->
+                            </div>
+                            <div class="card-active-custom-desktop__img-subcategory">
+                                <div class="hover-translucend">
+                                    <p>Мини-маска для лица</p>
+                                    <p><span>85,00</span>руб.</p>
+                                </div>
+                                <div class="img-container_resp"><img src="~images/img1.png" alt="Car"></div>
+                                <!-- <img src="~images/active_custom_card/meela-img3.png" alt=""> -->
+                            </div>
+                            <div class="card-active-custom-desktop__img-subcategory">
+                                <div class="hover-translucend">
+                                    <p>Мини-маска для лица</p>
+                                    <p><span>85,00</span>руб.</p>
+                                </div>
+                                <div class="img-container_resp"><img src="~images/img1.png" alt="Car"></div>
+        
+                                <!-- <img src="~images/active_custom_card/meela-img3.png" alt=""> -->
+                            </div>
+                        </div>
+                        <div class="card-active-custom-desktop__right card-active-custom-desktop__toggle-block-right">
+                            <div class="card-active-custom-desktop__hashtags">
+                                <a class="card-active-custom-desktop__hashtags-link" href="">#SALE</a>
+                                <a class="card-active-custom-desktop__hashtags-link" href="">#TOP</a>
+                                <a class="card-active-custom-desktop__hashtags-link" href="">#0%</a>
+                            </div>
+                            <div class="card-active-custom-desktop__description">
+                                Добро пожаловать в закупку качественных и эффективных средств,
+                                которые помогут Вам поправить, поддержать и укрепить здоровье.
+                                Препараты от компании Фитосила - это только натуральные, естественные компоненты…
+                            </div>
+                            <!-- Slider -->
+                            <div class="card-active-custom-desktop__slider slider slider-flex">
+                                <div class="btn-l "><img src="~images/active_custom_card/slide-left.svg" alt=""></div>
+                                <div class="slider-viewing">
+                                    <p class="slider__heading">Подходящие каталоги внутри закупки(<span>8</span>):</p>
+                                    <div class="slider-wrap">
+                                        <div class="slider-items"><a href="#">Уход за кожей</a></div>
+                                        <div class="slider-items"><a href="#">Уход за волосами</a></div>
+                                        <div class="slider-items"><a href="#">Аппаратная косметология</a></div>
+                                        <div class="slider-items"><a href="#">Уход за кожей</a></div>
+                                    </div>
+                                </div>
+                                <div class="btn-r"> <img src="~images/active_custom_card/slide-left.svg" alt=""> </div>
+                            </div>
+                            <!-- End  slider -->
+        
+                            <div class="card-active-custom-desktop__toggle-status">
+                                <div class="card-active-custom-desktop__delivery-time">
+                                    <h5>Сроки поставки</h5>
+                                    <p>Неизвестно</p>
+                                </div>
+                                <div class="card-active-custom-desktop__access-lvl">
+                                    <h5>Уровень доступа</h5>
+                                    <p>0</p>
+                                </div>
+                                <div class="card-active-custom-desktop__payment-method">
+                                    <h5>Способ оплаты</h5>
+                                    <p>Расчет. счёт</p>
+                                </div>
+                                <div class="card-active-custom-desktop__comments">
+                                    <h5>Отзывы о закупке</h5>
+                                    <a class="card-active-custom-desktop__comments-link" href="#" target="_blank">450</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-active-custom-desktop__btn-block"></div>
+                    </div>
+                </div>
+            </div>        
+        </script>
     </div>
 
 

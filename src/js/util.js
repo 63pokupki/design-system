@@ -25,21 +25,6 @@ function elem_close(clickElem, eventElem) {
     }
 }
 
-//Функция сворачивания/разворачивания
-// clickElem - элемент по которому кликают
-// eventElem - элемент на котором происходит событие
-function elem_toggle(clickElem, eventElem) {
-    for (let i = 0; i < clickElem.length; i++) {
-        for (let p = 0; p < eventElem.length; p++) {
-            clickElem[p].addEventListener("click", function () {
-                console.log("Click");
-                eventElem[p].classList.toggle("is-toggle");
-            });
-
-        }
-    }
-
-}
 
 
 // открытие полной инфы о закупке
@@ -129,33 +114,27 @@ if (btn_toggle) {
 
 
 // <!-- Кнопки управления количеством товара -->
+(() => {
+    let modal = document.querySelectorAll(".btn-sum");
 
-let minus = document.querySelectorAll(".btn-sum__minus"),
-    plus  = document.querySelectoAll(".btn-sum__plus"),
-    input = document.querySelectorAll(".btn-sum__sum-num");
-   
+    modal.forEach((m) => {
+        let plus = m.querySelector(".btn-sum__plus"),
+            minus = m.querySelector(".btn-sum__minus"),
+            input = m.querySelector(".btn-sum__sum-num");
 
-
-if (minus) {
-    for (let i = 0; i < minus.length; i++) {
-        for (let p = 0; p < input.length; p++) {
-            minus[p].addEventListener("click", function () {
-                console.log("Click");
-                input[p].value--;
+        if (plus && minus && input) {
+            plus.addEventListener("click", () => {
+                input.value++;
             });
-
+            minus.addEventListener("click", () => {
+                input.value--;
+            });
         }
-    }
-
-    // minus.addEventListener("click", () => {
-    //     input.value--;
-    // });
-}
-if (plus) {
-    plus.addEventListener("click", () => {
-        input.value++;
     });
-}
+})()
+
+
+
 
 
 
@@ -173,15 +152,21 @@ if (heart) {
 
 //Карточки активных закупок
 
-let btn = document.querySelectorAll(".card-active-custom__btn-toggle"),
-    togl = document.querySelectorAll(".card-active-custom__wrap");
+(() => {
+    let cardActive = document.querySelectorAll(".card-active-custom-desktop");
 
-if (btn && togl) {
-    //Функция сворачивания/разворачивания
-    elem_toggle(btn, togl);
-} else {
-    console.log("ЧТо то пошло не так");
-}
+    cardActive.forEach((c) => {
+        let btnToggle = c.querySelector(".card-active-custom-desktop__btn-block");
+
+        if (btnToggle) {
+            btnToggle.addEventListener("click", () => {
+                c.classList.toggle("is-toggle");
+            });
+        }
+    });
+})()
+
+
 
 //Модалки
 let modal_bg = document.querySelectorAll(".modal__bg"),
@@ -193,5 +178,3 @@ if (modal_bg && btn_close && modal) {
     elem_close(modal_bg, modal);
     elem_close(btn_close, modal);
 }
-
-
