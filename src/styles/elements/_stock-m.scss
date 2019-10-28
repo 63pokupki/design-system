@@ -2,6 +2,57 @@
     &__back {
         padding: 20px;
     }
+
+    &__filters {
+        padding: 25px 50px 25px 30px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        .sorting {
+            position: relative;
+
+            &__selected-position {
+                border-bottom: unset;
+            }
+
+            &__btn {
+                display: block;
+
+                &:after {
+                    display: none;
+                }
+            }
+
+            &__name {
+                display: inline;
+                position: relative;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    display: flex;
+                    width: 8px;
+                    height: 8px;
+                    top: 6px;
+                    right: -12px;
+                    background: url('~images/active_custom_card/arrow-point-to-down.png');
+                    background-repeat: no-repeat;
+                    background-position: 50%;
+                    background-size: cover;
+                    opacity: 0.6;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .ds-popover {
+            position: absolute;
+            bottom: -5px;
+            right: -25px;
+            transform: translateY(100%);
+        }
+    }
 }
 
 .stock-m-control {
@@ -25,18 +76,21 @@
         }
     }
 
-    &__buttons, &__filter-buttons {
+    &__buttons,
+    &__filter-buttons {
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
 
-    &__sqrt, &__cols {
+    &__sqrt,
+    &__cols {
         font-size: 18px;
-        color: #C4C4C4;
+        color: #c4c4c4;
     }
 
-    &__sqrt.is-active,  &__cols.is-active {
+    &__sqrt.is-active,
+    &__cols.is-active {
         color: $color-primary;
     }
 
