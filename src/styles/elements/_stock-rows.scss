@@ -1,6 +1,7 @@
 .stock-rows {
     display: flex;
     align-items: flex-start;
+    line-height: initial;
 
     // блок нумерации
     &__numeration {
@@ -135,6 +136,7 @@
 .stock-rows-cell {
     display: inline-flex;
     font-weight: 600;
+    align-items: center;
     font-size: 10px;
     color: #606266;
     border-radius: 2px;

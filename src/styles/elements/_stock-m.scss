@@ -36,7 +36,7 @@
                     height: 8px;
                     top: 6px;
                     right: -12px;
-                    background: url('~images/active_custom_card/arrow-point-to-down.png');
+                    background: url("~images/active_custom_card/arrow-point-to-down.png");
                     background-repeat: no-repeat;
                     background-position: 50%;
                     background-size: cover;
@@ -52,6 +52,95 @@
             right: -25px;
             transform: translateY(100%);
         }
+    }
+
+    &__items {
+        background: rgba(49, 140, 202, 0.12);
+        .stock-card-vertical-wrapper {
+            margin-bottom: 15px;
+        }
+        .stock-card-vertical-wrapper:hover .stock-card-vertical {
+            box-shadow: unset;
+        }
+        .stock-card-vertical {
+            &__heading {
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+
+            &__price {
+                font-size: 24px;
+                line-height: unset;
+
+                span {
+                    font-size: 16px;
+                }
+            }
+
+            &__org {
+                font-size: 12px;
+            }
+
+            &__wrapper {
+                height: unset;
+            }
+
+            &__image {
+                max-height: 390px;
+            }
+
+            &__main {
+                margin-bottom: 20px;
+            }
+
+            &__buy {
+                max-width: 142px;
+            }
+
+            .collapse-section {
+                margin-bottom: 20px;
+
+                &__heading {
+                    font-size: 14px;
+                }
+
+                &__body {
+                    line-height: 20px;
+                }
+            }
+
+            .stock-rows-legend {
+                margin-top: 10px;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-right: -15px;
+
+                &__item {
+                    margin-bottom: 10px;
+                }
+            }
+
+            .stock-rows-help {
+                margin: 10px auto 15px;
+            }
+        }
+    }
+}
+
+.stock-rows-help {
+    display: flex;
+    align-items: center;
+    color: #606266;
+    width: 205px;
+
+    &__icon {
+        font-size: 26px;
+        margin-right: 5px;
+    }
+
+    &__text {
+        font-size: 10px;
+        line-height: 14px;
     }
 }
 
