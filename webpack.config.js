@@ -16,7 +16,7 @@ module.exports = {
         ignored: /node_modules/, //исключения в слежении
         poll: 500 //интервал обновления
     },
-    devtool: "source-map", //Инструменты разработчика
+    devtool: "inline-source-map", //Инструменты разработчика
     resolve: {
         alias: {
             //краткие имена путей для импортов
