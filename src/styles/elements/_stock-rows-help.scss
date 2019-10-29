@@ -1,0 +1,16 @@
+.stock-rows-help {
+    display: flex;
+    align-items: center;
+    color: #606266;
+    width: 205px;
+
+    &__icon {
+        font-size: 26px;
+        margin-right: 5px;
+    }
+
+    &__text {
+        font-size: 10px;
+        line-height: 14px;
+    }
+}

@@ -1,0 +1,24 @@
+.tags-lined {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: rgba(49, 140, 202, 0.5);
+    }
+
+    &__tag {
+        background: white;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        color: #318cca;
+        padding: 0 9px;
+        position: relative;
+        z-index: 2;
+    }
+}

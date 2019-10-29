@@ -45,22 +45,20 @@
                 }
             }
         }
+    }
+}
 
-        .ds-popover {
-            position: absolute;
-            bottom: -5px;
-            right: -25px;
-            transform: translateY(100%);
-        }
+.stock-m-items {
+    .stock-card-vertical-wrapper:hover .stock-card-vertical {
+        box-shadow: unset;
     }
 
-    &__items {
+    // режим отображения по 1 товару, мобильное
+    .stock-card-container.horizontal {
         background: rgba(49, 140, 202, 0.12);
+
         .stock-card-vertical-wrapper {
             margin-bottom: 15px;
-        }
-        .stock-card-vertical-wrapper:hover .stock-card-vertical {
-            box-shadow: unset;
         }
         .stock-card-vertical {
             &__heading {
@@ -125,345 +123,84 @@
             }
         }
     }
-}
 
-.stock-rows-help {
-    display: flex;
-    align-items: center;
-    color: #606266;
-    width: 205px;
-
-    &__icon {
-        font-size: 26px;
-        margin-right: 5px;
-    }
-
-    &__text {
-        font-size: 10px;
-        line-height: 14px;
-    }
-}
-
-.stock-m-control {
-    padding: 25px 20px;
-    border-bottom: 1px solid rgba(49, 140, 202, 0.25);
-
-    .search {
-        margin-bottom: 25px;
-        &__bar {
-            height: 32px;
+    // отображение по несколько, мобильное
+    .stock-card-container.vertical {
+        padding: 0 4px;
+        // отображение по 2 по умолчанию
+        .stock-card-vertical-wrapper {
+            width: 49.99999%;
         }
-    }
 
-    &__catalogs-btn {
-        color: $color-primary;
-
-        span {
-            margin-left: 7px;
-            font-weight: 600;
-            font-size: 16px;
+        // отображение по 1
+        &.mode-1 {
+            .stock-card-vertical-wrapper {
+                width: 100%;
+            }
         }
-    }
 
-    &__buttons,
-    &__filter-buttons {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    &__sqrt,
-    &__cols {
-        font-size: 18px;
-        color: #c4c4c4;
-    }
-
-    &__sqrt.is-active,
-    &__cols.is-active {
-        color: $color-primary;
-    }
-
-    &__cols {
-        margin-left: 10px;
-    }
-}
-
-.stock-m-info {
-    border-bottom: 1px solid rgba(49, 140, 202, 0.5);
-
-    &__heading {
-        text-align: center;
-        font-size: 20px;
-        color: #1d1e1f;
-        padding: 10px 20px;
-    }
-
-    &__img-w {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        max-width: 100%;
-        max-height: 278px;
-        overflow: hidden;
-    }
-
-    &__cond {
-        font-size: 14px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 35px 20px;
-        max-width: unset;
-
-        .stock-cond__row {
-            margin-bottom: 20px;
+        // отображение по 2, стандартно
+        &.mode-2 {
+            .stock-card-vertical-wrapper {
+                width: 49.99999%;
+            }
         }
-    }
 
-    &__bar {
-        width: 100%;
-    }
+        // отображение по 3
+        &.mode-3 {
+            .stock-card-vertical-wrapper {
+                width: 33.33333%;
+            }
+        }
+        // отображение по 4
+        &.mode-4 {
+            .stock-card-vertical-wrapper {
+                width: 24.99999%;
+            }
+        }
 
-    &__status {
-        max-width: 215px;
-    }
-
-    &__go-catalog {
-        background: #008eed;
-        border: 1px solid #008eed;
-        font-weight: bold;
-        font-size: 12px;
-        max-width: 196px;
-    }
-
-    &__collapse {
-        .collapse-section {
-            overflow: hidden;
+        // изменения в самой карточке
+        .stock-card-vertical {
+            padding: 9px 7px 18px;
 
             &__heading {
-                display: block;
-                width: 100%;
-                font-size: 14px;
-                font-weight: normal;
-                padding: 15px 40px 15px 20px;
+                font-size: 12px;
+                line-height: 20px;
+                margin-bottom: 15px;
+            }
 
-                &:after {
-                    right: 20px;
-                    width: 9px;
-                    height: 9px;
+            &__price-wrapper {
+                margin-bottom: 10px;
+            }
+
+            &__price {
+                font-size: 16px;
+                line-height: unset;
+
+                span {
+                    font-size: 12px;
                 }
             }
 
-            &__body {
-                padding: 15px 20px;
-                display: none;
-                line-height: 24px;
+            &__org {
+                font-size: 10px;
             }
 
-            &__body.padding-unset {
-                padding: 0;
-            }
-        }
-    }
-
-    &__collapse.is-expanded {
-        .collapse-section {
-            &__heading {
-                background: rgba(0, 142, 237, 0.15);
+            &__wrapper {
+                height: 147px;
             }
 
-            &__body {
-                max-height: unset;
-                margin-top: 0;
-                display: block;
-            }
-        }
-    }
-
-    &__grid {
-        padding: 35px 10px 0;
-
-        .stock-sizes-grid__prev,
-        .stock-sizes-grid__next {
-            height: 25px;
-            width: 25px;
-            font-size: 16px;
-        }
-
-        .stock-sizes-grid__prev {
-            left: -15px;
-        }
-
-        .stock-sizes-grid__next {
-            right: -15px;
-        }
-    }
-
-    &__reviews {
-        line-height: initial;
-
-        .stock-reviews__info {
-            min-width: 75px;
-        }
-
-        .stock-reviews__review {
-            padding: 15px 20px;
-            border-bottom: 4px solid #bfe3fb;
-        }
-
-        .stock-reviews__send {
-            padding: 15px 20px;
-            flex-direction: column;
-        }
-
-        .stock-reviews__send-name {
-            margin: 0 0 10px 10px;
-        }
-
-        .stock-reviews__textarea-w {
-            position: relative;
-            width: 100%;
-        }
-
-        .stock-reviews__textarea {
-            width: 100%;
-            margin: 0 0 10px;
-        }
-
-        .stock-reviews__attach {
-            color: $color-primary;
-            top: 5px;
-            right: 5px;
-            position: absolute;
-            width: 30px;
-            height: 30px;
-            font-size: 20px;
-        }
-
-        .stock-reviews__send-btn {
-            align-self: center;
-            padding: 7px 18px;
-            margin-top: 15px;
-        }
-
-        .stock-reviews__attached-img {
-            margin-top: 8px;
-            width: 66px;
-            height: 66px;
-        }
-
-        .stock-reviews__attach-list {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .stock-reviews__attach-list-item {
-            position: relative;
-            margin-right: 10px;
-            margin-bottom: 10px;
-        }
-
-        .stock-reviews__attach-list-delete {
-            position: absolute;
-            top: 3px;
-            right: 3px;
-            font-size: 18px;
-            color: $color-primary;
-            background: white;
-            border-radius: 50%;
-            padding: 0;
-            transform: translate(50%, -50%);
-        }
-
-        .stock-reviews__attach-list-img {
-            width: 44px;
-            height: 44px;
-        }
-    }
-
-    &__org-profile {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 15px 25px 40px;
-
-        .org-profile {
-            &__image-wrapper {
-                width: 48px;
-                height: 48px;
-            }
             &__image {
-                border-radius: 50%;
+                max-height: 147px;
+            }
+
+            &__main {
+                margin-bottom: 20px;
+            }
+
+            &__buy {
+                max-width: unset;
             }
         }
-    }
-
-    &__meta-text {
-        font-size: 12px;
-        align-items: center;
-        color: #a2a3a5;
-        margin-bottom: 20px;
-    }
-
-    &__buttons {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    &__discuss {
-        max-width: 175px;
-        position: relative;
-        margin-right: 30px;
-
-        .num-of-discussions {
-            position: absolute;
-            top: -15px;
-            right: -15px;
-        }
-    }
-}
-
-.tags-lined {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    &:before {
-        position: absolute;
-        content: "";
-        width: 100%;
-        height: 1px;
-        background: rgba(49, 140, 202, 0.5);
-    }
-
-    &__tag {
-        background: white;
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 20px;
-        color: #318cca;
-        padding: 0 9px;
-        position: relative;
-        z-index: 2;
-    }
-}
-
-.go-back-btn {
-    display: flex;
-    align-items: center;
-    color: #606266;
-
-    &__text {
-        margin-left: 15px;
-        font-weight: bold;
-        font-size: 12px;
-        text-transform: uppercase;
-    }
-
-    &:hover {
-        color: $color-primary;
     }
 }
