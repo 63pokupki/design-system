@@ -60,6 +60,10 @@
     .stock-card-vertical-wrapper:hover .stock-card-vertical {
         box-shadow: unset;
     }
+    
+    // 
+    // 
+    // 
 
     // режим отображения по 1 товару, мобильное
     .stock-card-container.horizontal {
@@ -163,6 +167,14 @@
     // отображение по несколько, мобильное
     .stock-card-container.vertical {
         padding: 0 4px;
+
+        .checkbox {
+            min-height: 18px;
+        }
+
+        .org-get-position-btn {
+            margin-right: 10px;
+        }
 
         // отображение по умолчанию
         .stock-card-vertical-wrapper {
