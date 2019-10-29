@@ -1,0 +1,16 @@
+.go-back-btn {
+    display: flex;
+    align-items: center;
+    color: #606266;
+
+    &__text {
+        margin-left: 15px;
+        font-weight: bold;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    &:hover {
+        color: $color-primary;
+    }
+}

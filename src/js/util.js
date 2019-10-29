@@ -117,6 +117,7 @@ if (btn_toggle) {
 (() => {
     let modal = document.querySelectorAll(".btn-sum");
 
+
     modal.forEach((m) => {
         let plus = m.querySelector(".btn-sum__plus"),
             minus = m.querySelector(".btn-sum__minus"),
@@ -132,8 +133,6 @@ if (btn_toggle) {
         }
     });
 })()
-
-
 
 
 
@@ -182,6 +181,7 @@ if (modal_bg && btn_close && modal) {
 
 
 
+
 //Разворачивающийся блок
 (()=> {
     let toggleBlock = document.querySelectorAll(".collapse-block");
@@ -198,3 +198,21 @@ if (modal_bg && btn_close && modal) {
     }
     
 })()
+
+const sidebar_array = document.querySelectorAll(".sidebar");
+
+sidebar_array.forEach(sidebar => {
+    const sidebar_back = sidebar.querySelector(".sidebar__background");
+    const sidebar_close = sidebar.querySelector(".sidebar__close");
+
+    sidebar_back.addEventListener("click", function() {
+        sidebar.classList.toggle("sidebar_is-active");
+    });
+
+    sidebar_close.addEventListener("click", function() {
+        sidebar.classList.toggle("sidebar_is-active");
+    });
+});
+
+
+
