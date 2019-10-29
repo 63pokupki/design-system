@@ -1,3 +1,14 @@
+.sidebar-m-catalogs {
+    padding: 10px;
+
+    .stock-aside__catalogs {
+        margin-bottom: 20px;
+        border-bottom: unset;
+    }
+}
+
+
+
 .stock-m {
     &__back {
         padding: 20px 20px 15px;
@@ -60,7 +71,7 @@
     .stock-card-vertical-wrapper:hover .stock-card-vertical {
         box-shadow: unset;
     }
-    
+
     // 
     // 
     // 

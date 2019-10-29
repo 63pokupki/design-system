@@ -2,6 +2,12 @@
     width: 100%;
     background: white;
 
+    &__top-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
     &__heading {
         font-weight: 600;
         font-size: 16px;
@@ -9,8 +15,18 @@
         margin-right: 30px;
     }
 
+    &__heading-meta {
+        font-size: 12px;
+        color: #1d1e1f;
+        opacity: 0.5;
+        overflow: hidden;
+        white-space: nowrap;
+        max-width: 80%;
+    }
+
     &__check-all {
         font-size: 12px;
+        flex-shrink: 0;
     }
 
     &__catalogs {
