@@ -203,3 +203,19 @@ if (modal_bg && btn_close && modal) {
 }
 
 
+const sidebar_array = document.querySelectorAll(".sidebar");
+
+sidebar_array.forEach(sidebar => {
+    const sidebar_back = sidebar.querySelector(".sidebar__background");
+    const sidebar_close = sidebar.querySelector(".sidebar__close");
+
+    sidebar_back.addEventListener("click", function() {
+        sidebar.classList.toggle("sidebar_is-active");
+    });
+
+    sidebar_close.addEventListener("click", function() {
+        sidebar.classList.toggle("sidebar_is-active");
+    });
+});
+
+
