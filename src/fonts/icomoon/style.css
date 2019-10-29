@@ -1,4 +1,6 @@
-
+.icon-stop:before {
+  content: "\e91f";
+}
 .icon-clip:before {
   content: "\e91e";
 }
@@ -115,9 +117,6 @@
 }
 .icon-star:before {
   content: "\e92a";
-}
-.icon-stop:before {
-  content: "\e92b";
 }
 .icon-vk:before {
   content: "\e92c";

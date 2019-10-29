@@ -8,6 +8,11 @@
         color: #00c533;
     }
 
+    // ВРЕМЕННЫЙ ЦВЕТ!
+    &.blue {
+        color: $color-primary;
+    }
+
     &__icon {
         font-size: 34px;
     }

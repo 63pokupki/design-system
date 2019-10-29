@@ -19,7 +19,7 @@
             width: 33.33333%;
         }
 
-         // отображение по 2
+         // отображение по 1
          &.mode-1 {
             .stock-card-vertical-wrapper {
                 width: 100%;
@@ -42,6 +42,13 @@
         &.mode-4 {
             .stock-card-vertical-wrapper {
                 width: 24.99999%;
+            }
+        }
+
+        // отображение по 5
+        &.mode-5 {
+            .stock-card-vertical-wrapper {
+                width: 19.999999%;
             }
         }
     }
