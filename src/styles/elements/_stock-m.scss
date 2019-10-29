@@ -49,6 +49,14 @@
 }
 
 .stock-m-items {
+    // общие для всех режимов отображения изменения
+    .stock-card-vertical {
+        &__bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
     .stock-card-vertical-wrapper:hover .stock-card-vertical {
         box-shadow: unset;
     }
@@ -56,6 +64,34 @@
     // режим отображения по 1 товару, мобильное
     .stock-card-container.horizontal {
         background: rgba(49, 140, 202, 0.12);
+
+        .org-get-position-btn {
+            margin-right: 15px;
+            font-size: 24px;
+        }
+
+        .org-edit-position-btn {
+            font-size: 23px;
+        }
+
+        .checkbox {
+            min-width: 23px;
+            min-height: 23px;
+
+            &__label {
+                &:before {
+                    width: 23px;
+                    height: 22px;
+                }
+
+                &:after {
+                    left: 1px;
+                    top: 6px;
+                    width: 13px;
+                    height: 7px;
+                }
+            }
+        }
 
         .stock-card-vertical-wrapper {
             margin-bottom: 15px;
