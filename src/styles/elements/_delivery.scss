@@ -144,5 +144,22 @@
         color: $important-color;
     }
 
+    // Если нет ПВЗ
+    &__no-point {
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        &-heading {
+            font-size: 18px;
+            font-weight: 700;
+            color: $light-gray-txt-color;
+        }
+        &-ul {
+            margin: 20px 0;
+        }
+        span {
+            color: $color-primary;
+        }
+    }
 
 }
