@@ -4,12 +4,12 @@
     flex-direction: column;
     width: 100%;
     height: auto;
-    max-height: 115px;
     padding: 25px 30px;
     position: relative;
     overflow: hidden;
     box-shadow: 0px 2px 16px $collapse-block-shadow-color;
     transition: all .5s ease-in-out;
+    cursor: pointer;
     &.is-toggle {
         height: auto;
         max-height: 5000px;

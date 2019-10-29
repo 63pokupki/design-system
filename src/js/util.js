@@ -178,3 +178,23 @@ if (modal_bg && btn_close && modal) {
     elem_close(modal_bg, modal);
     elem_close(btn_close, modal);
 }
+
+
+
+
+//Разворачивающийся блок
+(()=> {
+    let toggleBlock = document.querySelectorAll(".collapse-block");
+
+    if (toggleBlock) {        
+
+        toggleBlock.forEach((t)=> {
+            let btn_toggle  = t.querySelector(".arrow");
+
+            btn_toggle.addEventListener("click", ()=> {
+                t.classList.toggle("is-toggle");
+            });
+        });
+    }
+    
+})()

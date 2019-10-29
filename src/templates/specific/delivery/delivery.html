@@ -12,64 +12,194 @@
 
     <div class="delivery">
         <div class="delivery__header">
-            <h1 class="delivery__heading-h1">Доставка</h1>
+            <h1 class="delivery__header-heading">Доставка</h1>
             <p class="delivery__txt">
                 Заказы, оформленные на сайте 63pokupki.ru, можно получить несколькими способами.
                 <br> Выберите наиболее удобный для вас:
             </p>
         </div>
         <div class="delivery__wrap-card">
+
             <!-- Блок по всей России -->
-            <div class="delivery__allrus">
-                <div class="delivery__card-header">
-                    <div class="delivery__card-header-wrap">
-                        <h2 class="delivery__heading-h2">В пунктах выдачи заказов по всей Росии</h2>
-                        <p class="delivery__txt">Стоимость услуги получения от 14 руб. за заказ</p>
-                    </div>
-                    <div class="delivery__btn-toggle-wrap">
-                        <button class="arrow arrow-down arrow_inverse arrow_transp">
-                            <i class="icon icon-arrow-down"></i>
-                        </button>
-                    </div>
+            <div class="delivery__allrus collapse-block is-toggle">
+                <button class="arrow arrow-down arrow_inverse arrow_transp">
+                    <i class="icon icon-arrow-down"></i>
+                </button>
+
+                <h2 class="delivery__card-heading">В пунктах выдачи заказов по всей России</h2>
+                <div class="delivery__card-header collapse-block__header">
+                    <p class="delivery__txt">Стоимость услуги получения от 14 руб. за заказ</p>
                 </div>
-    
-                <div class="delivery__card-content">
-                    <p class="delivery__txt">Первые 7 дней хранение заказа бесплатно, далее - 5 руб./день
-                        (летом бесплатное хранение в некоторых ПВЗ может длиться до 14 дней).
-                    </p>
-                    <p class="delivery__txt">Точную стоимость выдачи, сроки дополнительного хранения,
-                        возможность оплаты банковской картой, условия и стоимость доставки
-                        крупногабаритных заказов смотрите в конкретном ПВЗ на карте.
-                    </p>
-                    <p class="delivery__footnote">
-                        *В некоторых закупках могут быть дополнительные транспортные расходы, которые оплачиваются вместе со
-                        стоимостью товара (смотрите условия закупки).
-                    </p>
-                    <p class="delivery__txt">
-                        Пункты вывоза заказов (ПВЗ) есть в следующих регионах:
-                        <i class="icon icon-info has-tooltip">
-                            <span class="tooltip tooltip_top">Если вы не нашли ПВЗ в своём городе, то выберите способ
-                                "Доставка по Росии"</span>
-                        </i>
-                    </p>    
+                <div class="collapse-block__content">
+                    <!-- Контент -->
+                    <div class="delivery__card-content">
+                        <p class="delivery__txt">Первые 7 дней хранение заказа бесплатно, далее - 5 руб./день
+                            (летом бесплатное хранение в некоторых ПВЗ может длиться до 14 дней).
+                        </p>
+                        <p class="delivery__txt">Точную стоимость выдачи, сроки дополнительного хранения,
+                            возможность оплаты банковской картой, условия и стоимость доставки
+                            крупногабаритных заказов смотрите в конкретном ПВЗ на карте.
+                        </p>
+                        <p class="delivery__txt delivery__txt_footnote">
+                            *В некоторых закупках могут быть дополнительные транспортные расходы, которые оплачиваются
+                            вместе со
+                            стоимостью товара (смотрите условия закупки).
+                        </p>
+                        <p class="delivery__txt">
+                            Пункты вывоза заказов (ПВЗ) есть в следующих регионах:
+                            <i class="icon icon-info has-tooltip">
+                                <span class="tooltip tooltip_top">
+                                    Если вы не нашли ПВЗ в своём городе, то выберите
+                                    способ "Доставка по Росии"</span>
+                            </i>
+                        </p>
+                        <div class="delivery__card-search search">
+                            <!-- строка поиска -->
+                            <input class="search__bar" type="text" placeholder="Поиск" />
+                            <!-- кнопка поиска -->
+                            <button class="search__button">
+                                <img src="~images/search.svg" />
+                            </button>
+                        </div>
+                        <div class="delivery__point-link_current delivery__point-link">
+                            <a href="#">Самарская область</a>
+                            <p class="delivery__txt">- 232 пункта выдачи</p>
+                        </div>
+                        <div class="delivery__point">
+                            <div class="delivery__point-col">
+                                <div class="delivery__point-link">
+                                    <a href="#">Алтайский край</a>
+                                    <p class="delivery__txt">- 1 пункт выдачи</p>
+                                </div>
+                                <div class="delivery__point-link">
+                                    <a href="#">Архангельская область</a>
+                                    <p class="delivery__txt">- 1 пункт выдачи</p>
+                                </div>
+                                <div class="delivery__point-link">
+                                    <a href="#">Башкортостан</a>
+                                    <p class="delivery__txt">- 4 пункта выдачи</p>
+                                </div>
+                                <div class="delivery__point-link">
+                                    <a href="#">Белгородская область</a>
+                                    <p class="delivery__txt">- 1 пункт выдачи</p>
+                                </div>
+                                <div class="delivery__point-link">
+                                    <a href="#">Волгоградская область</a>
+                                    <p class="delivery__txt">- 1 пункт выдачи</p>
+                                </div>
+                                <div class="delivery__point-link">
+                                    <a href="#">Воронежская область</a>
+                                    <p class="delivery__txt">- 1 пункт выдачи</p>
+                                </div>
+                                <div class="delivery__point-link">
+                                    <a href="#">Кемеровская область</a>
+                                    <p class="delivery__txt">- 1 пункт выдачи</p>
+                                </div>
+                                <div class="delivery__point-link">
+                                    <a href="#">Кировская область</a>
+                                    <p class="delivery__txt">- 1 пункт выдачи</p>
+                                </div>
+                                <div class="delivery__point-link">
+                                    <a href="#">Краснодарский край</a>
+                                    <p class="delivery__txt">- 4 пункта выдачи</p>
+                                </div>
+                                <div class="delivery__point-link">
+                                    <a href="#">Санкт-Петербург и Ленинградская область</a>
+                                    <p class="delivery__txt">- 7 пунктов выдачи</p>
+                                </div>
+                                <div class="delivery__point-link">
+                                    <a href="#">Москва и Московская область</a>
+                                    <p class="delivery__txt">- 5 пунктов выдачи</p>
+                                </div>
+                                <div class="delivery__point-link">
+                                    <a href="#">Нижегородская область</a>
+                                    <p class="delivery__txt">- 2 пункта выдачи</p>
+                                </div>
+                                <div class="delivery__point-link">
+                                    <a href="#">Новосибирская область</a>
+                                    <p class="delivery__txt">- 1 пункт выдачи</p>
+                                </div>
+                                <div class="delivery__point-link">
+                                    <a href="#">Омская область</a>
+                                    <p class="delivery__txt">- 1 пункт выдачи</p>
+                                </div>
+
+                            </div>
+                            <div class="delivery__point-col">
+                                <div class="delivery__point-link">
+                                    <a href="#">Оренбургская область</a>
+                                    <p class="delivery__txt">- 9 пунктов выдачи</p>
+                                </div>
+                                <div class="delivery__point-link">
+                                    <a href="#">Орловская область</a>
+                                    <p class="delivery__txt">- 1 пункт выдачи</p>
+                                </div>
+                                <div class="delivery__point-link">
+                                    <a href="#">Пензенская область</a>
+                                    <p class="delivery__txt">- 5 пунктов выдачи</p>
+                                </div>
+                                <div class="delivery__point-link">
+                                    <a href="#">Ростовская область</a>
+                                    <p class="delivery__txt">- 1 пункт выдачи</p>
+                                </div>
+                                <div class="delivery__point-link">
+                                    <a href="#">Рязанская область</a>
+                                    <p class="delivery__txt">- 1 пункт выдачи</p>
+                                </div>
+                                <div class="delivery__point-link">
+                                    <a href="#">Саратовская область</a>
+                                    <p class="delivery__txt">- 1 пункт выдачи</p>
+                                </div>
+                                <div class="delivery__point-link">
+                                    <a href="#">Татарстан</a>
+                                    <p class="delivery__txt">- 6 пунктов выдачи</p>
+                                </div>
+                                <div class="delivery__point-link">
+                                    <a href="#">Тюменская область</a>
+                                    <p class="delivery__txt">- 1 пункт выдачи</p>
+                                </div>
+                                <div class="delivery__point-link">
+                                    <a href="#">Томская область</a>
+                                    <p class="delivery__txt">- 1 пункт выдачи</p>
+                                </div>
+                                <div class="delivery__point-link">
+                                    <a href="#">Ульяновская область</a>
+                                    <p class="delivery__txt">- 13 пунктов выдачи</p>
+                                </div>
+                                <div class="delivery__point-link">
+                                    <a href="#">Удмуртия</a>
+                                    <p class="delivery__txt">- 1 пункт выдачи</p>
+                                </div>
+                                <div class="delivery__point-link">
+                                    <a href="#">Хабаровский край</a>
+                                    <p class="delivery__txt">- 1 пункт выдачи</p>
+                                </div>
+                                <div class="delivery__point-link">
+                                    <a href="#">Ярославская область</a>
+                                    <p class="delivery__txt">- 1 пункт выдачи</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-    
+
             <!-- Блок курьером -->
             <div class="delivery__courier">
                 <div class="delivery__btn-toggle-wrap"></div>
             </div>
-    
+
             <!-- Блок почтой России -->
             <div class="delivery__mail-rus">
                 <div class="delivery__btn-toggle-wrap"></div>
             </div>
-    
+
             <!-- Блок транспортной компанией -->
             <div class="delivery__transp">
                 <div class="delivery__btn-toggle-wrap"></div>
             </div>
-    
+
             <!-- Блок футер -->
             <div class="delivery__footer">
                 <div class="delivery__btn-toggle-wrap"></div>
