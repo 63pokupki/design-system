@@ -21,8 +21,7 @@ $main-padding-modal: 20px;
         }
     }
 
-    &__bg {       
-
+    &__bg { 
         position: fixed;
         top: 0;
         bottom: 0;
@@ -42,53 +41,6 @@ $main-padding-modal: 20px;
             background-color: rgba(0, 0, 0, 0.6);
         }
     }    
-    // Если есть выбранные позиции, кнопка btn-apply становится активной
-    &.is-selected.filter-modal {
-        .btn-apply {
-            background-color: $color-primary;
-            color: #fff;
-            cursor: pointer;
-        }
-    }
-    // Option: Добавление класса .label-square родительскому 
-    // блоку modal-sort__back, меняет круглый лэйбл на квадратный
-    &.label-square  {
-        .modal__form {
-            label {
-                border-radius: 2px;
-            }
-        }
-    }
-    //Option: Класс .label-none скрывает лэйблы-чекбоксы
-    &.checkbox-none {
-        .modal__form {
-            .inputs-group__label-checkbox {
-                display: none;                    
-            }
-        }
-    }
-    //Option: Добавляет блок с кнопками
-    &.btn-block {
-        .modal__btns {
-            display: flex;
-        }
-    }
-    //Option: добавляет окно фильтра
-    &.filter-modal {
-        @extend .btn-block, .label-square           
-    }
-    &.filter-modal {
-        .btn-apply {
-            border: 1px solid $color-primary;
-            background-color: #fff;
-            color: $color-primary;
-            cursor: default;
-        }
-    }
-    //Option: Добавляет окно сортировки
-    &.sort-modal {
-        @extend .checkbox-none, 
-    }
     
     &__wrap {
         position: relative;
@@ -147,34 +99,6 @@ $main-padding-modal: 20px;
     }
     &__header {
         margin-bottom: 20px;
-    }
-    &__form {
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-        margin: 5px;
-        width: 100%;
-    }
-    &__btns {
-        position: relative;
-        display: none;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        margin-top: 40px;        
-        &:before {
-            content: "";
-            position: absolute;
-            bottom: 50px;
-            width: calc(100% + 40px);// Прибавляем padding-left(20px) и padding-right(20px) блока modal-sort__wrap
-            height: 1px;
-            background-color: $sky-blue-color;
-        }
-        button {
-            max-width: 180px;
-            cursor: pointer;
-        }
-          
     }
     &__content {
         display: flex;
