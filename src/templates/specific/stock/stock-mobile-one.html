@@ -333,6 +333,94 @@
             <button class="sidebar__close"></button>
         </aside>
 
+        <!-- модалка cортировка по -->
+        <div class="modal modal-sorting">
+            <div class="modal__wrap">
+                <div class="modal__btn-close"><i class="icon icon-close"></i></div>
+                <div class="modal__header">Сортировка по:</div>
+                <div class="modal__content">
+                    <div class="checkbox checkbox_circle">
+                        <input class="checkbox__input" type="checkbox" id="chx-01p" />
+                        <label class="checkbox__label" for="chx-01p">популярности</label>
+                    </div>
+                    <div class="checkbox checkbox_circle">
+                        <input class="checkbox__input" type="checkbox" id="chx-02p" />
+                        <label class="checkbox__label" for="chx-02p">возрастанию цены</label>
+                    </div>
+                    <div class="checkbox checkbox_circle">
+                        <input class="checkbox__input" type="checkbox" id="chx-03p" />
+                        <label class="checkbox__label" for="chx-03p">убыванию цены</label>
+                    </div>
+                    <div class="checkbox checkbox_circle">
+                        <input class="checkbox__input" type="checkbox" id="chx-04p" />
+                        <label class="checkbox__label" for="chx-04p">новизне</label>
+                    </div>
+                    <div class="checkbox checkbox_circle">
+                        <input class="checkbox__input" type="checkbox" id="chx-05p" />
+                        <label class="checkbox__label" for="chx-05p">названию</label>
+                    </div>
+                    <div class="checkbox checkbox_circle">
+                        <input class="checkbox__input" type="checkbox" id="chx-06p" />
+                        <label class="checkbox__label" for="chx-06p">заполнености рядов</label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__bg"></div>
+        </div>
+
+        <!-- модалка выбор размера -->
+        <div class="modal modal-choise-of-color-size">
+            <div class="modal__wrap">
+                <div class="modal__btn-close"><i class="icon icon-close"></i></div>
+                <div class="modal__content">
+                    <!-- Если не выбран параметр, присвоить класс .is-warning, элементу modal__content-color -->
+                    <div class="modal__content-color">
+                        <h5>Цвет:</h5>
+                        <ul class="item-params-list">
+                            <li class="item-params-list__item">чёрный</li>
+                            <li class="item-params-list__item">красный</li>
+                            <li class="item-params-list__item">бежевый</li>
+                            <li class="item-params-list__item">чёрный</li>
+                            <li class="item-params-list__item">красный</li>
+                            <li class="item-params-list__item">бежевый</li>
+                        </ul>
+
+                        <button class="link link_hover">Ещё цвета</button>
+                    </div>
+                    <!-- Если не выбран параметр, присвоить класс .is-warning, элементу modal__content-size -->
+                    <div class="modal__content-size">
+                        <h5>Размер:</h5>
+                        <ul class="item-params-list ">
+                            <li class="item-params-list__item">36</li>
+                            <li class="item-params-list__item">37</li>
+                            <li class="item-params-list__item">38</li>
+                            <li class="item-params-list__item">39</li>
+                            <li class="item-params-list__item">40</li>
+                            <li class="item-params-list__item">41</li>
+                            <li class="item-params-list__item">42</li>
+                            <li class="item-params-list__item">43</li>
+                        </ul>
+                        <button class="link link_hover ">Ещё размеры</button>
+                    </div>
+                    <!-- При задержке отправки запроса, после нажатия на кнопку "В корзину",
+                            добавить класс .is-load элементу  modal__btn-container -->
+                    <div class="modal__btn-container">
+                        <div class="modal__sum">
+                            <button class="modal__minus"></button>
+                            <input class="modal__sum-num" value="128" />
+                            <button class="modal__plus"></button>
+                        </div>
+                        <div class="ds-loader"></div>
+                        <button class="ds-btn ds-btn_hover btn-add-to-card">
+                            <div class="ds-btn__text">В корзину</div>
+                            <i class="icon icon-cart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__bg"></div>
+        </div>
+
         <div class="stock-m">
             <div class="stock-m__back">
                 <button class="go-back-btn ">
@@ -627,7 +715,7 @@
             <div class="stock-m__filters">
                 <div class="sorting sorting_mobile sorting_col">
                     <div class="sorting__btn">
-                        <div class="sorting__name">Сортировка по:</div>
+                        <div class="sorting__name js-sorting-btn">Сортировка по:</div>
                         <span class="sorting__selected-position">Возрастанию цены</span>
                     </div>
                 </div>
@@ -1059,21 +1147,39 @@
             </div>
         </footer>
 
-
         <script>
-        var catalogs_btn = document.querySelector('.stock-m-control__catalogs-btn');
-        var catalogs_aside = document.querySelector('.js-catalogs-aside');
+            var catalogs_btn = document.querySelector(".stock-m-control__catalogs-btn");
+            var catalogs_aside = document.querySelector(".js-catalogs-aside");
 
-        var filters_btn = document.querySelector('.js-filter-btn');
-        var filters_aside = document.querySelector('.js-filters-aside');
+            var filters_btn = document.querySelector(".js-filter-btn");
+            var filters_aside = document.querySelector(".js-filters-aside");
 
-        if (catalogs_btn && catalogs_aside) {
-            catalogs_btn.addEventListener("click", () => catalogs_aside.classList.toggle('sidebar_is-active'))
-        }
+            if (catalogs_btn && catalogs_aside) {
+                catalogs_btn.addEventListener("click", () => catalogs_aside.classList.toggle("sidebar_is-active"));
+            }
 
-        if (filters_btn && filters_aside) {
-            filters_btn.addEventListener("click", () => filters_aside.classList.toggle('sidebar_is-active'))
-        }
+            if (filters_btn && filters_aside) {
+                filters_btn.addEventListener("click", () => filters_aside.classList.toggle("sidebar_is-active"));
+            }
+
+            var sorting_btn = document.querySelector(".js-sorting-btn");
+            var modal_sorting = document.querySelector(".modal-sorting");
+
+            if (sorting_btn && modal_sorting) {
+                sorting_btn.addEventListener("click", () => {
+                    modal_sorting.classList.toggle("is-visible");
+                });
+            }
+
+            var buy_button = document.querySelectorAll(".stock-card-vertical__buy");
+            var modal_params = document.querySelector(".modal-choise-of-color-size");
+            if (buy_button && modal_params) {
+                buy_button.forEach(button => {
+                    button.addEventListener("click", () => {
+                        modal_params.classList.toggle("is-visible");
+                    });
+                });
+            }
         </script>
     </body>
 </html>

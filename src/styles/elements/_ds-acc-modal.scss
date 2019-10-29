@@ -4,25 +4,31 @@ $main-padding-modal: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all .5s;
+    transition: all 0.5s;
     opacity: 0;
     visibility: hidden;
     z-index: 999;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
 
     &.is-visible {
         opacity: 1;
         visibility: visible;
-        transition: all .5s;
+        transition: all 0.5s;
         .modal__bg {
             opacity: 1;
             visibility: visible;
-            transition: all .5s;
+            transition: all 0.5s;
             background-color: rgba(0, 0, 0, 0.6);
         }
     }
 
-    &__bg {       
-
+    &__bg {
         position: fixed;
         top: 0;
         bottom: 0;
@@ -32,16 +38,16 @@ $main-padding-modal: 20px;
         min-height: 100%;
         background-color: rgba(0, 0, 0, 0);
         z-index: 1000;
-        transition: all .5s;
+        transition: all 0.5s;
         opacity: 0;
         visibility: hidden;
         &.is-visible {
             opacity: 1;
             visibility: visible;
-            transition: all .5s;
+            transition: all 0.5s;
             background-color: rgba(0, 0, 0, 0.6);
         }
-    }    
+    }
     // Если есть выбранные позиции, кнопка btn-apply становится активной
     &.is-selected.filter-modal {
         .btn-apply {
@@ -50,9 +56,9 @@ $main-padding-modal: 20px;
             cursor: pointer;
         }
     }
-    // Option: Добавление класса .label-square родительскому 
+    // Option: Добавление класса .label-square родительскому
     // блоку modal-sort__back, меняет круглый лэйбл на квадратный
-    &.label-square  {
+    &.label-square {
         .modal__form {
             label {
                 border-radius: 2px;
@@ -63,7 +69,7 @@ $main-padding-modal: 20px;
     &.checkbox-none {
         .modal__form {
             .inputs-group__label-checkbox {
-                display: none;                    
+                display: none;
             }
         }
     }
@@ -75,7 +81,7 @@ $main-padding-modal: 20px;
     }
     //Option: добавляет окно фильтра
     &.filter-modal {
-        @extend .btn-block, .label-square           
+        @extend .btn-block, .label-square;
     }
     &.filter-modal {
         .btn-apply {
@@ -87,9 +93,9 @@ $main-padding-modal: 20px;
     }
     //Option: Добавляет окно сортировки
     &.sort-modal {
-        @extend .checkbox-none, 
+        @extend .checkbox-none;
     }
-    
+
     &__wrap {
         position: relative;
         display: flex;
@@ -111,12 +117,15 @@ $main-padding-modal: 20px;
             top: 0;
             right: 0;
             cursor: pointer;
-            .icon-close {
-                &:hover {
-                    &:after, &:before {
-                        background-color: $color-primary;                        
+            z-index: 5;
+
+            &:hover {
+                .icon-close {
+                    &:after,
+                    &:before {
+                        background-color: $color-primary;
                     }
-                }                
+                }
             }
             &:active {
                 &:before {
@@ -127,7 +136,8 @@ $main-padding-modal: 20px;
                     left: 10px;
                 }
             }
-            &:after, &:before {
+            &:after,
+            &:before {
                 content: "";
                 position: absolute;
                 display: flex;
@@ -161,12 +171,12 @@ $main-padding-modal: 20px;
         justify-content: center;
         align-items: center;
         width: 100%;
-        margin-top: 40px;        
+        margin-top: 40px;
         &:before {
             content: "";
             position: absolute;
             bottom: 50px;
-            width: calc(100% + 40px);// Прибавляем padding-left(20px) и padding-right(20px) блока modal-sort__wrap
+            width: calc(100% + 40px); // Прибавляем padding-left(20px) и padding-right(20px) блока modal-sort__wrap
             height: 1px;
             background-color: $sky-blue-color;
         }
@@ -174,14 +184,9 @@ $main-padding-modal: 20px;
             max-width: 180px;
             cursor: pointer;
         }
-          
     }
     &__content {
         display: flex;
         overflow: auto;
     }
-
 }
-
-
-

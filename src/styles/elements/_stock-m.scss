@@ -1,3 +1,28 @@
+.modal-sorting {
+    .modal__header {
+        font-weight: 600;
+        font-size: 16px;
+        color: #606266;
+    }
+    .modal__wrap {
+        min-width: 264px;
+        border-radius: 10px;
+    }
+    .modal__content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .checkbox {
+        margin-bottom: 10px;
+        &__label {
+            font-size: 14px;
+            color: #606266;
+        }
+    }
+}
+
 .sidebar-stock-m {
     padding: 12px;
 
@@ -10,8 +35,6 @@
         border-bottom: unset;
     }
 }
-
-
 
 .stock-m {
     &__back {
@@ -76,9 +99,9 @@
         box-shadow: unset;
     }
 
-    // 
-    // 
-    // 
+    //
+    //
+    //
 
     // режим отображения по 1 товару, мобильное
     .stock-card-container.horizontal {
