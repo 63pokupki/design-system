@@ -9,7 +9,6 @@
     overflow: hidden;
     box-shadow: 0px 2px 16px $collapse-block-shadow-color;
     transition: all .5s ease-in-out;
-    cursor: pointer;
     &.is-toggle {
         height: auto;
         max-height: 5000px;

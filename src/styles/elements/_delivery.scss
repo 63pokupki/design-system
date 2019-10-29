@@ -92,21 +92,38 @@
     //Доставка курьером
     &__t-heading {
         font-size: 12px;
-        color: $light-gray-link-color;
+        .delivery__t-col {
+            color: $light-gray-link-color;
+        }
+    }
+
+    // РАзделительная линия
+    hr {
+        width: 100%;
+        size: 1px;
+        color: $light-gray-sum-btn;
+        opacity: .5;
     }
     &__t-row {
         display: flex;
+        flex-direction: row;
         justify-content: flex-start;
         align-items: flex-start;
         width: 100%;
         margin: 10px 0;
-        border-bottom: 1px solid $light-gray-sum-btn;
+        // border-bottom: 1px solid $light-gray-sum-btn;
     }
     &__t-col {
         display: flex;
         flex-direction: column;
-        width: calc(100%/3);
+        min-width: 33.33%;
+        margin: 0 10px 0 0;
         color: $light-gray-txt-color;
+        .delivery__txt {
+            line-height: 25px;
+            margin: 0 0 10px 0;
+            padding: 0;
+        }
     }
 
 
