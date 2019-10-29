@@ -4,10 +4,9 @@
     flex-direction: column;
     width: 100%;
     height: auto;
-    max-height: 115px;
     padding: 25px 30px;
     position: relative;
-    // overflow: hidden;
+    overflow: hidden;
     box-shadow: 0px 2px 16px $collapse-block-shadow-color;
     transition: all .5s ease-in-out;
     &.is-toggle {
@@ -20,8 +19,8 @@
             transition: all 1s;
             opacity: 1;
         }
-        .arrow {
-            transform: rotate(270deg);
+        .icon-arrow-down {
+            transform: rotate(180deg);
             transition: all .5s;
 
         }
@@ -33,15 +32,10 @@
         top: 40px;
         right: 40px;
         transition: all .5s;
+        .icon-arrow-down {
+            transition: all .5s;
+        }
 
-        &:after, &:before {
-            background: $light-gray-color;
-        }
-        &:hover {
-            &:after, &:before {
-                background: $color-primary;
-            }
-        }
     }
 
     h2 {
