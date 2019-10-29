@@ -1,6 +1,6 @@
 .stock-m {
     &__back {
-        padding: 20px;
+        padding: 20px 20px 15px;
     }
 
     &__filters {
@@ -127,35 +127,21 @@
     // отображение по несколько, мобильное
     .stock-card-container.vertical {
         padding: 0 4px;
-        // отображение по 2 по умолчанию
+
+        // отображение по умолчанию
         .stock-card-vertical-wrapper {
             width: 49.99999%;
-        }
 
-        // отображение по 1
-        &.mode-1 {
-            .stock-card-vertical-wrapper {
-                width: 100%;
-            }
-        }
-
-        // отображение по 2, стандартно
-        &.mode-2 {
-            .stock-card-vertical-wrapper {
-                width: 49.99999%;
-            }
-        }
-
-        // отображение по 3
-        &.mode-3 {
-            .stock-card-vertical-wrapper {
+            @media screen and (min-width: 481px) {
                 width: 33.33333%;
             }
-        }
-        // отображение по 4
-        &.mode-4 {
-            .stock-card-vertical-wrapper {
+
+            @media screen and (min-width: 681px) {
                 width: 24.99999%;
+            }
+
+            @media screen and (min-width: 921px) {
+                width: 19.999999%;
             }
         }
 
@@ -192,10 +178,6 @@
 
             &__image {
                 max-height: 147px;
-            }
-
-            &__main {
-                margin-bottom: 20px;
             }
 
             &__buy {
