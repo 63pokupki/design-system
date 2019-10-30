@@ -1,9 +1,11 @@
 
 .delivery {
-    display: block;    
-    width: 100%;
-    padding: 5px;
-    background: #ffffff;
+    &__content {
+        display: block;    
+        width: 100%;
+        padding: 5px;
+        background: #ffffff;
+    }
 
     &__btn-toggle-wrap {
         display: flex;
