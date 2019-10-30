@@ -16,6 +16,7 @@
             margin: 0 0 40px 0;
         }
     }
+    //Ссылки
     &__link {
         font-size: 14px;
         font-weight: 600;
@@ -26,6 +27,7 @@
         color: $light-gray-txt-color;
     }
     
+    //Текст
     &__txt {
         margin: 0px 0;
         padding: 0 70px 0 0;
@@ -39,6 +41,10 @@
         &_footnote {
             font-size: 14px;
             color: $light-gray-link-color;    
+        }
+        //Жирное начертание
+        &_bold {
+            font-weight: 700;
         }
     }
     // Карточка
