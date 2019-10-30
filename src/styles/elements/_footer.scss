@@ -35,6 +35,7 @@
     align-items: center;
     background: #fff;
     overflow: hidden;
+    box-shadow: unset;
 
     &__container {
         display: block;
@@ -135,8 +136,10 @@
         justify-content: center;
         width: 100%;
         margin: 0 0 15px 0;
+        padding: 20px;
         h5 {
             font-size: 14px;
+            margin-bottom: 15px;
         }
         &-site {
             display: flex;
@@ -189,6 +192,7 @@
         margin-top: 20px;
         font-size: 12px;
         color: $light-gray-link-color;
+        margin-bottom: 10px;
     }
     &__support {
         display: flex;
@@ -314,6 +318,7 @@
 
         &__col {
             width: 50%;
+            margin-bottom: 10px;
         }
 
         &__advantage {
@@ -341,7 +346,7 @@
         }
 
         &__links {
-            padding: 20px;
+            
             &-a {
                 font-size: 12px;
             }
