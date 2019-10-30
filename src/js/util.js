@@ -106,7 +106,7 @@ let selectCont = document.querySelectorAll(".modal__select");
 if (selectCont) {
     selectCont.forEach(sc => {
         let sel_position = sc.querySelector(".modal__selected-position"),
-            li = sc.querySelectorAll("li.item");
+            li = sc.querySelectorAll("li");
 
         li.forEach(i => {
             i.addEventListener("click", () => {
