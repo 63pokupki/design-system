@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Доставка</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?404c57eb42494bfc7c31" rel="stylesheet"><link href="css/ds-utils.css?404c57eb42494bfc7c31" rel="stylesheet"><link href="css/ds-ui-kit.css?404c57eb42494bfc7c31" rel="stylesheet"></head>
+<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?dfbeba3bfbe5fb8b4e1b" rel="stylesheet"><link href="css/ds-utils.css?dfbeba3bfbe5fb8b4e1b" rel="stylesheet"><link href="css/ds-ui-kit.css?dfbeba3bfbe5fb8b4e1b" rel="stylesheet"></head>
 
 <body>
 
@@ -402,36 +402,82 @@
                 <p class="delivery__txt">Стоимость доставки от 190 руб.</p>
                 <div class="collapse-block__content">
                     <div class="delivery__card-content">
-                        <p class="delivery__txt delivery__txt_bold">Получение товара - в ближайшем для вас отделении Почты России.</p>
+                        <p class="delivery__txt delivery__txt_bold">Получение товара - в ближайшем для вас отделении
+                            Почты России.</p>
                         <br>
-                        <p class="delivery__txt">
-                            Мы скомпонуем все ваши заказы от разных организаторов и отправим их <b>одной</b> посылкой, а также просчитаем 
-                            стоимость всех типов доставки и подберем для вас <b>самый удобный и дешёвый</b> тариф.
-                        </p>
                         <br>
                         <h4>Стоимость доставки</h4>
-                        <p class="delivery__txt">* Стоимость отправления DPD можно посчитать <a href="https://www.dpd.ru/ols/calc/calc.do2" target="_blank" rel="nofollow" class="delivery__link">Здесь</a></p>
-                        <p class="delivery__txt">* Стоимость отправления СДЭК можно посчитать <a href="https://www.cdek.ru/calculator.html?utm_referrer=https%3a%2f%2f63pokupki.ru%2fforum%2fphpBB3%2fapp.php%2fpage%2fdelivery" target="_blank" rel="nofollow" class="delivery__link">Здесь</a></p>
-                        <p class="delivery__txt">* Стоимость отправления Hermes можно посчитать <a href="https://www.hermesrussia.ru/dlya-klientov/rasschitat-stoimost/" target="_blank" rel="nofollow" class="delivery__link">Здесь</a></p>
-                        <p class="delivery__txt">* Дополнительно 20 руб. за услугу формирования и отправки Заказа - оплачивается ДО передачи товара в ТК через корзину на сайте <a href="https://63pokupki.ru/forum/sp/order.php" target="_blank" rel="nofollow" class="delivery__link">63pokupki.ru</a>.</p>
-                        <p class="delivery__txt">* В некоторых закупках могут быть дополнительные транспортные расходы</p>
                         <br>
-                        <p class="delivery__txt">Стоимость пересылки оплачивается в ТК при получении посылки в вашем городе.</p>
+                        <p class="delivery__txt">* Стоимость отправления Почтой России можно посчитать в <a href="https://russianpostcalc.ru/" target="_blank" rel="nofollow" class="delivery__link">Калькуляторе</a></p>
+                        <p class="delivery__txt">* Дополнительно 20 руб. оплачивается за услугу отправки Заказа (входит в платеж за пересылку по Почте России)</p>
+                        <p class="delivery__txt">* Дополнительно оплачивается 50-150 руб. в случае, если нужна специальная коробка или упаковка</p>
+                        <p class="delivery__txt">* В некоторых закупках могут быть дополнительные транспортные расходы, которые оплачиваются вместе со стоимостью товара (смотрите условия закупки и уточняйте у организатора)</p>
+                        <br>
+                        <p class="delivery__txt">Оплата всей суммы за доставку происходит при получении посылки на Почте России.</p>
                         <br>
                         <p class="delivery__txt-important">Важно!</p>
-                        <p class="delivery__txt">Если в условиях закупки указаны ограничения по доставке хрупких товаров или жидкостей - 
-                            перед заказом доставки обязательно уточните у Организатора возможность доставки на ваш товар!
+                        <p class="delivery__txt">Если в условиях закупки указаны ограничения по доставке хрупких товаров
+                            или жидкостей -
+                            перед заказом доставки обязательно уточните у Организатора возможность доставки на ваш
+                            товар!
                         </p>
                         <br>
-                        <a href="https://63pokupki.ru/forum/phpBB3/viewtopic.php?f=212&t=414808" target="_blank" rel="nofollow" class="delivery__link">Как оформить доставку Транспортной компанией?</a>
+                        <a href="https://63pokupki.ru/forum/phpBB3/viewtopic.php?f=212&t=414808" target="_blank"
+                            rel="nofollow" class="delivery__link">Как оформить доставку Транспортной компанией?</a>
                     </div>
                 </div>
             </div>
 
             <!-- Блок транспортной компанией -->
-            <div class="delivery__transp">
-                <div class="delivery__btn-toggle-wrap"></div>
+            <div class="delivery__transp collapse-block is-toggle">
+                <button class="arrow arrow-down arrow_inverse arrow_transp">
+                    <i class="icon icon-arrow-down"></i>
+                </button>
+                <h2 class="delivery__card-heading">Доставка Транспортной компанией</h2>
+                <p class="delivery__txt">стоимость доставки от 170 руб.</p>
+                <div class="collapse-block__content">
+                    <div class="delivery__card-content">
+                        <br>
+                        <p class="delivery__txt">
+                            Мы скомпонуем все ваши заказы от разных организаторов и отправим их <b>одной</b> посылкой, а
+                            также просчитаем
+                            стоимость всех типов доставки и подберем для вас 
+                            <b>самый удобный и дешёвый тариф + сделаем скидку на доставку</b>  через компании партнёров (DPD, СДЭК или Hermes).
+                        </p>
+                        <br>
+                        <h4>Стоимость доставки</h4>
+                        <p class="delivery__txt">* Стоимость отправления DPD можно посчитать <a
+                                href="https://www.dpd.ru/ols/calc/calc.do2" target="_blank" rel="nofollow"
+                                class="delivery__link">Здесь</a></p>
+                        <p class="delivery__txt">* Стоимость отправления СДЭК можно посчитать <a
+                                href="https://www.cdek.ru/calculator.html?utm_referrer=https%3a%2f%2f63pokupki.ru%2fforum%2fphpBB3%2fapp.php%2fpage%2fdelivery"
+                                target="_blank" rel="nofollow" class="delivery__link">Здесь</a></p>
+                        <p class="delivery__txt">* Стоимость отправления Hermes можно посчитать <a
+                                href="https://www.hermesrussia.ru/dlya-klientov/rasschitat-stoimost/" target="_blank"
+                                rel="nofollow" class="delivery__link">Здесь</a></p>
+                        <p class="delivery__txt">* Дополнительно 20 руб. за услугу формирования и отправки Заказа -
+                            оплачивается ДО передачи товара в ТК через корзину на сайте <a
+                                href="https://63pokupki.ru/forum/sp/order.php" target="_blank" rel="nofollow"
+                                class="delivery__link">63pokupki.ru</a>.</p>
+                        <p class="delivery__txt">* В некоторых закупках могут быть дополнительные транспортные расходы
+                        </p>
+                        <br>
+                        <p class="delivery__txt">Стоимость пересылки оплачивается в ТК при получении посылки в вашем
+                            городе.</p>
+                        <br>
+                        <p class="delivery__txt-important">Важно!</p>
+                        <p class="delivery__txt">Если в условиях закупки указаны ограничения по доставке хрупких товаров
+                            или жидкостей -
+                            перед заказом доставки обязательно уточните у Организатора возможность доставки на ваш
+                            товар!
+                        </p>
+                        <br>
+                        <a href="https://63pokupki.ru/forum/phpBB3/viewtopic.php?f=212&t=414808" target="_blank"
+                            rel="nofollow" class="delivery__link">Как оформить доставку Транспортной компанией?</a>
+                    </div>
+                </div>
             </div>
+
 
             <!-- Блок футер -->
             <div class="delivery__footer">
@@ -441,6 +487,6 @@
         </div>
     </div>
 
-<script type="text/javascript" src="js/highlight-syntax.js?404c57eb42494bfc7c31"></script><script type="text/javascript" src="js/ds-utils.js?404c57eb42494bfc7c31"></script><script type="text/javascript" src="js/categories-icons-sprite.js?404c57eb42494bfc7c31"></script><script type="text/javascript" src="js/ds-ui-kit.js?404c57eb42494bfc7c31"></script></body>
+<script type="text/javascript" src="js/highlight-syntax.js?dfbeba3bfbe5fb8b4e1b"></script><script type="text/javascript" src="js/ds-utils.js?dfbeba3bfbe5fb8b4e1b"></script><script type="text/javascript" src="js/categories-icons-sprite.js?dfbeba3bfbe5fb8b4e1b"></script><script type="text/javascript" src="js/ds-ui-kit.js?dfbeba3bfbe5fb8b4e1b"></script></body>
 
 </html>
