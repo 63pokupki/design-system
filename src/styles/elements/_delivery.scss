@@ -3,6 +3,27 @@
     &__content-wrap {
         display: flex;
         width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+        background: #fff;
+    }
+    &__link-user-location {
+        position: relative;
+        margin: 0 20px 0 0;
+        color: $color-primary-light;
+        text-decoration: none;
+        border-bottom: 1px dashed $color-primary-light;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 4px;
+            right: -15px;
+            display: block;
+            width: 1px;
+            min-height: calc(100% - 5px);
+            margin: 0 5px;
+            background: $dark-grey-color;
+        }
     }
     &__content {
         display: block;    
@@ -13,7 +34,7 @@
     &__sidebar {
         display: flex;
         flex-direction: column;
-        width: 30%;
+        width: 25%;
     }
     // Хлебные крошки
     &__breadcrumbs {

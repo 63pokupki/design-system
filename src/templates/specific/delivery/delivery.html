@@ -10,7 +10,187 @@
 
 <body>
     <div class="delivery">
-        <div class="delivery__header"></div>
+        <!-- Хеддер -->
+        <div class="delivery__header">
+            <header class="header">
+                <!-- шапка под десктоп -->
+                <div class="header-desctop">
+                    <div class="header-desctop__row">
+                        <div class="support-info header-desctop__col">
+                            <div class="delivery__user-location">
+                                <a href="" class="delivery__link-user-location" target="-blank" rel="nofollow">
+                                    Петропаловск-камчатский
+                                </a>
+                            </div>
+                            <a class="support-info__tel" href="tel:+78007006301">8 (800) 700-63-01</a>
+                            <!-- <span class="support-info__hours">8:00 - 20:00</span> -->
+                            <!-- <i class="icon icon-info support-info__icon has-tooltip">
+                                <span class="tooltip  support-info__tooltip">Если у вас возникли проблемы с регистрацией
+                                    или входом на форум - пишите на адрес
+                                    службы поддержки
+                                    <a class="link link_colored bold"
+                                        href="mailto:support@63pokupki.ru">support@63pokupki.ru</a>
+                                </span>
+                            </i> -->
+                        </div>
+                        <nav class="header-desctop__col header-desctop__links-eq">
+                            <a class="link semi-bold" href="#">Помощь</a>
+                            <a class="link semi-bold link_is-highlighted" href="#">Доставка</a>
+                            <a class="link semi-bold" href="#">Пункты выдачи</a>
+                        </nav>
+                        <nav class="header-desctop__col header-desctop__links-diff">
+                            <a class="link semi-bold" href="#">Пристрой</a>
+                            <a class="link semi-bold" href="#">Бренды</a>
+                            <a class="link semi-bold" href="#">Форум</a>
+                        </nav>
+                    </div>
+                    <div class="header-desctop__row">
+                        <!-- логотип -->
+                        <div class="logo header-desctop__logo">
+                            <a class="logo__link" href="#">
+                                <img class="logo__img" src="~images/logotype.svg" />
+                            </a>
+                        </div>
+                        <!-- блок поиска -->
+                        <div class="search has-categories header-desctop__search">
+                            <!-- строка поиска -->
+                            <input class="search__bar" type="text" placeholder="Поиск" />
+                            <!-- кнопка поиска -->
+                            <button class="btn search__button">
+                                <img class="btn__icon" src="~images/search.svg" />
+                            </button>
+                            <!-- блок выпадающей категории поиска -->
+                            <div class="search__category">
+                                <!-- добавить .search-category_expanded для раскрытия меню категорий -->
+                                <div class="dropdown-fixed-list">
+                                    <!-- текущее значение -->
+                                    <span class="dropdown-fixed-list__current">По товарам</span>
+                                    <!-- лист всех значений -->
+                                    <ul class="dropdown-fixed-list__list">
+                                        <li class="dropdown-fixed-list__list-item">По товарам</li>
+                                        <li class="dropdown-fixed-list__list-item">По форуму</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-desctop__icons">
+                            <a class="header-desctop__icon" href="#">
+                                <div class="caption-icon">
+                                    <i class="icon icon-heart caption-icon__icon"></i>
+                                    <i class="icon icon-heart-filled caption-icon__icon"></i>
+                                    <span href="#" class="caption-icon__text">Избранное</span>
+                                </div>
+                            </a>
+                            <a class="header-desctop__icon" href="#">
+                                <div class="caption-icon">
+                                    <i class="icon icon-account caption-icon__icon"></i>
+                                    <span href="#" class="caption-icon__text">Sergioels..</span>
+                                </div>
+                            </a>
+                            <a class="header-desctop__icon" href="#">
+                                <div class="caption-icon">
+                                    <i class="icon icon-calendar caption-icon__icon">
+                                        <span class="icon-calendar__notification-count">0</span>
+                                    </i>
+                                    <span href="#" class="caption-icon__text">Календарь</span>
+                                </div>
+                            </a>
+                            <a class="header-desctop__icon" href="#">
+                                <div class="caption-icon">
+                                    <i class="icon icon-cart caption-icon__icon"></i>
+                                    <span href="#" class="caption-icon__text">Корзина</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <nav class="categories-bar">
+                        <button class="menu-btn categories-bar__button">
+                            <i class="icon icon-burger menu-btn__icon"></i>
+                            <span class="btn__text menu-btn__text bold">Все закупки</span>
+                        </button>
+                        <ul class="categories-bar__list">
+                            <li class="categories-bar__item">
+                                <a href="" class="link semi-bold">Одежда, обувь, акксесуары</a>
+                            </li>
+                            <li class="categories-bar__item">
+                                <a href="" class="link semi-bold">Товары для детей</a>
+                            </li>
+                            <li class="categories-bar__item">
+                                <a href="" class="link semi-bold">Косметика и парфюмерия</a>
+                            </li>
+                            <li class="categories-bar__item">
+                                <a href="" class="link semi-bold">Спорт, отдых, здоровье</a>
+                            </li>
+                            <li class="categories-bar__item">
+                                <a href="" class="link semi-bold">Сад и огород</a>
+                            </li>
+                        </ul>
+                        <!-- .multi-level-menu_has-triangle для отображения треугольника сверху -->
+                        <!-- .multi-level-menu_has-subcategories для отображения подменю при их наличии-->
+                        <!-- .multi-level-menu__column_is-expanded к колонке для постоянного отображения колонки -->
+                        <nav
+                            class="multi-level-menu categories-bar__menu multi-level-menu_has-triangle multi-level-menu_has-subcategories">
+                            <div class="multi-level-menu__column">
+                                <span class="multi-level-menu__heading semi-bold">Категории</span>
+                                <a class="link link_colored multi-level-menu__all" href="#">Смотреть все</a>
+                                <ul class="multi-level-menu__list">
+                                    <li class="multi-level-menu__item">
+                                        <a class="link" href="#">Одежда и обувь для женщин</a>
+                                        <!-- начало вложенного подменю -->
+                                        <div class="multi-level-menu__column">
+                                            <span class="multi-level-menu__heading semi-bold">Подменю</span>
+                                            <a class="link link_colored multi-level-menu__all" href="#">Смотреть все</a>
+                                            <ul class="multi-level-menu__list">
+                                                <li class="multi-level-menu__item">
+                                                    <a class="link" href="#">Одежда и обувь для женщин</a>
+                                                </li>
+                                                <li class="multi-level-menu__item">
+                                                    <a class="link" href="#">Одежда и обувь для мужчин</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- конец вложенного подменю -->
+                                    </li>
+                                    <li class="multi-level-menu__item">
+                                        <a class="link" href="#">Одежда и обувь для мужчин</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </nav>
+                </div>
+                <!-- шапка под touch устройства -->
+                <div class="header-touch">
+                    <div class="header-touch__row">
+                        <div class="caption-icon click-menu">
+                            <i class="icon icon-menu caption-icon__icon"></i>
+                            <span href="#" class="caption-icon__text">Меню</span>
+                        </div>
+                        <div class="caption-icon">
+                            <i class="icon icon-account caption-icon__icon"></i>
+                            <span href="#" class="caption-icon__text">Sergioels..</span>
+                        </div>
+                        <div class="logo header-touch__logo">
+                            <a class="logo__link" href="#">
+                                <img class="logo__img" src="~images/logotype.svg" />
+                            </a>
+                        </div>
+                        <div class="caption-icon">
+                            <i class="icon icon-calendar caption-icon__icon">
+                                <span class="icon-calendar__notification-count">0</span>
+                            </i>
+                            <span href="#" class="caption-icon__text">Календарь</span>
+                        </div>
+                        <div class="caption-icon">
+                            <i class="icon icon-cart caption-icon__icon"></i>
+                            <span href="#" class="caption-icon__text">Корзина</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+        <!-- Контент -->
+        </div>
         <div class="delivery__content-wrap">
             <div class="delivery__sidebar">
                 <!-- Хлебные крошки -->
@@ -87,528 +267,534 @@
                         </div>
                     </div>
                 </div>
-            <!-- </div> -->
-        </div>
-        <!-- Контент -->
-        <div class="delivery__content">
-            <div class="delivery__content-header">
-                <h1 class="delivery__header-heading">Доставка</h1>
-                <p class="delivery__txt">
-                    Заказы, оформленные на сайте 63pokupki.ru, можно получить несколькими способами.
-                    <br> Выберите наиболее удобный для вас:
-                </p>
+                <!-- </div> -->
             </div>
-            <div class="delivery__wrap-card">
+            <!-- Контент -->
+            <div class="delivery__content">
+                <div class="delivery__content-header">
+                    <h1 class="delivery__content-header-heading">Доставка</h1>
+                    <p class="delivery__txt">
+                        Заказы, оформленные на сайте 63pokupki.ru, можно получить несколькими способами.
+                        <br> Выберите наиболее удобный для вас:
+                    </p>
+                </div>
+                <div class="delivery__wrap-card">
 
-                <!-- Блок по всей России -->
-                <div class="delivery__allrus collapse-block">
-                    <button class="arrow arrow-down arrow_inverse arrow_transp">
-                        <i class="icon icon-arrow-down"></i>
-                    </button>
+                    <!-- Блок по всей России -->
+                    <div class="delivery__allrus collapse-block">
+                        <button class="arrow arrow-down arrow_inverse arrow_transp">
+                            <i class="icon icon-arrow-down"></i>
+                        </button>
 
-                    <h2 class="delivery__card-heading">В пунктах выдачи заказов по всей России</h2>
-                    <div class="delivery__card-header collapse-block__header">
-                        <p class="delivery__txt">Стоимость услуги получения от 14 руб. за заказ</p>
-                    </div>
-                    <div class="collapse-block__content">
-                        <!-- Контент -->
-                        <div class="delivery__card-content">
-                            <p class="delivery__txt">Первые 7 дней хранение заказа бесплатно, далее - 5 руб./день
-                                (летом бесплатное хранение в некоторых ПВЗ может длиться до 14 дней).
-                            </p>
-                            <p class="delivery__txt">Точную стоимость выдачи, сроки дополнительного хранения,
-                                возможность оплаты банковской картой, условия и стоимость доставки
-                                крупногабаритных заказов смотрите в конкретном ПВЗ на карте.
-                            </p>
-                            <p class="delivery__txt delivery__txt_footnote">
-                                *В некоторых закупках могут быть дополнительные транспортные расходы, которые
-                                оплачиваются
-                                вместе со
-                                стоимостью товара (смотрите условия закупки).
-                            </p>
-                            <p class="delivery__txt">
-                                Пункты вывоза заказов (ПВЗ) есть в следующих регионах:
-                                <i class="icon icon-info has-tooltip">
-                                    <span class="tooltip tooltip_top">
-                                        Если вы не нашли ПВЗ в своём городе, то выберите
-                                        способ "Доставка по Росии"</span>
-                                </i>
-                            </p>
-                            <div class="delivery__card-search search">
-                                <!-- строка поиска -->
-                                <input class="search__bar" type="text" placeholder="Поиск" />
-                                <!-- кнопка поиска -->
-                                <button class="search__button">
-                                    <img src="~images/search.svg" />
-                                </button>
-                            </div>
-                            <div class="delivery__point-link_current delivery__point-link">
-                                <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/63" target="_blank"
-                                    rel="nofollow">Самарская
-                                    область</a>
-                                <p class="delivery__txt">- 232 пункта выдачи</p>
-                            </div>
-                            <div class="delivery__point">
-                                <div class="delivery__point-col">
-                                    <div class="delivery__point-link">
-                                        <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/22"
-                                            target="_blank" rel="nofollow">Алтайский
-                                            край</a>
-                                        <p class="delivery__txt">- 1 пункт выдачи</p>
-                                    </div>
-                                    <div class="delivery__point-link">
-                                        <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/29"
-                                            target="_blank" rel="nofollow">Архангельская
-                                            область</a>
-                                        <p class="delivery__txt">- 1 пункт выдачи</p>
-                                    </div>
-                                    <div class="delivery__point-link">
-                                        <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/30"
-                                            target="_blank" rel="nofollow">Астраханская
-                                            область</a>
-                                        <p class="delivery__txt">- 2 пункта выдачи</p>
-                                    </div>
-
-                                    <div class="delivery__point-link">
-                                        <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/2"
-                                            target="_blank" rel="nofollow">Башкортостан</a>
-                                        <p class="delivery__txt">- 2 пункта выдачи</p>
-                                    </div>
-                                    <div class="delivery__point-link">
-                                        <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/31"
-                                            target="_blank" rel="nofollow">Белгородская
-                                            область</a>
-                                        <p class="delivery__txt">- 2 пункта выдачи</p>
-                                    </div>
-                                    <div class="delivery__point-link">
-                                        <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/34"
-                                            target="_blank" rel="nofollow">Волгоградская
-                                            область</a>
-                                        <p class="delivery__txt">- 2 пункта выдачи</p>
-                                    </div>
-                                    <div class="delivery__point-link">
-                                        <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/36"
-                                            target="_blank" rel="nofollow">Воронежская
-                                            область</a>
-                                        <p class="delivery__txt">- 1 пункт выдачи</p>
-                                    </div>
-                                    <div class="delivery__point-link">
-                                        <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/75"
-                                            target="_blank" rel="nofollow">Забайкальский
-                                            край</a>
-                                        <p class="delivery__txt">- 1 пункт выдачи</p>
-                                    </div>
-                                    <div class="delivery__point-link">
-                                        <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/42"
-                                            target="_blank" rel="nofollow">Кемеровская
-                                            область</a>
-                                        <p class="delivery__txt">- 1 пункт выдачи</p>
-                                    </div>
-                                    <div class="delivery__point-link">
-                                        <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/43"
-                                            target="_blank" rel="nofollow">Кировская
-                                            область</a>
-                                        <p class="delivery__txt">- 2 пункта выдачи</p>
-                                    </div>
-                                    <div class="delivery__point-link">
-                                        <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/23"
-                                            target="_blank" rel="nofollow">Краснодарский
-                                            край</a>
-                                        <p class="delivery__txt">- 7 пунктов выдачи</p>
-                                    </div>
-                                    <div class="delivery__point-link">
-                                        <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/47"
-                                            target="_blank" rel="nofollow">Санкт-Петербург
-                                            и Ленинградская область</a>
-                                        <p class="delivery__txt">- 8 пунктов выдачи</p>
-                                    </div>
-                                    <div class="delivery__point-link">
-                                        <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/77"
-                                            target="_blank" rel="nofollow">Москва и
-                                            Московская область</a>
-                                        <p class="delivery__txt">- 19 пунктов выдачи</p>
-                                    </div>
-                                    <div class="delivery__point-link">
-                                        <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/52"
-                                            target="_blank" rel="nofollow">Нижегородская
-                                            область</a>
-                                        <p class="delivery__txt">- 3 пункта выдачи</p>
-                                    </div>
-                                    <div class="delivery__point-link">
-                                        <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/54"
-                                            target="_blank" rel="nofollow">Новосибирская
-                                            область</a>
-                                        <p class="delivery__txt">- 1 пункт выдачи</p>
-                                    </div>
-
+                        <h2 class="delivery__card-heading">В пунктах выдачи заказов по всей России</h2>
+                        <div class="delivery__card-header collapse-block__header">
+                            <p class="delivery__txt">Стоимость услуги получения от 14 руб. за заказ</p>
+                        </div>
+                        <div class="collapse-block__content">
+                            <!-- Контент -->
+                            <div class="delivery__card-content">
+                                <p class="delivery__txt">Первые 7 дней хранение заказа бесплатно, далее - 5 руб./день
+                                    (летом бесплатное хранение в некоторых ПВЗ может длиться до 14 дней).
+                                </p>
+                                <p class="delivery__txt">Точную стоимость выдачи, сроки дополнительного хранения,
+                                    возможность оплаты банковской картой, условия и стоимость доставки
+                                    крупногабаритных заказов смотрите в конкретном ПВЗ на карте.
+                                </p>
+                                <p class="delivery__txt delivery__txt_footnote">
+                                    *В некоторых закупках могут быть дополнительные транспортные расходы, которые
+                                    оплачиваются
+                                    вместе со
+                                    стоимостью товара (смотрите условия закупки).
+                                </p>
+                                <p class="delivery__txt">
+                                    Пункты вывоза заказов (ПВЗ) есть в следующих регионах:
+                                    <i class="icon icon-info has-tooltip">
+                                        <span class="tooltip tooltip_top">
+                                            Если вы не нашли ПВЗ в своём городе, то выберите
+                                            способ "Доставка по Росии"</span>
+                                    </i>
+                                </p>
+                                <div class="delivery__card-search search">
+                                    <!-- строка поиска -->
+                                    <input class="search__bar" type="text" placeholder="Поиск" />
+                                    <!-- кнопка поиска -->
+                                    <button class="search__button">
+                                        <img src="~images/search.svg" />
+                                    </button>
                                 </div>
-                                <div class="delivery__point-col">
-                                    <div class="delivery__point-link">
-                                        <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/55"
-                                            target="_blank" rel="nofollow">Омская
-                                            область</a>
-                                        <p class="delivery__txt">- 1 пункт выдачи</p>
+                                <div class="delivery__point-link_current delivery__point-link">
+                                    <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/63"
+                                        target="_blank" rel="nofollow">Самарская
+                                        область</a>
+                                    <p class="delivery__txt">- 232 пункта выдачи</p>
+                                </div>
+                                <div class="delivery__point">
+                                    <div class="delivery__point-col">
+                                        <div class="delivery__point-link">
+                                            <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/22"
+                                                target="_blank" rel="nofollow">Алтайский
+                                                край</a>
+                                            <p class="delivery__txt">- 1 пункт выдачи</p>
+                                        </div>
+                                        <div class="delivery__point-link">
+                                            <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/29"
+                                                target="_blank" rel="nofollow">Архангельская
+                                                область</a>
+                                            <p class="delivery__txt">- 1 пункт выдачи</p>
+                                        </div>
+                                        <div class="delivery__point-link">
+                                            <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/30"
+                                                target="_blank" rel="nofollow">Астраханская
+                                                область</a>
+                                            <p class="delivery__txt">- 2 пункта выдачи</p>
+                                        </div>
+
+                                        <div class="delivery__point-link">
+                                            <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/2"
+                                                target="_blank" rel="nofollow">Башкортостан</a>
+                                            <p class="delivery__txt">- 2 пункта выдачи</p>
+                                        </div>
+                                        <div class="delivery__point-link">
+                                            <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/31"
+                                                target="_blank" rel="nofollow">Белгородская
+                                                область</a>
+                                            <p class="delivery__txt">- 2 пункта выдачи</p>
+                                        </div>
+                                        <div class="delivery__point-link">
+                                            <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/34"
+                                                target="_blank" rel="nofollow">Волгоградская
+                                                область</a>
+                                            <p class="delivery__txt">- 2 пункта выдачи</p>
+                                        </div>
+                                        <div class="delivery__point-link">
+                                            <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/36"
+                                                target="_blank" rel="nofollow">Воронежская
+                                                область</a>
+                                            <p class="delivery__txt">- 1 пункт выдачи</p>
+                                        </div>
+                                        <div class="delivery__point-link">
+                                            <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/75"
+                                                target="_blank" rel="nofollow">Забайкальский
+                                                край</a>
+                                            <p class="delivery__txt">- 1 пункт выдачи</p>
+                                        </div>
+                                        <div class="delivery__point-link">
+                                            <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/42"
+                                                target="_blank" rel="nofollow">Кемеровская
+                                                область</a>
+                                            <p class="delivery__txt">- 1 пункт выдачи</p>
+                                        </div>
+                                        <div class="delivery__point-link">
+                                            <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/43"
+                                                target="_blank" rel="nofollow">Кировская
+                                                область</a>
+                                            <p class="delivery__txt">- 2 пункта выдачи</p>
+                                        </div>
+                                        <div class="delivery__point-link">
+                                            <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/23"
+                                                target="_blank" rel="nofollow">Краснодарский
+                                                край</a>
+                                            <p class="delivery__txt">- 7 пунктов выдачи</p>
+                                        </div>
+                                        <div class="delivery__point-link">
+                                            <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/47"
+                                                target="_blank" rel="nofollow">Санкт-Петербург
+                                                и Ленинградская область</a>
+                                            <p class="delivery__txt">- 8 пунктов выдачи</p>
+                                        </div>
+                                        <div class="delivery__point-link">
+                                            <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/77"
+                                                target="_blank" rel="nofollow">Москва и
+                                                Московская область</a>
+                                            <p class="delivery__txt">- 19 пунктов выдачи</p>
+                                        </div>
+                                        <div class="delivery__point-link">
+                                            <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/52"
+                                                target="_blank" rel="nofollow">Нижегородская
+                                                область</a>
+                                            <p class="delivery__txt">- 3 пункта выдачи</p>
+                                        </div>
+                                        <div class="delivery__point-link">
+                                            <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/54"
+                                                target="_blank" rel="nofollow">Новосибирская
+                                                область</a>
+                                            <p class="delivery__txt">- 1 пункт выдачи</p>
+                                        </div>
+
                                     </div>
-                                    <div class="delivery__point-link">
-                                        <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/56"
-                                            target="_blank" rel="nofollow">Оренбургская
-                                            область</a>
-                                        <p class="delivery__txt">- 7 пунктов выдачи</p>
-                                    </div>
-                                    <div class="delivery__point-link">
-                                        <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/58"
-                                            target="_blank" rel="nofollow">Пензенская
-                                            область</a>
-                                        <p class="delivery__txt">- 5 пунктов выдачи</p>
-                                    </div>
-                                    <div class="delivery__point-link">
-                                        <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/61"
-                                            target="_blank" rel="nofollow">Ростовская
-                                            область</a>
-                                        <p class="delivery__txt">- 3 пункта выдачи</p>
-                                    </div>
-                                    <div class="delivery__point-link">
-                                        <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/62"
-                                            target="_blank" rel="nofollow">Рязанская
-                                            область</a>
-                                        <p class="delivery__txt">- 1 пункт выдачи</p>
-                                    </div>
-                                    <div class="delivery__point-link">
-                                        <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/64"
-                                            target="_blank" rel="nofollow">Саратовская
-                                            область</a>
-                                        <p class="delivery__txt">- 4 пункта выдачи</p>
-                                    </div>
-                                    <div class="delivery__point-link">
-                                        <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/66"
-                                            target="_blank" rel="nofollow">Свердловская область</a>
-                                        <p class="delivery__txt">- 1 пункт выдачи</p>
-                                    </div>
-                                    <div class="delivery__point-link">
-                                        <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/16"
-                                            target="_blank" rel="nofollow">Татарстан</a>
-                                        <p class="delivery__txt">- 10 пунктов выдачи</p>
-                                    </div>
-                                    <div class="delivery__point-link">
-                                        <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/72"
-                                            target="_blank" rel="nofollow">Тюменская область</a>
-                                        <p class="delivery__txt">- 1 пункт выдачи</p>
-                                    </div>
-                                    <div class="delivery__point-link">
-                                        <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/70"
-                                            target="_blank" rel="nofollow">Томская область</a>
-                                        <p class="delivery__txt">- 1 пункт выдачи</p>
-                                    </div>
-                                    <div class="delivery__point-link">
-                                        <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/73"
-                                            target="_blank" rel="nofollow">Ульяновская область</a>
-                                        <p class="delivery__txt">- 16 пунктов выдачи</p>
-                                    </div>
-                                    <div class="delivery__point-link">
-                                        <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/18"
-                                            target="_blank" rel="nofollow">Удмуртия</a>
-                                        <p class="delivery__txt">- 2 пункта выдачи</p>
-                                    </div>
-                                    <div class="delivery__point-link">
-                                        <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/27"
-                                            target="_blank" rel="nofollow">Хабаровский край</a>
-                                        <p class="delivery__txt">- 1 пункт выдачи</p>
-                                    </div>
-                                    <div class="delivery__point-link">
-                                        <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/76"
-                                            target="_blank" rel="nofollow">Ярославская область</a>
-                                        <p class="delivery__txt">- 1 пункт выдачи</p>
+                                    <div class="delivery__point-col">
+                                        <div class="delivery__point-link">
+                                            <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/55"
+                                                target="_blank" rel="nofollow">Омская
+                                                область</a>
+                                            <p class="delivery__txt">- 1 пункт выдачи</p>
+                                        </div>
+                                        <div class="delivery__point-link">
+                                            <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/56"
+                                                target="_blank" rel="nofollow">Оренбургская
+                                                область</a>
+                                            <p class="delivery__txt">- 7 пунктов выдачи</p>
+                                        </div>
+                                        <div class="delivery__point-link">
+                                            <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/58"
+                                                target="_blank" rel="nofollow">Пензенская
+                                                область</a>
+                                            <p class="delivery__txt">- 5 пунктов выдачи</p>
+                                        </div>
+                                        <div class="delivery__point-link">
+                                            <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/61"
+                                                target="_blank" rel="nofollow">Ростовская
+                                                область</a>
+                                            <p class="delivery__txt">- 3 пункта выдачи</p>
+                                        </div>
+                                        <div class="delivery__point-link">
+                                            <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/62"
+                                                target="_blank" rel="nofollow">Рязанская
+                                                область</a>
+                                            <p class="delivery__txt">- 1 пункт выдачи</p>
+                                        </div>
+                                        <div class="delivery__point-link">
+                                            <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/64"
+                                                target="_blank" rel="nofollow">Саратовская
+                                                область</a>
+                                            <p class="delivery__txt">- 4 пункта выдачи</p>
+                                        </div>
+                                        <div class="delivery__point-link">
+                                            <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/66"
+                                                target="_blank" rel="nofollow">Свердловская область</a>
+                                            <p class="delivery__txt">- 1 пункт выдачи</p>
+                                        </div>
+                                        <div class="delivery__point-link">
+                                            <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/16"
+                                                target="_blank" rel="nofollow">Татарстан</a>
+                                            <p class="delivery__txt">- 10 пунктов выдачи</p>
+                                        </div>
+                                        <div class="delivery__point-link">
+                                            <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/72"
+                                                target="_blank" rel="nofollow">Тюменская область</a>
+                                            <p class="delivery__txt">- 1 пункт выдачи</p>
+                                        </div>
+                                        <div class="delivery__point-link">
+                                            <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/70"
+                                                target="_blank" rel="nofollow">Томская область</a>
+                                            <p class="delivery__txt">- 1 пункт выдачи</p>
+                                        </div>
+                                        <div class="delivery__point-link">
+                                            <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/73"
+                                                target="_blank" rel="nofollow">Ульяновская область</a>
+                                            <p class="delivery__txt">- 16 пунктов выдачи</p>
+                                        </div>
+                                        <div class="delivery__point-link">
+                                            <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/18"
+                                                target="_blank" rel="nofollow">Удмуртия</a>
+                                            <p class="delivery__txt">- 2 пункта выдачи</p>
+                                        </div>
+                                        <div class="delivery__point-link">
+                                            <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/27"
+                                                target="_blank" rel="nofollow">Хабаровский край</a>
+                                            <p class="delivery__txt">- 1 пункт выдачи</p>
+                                        </div>
+                                        <div class="delivery__point-link">
+                                            <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/76"
+                                                target="_blank" rel="nofollow">Ярославская область</a>
+                                            <p class="delivery__txt">- 1 пункт выдачи</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Блок курьером -->
-                <div class="delivery__courier collapse-block">
-                    <button class="arrow arrow-down arrow_inverse arrow_transp">
-                        <i class="icon icon-arrow-down"></i>
-                    </button>
-                    <h2 class="delivery__card-heading">Доставка курьером (по Самаре и области, Тольятти, Ульяновску)
-                    </h2>
-                    <p class="delivery__txt collapse-block__header">Стоимость доставки 450 руб.</p>
-                    <div class="collapse-block__content">
-                        <h4>Стоимость доставки</h4>
-                        <p class="delivery__txt">Ориентировочный расчет доставки можно посмотреть в таблице:</p>
-                        <!-- Шапка таблицы стоимости доставки -->
-                        <div class="delivery__t-row delivery__t-heading">
-                            <div class="delivery__t-col">Город</div>
-                            <div class="delivery__t-col">Характеристики заказа</div>
-                            <div class="delivery__t-col">Цена</div>
-                        </div>
-
-                        <hr noshade>
-
-                        <!-- Самара -->
-                        <div class="delivery__t-row">
-                            <div class="delivery__t-col">Самара</div>
-                            <div class="delivery__t-col">
-                                <p class="delivery__txt">Заказы, объемом до 1,1 м3,<br>
-                                    весом до 20 кг, длина до 1,8 м</p>
-                            </div>
-                            <div class="delivery__t-col">
-                                <p class="delivery__txt">от 450 р/по городу</p>
-                            </div>
-                        </div>
-                        <div class="delivery__t-row">
-                            <div class="delivery__t-col"></div>
-                            <div class="delivery__t-col">
-                                <p class="delivery__txt">Заказы, объемом до 1,1 м3, <br>
-                                    весом более 20 кг либо длина более 1,8 м</p>
-                            </div>
-                            <div class="delivery__t-col">
-                                <p class="delivery__txt">уточняйте у менеджера <br>
-                                    курьерской доставки</p>
-                            </div>
-                        </div>
-                        <div class="delivery__t-row">
-                            <div class="delivery__t-col"></div>
-                            <div class="delivery__t-col">Заказы, объемом более 1,1 м3</div>
-                            <div class="delivery__t-col">от 1000 р/по городу</div>
-                        </div>
-
-                        <hr noshade>
-
-                        <!-- Тольятти -->
-                        <div class="delivery__t-row">
-                            <div class="delivery__t-col">Тольятти</div>
-                            <div class="delivery__t-col">Один адрес</div>
-                            <div class="delivery__t-col">4000 р</div>
-                        </div>
-                        <div class="delivery__t-row">
-                            <div class="delivery__t-col"></div>
-                            <div class="delivery__t-col">
-                                <p class="delivery__txt">
-                                    Сборный (т.е. ждем еще <br> клиентов, тогда доставка делится <br>
-                                    в процентном соотношении)
-                                </p>
-                            </div>
-                            <div class="delivery__t-col">
-                                <p class="delivery__txt">
-                                    в зависимости от района, <br> уточняйте у менеджера<br>
-                                    курьерской доставки
-                                </p>
-                            </div>
-                        </div>
-
-                        <hr noshade>
-
-                        <!-- Самарская область -->
-                        <div class="delivery__t-row">
-                            <div class="delivery__t-col">
-                                <p class="delivery__txt">Самарская область</p>
-                            </div>
-                            <div class="delivery__t-col">
-                                <p class="delivery__txt">Любой заказ</p>
-                            </div>
-                            <div class="delivery__t-col">
-                                <p class="delivery__txt">
-                                    уточняйте у менеджера<br>
-                                    курьерской доставки
-                                </p>
-                            </div>
-                        </div>
-
-                        <hr noshade>
-
-                        <!-- Ульяновск -->
-                        <div class="delivery__t-row">
-                            <div class="delivery__t-col">
-                                <p class="delivery__txt">Ульяновск</p>
-                            </div>
-                            <div class="delivery__t-col">
-                                <p class="delivery__txt">Любой заказ</p>
-                            </div>
-                            <div class="delivery__t-col">
-                                <p class="delivery__txt">
-                                    уточняйте у менеджера<br>
-                                    курьерской доставки
-                                </p>
-                            </div>
-                        </div>
-
-
-                        <!-- Важно -->
-                        <div class="delivery__block-important">
-                            <p class="delivery__txt-important">Важно!</p>
-                            <p class="delivery__txt">Данные расчеты предварительные.</p>
-                            <p class="delivery__txt">Точную сумму к оплате вам озвучит Перевозчик по телефону при
-                                согласовании доставки.</p>
-                            <p class="delivery__txt">* дополнительно 14 руб. оплачивается за услуги Пункта выдачи.
-                            </p>
-                            <p class="delivery__txt">* в некоторых закупках могут быть дополнительные транспортные
-                                расходы,
-                                которые оплачиваются вместе со стоимостью товара (смотрите условия закупки и
-                                уточняйте у
-                                организатора).</p>
-                            <p class="delivery__txt">Оплата всей суммы за доставку производится наличными водителю в
-                                день
-                                привоза.</p>
-
-                            <p class="delivery__txt-important">Важно!</p>
-                            <p class="delivery__txt">Если в условиях закупки указаны ограничения по доставке хрупких
-                                товаров
-                                или жидкостей - перед заказом доставки обязательно уточните у Организатора
-                                возможность
-                                доставки на ваш товар!</p>
-                            <a class="delivery__link"
-                                href="https://63pokupki.ru/forum/phpBB3/viewtopic.php?f=266&t=421078" target="_blank"
-                                rel="nofollow">Как оформить курьерскую доставку?</a>
 
                         </div>
                     </div>
-                </div>
 
-                <!-- Нет пункта выдачи -->
-                <div class="delivery__no-point">
-                    <p class="delivery__no-point-heading">В вашем городе нет пункта выдачи <span>63pokupki</span>?
-                        Это
-                        не
-                        проблема!</p>
-                    <p class="delivery__txt">Выбирайте товары на нашем сайте, радуйтесь выгодным покупкам, а мы:</p>
-                    <div class="delivery__no-point-ul">
-                        <li class="delivery__txt">скомпонуем все ваши заказы от разных организаторов и отправим их
-                            одной
-                            посылкой;</li>
-                        <li class="delivery__txt">просчитаем стоимость всех типов доставки, подберём для вас самый
-                            удобный и
-                            дешёвый тариф.</li>
-                    </div>
-
-                    <p class="delivery__txt">Отправка посылок возможна двумя способами:</p>
-
-                </div>
-
-                <!-- Блок почтой России -->
-                <div class="delivery__mail-rus collapse-block">
-                    <button class="arrow arrow-down arrow_inverse arrow_transp">
-                        <i class="icon icon-arrow-down"></i>
-                    </button>
-                    <h2 class="delivery__card-heading">Доставка Почтой России</h2>
-                    <p class="delivery__txt">Стоимость доставки от 190 руб.</p>
-                    <div class="collapse-block__content">
-                        <div class="delivery__card-content">
-                            <p class="delivery__txt delivery__txt_bold">Получение товара - в ближайшем для вас
-                                отделении
-                                Почты России.</p>
-                            <br>
-                            <br>
+                    <!-- Блок курьером -->
+                    <div class="delivery__courier collapse-block">
+                        <button class="arrow arrow-down arrow_inverse arrow_transp">
+                            <i class="icon icon-arrow-down"></i>
+                        </button>
+                        <h2 class="delivery__card-heading">Доставка курьером (по Самаре и области, Тольятти, Ульяновску)
+                        </h2>
+                        <p class="delivery__txt collapse-block__header">Стоимость доставки 450 руб.</p>
+                        <div class="collapse-block__content">
                             <h4>Стоимость доставки</h4>
-                            <br>
-                            <p class="delivery__txt">* Стоимость отправления Почтой России можно посчитать в <a
-                                    href="https://russianpostcalc.ru/" target="_blank" rel="nofollow"
-                                    class="delivery__link">Калькуляторе</a></p>
-                            <p class="delivery__txt">* Дополнительно 20 руб. оплачивается за услугу отправки Заказа
-                                (входит
-                                в платеж за пересылку по Почте России)</p>
-                            <p class="delivery__txt">* Дополнительно оплачивается 50-150 руб. в случае, если нужна
-                                специальная коробка или упаковка</p>
-                            <p class="delivery__txt">* В некоторых закупках могут быть дополнительные транспортные
-                                расходы,
-                                которые оплачиваются вместе со стоимостью товара (смотрите условия закупки и
-                                уточняйте у
-                                организатора)</p>
-                            <br>
-                            <p class="delivery__txt">Оплата всей суммы за доставку происходит при получении посылки
-                                на
-                                Почте
-                                России.</p>
-                            <br>
-                            <p class="delivery__txt-important">Важно!</p>
-                            <p class="delivery__txt">Если в условиях закупки указаны ограничения по доставке хрупких
-                                товаров
-                                или жидкостей -
-                                перед заказом доставки обязательно уточните у Организатора возможность доставки на
-                                ваш
-                                товар!
-                            </p>
-                            <br>
-                            <a href="https://63pokupki.ru/forum/phpBB3/viewtopic.php?f=212&t=414808" target="_blank"
-                                rel="nofollow" class="delivery__link">Как оформить доставку Почтой России?</a>
+                            <p class="delivery__txt">Ориентировочный расчет доставки можно посмотреть в таблице:</p>
+                            <!-- Шапка таблицы стоимости доставки -->
+                            <div class="delivery__t-row delivery__t-heading">
+                                <div class="delivery__t-col">Город</div>
+                                <div class="delivery__t-col">Характеристики заказа</div>
+                                <div class="delivery__t-col">Цена</div>
+                            </div>
+
+                            <hr noshade>
+
+                            <!-- Самара -->
+                            <div class="delivery__t-row">
+                                <div class="delivery__t-col">Самара</div>
+                                <div class="delivery__t-col">
+                                    <p class="delivery__txt">Заказы, объемом до 1,1 м3,<br>
+                                        весом до 20 кг, длина до 1,8 м</p>
+                                </div>
+                                <div class="delivery__t-col">
+                                    <p class="delivery__txt">от 450 р/по городу</p>
+                                </div>
+                            </div>
+                            <div class="delivery__t-row">
+                                <div class="delivery__t-col"></div>
+                                <div class="delivery__t-col">
+                                    <p class="delivery__txt">Заказы, объемом до 1,1 м3, <br>
+                                        весом более 20 кг либо длина более 1,8 м</p>
+                                </div>
+                                <div class="delivery__t-col">
+                                    <p class="delivery__txt">уточняйте у менеджера <br>
+                                        курьерской доставки</p>
+                                </div>
+                            </div>
+                            <div class="delivery__t-row">
+                                <div class="delivery__t-col"></div>
+                                <div class="delivery__t-col">Заказы, объемом более 1,1 м3</div>
+                                <div class="delivery__t-col">от 1000 р/по городу</div>
+                            </div>
+
+                            <hr noshade>
+
+                            <!-- Тольятти -->
+                            <div class="delivery__t-row">
+                                <div class="delivery__t-col">Тольятти</div>
+                                <div class="delivery__t-col">Один адрес</div>
+                                <div class="delivery__t-col">4000 р</div>
+                            </div>
+                            <div class="delivery__t-row">
+                                <div class="delivery__t-col"></div>
+                                <div class="delivery__t-col">
+                                    <p class="delivery__txt">
+                                        Сборный (т.е. ждем еще <br> клиентов, тогда доставка делится <br>
+                                        в процентном соотношении)
+                                    </p>
+                                </div>
+                                <div class="delivery__t-col">
+                                    <p class="delivery__txt">
+                                        в зависимости от района, <br> уточняйте у менеджера<br>
+                                        курьерской доставки
+                                    </p>
+                                </div>
+                            </div>
+
+                            <hr noshade>
+
+                            <!-- Самарская область -->
+                            <div class="delivery__t-row">
+                                <div class="delivery__t-col">
+                                    <p class="delivery__txt">Самарская область</p>
+                                </div>
+                                <div class="delivery__t-col">
+                                    <p class="delivery__txt">Любой заказ</p>
+                                </div>
+                                <div class="delivery__t-col">
+                                    <p class="delivery__txt">
+                                        уточняйте у менеджера<br>
+                                        курьерской доставки
+                                    </p>
+                                </div>
+                            </div>
+
+                            <hr noshade>
+
+                            <!-- Ульяновск -->
+                            <div class="delivery__t-row">
+                                <div class="delivery__t-col">
+                                    <p class="delivery__txt">Ульяновск</p>
+                                </div>
+                                <div class="delivery__t-col">
+                                    <p class="delivery__txt">Любой заказ</p>
+                                </div>
+                                <div class="delivery__t-col">
+                                    <p class="delivery__txt">
+                                        уточняйте у менеджера<br>
+                                        курьерской доставки
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <!-- Важно -->
+                            <div class="delivery__block-important">
+                                <p class="delivery__txt-important">Важно!</p>
+                                <p class="delivery__txt">Данные расчеты предварительные.</p>
+                                <p class="delivery__txt">Точную сумму к оплате вам озвучит Перевозчик по телефону при
+                                    согласовании доставки.</p>
+                                <p class="delivery__txt">* дополнительно 14 руб. оплачивается за услуги Пункта выдачи.
+                                </p>
+                                <p class="delivery__txt">* в некоторых закупках могут быть дополнительные транспортные
+                                    расходы,
+                                    которые оплачиваются вместе со стоимостью товара (смотрите условия закупки и
+                                    уточняйте у
+                                    организатора).</p>
+                                <p class="delivery__txt">Оплата всей суммы за доставку производится наличными водителю в
+                                    день
+                                    привоза.</p>
+
+                                <p class="delivery__txt-important">Важно!</p>
+                                <p class="delivery__txt">Если в условиях закупки указаны ограничения по доставке хрупких
+                                    товаров
+                                    или жидкостей - перед заказом доставки обязательно уточните у Организатора
+                                    возможность
+                                    доставки на ваш товар!</p>
+                                <a class="delivery__link"
+                                    href="https://63pokupki.ru/forum/phpBB3/viewtopic.php?f=266&t=421078"
+                                    target="_blank" rel="nofollow">Как оформить курьерскую доставку?</a>
+
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Блок транспортной компанией -->
-                <div class="delivery__transp collapse-block">
-                    <button class="arrow arrow-down arrow_inverse arrow_transp">
-                        <i class="icon icon-arrow-down"></i>
-                    </button>
-                    <h2 class="delivery__card-heading">Доставка Транспортной компанией</h2>
-                    <p class="delivery__txt">стоимость доставки от 170 руб.</p>
-                    <div class="collapse-block__content">
-                        <div class="delivery__card-content">
-                            <br>
-                            <p class="delivery__txt">
-                                Мы скомпонуем все ваши заказы от разных организаторов и отправим их <b>одной</b>
-                                посылкой, а
-                                также просчитаем
-                                стоимость всех типов доставки и подберем для вас
-                                <b>самый удобный и дешёвый тариф + сделаем скидку на доставку</b> через компании
-                                партнёров
-                                (DPD, СДЭК или Hermes).
-                            </p>
-                            <br>
-                            <h4>Стоимость доставки</h4>
-                            <p class="delivery__txt">* Стоимость отправления DPD можно посчитать <a
-                                    href="https://www.dpd.ru/ols/calc/calc.do2" target="_blank" rel="nofollow"
-                                    class="delivery__link">Здесь</a></p>
-                            <p class="delivery__txt">* Стоимость отправления СДЭК можно посчитать <a
-                                    href="https://www.cdek.ru/calculator.html?utm_referrer=https%3a%2f%2f63pokupki.ru%2fforum%2fphpBB3%2fapp.php%2fpage%2fdelivery"
-                                    target="_blank" rel="nofollow" class="delivery__link">Здесь</a></p>
-                            <p class="delivery__txt">* Стоимость отправления Hermes можно посчитать <a
-                                    href="https://www.hermesrussia.ru/dlya-klientov/rasschitat-stoimost/"
-                                    target="_blank" rel="nofollow" class="delivery__link">Здесь</a></p>
-                            <p class="delivery__txt">* Дополнительно 20 руб. за услугу формирования и отправки
-                                Заказа -
-                                оплачивается ДО передачи товара в ТК через корзину на сайте <a
-                                    href="https://63pokupki.ru/forum/sp/order.php" target="_blank" rel="nofollow"
-                                    class="delivery__link">63pokupki.ru</a>.</p>
-                            <p class="delivery__txt">* В некоторых закупках могут быть дополнительные транспортные
-                                расходы
-                            </p>
-                            <br>
-                            <p class="delivery__txt">Стоимость пересылки оплачивается в ТК при получении посылки в
-                                вашем
-                                городе.</p>
-                            <br>
-                            <p class="delivery__txt-important">Важно!</p>
-                            <p class="delivery__txt">Если в условиях закупки указаны ограничения по доставке хрупких
-                                товаров
-                                или жидкостей -
-                                перед заказом доставки обязательно уточните у Организатора возможность доставки на
-                                ваш
-                                товар!
-                            </p>
-                            <br>
-                            <a href="https://63pokupki.ru/forum/phpBB3/viewtopic.php?f=212&t=414808" target="_blank"
-                                rel="nofollow" class="delivery__link">Как оформить доставку Транспортной
-                                компанией?</a>
+                    <!-- Нет пункта выдачи -->
+                    <div class="delivery__no-point">
+                        <p class="delivery__no-point-heading">В вашем городе нет пункта выдачи <span>63pokupki</span>?
+                            Это
+                            не
+                            проблема!</p>
+                        <p class="delivery__txt">Выбирайте товары на нашем сайте, радуйтесь выгодным покупкам, а мы:</p>
+                        <div class="delivery__no-point-ul">
+                            <li class="delivery__txt">скомпонуем все ваши заказы от разных организаторов и отправим их
+                                одной
+                                посылкой;</li>
+                            <li class="delivery__txt">просчитаем стоимость всех типов доставки, подберём для вас самый
+                                удобный и
+                                дешёвый тариф.</li>
+                        </div>
+
+                        <p class="delivery__txt">Отправка посылок возможна двумя способами:</p>
+
+                    </div>
+
+                    <!-- Блок почтой России -->
+                    <div class="delivery__mail-rus collapse-block">
+                        <button class="arrow arrow-down arrow_inverse arrow_transp">
+                            <i class="icon icon-arrow-down"></i>
+                        </button>
+                        <h2 class="delivery__card-heading">Доставка Почтой России</h2>
+                        <p class="delivery__txt">Стоимость доставки от 190 руб.</p>
+                        <div class="collapse-block__content">
+                            <div class="delivery__card-content">
+                                <p class="delivery__txt delivery__txt_bold">Получение товара - в ближайшем для вас
+                                    отделении
+                                    Почты России.</p>
+                                <br>
+                                <br>
+                                <h4>Стоимость доставки</h4>
+                                <br>
+                                <p class="delivery__txt">* Стоимость отправления Почтой России можно посчитать в <a
+                                        href="https://russianpostcalc.ru/" target="_blank" rel="nofollow"
+                                        class="delivery__link">Калькуляторе</a></p>
+                                <p class="delivery__txt">* Дополнительно 20 руб. оплачивается за услугу отправки Заказа
+                                    (входит
+                                    в платеж за пересылку по Почте России)</p>
+                                <p class="delivery__txt">* Дополнительно оплачивается 50-150 руб. в случае, если нужна
+                                    специальная коробка или упаковка</p>
+                                <p class="delivery__txt">* В некоторых закупках могут быть дополнительные транспортные
+                                    расходы,
+                                    которые оплачиваются вместе со стоимостью товара (смотрите условия закупки и
+                                    уточняйте у
+                                    организатора)</p>
+                                <br>
+                                <p class="delivery__txt">Оплата всей суммы за доставку происходит при получении посылки
+                                    на
+                                    Почте
+                                    России.</p>
+                                <br>
+                                <p class="delivery__txt-important">Важно!</p>
+                                <p class="delivery__txt">Если в условиях закупки указаны ограничения по доставке хрупких
+                                    товаров
+                                    или жидкостей -
+                                    перед заказом доставки обязательно уточните у Организатора возможность доставки на
+                                    ваш
+                                    товар!
+                                </p>
+                                <br>
+                                <a href="https://63pokupki.ru/forum/phpBB3/viewtopic.php?f=212&t=414808" target="_blank"
+                                    rel="nofollow" class="delivery__link">Как оформить доставку Почтой России?</a>
+                            </div>
                         </div>
                     </div>
-                </div>
+
+                    <!-- Блок транспортной компанией -->
+                    <div class="delivery__transp collapse-block">
+                        <button class="arrow arrow-down arrow_inverse arrow_transp">
+                            <i class="icon icon-arrow-down"></i>
+                        </button>
+                        <h2 class="delivery__card-heading">Доставка Транспортной компанией</h2>
+                        <p class="delivery__txt">стоимость доставки от 170 руб.</p>
+                        <div class="collapse-block__content">
+                            <div class="delivery__card-content">
+                                <br>
+                                <div class="delivery__txt">* Список пунктов выдачи DPD. Обратите внимание, 
+                                    мы отправляем посылки только в те терминалы,
+                                     где есть возможность оплатить доставку заказа при его выдаче.</div>
+                                <div class="delivery__txt">* Список пунктов выдачи СДЭК.</div>
+                                <div class="delivery__txt">* Список пунктов выдачи Hermes</div>
+                                <br>
+                                <p class="delivery__txt">
+                                    Мы скомпонуем все ваши заказы от разных организаторов и отправим их <b>одной</b>
+                                    посылкой, а
+                                    также просчитаем
+                                    стоимость всех типов доставки и подберем для вас
+                                    <b>самый удобный и дешёвый тариф + сделаем скидку на доставку</b> через компании
+                                    партнёров
+                                    (DPD, СДЭК или Hermes).
+                                </p>
+                                <br>
+                                <h4>Стоимость доставки</h4>
+                                <p class="delivery__txt">* Стоимость отправления DPD можно посчитать <a
+                                        href="https://www.dpd.ru/ols/calc/calc.do2" target="_blank" rel="nofollow"
+                                        class="delivery__link">Здесь</a></p>
+                                <p class="delivery__txt">* Стоимость отправления СДЭК можно посчитать <a
+                                        href="https://www.cdek.ru/calculator.html?utm_referrer=https%3a%2f%2f63pokupki.ru%2fforum%2fphpBB3%2fapp.php%2fpage%2fdelivery"
+                                        target="_blank" rel="nofollow" class="delivery__link">Здесь</a></p>
+                                <p class="delivery__txt">* Стоимость отправления Hermes можно посчитать <a
+                                        href="https://www.hermesrussia.ru/dlya-klientov/rasschitat-stoimost/"
+                                        target="_blank" rel="nofollow" class="delivery__link">Здесь</a></p>
+                                <p class="delivery__txt">* Дополнительно 20 руб. за услугу формирования и отправки
+                                    Заказа -
+                                    оплачивается ДО передачи товара в ТК через корзину на сайте <a
+                                        href="https://63pokupki.ru/forum/sp/order.php" target="_blank" rel="nofollow"
+                                        class="delivery__link">63pokupki.ru</a>.</p>
+                                <p class="delivery__txt">* В некоторых закупках могут быть дополнительные транспортные
+                                    расходы
+                                </p>
+                                <br>
+                                <p class="delivery__txt">Стоимость пересылки оплачивается в ТК при получении посылки в
+                                    вашем
+                                    городе.</p>
+                                <br>
+                                <p class="delivery__txt-important">Важно!</p>
+                                <p class="delivery__txt">Если в условиях закупки указаны ограничения по доставке хрупких
+                                    товаров
+                                    или жидкостей -
+                                    перед заказом доставки обязательно уточните у Организатора возможность доставки на
+                                    ваш
+                                    товар!
+                                </p>
+                                <br>
+                                <a href="https://63pokupki.ru/forum/phpBB3/viewtopic.php?f=212&t=414808" target="_blank"
+                                    rel="nofollow" class="delivery__link">Как оформить доставку Транспортной
+                                    компанией?</a>
+                            </div>
+                        </div>
+                    </div>
 
 
-                <!-- Блок футер -->
-                <div class="delivery__footer">
-                    <h3>Приглашаем к сотрудничеству партнеров по выдаче заказов.</h3>
-                    <a class="delivery__footer-btn ds-btn ds-btn_hover"
-                        href="https://63pokupki.ru/forum/phpBB3/viewtopic.php?f=61&t=332071" target="_blank"
-                        rel="nofollow">
-                        <div class="ds-btn__text">Подробнее</div>
-                    </a>
+                    <!-- Блок футер -->
+                    <div class="delivery__footer">
+                        <h3>Приглашаем к сотрудничеству партнеров по выдаче заказов.</h3>
+                        <a class="delivery__footer-btn ds-btn ds-btn_hover"
+                            href="https://63pokupki.ru/forum/phpBB3/viewtopic.php?f=61&t=332071" target="_blank"
+                            rel="nofollow">
+                            <div class="ds-btn__text">Подробнее</div>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-    </div>
+        </div>
 
     </div>
 </body>
