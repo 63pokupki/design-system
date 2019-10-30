@@ -37,9 +37,10 @@
                         content: "";
                         position: absolute;
                         bottom: -3px;
-                        left: -2px;
+                        left: -4px;
                         height: 2px;
                         width: 100%;
+                        width: calc(100% + 8px);
                         background: $color-primary-light;
                     }  
                 }
@@ -50,7 +51,7 @@
     &__btn-toggle-wrap {
         display: flex;
     }
-    &__header {
+    &__content-header {
         display: flex;
         flex-direction: column;
         padding: 15px 30px;
