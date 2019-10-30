@@ -167,5 +167,16 @@
             color: $color-primary;
         }
     }
+    &__footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+        color: $light-gray-txt-color;
+        &-btn {
+            width: 284px;
+        }
+    }
 
 }
