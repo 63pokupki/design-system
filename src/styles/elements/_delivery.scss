@@ -176,6 +176,9 @@
         color: $light-gray-txt-color;
         &-btn {
             width: 284px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
         }
     }
 
