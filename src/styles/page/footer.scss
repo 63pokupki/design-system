@@ -1,0 +1,12 @@
+@import "~styles/utils/utils";
+
+.ds {
+    @import "~styles/elements/_footer.scss";
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    font-family: $font-primary;
+}
