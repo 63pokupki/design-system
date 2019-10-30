@@ -69,6 +69,10 @@
         }
     }
 
+    &__heading-delivery-cost {
+        margin: 0 0 10px 0;
+    }
+
     &__btn-toggle-wrap {
         display: flex;
     }
@@ -208,6 +212,7 @@
         
     }
     &__txt-important {
+        margin: 0;
         font-size: 14px;
         font-weight: 600;
         text-transform: uppercase;
