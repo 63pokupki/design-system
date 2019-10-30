@@ -25,6 +25,23 @@ function elem_close(clickElem, eventElem) {
     }
 }
 
+// eventPar   - элемент-родитель для остальных элементов
+// clickElem  - элемент по которому кликают
+// eventElem  - элемент на котором происходит событие
+// eventClass - присваиваемый класс
+function event_func(eventPar, clickElem, eventElem, eventClass) {
+    eventPar.forEach((e) => {
+        let clickElem  = e.querySelector(clickElem),
+            eventElem  = e.querySelector(eventElem);
+        
+        if (clickElem && eventElem) {
+            clickElem.addEventListener("click", () => {
+                eventElem.classList.toggle(eventClass);
+            });
+        }
+    });
+}
+
 
 
 // открытие полной инфы о закупке
