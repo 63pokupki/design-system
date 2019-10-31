@@ -1,6 +1,13 @@
 .delivery__mobile {
     .delivery {
 
+        &__wrap {
+            &-card {
+                background: $border-subcat-img-color;
+            }
+
+        }
+
         &__content-wrap {
             display: flex;
             flex-direction: column;
@@ -10,11 +17,12 @@
         }
 
         &__collapse {
-            margin: 0;
+            margin: 0 0 15px 0;
             padding: 15px;
             box-shadow: none;
+            background: #ffffff;
             .arrow {
-                right: 10px;
+                right: 15px;
             }
 
             &-wrap {
@@ -30,7 +38,7 @@
                 &.is-toggle {
                     max-height: 4000px;
                     transition: all 1s;
-                    opacity: 1;        
+                    opacity: 1;
                 }
             }
         }
@@ -140,7 +148,7 @@
 
         //Ссылки
         &__link {
-            font-size: 14px;
+            font-size: 12px;
             font-weight: 600;
             color: $color-primary;
         }
@@ -153,7 +161,7 @@
         &__txt {
             margin: 0px 0;
             padding: 0 70px 0 0;
-            font-size: 14px;
+            font-size: 12px;
             line-height: 32px;
             color: $light-gray-txt-color;
 
@@ -170,6 +178,13 @@
             //Жирное начертание
             &_bold {
                 font-weight: 700;
+            }
+            &_important {
+                margin: 0;
+                font-size: 14px;
+                font-weight: 600;
+                text-transform: uppercase;
+                color: $important-color;    
             }
         }
 
@@ -213,6 +228,7 @@
             &-link {
                 display: flex;
                 align-items: baseline;
+                flex-direction: column;
                 min-width: 50%;
                 white-space: nowrap;
 
@@ -237,12 +253,6 @@
         }
 
         // РАзделительная линия
-        hr {
-            width: 100%;
-            size: 1px;
-            color: $light-gray-sum-btn;
-            opacity: .5;
-        }
 
         &__t-row {
             display: flex;
@@ -251,7 +261,16 @@
             align-items: flex-start;
             width: 100%;
             margin: 10px 0;
-            // border-bottom: 1px solid $light-gray-sum-btn;
+            position: relative;
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                display: block;
+                width: 100%;
+                height: 1px;
+                background: slategray;
+            }
         }
 
         &__t-col {
@@ -275,19 +294,12 @@
 
         }
 
-        &__txt-important {
-            margin: 0;
-            font-size: 14px;
-            font-weight: 600;
-            text-transform: uppercase;
-            color: $important-color;
-        }
-
         // Если нет ПВЗ
         &__no-point {
             display: flex;
             flex-direction: column;
             padding: 15px;
+            background: #fff;
 
             &-heading {
                 font-size: 14px;
@@ -310,7 +322,11 @@
             justify-content: center;
             align-items: center;
             padding: 30px;
+            background: #fff;
             color: $light-gray-txt-color;
+            &-heading {
+                text-align: center;
+            }
 
             &-btn {
                 width: 284px;
