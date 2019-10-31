@@ -1,0 +1,286 @@
+// .delivery {
+.delivery__desktop {
+    .delivery {
+
+        &__content-wrap {
+            display: flex;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 15px;
+            background: #fff;
+        }
+
+        &__link-user-location {
+            position: relative;
+            margin: 0 20px 0 0;
+            color: $color-primary-light;
+            text-decoration: none;
+            border-bottom: 1px dashed $color-primary-light;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 4px;
+                right: -15px;
+                display: block;
+                width: 1px;
+                min-height: calc(100% - 5px);
+                margin: 0 5px;
+                background: $dark-grey-color;
+            }
+        }
+
+        &__content {
+            display: block;
+            width: 100%;
+            padding: 5px;
+            background: #ffffff;
+        }
+
+        &__sidebar {
+            display: flex;
+            flex-direction: column;
+            width: 25%;
+        }
+
+        // Хлебные крошки
+        &__breadcrumbs {
+            display: flex;
+            align-items: center;
+            background: #ffffff;
+            padding: 30px 15px 15px 15px;
+        }
+
+        //Вертикальное меню слева
+        &__vertical-menu {
+            font-size: 14px;
+            color: $dark-brown-color;
+
+            &-item {
+                &.is-active {
+                    color: $color-primary-light;
+                    font-weight: 600;
+
+                    .link_text {
+                        position: relative;
+
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            bottom: -3px;
+                            left: -4px;
+                            height: 2px;
+                            width: 100%;
+                            width: calc(100% + 8px);
+                            background: $color-primary-light;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__heading-delivery-cost {
+            margin: 0 0 10px 0;
+        }
+
+        &__btn-toggle-wrap {
+            display: flex;
+        }
+
+        &__content-header {
+            display: flex;
+            flex-direction: column;
+            padding: 15px 30px;
+
+            &-heading {
+                margin: 0 0 40px 0;
+            }
+        }
+
+        //Ссылки
+        &__link {
+            font-size: 14px;
+            font-weight: 600;
+            color: $color-primary;
+        }
+
+        &__content-heading {
+            color: $light-gray-txt-color;
+        }
+
+        //Текст
+        &__txt {
+            margin: 0px 0;
+            padding: 0 70px 0 0;
+            font-size: 14px;
+            line-height: 32px;
+            color: $light-gray-txt-color;
+
+            .tooltip {
+                min-width: 200px;
+            }
+
+            //Сноска
+            &_footnote {
+                font-size: 14px;
+                color: $light-gray-link-color;
+            }
+
+            //Жирное начертание
+            &_bold {
+                font-weight: 700;
+            }
+        }
+
+        // Карточка
+        &__card {
+            &-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                // height: 114px;
+            }
+
+            &-heading {
+                padding: 0 40px 0 0;
+                margin: 0 0 10px 0;
+            }
+
+        }
+
+        //Вся Россия
+        &__collapse {
+            margin: 0 0 20px 0;
+        }
+
+        &__card-search {
+            max-width: 284px;
+            margin: 20px 0;
+        }
+
+        &__point {
+            display: flex;
+            flex-wrap: wrap;
+
+            // max-height: 485px;
+            &-col {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                min-width: 30%;
+            }
+
+            &-link {
+                display: flex;
+                align-items: baseline;
+                min-width: 50%;
+                white-space: nowrap;
+
+                // margin: 5px 0;
+                &_current {
+                    margin: 0 0 30px 0;
+                }
+
+                a {
+                    color: $color-primary;
+                }
+            }
+        }
+
+        //Доставка курьером
+        &__t-heading {
+            font-size: 12px;
+
+            .delivery__t-col {
+                color: $light-gray-link-color;
+            }
+        }
+
+        // РАзделительная линия
+        hr {
+            width: 100%;
+            size: 1px;
+            color: $light-gray-sum-btn;
+            opacity: .5;
+        }
+
+        &__t-row {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 100%;
+            margin: 10px 0;
+            // border-bottom: 1px solid $light-gray-sum-btn;
+        }
+
+        &__t-col {
+            display: flex;
+            flex-direction: column;
+            min-width: 33.33%;
+            margin: 0 10px 0 0;
+            color: $light-gray-txt-color;
+
+            .delivery__txt {
+                line-height: 25px;
+                margin: 0 0 10px 0;
+                padding: 0;
+            }
+        }
+
+        // Важно
+        &__block-important {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        &__txt-important {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: $important-color;
+        }
+
+        // Если нет ПВЗ
+        &__no-point {
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+
+            &-heading {
+                font-size: 18px;
+                font-weight: 700;
+                color: $light-gray-txt-color;
+            }
+
+            &-ul {
+                margin: 20px 0;
+            }
+
+            span {
+                color: $color-primary;
+            }
+        }
+
+        &__footer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            color: $light-gray-txt-color;
+
+            &-btn {
+                width: 284px;
+                text-decoration: none;
+                font-size: 14px;
+                font-weight: 600;
+            }
+        }
+    }
+}
+

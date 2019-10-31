@@ -31,9 +31,9 @@ function elem_close(clickElem, eventElem) {
 // eventClass - присваиваемый класс
 function event_func(eventPar, clickElem, eventElem, eventClass) {
     eventPar.forEach((e) => {
-        let clickElem  = e.querySelector(clickElem),
-            eventElem  = e.querySelector(eventElem);
-        
+        let clickElem = e.querySelector(clickElem),
+            eventElem = e.querySelector(eventElem);
+
         if (clickElem && eventElem) {
             clickElem.addEventListener("click", () => {
                 eventElem.classList.toggle(eventClass);
@@ -196,25 +196,43 @@ if (modal_bg && btn_close && modal) {
 }
 
 
-
-
-
 //Разворачивающийся блок
-(()=> {
+(() => {
     let toggleBlock = document.querySelectorAll(".collapse-block");
 
-    if (toggleBlock) {        
+    if (toggleBlock) {
 
-        toggleBlock.forEach((t)=> {
-            let btn_toggle  = t.querySelector(".arrow");
+        toggleBlock.forEach((t) => {
+            let btn_toggle = t.querySelector(".arrow");
 
-            btn_toggle.addEventListener("click", ()=> {
+            btn_toggle.addEventListener("click", () => {
                 t.classList.toggle("is-toggle");
             });
         });
+
     }
-    
+
 })()
+
+
+// РАзворачиваем всю доставку в мобилке
+
+let dcw = document.querySelectorAll(".delivery__content-wrap");
+
+if (dcw) {
+    dcw.forEach((d) => {
+        let dhw = d.querySelector(".delivery__header-heading-wrap");
+        let btn_tog = dhw.querySelector("#btn-toggle-wrap"),
+            cw = d.querySelector(".delivery__collapse-wrap");
+
+        btn_tog.addEventListener("click", () => {
+            cw.classList.toggle("is-toggle");
+        });
+    });
+}
+
+
+
 
 const sidebar_array = document.querySelectorAll(".sidebar");
 
@@ -222,14 +240,11 @@ sidebar_array.forEach(sidebar => {
     const sidebar_back = sidebar.querySelector(".sidebar__background");
     const sidebar_close = sidebar.querySelector(".sidebar__close");
 
-    sidebar_back.addEventListener("click", function() {
+    sidebar_back.addEventListener("click", function () {
         sidebar.classList.toggle("sidebar_is-active");
     });
 
-    sidebar_close.addEventListener("click", function() {
+    sidebar_close.addEventListener("click", function () {
         sidebar.classList.toggle("sidebar_is-active");
     });
 });
-
-
-
