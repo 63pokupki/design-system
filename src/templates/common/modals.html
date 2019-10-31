@@ -254,7 +254,8 @@
                                     <button class="btn-sum__minus"></button>
                                     <input value="128" class="btn-sum__sum-num"></input>
                                     <button class="btn-sum__plus"></button>
-                                </div>                                <div class="ds-loader"></div>
+                                </div>
+                                <div class="ds-loader"></div>
                                 <button class="ds-btn ds-btn_hover btn-add-to-card">
                                     <div class="ds-btn__text">В корзину </div>
                                     <i class="icon icon-cart"></i>
@@ -965,6 +966,130 @@
                 <div class="modal__bg"></div>
             </div>        
         </script>
+    </div>
+
+    <!-- Мобильная модалка список каталогов -->
+    <h1 class="ds-title">Модалка "Список каталогов" мобильная</h1>
+    <div class="ds-wrapper">
+        <div class="ds-divider" style="position: relative;">
+            <div class="modal is-visible" style="position: relative;">
+                <div class="modal__wrap" style="margin: 10px;">
+                    <div class="modal__content">
+                        <div class="modal__list-catalog-mobile">
+                            <div class="modal__row">
+                                <div class="modal__txt">Для переноса выбрано:</div>
+                            </div>
+                            <div class="modal__row">
+                                <a class="modal__link link link_hover" href="#"><span
+                                        class="modal__num-position">16</span> позиций</a>
+                                <a class="modal__link link link_hover" href="#">Сбросить</a>
+                            </div>
+                            <br>
+                            <div class="modal__row">
+                                <div class="modal__txt modal__selected-catalog">Каталог для переноса не выбран</div>
+                            </div>
+                            <div class="modal__row">
+                                <a class="modal__link link link_hover" href="#">Выбрать каталог</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal__bg" style="position: absolute;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
+            <div class="modal is-visible">
+                <div class="modal__wrap" style="margin: 10px;">
+                    <div class="modal__content">
+                        <div class="modal__list-catalog-mobile">
+                            <div class="modal__row">
+                                <div class="modal__txt">Для переноса выбрано:</div>
+                            </div>
+                            <div class="modal__row">
+                                <a class="modal__link link link_hover" href="#"><span class="modal__num-position">16</span> позиций</a>                                
+                                <a class="modal__link link link_hover" href="#">Сбросить</a>
+                            </div>
+                            <br>
+                            <div class="modal__row">
+                                <div class="modal__txt modal__selected-catalog">Каталог для переноса не выбран</div>
+                            </div>
+                            <div class="modal__row">
+                                <a class="modal__link link link_hover" href="#">Выбрать каталог</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal__bg"></div>
+            </div>    
+        </script>
+
+        <div class="ds-wrapper">
+            <div class="ds-divider">
+                <div class="modal modal__list-catalog-mobile is-visible" style="position: relative;">
+                    <div class="modal__wrap" style="margin: 10px;">
+                        <div class="modal__content">
+                            <div class="modal__list-catalog-mobile">
+                                <h3>Список выбранных позиций</h3>
+
+                                <div class="modal__row">
+                                    <div class="checkbox checkbox_accent checkbox_circle">
+                                        <input checked="checked" class="checkbox__input" type="checkbox"
+                                            id="chx-lc25" />
+                                        <label class="checkbox__label" for="chx-lc25">
+                                            <p>Позиция</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="modal__row">
+                                    <div class="checkbox checkbox_accent checkbox_circle">
+                                        <input checked="checked" class="checkbox__input" type="checkbox"
+                                            id="chx-lc24" />
+                                        <label class="checkbox__label" for="chx-lc24">
+                                            <p>Позиция</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="modal__row">
+                                    <div class="checkbox checkbox_accent checkbox_circle">
+                                        <input checked="checked" class="checkbox__input" type="checkbox"
+                                            id="chx-lc23" />
+                                        <label class="checkbox__label" for="chx-lc23">
+                                            <p>Позиция</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="modal__row">
+                                    <div class="checkbox checkbox_accent checkbox_circle">
+                                        <input checked="checked" class="checkbox__input" type="checkbox"
+                                            id="chx-lc22" />
+                                        <label class="checkbox__label" for="chx-lc22">
+                                            <p>Позиция</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="modal__row modal__btn-toggle">
+                                    <button class="modal__arrow arrow arrow-down arrow_default arrow_transp">
+                                        <i class="icon icon-arrow-down"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal__bg" style="position: absolute;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <!-- Скопировать код элемента сюда -->
+            </script>
+        </div>
+
+
     </div>
 
 

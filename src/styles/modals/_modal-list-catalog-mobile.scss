@@ -1,0 +1,31 @@
+
+
+.modal {
+    &__list-catatlog-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px 0;
+        p {
+            margin: 0;
+        }
+    }
+    &__arrow {
+        margin: 0 auto;
+        i {
+            font-size: 8px;
+            color: $color-primary-light;
+        }
+    }
+    &__btn-toggle {
+        padding: 0;
+        border-bottom: 1px solid $color-primary-light;
+    }
+}
+
+
