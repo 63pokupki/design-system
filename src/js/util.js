@@ -87,6 +87,21 @@ if (collapse_section) {
     });
 }
 
+//Модалки
+
+
+//Закрытие модалки
+
+let modal_bg = document.querySelectorAll(".modal__bg"),
+    btn_close = document.querySelectorAll(".modal__btn-close"),
+    modal = document.querySelectorAll(".modal");
+
+if (modal_bg && btn_close && modal) {
+
+    elem_close(modal_bg, modal);
+    elem_close(btn_close, modal);
+}
+
 // <!-- Модалка копирование позиции -->
 
 //Раскрытие списка
@@ -181,23 +196,6 @@ if (heart) {
         }
     });
 })()
-
-
-
-//Модалки
-let modal_bg = document.querySelectorAll(".modal__bg"),
-    btn_close = document.querySelectorAll(".modal__btn-close"),
-    modal = document.querySelectorAll(".modal");
-
-if (modal_bg && btn_close && modal) {
-
-    elem_close(modal_bg, modal);
-    elem_close(btn_close, modal);
-}
-
-
-
-
 
 //Разворачивающийся блок
 (()=> {
