@@ -88,7 +88,8 @@ if (collapse_section) {
 
 //Модалки
 
-
+//Demo
+let btn_demo_modal = document.querySelectorAll(".modal__demo-btn");
 
 
 // <!-- Модалка копирование позиции -->
