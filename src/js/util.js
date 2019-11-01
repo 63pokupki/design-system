@@ -88,18 +88,6 @@ if (collapse_section) {
 
 //Модалки
 
-//Demo
-let body_modals = document.querySelectorAll(".body__modals");
-
-    body_modals.forEach((bm)=> {
-        let btn_demo = bm.querySelector(".modal__demo-btn"),
-            mw = bm.querySelectorAll(".modal");
-            btn_demo.addEventListener("click", ()=> {
-
-            });
-    });
-// let btn_demo_modal = document.querySelectorAll(".modal__demo-btn");
-
 
 // <!-- Модалка копирование позиции -->
 
