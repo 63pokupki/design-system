@@ -1,0 +1,91 @@
+
+
+.modal {
+    &.is-selected {
+        .modal__btn-container {
+            display: flex;
+        }
+        .modal__selected-catalog {
+            font-size: 14px;
+            font-weight: 600;
+            color: $dark-brown-color;
+        }
+    }
+    &.demo {
+        position: relative;
+    }
+    &__content {
+        overflow: hidden;
+        &:hover {
+            transition: all $transition-slow;
+            overflow: auto;
+        }
+        &_col {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    // Футер
+    &__list-catatlog-mobile-footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px 0;
+        p {
+            margin: 0;
+            max-width: 200px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        a.modal__link {
+            &:first-child {
+                margin: 0 130px 0 0;
+            }
+        }
+    }
+    &__arrow {
+        margin: 0 auto;
+        i {
+            font-size: 8px;
+            color: $color-primary-light;
+        }
+    }
+    &__btn-toggle {
+        padding: 0;
+        border-bottom: 1px solid $color-primary-light;
+    }
+    &__selected-catalog {
+        font-size: 12px;
+        color: $light-gray-link-color;
+    }
+    //Кнопка "Перенести"
+    &__btn-container {
+        display: none;
+        width: 100%;
+        margin: 20px 0 0 0;
+
+    }
+    &__btn-move {
+        margin: 0 auto;
+        width: 100%;
+    }
+    // Список выбранных позиций 
+    &__chx-container {
+        display: flex;
+        flex-direction: column;
+        max-height: 150px;
+        overflow-y: hidden;
+        transition: all $transition-slow;
+        &.is-toggle {
+            max-height: 500px;
+            transition: all $transition-slow;
+        }
+    }
+}
+
+
