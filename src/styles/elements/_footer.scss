@@ -388,47 +388,45 @@
             padding: 0 10px;
         }
 
+
         &__buy-together,
         &__cheaper-than-retail,
         &__defend-buyer,
         &__points-near,
         &__real-comments {
-            font-size: 9px;
+            font-size: 10px;
+            margin: 15px 0;
+            padding: 0 0 0 50px;
 
-            &__buy-together,
-            &__cheaper-than-retail,
-            &__defend-buyer,
-            &__points-near,
-            &__real-comments {
-                font-size: 10px;
-                margin: 15px 0;
-                padding: 0 0 0 50px;
-
-                &:before {
-                    width: 35px;
-                }
-
+            &:before {
+                width: 35px;
+            }
+        }
 
         &__links {
-            
+
             &-a {
                 font-size: 12px;
             }
+
             &-site {
                 flex-direction: row;
                 flex-wrap: wrap;
                 padding: 0;
             }
         }
+
         &__social {
             img {
                 width: 25px;
             }
+
             .attach:after {
                 font-size: 8px;
                 left: 35px;
                 top: 8px;
-            }    
+            }
+
             &-icons {
                 display: flex;
                 flex-wrap: wrap;
@@ -436,88 +434,87 @@
                 padding: 0 20px 0 0;
 
             }
+        }
 
-            &__points-near {
-                margin-top: 10px;
+        &__points-near {
+            margin-top: 10px;
+        }
+
+        &__real-comments {
+            margin-top: 10px;
+        }
+
+        &__links {
+            padding: 20px;
+
+            &-a {
+                font-size: 12px;
             }
 
-            &__real-comments {
-                margin-top: 10px;
+            &-site {
+                flex-direction: row;
+                flex-wrap: wrap;
+                padding: 0;
+            }
+        }
+
+        &__social {
+            img {
+                width: 25px;
             }
 
-            &__links {
-                padding: 20px;
+            .attach:after {
+                font-size: 8px;
+                left: 35px;
+                top: 8px;
+            }
 
-                &-a {
+            &-icons {
+                display: flex;
+                flex-wrap: wrap;
+                width: 115px;
+                padding-right: 20px;
+            }
+
+        }
+
+        &__support {
+            flex-direction: column;
+            background: $pale-blue-color;
+            padding: 20px;
+            border-radius: 0;
+            border: none;
+
+            &-a {
+                font-size: 12px;
+                margin-right: 15px;
+            }
+
+            &-contacts {
+                margin: 0;
+            }
+
+            &-links {
+                margin-bottom: 10px;
+                display: flex;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+
+                a[href="tel:"] {
                     font-size: 12px;
                 }
-
-                &-site {
-                    flex-direction: row;
-                    flex-wrap: wrap;
-                    padding: 0;
-                }
             }
 
-            &__social {
-                img {
-                    width: 25px;
-                }
-
-                .attach:after {
-                    font-size: 8px;
-                    left: 35px;
-                    top: 8px;
-                }
-
-                &-icons {
-                    display: flex;
-                    flex-wrap: wrap;
-                    width: 115px;
-                    padding-right: 20px;
-                }
-
+            &-phone {
+                margin: 0 5px 3px 0;
+                font-size: 13px;
             }
 
-            &__support {
-                flex-direction: column;
-                background: $pale-blue-color;
-                padding: 20px;
-                border-radius: 0;
-                border: none;
+            &-time {
+                margin: 0 0 3px 0;
 
-                &-a {
-                    font-size: 12px;
-                    margin-right: 15px;
-                }
-
-                &-contacts {
-                    margin: 0;
-                }
-
-                &-links {
-                    margin-bottom: 10px;
-                    display: flex;
-                    justify-content: flex-start;
-                    flex-wrap: wrap;
-
-                    a[href="tel:"] {
-                        font-size: 12px;
-                    }
-                }
-
-                &-phone {
-                    margin: 0 5px 3px 0;
-                    font-size: 13px;
-                }
-
-                &-time {
-                    margin: 0 0 3px 0;
-
-                }
             }
         }
     }
 }
-
 
