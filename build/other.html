@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Прочие компоненты</title>
+<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?78dfd4227ebe93d83840" rel="stylesheet"><link href="css/ds-utils.css?78dfd4227ebe93d83840" rel="stylesheet"><link href="css/ds-ui-kit.css?78dfd4227ebe93d83840" rel="stylesheet"><link href="css/footer.css?78dfd4227ebe93d83840" rel="stylesheet"></head>
+
+<body>
+    <h1 class="ds-title">Прочие компоненты</h1>
+
+    <h2 class="ds-title">Хлебные крошки .breadcrumb</h2>
+    <div class="ds-wrapper">
+        <nav class="breadcrumb">
+            <ol class="breadcrumb__list">
+                <li class="breadcrumb__item">
+                    <a class="link" href="#">Новые...</a>
+                </li>
+                <li class="breadcrumb__item">
+                    <a class="link" href="#">Список...</a>
+                </li>
+                <!-- активная крошка имеет модификатор active -->
+                <li class="breadcrumb__item breadcrumb__item_active">
+                    <a class="link" href="#">Цель</a>
+                </li>
+            </ol>
+        </nav>
+    </div>
+
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
+                <nav class="breadcrumb">
+                    <ol class="breadcrumb__list">
+                        <li class="breadcrumb__item">
+                            <a class="link" href="#">Новые...</a>
+                        </li>
+                        <li class="breadcrumb__item">
+                            <a class="link" href="#">Список...</a>
+                        </li>
+                        <!-- активная крошка имеет модификатор active -->
+                        <li class="breadcrumb__item breadcrumb__item_active">
+                            <a class="link" href="#">Цель</a>
+                        </li>
+                    </ol>
+                </nav>
+            </script>
+    </div>
+
+    <h2 class="ds-title">Лого</h2>
+    <div class="ds-wrapper">
+        <div style="max-width: 33%; margin: 0 auto;" class="ds-divider">
+            <!-- логотип -->
+            <div class="logo">
+                <a class="logo__link" href="#">
+                    <img class="logo__img" src="images/logotype.svg" />
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
+                <div class="logo">
+                    <a class="logo__link" href="#">
+                        <img class="logo__img" src="images/logotype.svg" />
+                    </a>
+                </div>
+            </script>
+    </div>
+
+    <h2 class="ds-title">Блок с информацией о техподдержке</h2>
+    <div class="ds-wrapper">
+        <div class="ds-divider">
+            <div class="support-info">
+                <a class="support-info__tel" href="tel:+78007006301">8 (800) 700-63-01</a>
+                <span class="support-info__hours">8:00 - 20:00</span>
+                <i class="icon icon-info support-info__icon has-tooltip">
+                    <span class="tooltip  support-info__tooltip">Если у вас возникли проблемы с регистрацией или входом
+                        на форум - пишите на адрес службы
+                        поддержки
+                        <a class="link link_colored bold" href="mailto:support@63pokupki.ru">support@63pokupki.ru</a>
+                    </span>
+                </i>
+            </div>
+        </div>
+    </div>
+
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
+                <div class="support-info">
+                    <a class="support-info__tel" href="tel:+78007006301">8 (800) 700-63-01</a>
+                    <span class="support-info__hours">8:00 - 20:00</span>
+                    <i class="icon icon-info support-info__icon has-tooltip">
+                        <span class="tooltip  support-info__tooltip"
+                            >Если у вас возникли проблемы с регистрацией или входом на форум - пишите на адрес службы
+                            поддержки
+                            <a class="link link_colored bold" href="mailto:support@63pokupki.ru"
+                                >support@63pokupki.ru</a
+                            >
+                        </span>
+                    </i>
+                </div>
+            </script>
+    </div>
+
+    <h2 class="ds-title">Рейтинг покупателя</h2>
+    <div class="ds-wrapper">
+        <span class="rating-badge rating-badge_level-0">0</span>
+        <span class="rating-badge rating-badge_level-1">1</span>
+        <span class="rating-badge rating-badge_level-2">2</span>
+        <span class="rating-badge rating-badge_level-3">3</span>
+    </div>
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
+                <span class="rating-badge rating-badge_level-0">0</span>
+                <span class="rating-badge rating-badge_level-1">1</span>
+                <span class="rating-badge rating-badge_level-2">2</span>
+                <span class="rating-badge rating-badge_level-3">3</span>
+            </script>
+    </div>
+
+    <!-- Рейтинг -->
+    <h2 class="ds-title">Рейтинг</h2>
+    <div class="ds-wrapper">
+        <div class="rating-star-org">
+            <i class="rating-star-org__icon icon icon-star"></i>
+            <div class="rating-star-org__value">4.9</div>
+        </div>
+    </div>
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
+            <div class="rating-star-org">
+                <i class="icon icon-star"></i>
+                <div class="rating-star-org__value">4.9</div>
+            </div>
+        </script>
+    </div>
+
+    <!-- Блок избранное -->
+    <h1 class="ds-title">Блок избранное</h1>
+    <div class="ds-text">
+        Для активного состояния(сердечко заполнено цветом), добавить класс
+        <span class="ds-hl">.icon-heart-filled</span> элементу <span class="ds-hl">like__icon</span>
+    </div>
+    <div class="ds-wrapper">
+        <div class="ds-divider">
+            <div class="like">
+                <i class="like__icon icon icon-heart"></i>
+                <div class="like__text">в избранном у <span>2000</span> людей</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
+            <div class="like">
+                <i class="like__icon icon icon-heart"></i>
+                <div class="like__text">в избранном у <span>2000</span> людей</div>
+            </div>
+        </script>
+    </div>
+
+    <!-- Блок организатора -->
+    <h1 class="ds-title">Блок организатора</h1>
+    <div class="ds-wrapper">
+        <div class="ds-divider">
+            <div class="organizer-block">
+                <div class="organizer-block__name-wrap">
+                    <div class="organizer-block__name">
+                        <a href="#" target="_blank">
+                            <p data-full-name="Наталья Хозяинова">Наталья Хозяинова</p>
+                        </a>
+                    </div>
+                    <div class="organizer-block__rating">
+                        <div class="rating-star-org">
+                            <i class="rating-star-org__icon icon icon-star"></i>
+                            <div class="rating-star-org__value">4.9</div>
+                        </div>
+                    </div>
+                </div>
+                <p>Орзанизатор</p>
+            </div>
+        </div>
+    </div>
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
+            <div class="organizer-block">
+                <div class="organizer-block__name-wrap">
+                    <div class="organizer-block__name">
+                        <p data-full-name="Наталья Хозяинова">Наталья Хозяинова</p>
+                    </div>
+                    <div class="organizer-block__rating">
+                        <div class="rating-star-org">
+                            <i class="rating-star-org__icon icon icon-star"></i>
+                            <div class="rating-star-org__value">4.9</div>
+                        </div>
+                        </div>
+                </div>
+                <p>Орзанизатор</p>
+            </div>
+        </script>
+    </div>
+
+    <!-- Статус-бар -->
+    <h1 class="ds-title">Статус бар</h1>
+    <div class="ds-wrapper"> 
+        <div class="ds-text">
+            Если ширина <span class="ds-hl">statusbar__line</span> больше 0, добавить класс
+            <span class="ds-hl">.is-filled</span>
+        </div>
+        <div class="ds-text">
+            У элемента 3 размера: стандартный, средний и большой. Для изменения размера со стандартного, необходимо
+            добавить соответствующий класс <span class="ds-hl">.statusbar_middle</span> для среднего и
+            <span class="ds-hl">.statusbar_large</span>
+            для большого.
+        </div>
+        <!-- Статус бар -->
+        <!-- Если ширина statusbar__line больше 0, добавить класс is-filled -->
+        <div class="statusbar is-filled">
+            <div class="statusbar__line" style="width: 25%">Собрано <span>0</span> из <span>15000</span> руб.</div>
+        </div>
+
+    </div>
+
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
+            <div class="statusbar is-filled">
+                <div class="statusbar__line" style="width: 25%">Собрано <span>0</span> из <span>15000</span> руб.</div>
+            </div>
+        </script>
+    </div>
+
+   
+
+    <!-- loader -->
+    <h1 class="ds-title">Лоадер</h1>
+    <div class="ds-wrapper">
+        <div class="ds-text">Для лоадера на больших экранах необходимо присвоить модификатор
+            <span class="ds-hl">ds-loader_large</span> элементу <span class="ds-hl">ds-loader</span>.
+        </div>
+        <div class="ds-divider">
+            <div class="ds-loader"></div>
+            <div class="ds-loader ds-loader_large"></div>
+        </div>
+    </div>
+
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
+                <div class="ds-loader"></div>
+            </script>
+    </div>
+
+    <!-- Скролл -->
+    <h1 class="ds-title">Скролл</h1>
+    <div class="ds-text">Scroll может быть горизонтальным и вертикальным,
+        чтобы изменить направление, необходимо присвоить соответствующий модификатор
+        <span class="ds-hl">_horizontal</span> или <span class="ds-hl">_vertical</span>.
+    </div>
+    <div class="ds-wrapper">
+        <div class="ds-divider">
+            <div class="ds-scroll_horizontal">
+                <div class="ds-scroll__slider"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
+            <div class="ds-scroll_horizontal">
+                <div class="ds-scroll__slider"></div>
+            </div>    
+        </script>
+    </div>
+
+    <div class="ds-wrapper">
+        <div class="ds-divider">
+            <div class="ds-scroll_vertical">
+                <div class="ds-scroll__slider"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
+            <div class="ds-scroll_vertical">
+                <div class="ds-scroll__slider"></div>
+            </div>    
+        </script>
+    </div>
+
+
+
+
+<script type="text/javascript" src="js/highlight-syntax.js?78dfd4227ebe93d83840"></script><script type="text/javascript" src="js/ds-utils.js?78dfd4227ebe93d83840"></script><script type="text/javascript" src="js/categories-icons-sprite.js?78dfd4227ebe93d83840"></script><script type="text/javascript" src="js/ds-ui-kit.js?78dfd4227ebe93d83840"></script><script type="text/javascript" src="js/footer.js?78dfd4227ebe93d83840"></script></body>
+
+</html>

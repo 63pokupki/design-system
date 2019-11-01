@@ -29,7 +29,6 @@ function elem_close(clickElem, eventElem) {
 // clickElem  - элемент по которому кликают
 // eventElem  - элемент на котором происходит событие
 // eventClass - присваиваемый класс
-
 // function event_func(eventPar, clickElem, eventElem, eventClass) {
 //     eventPar.forEach((e) => {
 //         let clickElem  = e.querySelector(clickElem),
@@ -111,7 +110,7 @@ let selectCont = document.querySelectorAll(".modal__select");
 if (selectCont) {
     selectCont.forEach(sc => {
         let sel_position = sc.querySelector(".modal__selected-position"),
-            li = sc.querySelectorAll("li.item");
+            li = sc.querySelectorAll("li");
 
         li.forEach(i => {
             i.addEventListener("click", () => {
@@ -199,6 +198,59 @@ if (toggleBlock) {
     });
 }
 
+=======
+
+
+//Модалки
+let modal_bg = document.querySelectorAll(".modal__bg"),
+    btn_close = document.querySelectorAll(".modal__btn-close"),
+    modal = document.querySelectorAll(".modal");
+
+if (modal_bg && btn_close && modal) {
+
+    elem_close(modal_bg, modal);
+    elem_close(btn_close, modal);
+}
+
+
+//Разворачивающийся блок
+(() => {
+    let toggleBlock = document.querySelectorAll(".collapse-block");
+
+    if (toggleBlock) {
+
+        toggleBlock.forEach((t) => {
+            let btn_toggle = t.querySelector(".arrow");
+
+            btn_toggle.addEventListener("click", () => {
+                t.classList.toggle("is-toggle");
+            });
+        });
+
+    }
+
+})()
+
+
+
+// РАзворачиваем всю доставку в мобилке
+
+let dcw = document.querySelectorAll(".delivery__content-wrap");
+
+if (dcw) {
+    dcw.forEach((d) => {
+        let dhw = d.querySelector(".delivery__header-heading-wrap");
+        let btn_tog = dhw.querySelector("#btn-toggle-wrap"),
+            cw = d.querySelector(".delivery__collapse-wrap");
+
+        btn_tog.addEventListener("click", () => {
+            cw.classList.toggle("is-toggle");
+        });
+    });
+}
+
+
+
 
 const sidebar_array = document.querySelectorAll(".sidebar");
 
@@ -213,6 +265,7 @@ sidebar_array.forEach(sidebar => {
     sidebar_close.addEventListener("click", function () {
         sidebar.classList.toggle("sidebar_is-active");
     });
+
 });
 
 //Закрытие модалки
@@ -227,4 +280,7 @@ if (modal_bg && btn_close && modal) {
     elem_close(modal_bg, modal);
     elem_close(btn_close, modal);
 }
+
+
+});
 

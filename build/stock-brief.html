@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Краткое отображение информации о закупке</title>
+    <link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?78dfd4227ebe93d83840" rel="stylesheet"><link href="css/ds-utils.css?78dfd4227ebe93d83840" rel="stylesheet"><link href="css/ds-ui-kit.css?78dfd4227ebe93d83840" rel="stylesheet"><link href="css/footer.css?78dfd4227ebe93d83840" rel="stylesheet"></head>
+    <body>
+        <h2 class="ds-title">Краткое отображение информации о закупке</h2>
+
+        <div class="ds-wrapper">
+            <p>
+                Добавить модификатор <span class="ds-hl">stock-brief_disabled</span> к классу
+                <span class="ds-hl">stock-brief</span> для неактивной закупки
+            </p>
+            <p>
+                Заменить <span class="ds-hl">icon-heart-bold</span> на <span class="ds-hl">icon-heart-filled</span> для
+                заполнения иконки сердца в блоке Избранное
+            </p>
+        </div>
+
+        <div class="ds-center">
+            <!-- Добавить модификатор stock-brief_disabled для неактивной закупки -->
+            <div class="stock-brief">
+                <div class="stock-brief__col stock-brief__left">
+                    <div class="stock-brief__row">
+                        <span class="stock-brief__tag has-tooltip"
+                            >#SALE
+                            <span class="tooltip tooltip_top  tooltip_ta-c">Распродажа</span>
+                        </span>
+                        <span class="stock-brief__data">21 выкуп стартовал 25 августа</span>
+                    </div>
+                    <div class="stock-brief__row stock-brief__row-heading">
+                        <span class="stock-brief__tag has-tooltip"
+                            >#0 %
+                            <span class="tooltip tooltip_top  tooltip_ta-c">Орг. сбор 0%</span>
+                        </span>
+                        <span class="stock-brief__heading"
+                            >Dimma fashion studio. Распродажа. Модный бренд для мам
+                            <i class="icon icon-star rating-star stock-brief__rating has-tooltip">
+                                <span class="rating-star__num">4.7</span>
+                                <span class="tooltip tooltip_top  tooltip_ta-c">Рейтинг закупки</span>
+                            </i>
+                        </span>
+                    </div>
+                    <div class="stock-brief__row">
+                        <span class="stock-brief__tag has-tooltip"
+                            >#TOP
+                            <span class="tooltip tooltip_top  tooltip_ta-c">Топ-закупка</span>
+                        </span>
+                        <span class="stock-status green stock-brief__status">
+                            <i class="icon icon-box stock-status__icon"></i>
+                            <span class="stock-status__text">Сбор с 30.05.2018</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="stock-brief__col stock-brief__right">
+                    <div class="stock-brief__row stock-brief__d-mg">
+                        <div class="org-profile stock-brief__org">
+                            <div class="org-profile__image-wrapper">
+                                <a href="#">
+                                    <img class="org-profile__image" src="images/avatar.png" />
+                                </a>
+                                <i class="icon icon-star rating-star org-profile__rating has-tooltip">
+                                    <span class="rating-star__num">4.7</span>
+                                    <span class="tooltip tooltip_top  tooltip_ta-c">Рейтинг орг-а</span>
+                                </i>
+                            </div>
+                            <div class="org-profile__text">
+                                <a href="#" class="link org-profile__name">Katrina87</a>
+                                <span class="org-profile__status">Организатор СП от администрации сайта</span>
+                            </div>
+                        </div>
+
+                        <div class="favorite stock-brief__favorite">
+                            <!-- заменить icon-heart-bold на icon-heart-filled для заполнения -->
+                            <i class="icon icon-heart-bold favorite__icon"></i>
+                            <div class="favorite__text">
+                                <button class="link favorite__action">Добавить в избранное</button>
+                                <span class="favorite__already">1200 участников уже добавили</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stock-brief__row">
+                        <button class="ds-btn ds-btn_flex stock-brief__send">
+                            <span class="ds-btn__text">Написать</span>
+                        </button>
+                        <button class="ds-btn ds-btn_flex stock-brief__discuss">
+                            <span class="ds-btn__text">Обсудить закупку</span>
+                            <span class="num-of-discussions">
+                                <span class="num-of-discussions__num">1024</span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="ds-title">Неактивное краткое отображение информации о закупке</h2>
+        <div class="ds-center">
+            <!-- Добавить модификатор stock-brief_disabled для неактивной закупки -->
+            <div class="stock-brief stock-brief_disabled">
+                <div class="stock-brief__col stock-brief__left">
+                    <div class="stock-brief__row">
+                        <span class="stock-brief__tag has-tooltip"
+                            >#SALE
+                            <span class="tooltip tooltip_top  tooltip_ta-c">Распродажа</span>
+                        </span>
+                        <span class="stock-brief__data">21 выкуп стартовал 25 августа</span>
+                    </div>
+                    <div class="stock-brief__row stock-brief__row-heading">
+                        <span class="stock-brief__tag has-tooltip"
+                            >#0 %
+                            <span class="tooltip tooltip_top  tooltip_ta-c">Орг. сбор 0%</span>
+                        </span>
+                        <span class="stock-brief__heading"
+                            >Dimma fashion studio. Распродажа. Модный бренд для мам
+                            <i class="icon icon-star rating-star stock-brief__rating has-tooltip">
+                                <span class="rating-star__num">4.7</span>
+                                <span class="tooltip tooltip_top  tooltip_ta-c">Рейтинг закупки</span>
+                            </i>
+                        </span>
+                    </div>
+                    <div class="stock-brief__row">
+                        <span class="stock-brief__tag has-tooltip"
+                            >#TOP
+                            <span class="tooltip tooltip_top  tooltip_ta-c">Топ-закупка</span>
+                        </span>
+                        <span class="stock-brief__status bold">
+                            Сбор закрыт. Чтобы не пропустить открытие
+                            <a class="link link_hover" href="#"> добавьте закупку в избранное</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="stock-brief__col stock-brief__right">
+                    <div class="stock-brief__row stock-brief__d-mg">
+                        <div class="org-profile stock-brief__org">
+                            <div class="org-profile__image-wrapper">
+                                <a href="#">
+                                    <img class="org-profile__image" src="images/avatar.png" />
+                                </a>
+                                <i class="icon icon-star rating-star org-profile__rating has-tooltip">
+                                    <span class="rating-star__num">4.7</span>
+                                    <span class="tooltip tooltip_top  tooltip_ta-c">Рейтинг орг-а</span>
+                                </i>
+                            </div>
+                            <div class="org-profile__text">
+                                <a href="#" class="link org-profile__name">Katrina87</a>
+                                <span class="org-profile__status">Организатор СП от администрации сайта</span>
+                            </div>
+                        </div>
+
+                        <div class="favorite stock-brief__favorite">
+                            <!-- заменить icon-heart-bold на icon-heart-filled для заполнения -->
+                            <i class="icon icon-heart-bold favorite__icon"></i>
+                            <div class="favorite__text">
+                                <button class="link favorite__action">Добавить в избранное</button>
+                                <span class="favorite__already">1200 участников уже добавили</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stock-brief__row">
+                        <button class="ds-btn ds-btn_flex stock-brief__send">
+                            <span class="ds-btn__text">Написать</span>
+                        </button>
+                        <button class="ds-btn ds-btn_flex stock-brief__discuss">
+                            <span class="ds-btn__text">Обсудить закупку</span>
+                            <span class="num-of-discussions">
+                                <span class="num-of-discussions__num">1024</span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <!-- Добавить модификатор stock-brief_disabled для неактивной закупки -->
+                <div class="stock-brief">
+                    <div class="stock-brief__col stock-brief__left">
+                        <div class="stock-brief__row">
+                            <span class="stock-brief__tag has-tooltip"
+                                >#SALE
+                                <span class="tooltip tooltip_top  tooltip_ta-c">Распродажа</span>
+                            </span>
+                            <span class="stock-brief__data">21 выкуп стартовал 25 августа</span>
+                        </div>
+                        <div class="stock-brief__row stock-brief__row-heading">
+                            <span class="stock-brief__tag has-tooltip"
+                                >#0 %
+                                <span class="tooltip tooltip_top  tooltip_ta-c">Орг. сбор 0%</span>
+                            </span>
+                            <span class="stock-brief__heading"
+                                >Dimma fashion studio. Распродажа. Модный бренд для мам
+                                <i class="icon icon-star rating-star stock-brief__rating has-tooltip">
+                                    <span class="rating-star__num">4.7</span>
+                                    <span class="tooltip tooltip_top  tooltip_ta-c">Рейтинг закупки</span>
+                                </i>
+                            </span>
+                        </div>
+                        <div class="stock-brief__row">
+                            <span class="stock-brief__tag has-tooltip"
+                                >#TOP
+                                <span class="tooltip tooltip_top  tooltip_ta-c">Топ-закупка</span>
+                            </span>
+                            <span class="stock-status green stock-brief__status">
+                                <i class="icon icon-box stock-status__icon"></i>
+                                <span class="stock-status__text">Сбор с 30.05.2018</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="stock-brief__col stock-brief__right">
+                        <div class="stock-brief__row stock-brief__d-mg">
+                            <div class="org-profile stock-brief__org">
+                                <div class="org-profile__image-wrapper">
+                                    <a href="#">
+                                        <img class="org-profile__image" src="images/avatar.png" />
+                                    </a>
+                                    <i class="icon icon-star rating-star org-profile__rating has-tooltip">
+                                        <span class="rating-star__num">4.7</span>
+                                        <span class="tooltip tooltip_top  tooltip_ta-c">Рейтинг орг-а</span>
+                                    </i>
+                                </div>
+                                <div class="org-profile__text">
+                                    <a href="#" class="link org-profile__name">Katrina87</a>
+                                    <span class="org-profile__status">Организатор СП от администрации сайта</span>
+                                </div>
+                            </div>
+
+                            <div class="favorite stock-brief__favorite">
+                                <!-- заменить icon-heart-bold на icon-heart-filled для заполнения -->
+                                <i class="icon icon-heart-bold favorite__icon"></i>
+                                <div class="favorite__text">
+                                    <button class="link favorite__action">Добавить в избранное</button>
+                                    <span class="favorite__already">1200 участников уже добавили</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stock-brief__row">
+                            <button class="ds-btn ds-btn_flex stock-brief__send">
+                                <span class="ds-btn__text">Написать</span>
+                            </button>
+                            <button class="ds-btn ds-btn_flex stock-brief__discuss">
+                                <span class="ds-btn__text">Обсудить закупку</span>
+                                <span class="num-of-discussions">
+                                    <span class="num-of-discussions__num">1024</span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </script>
+        </div>
+    <script type="text/javascript" src="js/highlight-syntax.js?78dfd4227ebe93d83840"></script><script type="text/javascript" src="js/ds-utils.js?78dfd4227ebe93d83840"></script><script type="text/javascript" src="js/categories-icons-sprite.js?78dfd4227ebe93d83840"></script><script type="text/javascript" src="js/ds-ui-kit.js?78dfd4227ebe93d83840"></script><script type="text/javascript" src="js/footer.js?78dfd4227ebe93d83840"></script></body>
+</html>
