@@ -29,19 +29,18 @@ function elem_close(clickElem, eventElem) {
 // clickElem  - элемент по которому кликают
 // eventElem  - элемент на котором происходит событие
 // eventClass - присваиваемый класс
-function event_func(eventPar, clickElem, eventElem, eventClass) {
-    eventPar.forEach((e) => {
-        let clickElem = e.querySelector(clickElem),
-            eventElem = e.querySelector(eventElem);
+// function event_func(eventPar, clickElem, eventElem, eventClass) {
+//     eventPar.forEach((e) => {
+//         let clickElem  = e.querySelector(clickElem),
+//             eventElem  = e.querySelector(eventElem);
 
-        if (clickElem && eventElem) {
-            clickElem.addEventListener("click", () => {
-                eventElem.classList.toggle(eventClass);
-            });
-        }
-    });
-}
-
+//         if (clickElem && eventElem) {
+//             clickElem.addEventListener("click", () => {
+//                 eventElem.classList.toggle(eventClass);
+//             });
+//         }
+//     });
+// }
 
 
 // открытие полной инфы о закупке
@@ -87,6 +86,11 @@ if (collapse_section) {
     });
 }
 
+//Модалки
+
+
+
+
 // <!-- Модалка копирование позиции -->
 
 //Раскрытие списка
@@ -131,25 +135,23 @@ if (btn_toggle) {
 
 
 // <!-- Кнопки управления количеством товара -->
-(() => {
-    let modal = document.querySelectorAll(".btn-sum");
+let btn_sum = document.querySelectorAll(".btn-sum");
 
 
-    modal.forEach((m) => {
-        let plus = m.querySelector(".btn-sum__plus"),
-            minus = m.querySelector(".btn-sum__minus"),
-            input = m.querySelector(".btn-sum__sum-num");
+btn_sum.forEach((m) => {
+    let plus = m.querySelector(".btn-sum__plus"),
+        minus = m.querySelector(".btn-sum__minus"),
+        input = m.querySelector(".btn-sum__sum-num");
 
-        if (plus && minus && input) {
-            plus.addEventListener("click", () => {
-                input.value++;
-            });
-            minus.addEventListener("click", () => {
-                input.value--;
-            });
-        }
-    });
-})()
+    if (plus && minus && input) {
+        plus.addEventListener("click", () => {
+            input.value++;
+        });
+        minus.addEventListener("click", () => {
+            input.value--;
+        });
+    }
+});
 
 
 
@@ -182,19 +184,19 @@ if (heart) {
     });
 })()
 
+//Разворачивающийся блок
+let toggleBlock = document.querySelectorAll(".collapse-block");
 
+if (toggleBlock) {
 
-//Модалки
-let modal_bg = document.querySelectorAll(".modal__bg"),
-    btn_close = document.querySelectorAll(".modal__btn-close"),
-    modal = document.querySelectorAll(".modal");
+    toggleBlock.forEach((t) => {
+        let btn_toggle = t.querySelector(".arrow");
 
-if (modal_bg && btn_close && modal) {
-
-    elem_close(modal_bg, modal);
-    elem_close(btn_close, modal);
+        btn_toggle.addEventListener("click", () => {
+            t.classList.toggle("is-toggle");
+        });
+    });
 }
-
 
 //Разворачивающийся блок
 (() => {
@@ -213,6 +215,7 @@ if (modal_bg && btn_close && modal) {
     }
 
 })()
+
 
 
 // РАзворачиваем всю доставку в мобилке
@@ -247,4 +250,22 @@ sidebar_array.forEach(sidebar => {
     sidebar_close.addEventListener("click", function () {
         sidebar.classList.toggle("sidebar_is-active");
     });
+
 });
+
+//Закрытие модалки
+//Этот скрипт ломает выполнение других. Новые скрипты лучше добавлять пред ним.
+//п.с. потом исправлю 
+let modal_bg = document.querySelectorAll(".modal__bg"),
+    btn_close = document.querySelectorAll(".modal__btn-close"),
+    modal = document.querySelectorAll(".modal");
+
+if (modal_bg && btn_close && modal) {
+
+    elem_close(modal_bg, modal);
+    elem_close(btn_close, modal);
+}
+
+
+
+
