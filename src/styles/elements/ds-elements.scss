@@ -45,6 +45,10 @@
 @import '~styles/elements/_show-by';
 @import '~styles/elements/_stock-items-filter';
 
+//Кнопка назад
+@import '~styles/elements/_ds-btn-back.scss';
+
+
 // stock
 @import '~styles/elements/_stock-card-container';
 @import '~styles/elements/_product-detail-button';
@@ -153,6 +157,7 @@
 @import "~styles/elements/modal-choise-of-color-size.scss";
 @import "~styles/elements/_ds-acc-modal.scss";
 @import "~styles/modals/modal-list-catalog-mobile.scss";
+@import "~styles/elements/demo-modals.scss";
 
 //delivery
 @import "~styles/delivery/delivery.scss";
