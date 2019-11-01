@@ -408,6 +408,33 @@
                     width: 35px;
                 }
 
+
+        &__links {
+            
+            &-a {
+                font-size: 12px;
+            }
+            &-site {
+                flex-direction: row;
+                flex-wrap: wrap;
+                padding: 0;
+            }
+        }
+        &__social {
+            img {
+                width: 25px;
+            }
+            .attach:after {
+                font-size: 8px;
+                left: 35px;
+                top: 8px;
+            }    
+            &-icons {
+                display: flex;
+                flex-wrap: wrap;
+                width: 115px;
+                padding: 0 20px 0 0;
+
             }
 
             &__points-near {
