@@ -281,5 +281,5 @@ if (modal_bg && btn_close && modal) {
 }
 
 
-});
+
 
