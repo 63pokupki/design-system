@@ -40,6 +40,10 @@
             opacity: 1;
             transition: all .8s;
         }
+        .arrow-down {
+            transform: rotate(-180deg);
+            transition: all $transition-slow;
+        }
 
     }
 
@@ -130,6 +134,9 @@
         display: flex;
         justify-content: center;
         width: 70px;
+        .arrow-down {
+            transition: all $transition-slow;
+        }
 
     }
 
