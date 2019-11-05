@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Мобильная стат. страница</title>
+        <title>Мобильная стат. страница неактивная</title>
 
         <style>
             body {
@@ -433,7 +433,7 @@
                     <div class="tags-lined__tag">#SALE</div>
                 </div>
             </div>
-            <div class="stock-m-info">
+            <div class="stock-m-info is-disabled">
                 <h1 class="stock-m-info__heading">
                     <span>
                         Lady Lux - удобное и красивое бельё для леди. Широкий размерный ряд: бюстгальтеры 70a - 105h,
@@ -449,11 +449,10 @@
 
                 <div class="stock-cond stock-m-info__cond">
                     <div class="stock-m-info__cond-t-w">
-                        <div class="stock-cond__row stock-m-info__status">
-                            <span class="stock-status blue">
-                                <i class="icon icon-boxes stock-status__icon"></i>
-                                <span class="stock-status__text">Сдано на доставку в пункты с 01.10.2018</span>
-                            </span>
+                        <div class="stock-cond__row stock-m-info__status  ta-c bold">
+                            Сбор закрыт.<br />
+                            Чтобы не пропустить открытие <br />
+                            <a href="#" class="link link_hover">добавьте закупку в избранное</a>
                         </div>
                         <div class="stock-m-info__cond-bar-w">
                             <div class="stock-cond__row stock-m-info__bar">
@@ -891,6 +890,15 @@
                 </div>
             </div>
 
+            <div class="stock-m__no-active no-active-message-bar semi-bold">
+                <span
+                    >Сейчас нет активного сбора.<br />
+                    <a href="#" class="link link_hover no-active-message-bar__link bold"> добавьте закупку в избранное</a
+                    ><br />
+                    Чтобы не пропустить открытие</span
+                >
+            </div>
+
             <div class="stock-m-items">
                 <div class="stock-card-container horizontal">
                     <!-- переключение между двумя карточками (условный рендеринг) -->
@@ -922,16 +930,6 @@
                             </div>
                             <div class="stock-card-vertical__heading">
                                 Утепленные зимние кроссовки с мехом кого угодно Merge
-                            </div>
-                            <div class="stock-card-vertical__main">
-                                <div class="stock-card-vertical__price-wrapper">
-                                    <div class="stock-card-vertical__price">1 800 <span>руб.</span></div>
-                                    <div class="stock-card-vertical__org">+ Орг. сбор 16%</div>
-                                </div>
-                                <button class="ds-btn stock-card-vertical__buy">
-                                    <span class="ds-btn__text">В корзину</span>
-                                    <i class="icon icon-cart"></i>
-                                </button>
                             </div>
                             <div class="collapse-section is-expanded">
                                 <span class="collapse-section__heading">Описание товара</span>
@@ -1084,10 +1082,6 @@
                             <div class="stock-card-horizontal__heading">
                                 Утепленные зимние кроссовки с мехом кого угодно Merge
                             </div>
-                            <div class="stock-card-horizontal__price-w">
-                                <div class="stock-card-horizontal__price">1 800 <span>руб.</span></div>
-                                <div class="stock-card-horizontal__fee">Орг. сбор 16%</div>
-                            </div>
                             <div class="stock-card-horizontal__params-section">
                                 <div class="stock-card-horizontal__params">
                                     <div class="stock-card-horizontal__params-label">Цвет:</div>
@@ -1133,21 +1127,6 @@
                                         Скрыть/раскрыть
                                     </button>
                                 </div>
-                            </div>
-                            <div class="stock-card-horizontal__buttons">
-                                <div class="input-num stock-card-horizontal__num">
-                                    <button class="input-num__minus"></button>
-                                    <input class="input-num__input" value="128" type="text" />
-                                    <button class="input-num__plus"></button>
-                                </div>
-                                <button class="ds-btn ds-btn_hover stock-card-horizontal__buy">
-                                    <span class="ds-btn__text">В корзину</span>
-                                    <i class="icon icon-cart ds-btn__icon"></i>
-                                </button>
-                                <button class="product-detail-button stock-card-horizontal__detail">
-                                    <i class="icon icon-eye product-detail-button__icon"></i>
-                                    <span class="product-detail-button__text">Подробнее о товаре</span>
-                                </button>
                             </div>
                             <div class="collapse-section stock-card-horizontal__collapse is-expanded">
                                 <span class="collapse-section__heading">Описание товара</span>

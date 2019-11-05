@@ -123,12 +123,11 @@
     }
 
     &__tabs.is-expanded {
-       
         .stock-tabs__sections {
             max-height: unset;
 
             &:after {
-               display: none;
+                display: none;
             }
         }
     }
@@ -331,5 +330,31 @@
             top: -15px;
             right: -15px;
         }
+    }
+}
+
+.stock-m-info.is-disabled {
+    position: relative;
+
+    // убираем засветление
+    .stock-m-info__org-profile, .stock-m-info__go-catalog, .stock-m-info__status {
+        position: relative;
+        z-index: 6;
+    }
+
+    .stock-m-info__status {
+        max-width: 280px;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: hsla(0, 0%, 100%, 0.4);
+        z-index: 5;
     }
 }
