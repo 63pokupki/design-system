@@ -188,7 +188,6 @@ if (heart) {
 let toggleBlock = document.querySelectorAll(".collapse-block");
 
 if (toggleBlock) {
-    console.log("toggleBlock найден");
 
     toggleBlock.forEach((t) => {
         let btn_toggle = t.querySelector(".arrow");
@@ -200,22 +199,22 @@ if (toggleBlock) {
 }
 
 //Разворачивающийся блок
-(() => {
-    let toggleBlock = document.querySelectorAll(".collapse-block");
+// (() => {
+//     let toggleBlock = document.querySelectorAll(".collapse-block");
 
-    if (toggleBlock) {
+//     if (toggleBlock) {
 
-        toggleBlock.forEach((t) => {
-            let btn_toggle = t.querySelector(".arrow");
+//         toggleBlock.forEach((t) => {
+//             let btn_toggle = t.querySelector(".arrow");
 
-            btn_toggle.addEventListener("click", () => {
-                t.classList.toggle("is-toggle");
-            });
-        });
+//             btn_toggle.addEventListener("click", () => {
+//                 t.classList.toggle("is-toggle");
+//             });
+//         });
 
-    }
+//     }
 
-})()
+// })()
 
 
 
@@ -225,13 +224,14 @@ let dcw = document.querySelectorAll(".delivery__content-wrap");
 
 if (dcw) {
     dcw.forEach((d) => {
-        let dhw = d.querySelector(".delivery__header-heading-wrap");
-        let btn_tog = dhw.querySelector("#btn-toggle-wrap"),
+        let btn_tog = d.querySelector("#btn-toggle-wrap"),
             cw = d.querySelector(".delivery__collapse-wrap");
 
-        btn_tog.addEventListener("click", () => {
-            cw.classList.toggle("is-toggle");
-        });
+        if (btn_tog) {
+            btn_tog.addEventListener("click", () => {
+                cw.classList.toggle("is-toggle");
+            });
+        }    
     });
 }
 
