@@ -169,14 +169,16 @@ if (heart) {
 //Карточки активных закупок
 
 (() => {
-    let cardActive = document.querySelectorAll(".card-active-custom-desktop");
+    let cardActive = document.querySelectorAll(".card-active-custom");
 
     cardActive.forEach((c) => {
-        let btnToggle = c.querySelector(".card-active-custom-desktop__btn-block");
+        let btnToggle = c.querySelectorAll(".arrow");
 
         if (btnToggle) {
-            btnToggle.addEventListener("click", () => {
-                c.classList.toggle("is-toggle");
+            btnToggle.forEach((bt)=> {
+                bt.addEventListener("click", ()=> {
+                    c.classList.toggle("is-toggle");
+                });
             });
         }
     });
@@ -186,6 +188,7 @@ if (heart) {
 let toggleBlock = document.querySelectorAll(".collapse-block");
 
 if (toggleBlock) {
+    console.log("toggleBlock найден");
 
     toggleBlock.forEach((t) => {
         let btn_toggle = t.querySelector(".arrow");
