@@ -199,41 +199,23 @@ if (toggleBlock) {
 }
 
 //Разворачивающийся блок
-// (() => {
-//     let toggleBlock = document.querySelectorAll(".collapse-block");
+(() => {
+    let dcw = document.querySelectorAll(".delivery__content-wrap");
 
-//     if (toggleBlock) {
+    if (dcw) {
+        dcw.forEach((d) => {
+            let btn_tog = d.querySelector("#btn-toggle-wrap"),
+                cw = d.querySelector(".delivery__collapse-wrap");
+    
+            if (btn_tog) {
+                btn_tog.addEventListener("click", () => {
+                    cw.classList.toggle("is-toggle");
+                });
+            }    
+        });
+    }
 
-//         toggleBlock.forEach((t) => {
-//             let btn_toggle = t.querySelector(".arrow");
-
-//             btn_toggle.addEventListener("click", () => {
-//                 t.classList.toggle("is-toggle");
-//             });
-//         });
-
-//     }
-
-// })()
-
-
-
-// РАзворачиваем всю доставку в мобилке
-
-let dcw = document.querySelectorAll(".delivery__content-wrap");
-
-if (dcw) {
-    dcw.forEach((d) => {
-        let btn_tog = d.querySelector("#btn-toggle-wrap"),
-            cw = d.querySelector(".delivery__collapse-wrap");
-
-        if (btn_tog) {
-            btn_tog.addEventListener("click", () => {
-                cw.classList.toggle("is-toggle");
-            });
-        }    
-    });
-}
+})()
 
 
 
