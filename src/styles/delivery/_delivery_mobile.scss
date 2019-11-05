@@ -260,6 +260,55 @@
                 color: $light-gray-link-color;
             }
         }
+        &__courier {
+            margin-bottom: 0;
+        }
+
+        //Самара
+        &__samara {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            padding: 15px 15px;
+            background: #fff;
+            position: relative;
+            &.is-toggle {
+                .delivery__samara-content {
+                    max-height: 5000px;
+                    opacity: 1;
+                    transition: all .5s;
+    
+                }
+            }
+            .delivery__t-row {
+                &:after {
+                    display: none;
+                }
+            }
+            .delivery__txt {
+                line-height: 24px;
+                &-orders {
+                   font-size: 12px;
+                   color: $light-gray-link-color; 
+                }
+            }
+            h4 {
+                margin: 0;
+            }
+            .arrow {
+                position: absolute;
+                top: 10px;
+                right: 15px;
+            }
+            &-content {
+                display: flex;
+                flex-direction: column;
+                max-height: 0;
+                opacity: 0;
+                transition: all .5s;
+            }
+        }
 
         // РАзделительная линия
 
