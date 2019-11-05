@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Доставка мобильная</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?3de25aa14d46e538f0bd" rel="stylesheet"><link href="css/ds-utils.css?3de25aa14d46e538f0bd" rel="stylesheet"><link href="css/ds-ui-kit.css?3de25aa14d46e538f0bd" rel="stylesheet"><link href="css/footer.css?3de25aa14d46e538f0bd" rel="stylesheet"></head>
+<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?48eec83ec32873f8985d" rel="stylesheet"><link href="css/ds-utils.css?48eec83ec32873f8985d" rel="stylesheet"><link href="css/ds-ui-kit.css?48eec83ec32873f8985d" rel="stylesheet"><link href="css/footer.css?48eec83ec32873f8985d" rel="stylesheet"></head>
 
 <body style="padding: 0;">
 
     <div class="">
-        <div class="delivery delivery__mobile">
+        <div class="delivery delivery__mobile is-toggle">
             <!-- Хеддер -->
             <div class="delivery__header">
                 <header class="header">
@@ -454,7 +454,7 @@
                                 </div>
 
                                 <!-- Блок курьером -->
-                                <div class="delivery__collapse collapse-block">
+                                <div class="delivery__collapse delivery__courier collapse-block">
                                     <button class="arrow arrow-down arrow_inverse arrow_transp">
                                         <i class="icon icon-arrow-down"></i>
                                     </button>
@@ -468,41 +468,13 @@
 
                                         <p class="delivery__txt">Ориентировочный расчет доставки можно посмотреть в
                                             таблице:</p>
+
+
                                         <!-- Шапка таблицы стоимости доставки -->
                                         <div class="delivery__t-row delivery__t-heading">
                                             <div class="delivery__t-col">Город</div>
                                             <div class="delivery__t-col">Характеристики заказа</div>
                                             <div class="delivery__t-col">Цена</div>
-                                        </div>
-
-
-
-                                        <!-- Самара -->
-                                        <div class="delivery__t-row">
-                                            <div class="delivery__t-col">Самара</div>
-                                            <div class="delivery__t-col">
-                                                <p class="delivery__txt">Заказы, объемом до 1,1 м3,<br>
-                                                    весом до 20 кг, длина до 1,8 м</p>
-                                            </div>
-                                            <div class="delivery__t-col">
-                                                <p class="delivery__txt">от 450 р/по городу</p>
-                                            </div>
-                                        </div>
-                                        <div class="delivery__t-row">
-                                            <div class="delivery__t-col"></div>
-                                            <div class="delivery__t-col">
-                                                <p class="delivery__txt">Заказы, объемом до 1,1 м3, <br>
-                                                    весом более 20 кг либо длина более 1,8 м</p>
-                                            </div>
-                                            <div class="delivery__t-col">
-                                                <p class="delivery__txt">уточняйте у менеджера
-                                                    курьерской доставки</p>
-                                            </div>
-                                        </div>
-                                        <div class="delivery__t-row">
-                                            <div class="delivery__t-col"></div>
-                                            <div class="delivery__t-col">Заказы, объемом более 1,1 м3</div>
-                                            <div class="delivery__t-col">от 1000 р/по городу</div>
                                         </div>
 
 
@@ -612,6 +584,93 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!-- Самара -->
+                                <div class="delivery__city delivery__samara is-toggle">
+                                    <button class="arrow arrow-down arrow_inverse arrow_transp">
+                                        <i class="icon icon-arrow-down"></i>
+                                    </button>
+                                    <h4>Самара</h4>
+                                    <div class="delivery__city-content">
+                                        <div class="delivery__t-row">
+                                            <p class="delivery__txt delivery__txt-orders">Заказы, объемом до 1,1 м3,<br>
+                                                весом до 20 кг, длина до 1,8 м</p>
+                                        </div>
+                                        <div class="delivery__t-row">
+                                            <p class="delivery__txt">от 450 р/по городу.</p>
+                                        </div>
+                                        <div class="delivery__t-row">
+                                            <p class="delivery__txt delivery__txt-orders">Заказы, объемом до 1,1 м3,
+                                                <br>
+                                                весом более 20 кг либо длина более 1,8 м</p>
+                                        </div>
+                                        <div class="delivery__t-row">
+                                            <p class="delivery__txt">уточняйте у менеджера курьерской доставки</p>
+                                        </div>
+                                        <div class="delivery__t-row">
+                                            <p class="delivery__txt delivery__txt-orders">Заказы, объемом более 1,1 м3
+                                            </p>
+                                        </div>
+                                        <div class="delivery__t-row">
+                                            <p class="delivery__txt">от 1000 р/по городу</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Тольятти -->
+                                <div class="delivery__city delivery__tolliatty">
+                                    <button class="arrow arrow-down arrow_inverse arrow_transp">
+                                        <i class="icon icon-arrow-down"></i>
+                                    </button>
+                                    <h4>Тольятти</h4>
+
+                                    <div class="delivery__t-row">
+                                        <p class="delivery__txt delivery__txt-orders">Один адрес</p>
+                                    </div>
+                                    <div class="delivery__t-row">
+                                        <p class="delivery__txt">от 4000 руб.</p>
+                                    </div>
+                                    <div class="delivery__t-row">
+                                        <p class="delivery__txt delivery__txt-orders">Сборный (т.е. ждем еще клиентов,
+                                            тогда доставка делится в процентном соотношении)</p>
+                                    </div>
+                                    <div class="delivery__t-row">
+                                        <p class="delivery__txt">в зависимости от района, уточняйте у менеджера
+                                            курьерской доставки</p>
+                                    </div>
+
+                                </div>
+
+                                <!-- Самарская область -->
+                                <div class="delivery__city delivery__tolliatty">
+                                    <button class="arrow arrow-down arrow_inverse arrow_transp">
+                                        <i class="icon icon-arrow-down"></i>
+                                    </button>
+                                    <h4>Самарская область</h4>
+
+                                    <div class="delivery__t-row">
+                                        <p class="delivery__txt delivery__txt-orders">Любой заказ</p>
+                                    </div>
+                                    <div class="delivery__t-row">
+                                        <p class="delivery__txt">уточняйте у менеджера курьерской доставки</p>
+                                    </div>
+                                </div>
+
+                                <!-- Ульяновск -->
+                                <div class="delivery__city delivery__tolliatty">
+                                    <button class="arrow arrow-down arrow_inverse arrow_transp">
+                                        <i class="icon icon-arrow-down"></i>
+                                    </button>
+                                    <h4>Ульяновск</h4>
+
+                                    <div class="delivery__t-row">
+                                        <p class="delivery__txt delivery__txt-orders">Любой заказ</p>
+                                    </div>
+                                    <div class="delivery__t-row">
+                                        <p class="delivery__txt">уточняйте у менеджера курьерской доставки</p>
+                                    </div>
+                                </div>
+
+
 
                                 <!-- Нет пункта выдачи -->
                                 <div class="delivery__no-point">
@@ -828,6 +887,6 @@
 
 
 
-<script type="text/javascript" src="js/highlight-syntax.js?3de25aa14d46e538f0bd"></script><script type="text/javascript" src="js/ds-utils.js?3de25aa14d46e538f0bd"></script><script type="text/javascript" src="js/categories-icons-sprite.js?3de25aa14d46e538f0bd"></script><script type="text/javascript" src="js/ds-ui-kit.js?3de25aa14d46e538f0bd"></script><script type="text/javascript" src="js/footer.js?3de25aa14d46e538f0bd"></script></body>
+<script type="text/javascript" src="js/highlight-syntax.js?48eec83ec32873f8985d"></script><script type="text/javascript" src="js/ds-utils.js?48eec83ec32873f8985d"></script><script type="text/javascript" src="js/categories-icons-sprite.js?48eec83ec32873f8985d"></script><script type="text/javascript" src="js/ds-ui-kit.js?48eec83ec32873f8985d"></script><script type="text/javascript" src="js/footer.js?48eec83ec32873f8985d"></script></body>
 
 </html>
