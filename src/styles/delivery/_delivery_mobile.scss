@@ -1,4 +1,15 @@
 .delivery__mobile {
+    &.is-toggle {
+        .delivery__collapse-wrap {
+            max-height: 4000px;
+            transition: all 1s;
+            opacity: 1;
+        }
+        #btn-toggle-wrap {
+            transform: rotate(-180deg);
+            transition: all 1s;
+        }
+    }
     .delivery {
 
         &__wrap {
@@ -34,12 +45,6 @@
                 transition: all .5s;
                 opacity: 0; 
                 padding: 0;
-
-                &.is-toggle {
-                    max-height: 4000px;
-                    transition: all 1s;
-                    opacity: 1;
-                }
             }
         }
 
@@ -57,6 +62,10 @@
                 .arrow {
                     display: flex;
                 }
+                #btn-toggle-wrap {
+                    transition: all 1s;
+                }
+        
             }
         }
 
@@ -133,7 +142,7 @@
         }
 
         &__btn-toggle-wrap {
-            display: flex;
+            display: flex;            
         }
 
         &__content-header {
