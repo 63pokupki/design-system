@@ -265,7 +265,7 @@
         }
 
         //Самара
-        &__samara {
+        &__city {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -274,7 +274,7 @@
             background: #fff;
             position: relative;
             &.is-toggle {
-                .delivery__samara-content {
+                .delivery__city-content {
                     max-height: 5000px;
                     opacity: 1;
                     transition: all .5s;
