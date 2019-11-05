@@ -32,6 +32,14 @@
     }
 }
 
+@media (max-width: 599px) {
+    .footer {
+        &__advantage {
+            flex-wrap: wrap;
+        }
+    }
+}
+
 .footer {
     display: flex;
     width: 100%;
@@ -383,9 +391,15 @@
         &__advantage {
             flex-direction: row;
             justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
+            align-items: center;            
             padding: 0 10px;
+            &-row {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                flex-wrap: nowrap;
+                width: 100%;;
+            }
         }
 
 
