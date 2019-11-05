@@ -1,4 +1,15 @@
 .delivery__mobile {
+    &.is-toggle {
+        .delivery__collapse-wrap {
+            max-height: 4000px;
+            transition: all 1s;
+            opacity: 1;
+        }
+        #btn-toggle-wrap {
+            transform: rotate(-180deg);
+            transition: all 1s;
+        }
+    }
     .delivery {
 
         &__wrap {
@@ -34,12 +45,6 @@
                 transition: all .5s;
                 opacity: 0; 
                 padding: 0;
-
-                &.is-toggle {
-                    max-height: 4000px;
-                    transition: all 1s;
-                    opacity: 1;
-                }
             }
         }
 
@@ -57,6 +62,10 @@
                 .arrow {
                     display: flex;
                 }
+                #btn-toggle-wrap {
+                    transition: all 1s;
+                }
+        
             }
         }
 
@@ -133,7 +142,7 @@
         }
 
         &__btn-toggle-wrap {
-            display: flex;
+            display: flex;            
         }
 
         &__content-header {
@@ -249,6 +258,55 @@
 
             .delivery__t-col {
                 color: $light-gray-link-color;
+            }
+        }
+        &__courier {
+            margin-bottom: 0;
+        }
+
+        //Самара
+        &__city {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            padding: 15px 15px;
+            background: #fff;
+            position: relative;
+            &.is-toggle {
+                .delivery__city-content {
+                    max-height: 5000px;
+                    opacity: 1;
+                    transition: all .5s;
+    
+                }
+            }
+            .delivery__t-row {
+                &:after {
+                    display: none;
+                }
+            }
+            .delivery__txt {
+                line-height: 24px;
+                &-orders {
+                   font-size: 12px;
+                   color: $light-gray-link-color; 
+                }
+            }
+            h4 {
+                margin: 0;
+            }
+            .arrow {
+                position: absolute;
+                top: 10px;
+                right: 15px;
+            }
+            &-content {
+                display: flex;
+                flex-direction: column;
+                max-height: 0;
+                opacity: 0;
+                transition: all .5s;
             }
         }
 

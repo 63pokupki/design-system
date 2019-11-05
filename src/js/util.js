@@ -166,74 +166,40 @@ if (heart) {
     heart.addEventListener("click", click_heart);
 }
 
-//Карточки активных закупок
 
-(() => {
-    let cardActive = document.querySelectorAll(".card-active-custom");
-
-    cardActive.forEach((c) => {
-        let btnToggle = c.querySelectorAll(".arrow");
-
-        if (btnToggle) {
-            btnToggle.forEach((bt)=> {
-                bt.addEventListener("click", ()=> {
-                    c.classList.toggle("is-toggle");
-                });
-            });
-        }
-    });
-})()
 
 //Разворачивающийся блок
+
 let toggleBlock = document.querySelectorAll(".collapse-block");
 
 if (toggleBlock) {
-    console.log("toggleBlock найден");
-
     toggleBlock.forEach((t) => {
         let btn_toggle = t.querySelector(".arrow");
 
         btn_toggle.addEventListener("click", () => {
+            
             t.classList.toggle("is-toggle");
         });
     });
 }
 
-//Разворачивающийся блок
+//Сворачивание доставки в мобилке
 (() => {
-    let toggleBlock = document.querySelectorAll(".collapse-block");
+    let dcw = document.querySelectorAll(".delivery__mobile");
 
-    if (toggleBlock) {
+    if (dcw) {
+        dcw.forEach((d) => {
+            let btn_tog    = d.querySelector("#btn-toggle-wrap");
 
-        toggleBlock.forEach((t) => {
-            let btn_toggle = t.querySelector(".arrow");
-
-            btn_toggle.addEventListener("click", () => {
-                t.classList.toggle("is-toggle");
-            });
+            if (btn_tog) {
+                btn_tog.addEventListener("click", () => {
+                    d.classList.toggle("is-toggle");
+                });
+            }
         });
-
     }
 
 })()
-
-
-
-// РАзворачиваем всю доставку в мобилке
-
-let dcw = document.querySelectorAll(".delivery__content-wrap");
-
-if (dcw) {
-    dcw.forEach((d) => {
-        let dhw = d.querySelector(".delivery__header-heading-wrap");
-        let btn_tog = dhw.querySelector("#btn-toggle-wrap"),
-            cw = d.querySelector(".delivery__collapse-wrap");
-
-        btn_tog.addEventListener("click", () => {
-            cw.classList.toggle("is-toggle");
-        });
-    });
-}
 
 
 
@@ -254,6 +220,26 @@ sidebar_array.forEach(sidebar => {
 
 });
 
+//Карточки активных закупок
+
+(() => {
+    let cardActive = document.querySelectorAll(".card-active-custom");
+
+    if (cardActive) {
+        cardActive.forEach((c) => {
+            let btnToggle = c.querySelectorAll(".arrow");
+
+            if (btnToggle) {
+                btnToggle.forEach((bt) => {
+                    bt.addEventListener("click", () => {
+                        c.classList.toggle("is-toggle");
+                    });
+                });
+            }
+        });
+    }
+})()
+
 //Закрытие модалки
 //Этот скрипт ломает выполнение других. Новые скрипты лучше добавлять пред ним.
 //п.с. потом исправлю 
@@ -266,7 +252,3 @@ if (modal_bg && btn_close && modal) {
     elem_close(modal_bg, modal);
     elem_close(btn_close, modal);
 }
-
-
-
-
