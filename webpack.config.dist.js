@@ -1,13 +1,15 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const entry = require('./entry.js');
+const entry = require("./entry.js");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
     mode: "production", //режим сборки
     entry: {
-        "ds-ui-kit" : entry["ds-ui-kit"],
-        "categories-icons-sprite" : entry["categories-icons-sprite"],
-        "footer" : entry["footer"]
+        "ds-ui-kit": entry["ds-ui-kit"],
+        "categories-icons-sprite": entry["categories-icons-sprite"],
+        footer: entry["footer"],
+        header: entry["header"]
         // "stock" : entry["stock"],
     }, //объект с точками входа
     output: {
@@ -145,7 +147,8 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin({
             filename: "css/[name].css"
-        }) 
+        }),
+        new CopyPlugin([{ from: "src/images/**/*", to: "images", flatten: true, test: /images\/.*\.(jpg|png|gif|svg)$/ }])
     ],
     optimization: {
         //настройки оптимизации и минификации

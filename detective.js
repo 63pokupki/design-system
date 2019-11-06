@@ -25,10 +25,16 @@ class Detective {
                     }
                 });
             });
-            return { template: template.name, styles: Array.from(linked_styles) };
+            linked_styles = Array.from(linked_styles);
+
+            const styles_query = linked_styles.map(style => {
+                return `@import "~styles/elements/${style}";`
+            }).join(" ");
+
+            return { template: template.name, styles: linked_styles, prepared_import: styles_query };
         });
 
-        console.log(result);
+        return result;
     }
 
     get_html_classes(path_to_file) {
@@ -156,7 +162,7 @@ function flatten(array) {
 
 const detective = new Detective();
 
-const templates_array = detective.get_files("src/templates/", "stock");
+const templates_array = detective.get_files("src/templates/specific/header/", "header-common.html");
 const styles_array = detective.get_files("src/styles/elements", ".scss");
 
 const linked = detective.find_dependencies(templates_array, styles_array);
