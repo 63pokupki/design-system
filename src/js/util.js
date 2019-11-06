@@ -199,7 +199,25 @@ if (toggleBlock) {
         });
     }
 
-})()
+})();
+
+//Сворачивание доставки курьером в мобилке
+(() => {
+    let dc = document.querySelectorAll(".delivery__city");
+
+    if (dc) {
+        dc.forEach((d) => {
+            let btn_toggle_city = d.querySelector(".arrow");
+            
+            if (btn_toggle_city) {
+                btn_toggle_city.addEventListener("click", () => {
+                    d.classList.toggle("is-toggle");
+                });
+            }
+        });
+
+    }
+})();
 
 
 
@@ -238,7 +256,7 @@ sidebar_array.forEach(sidebar => {
             }
         });
     }
-})()
+})();
 
 //Закрытие модалки
 //Этот скрипт ломает выполнение других. Новые скрипты лучше добавлять пред ним.
