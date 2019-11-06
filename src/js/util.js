@@ -199,7 +199,47 @@ if (toggleBlock) {
         });
     }
 
-})()
+})();
+
+//Сворачивание доставки курьером в мобилке
+(() => {
+    let dc = document.querySelectorAll(".delivery__city");
+
+    if (dc) {
+        dc.forEach((d) => {
+            let btn_toggle_city = d.querySelector(".arrow");
+            
+            if (btn_toggle_city) {
+                btn_toggle_city.addEventListener("click", () => {
+                    d.classList.toggle("is-toggle");
+                });
+            }
+        });
+
+    }
+})();
+
+//Сворачивание городов в доставке курьером в мобилке
+(()=> {
+    let d_courier = document.querySelectorAll(".delivery__courier");
+    if (d_courier) {
+        d_courier.forEach((dc)=> {
+           let btn_toggle_courier = dc.querySelector("#btn-toggle-d_courier"),
+               block_city         = document.querySelectorAll(".delivery__city"); 
+
+
+           if (btn_toggle_courier && block_city) {
+               btn_toggle_courier.addEventListener("click", ()=> {
+                   block_city.forEach((bc)=> {
+                        bc.classList.toggle("is-visible");
+                   });
+                    
+               });
+           }
+            
+        });
+    }
+})();
 
 
 
@@ -238,7 +278,7 @@ sidebar_array.forEach(sidebar => {
             }
         });
     }
-})()
+})();
 
 //Закрытие модалки
 //Этот скрипт ломает выполнение других. Новые скрипты лучше добавлять пред ним.

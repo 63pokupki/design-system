@@ -169,14 +169,14 @@
                                 <i class="icon icon-menu caption-icon__icon"></i>
                                 <span href="#" class="caption-icon__text">Меню</span>
                             </div>
+                            <div class="caption-icon">
+                                <i class="icon icon-account caption-icon__icon"></i>
+                                <span href="#" class="caption-icon__text">Sergioels..</span>
+                            </div>
                             <div class="logo header-touch__logo">
                                 <a class="logo__link" href="#">
                                     <img class="logo__img" src="~images/logotype.svg" />
                                 </a>
-                            </div>
-                            <div class="caption-icon">
-                                <i class="icon icon-account caption-icon__icon"></i>
-                                <span href="#" class="caption-icon__text">Sergioels..</span>
                             </div>
                             <div class="caption-icon">
                                 <i class="icon icon-calendar caption-icon__icon">
@@ -228,7 +228,7 @@
 
                                     <h4 class="delivery__card-heading">В пунктах выдачи заказов по всей России</h4>
                                     <div class="delivery__card-header collapse-block__header">
-                                        <p class="delivery__txt">Стоимость услуги получения от 14 руб. за заказ</p>
+                                        <p class="delivery__txt">Стоимость доставки от 14 руб. за заказ</p>
                                     </div>
                                     <div class="collapse-block__content">
                                         <!-- Контент -->
@@ -243,8 +243,9 @@
                                                 возможность оплаты банковской картой, условия и стоимость доставки
                                                 крупногабаритных заказов смотрите в конкретном ПВЗ на
                                                 <a class="delivery__link"
-                                                    href="https://63pokupki.ru/forum/phpBB3/app.php/delivery"
-                                                    target="_blank" rel="nofollow">карте</a>.
+                                                   href="https://63pokupki.ru/forum/phpBB3/app.php/delivery"
+                                                   target="_blank" rel="nofollow">карте
+                                                </a>.
                                             </p>
                                             <br>
                                             <p class="delivery__txt delivery__txt_footnote">
@@ -273,8 +274,8 @@
                                             </div>
                                             <div class="delivery__point-link_current delivery__point-link">
                                                 <a href="https://63pokupki.ru/forum/phpBB3/app.php/geography/region/63"
-                                                    target="_blank" rel="nofollow">Самарская
-                                                    область</a>
+                                                    target="_blank" rel="nofollow"><b>Самарская
+                                                    область</b></a>
                                                 <p class="delivery__txt">- 232 пункта выдачи</p>
                                             </div>
                                             <div class="delivery__point">
@@ -455,7 +456,8 @@
 
                                 <!-- Блок курьером -->
                                 <div class="delivery__collapse delivery__courier collapse-block">
-                                    <button class="arrow arrow-down arrow_inverse arrow_transp">
+                                    <button id="btn-toggle-d_courier"
+                                        class="arrow arrow-down arrow_inverse arrow_transp">
                                         <i class="icon icon-arrow-down"></i>
                                     </button>
                                     <h4 class="delivery__card-heading">Доставка курьером (по Самаре и области, Тольятти,
@@ -466,130 +468,22 @@
                                         <br>
                                         <h4 class="delivery__heading-delivery-cost">Стоимость доставки</h4>
 
-                                        <p class="delivery__txt">Ориентировочный расчет доставки можно посмотреть в
-                                            таблице:</p>
+                                        <p class="delivery__txt">
+                                            Ориентировочный расчет доставки можно посмотреть в
+                                            таблице:
+                                        </p>
 
-
-                                        <!-- Шапка таблицы стоимости доставки -->
-                                        <div class="delivery__t-row delivery__t-heading">
-                                            <div class="delivery__t-col">Город</div>
-                                            <div class="delivery__t-col">Характеристики заказа</div>
-                                            <div class="delivery__t-col">Цена</div>
-                                        </div>
-
-
-
-                                        <!-- Тольятти -->
-                                        <div class="delivery__t-row">
-                                            <div class="delivery__t-col">Тольятти</div>
-                                            <div class="delivery__t-col">Один адрес</div>
-                                            <div class="delivery__t-col">4000 р</div>
-                                        </div>
-                                        <div class="delivery__t-row">
-                                            <div class="delivery__t-col"></div>
-                                            <div class="delivery__t-col">
-                                                <p class="delivery__txt">
-                                                    Сборный (т.е. ждем еще <br> клиентов, тогда доставка делится <br>
-                                                    в процентном соотношении)
-                                                </p>
-                                            </div>
-                                            <div class="delivery__t-col">
-                                                <p class="delivery__txt">
-                                                    в зависимости от района, уточняйте у менеджера<br>
-                                                    курьерской доставки
-                                                </p>
-                                            </div>
-                                        </div>
-
-
-
-                                        <!-- Самарская область -->
-                                        <div class="delivery__t-row">
-                                            <div class="delivery__t-col">
-                                                <p class="delivery__txt">Самарская область</p>
-                                            </div>
-                                            <div class="delivery__t-col">
-                                                <p class="delivery__txt">Любой заказ</p>
-                                            </div>
-                                            <div class="delivery__t-col">
-                                                <p class="delivery__txt">
-                                                    уточняйте у менеджера
-                                                    курьерской доставки
-                                                </p>
-                                            </div>
-                                        </div>
-
-
-
-                                        <!-- Ульяновск -->
-                                        <div class="delivery__t-col">
-                                            <div class="delivery__t-row">
-                                                <p class="delivery__txt">Ульяновск</p>
-                                            </div>
-                                            <div class="delivery__t-row">
-                                                <p class="delivery__txt">Любой заказ</p>
-                                            </div>
-                                            <div class="delivery__t-row">
-                                                <p class="delivery__txt">
-                                                    уточняйте у менеджера
-                                                    курьерской доставки
-                                                </p>
-                                            </div>
-                                        </div>
-
-
-                                        <!-- Важно -->
-                                        <div class="delivery__block-important">
-                                            <p class="delivery__txt_important">Важно!</p>
-                                            <p class="delivery__txt">Данные расчеты предварительные.</p>
-                                            <p class="delivery__txt">Точную сумму к оплате вам озвучит Перевозчик по
-                                                телефону
-                                                при
-                                                согласовании доставки.</p>
-                                            <br>
-                                            <p class="delivery__txt">* дополнительно 14 руб. оплачивается за услуги
-                                                Пункта
-                                                выдачи.
-                                            </p>
-                                            <p class="delivery__txt">* в некоторых закупках могут быть дополнительные
-                                                транспортные
-                                                расходы,
-                                                которые оплачиваются вместе со стоимостью товара (смотрите условия
-                                                закупки и
-                                                уточняйте у
-                                                организатора).</p>
-
-                                            <br>
-                                            <p class="delivery__txt">Оплата всей суммы за доставку производится
-                                                наличными
-                                                водителю в
-                                                день
-                                                привоза.</p>
-                                            <br>
-
-                                            <p class="delivery__txt_important">Важно!</p>
-                                            <p class="delivery__txt">Если в условиях закупки указаны ограничения по
-                                                доставке
-                                                хрупких
-                                                товаров
-                                                или жидкостей - перед заказом доставки обязательно уточните у
-                                                Организатора
-                                                возможность
-                                                доставки на ваш товар!</p>
-                                            <br>
-                                            <a class="delivery__link"
-                                                href="https://63pokupki.ru/forum/phpBB3/viewtopic.php?f=266&t=421078"
-                                                target="_blank" rel="nofollow">Как оформить курьерскую доставку?</a>
-
-                                        </div>
                                     </div>
                                 </div>
                                 <!-- Самара -->
-                                <div class="delivery__city delivery__samara is-toggle">
-                                    <button class="arrow arrow-down arrow_inverse arrow_transp">
-                                        <i class="icon icon-arrow-down"></i>
-                                    </button>
-                                    <h4>Самара</h4>
+                                <div class="delivery__city">
+                                    <div class="delivery__city-header">
+                                        <h4 class="delivery__heading-delivery-cost">Самара</h4>
+                                        <button id="btn-toggle-d_city"
+                                            class="arrow arrow-down arrow_inverse arrow_transp">
+                                            <i class="icon icon-arrow-down"></i>
+                                        </button>
+                                    </div>
                                     <div class="delivery__city-content">
                                         <div class="delivery__t-row">
                                             <p class="delivery__txt delivery__txt-orders">Заказы, объемом до 1,1 м3,<br>
@@ -617,58 +511,118 @@
                                 </div>
 
                                 <!-- Тольятти -->
-                                <div class="delivery__city delivery__tolliatty">
-                                    <button class="arrow arrow-down arrow_inverse arrow_transp">
-                                        <i class="icon icon-arrow-down"></i>
-                                    </button>
-                                    <h4>Тольятти</h4>
-
-                                    <div class="delivery__t-row">
-                                        <p class="delivery__txt delivery__txt-orders">Один адрес</p>
+                                <div class="delivery__city">
+                                    <div class="delivery__city-header">
+                                        <button id="btn-toggle-d_city"
+                                            class="arrow arrow-down arrow_inverse arrow_transp">
+                                            <i class="icon icon-arrow-down"></i>
+                                        </button>
+                                        <h4 class="delivery__heading-delivery-cost">Тольятти</h4>
                                     </div>
-                                    <div class="delivery__t-row">
-                                        <p class="delivery__txt">от 4000 руб.</p>
-                                    </div>
-                                    <div class="delivery__t-row">
-                                        <p class="delivery__txt delivery__txt-orders">Сборный (т.е. ждем еще клиентов,
-                                            тогда доставка делится в процентном соотношении)</p>
-                                    </div>
-                                    <div class="delivery__t-row">
-                                        <p class="delivery__txt">в зависимости от района, уточняйте у менеджера
-                                            курьерской доставки</p>
+                                    <div class="delivery__city-content">
+                                        <div class="delivery__t-row">
+                                            <p class="delivery__txt delivery__txt-orders">Один адрес</p>
+                                        </div>
+                                        <div class="delivery__t-row">
+                                            <p class="delivery__txt">от 4000 руб.</p>
+                                        </div>
+                                        <div class="delivery__t-row">
+                                            <p class="delivery__txt delivery__txt-orders">Сборный (т.е. ждем еще
+                                                клиентов,
+                                                тогда доставка делится в процентном соотношении)</p>
+                                        </div>
+                                        <div class="delivery__t-row">
+                                            <p class="delivery__txt">в зависимости от района, уточняйте у менеджера
+                                                курьерской доставки</p>
+                                        </div>
                                     </div>
 
                                 </div>
 
                                 <!-- Самарская область -->
-                                <div class="delivery__city delivery__tolliatty">
-                                    <button class="arrow arrow-down arrow_inverse arrow_transp">
-                                        <i class="icon icon-arrow-down"></i>
-                                    </button>
-                                    <h4>Самарская область</h4>
-
-                                    <div class="delivery__t-row">
-                                        <p class="delivery__txt delivery__txt-orders">Любой заказ</p>
+                                <div class="delivery__city">
+                                    <div class="delivery__city-header">
+                                        <button id="btn-toggle-d_city"
+                                            class="arrow arrow-down arrow_inverse arrow_transp">
+                                            <i class="icon icon-arrow-down"></i>
+                                        </button>
+                                        <h4 class="delivery__heading-delivery-cost">Самарская область</h4>
                                     </div>
-                                    <div class="delivery__t-row">
-                                        <p class="delivery__txt">уточняйте у менеджера курьерской доставки</p>
+                                    <div class="delivery__city-content">
+                                        <div class="delivery__t-row">
+                                            <p class="delivery__txt delivery__txt-orders">Любой заказ</p>
+                                        </div>
+                                        <div class="delivery__t-row">
+                                            <p class="delivery__txt">уточняйте у менеджера курьерской доставки</p>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <!-- Ульяновск -->
-                                <div class="delivery__city delivery__tolliatty">
-                                    <button class="arrow arrow-down arrow_inverse arrow_transp">
-                                        <i class="icon icon-arrow-down"></i>
-                                    </button>
-                                    <h4>Ульяновск</h4>
-
-                                    <div class="delivery__t-row">
-                                        <p class="delivery__txt delivery__txt-orders">Любой заказ</p>
+                                <div class="delivery__city">
+                                    <div class="delivery__city-header">
+                                        <button id="btn-toggle-d_city"
+                                            class="arrow arrow-down arrow_inverse arrow_transp">
+                                            <i class="icon icon-arrow-down"></i>
+                                        </button>
+                                        <h4 class="delivery__heading-delivery-cost">Ульяновск</h4>
                                     </div>
-                                    <div class="delivery__t-row">
-                                        <p class="delivery__txt">уточняйте у менеджера курьерской доставки</p>
+
+                                    <div class="delivery__city-content">
+                                        <div class="delivery__t-row">
+                                            <p class="delivery__txt delivery__txt-orders">Любой заказ</p>
+                                        </div>
+                                        <div class="delivery__t-row">
+                                            <p class="delivery__txt">уточняйте у менеджера курьерской доставки</p>
+                                        </div>
                                     </div>
                                 </div>
+
+                                <!-- Важно -->
+                                <div class="delivery__block-important">
+                                    <p class="delivery__txt_important">Важно!</p>
+                                    <p class="delivery__txt">Данные расчеты предварительные.</p>
+                                    <p class="delivery__txt">Точную сумму к оплате вам озвучит Перевозчик по
+                                        телефону
+                                        при
+                                        согласовании доставки.</p>
+                                    <br>
+                                    <p class="delivery__txt">* дополнительно 14 руб. оплачивается за услуги
+                                        Пункта
+                                        выдачи.
+                                    </p>
+                                    <p class="delivery__txt">* в некоторых закупках могут быть дополнительные
+                                        транспортные
+                                        расходы,
+                                        которые оплачиваются вместе со стоимостью товара (смотрите условия
+                                        закупки и
+                                        уточняйте у
+                                        организатора).</p>
+
+                                    <br>
+                                    <p class="delivery__txt">Оплата всей суммы за доставку производится
+                                        наличными
+                                        водителю в
+                                        день
+                                        привоза.</p>
+                                    <br>
+
+                                    <p class="delivery__txt_important">Важно!</p>
+                                    <p class="delivery__txt">Если в условиях закупки указаны ограничения по
+                                        доставке
+                                        хрупких
+                                        товаров
+                                        или жидкостей - перед заказом доставки обязательно уточните у
+                                        Организатора
+                                        возможность
+                                        доставки на ваш товар!</p>
+                                    <br>
+                                    <a class="delivery__link"
+                                        href="https://63pokupki.ru/forum/phpBB3/viewtopic.php?f=266&t=421078"
+                                        target="_blank" rel="nofollow">Как оформить курьерскую доставку?</a>
+
+                                </div>
+
 
 
 
@@ -715,11 +669,11 @@
                                             <br>
                                             <p class="delivery__txt">
                                                 Мы скомпонуем все ваши заказы от разных организаторов и отправим их
-                                                <b>одной</b>
-                                                посылкой, а
+                                                <b>одной посылкой</b>
+                                                , а
                                                 также просчитаем
                                                 стоимость всех типов доставки и подберем для вас
-                                                <b>самый удобный и дешёвый</b> тариф.
+                                                <b>самый удобный и дешёвый тариф</b> .
                                             </p>
 
                                             <br>
@@ -783,7 +737,7 @@
                                     <p class="delivery__txt">стоимость доставки от 170 руб.</p>
                                     <div class="collapse-block__content">
                                         <div class="delivery__card-content">
-                                            <br>
+
                                             <div class="delivery__txt">* Список
                                                 <a href="https://www.dpd.ru/ru/private/index.html#thirt" target="_blank"
                                                     rel="nofollow" class="delivery__link">пунктов выдачи DPD</a>
@@ -803,8 +757,8 @@
                                             <br>
                                             <p class="delivery__txt">
                                                 Мы скомпонуем все ваши заказы от разных организаторов и отправим их
-                                                <b>одной</b>
-                                                посылкой, а
+                                                <b>одной посылкой</b>
+                                                , а
                                                 также просчитаем
                                                 стоимость всех типов доставки и подберем для вас
                                                 <b>самый удобный и дешёвый тариф + сделаем скидку на доставку</b> через
@@ -833,6 +787,10 @@
                                             <p class="delivery__txt">* В некоторых закупках могут быть дополнительные
                                                 транспортные
                                                 расходы
+                                            </p>
+                                            <br>
+                                            <p class="delivery__txt">
+                                                <b>Стоимость отправки со склада в Самаре</b> (20 руб.) - оплачивается до передачи товара в ТК через корзину на сайте 63pokupki.ru.
                                             </p>
                                             <br>
                                             <p class="delivery__txt">Стоимость пересылки оплачивается в ТК при получении
