@@ -86,6 +86,7 @@
         align-items: center;
         margin: 0;
         position: relative;
+        font-weight: 600;
 
         &:before {
             content: "";
@@ -260,7 +261,7 @@
             right: 60px;
             width: calc(100% -120px);
             height: 3px;
-            background: $pale-blue-color;
+            background: #e0eef7;
         }
 
         &-links {
