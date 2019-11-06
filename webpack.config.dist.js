@@ -8,8 +8,8 @@ module.exports = {
     entry: {
         "ds-ui-kit": entry["ds-ui-kit"],
         "categories-icons-sprite": entry["categories-icons-sprite"],
-        footer: entry["footer"],
-        header: entry["header"]
+        "footer": ["./src/styles/page/footer.scss"],
+        "header": ["./src/styles/page/header.scss"]
         // "stock" : entry["stock"],
     }, //объект с точками входа
     output: {

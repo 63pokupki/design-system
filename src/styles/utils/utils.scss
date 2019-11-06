@@ -1,6 +1,32 @@
 @import "~styles/utils/_variables";
 @import "~styles/utils/_mixins";
 
+// Общее
+body {
+    font-family: $font-primary;
+    font-size: 14px;
+    padding: 0;
+    background: white;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.wrapper-header,
+.wrapper-footer {
+    max-width: 1184px;
+    margin: 0 auto;
+}
+
 // Здесь находятся вспомогательные классы, состояния и элементы
 
 // жирный шрифт
