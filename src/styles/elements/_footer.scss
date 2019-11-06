@@ -43,6 +43,7 @@
 .footer {
     display: flex;
     width: 100%;
+    max-width: 1280px;
     height: auto;
     flex-direction: column;
     align-items: center;
@@ -53,6 +54,7 @@
     &__container {
         display: block;
         width: 100%;
+        margin: 0 90px;
     }
 
 
@@ -68,7 +70,7 @@
         display: flex;
         justify-content: space-between;
         width: 100%;
-        padding: 20px;
+        padding: 30px;
         background: $pale-blue-color;
         font-size: 13px;
         color: $color-primary;
@@ -166,7 +168,7 @@
         justify-content: center;
         width: 100%;
         margin: 0 0 15px 0;
-        padding: 20px;
+        padding: 0 3px;
 
         h5 {
             font-size: 14px;
@@ -202,6 +204,9 @@
     &__social {
         justify-content: space-between;
 
+        h5 {
+            margin-bottom: 0;
+        }
         &-icons {
             display: flex;
 
