@@ -23,3 +23,11 @@
         }
     }
 }
+
+// режим гостя
+.header.is-guest {
+    .header-desctop__search {
+        margin-right: 60px;
+        margin-left: unset;
+    }
+}
