@@ -1,7 +1,7 @@
 .delivery__mobile {
     &.is-toggle {
         .delivery__collapse-wrap {
-            max-height: 4000px;
+            max-height: 40000px;
             transition: all 1s;
             opacity: 1;
         }
@@ -61,6 +61,7 @@
                 align-items: center;
                 min-width: 100%;
                 padding: 15px;
+                box-shadow: inset 0px -10px 17px -5px rgba(244,244,248,1);
 
                 .arrow {
                     display: flex;
@@ -174,7 +175,7 @@
         &__txt {
             margin: 0px 0;
             padding: 0 70px 0 0;
-            font-size: 12px;
+            font-size: 14px;
             line-height: 28px;
             color: $light-gray-txt-color;
 
@@ -219,12 +220,8 @@
         }
 
         //Вся Россия
-        &__all-rus {
-            margin-top: 10px;
-        }
 
         &__card-search {
-            max-width: 284px;
             margin: 20px 0;
         }
 
@@ -247,6 +244,7 @@
                 flex-direction: column;
                 min-width: 50%;
                 white-space: nowrap;
+                font-size: 16px;
 
                 // margin: 5px 0;
                 &_current {
@@ -446,4 +444,5 @@
         }
     }
 }
+
 
