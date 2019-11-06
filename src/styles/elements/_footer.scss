@@ -179,7 +179,7 @@
             display: flex;
             justify-content: space-between;
             width: 100%;
-            padding: 0 60px;
+            padding: 0 50px;
 
         }
 
@@ -203,6 +203,7 @@
 
     &__social {
         justify-content: space-between;
+        margin-left: 40px;
 
         h5 {
             margin-bottom: 0;
@@ -211,7 +212,7 @@
             display: flex;
 
             a {
-                margin-right: 10px;
+                margin-right: 15px;
             }
         }
 
@@ -250,7 +251,17 @@
         align-items: center;
         // flex-wrap: wrap;
         padding: 10px 60px;
-        border-top: 3px solid $pale-blue-color;
+        position: relative;
+        // border-top: 3px solid $pale-blue-color;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 60px;
+            width: calc(100% -120px);
+            height: 3px;
+            background: $pale-blue-color;
+        }
 
         &-links {
             display: flex;
