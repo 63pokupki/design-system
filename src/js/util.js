@@ -219,6 +219,28 @@ if (toggleBlock) {
     }
 })();
 
+//Сворачивание городов в доставке курьером в мобилке
+(()=> {
+    let d_courier = document.querySelectorAll(".delivery__courier");
+    if (d_courier) {
+        d_courier.forEach((dc)=> {
+           let btn_toggle_courier = dc.querySelector("#btn-toggle-d_courier"),
+               block_city         = document.querySelectorAll(".delivery__city"); 
+
+
+           if (btn_toggle_courier && block_city) {
+               btn_toggle_courier.addEventListener("click", ()=> {
+                   block_city.forEach((bc)=> {
+                        bc.classList.toggle("is-visible");
+                   });
+                    
+               });
+           }
+            
+        });
+    }
+})();
+
 
 
 

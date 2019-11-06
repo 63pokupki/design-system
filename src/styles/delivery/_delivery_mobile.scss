@@ -277,8 +277,10 @@
             flex-direction: column;
             justify-content: center;
             width: 100%;
+            max-height: 0;
             padding: 0 15px;
             background: #fff;
+            overflow: hidden;
             position: relative;
             &.is-toggle {
                 .delivery__city-content {
@@ -288,12 +290,20 @@
     
                 }
                 .arrow {
-                    transform: rotate(180deg);
-                    transition: all .5s;
+                    i {
+                        transform: rotate(180deg);
+                        transition: all .5s;
+                    }
                 }
             }
+            &.is-visible {
+                max-height: 1000px;
+                overflow: visible;
+            }
             .arrow {
-                transition: all .5s;
+                i {
+                    transition: all .5s;
+                }
             }
             //Линии
             &:before, &:after {
