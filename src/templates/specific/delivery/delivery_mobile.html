@@ -207,7 +207,8 @@
                         </ol>
                     </nav>
                 </div>
-
+                <!-- Для разворачивания/сворачивания основных карточек, необходимо присвоить класс
+                is-toggle, элементу collapse-block  -->
                 <div class="delivery__header-heading-wrap">
                     <h4 class="delivery__header-heading">Доставка</h4>
                     <button id="btn-toggle-wrap" class="arrow arrow-down arrow_inverse arrow_transp">
@@ -222,12 +223,12 @@
 
                                 <!-- Блок по всей России -->
                                 <div class="delivery__collapse collapse-block">
-                                    <button class="arrow arrow-down arrow_inverse arrow_transp">
-                                        <i class="icon icon-arrow-down"></i>
-                                    </button>
-
-                                    <h4 class="delivery__card-heading">В пунктах выдачи заказов по всей России</h4>
                                     <div class="delivery__card-header collapse-block__header">
+                                        <button class="arrow arrow-down arrow_inverse arrow_transp">
+                                            <i class="icon icon-arrow-down"></i>
+                                        </button>
+    
+                                        <h4 class="delivery__card-heading">В пунктах выдачи заказов по всей России</h4>
                                         <p class="delivery__txt">Стоимость доставки от 14 руб. за заказ</p>
                                     </div>
                                     <div class="collapse-block__content">
@@ -456,7 +457,7 @@
 
                                 <!-- Блок курьером -->
                                 <div class="delivery__collapse delivery__courier collapse-block">
-                                    <div class="delivery__card-header">
+                                    <div class="delivery__card-header collapse-block__header">
                                         <button id="btn-toggle-d_courier"
                                             class="arrow arrow-down arrow_inverse arrow_transp">
                                             <i class="icon icon-arrow-down"></i>
@@ -464,7 +465,7 @@
                                         <h4 class="delivery__card-heading">Доставка курьером (по Самаре и области, Тольятти,
                                             Ульяновску)
                                         </h4>
-                                        <p class="delivery__txt collapse-block__header">Стоимость доставки от 450 руб.</p>
+                                        <p class="delivery__txt ">Стоимость доставки от 450 руб.</p>
                                     </div>
                                     <div class="collapse-block__content">
                                         <br>
@@ -477,6 +478,8 @@
 
                                     </div>
                                 </div>
+                                <!-- Для сворачивания/разворачивания карточки города, необходимо присвоить
+                                класс .is-toggle, элементу delivery__city  -->
                                 <!-- Самара -->
                                 <div class="delivery__city">
                                     <div class="delivery__city-header">
@@ -657,11 +660,13 @@
 
                                 <!-- Блок почтой России -->
                                 <div class="delivery__collapse collapse-block">
-                                    <button class="arrow arrow-down arrow_inverse arrow_transp">
-                                        <i class="icon icon-arrow-down"></i>
-                                    </button>
-                                    <h4 class="delivery__card-heading">Доставка Почтой России</h4>
-                                    <p class="delivery__txt">стоимость доставки от 190 руб.</p>
+                                    <div class="delivery__card-header collapse-block__header">
+                                        <button class="arrow arrow-down arrow_inverse arrow_transp">
+                                            <i class="icon icon-arrow-down"></i>
+                                        </button>
+                                        <h4 class="delivery__card-heading">Доставка Почтой России</h4>
+                                        <p class="delivery__txt">стоимость доставки от 190 руб.</p>
+                                    </div>
                                     <div class="collapse-block__content">
                                         <div class="delivery__card-content">
                                             <p class="delivery__txt delivery__txt_bold">Получение товара - в ближайшем
@@ -732,11 +737,13 @@
 
                                 <!-- Блок транспортной компанией -->
                                 <div class="delivery__collapse collapse-block">
-                                    <button class="arrow arrow-down arrow_inverse arrow_transp">
-                                        <i class="icon icon-arrow-down"></i>
-                                    </button>
-                                    <h4 class="delivery__card-heading">Доставка Транспортной компанией</h4>
-                                    <p class="delivery__txt">стоимость доставки от 170 руб.</p>
+                                    <div class="delivery__card-header collapse-block__header">
+                                        <button class="arrow arrow-down arrow_inverse arrow_transp">
+                                            <i class="icon icon-arrow-down"></i>
+                                        </button>
+                                        <h4 class="delivery__card-heading">Доставка Транспортной компанией</h4>
+                                        <p class="delivery__txt">стоимость доставки от 170 руб.</p>
+                                    </div>
                                     <div class="collapse-block__content">
                                         <div class="delivery__card-content">
 

@@ -177,10 +177,12 @@ if (heart) {
             // let btn_toggle = t.querySelector(".arrow");
             let btn_toggle = t.querySelector(".collapse-block__header");
 
-            btn_toggle.addEventListener("click", () => {
-                
-                t.classList.toggle("is-toggle");
-            });
+            if (btn_toggle) {
+                btn_toggle.addEventListener("click", () => {
+                    
+                    t.classList.toggle("is-toggle");
+                });
+            }
         });
     }
 
@@ -204,13 +206,13 @@ if (heart) {
 
 })();
 
-//Сворачивание доставки курьером в мобилке
+//Сворачивание карточки города в блоке - доставка курьером (в мобилке) (например карточка "Самара")
 (() => {
     let dc = document.querySelectorAll(".delivery__city");
 
     if (dc) {
         dc.forEach((d) => {
-            let btn_toggle_city = d.querySelector(".arrow");
+            let btn_toggle_city = d.querySelector(".delivery__city-header");
             
             if (btn_toggle_city) {
                 btn_toggle_city.addEventListener("click", () => {
@@ -221,34 +223,6 @@ if (heart) {
 
     }
 })();
-
-(()=> {
-
-})();
-
-//Сворачивание городов в доставке курьером в мобилке
-(()=> {
-    let d_courier = document.querySelectorAll(".delivery__courier");
-    if (d_courier) {
-        d_courier.forEach((dc)=> {
-           let btn_toggle_courier = dc.querySelector("#btn-toggle-d_courier"),
-               block_city         = document.querySelectorAll(".delivery__city"); 
-
-
-           if (btn_toggle_courier && block_city) {
-               btn_toggle_courier.addEventListener("click", ()=> {
-                   block_city.forEach((bc)=> {
-                        bc.classList.toggle("is-visible");
-                   });
-                    
-               });
-           }
-            
-        });
-    }
-})();
-
-
 
 
 const sidebar_array = document.querySelectorAll(".sidebar");
