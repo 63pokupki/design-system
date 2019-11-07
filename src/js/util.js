@@ -16,7 +16,7 @@ window.addEventListener("DOMContentLoaded", () => {
 function elem_close(clickElem, eventElem) {
     for (let i = 0; i < clickElem.length; i++) {
         for (let p = 0; p < eventElem.length; p++) {
-            clickElem[p].addEventListener("click", function () {
+            clickElem[p].addEventListener("click", function() {
                 console.log("Click");
                 eventElem[p].classList.remove("is-visible");
             });
@@ -264,12 +264,17 @@ sidebar_array.forEach(sidebar => {
 //Закрытие модалки
 //Этот скрипт ломает выполнение других. Новые скрипты лучше добавлять пред ним.
 //п.с. потом исправлю 
-let modal_bg = document.querySelectorAll(".modal__bg"),
-    btn_close = document.querySelectorAll(".modal__btn-close"),
-    modal = document.querySelectorAll(".modal");
+(()=> {
 
-if (modal_bg && btn_close && modal) {
-
-    elem_close(modal_bg, modal);
-    elem_close(btn_close, modal);
-}
+    let modal_bg = document.querySelectorAll(".modal__bg"),
+        btn_close = document.querySelectorAll(".modal__btn-close"),
+        modal = document.querySelectorAll(".modal");
+    
+    if (modal_bg && modal) {
+    
+        elem_close(modal_bg, modal);
+    }
+    if (btn_close && modal) {
+        elem_close(btn_close, modal);
+    }
+})();
