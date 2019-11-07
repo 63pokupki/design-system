@@ -6,8 +6,10 @@
             opacity: 1;
         }
         #btn-toggle-wrap {
-            transform: rotate(-180deg);
-            transition: all 1s;
+            i {
+                transform: rotate(-180deg);
+                transition: all .5s;
+            }
         }
     }
     .delivery {
@@ -67,7 +69,9 @@
                     display: flex;
                 }
                 #btn-toggle-wrap {
-                    transition: all 1s;
+                    i {
+                        transition: all .5s;
+                    }
                 }
         
             }
