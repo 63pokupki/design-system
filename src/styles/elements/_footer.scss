@@ -43,7 +43,6 @@
 .footer {
     display: flex;
     width: 100%;
-    max-width: 1280px;
     height: auto;
     flex-direction: column;
     align-items: center;
@@ -70,7 +69,7 @@
         display: flex;
         justify-content: space-between;
         width: 100%;
-        padding: 30px;
+        padding: 30px 35px;
         background: $pale-blue-color;
         font-size: 13px;
         color: $color-primary;
@@ -186,7 +185,7 @@
 
         &-a {
             margin-bottom: 10px;
-            font-size: 12px;
+            font-size: 14px;
             color: $dark-grey-color;
             text-decoration: none;
 
