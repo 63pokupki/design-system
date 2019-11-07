@@ -2,7 +2,7 @@
     &.is-toggle {
         .delivery__collapse-wrap {
             max-height: 40000px;
-            transition: all 1s;
+            transition: all .5s;
             opacity: 1;
         }
         #btn-toggle-wrap {
@@ -210,6 +210,7 @@
         &__card {
             &-header {
                 display: flex;
+                flex-direction: column;
                 justify-content: space-between;
                 align-items: center;
                 width: 100%;
@@ -271,6 +272,13 @@
         }
         &__courier {
             margin-bottom: 0;
+            &.is-toggle {
+                ~.delivery__city {
+                    max-height: 1000px;
+                    overflow: visible;
+                    transition: all .5s;
+                }
+            }
         }
 
         //Самара
@@ -284,6 +292,7 @@
             background: #fff;
             overflow: hidden;
             position: relative;
+            transition: all .5s;
             &.is-toggle {
                 .delivery__city-content {
                     max-height: 5000px;
@@ -297,10 +306,6 @@
                         transition: all .5s;
                     }
                 }
-            }
-            &.is-visible {
-                max-height: 1000px;
-                overflow: visible;
             }
             .arrow {
                 i {
