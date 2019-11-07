@@ -76,6 +76,7 @@
             color: $dark-brown-color;
 
             &-item {
+                margin-bottom: 20px;
                 &.is-active {
                     color: $color-primary-light;
                     font-weight: 600;
