@@ -169,19 +169,22 @@ if (heart) {
 
 
 //Разворачивающийся блок
+(()=> {
+    let toggleBlock = document.querySelectorAll(".collapse-block");
+    
+    if (toggleBlock) {
+        toggleBlock.forEach((t) => {
+            // let btn_toggle = t.querySelector(".arrow");
+            let btn_toggle = t.querySelector(".collapse-block__header");
 
-let toggleBlock = document.querySelectorAll(".collapse-block");
-
-if (toggleBlock) {
-    toggleBlock.forEach((t) => {
-        let btn_toggle = t.querySelector(".arrow");
-
-        btn_toggle.addEventListener("click", () => {
-            
-            t.classList.toggle("is-toggle");
+            btn_toggle.addEventListener("click", () => {
+                
+                t.classList.toggle("is-toggle");
+            });
         });
-    });
-}
+    }
+
+})();
 
 //Сворачивание доставки в мобилке
 (() => {
@@ -217,6 +220,10 @@ if (toggleBlock) {
         });
 
     }
+})();
+
+(()=> {
+
 })();
 
 //Сворачивание городов в доставке курьером в мобилке
