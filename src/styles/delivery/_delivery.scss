@@ -57,7 +57,17 @@
             display: flex;
             align-items: center;
             background: #ffffff;
-            padding: 30px 15px 15px 15px;
+            padding: 30px 30px 15px 30px;
+            .breadcrumb__item {
+                .link {
+                    font-weight: 300;
+                    color: $light-gray-color;
+                }
+                &_active .link{
+                    color: $dark-brown-color;
+                    text-decoration: none;
+                }
+            }
         }
 
         //Вертикальное меню слева
@@ -99,7 +109,7 @@
         &__content-header {
             display: flex;
             flex-direction: column;
-            padding: 15px 30px;
+            padding: 5px 30px 15px 30px;
 
             &-heading {
                 margin: 0 0 40px 0;
@@ -282,6 +292,11 @@
                 font-size: 14px;
                 font-weight: 600;
             }
+        }
+    }
+    @media (max-width: 1024px) {
+        .delivery__breadcrumbs {
+            margin-top: 60px;
         }
     }
 }

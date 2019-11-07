@@ -187,26 +187,27 @@
                         </div>
                     </div>
                 </div>
-            </header>
-
-            <!-- Контент -->
+            </header>            
         </div>
+
+        <!-- Хлебные крошки -->
+        <div class="delivery__breadcrumbs">
+            <nav class="breadcrumb">
+                <ol class="breadcrumb__list">
+                    <li class="breadcrumb__item">
+                        <a class="link" href="#">Список форумов</a>
+                    </li>
+                    <!-- активная крошка имеет модификатор active -->
+                    <li class="breadcrumb__item breadcrumb__item_active">
+                        <a class="link" href="https://63pokupki.ru/forum/phpBB3/app.php/page/delivery">Доставка</a>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+
+        <!-- Контент -->
         <div class="delivery__content-wrap">
             <div class="delivery__sidebar">
-                <!-- Хлебные крошки -->
-                <div class="delivery__breadcrumbs">
-                    <nav class="breadcrumb">
-                        <ol class="breadcrumb__list">
-                            <li class="breadcrumb__item">
-                                <a class="link" href="#">Список форумов</a>
-                            </li>
-                            <!-- активная крошка имеет модификатор active -->
-                            <li class="breadcrumb__item breadcrumb__item_active">
-                                <a class="https://63pokupki.ru/forum/phpBB3/app.php/page/delivery" href="#">Доставка</a>
-                            </li>
-                        </ol>
-                    </nav>
-                </div>
                 <!-- Вертикальное меню -->
                 <div class="delivery__vertical-menu vertical-menu">
                     <div class="delivery__vertical-menu vertical-menu__section">
@@ -282,13 +283,15 @@
 
                     <!-- Блок по всей России -->
                     <div class="delivery__collapse collapse-block">
-                        <button class="arrow arrow-down arrow_inverse arrow_transp">
-                            <i class="icon icon-arrow-down"></i>
-                        </button>
+                        <div class="collapse-block__header">
+                            <button class="arrow arrow-down arrow_inverse arrow_transp">
+                                <i class="icon icon-arrow-down"></i>
+                            </button>
 
-                        <h2 class="delivery__card-heading">В пунктах выдачи заказов по всей России</h2>
-                        <div class="delivery__card-header collapse-block__header">
-                            <p class="delivery__txt">Стоимость услуги получения от 14 руб. за заказ</p>
+                            <h2 class="delivery__card-heading">В пунктах выдачи заказов по всей России</h2>
+                            <div class="delivery__card-header collapse-block__header">
+                                <p class="delivery__txt">Стоимость услуги получения от 14 руб. за заказ</p>
+                            </div>
                         </div>
                         <div class="collapse-block__content">
                             <!-- Контент -->
@@ -299,7 +302,7 @@
                                 <br>
                                 <p class="delivery__txt">Точную стоимость выдачи, сроки дополнительного хранения,
                                     возможность оплаты банковской картой, условия и стоимость доставки
-                                    крупногабаритных заказов смотрите в конкретном ПВЗ на 
+                                    крупногабаритных заказов смотрите в конкретном ПВЗ на
                                     <a class="delivery__link" href="https://63pokupki.ru/forum/phpBB3/app.php/delivery"
                                         target="_blank" rel="nofollow">карте</a>.
                                 </p>
@@ -513,19 +516,22 @@
 
                     <!-- Блок курьером -->
                     <div class="delivery__collapse collapse-block">
-                        <button class="arrow arrow-down arrow_inverse arrow_transp">
-                            <i class="icon icon-arrow-down"></i>
-                        </button>
-                        <h2 class="delivery__card-heading">Доставка курьером (по Самаре и области, Тольятти, Ульяновску)
-                        </h2>
-                        <p class="delivery__txt collapse-block__header">Стоимость доставки 450 руб.</p>
+                        <div class="collapse-block__header">
+                            <button class="arrow arrow-down arrow_inverse arrow_transp">
+                                <i class="icon icon-arrow-down"></i>
+                            </button>
+                            <h2 class="delivery__card-heading">Доставка курьером (по Самаре и области, Тольятти,
+                                Ульяновску)
+                            </h2>
+                            <p class="delivery__txt collapse-block__header">Стоимость доставки от 450 руб.</p>
+                        </div>
                         <div class="collapse-block__content">
                             <br>
                             <h4 class="delivery__heading-delivery-cost">Стоимость доставки</h4>
 
                             <p class="delivery__txt">Ориентировочный расчет доставки можно посмотреть в таблице:</p>
-                            
-                            
+
+
                             <!-- Шапка таблицы стоимости доставки -->
                             <div class="delivery__t-row delivery__t-heading">
                                 <div class="delivery__t-col">Город</div>
@@ -682,11 +688,13 @@
 
                     <!-- Блок почтой России -->
                     <div class="delivery__collapse collapse-block">
-                        <button class="arrow arrow-down arrow_inverse arrow_transp">
-                            <i class="icon icon-arrow-down"></i>
-                        </button>
-                        <h2 class="delivery__card-heading">Доставка Почтой России</h2>
-                        <p class="delivery__txt">стоимость доставки от 190 руб.</p>
+                        <div class="collapse-block__header">
+                            <button class="arrow arrow-down arrow_inverse arrow_transp">
+                                <i class="icon icon-arrow-down"></i>
+                            </button>
+                            <h2 class="delivery__card-heading">Доставка Почтой России</h2>
+                            <p class="delivery__txt">стоимость доставки от 190 руб.</p>
+                        </div>
                         <div class="collapse-block__content">
                             <div class="delivery__card-content">
                                 <p class="delivery__txt delivery__txt_bold">Получение товара - в ближайшем для вас
@@ -741,11 +749,13 @@
 
                     <!-- Блок транспортной компанией -->
                     <div class="delivery__collapse collapse-block">
-                        <button class="arrow arrow-down arrow_inverse arrow_transp">
-                            <i class="icon icon-arrow-down"></i>
-                        </button>
-                        <h2 class="delivery__card-heading">Доставка Транспортной компанией</h2>
-                        <p class="delivery__txt">стоимость доставки от 170 руб.</p>
+                        <div class="collapse-block__header">
+                            <button class="arrow arrow-down arrow_inverse arrow_transp">
+                                <i class="icon icon-arrow-down"></i>
+                            </button>
+                            <h2 class="delivery__card-heading">Доставка Транспортной компанией</h2>
+                            <p class="delivery__txt">стоимость доставки от 170 руб.</p>
+                        </div>
                         <div class="collapse-block__content">
                             <div class="delivery__card-content">
                                 <br>
