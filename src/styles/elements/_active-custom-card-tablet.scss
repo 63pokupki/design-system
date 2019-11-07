@@ -2,6 +2,9 @@
 .card-active-custom__wrap {
     &.tablet {
         min-width: 768px;
+        &.card-active-custom__wrap {
+            width: 100%;
+        }
 
         &.is-toggle {
             .card-active-custom__toggle-block {
@@ -266,6 +269,7 @@
             height: auto;
             max-height: 0;
             margin-top: 15px;
+            overflow: hidden;
             visibility: hidden;
             opacity: 0;
             transition: all .5s;
