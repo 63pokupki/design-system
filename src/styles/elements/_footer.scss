@@ -53,7 +53,6 @@
     &__container {
         display: block;
         width: 100%;
-        margin: 0 90px;
     }
 
 
@@ -122,6 +121,8 @@
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center;
+            width: 50px;
+            height: 50px;
 
         }
     }
@@ -203,7 +204,6 @@
 
     &__social {
         justify-content: space-between;
-        margin-left: 40px;
 
         h5 {
             margin-bottom: 0;
@@ -269,9 +269,9 @@
         }
 
         &-a {
-            margin-right: 20px;
+            margin-right: 25px;
             font-size: 12px;
-            color: $dark-grey-color;
+            color: $dark-grey-color;                         
             text-decoration: none;
             white-space: nowrap;
 
@@ -301,7 +301,7 @@
         }
 
         &-time {
-            font-size: 12px;
+            font-size: 13px;
             color: $light-gray-link-color;
         }
     }
@@ -320,6 +320,12 @@
             font-size: 12px;
         }
 
+        &__cheaper-than-retail {
+            &:before {
+                width: 50px;
+                height: 50px;
+            }
+        }
         &__social {
             flex-direction: row;
             justify-content: flex-start;
@@ -369,6 +375,9 @@
             background: $pale-blue-color;
             border: none;
             border-radius: 0px;
+            &:before {
+                display: none;
+            }
 
             &-contacts {
                 max-width: 50%;
@@ -513,6 +522,9 @@
             padding: 20px;
             border-radius: 0;
             border: none;
+            &:before {
+                display: none;
+            }
 
             &-a {
                 font-size: 12px;
