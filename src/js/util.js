@@ -8,39 +8,7 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-//Переиспользуемые функции
 
-//Функция закрытия
-// clickElem - элемент по которому кликают
-// eventElem - элемент на котором происходит событие
-function elem_close(clickElem, eventElem) {
-    for (let i = 0; i < clickElem.length; i++) {
-        for (let p = 0; p < eventElem.length; p++) {
-            clickElem[p].addEventListener("click", function() {
-                console.log("Click");
-                eventElem[p].classList.remove("is-visible");
-            });
-
-        }
-    }
-}
-
-// eventPar   - элемент-родитель для остальных элементов
-// clickElem  - элемент по которому кликают
-// eventElem  - элемент на котором происходит событие
-// eventClass - присваиваемый класс
-// function event_func(eventPar, clickElem, eventElem, eventClass) {
-//     eventPar.forEach((e) => {
-//         let clickElem  = e.querySelector(clickElem),
-//             eventElem  = e.querySelector(eventElem);
-
-//         if (clickElem && eventElem) {
-//             clickElem.addEventListener("click", () => {
-//                 eventElem.classList.toggle(eventClass);
-//             });
-//         }
-//     });
-// }
 
 
 // открытие полной инфы о закупке
@@ -262,19 +230,28 @@ sidebar_array.forEach(sidebar => {
 })();
 
 //Закрытие модалки
-//Этот скрипт ломает выполнение других. Новые скрипты лучше добавлять пред ним.
-//п.с. потом исправлю 
 (()=> {
 
-    let modal_bg = document.querySelectorAll(".modal__bg"),
-        btn_close = document.querySelectorAll(".modal__btn-close"),        
-        modal = document.querySelectorAll(".modal");
+    let modal = document.querySelectorAll(".modal");
     
-    if (modal_bg && modal) {
-    
-        elem_close(modal_bg, modal);
-    }
-    if (btn_close && modal) {
-        elem_close(btn_close, modal);
+    if (modal) {
+        modal.forEach((m)=> {
+            
+            let modal_bg = m.querySelector(".modal__bg"),
+                btn_close = m.querySelector(".modal__btn-close");
+
+            if (modal_bg) {
+                modal_bg.addEventListener("click", ()=> {
+                    m.classList.remove("is-visible");
+                });
+            }
+            if (btn_close) {
+                btn_close.addEventListener("click", ()=> {
+                    m.classList.remove("is-visible");
+                });
+            }
+            
+        });
+        
     }
 })();
