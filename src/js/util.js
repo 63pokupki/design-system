@@ -267,7 +267,7 @@ sidebar_array.forEach(sidebar => {
 (()=> {
 
     let modal_bg = document.querySelectorAll(".modal__bg"),
-        btn_close = document.querySelectorAll(".modal__btn-close"),
+        btn_close = document.querySelectorAll(".modal__btn-close"),        
         modal = document.querySelectorAll(".modal");
     
     if (modal_bg && modal) {

@@ -85,8 +85,8 @@
         margin: 0;
         position: relative;
         font-weight: 600;
+        color: $color-primary;
         text-decoration: none;
-        
 
         &:before {
             content: "";
@@ -315,26 +315,62 @@
 .footer__tab {
     .footer {
 
+        &__advantage {
+            padding: 20px 15px;
+        }
+
         &__buy-together,
         &__cheaper-than-retail,
         &__defend-buyer,
         &__points-near,
         &__real-comments {
             font-size: 12px;
+            white-space: nowrap;
+
+            &:before {
+                width: 40px;
+                height: 40px;
+            }
+
+        }
+
+        &__buy-together {
+            padding-left: 46px; 
         }
 
         &__cheaper-than-retail {
             &:before {
-                width: 50px;
-                height: 50px;
+                width: 44px;
+                height: 44px;
             }
         }
+
+        &__points-near {
+            padding-left: 55px;
+            &:before {
+                width: 49px;
+            }
+        }
+
+        &__real-comments {
+            padding-left: 67px;
+            &:before {
+                width: 64px;
+                // height: 45px;
+            }
+        }
+
         &__social {
             flex-direction: row;
-            justify-content: flex-start;
+            justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
             padding: 20px 30px;
+
+            &-wrap {
+                display: flex;
+                align-items: center;
+            }
 
             h5 {
                 margin: 0 15px 0 0;
@@ -365,6 +401,9 @@
         &__links {
             &-site {
                 padding: 0 30px;
+            }
+            &-a {
+                font-size: 12px;
             }
         }
 
@@ -435,12 +474,29 @@
         &__defend-buyer,
         &__points-near,
         &__real-comments {
-            font-size: 10px;
+            font-size: 9px;
             margin: 15px 0;
             padding: 0 0 0 50px;
 
             &:before {
                 width: 35px;
+            }
+        }
+
+        &__buy-together {
+            padding: 0 0 0 49px;
+            &:before {
+                width: 32px;
+            }
+        }
+
+        &__points-near {
+            padding: 0 0 0 44px;
+        }
+
+        &__cheaper-than-retail {
+            &:before {
+                width: 37px;
             }
         }
 
@@ -558,6 +614,10 @@
                 margin: 0 0 3px 0;
 
             }
+        }
+
+        &__copyright {
+            font-size: 10px;
         }
     }
 }
