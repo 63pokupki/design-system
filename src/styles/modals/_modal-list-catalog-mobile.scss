@@ -1,5 +1,7 @@
 
-
+.modal-list-catalogs {
+    
+}
 .modal {
     &.is-selected {
         .modal__btn-container {
@@ -16,10 +18,10 @@
     }
     &__content {
         overflow: hidden;
-        &:hover {
-            transition: all $transition-slow;
-            overflow: auto;
-        }
+        // &:hover {
+        //     transition: all $transition-slow;
+        //     overflow: auto;
+        // }
         &_col {
             display: flex;
             flex-direction: column;
