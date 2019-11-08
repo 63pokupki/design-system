@@ -56,12 +56,12 @@
     }
 
     // при клике на кнопку раскрывает подменю с категориями
-    &__button:focus ~ .categories-bar__menu {
+    &__button:focus ~ .categories-bar__menu, .categories-bar__menu.is-visible {
         visibility: visible;
         overflow: visible;
         max-height: initial;
         opacity: 1;
-        padding: 30px;
+        padding: 30px 30px 60px;
         transition: opacity $transition-medium, visibility $transition-medium;
     }
 }
