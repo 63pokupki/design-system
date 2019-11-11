@@ -18,9 +18,15 @@
         cursor: pointer;
         padding-bottom: 2px;
         margin-bottom: 6px;
-        &:first-child {
+
+        input {
+            display: none;
+        }
+
+        .is-selected {
             border-bottom: 1px solid #36a6f275;
         }
+
         &:last-child {
             margin-bottom: unset;
         }
@@ -42,14 +48,14 @@
 }
 
 // состояние .dropdown-fixed-list
-.dropdown-fixed-list:hover,
-.dropdown-fixed-list_expanded {
+.dropdown-fixed-list.is-expanded {
     .dropdown-fixed-list__current {
         display: none;
     }
 
     .dropdown-fixed-list__list {
-        display: inline-block;
+        display: flex;
+        flex-direction: column;
         position: relative;
         right: -10px;
         top: -13px;
