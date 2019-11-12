@@ -1,6 +1,6 @@
 // шапка для сенсорных устройств
 .header-touch {
-    padding: 10px 15px;
+    padding: 8px 10px;
     position: relative;
     border-bottom: 1px solid rgba(49, 140, 202, 0.25);
     background: $background-color-primary;
@@ -11,7 +11,7 @@
         align-items: center;
     }
     &__logo {
-        width: 100px;
+        width: 95px;
     }
 
     &__caption-icon-w {
