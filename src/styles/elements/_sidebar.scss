@@ -3,7 +3,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    display: flex;
+    display: none;
     width: 100vw;
     height: 100vh;
     z-index: 100;
@@ -104,6 +104,7 @@
 // состояние активного сайдбара
 .sidebar_is-active {
     visibility: visible;
+    display: flex;
 
     .sidebar__body {
         transform: translateX(0%);
