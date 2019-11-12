@@ -20,4 +20,11 @@
     @import "~styles/elements/_tooltip.scss";
 }
 
+// опускаем контент, т.к мобильная шапка absolute
+@media screen and (max-width: 1024px) {
+    body {
+        padding-top: 50px !important;
+    }
+}
+
 
