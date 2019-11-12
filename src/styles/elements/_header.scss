@@ -6,6 +6,11 @@
     top: 0;
     left: 0;
     z-index: 10;
+    transition: top 0.2s linear;
+
+    &.is-hidden {
+        top: -60px;
+    }
 
     .header-desctop {
         display: none;
