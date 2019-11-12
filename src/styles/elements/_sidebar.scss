@@ -7,7 +7,6 @@
     width: 100vw;
     height: 100vh;
     z-index: 100;
-    visibility: hidden;
 
     .sidebar__body {
         top: 0;
@@ -20,8 +19,6 @@
         visibility: hidden;
         transform: translateX(-100%);
         background: $background-color-primary;
-        transition: transform $transition-primary, visibility $transition-primary;
-        will-change: transform;
     }
 
     .sidebar__background {
@@ -34,8 +31,6 @@
         z-index: 40;
         background: rgb(96, 98, 102);
         opacity: 0;
-        transition: opacity $transition-primary, visibility $transition-primary;
-        will-change: opacity;
     }
 
     .sidebar__close {
@@ -113,7 +108,6 @@
     .sidebar__body {
         transform: translateX(0%);
         visibility: visible;
-        transition: transform $transition-primary, visibility $transition-primary;
     }
 
     .sidebar__background {
