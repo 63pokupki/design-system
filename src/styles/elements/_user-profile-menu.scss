@@ -32,5 +32,9 @@
 
     .link {
         color: #38393b;
+
+        &:hover {
+            color: #36a6f2;
+        }
     }
 }

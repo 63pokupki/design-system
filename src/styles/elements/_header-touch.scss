@@ -13,6 +13,14 @@
         transform: translateY(100%);
         display: none;
 
+        .tooltip {
+            transform: translate(-20%, 100%);
+
+            &:before {
+                left: calc(20% - 3px);
+            }
+        }
+
         &.is-active {
             display: inline-block;
         }
