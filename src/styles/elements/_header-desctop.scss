@@ -4,12 +4,26 @@
     background: $background-color-primary;
     padding-top: 10px;
 
+    &__profile-menu {
+        position: absolute;
+        z-index: 3;
+        bottom: 5px;
+        right: 30px;
+        transform: translateY(100%);
+        display: none;
+
+        &.is-active {
+            display: inline-block;
+        }
+    }
+
     &__row {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 0 35px;
         margin-bottom: 20px;
+        position: relative;
     }
 
     &__col {

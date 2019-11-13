@@ -24,7 +24,7 @@
         list-style: none;
         padding: 0;
         margin: 0;
-        flex-wrap: wrap;
+        white-space: nowrap;
     }
     &__item {
         margin-right: 30px;
@@ -33,6 +33,10 @@
 
     &__item:last-child {
         margin-right: unset;
+
+        @media screen and (max-width: 1124px) {
+            display: none;
+        }
     }
 
     .categories-bar__menu {

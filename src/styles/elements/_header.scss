@@ -1,15 +1,18 @@
 // блок шапки, содержит touch и desctop блоки
 .header {
-    width: 100%;
     background-color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    transition: top 0.2s linear;
 
-    &.is-hidden {
-        top: -60px;
+    .header-touch {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        transition: top 0.2s linear;
+
+        &.is-hidden {
+            top: -60px;
+        }
     }
 
     .header-desctop {
@@ -17,7 +20,6 @@
     }
 
     @media screen and (min-width: 1024px) {
-        position: static;
 
         .header-desctop {
             display: block;
