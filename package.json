@@ -7,7 +7,7 @@
     "live": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js -w",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
     "dist": "cross-env NODE_ENV=production webpack --config webpack.config.dist.js",
-    "patch": "npm run dist && git add -- . && git commit -m 'Package version patch' && npm version patch && git push origin master && npm publish --access public",
+    "patch": "git add -- . && git commit -m 'Package version patch' && npm version patch && git push origin master && npm publish --access public",
     "detect": "node detective.js",
     "test": "echo Nothing"
   },
