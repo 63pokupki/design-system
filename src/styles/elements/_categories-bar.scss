@@ -59,8 +59,8 @@
         border: unset;
     }
 
-    // при клике на кнопку раскрывает подменю с категориями
-    &__button:focus ~ .categories-bar__menu, .categories-bar__menu.is-visible {
+    // раскрывает подменю с категориями
+    .categories-bar__menu.is-visible {
         visibility: visible;
         overflow: visible;
         max-height: initial;
