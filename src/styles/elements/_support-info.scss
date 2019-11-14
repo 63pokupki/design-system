@@ -26,7 +26,8 @@
         margin-right: 10px;
     }
 
-    &__tooltip {
+    .support-info__tooltip {
         width: 235px;
+        transition: unset;
     }
 }
