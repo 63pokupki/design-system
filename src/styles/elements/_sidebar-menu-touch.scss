@@ -6,7 +6,7 @@
     padding: 0 13px;
     width: 290px;
 
-    &__multi-level-menu {
+    .sidebar-menu-touch__multi-level-menu {
         padding: 0;
         border-bottom: 1px solid rgba(49, 140, 202, 0.25);
 
@@ -23,6 +23,10 @@
         }
         .multi-level-menu__icon {
             font-size: 22px;
+        }
+
+        &:before {
+            display: none;
         }
     }
 
