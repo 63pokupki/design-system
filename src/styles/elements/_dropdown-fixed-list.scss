@@ -4,6 +4,7 @@
     position: relative;
     color: $color-text-base;
     font-size: 12px;
+    user-select: none;
 
     &__list {
         display: none;
@@ -12,12 +13,14 @@
         border-radius: 8px;
         cursor: initial;
         list-style: none;
+        user-select: none;
     }
 
     &__list-item {
         cursor: pointer;
         padding-bottom: 2px;
         margin-bottom: 6px;
+        user-select: none;
 
         input {
             display: none;
