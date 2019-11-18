@@ -33,7 +33,7 @@ $tooltip-triangle-size: 6px;
 // стандартное положение - снизу под элементом, без треугольника
 .tooltip {
     visibility: hidden;
-    z-index: 0;
+    z-index: 1;
     bottom: -10px;
     opacity: 0;
     position: absolute;
