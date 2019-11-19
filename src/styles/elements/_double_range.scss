@@ -1,89 +1,53 @@
-@supports (--css: variables) {
-	input[type="range"].multirange {
-		padding: 0;
-		margin: 0;
-		display: inline-block;
-		vertical-align: top;
-	}
-		input[type="range"].multirange::-moz-range-thumb {
-			transform: scale(1); /* FF doesn't apply position it seems */
-		}
+.input-range {
+	display: flex;
+	flex-direction: column;
+}
 
-	input[type="range"].multirange.original {
-		position: absolute;
-	}
+	
+input[type=range] {
+	-webkit-appearance: none;
+ 	background: $color-primary;
+	height: 2px;
+	border: none;
+	outline: none;
+	outline-offset: 0;
+}
 
-		input[type="range"].multirange.original::-webkit-slider-thumb {
-			position: relative;
-			z-index: 2;
-		}
 
-		input[type="range"].multirange.original::-moz-range-thumb {
-			z-index: 2;
-		}
+// Ползунок в Chrome, Opera, Safari	
+input[type=range]::-webkit-slider-thumb {
+ -webkit-appearance: none;
+ background: #007ef3;
+ border: 1px solid #bdc3c7;
+ width: 10px;
+ height: 10px;
+ border-radius: 10px;
+ border: none;
+ cursor: pointer; 
+}
 
-		input[type="range"].multirange::-moz-range-track {
-			border-color: transparent; /* needed to switch FF to "styleable" control */
-		}
+input[type=range].input-range__right::-webkit-slider-thumb {
+	transform: translateX(0%); 
+}
 
-	input[type="range"].multirange.middle {
-		position: absolute;
-		-webkit-appearance: none;
-	}
-		input[type="range"].multirange.middle:focus {
-			outline: none;
-		}
-		input[type="range"].multirange.middle::-moz-range-thumb {
-			position: relative;
-			z-index: 1;
-			height: 9px;
-			width: var(--size);
-			margin-top: 6px;
-			margin-bottom: 6px;
-			background: transparent;
-			cursor: pointer;
-			border: 0;
-		}
-		input[type="range"].multirange.middle::-webkit-slider-thumb {
-			position: relative;
-			z-index: 1;
-			height: 9px;
-			width: var(--size);
-			margin-top: 6px;
-			margin-bottom: 6px;
-			background: transparent;
-			-webkit-appearance: none;
-			cursor: pointer;
-		}
+input[type=range].input-range__left::-moz-range-thumb {
+	transform: translateX(50%); 
+} 
 
-	input[type="range"].multirange.ghost {
-		position: relative;
-		background: var(--track-background);
-		--track-background: linear-gradient(to right,
-				transparent var(--low), var(--range-color) 0,
-				var(--range-color) var(--high), transparent 0
-			) no-repeat 0 45% / 100% 40%;
-		--range-color: #318CCA;
-	}
+// Ползунок в FireFox
+input[type=range]::-moz-range-thumb {
+	background: #007ef3;
+	border: 1px solid #bdc3c7;
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+	border: none;
+	cursor: pointer;
+	appearance: none;
+}
 
-    input[type="range"].multirange.ghost::-webkit-slider-runnable-track {
-        background: var(--track-background);
-        height: 2px;
-    }
-
-    input[type="range"].multirange.ghost::-moz-range-track {
-        background: var(--track-background);
-        height: 2px;
-    }
-    input[type="range"].multirange.ghost::-webkit-slider-thumb {
-        position: relative;
-        height: 3px;
-        z-index: 2;
-    }
-    input[type="range"].multirange.ghost::-moz-range-thumb {
-        z-index: 2;
-    }
-
+input[type=range]::-moz-range-track {
+	outline: none;
 }
 
 

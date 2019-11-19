@@ -11,8 +11,10 @@
     <h1 class="ds-title">Двойной ползунок</h1>
     <div class="ds-wrapper">
         <div class="ds-divider">
-            <input type="range" multiple value="10,80" />
-            <input type="range" multiple="" value="40,60" data-drag-middle="" class="multirange middle" style="--size:19.5%;">
+			<div class="input-range">
+				<input class="input-range__left" type="range" value="10,80" />
+				<input class="input-range__right" type="range" value="10,80" />
+			</div>
         </div>
     </div>
 
@@ -23,7 +25,7 @@
         </script>
     </div>
 
-<script>
+<!-- <script>
     (function() {
 "use strict";
 
@@ -147,7 +149,7 @@ if (typeof module === "undefined") {
 })();
 
     
-</script>
+</script> -->
 
 </body>
 </html>
