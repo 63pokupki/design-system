@@ -8,7 +8,6 @@
     width: 100%;
     padding: 15px 32px 12px;
     position: relative;
-    flex-wrap: wrap;
 
     &__button {
         margin-right: 50px;
@@ -25,6 +24,7 @@
         padding: 0;
         margin: 0;
         white-space: nowrap;
+        overflow: hidden;
     }
     &__item {
         margin-right: 30px;
@@ -33,10 +33,6 @@
 
     &__item:last-child {
         margin-right: unset;
-
-        @media screen and (max-width: 1124px) {
-            display: none;
-        }
     }
 
     .categories-bar__menu {

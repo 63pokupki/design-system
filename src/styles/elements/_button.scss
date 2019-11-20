@@ -2,8 +2,8 @@
 button {
     cursor: pointer;
     background-color: transparent;
-    border: unset;
-    padding: unset;
+    border: none;
+    padding: none;
     display: inline-flex;
     align-items: center;
     color: inherit;
@@ -11,7 +11,7 @@ button {
     -moz-appearance: none;
     -webkit-appearance: none;
     &:focus {
-        outline: unset;
+        outline: none;
     }
 }
 
