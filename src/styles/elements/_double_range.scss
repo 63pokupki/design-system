@@ -34,7 +34,7 @@ input[type=range] {
 // Ползунок в Chrome, Opera, Safari	
 input[type=range]::-webkit-slider-thumb {
  -webkit-appearance: none;
- background: #007ef3;
+ background: $color-primary;
  border: 1px solid #bdc3c7;
  width: 10px;
  height: 10px;
@@ -47,7 +47,7 @@ input[type=range]::-webkit-slider-thumb {
 
 // Ползунок в FireFox
 input[type=range]::-moz-range-thumb {
-	background: #007ef3;
+	background: $color-primary;
 	border: 1px solid #bdc3c7;
 	width: 10px;
 	height: 10px;
