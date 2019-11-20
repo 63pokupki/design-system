@@ -55,10 +55,12 @@ input[type=range]::-moz-range-thumb {
 	border: none;
 	cursor: pointer;
 	appearance: none;
+	pointer-events: all; // Позволяет взаимодействовать с нижележащими элементами(Ползунками)
 }
 
 input[type=range]::-moz-range-track {
 	outline: none;
+	pointer-events: none;
 }
 
 
