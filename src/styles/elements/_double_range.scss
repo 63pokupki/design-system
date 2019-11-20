@@ -22,9 +22,16 @@ input[type=range] {
  	background: $color-primary;
 	height: 2px;
 	border: none;
+	border-style: none;
 	outline: none;
 	outline-offset: 0;
 	pointer-events: none; //Отключает взаимодействие с мышью
+	&::-moz-focus-inner {
+		border-style: none;
+	}
+	&::-moz-focus-outer {
+		border-style: none;
+	}
 }
 
 // Ползунок в Chrome, Opera, Safari	
