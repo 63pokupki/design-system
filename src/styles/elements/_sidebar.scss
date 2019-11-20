@@ -17,9 +17,10 @@
         height: 100vh;
         z-index: 50;
         visibility: hidden;
-        transform: translateX(-100%);
+        transform: translate(-100%, 0, 0);
         background: $background-color-primary;
-        padding-bottom: 50px;
+        padding-bottom: 80px;
+        -webkit-overflow-scrolling: touch;
     }
 
     .sidebar__background {
@@ -79,7 +80,7 @@
     .sidebar__body {
         left: auto;
         right: 0;
-        transform: translateX(100%);
+        transform: translate(100%, 0, 0);
     }
 
     .sidebar__background {
@@ -108,7 +109,7 @@
     display: flex;
 
     .sidebar__body {
-        transform: translateX(0%);
+        transform: translate(0, 0, 0);
         visibility: visible;
     }
 
