@@ -1,3 +1,10 @@
+.mobile-container {
+    display: block;
+    max-width: 320px;
+    width: 320px;
+    // overflow: hidden;
+}
+
 .delivery__mobile {
     &.is-toggle {
         .delivery__collapse-wrap {
@@ -25,7 +32,7 @@
             display: flex;
             flex-direction: column;
             width: 100%;
-            margin: 60px 0 auto;
+            // margin: 60px 0 auto;
             background: #fff;
             
         }
@@ -166,7 +173,7 @@
 
         //Ссылки
         &__link {
-            font-size: 12px;
+            font-size: 14px;
             font-weight: 600;
             color: $color-primary;
         }
@@ -178,7 +185,7 @@
         //Текст
         &__txt {
             margin: 0px 0;
-            padding: 0 70px 0 0;
+            // padding: 0 70px 0 0;
             font-size: 14px;
             line-height: 28px;
             color: $light-gray-txt-color;
@@ -440,7 +447,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 30px;
+            padding: 15px;
             background: #fff;
             color: $light-gray-txt-color;
             &-heading {
@@ -448,7 +455,7 @@
             }
 
             &-btn {
-                width: 284px;
+                width: 100%;
                 text-decoration: none;
                 font-size: 14px;
                 font-weight: 600;

@@ -1,0 +1,53 @@
+.input-range {
+	display: flex;
+	flex-direction: column;
+}
+
+	
+input[type=range] {
+	-webkit-appearance: none;
+ 	background: $color-primary;
+	height: 2px;
+	border: none;
+	outline: none;
+	outline-offset: 0;
+}
+
+
+// Ползунок в Chrome, Opera, Safari	
+input[type=range]::-webkit-slider-thumb {
+ -webkit-appearance: none;
+ background: #007ef3;
+ border: 1px solid #bdc3c7;
+ width: 10px;
+ height: 10px;
+ border-radius: 10px;
+ border: none;
+ cursor: pointer; 
+}
+
+input[type=range].input-range__right::-webkit-slider-thumb {
+	transform: translateX(0%); 
+}
+
+input[type=range].input-range__left::-moz-range-thumb {
+	transform: translateX(50%); 
+} 
+
+// Ползунок в FireFox
+input[type=range]::-moz-range-thumb {
+	background: #007ef3;
+	border: 1px solid #bdc3c7;
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+	border: none;
+	cursor: pointer;
+	appearance: none;
+}
+
+input[type=range]::-moz-range-track {
+	outline: none;
+}
+
+
