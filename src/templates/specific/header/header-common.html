@@ -56,13 +56,14 @@
                             </button>
                             <!-- блок выпадающей категории поиска -->
                             <div class="search__category">
-                                <!-- добавить .search-category_expanded для раскрытия меню категорий -->
-                                <div class="dropdown-fixed-list">
+                                <!-- добавить .is-expanded для раскрытия меню категорий -->
+                                <div class="dropdown-fixed-list is-expanded">
                                     <!-- текущее значение -->
                                     <span class="dropdown-fixed-list__current">По товарам</span>
                                     <!-- лист всех значений -->
                                     <ul class="dropdown-fixed-list__list">
-                                        <li class="dropdown-fixed-list__list-item">По товарам</li>
+                                        <!-- .is-selected дял выбранного значения -->
+                                        <li class="dropdown-fixed-list__list-item is-selected">По товарам</li>
                                         <li class="dropdown-fixed-list__list-item">По форуму</li>
                                     </ul>
                                 </div>
@@ -170,19 +171,22 @@
                         </button>
                         <ul class="categories-bar__list">
                             <li class="categories-bar__item">
-                                <a href="#" class="link semi-bold">Одежда, обувь, акксесуары</a>
+                                <a href="#" class="link semi-bold">Для женщин</a>
                             </li>
                             <li class="categories-bar__item">
-                                <a href="#" class="link semi-bold">Товары для детей</a>
+                                <a href="#" class="link semi-bold">Для мужчин</a>
                             </li>
                             <li class="categories-bar__item">
-                                <a href="#" class="link semi-bold">Косметика и парфюмерия</a>
+                                <a href="#" class="link semi-bold">Для детей</a>
                             </li>
                             <li class="categories-bar__item">
-                                <a href="#" class="link semi-bold">Спорт, отдых, здоровье</a>
+                                <a href="#" class="link semi-bold">Для дома</a>
                             </li>
                             <li class="categories-bar__item">
-                                <a href="#" class="link semi-bold">Сад и огород</a>
+                                <a href="#" class="link semi-bold">Для красоты</a>
+                            </li>
+                            <li class="categories-bar__item is-promotional">
+                                <a href="#" class="link semi-bold">Новый год</a>
                             </li>
                         </ul>
                         <!-- .multi-level-menu_has-subcategories для отображения подменю при их наличии-->
