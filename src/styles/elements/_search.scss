@@ -20,6 +20,10 @@
             color: #a2a3a5;
             font-size: 12px;
         }
+
+        &::-ms-clear {
+            display: none;
+        }
     }
 
     &__button {
