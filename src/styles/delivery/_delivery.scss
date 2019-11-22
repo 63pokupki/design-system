@@ -73,6 +73,7 @@
             }
         }
 
+
         //Вертикальное меню слева
         &__vertical-menu {
             font-size: 14px;
@@ -137,7 +138,7 @@
             margin: 0px 0;
             padding: 0 70px 0 0;
             font-size: 14px;
-            line-height: 32px;
+            line-height: 1.4em;
             color: $light-gray-txt-color;
 
             .tooltip {
@@ -212,6 +213,10 @@
                 justify-content: flex-start;
                 flex-wrap: wrap;
                 min-width: 30%;
+            }
+
+            .delivery__txt {
+                line-height: 2.4em;
             }
 
             &-link {
