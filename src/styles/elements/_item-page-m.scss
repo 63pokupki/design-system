@@ -1,0 +1,109 @@
+.item-page-m {
+    padding: 0 12px;
+
+    &__go-back {
+        padding: 20px 0;
+    }
+
+    &__stock {
+        font-weight: 600;
+        font-size: 14px;
+        color: #36a6f2;
+        margin-bottom: 15px;
+    }
+
+    &__sku {
+        font-size: 12px;
+        color: #606266;
+        margin-bottom: 15px;
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    &__num {
+        margin-right: 10px;
+    }
+
+    &__buy {
+        margin-right: 10px;
+    }
+
+    .collapse-section {
+        margin-bottom: 15px;
+        
+        &__heading {
+            font-size: 14px;
+        }
+    }
+
+    &__params {
+        margin-bottom: 20px;
+
+        &-label {
+            font-weight: 600;
+            font-size: 14px;
+            color: #1d1e1f;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .item-params-list {
+            margin-left: -5px;
+            margin-bottom: 10px;
+            max-height: 55px;
+
+            &__item {
+                font-size: 14px;
+            }
+
+            &.is-expanded {
+                max-height: none;
+            }
+        }
+
+        &-expand {
+            margin-left: -5px;
+            color: #A2A3A5;
+            text-decoration: underline;
+            font-size: 12px;
+        }
+    }
+
+    .stock-card-vertical {
+        padding: 0;
+
+        &__price {
+            font-size: 24px;
+
+            span {
+                font-size: 14px;
+            }
+        }
+
+        &__org {
+            font-size: 12px;
+        }
+
+        &__main {
+            margin-bottom: 15px;
+        }
+
+        &__heading {
+            font-size: 16px;
+        }
+
+        &__image {
+            max-height: unset;
+        }
+
+        &__wrapper {
+            height: unset;
+        }
+    }
+}
