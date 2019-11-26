@@ -1,5 +1,22 @@
 .modal-confirm-mail {
-    
+    &.is-active {
+        .modal-confirm-mail__btn {
+            background: $color-primary-light;
+            color: #fff;
+            cursor: pointer;
+            &:active, :focus {
+                transform: scale(0.95);
+            }  
+        }
+        .modal-confirm-mail__input {
+            border-color: $color-primary-light;            
+        }
+        .modal-confirm-mail__form {
+            &:before {
+                color: $color-primary-light;
+            }
+        }
+    }
     .modal__btn-close {
         top: 5px;
         right: 5px;
@@ -83,14 +100,22 @@
         font-weight: 500;
         border-color: $color-primary-light;
         &:hover {
-            background: $color-primary-light;
+            cursor: not-allowed;
+            background: none;
+            color: $color-primary-light;
         }
+        &:active, :focus {
+            transform: scale(1);
+        }        
     }
     &__info {
         padding: 0 39px;
         font-size: 9px;
         text-align: center;
         color: $light-gray-link-color;
+        &.mobile {
+            display: none;
+        }
     }
     &__footer {
         margin: 20px 0 10px 0;
@@ -98,6 +123,46 @@
         font-size: 15px;
         font-weight: 600;
         color: $color-text-base;
+    }
+
+    // Mobile
+    &.mobile {
+        .modal__wrap {
+            max-width: 300px;
+            padding: 15px 15px 4px 15px;
+        }
+        .modal__header {
+            font-size: 15px;
+            margin: 0 0 25px;
+        }
+        .modal-confirm-mail__description {
+            margin: 15px 0 10px;
+            padding: 0;
+            font-size: 12px;
+        }
+        .modal-confirm-mail__img {
+            min-height: 49px;
+        }
+        .modal-confirm-mail__info {
+            display: none;
+            &.mobile {
+                display: flex;
+                padding: 0;
+            }
+        }
+        .modal-confirm-mail__form {
+            padding: 0;
+            &:before {
+                left: 5px;
+            }
+        }
+        .modal-confirm-mail__input {
+            margin: 13px 0;
+        }
+        .modal-confirm-mail__footer {
+            margin: 0 0 10px;
+            font-size: 11px;
+        }
     }
 }
 
