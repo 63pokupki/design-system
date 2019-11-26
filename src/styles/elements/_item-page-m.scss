@@ -24,6 +24,7 @@
         display: flex;
         align-items: center;
         margin-bottom: 15px;
+        margin-right: 20px;
     }
 
     &__num {
@@ -33,6 +34,7 @@
     &__buy {
         margin-right: 14px;
         max-width: 142px;
+        flex-shrink: 0;
     }
 
     .favorite {
@@ -98,6 +100,16 @@
             margin-right: 12px;
             margin-left: 12px;
             margin-bottom: 12px;
+        }
+
+        @media screen and (min-width: 480px) {
+            margin-top: 5px;
+            justify-content: flex-start;
+            padding-left: 20px;
+        }
+
+        @media screen and (min-width: 768px) {
+            margin-top: 5px;
         }
     }
     &__params {
@@ -199,7 +211,7 @@
             }
 
             &__heading {
-                height: 60px;
+                max-height: 60px;
                 order: 2;
                 font-size: 12px;
                 line-height: 20px;
@@ -246,6 +258,11 @@
             }
         }
 
+        &__price-wrapper {
+            margin-bottom: 20px;
+            margin-right: 35px;
+        }
+
         &__price {
             font-size: 24px;
             line-height: 22px;
@@ -261,13 +278,16 @@
 
         &__main {
             margin-bottom: 21px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
         }
 
         &__heading {
             font-size: 16px;
             margin-bottom: 12px;
             line-height: 25px;
-            height: 48px;
+            max-height: 48px;
         }
 
         &__image {
@@ -281,5 +301,9 @@
 
     .stock-rows-help {
         margin: 5px auto;
+
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
     }
 }

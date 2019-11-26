@@ -8,9 +8,6 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-
-
-
 // открытие полной инфы о закупке
 const stock_full = document.querySelectorAll(".stock-full");
 if (stock_full) {
@@ -56,7 +53,6 @@ if (collapse_section) {
 
 //Модалки
 
-
 // <!-- Модалка копирование позиции -->
 
 //Раскрытие списка
@@ -64,7 +60,7 @@ let select = document.querySelectorAll(".modal__select"); //кнопка рас�
 //Перебираем все кнопки
 if (select) {
     for (let bt = 0; bt < select.length; bt++) {
-        select[bt].addEventListener("click", function () {
+        select[bt].addEventListener("click", function() {
             this.classList.toggle("is-toggle");
         });
     }
@@ -86,7 +82,6 @@ if (selectCont) {
     });
 }
 
-
 // <!-- Карточка товара с коротким изображением -->
 
 let btn_toggle = document.querySelector(".modal__btn-about-goods"),
@@ -98,13 +93,10 @@ if (btn_toggle) {
     });
 }
 
-
-
 // <!-- Кнопки управления количеством товара -->
 let btn_sum = document.querySelectorAll(".btn-sum");
 
-
-btn_sum.forEach((m) => {
+btn_sum.forEach(m => {
     let plus = m.querySelector(".btn-sum__plus"),
         minus = m.querySelector(".btn-sum__minus"),
         input = m.querySelector(".btn-sum__sum-num");
@@ -119,9 +111,6 @@ btn_sum.forEach((m) => {
     }
 });
 
-
-
-
 // <!-- Сердечко -->
 
 let heart = document.querySelector(".icon-heart-bold");
@@ -134,26 +123,22 @@ if (heart) {
     heart.addEventListener("click", click_heart);
 }
 
-
-
 //Разворачивающийся блок
-(()=> {
+(() => {
     let toggleBlock = document.querySelectorAll(".collapse-block");
-    
+
     if (toggleBlock) {
-        toggleBlock.forEach((t) => {
+        toggleBlock.forEach(t => {
             // let btn_toggle = t.querySelector(".arrow");
             let btn_toggle = t.querySelector(".collapse-block__header");
 
             if (btn_toggle) {
                 btn_toggle.addEventListener("click", () => {
-                    
                     t.classList.toggle("is-toggle");
                 });
             }
         });
     }
-
 })();
 
 //Сворачивание доставки в мобилке
@@ -161,8 +146,8 @@ if (heart) {
     let dcw = document.querySelectorAll(".delivery__mobile");
 
     if (dcw) {
-        dcw.forEach((d) => {
-            let btn_tog    = d.querySelector("#btn-toggle-wrap");
+        dcw.forEach(d => {
+            let btn_tog = d.querySelector("#btn-toggle-wrap");
 
             if (btn_tog) {
                 btn_tog.addEventListener("click", () => {
@@ -171,7 +156,6 @@ if (heart) {
             }
         });
     }
-
 })();
 
 //Сворачивание карточки города в блоке - доставка курьером (в мобилке) (например карточка "Самара")
@@ -179,19 +163,17 @@ if (heart) {
     let dc = document.querySelectorAll(".delivery__city");
 
     if (dc) {
-        dc.forEach((d) => {
+        dc.forEach(d => {
             let btn_toggle_city = d.querySelector(".delivery__city-header");
-            
+
             if (btn_toggle_city) {
                 btn_toggle_city.addEventListener("click", () => {
                     d.classList.toggle("is-toggle");
                 });
             }
         });
-
     }
 })();
-
 
 const sidebar_array = document.querySelectorAll(".sidebar");
 
@@ -199,14 +181,13 @@ sidebar_array.forEach(sidebar => {
     const sidebar_back = sidebar.querySelector(".sidebar__background");
     const sidebar_close = sidebar.querySelector(".sidebar__close");
 
-    sidebar_back.addEventListener("click", function () {
+    sidebar_back.addEventListener("click", function() {
         sidebar.classList.toggle("sidebar_is-active");
     });
 
-    sidebar_close.addEventListener("click", function () {
+    sidebar_close.addEventListener("click", function() {
         sidebar.classList.toggle("sidebar_is-active");
     });
-
 });
 
 //Карточки активных закупок
@@ -215,11 +196,11 @@ sidebar_array.forEach(sidebar => {
     let cardActive = document.querySelectorAll(".card-active-custom");
 
     if (cardActive) {
-        cardActive.forEach((c) => {
+        cardActive.forEach(c => {
             let btnToggle = c.querySelectorAll(".arrow");
 
             if (btnToggle) {
-                btnToggle.forEach((bt) => {
+                btnToggle.forEach(bt => {
                     bt.addEventListener("click", () => {
                         c.classList.toggle("is-toggle");
                     });
@@ -230,43 +211,39 @@ sidebar_array.forEach(sidebar => {
 })();
 
 //Закрытие модалки
-(()=> {
-
+(() => {
     let modal = document.querySelectorAll(".modal");
-    
+
     if (modal) {
-        modal.forEach((m)=> {
-            
+        modal.forEach(m => {
             let modal_bg = m.querySelector(".modal__bg"),
                 btn_close = m.querySelector(".modal__btn-close");
 
             if (modal_bg) {
-                modal_bg.addEventListener("click", ()=> {
+                modal_bg.addEventListener("click", () => {
                     m.classList.remove("is-visible");
                 });
             }
             if (btn_close) {
-                btn_close.addEventListener("click", ()=> {
+                btn_close.addEventListener("click", () => {
                     m.classList.remove("is-visible");
                 });
             }
-            
         });
-        
     }
 })();
 
 // Сворачивание/разворачивание всех карточек на странице
-(()=> {
-let switcher__label = document.querySelectorAll(".switcher__label");
+(() => {
+    let switcher__label = document.querySelectorAll(".switcher__label");
     if (switcher__label) {
         console.log("switcher__label");
-        switcher__label.forEach((sl)=> {
-            sl.addEventListener("click", ()=> {
+        switcher__label.forEach(sl => {
+            sl.addEventListener("click", () => {
                 console.log("switcher__label click");
                 let card = document.querySelectorAll(".card-active-custom");
                 if (card) {
-                    card.forEach((c)=> {
+                    card.forEach(c => {
                         c.classList.toggle("is-toggle");
                     });
                 }
@@ -274,3 +251,25 @@ let switcher__label = document.querySelectorAll(".switcher__label");
         });
     }
 })();
+
+// кнопка назад
+document.addEventListener("DOMContentLoaded", () => {
+    const el = document.createElement("div");
+    el.setAttribute("class", "ds-home");
+    el.addEventListener("click", go_home);
+    document.body.appendChild(el);
+
+    function go_home() {
+        const host = window.location.host;
+        const origin = window.location.origin;
+        let path;
+
+        if (host.includes("github")) {
+            path = `${origin}/design-system/`;
+        } else {
+            path = `${origin}`;
+        }
+
+        window.location.href = path;
+    }
+});
