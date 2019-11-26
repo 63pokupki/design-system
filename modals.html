@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Модальные окна</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?b87f372a8b494b234b3e" rel="stylesheet"><link href="css/ds-utils.css?b87f372a8b494b234b3e" rel="stylesheet"><link href="css/ds-ui-kit.css?b87f372a8b494b234b3e" rel="stylesheet"></head>
+<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?e38e0f5af5af1dfd7a12" rel="stylesheet"><link href="css/ds-utils.css?e38e0f5af5af1dfd7a12" rel="stylesheet"><link href="css/ds-ui-kit.css?e38e0f5af5af1dfd7a12" rel="stylesheet"></head>
 
 <body class="body__modals" style="position: relative;">
 
@@ -1649,21 +1649,30 @@
 
         <!-- Поп-ап подтверждение email -->
         <h1 class="ds-title">Модалка подтверждение email</h1>
+        <div class="ds-text ds-center">Десктоп, планшет</div>
         <div class="ds-divider" style="position: relative;">
+            <div class="ds-text">При введённой почте, кнопка и граница инпута меняют состояние, для его смены 
+                необходимо присвоить класс <span class="ds-hl">.is-active</span> элементу <span class="ds-hl">modal modal-confirm-mail</span>
+            </div>
             <div class="modal modal-confirm-mail demo is-visible">
                 <div class="modal__wrap" style="margin: 10px">
                     <div class="modal__btn-close"><i class="ds-icon icon-close"></i></div>
-                    <h2 class="modal__header">Добро пожаловать на 63pokupki.ru.<br> Спасибо, что выбрали нас!</h2>
+                    <h2 class="modal__header">Добро пожаловать на 63pokupki.ru. Спасибо, что выбрали нас!</h2>
                     <div class="modal__content">
                         <div class="modal-confirm-mail__img"></div>
                         <div class="modal-confirm-mail__description">Пожалуйста, подтвердите адрес электронной почты. 
                             Просто кликните по ссылке в письме, отправленном на указанный e-mail
                         </div>
+                        <div class="modal-confirm-mail__info mobile">Подтверждение электронной почты необходимо для отправки вам 
+                            электронного чека после покупки (в соответствии с Федеральным законом № 54-ФЗ), а также чтобы 
+                            восстановить доступ к аккаунту в случае утери вами пароля.
+                        </div>
+
                         <!-- Форма -->
                         <form class="modal-confirm-mail__form">
                             <input class="modal-confirm-mail__input" type="email" required placeholder="example@mail.ru"> 
                             <button class="ds-btn modal-confirm-mail__btn">
-                                <div class="ds-btn__text">Стандартная кнопка</div>
+                                <div class="ds-btn__text">Подтвердить e-mail</div>
                             </button>
                         </form>
                         <div class="modal-confirm-mail__info">Подтверждение электронной почты необходимо для отправки вам 
@@ -1676,6 +1685,113 @@
                 <div class="modal__bg" style="position: absolute;"></div>
             </div>   
         </div>
-<script type="text/javascript" src="js/highlight-syntax.js?b87f372a8b494b234b3e"></script><script type="text/javascript" src="js/ds-utils.js?b87f372a8b494b234b3e"></script><script type="text/javascript" src="js/categories-icons-sprite.js?b87f372a8b494b234b3e"></script><script type="text/javascript" src="js/ds-ui-kit.js?b87f372a8b494b234b3e"></script></body>
+
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <div class="modal modal-confirm-mail demo is-visible">
+                    <div class="modal__wrap" style="margin: 10px">
+                        <div class="modal__btn-close"><i class="ds-icon icon-close"></i></div>
+                        <h2 class="modal__header">Добро пожаловать на 63pokupki.ru. Спасибо, что выбрали нас!</h2>
+                        <div class="modal__content">
+                            <div class="modal-confirm-mail__img"></div>
+                            <div class="modal-confirm-mail__description">Пожалуйста, подтвердите адрес электронной почты. 
+                                Просто кликните по ссылке в письме, отправленном на указанный e-mail
+                            </div>
+                            <div class="modal-confirm-mail__info mobile">Подтверждение электронной почты необходимо для отправки вам 
+                                электронного чека после покупки (в соответствии с Федеральным законом № 54-ФЗ), а также чтобы 
+                                восстановить доступ к аккаунту в случае утери вами пароля.
+                            </div>
+    
+                            <!-- Форма -->
+                            <form class="modal-confirm-mail__form">
+                                <input class="modal-confirm-mail__input" type="email" required placeholder="example@mail.ru"> 
+                                <button class="ds-btn modal-confirm-mail__btn">
+                                    <div class="ds-btn__text">Подтвердить e-mail</div>
+                                </button>
+                            </form>
+                            <div class="modal-confirm-mail__info">Подтверждение электронной почты необходимо для отправки вам 
+                                электронного чека после покупки (в соответствии с Федеральным законом № 54-ФЗ), а также чтобы 
+                                восстановить доступ к аккаунту в случае утери вами пароля.
+                            </div>
+                            <div class="modal-confirm-mail__footer">С заботой о вас, 63pokupki.ru</div>
+                        </div>
+                    </div>
+                    <div class="modal__bg" style="position: absolute;"></div>
+                </div>   
+            </script>   
+        </div>
+        <div class="ds-divider" style="position: relative;">
+            <div class="ds-text">Для отображения мобильной версии модалки, присвоить класс
+                <span class="ds-hl">.mobile</span>, элементу <span class="ds-hl">modal modal-confirm-mail</span>. 
+            </div>
+            <div class="modal modal-confirm-mail mobile demo is-visible">
+                <div class="modal__wrap" style="margin: 10px">
+                    <div class="modal__btn-close"><i class="ds-icon icon-close"></i></div>
+                    <h2 class="modal__header">Добро пожаловать на 63pokupki.ru. Спасибо, что выбрали нас!</h2>
+                    <div class="modal__content">
+                        <div class="modal-confirm-mail__img"></div>
+                        <div class="modal-confirm-mail__description">Пожалуйста, подтвердите адрес электронной почты. 
+                            Просто кликните по ссылке в письме, отправленном на указанный e-mail
+                        </div>
+                        <div class="modal-confirm-mail__info mobile">Подтверждение электронной почты необходимо для отправки вам 
+                            электронного чека после покупки (в соответствии с Федеральным законом № 54-ФЗ), а также чтобы 
+                            восстановить доступ к аккаунту в случае утери вами пароля.
+                        </div>
+
+                        <!-- Форма -->
+                        <form class="modal-confirm-mail__form">
+                            <input class="modal-confirm-mail__input" type="email" required placeholder="example@mail.ru"> 
+                            <button class="ds-btn modal-confirm-mail__btn">
+                                <div class="ds-btn__text">Подтвердить e-mail</div>
+                            </button>
+                        </form>
+                        <div class="modal-confirm-mail__info">Подтверждение электронной почты необходимо для отправки вам 
+                            электронного чека после покупки (в соответствии с Федеральным законом № 54-ФЗ), а также чтобы 
+                            восстановить доступ к аккаунту в случае утери вами пароля.
+                        </div>
+                        <div class="modal-confirm-mail__footer">С заботой о вас, 63pokupki.ru</div>
+                    </div>
+                </div>
+                <div class="modal__bg" style="position: absolute;"></div>
+            </div>   
+        </div>    
+
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <div class="modal modal-confirm-mail mobile demo is-visible">
+                    <div class="modal__wrap" style="margin: 10px">
+                        <div class="modal__btn-close"><i class="ds-icon icon-close"></i></div>
+                        <h2 class="modal__header">Добро пожаловать на 63pokupki.ru. Спасибо, что выбрали нас!</h2>
+                        <div class="modal__content">
+                            <div class="modal-confirm-mail__img"></div>
+                            <div class="modal-confirm-mail__description">Пожалуйста, подтвердите адрес электронной почты. 
+                                Просто кликните по ссылке в письме, отправленном на указанный e-mail
+                            </div>
+                            <div class="modal-confirm-mail__info mobile">Подтверждение электронной почты необходимо для отправки вам 
+                                электронного чека после покупки (в соответствии с Федеральным законом № 54-ФЗ), а также чтобы 
+                                восстановить доступ к аккаунту в случае утери вами пароля.
+                            </div>
+    
+                            <!-- Форма -->
+                            <form class="modal-confirm-mail__form">
+                                <input class="modal-confirm-mail__input" type="email" required placeholder="example@mail.ru"> 
+                                <button class="ds-btn modal-confirm-mail__btn">
+                                    <div class="ds-btn__text">Подтвердить e-mail</div>
+                                </button>
+                            </form>
+                            <div class="modal-confirm-mail__info">Подтверждение электронной почты необходимо для отправки вам 
+                                электронного чека после покупки (в соответствии с Федеральным законом № 54-ФЗ), а также чтобы 
+                                восстановить доступ к аккаунту в случае утери вами пароля.
+                            </div>
+                            <div class="modal-confirm-mail__footer">С заботой о вас, 63pokupki.ru</div>
+                        </div>
+                    </div>
+                    <div class="modal__bg" style="position: absolute;"></div>
+                </div>
+            </script>
+        </div>
+    
+
+<script type="text/javascript" src="js/highlight-syntax.js?e38e0f5af5af1dfd7a12"></script><script type="text/javascript" src="js/ds-utils.js?e38e0f5af5af1dfd7a12"></script><script type="text/javascript" src="js/categories-icons-sprite.js?e38e0f5af5af1dfd7a12"></script><script type="text/javascript" src="js/ds-ui-kit.js?e38e0f5af5af1dfd7a12"></script></body>
 
 </html>
