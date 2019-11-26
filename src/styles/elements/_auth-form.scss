@@ -1,0 +1,69 @@
+.auth-form {
+
+    &__wrap {
+        display: flex;
+        max-width: 455px;
+        flex-direction: column;
+    }
+    &__container {
+        display: flex;
+        width: 100%;
+        background: transparent;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    &__right-tab, &__left-tab {
+        display: flex;
+        width: 50%;
+        height: 61px;
+        border-radius: 15px;
+        background: #ffffff;
+    }
+    &__right-tab {
+        background: #fff;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    &__left-tab {
+        background: transparent;
+        position: relative;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    &__form {
+        display: flex;
+        width: 100%;
+        height: 100px;
+        background: #ffffff;
+        position: relative;
+        padding: 25px;
+    
+        &:after {
+            content: "";
+            position: absolute;
+            top: -10px;
+            right: calc(50%-10px);
+            display: flex;
+            width: 11px;
+            height: 11px;
+            background: url("~images/auth-form/rectangle-tab-aith.svg");
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: calc(50%-10px);
+            display: flex;
+            width: 11px;
+            height: 11px;
+            background: url("~images/auth-form/rectangle-tab-aith.svg");
+            transform: rotateY(180deg);
+        }
+    
+    }
+}
+body {
+    background: $light-gray-sum-btn;
+}
+
+
