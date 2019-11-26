@@ -2,6 +2,12 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    &:hover {
+        .btn-sum__sum-num {
+            border-bottom: 1px solid $color-primary-light;
+        }
+    }
     &__sum-num {
         width: 35px;
         margin: 0 5px;
@@ -9,31 +15,39 @@
         appearance: none;
         border: none;
         text-align: center;
-    }
-    
+        border-bottom: 1px solid transparent;
 
-    &__minus, &__plus {
+        &:active,
+        &:focus {
+            border-bottom: 1px solid $color-primary-light;
+        }
+    }
+
+    &__minus,
+    &__plus {
         position: relative;
-        width: 20px;
-        height: 20px;
+        width: 24px;
+        height: 24px;
         min-width: 20px;
         border-radius: 50%;
-        background: $light-gray-sum-btn;
+        background: rgba(54, 166, 242, 0.5);
         color: #ffffff;
-        &:active {
-            transform: scale(.95);
+        &:hover {
+            background: #0080f6;
         }
-        &:after, &:before {
+
+        &:active {
+            transform: scale(0.95);
+            background: $color-primary-light;
+        }
+        &:after,
+        &:before {
             content: "";
             position: absolute;
             width: 5px;
             height: 2px;
             background: #ffffff;
         }
-        &:hover {
-            background: $color-primary;
-        }
-
     }
     &__plus {
         &:before {
@@ -45,4 +59,3 @@
         }
     }
 }
-
