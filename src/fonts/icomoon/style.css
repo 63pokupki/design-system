@@ -1,3 +1,6 @@
+.icon-menu:before {
+  content: "\e920";
+}
 .icon-stop:before {
   content: "\e91f";
 }
@@ -24,9 +27,6 @@
 }
 .icon-lock-open:before {
   content: "\e90d";
-}
-.icon-menu:before {
-  content: "\e92d";
 }
 .icon-account:before {
   content: "\e903";
