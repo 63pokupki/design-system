@@ -3,23 +3,6 @@
 $button-font-size: 12px;
 $button-border-radius: 24px;
 
-// базовая кнопка, сброс стилей
-button {
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-    padding: unset;
-    display: inline-flex;
-    align-items: center;
-    color: inherit;
-    justify-content: center;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    &:focus {
-        outline: none;
-    }
-}
-
 // кнопка с категориями
 .menu-btn {
     color: $color-primary-light;
