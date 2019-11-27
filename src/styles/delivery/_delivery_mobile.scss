@@ -184,7 +184,7 @@
 
         //Текст
         &__txt {
-            margin: 0px 0;
+            margin: 0 0 10px 0;
             // padding: 0 70px 0 0;
             font-size: 14px;
             line-height: 1.4em;
@@ -202,10 +202,10 @@
 
             //Жирное начертание
             &_bold {
-                font-weight: 700;
+                font-weight: 600;
             }
             &_important {
-                margin: 0;
+                margin: 0 0 10px 0;
                 font-size: 14px;
                 font-weight: 600;
                 text-transform: uppercase;
@@ -227,6 +227,8 @@
             &-heading {
                 padding: 0 40px 0 0;
                 margin: 0 0 10px 0;
+                font-size: 20px;
+                font-weight: 600;
             }
 
         }
@@ -234,7 +236,7 @@
         //Вся Россия
 
         &__card-search {
-            margin: 20px 0;
+            margin: 30px 0;
         }
 
         &__point {
@@ -257,10 +259,13 @@
                 min-width: 50%;
                 white-space: nowrap;
                 font-size: 16px;
+                margin: 0 0 10px 0;
 
                 // margin: 5px 0;
                 &_current {
                     margin: 0 0 30px 0;
+                    font-size: 18px;
+                    font-weight: 600;
                 }
 
                 a {
@@ -308,6 +313,7 @@
             transition: all .5s;
             &.is-toggle {
                 .delivery__city-content {
+                    padding: 20px 0;
                     max-height: 5000px;
                     opacity: 1;
                     transition: all .8s;
@@ -357,10 +363,6 @@
             }
             .delivery__txt {
                 line-height: 1.4em;
-                &-orders {
-                   font-size: 12px;
-                   color: $light-gray-link-color; 
-                }
             }
             h4 {
                 margin: 0;
@@ -398,6 +400,16 @@
                 height: 1px;
                 background: slategray;
             }
+            .delivery__txt {
+                font-size: 12px;
+                font-weight: 600;
+                &-orders {
+                    font-size: 12px;
+                    font-weight: normal;
+                    color: $light-gray-link-color; 
+                 }
+ 
+            }
         }
 
         &__t-col {
@@ -433,8 +445,8 @@
             background: #fff;
 
             &-heading {
-                font-size: 14px;
-                font-weight: 700;
+                font-size: 18px;
+                font-weight: 600;
                 color: $light-gray-txt-color;
             }
 
@@ -470,6 +482,10 @@
                 text-decoration: none;
                 font-size: 14px;
                 font-weight: 600;
+                .ds-btn__text {
+                    font-size: 12px;
+                    font-weight: 600;
+                }
             }
         }
     }
