@@ -13,7 +13,7 @@ module.exports.templates = function templates(dir = "src/templates", fileslist =
             if (file.includes(".html")) {
                 t.push(
                     new HtmlWebpackPlugin({
-                        filename: file,
+                        filename: `${file}?[hash]`,
                         template: path.resolve(__dirname, `${dir}/${file}`),
                         favicon: path.resolve(__dirname, "favicon.ico")
                     })

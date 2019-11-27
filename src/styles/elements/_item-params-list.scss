@@ -38,7 +38,7 @@
 
     &__item.is-selected {
         transition: background-color $transition-fast, color $transition-fast;
-        background-color: #318cca;
+        background-color: $color-primary-light;
         color: white;
     }
 }

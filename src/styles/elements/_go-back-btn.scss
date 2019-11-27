@@ -3,6 +3,10 @@
     align-items: center;
     color: #606266;
 
+    &__icon {
+        font-size: 16px;
+    }
+
     &__text {
         margin-left: 15px;
         font-weight: bold;

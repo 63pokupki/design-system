@@ -1,0 +1,32 @@
+.item-page-modal-grid {
+    .modal__header {
+        margin-bottom: 15px;
+    }
+    .stock-sizes-grid {
+        &__images {
+            margin: 30px 45px 0;
+        }
+
+        &__prev {
+            left: 0;
+            justify-content: flex-start;
+        }
+
+        &__next {
+            right: 0;
+            justify-content: flex-end;
+        }
+
+        @media screen and (max-width: 680px) {
+            &__prev,
+            &__next {
+                font-size: 17px;
+                width: 43px;
+            }
+
+            &__images {
+                margin: 30px 20px 0;
+            }
+        }
+    }
+}

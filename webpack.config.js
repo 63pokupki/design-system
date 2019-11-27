@@ -157,7 +157,7 @@ module.exports = {
             filename: "css/[name].css?[hash]"
         }),
         new HtmlWebpackPlugin({
-            filename: "index.html",
+            filename: "index.html?[hash]",
             template: "index.html",
             favicon: path.resolve(__dirname, "favicon.ico")
         })

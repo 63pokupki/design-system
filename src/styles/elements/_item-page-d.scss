@@ -3,8 +3,12 @@
     border-bottom: 1px solid rgba(49, 140, 202, 0.25);
     padding-bottom: 50px;
     background: #ffffff;
-    display: flex;
-    align-items: flex-start;
+
+    &__w {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+    }
 
     &__slider {
         margin-top: 35px;
@@ -50,7 +54,7 @@
     }
 
     &__l {
-        margin-right: 40px;
+        margin-right: 33px;
     }
 
     &__org-btns {
@@ -69,6 +73,12 @@
 
     &__collapse {
         margin-bottom: 15px;
+    }
+
+    .collapse-section {
+        &__body {
+            line-height: 24px;
+        }
     }
 
     &__buttons {
@@ -102,7 +112,7 @@
 
     &__body {
         padding-top: 0;
-        max-width: 50%;
+        max-width: calc(50% - 20px);
     }
 
     &__price-w {
@@ -113,6 +123,7 @@
         font-weight: bold;
         font-size: 24px;
         color: #1e2023;
+        line-height: 38px;
     }
 
     &__params-section {
@@ -240,14 +251,14 @@
         font-weight: 600;
         font-size: 12px;
         line-height: 17px;
-        color: #606266;
-        background: #e0eef7;
+        color: white;
+        background: $color-primary-light;
         width: 145px;
         padding: 10px;
         position: absolute;
 
         &:before {
-            border-top: 7px solid #abc1cf;
+            border-top: 7px solid #2c6aa4;
             transform: rotate(135deg);
             top: auto;
             right: 3px;
@@ -273,6 +284,12 @@
         right: 10px;
     }
 
+    .favorite {
+        &__icon {
+            font-size: 22px;
+        }
+    }
+
     .collapse-section__heading {
         font-weight: 600;
         font-size: 16px;
@@ -282,6 +299,7 @@
     &__stock-name {
         display: block;
         margin-bottom: 10px;
+        line-height: 14px;
     }
 
     &__lens {
