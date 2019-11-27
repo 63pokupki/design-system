@@ -20,11 +20,11 @@
             }
         }
     }
+}
 
-    &__item + &__item:before {
-        display: inline-block;
-        padding-right: 4px;
-        color: #858585;
-        content: "/";
-    }
+.breadcrumb__item + .breadcrumb__item:before {
+    display: inline-block;
+    padding-right: 4px;
+    color: #858585;
+    content: "/";
 }

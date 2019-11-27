@@ -113,14 +113,14 @@ btn_sum.forEach(m => {
 
 // <!-- Сердечко -->
 
-let heart = document.querySelector(".icon-heart-bold");
+let hearts = document.querySelectorAll(".icon-heart-bold");
 
-if (heart) {
-    let click_heart = () => {
-        heart.classList.toggle("icon-heart-filled");
-    };
-
-    heart.addEventListener("click", click_heart);
+if (hearts) {
+    hearts.forEach((heart) => {
+        heart.addEventListener('click', () => {
+            heart.classList.toggle("icon-heart-filled");
+        })
+    })
 }
 
 //Разворачивающийся блок
