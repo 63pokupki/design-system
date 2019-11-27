@@ -1,3 +1,40 @@
+.item-page-modal-over {
+    text-align: center;
+
+    .ds-btn {
+        font-weight: bold;
+        font-size: 14px;
+        padding: 9px 34px;
+        min-height: 40px;
+
+        i {
+            margin-left: 10px;
+            font-size: 20px;
+        }
+    }
+    
+    &__text {
+        font-size: 14px;
+        line-height: 22px;
+        text-align: center;
+        color: #000000;
+        margin-bottom: 17px;
+    }
+
+    .modal__wrap {
+        max-width: 320px;
+    }
+
+    .modal__header {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 16px;
+        text-align: center;
+        color: #000000;
+        margin-bottom: 25px;
+    }
+}
+
 // карточка (страница) товара
 .item-page-d {
     border-bottom: 1px solid rgba(49, 140, 202, 0.25);
@@ -254,7 +291,7 @@
         position: absolute;
 
         &:before {
-            border-top: 7px solid #2C6AA4;
+            border-top: 7px solid #2c6aa4;
             transform: rotate(135deg);
             top: auto;
             right: 3px;
