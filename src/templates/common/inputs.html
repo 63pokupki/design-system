@@ -270,11 +270,14 @@
             </script>
         </div>
 
+        <!-- Поле ввода пароля -->
         <h1 class="ds-title">Поле ввода пароля</h1>
         <div class="ds-wrapper">
             <div class="ds-divider">
                 <div class="input-password">
-                    <input class="input-password__input" type="password" required>
+                    <input class="input-password__input" type="password" maxlength="20" minlength="6" required>
+                    <input type="checkbox" name="" id="passEye">
+                    <label class="passEye-label" for="passEye"></label>
                 </div>
             </div>
         </div>
