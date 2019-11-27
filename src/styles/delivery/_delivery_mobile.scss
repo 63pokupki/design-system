@@ -62,12 +62,17 @@
 
         &__header-heading {
             display: flex;
+            justify-content: flex-start;
             margin: 0;
+            font-weight: bold;
+            font-size: 14px;
+            color: $color-text-base;
 
             &-wrap {
                 display: flex;
+                flex-direction: column;
                 justify-content: space-between;
-                align-items: center;
+                align-items: flex-start;
                 min-width: 100%;
                 padding: 15px;
                 box-shadow: inset 0px -10px 17px -5px rgba(244,244,248,1);
@@ -164,7 +169,7 @@
         &__content-header {
             display: flex;
             flex-direction: column;
-            padding: 15px 30px;
+            padding: 15px 0 0 0;
 
             &-heading {
                 margin: 0 0 40px 0;
