@@ -1,5 +1,8 @@
 // .delivery {
 .delivery__desktop {
+    * {
+        user-select: none;
+    }
 
     // РАзделительная линия
     hr {
@@ -105,6 +108,7 @@
 
         &__heading-delivery-cost {
             margin: 0 0 10px 0;
+            color: $color-text-base;
         }
 
         &__btn-toggle-wrap {
@@ -136,7 +140,7 @@
         //Текст
         &__txt {
             margin: 0px 0;
-            padding: 0 70px 0 0;
+            padding: 0;
             font-size: 14px;
             line-height: 1.4em;
             color: $light-gray-txt-color;
@@ -163,7 +167,7 @@
 
             //Жирное начертание
             &_bold {
-                font-weight: 700;
+                font-weight: 600;
             }
 
             &_important {
@@ -189,6 +193,8 @@
             &-heading {
                 padding: 0 40px 0 0;
                 margin: 0 0 10px 0;
+                color: $dark-grey-color;
+                font-size: 20px;
             }
         }
 
@@ -286,7 +292,7 @@
 
             &-heading {
                 font-size: 18px;
-                font-weight: 700;
+                font-weight: 600;
                 color: $light-gray-txt-color;
             }
 
@@ -316,6 +322,11 @@
 
             &-heading {
                 font-size: 18px;
+                font-weight: 600;
+            }
+            .ds-btn__text {
+                font-size: 14px;
+                font-weight: 600;
             }
         }
     }

@@ -1,0 +1,48 @@
+.ds-inputs-form {
+    display: inline-block;
+    width: 100%;
+    height: 48px;
+    margin: 13px;
+    padding: 0 20px;
+    border: 1px solid #C4C4C4;
+    border-radius: 2px;
+    outline: none;
+    position: relative;
+    &.active {
+        
+    }
+
+ 
+    input {
+        width: 97%;
+        height: 100%;
+        border: none;
+        outline: none;
+        font-size: 14px;
+        font-weight: 600;
+        color: $dark-grey-color;
+            
+    }
+}
+
+// Лейбл
+// Скопировать в инпут и заменить текст content: ""
+// &:before {
+//     content: "Лейбл";
+//     display: inline-flex;
+//     height: 15px;
+//     background: #fff;
+//     position: absolute;
+//     top: -12px;
+//     left: 5px;
+//     padding: 0 10px;
+//     font-family: Open Sans;
+//     font-weight: 600;
+//     font-size: 15px;
+//     color: $light-gray-sum-btn;
+// }
+
+
+
+
+

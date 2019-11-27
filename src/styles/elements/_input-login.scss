@@ -1,0 +1,17 @@
+.input-login {
+    &:before {
+        content: "Логин";
+        display: inline-flex;
+        height: 15px;
+        background: #fff;
+        position: absolute;
+        top: -12px;
+        left: 5px;
+        padding: 0 10px;
+        font-family: Open Sans;
+        font-weight: 600;
+        font-size: 15px;
+        color: $light-gray-sum-btn;
+    }
+
+}
