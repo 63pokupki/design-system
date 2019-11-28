@@ -260,10 +260,8 @@ sidebar_array.forEach(sidebar => {
 (()=> {
 let switcher__label = document.querySelectorAll(".switcher__label");
     if (switcher__label) {
-        console.log("switcher__label");
         switcher__label.forEach((sl)=> {
             sl.addEventListener("click", ()=> {
-                console.log("switcher__label click");
                 let card = document.querySelectorAll(".card-active-custom");
                 if (card) {
                     card.forEach((c)=> {
@@ -274,3 +272,20 @@ let switcher__label = document.querySelectorAll(".switcher__label");
         });
     }
 })();
+
+
+// Окно авторизации(переключение вкладок)
+(()=> {
+    let auth_wrap = document.querySelectorAll(".auth-form__wrap");
+
+    if (auth_wrap) {
+        auth_wrap.forEach((aw)=> {
+            let auth_tabs = aw.querySelector("#auth-tabs");
+            
+            auth_tabs.addEventListener("click", ()=> {
+                aw.classList.toggle("is-active");
+            });    
+        });
+    }
+})();
+

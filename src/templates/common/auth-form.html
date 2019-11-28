@@ -11,6 +11,7 @@
     <h1 class="ds-title">Окно входа/авторизации</h1>
     <div class="ds-wrapper" style="background: #4a89dc;">
         <div class="ds-divider" style="background: #4a89dc;">
+            <!-- ФОрма компонент -->
             <div class="auth-form__wrap" style="margin: 0 auto;">
                 <!-- Табы -->
                 <div class="auth-form__tab-container">
@@ -19,10 +20,33 @@
                     <label class="auth-form__right-tab" for="auth-tabs">Новый аккаунт</label>
                 </div>
                 <!-- Форма -->
-                <div class="auth-form__form">
-                    
+                <div class="auth-form__form auth-form__form-sign-in">
+                    <div class="auth-form__heading">Вход на сайт</div>
+                    <!-- Поле логин -->
+                    <div class="ds-inputs-form input-login">
+                        <input type="text" name="" id="">
+                    </div>
+                    <!-- Поле пароль -->
+                    <div class="input-password ds-inputs-form">
+                        <input class="ds-inputs-form__input" type="password" maxlength="20" minlength="6" required>
+                        <input type="checkbox" name="" id="passEye">
+                        <label class="passEye-label" for="passEye"></label>
+                    </div>
+                    <!-- Чекбокс -->
+                    <div class="checkbox auth-form__checkbox">
+                        <input class="checkbox__input" type="checkbox" id="chx-01" />
+                        <label class="checkbox__label" for="chx-01">Запомнить меня</label>
+                    </div>
+                    <button class="ds-btn auth-form__btn-enter">
+                        <div class="ds-btn__text">Вход</div>
+                    </button>
+                    <a class="auth-form__link link link_colored" href="#">Забыли пароль?</a>
+                </div>
+                <div class="auth-form__form auth-form__form-sign-up">
+                    Sign up
                 </div>
             </div>
+           
         </div>
     </div>
 
