@@ -3,7 +3,7 @@
         content: "Логин";
         display: inline-flex;
         height: 15px;
-        background: #fff;
+        // background: url("~images/auth-form/bg-line-label-input.svg");
         position: absolute;
         top: -12px;
         left: 5px;
@@ -12,6 +12,17 @@
         font-weight: 600;
         font-size: 15px;
         color: $light-gray-sum-btn;
+        z-index: 2;
+    }
+    &:after {
+        content: "";
+        background: url("~images/auth-form/bg-line-label-input.svg");
+        width: 66px;
+        height: 1px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
     }
 
 }
