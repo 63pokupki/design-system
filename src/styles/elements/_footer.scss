@@ -248,7 +248,7 @@
             content: "ПРИСТРОЙ";
             position: absolute;
             bottom: -15px;
-            left: -10px;
+            left: 0;
             font-family: 'Roboto', sans-serif;
             font-size: 10px;
             color: #3EAAE0;
@@ -565,13 +565,7 @@
         &__social {
             img {
                 width: 25px;
-            }
-
-            .attach:after {
-                font-size: 8px;
-                left: 35px;
-                top: 8px;
-            }
+            }  
 
             &-icons {
                 display: flex;
