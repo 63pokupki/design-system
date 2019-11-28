@@ -80,6 +80,23 @@ body {
     }
 }
 
+// базовая кнопка, сброс стилей
+button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    padding: unset;
+    display: inline-flex;
+    align-items: center;
+    color: inherit;
+    justify-content: center;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    &:focus {
+        outline: none;
+    }
+}
+
 // скрывает элементы предназначенные только для сенсорных устройств
 @media screen and (min-width: $desctop) {
     .touch-only {

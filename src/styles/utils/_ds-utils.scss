@@ -20,6 +20,30 @@ body {
     }
 }
 
+.ds-home {
+    cursor: pointer;
+    width: 52px;
+    height: 52px;
+    background: #36a6f2;
+    border-radius: 50%;
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 70px;
+    left: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+    &:after {
+        content: "";
+        width: 30px;
+        height: 30px;
+        background: url('~images/back.svg') no-repeat center center;
+        background-size: cover;
+    }
+}
+
 .ds-title {
     width: 100%;
     text-align: center;

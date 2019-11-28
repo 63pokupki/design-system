@@ -7,9 +7,10 @@ module.exports = {
     mode: "production", //режим сборки
     entry: {
         "ds-ui-kit": entry["ds-ui-kit"],
-        "categories-icons-sprite": entry["categories-icons-sprite"],
+        // "categories-icons-sprite": entry["categories-icons-sprite"],
         "footer": ["./src/styles/page/footer.scss"],
-        "header": ["./src/styles/page/header.scss"]
+        "header": ["./src/styles/page/header.scss"],
+        "item-page": ["./src/styles/page/item-page.scss"]
         // "stock" : entry["stock"],
     }, //объект с точками входа
     output: {
