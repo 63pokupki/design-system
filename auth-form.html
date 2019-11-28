@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Окно входа/авторизации</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?3f02b7552bb34078d0ac" rel="stylesheet"><link href="css/ds-utils.css?3f02b7552bb34078d0ac" rel="stylesheet"><link href="css/ds-ui-kit.css?3f02b7552bb34078d0ac" rel="stylesheet"></head>
+<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?3d49a158beeac4b89fd2" rel="stylesheet"><link href="css/ds-utils.css?3d49a158beeac4b89fd2" rel="stylesheet"><link href="css/ds-ui-kit.css?3d49a158beeac4b89fd2" rel="stylesheet"></head>
 <body>
 
     <h1 class="ds-title">Окно входа/авторизации</h1>
@@ -20,15 +20,18 @@
                     <label class="auth-form__right-tab" for="auth-tabs">Новый аккаунт</label>
                 </div>
                 <!-- Форма -->
-                <div class="auth-form__form auth-form__form-sign-in is-error">
+                <!-- Если поля заполнены неверно, присвоить класс .is-error элементу form -->
+                <form class="auth-form__form auth-form__form-sign-in">
                     <div class="auth-form__heading">Вход на сайт</div>
                     <!-- Поле логин -->
                     <div class="ds-inputs-form input-login">
-                        <input type="text" name="" id="">
+                        <input type="text" name="" id="" maxlength="20" minlength="6" required>
                     </div>
+                    <!-- Предупреждение -->
+                    <span class="auth-form__error-message">Неверный логин или пароль</span>
                     <!-- Поле пароль -->
                     <div class="input-password ds-inputs-form">
-                        <input class="ds-inputs-form__input" type="password" maxlength="20" minlength="6" required>
+                        <input id="ds-inputs-form__input-password" class="ds-inputs-form__input" type="password" maxlength="20" minlength="6" required>
                         <input type="checkbox" name="" id="passEye">
                         <label class="passEye-label" for="passEye"></label>
                     </div>
@@ -37,14 +40,15 @@
                         <input class="checkbox__input" type="checkbox" id="chx-01" />
                         <label class="checkbox__label" for="chx-01">Запомнить меня</label>
                     </div>
-                    <button class="ds-btn auth-form__btn-enter">
+                    <!-- Если все поля заполнены, добавить кнопке класс .ds-btn_hover -->
+                    <button  class="ds-btn auth-form__btn-enter">
                         <div class="ds-btn__text">Вход</div>
                     </button>
                     <a class="auth-form__link link link_colored" href="#">Забыли пароль?</a>
-                </div>
-                <div class="auth-form__form auth-form__form-sign-up">
+                </form>
+                <form class="auth-form__form auth-form__form-sign-up">
                     Sign up
-                </div>
+                </form>
             </div>
            
         </div>
@@ -58,7 +62,7 @@
 
 
 
-<script type="text/javascript" src="js/highlight-syntax.js?3f02b7552bb34078d0ac"></script><script type="text/javascript" src="js/ds-utils.js?3f02b7552bb34078d0ac"></script><script type="text/javascript" src="js/ds-ui-kit.js?3f02b7552bb34078d0ac"></script></body>
+<script type="text/javascript" src="js/highlight-syntax.js?3d49a158beeac4b89fd2"></script><script type="text/javascript" src="js/ds-utils.js?3d49a158beeac4b89fd2"></script><script type="text/javascript" src="js/ds-ui-kit.js?3d49a158beeac4b89fd2"></script></body>
 </html>
 
 
