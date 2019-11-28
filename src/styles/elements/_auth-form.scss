@@ -90,6 +90,9 @@
                     color: $color-input-border-error;
                 }
             }
+            .auth-form__error-message {
+                visibility: visible;
+            }
         }
 
         &-sign-up {
@@ -124,8 +127,12 @@
             background: url("~images/auth-form/rectangle-tab-aith.svg");
             transform: rotateY(180deg);
         }
+        // Поле логина
         .input-login {
-            margin-bottom: 27px;
+            margin-bottom: 10px;
+        }
+        .input-password {
+            margin-top: 10px;
         }
     }
     &__checkbox {
@@ -137,6 +144,7 @@
     //Сообщение об ошибке
     &__error-message {
         display: flex;
+        visibility: hidden;
         align-self: flex-end;
         margin: 0 13px 0 0;
         font-weight: normal;
@@ -151,11 +159,16 @@
         font-weight: 500;
         font-size: 18px;
         color: $click-load-color;
+        &.disabled {
+            
+        }
     }
 
     // ЗАбыли пароль?
     &__link {
         text-align: center;
+        font-size: 13px;
+        font-weight: 600;
     }
 
     // ЗАголовок формы

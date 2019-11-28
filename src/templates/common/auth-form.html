@@ -20,7 +20,8 @@
                     <label class="auth-form__right-tab" for="auth-tabs">Новый аккаунт</label>
                 </div>
                 <!-- Форма -->
-                <form class="auth-form__form auth-form__form-sign-in is-error">
+                <!-- Если поля заполнены неверно, присвоить класс .is-error элементу form -->
+                <form class="auth-form__form auth-form__form-sign-in">
                     <div class="auth-form__heading">Вход на сайт</div>
                     <!-- Поле логин -->
                     <div class="ds-inputs-form input-login">
@@ -39,14 +40,15 @@
                         <input class="checkbox__input" type="checkbox" id="chx-01" />
                         <label class="checkbox__label" for="chx-01">Запомнить меня</label>
                     </div>
-                    <button class="ds-btn auth-form__btn-enter">
+                    <!-- Если все поля заполнены, добавить кнопке класс .ds-btn_hover -->
+                    <button  class="ds-btn auth-form__btn-enter">
                         <div class="ds-btn__text">Вход</div>
                     </button>
                     <a class="auth-form__link link link_colored" href="#">Забыли пароль?</a>
                 </form>
-                <div class="auth-form__form auth-form__form-sign-up">
+                <form class="auth-form__form auth-form__form-sign-up">
                     Sign up
-                </div>
+                </form>
             </div>
            
         </div>
