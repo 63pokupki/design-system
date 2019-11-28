@@ -50,6 +50,27 @@
     overflow: hidden;
     box-shadow: unset;
 
+    .social-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .social-icon-vk {
+        background: url('~images/social-icons/vk.svg') no-repeat center / cover;
+    }
+
+    .social-icon-inst {
+        background: url('~images/social-icons/inst.svg') no-repeat center / cover;
+    }
+
+    .social-icon-ok {
+        background: url('~images/social-icons/ok.svg') no-repeat center / cover;
+    }
+
+    .social-icon-yt {
+        background: url('~images/social-icons/yt.svg') no-repeat center / cover;
+    }
+
     &__container {
         display: block;
         width: 100%;
@@ -313,6 +334,12 @@
 
 //footer tab
 .footer__tab {
+
+    .social-icon {
+        width: 22px;
+        height: 22px;
+    }
+
     .footer {
 
         &__advantage {
@@ -365,7 +392,7 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            padding: 20px 30px;
+            padding: 20px 30px 30px;
 
             &-wrap {
                 display: flex;
@@ -375,11 +402,7 @@
             h5 {
                 margin: 0 15px 0 0;
                 white-space: nowrap;
-            }
-
-            .attach:after {
-                left: 30px;
-                top: 6px;
+                font-size: 14px;
             }
 
             img {
@@ -389,7 +412,7 @@
             &-icons {
                 justify-content: space-between;
                 margin-top: 5px;
-                margin: 5px 75px 0 0;
+                margin: 5px 30px 0 0;
             }
 
             a {
@@ -447,6 +470,12 @@
 
 // footer mobile
 .footer__mobile {
+
+    .social-icon {
+        width: 25px;
+        height: 25px;
+    }
+
     .footer {
 
         &__col {
@@ -513,26 +542,6 @@
             }
         }
 
-        &__social {
-            img {
-                width: 25px;
-            }
-
-            .attach:after {
-                font-size: 8px;
-                left: 35px;
-                top: 8px;
-            }
-
-            &-icons {
-                display: flex;
-                flex-wrap: wrap;
-                width: 115px;
-                padding: 0 20px 0 0;
-
-            }
-        }
-
         &__points-near {
             margin-top: 10px;
         }
@@ -569,8 +578,11 @@
             &-icons {
                 display: flex;
                 flex-wrap: wrap;
-                width: 115px;
-                padding-right: 20px;
+                width: 140px;
+
+                a {
+                    margin-bottom: 10px;
+                }
             }
 
         }
