@@ -19,6 +19,13 @@
             }
         }
     }
+
+    .vertical-margin {
+        display: block;
+        min-height: 19px;
+    }
+
+
     .delivery {
 
         &__wrap {
@@ -192,7 +199,7 @@
             margin: 0 0 10px 0;
             // padding: 0 70px 0 0;
             font-size: 14px;
-            line-height: 1.4em;
+            line-height: 1.5em;
             color: $light-gray-txt-color;
 
             .tooltip {
@@ -409,6 +416,7 @@
                 font-size: 12px;
                 font-weight: 600;
                 &-orders {
+                    padding: 0 30% 0 0;
                     font-size: 12px;
                     font-weight: normal;
                     color: $light-gray-link-color; 

@@ -264,10 +264,22 @@ sidebar_array.forEach(sidebar => {
             
             auth_tabs.addEventListener("click", ()=> {
                 aw.classList.toggle("is-active");
-            });    
+            });
+            
+            // Окно авторизации(Показ пароля)
+            let eye = aw.querySelector("#passEye");
+
+            if (eye.checked == true) {
+                aw.querySelector("#ds-inputs-form__input-password").setAttribute("type", Text);
+            }
+
         });
     }
+
+
 })();
+
+
 
 
 // кнопка назад
