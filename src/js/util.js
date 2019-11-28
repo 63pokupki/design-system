@@ -236,11 +236,7 @@ sidebar_array.forEach(sidebar => {
 // Сворачивание/разворачивание всех карточек на странице
 (() => {
     let switcher__label = document.querySelectorAll(".switcher__label");
-    if (switcher__label) {
-
-        switcher__label.forEach((sl)=> {
-            sl.addEventListener("click", ()=> {
-        
+    if (switcher__label) {        
         switcher__label.forEach(sl => {
             sl.addEventListener("click", () => {
                 
