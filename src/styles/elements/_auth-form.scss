@@ -79,6 +79,14 @@
         position: relative;
         padding: 20px 39px;
         border-radius: 10px;
+        &.is-error {
+            >.input-login {
+                background: #FFF1F1;
+                >input {
+                    background: #FFF1F1;
+                }
+            }
+        }
 
         &-sign-up {
             display: none;
