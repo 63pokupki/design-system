@@ -20,12 +20,14 @@
                     <label class="auth-form__right-tab" for="auth-tabs">Новый аккаунт</label>
                 </div>
                 <!-- Форма -->
-                <div class="auth-form__form auth-form__form-sign-in is-error">
+                <form class="auth-form__form auth-form__form-sign-in is-error">
                     <div class="auth-form__heading">Вход на сайт</div>
                     <!-- Поле логин -->
                     <div class="ds-inputs-form input-login">
-                        <input type="text" name="" id="">
+                        <input type="text" name="" id="" maxlength="20" minlength="6" required>
                     </div>
+                    <!-- Предупреждение -->
+                    <span class="auth-form__error-message">Неверный логин или пароль</span>
                     <!-- Поле пароль -->
                     <div class="input-password ds-inputs-form">
                         <input class="ds-inputs-form__input" type="password" maxlength="20" minlength="6" required>
@@ -41,7 +43,7 @@
                         <div class="ds-btn__text">Вход</div>
                     </button>
                     <a class="auth-form__link link link_colored" href="#">Забыли пароль?</a>
-                </div>
+                </form>
                 <div class="auth-form__form auth-form__form-sign-up">
                     Sign up
                 </div>

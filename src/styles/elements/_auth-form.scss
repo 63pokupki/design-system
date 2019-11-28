@@ -80,10 +80,14 @@
         padding: 20px 39px;
         border-radius: 10px;
         &.is-error {
-            >.input-login {
+            >.ds-inputs-form {
                 background: #FFF1F1;
+                border-color: $color-input-border-error;
                 >input {
                     background: #FFF1F1;
+                }
+                &:before {
+                    color: $color-input-border-error;
                 }
             }
         }
@@ -129,6 +133,15 @@
         font-size: 12px;
         font-weight: normal;
         color: $color-text-base;
+    }
+    //Сообщение об ошибке
+    &__error-message {
+        display: flex;
+        align-self: flex-end;
+        margin: 0 13px 0 0;
+        font-weight: normal;
+        font-size: 14px;
+        color: $color-input-border-error;
     }
     // Кнопка вход
     &__btn-enter {

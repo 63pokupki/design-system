@@ -21,12 +21,15 @@
 }
 
 // Лейбл
-// Скопировать в инпут и заменить текст content: ""
+// Скопировать в инпут и заменить текст в content: "" у before
+// В зависимости от длинны текста, необходимо будет 
+// менять ширину и позицию left
+
+
 // &:before {
 //     content: "Лейбл";
 //     display: inline-flex;
 //     height: 15px;
-//     background: #fff;
 //     position: absolute;
 //     top: -12px;
 //     left: 5px;
@@ -35,6 +38,17 @@
 //     font-weight: 600;
 //     font-size: 15px;
 //     color: $light-gray-sum-btn;
+//     z-index: 20;
+// }
+// &:after {
+//     content: "";
+//     background: url("~images/auth-form/bg-line-label-input.svg");
+//     width: 66px;
+//     height: 2px;
+//     position: absolute;
+//     top: -2px;
+//     left: 4px;
+//     z-index: 10;
 // }
 
 
