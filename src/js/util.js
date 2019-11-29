@@ -263,24 +263,22 @@ sidebar_array.forEach(sidebar => {
             let auth_tabs = aw.querySelector("#auth-tabs");
             
             auth_tabs.addEventListener("click", ()=> {
-                aw.classList.toggle("is-active");
-            });
-            
-            // Окно авторизации(Показ пароля)
-            let eye = aw.querySelector("#passEye");
-
-            if (eye.checked == true) {
-                aw.querySelector("#ds-inputs-form__input-password").setAttribute("type", Text);
-            }
-
+                if (auth_tabs.checked === true) {
+                    aw.querySelector(".auth-form__form-sign-up").style.display = "flex";
+                    aw.querySelector(".auth-form__form-sign-in").style.display = "none";
+                }
+                else {
+                    aw.querySelector(".auth-form__form-sign-up").style.display = "none";
+                    aw.querySelector(".auth-form__form-sign-in").style.display = "flex";
+                }
+                // aw.classList.toggle("is-active");
+            });  
         });
     }
 
 
 })();
-
-
-
+    
 
 // кнопка назад
 document.addEventListener("DOMContentLoaded", () => {
