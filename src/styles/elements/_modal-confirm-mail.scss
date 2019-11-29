@@ -118,7 +118,7 @@
         }
     }
     &__footer {
-        margin: 20px 0 10px 0;
+        margin: 15px 0 10px 0;
         text-align: center;
         font-size: 15px;
         font-weight: 600;
@@ -152,6 +152,7 @@
         }
         .modal-confirm-mail__form {
             padding: 0;
+            margin: 10px 0 0 0;
             &:before {
                 left: 5px;
             }
@@ -162,6 +163,9 @@
         .modal-confirm-mail__footer {
             margin: 0 0 10px;
             font-size: 11px;
+        }
+        .modal-confirm-mail__info {
+            font-size: 8px;
         }
     }
 }
