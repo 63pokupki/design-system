@@ -13,7 +13,8 @@ module.exports = {
         filename: "js/[name].js?[hash]" //в этом параметре мы индивидуально добавляем необходимую директорию перед именем файлов
     },
     watchOptions: {
-        ignored: /node_modules/, //исключения в слежении
+        aggregateTimeout: 500, //задержка перед обновлением
+        ignored: ["dist/**/*", "build/**/*", "docs/**/*", "node_modules"], //исключения в слежении
         poll: 500 //интервал обновления
     },
     devtool: "inline-source-map", //Инструменты разработчика
@@ -49,6 +50,8 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
+                exclude: /(node_modules|bower_components)/,
+                include: path.resolve(__dirname, "src/styles"),
                 use: [
                     "style-loader",
                     {
@@ -88,21 +91,14 @@ module.exports = {
                         }
                     },
                     {
-                        loader: "css-loader",
-                        options: {
-                            sourceMap: true
-                        }
-                    },
-                    {
-                        loader: "postcss-loader",
-                        options: {
-                            sourceMap: true
-                        }
+                        loader: "css-loader"
                     }
                 ]
             },
             {
                 test: /\.html$/,
+                exclude: /(node_modules|bower_components)/,
+                include: path.resolve(__dirname, "src/templates"),
                 use: [
                     {
                         loader: "html-loader",
@@ -117,6 +113,8 @@ module.exports = {
             },
             {
                 test: /images\/.*\.(jpg|png|gif|svg)$/,
+                exclude: /(node_modules|bower_components)/,
+                include: path.resolve(__dirname, "src/images"),
                 use: {
                     loader: "file",
                     options: {
@@ -127,6 +125,7 @@ module.exports = {
             },
             {
                 test: /favicon\.ico/,
+                exclude: /(node_modules|bower_components)/,
                 use: {
                     loader: "file",
                     options: {
@@ -136,6 +135,8 @@ module.exports = {
             },
             {
                 test: /fonts\/.*\.(woff|woff2|eot|ttf|svg)$/,
+                exclude: /(node_modules|bower_components)/,
+                include: path.resolve(__dirname, "src/fonts"),
                 use: {
                     loader: "file",
                     query: {
@@ -147,6 +148,8 @@ module.exports = {
             },
             {
                 test: /categories-icons-sprite\/.*\.svg$/,
+                exclude: /(node_modules|bower_components)/,
+                include: path.resolve(__dirname, "categories-icons-sprite"),
                 loader: "svg-sprite-loader",
                 options: {}
             }
@@ -160,10 +163,17 @@ module.exports = {
             filename: "index.html?[hash]",
             template: "index.html",
             favicon: path.resolve(__dirname, "favicon.ico")
-        })
-    ].concat(templates()),
+        }),
+        ...templates
+    ],
+    output: {
+        pathinfo: false
+    },
     optimization: {
         //настройки оптимизации и минификации
+        removeAvailableModules: false,
+        removeEmptyChunks: false,
+        splitChunks: false,
         noEmitOnErrors: true,
     }
 };
