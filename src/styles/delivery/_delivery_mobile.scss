@@ -6,6 +6,7 @@
 }
 
 .delivery__mobile {
+
     &.is-toggle {
         .delivery__collapse-wrap {
             max-height: 40000px;
@@ -19,6 +20,7 @@
             }
         }
     }
+    
 
     .vertical-margin {
         display: block;
@@ -504,4 +506,13 @@
     }
 }
 
-
+@media (max-width: 600px) {
+    .delivery__mobile {
+        display: block;
+    }
+}
+@media (min-width: 601px) {
+    .delivery__mobile {
+        display: none;
+    }
+}
