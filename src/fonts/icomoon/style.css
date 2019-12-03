@@ -1,3 +1,6 @@
+.icon-calendar-zero:before {
+  content: "\e925";
+}
 .icon-menu:before {
   content: "\e920";
 }
