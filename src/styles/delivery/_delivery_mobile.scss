@@ -189,7 +189,7 @@
         &__link {
             font-size: 14px;
             font-weight: 600;
-            color: $color-primary;
+            color: $color-primary-light;
         }
 
         &__content-heading {
@@ -203,7 +203,9 @@
             font-size: 14px;
             line-height: 1.5em;
             color: $light-gray-txt-color;
-
+            .icon-info {
+                color: $color-primary-light;
+            }
             .tooltip {
                 min-width: 200px;
             }
@@ -252,6 +254,9 @@
 
         &__card-search {
             margin: 30px 0;
+            .search__bar {
+                color: $light-gray-txt-color;
+            }
         }
 
         &__point {
@@ -284,7 +289,7 @@
                 }
 
                 a {
-                    color: $color-primary;
+                    color: $color-primary-light;
                 }
             }
         }
@@ -302,13 +307,15 @@
             &.is-toggle {
                 ~.delivery__city {
                     max-height: 1000px;
-                    overflow: visible;
+                    // overflow: visible;
                     transition: all .5s;
+                    opacity: 1;
                 }
                 ~.delivery__block-important {
                     max-height: 1000px;
                     overflow: visible;
-                    transition: all .5s;
+                    transition: all .8s;
+                    opacity: 1;
                     padding: 15px 15px;
                 }
             }
@@ -326,6 +333,7 @@
             overflow: hidden;
             position: relative;
             transition: all .5s;
+            opacity: 0;
             &.is-toggle {
                 .delivery__city-content {
                     padding: 20px 0;
@@ -451,6 +459,7 @@
             max-height: 0;
             overflow: hidden;
             transition: all .5s;
+            opacity: 0;
         }
 
         // Если нет ПВЗ
@@ -474,7 +483,7 @@
             }
 
             span {
-                color: $color-primary;
+                color: $color-primary-light;
             }
         }
 
