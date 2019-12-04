@@ -135,7 +135,7 @@
         &__link {
             font-size: 14px;
             font-weight: 600;
-            color: $color-primary;
+            color: $color-primary-light;
         }
 
         &__content-heading {
@@ -161,6 +161,7 @@
                 .icon-info {
                     margin-left: 10px;
                     font-size: 17px;
+                    color: $color-primary-light;
                 }
 
             }
@@ -168,7 +169,7 @@
             //Сноска
             &_footnote {
                 font-size: 14px;
-                color: $light-gray-link-color;
+                color: $light-gray-txt-color;
             }
 
             //Жирное начертание
@@ -212,6 +213,9 @@
         &__card-search {
             max-width: 284px;
             margin: 20px 0;
+            .search__bar {
+                color: $light-gray-txt-color;
+            }
         }
 
         &__point {
@@ -246,7 +250,7 @@
                 }
 
                 a {
-                    color: $color-primary;
+                    color: $color-primary-light;
                     margin-right: 5px;
                 }
             }
@@ -257,7 +261,7 @@
             font-size: 12px;
 
             .delivery__t-col {
-                color: $light-gray-link-color;
+                color: $light-gray-txt-color;
             }
         }
 
@@ -309,7 +313,7 @@
             }
 
             span {
-                color: $color-primary;
+                color: $color-primary-light;
             }
         }
 
