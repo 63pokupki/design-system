@@ -21,7 +21,7 @@
     }
     .delivery {
 
-    
+
 
         &__content-wrap {
             display: flex;
@@ -359,4 +359,9 @@
         display: block;
     }
 }
+
+.ds-home {
+    display: none!important;
+}
+
 
