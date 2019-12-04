@@ -166,9 +166,6 @@ module.exports = {
         }),
         ...templates
     ],
-    output: {
-        pathinfo: false
-    },
     optimization: {
         //настройки оптимизации и минификации
         removeAvailableModules: false,
