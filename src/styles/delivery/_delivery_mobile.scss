@@ -69,15 +69,41 @@
             }
         }
 
+        &__btn-back {
+            display: flex;
+            width: 18px;
+            height: 13px;
+            position: absolute;
+            top: 22px;
+            left: 17px;
+            background: url("~images/delivery/Arrow-delivery-mob.svg");
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+
         &__header-heading {
             display: flex;
             justify-content: flex-start;
             margin: 0;
+            padding: 0 0 0 30px;
             font-weight: 600;
             font-size: 18px;
             color: $dark-grey-color;
+            position: relative;
+            // &:before {
+            //     content: "";
+            //     position: absolute;
+            //     width: 18px;
+            //     height: 13px;
+            //     background: url("~images/delivery/Arrow-delivery-mob.svg");
+            //     background-repeat: no-repeat;
+            //     top: 7px;
+            //     left: 15px;
+            //     cursor: pointer;
+            // }
 
             &-wrap {
+                position: relative;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
