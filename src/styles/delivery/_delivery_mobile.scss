@@ -542,13 +542,3 @@
     }
 }
 
-@media (max-width: 600px) {
-    .delivery__mobile {
-        display: block;
-    }
-}
-@media (min-width: 601px) {
-    .delivery__mobile {
-        display: none;
-    }
-}

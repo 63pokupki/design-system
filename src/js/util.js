@@ -262,6 +262,7 @@ sidebar_array.forEach(sidebar => {
         auth_wrap.forEach((aw)=> {
             let auth_tabs = aw.querySelector("#auth-tabs");
             
+
             auth_tabs.addEventListener("click", ()=> {
                 if (auth_tabs.checked === true) {
                     aw.classList.toggle("auth-form_sign-up");
@@ -273,8 +274,9 @@ sidebar_array.forEach(sidebar => {
                     aw.querySelector(".auth-form__form-sign-up").style.display = "none";
                     aw.querySelector(".auth-form__form-sign-in").style.display = "flex";
                 }
-                // aw.classList.toggle("is-active");
+                
             });  
+           
         });
     }
 
