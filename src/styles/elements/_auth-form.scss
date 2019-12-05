@@ -1,21 +1,30 @@
 .auth-form {
+   
+    display: flex;
+    max-width: 455px;
+    flex-direction: column;
 
-    &__wrap {
-        display: flex;
-        max-width: 455px;
-        flex-direction: column;
-        &.is-active {
-            .auth-form__form-sign-up {
+
+    &_sign-up {
+        max-width: 850px;
+        .auth-form__right-tab {
+            &:before {
                 display: flex;
             }
-            .auth-form__form-sign-in {
-                display: none;
-            }
-    
         }
     }
+    &.is-active {
+        .auth-form__form-sign-up {
+            display: flex;
+        }
+        .auth-form__form-sign-in {
+            display: none;
+        }    
+    }
+    
     &__tab-container {
         display: flex;
+        justify-content: center;
         width: 100%;
         background: transparent;
         border-top-left-radius: 15px;
@@ -28,15 +37,27 @@
         &:checked ~.auth-form__right-tab {
             background: #fff;
             font-weight: 600;
-            color: $click-load-color;                        
+            color: $click-load-color;
+            &:before {
+                left: calc(50%-10px);
+            }
+            &:after {
+                right: calc(50%-240px); 
+            }
+
+
         }
         &:checked ~.auth-form__left-tab {
             background: transparent;
             font-weight: 500;
             color: $dark-grey-color;
-        }
-        &:checked ~.auth-form__form {
-            background: transparent;
+            &:before {
+                display: none;
+            }
+            &:after {
+                display: none;
+            }
+
         }
     }
     // 
@@ -47,6 +68,7 @@
         justify-content: center;
         align-items: center;
         width: 50%;
+        max-width: 230px;
         height: 61px;
         padding: 0 0 12px 0;
         border-radius: 10px;
@@ -54,12 +76,35 @@
         font-size: 15px;
         user-select: none;        
         cursor: pointer;
+
     }
     &__right-tab {
         background: transparent;
         border-bottom-left-radius: 0px;
         border-bottom-right-radius: 0px;
         color: $dark-grey-color;
+        &:after {
+            content: "";
+            position: absolute;
+            top: 39px;
+            right: calc(50%-10px);
+            display: flex;
+            width: 11px;
+            height: 11px;
+            background: url("~images/auth-form/rectangle-tab-aith.svg");
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            top: 39px;
+            left: calc(50%-240px);
+            display: none;
+            width: 11px;
+            height: 11px;
+            background: url("~images/auth-form/rectangle-tab-aith.svg");
+            transform: rotateY(180deg);
+        }
+
     }
     &__left-tab {
         background: #fff;
@@ -68,12 +113,23 @@
         border-bottom-right-radius: 0px;
         font-weight: 600;
         color: $click-load-color;
+
     }
     // 
 
+    &__form-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 20px;
+        background: #ffffff;
+        border-radius: 10px;
+        position: relative;
+    }
+
     // Форма
     &__form {
-        display: block;
+        display: flex;
         width: 100%;
         background: #ffffff;
         position: relative;
@@ -94,39 +150,20 @@
                 visibility: visible;
             }
         }
-
+        // Форма регистрации
         &-sign-up {
             display: none;
             flex-direction: column;
 
         }
+        // Форма входа
         &-sign-in {
             display: flex;
+            width: 100%;
             flex-direction: column;
             justify-content: flex-start;
         }
     
-        &:after {
-            content: "";
-            position: absolute;
-            top: -10px;
-            right: calc(50%-10px);
-            display: flex;
-            width: 11px;
-            height: 11px;
-            background: url("~images/auth-form/rectangle-tab-aith.svg");
-        }
-        &:before {
-            content: "";
-            position: absolute;
-            top: -10px;
-            left: calc(50%-10px);
-            display: flex;
-            width: 11px;
-            height: 11px;
-            background: url("~images/auth-form/rectangle-tab-aith.svg");
-            transform: rotateY(180deg);
-        }
         // Поле логина
         .input-login {
             margin-bottom: 10px;
