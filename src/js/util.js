@@ -256,7 +256,7 @@ sidebar_array.forEach(sidebar => {
 
 // Окно авторизации(переключение вкладок)
 (()=> {
-    let auth_wrap = document.querySelectorAll(".auth-form__wrap");
+    let auth_wrap = document.querySelectorAll(".auth-form");
 
     if (auth_wrap) {
         auth_wrap.forEach((aw)=> {
@@ -264,10 +264,12 @@ sidebar_array.forEach(sidebar => {
             
             auth_tabs.addEventListener("click", ()=> {
                 if (auth_tabs.checked === true) {
+                    aw.classList.toggle("auth-form_sign-up");
                     aw.querySelector(".auth-form__form-sign-up").style.display = "flex";
                     aw.querySelector(".auth-form__form-sign-in").style.display = "none";
                 }
                 else {
+                    aw.classList.remove("auth-form_sign-up");
                     aw.querySelector(".auth-form__form-sign-up").style.display = "none";
                     aw.querySelector(".auth-form__form-sign-in").style.display = "flex";
                 }
