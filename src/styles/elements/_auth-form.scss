@@ -8,9 +8,28 @@
     &_sign-up {
         max-width: 850px;
         .auth-form__right-tab {
-            &:before {
+            &:after {
+                content: "";
+                position: absolute;
+                top: 39px;
+                right: calc(50%-10px);
                 display: flex;
+                width: 11px;
+                height: 11px;
+                background: url("~images/auth-form/rectangle-tab-aith.svg");
             }
+            &:before {
+                content: "";
+                position: absolute;
+                top: 39px;
+                left: calc(50%-240px);
+                display: flex;
+                width: 11px;
+                height: 11px;
+                background: url("~images/auth-form/rectangle-tab-aith.svg");
+                transform: rotateY(180deg);
+            }
+
         }
     }
     &.is-active {
@@ -92,17 +111,6 @@
             width: 11px;
             height: 11px;
             background: url("~images/auth-form/rectangle-tab-aith.svg");
-        }
-        &:before {
-            content: "";
-            position: absolute;
-            top: 39px;
-            left: calc(50%-240px);
-            display: none;
-            width: 11px;
-            height: 11px;
-            background: url("~images/auth-form/rectangle-tab-aith.svg");
-            transform: rotateY(180deg);
         }
 
     }
