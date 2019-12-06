@@ -1,13 +1,4 @@
-.ds-inputs-form {
-    display: block;
-    height: 48px;
-    margin: 13px;
-    padding: 0 20px;
-    border: 1px solid $light-gray-sum-btn;
-    border-radius: 2px;
-    outline: none;
-    position: relative;
-
+.ds-inputs-component {
     // Ввод текста в поле
     &.is-typing {
         border-color: $color-primary-light;
@@ -18,13 +9,18 @@
 
     //Ошибка ввода
     &.is-error {
-        border-color: $color-input-border-error;
-        background: $color-input-bg-error;
+        .ds-inputs-form {
+            border-color: $color-input-border-error;
+            background: $color-input-bg-error;
+            &:before {
+                color: $color-input-border-error;
+            }
+        }
         input {
             background: $color-input-bg-error;
         }
-        &:before {
-            color: $color-input-border-error;
+        .ds-inputs-form__txt-error {
+            visibility: visible;
         }
 
     }
@@ -32,7 +28,47 @@
         >.snowflake {
             display: none;
         }
-    }
+    }    
+
+}
+.ds-inputs-form {
+    display: block;
+    height: 48px;
+    margin: 13px;
+    padding: 0 20px;
+    border: 1px solid $light-gray-sum-btn;
+    border-radius: 2px;
+    outline: none;
+    position: relative;
+
+    // // Ввод текста в поле
+    // &.is-typing {
+    //     border-color: $color-primary-light;
+    //     &:before {
+    //         color: $color-primary-light;
+    //     }
+    // }
+
+    // //Ошибка ввода
+    // &.is-error {
+    //     border-color: $color-input-border-error;
+    //     background: $color-input-bg-error;
+    //     input {
+    //         background: $color-input-bg-error;
+    //     }
+    //     &:before {
+    //         color: $color-input-border-error;
+    //     }
+    //     .ds-inputs-form__txt-error {
+    //         visibility: visible;
+    //     }
+
+    // }
+    // &.is-hidden-snowflake {
+    //     >.snowflake {
+    //         display: none;
+    //     }
+    // }
 
     
     input {
@@ -45,29 +81,45 @@
         color: $dark-grey-color;
             
     }
-    //info-block
+
+    //Info-block
     &__info-block {
         display: flex;
         width: 100%;
         justify-content: space-between;
-        padding: 0 13px;
-    }
+        margin: -10px 0 0 0;
+        padding: 0 13px;        
+    } 
 
     &__txt-info {
         display: flex;
         width: 50%;
+        max-width: 170px;
         font-weight: 600;
         font-size: 11px;
         color: $color-input-txt-info;
+        position: relative;
     }
     &__txt-error {
         display: flex;
-        justify-content: flex-end;
-        width: 50%;
+        justify-content: flex-end; 
+        width: 85%;       
         text-align: left;
         font-weight: 600;
         font-size: 12px;
         color: $color-input-border-error;
+        visibility: hidden;
+        &_mw160 {
+            max-width: 160px;
+        }
+        &_mw203 {
+            max-width: 203px;
+        }
+    }
+    &__icon-info {
+        position: absolute;
+        top: 10px;
+        left: 140px;                
     }
 
 }
@@ -217,6 +269,10 @@
 
 //Поле ввода телефона
 .input-phone {
+    .ds-inputs-form__txt-error {
+        max-width: 159px;
+    }
+
     &:before {
         content: "Номер телефона";
         display: inline-flex;
