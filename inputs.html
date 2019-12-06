@@ -10,7 +10,7 @@
                 margin-right: 20px;
             }
         </style>
-    <link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?e76224411bf21d35e8ad" rel="stylesheet"><link href="css/ds-utils.css?e76224411bf21d35e8ad" rel="stylesheet"><link href="css/ds-ui-kit.css?e76224411bf21d35e8ad" rel="stylesheet"></head>
+    <link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?4fc053466a35f069b79f" rel="stylesheet"><link href="css/ds-utils.css?4fc053466a35f069b79f" rel="stylesheet"><link href="css/ds-ui-kit.css?4fc053466a35f069b79f" rel="stylesheet"></head>
     <body>
         <h1 class="ds-title">Элементы ввода, текстовые поля, поиск, чекбоксы</h1>
 
@@ -273,8 +273,14 @@
         <!-- Поле ввода пароля -->
         <h1 class="ds-title">Поле ввода пароля</h1>
         <div class="ds-wrapper">
+            <div class="ds-text">
+                Для смены состояний, необходимо присвоить элементу<span class="ds-hl">ds-inputs-form</span>:<br> 1) класс <span class="ds-hl">is-typing</span> при вводе текста; <br>
+                2) класс<span class="ds-hl">is-error</span> при ошибке ввода;<br>
+                3) класс <span class="ds-hl">is-hidden-snowflake</span> для скрытия красной снежинки;
+            </div>
             <div class="ds-divider">
-                <div class="ds-inputs-form input-password">
+                <div class="ds-inputs-form  input-password">
+                    <span class="snowflake"></span>
                     <input class="ds-inputs-form__input" type="password" maxlength="20" minlength="6" required>
                     <input type="checkbox" name="" id="passEye">
                     <label class="passEye-label" for="passEye"></label>
@@ -284,7 +290,8 @@
     
         <div class="ds-code-wrapper">
             <script type="text/plain" class="language-markup">
-                <div class="ds-inputs-form input-password">
+                <div class="ds-inputs-form  input-password">
+                    <span class="snowflake"></span>
                     <input class="ds-inputs-form__input" type="password" maxlength="20" minlength="6" required>
                     <input type="checkbox" name="" id="passEye">
                     <label class="passEye-label" for="passEye"></label>
@@ -292,11 +299,12 @@
             </script>
         </div>
 
-        <!-- Текстовое поле логин -->
+        <!-- Поле ввода логина -->
         <h1 class="ds-title">Поле ввода логина</h1>
         <div class="ds-wrapper">
             <div class="ds-divider">
-                <div class="ds-inputs-form input-login">
+                <div class="ds-inputs-form  input-login">
+                    <span class="snowflake"></span>
                     <input type="text" name="" id="">
                 </div>
             </div>
@@ -304,12 +312,34 @@
     
         <div class="ds-code-wrapper">
             <script type="text/plain" class="language-markup">
-                <div class="ds-inputs-form input-login">
+                <div class="ds-inputs-form  input-login">
+                    <span class="snowflake"></span>
                     <input type="text" name="" id="">
                 </div>
             </script>
         </div>
+
+        <!-- Поле ввода почты -->
+        <h1 class="ds-title">Поле ввода почты</h1>
+        <div class="ds-wrapper">
+            <div class="ds-divider">
+                <div class="ds-inputs-form  input-email">
+                    <span class="snowflake"></span>
+                    <input type="text" name="" id="">
+                </div>
+            </div>
+        </div>
+    
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <div class="ds-inputs-form  input-email">
+                    <span class="snowflake"></span>
+                    <input type="text" name="" id="">
+                </div>
+            </script>
+        </div>
+
     
 
-    <script type="text/javascript" src="js/highlight-syntax.js?e76224411bf21d35e8ad"></script><script type="text/javascript" src="js/ds-utils.js?e76224411bf21d35e8ad"></script><script type="text/javascript" src="js/ds-ui-kit.js?e76224411bf21d35e8ad"></script></body>
+    <script type="text/javascript" src="js/highlight-syntax.js?4fc053466a35f069b79f"></script><script type="text/javascript" src="js/ds-utils.js?4fc053466a35f069b79f"></script><script type="text/javascript" src="js/ds-ui-kit.js?4fc053466a35f069b79f"></script></body>
 </html>
