@@ -3,10 +3,37 @@
     height: 48px;
     margin: 13px;
     padding: 0 20px;
-    border: 1px solid #C4C4C4;
+    border: 1px solid $light-gray-sum-btn;
     border-radius: 2px;
     outline: none;
     position: relative;
+
+    // Ввод текста в поле
+    &.is-typing {
+        border-color: $color-primary-light;
+        &:before {
+            color: $color-primary-light;
+        }
+    }
+
+    //Ошибка ввода
+    &.is-error {
+        border-color: $color-input-border-error;
+        background: $color-input-bg-error;
+        input {
+            background: $color-input-bg-error;
+        }
+        &:before {
+            color: $color-input-border-error;
+        }
+
+    }
+    &.is-hidden-snowflake {
+        >.snowflake {
+            display: none;
+        }
+    }
+
     
     input {
         width: 97%;
@@ -18,6 +45,149 @@
         color: $dark-grey-color;
             
     }
+}
+.snowflake {
+    width: 0;
+    height: 0;
+    &:before {
+        content: "*";
+        position: absolute;
+        top: -12px;
+        left: 5px;
+        font-size: 12px;
+        color: $color-input-border-error;
+    }
+}
+
+// Login
+.input-login {
+    &:before {
+        content: "Логин";
+        display: inline-flex;
+        height: 15px;
+        position: absolute;
+        top: -12px;
+        left: 5px;
+        padding: 0 10px;
+        font-family: Open Sans;
+        font-weight: 600;
+        font-size: 15px;
+        color: $light-gray-sum-btn;
+        z-index: 20;
+    }
+    &:after {
+        content: "";
+        background: url("~images/auth-form/bg-line-label-input.svg");
+        width: 66px;
+        height: 2px;
+        position: absolute;
+        top: -2px;
+        left: 5px;
+        z-index: 10;
+    }
+
+}
+
+// Password
+.input-password {
+    &:before {
+        content: "Пароль";
+        display: inline-flex;
+        height: 15px;
+        position: absolute;
+        top: -12px;
+        left: 5px;
+        padding: 0 10px;
+        font-family: Open Sans;
+        font-weight: 600;
+        font-size: 15px;
+        color: $light-gray-sum-btn;
+        z-index: 20;
+    }
+    &:after {
+        content: "";
+        background: url("~images/auth-form/bg-line-label-input.svg");
+        width: 75px;
+        height: 2px;
+        position: absolute;
+        top: -2px;
+        left: 5px;
+        z-index: 10;
+    }
+
+    
+    #passEye {
+        display: none;
+        &:checked ~.passEye-label:after  {
+            display: none;
+        }
+        &:checked ~.passEye-label:before  {
+            display: inline-block;
+        }
+
+    }
+    .passEye-label {
+        position: absolute;
+        display: inline-block;
+        width: 24px;
+        height: 22px; 
+        top: 12px;
+        right: 12px;
+        &:after {
+            content: "";
+            display: inline-block;
+            width: 25px;
+            height: 26px;    
+            background: url("~images/password-input/passEyeClose.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            display: none;
+            width: 25px;
+            height: 16px;
+            top: 4px;    
+            background: url("~images/password-input/passEye.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        cursor: pointer;
+    }
+
+}
+
+//Поле ввода почты
+.input-email {
+    &:before {
+        content: "Email";
+        display: inline-flex;
+        height: 15px;
+        position: absolute;
+        top: -12px;
+        left: 5px;
+        padding: 0 10px;
+        font-family: Open Sans;
+        font-weight: 600;
+        font-size: 15px;
+        color: $light-gray-sum-btn;
+        z-index: 20;
+    }
+    &:after {
+        content: "";
+        background: url("~images/auth-form/bg-line-label-input.svg");
+        width: 66px;
+        height: 2px;
+        position: absolute;
+        top: -2px;
+        left: 4px;
+        z-index: 10;
+    }
+
 }
 
 // Лейбл
