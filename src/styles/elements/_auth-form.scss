@@ -4,6 +4,16 @@
     max-width: 455px;
     flex-direction: column;
 
+    &__txt {
+        text-align: center;
+        font-size: 12px;
+        color: $color-text-base;
+        &-footnote {
+            font-size: 10px;
+            max-width: 350px;
+        }
+    }
+
 
     &_sign-up {
         max-width: 850px;
@@ -227,7 +237,20 @@
     }
 
     // РЕГИСТРАЦИЯ
-    
+    &__login-pass-container {
+        display: flex;
+    }
+    &__login-container, &__pass-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 50%;
+    }
+    &__btn-container {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 

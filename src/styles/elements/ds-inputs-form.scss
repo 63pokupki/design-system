@@ -1,4 +1,7 @@
 .ds-inputs-component {
+    display: block;
+    width: 100%;
+    min-height: 100px;
     // Ввод текста в поле
     &.is-typing {
         border-color: $color-primary-light;
