@@ -45,6 +45,31 @@
         color: $dark-grey-color;
             
     }
+    //info-block
+    &__info-block {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding: 0 13px;
+    }
+
+    &__txt-info {
+        display: flex;
+        width: 50%;
+        font-weight: 600;
+        font-size: 11px;
+        color: $color-input-txt-info;
+    }
+    &__txt-error {
+        display: flex;
+        justify-content: flex-end;
+        width: 50%;
+        text-align: left;
+        font-weight: 600;
+        font-size: 12px;
+        color: $color-input-border-error;
+    }
+
 }
 .snowflake {
     width: 0;
@@ -180,7 +205,7 @@
     &:after {
         content: "";
         background: url("~images/auth-form/bg-line-label-input.svg");
-        width: 66px;
+        width: 60px;
         height: 2px;
         position: absolute;
         top: -2px;
@@ -189,6 +214,55 @@
     }
 
 }
+
+//Поле ввода телефона
+.input-phone {
+    &:before {
+        content: "Номер телефона";
+        display: inline-flex;
+        height: 15px;
+        position: absolute;
+        top: -12px;
+        left: 5px;
+        padding: 0 10px;
+        font-family: Open Sans;
+        font-weight: 600;
+        font-size: 15px;
+        color: $light-gray-sum-btn;
+        z-index: 20;
+    }
+    &:after {
+        content: "";
+        background: url("~images/auth-form/bg-line-label-input.svg");
+        width: 147px;
+        height: 2px;
+        position: absolute;
+        top: -2px;
+        left: 4px;
+        z-index: 10;
+    }
+
+}
+
+//Повторный ввод пароля
+.input-password-repeat {
+    &:before {
+        content: "Повторите пароль"!important;
+    }
+    &:after {
+        width: 160px;
+    }
+    #repeat-passEye {
+        display: none;
+        &:checked ~.passEye-label:after  {
+            display: none;
+        }
+        &:checked ~.passEye-label:before  {
+            display: inline-block;
+        }
+    }
+}
+
 
 // Лейбл
 // Скопировать в инпут и заменить текст в content: "" у before
