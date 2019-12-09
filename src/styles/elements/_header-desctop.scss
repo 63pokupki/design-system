@@ -4,6 +4,75 @@
     background: $background-color-primary;
     padding-top: 10px;
 
+    .categories-tags {
+        max-width: 870px;
+
+        &__col {
+            transition: width $transition-primary;
+            transition-delay: 0.4s;
+            flex-shrink: 1;
+
+            &:nth-child(1) {
+                width: 32.146957%;
+                flex-shrink: 0;
+            }
+            &:nth-child(2) {
+                width: 35.246842%;
+            }
+            &:nth-child(3) {
+                width: 32.6062%;
+            }
+        }
+
+        .categories-tags__fixed {
+            width: 280px;
+            transition: width $transition-primary;
+        }
+    }
+
+    .heart-menu {
+        position: absolute;
+        z-index: 5;
+        bottom: 0px;
+        right: 155px;
+        transform: translateY(100%);
+        display: none;
+        padding: 19px 27px;
+        box-shadow: 0px 0px 16px rgba(105, 153, 247, 0.2);
+
+        .link {
+            color: $dark-grey-color;
+            &:hover {
+                color: $color-primary-light;
+            }
+        }
+
+        .vertical-menu__item {
+            margin-bottom: 15px;
+        }
+
+        .vertical-menu__item:last-child {
+            margin-bottom: 0;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 50%;
+            transform: translate(-50%, -100%);
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 10px 10px 10px;
+            border-color: transparent transparent #ffffff transparent;
+        }
+
+        &.is-active {
+            display: block;
+        }
+    }
+
     .user-profile-menu {
         position: absolute;
         z-index: 5;
@@ -77,27 +146,26 @@
 
     &__icons {
         display: flex;
+        position: relative;
+        margin-left: 10px;
     }
 
     .caption-icon__icon {
         font-size: 24px;
     }
 
-    .caption-icon .icon-heart, .caption-icon .icon-heart-filled{
-        &:before {
-            color: #ff4e4e;
-        }
-    }
-
     .caption-icon .icon-heart-filled {
         display: none;
-     }
+    }
 
     .caption-icon:hover .icon-heart {
-       display: none;
+        display: none;
     }
 
     .caption-icon:hover .icon-heart-filled {
-       display: block;
+        display: block;
+        &:before {
+            color: #ff4e4e;
+        }
     }
 }
