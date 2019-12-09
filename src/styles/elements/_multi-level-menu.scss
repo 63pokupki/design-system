@@ -26,7 +26,7 @@
     }
     &__heading {
         text-transform: uppercase;
-        margin-right: 50px;
+        margin-right: 35px;
     }
     &__all {
         font-size: 12px;
@@ -89,8 +89,13 @@
             right: 0px;
             min-width: 280px;
             transform: translate(100%, 0%);
-            transition: opacity $transition-primary, visibility $transition-primary, border-left $transition-slow 1s;
-            transition-delay: 0.15s;
+
+            .link {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                max-width: 199px;
+                white-space: nowrap;
+            }
         }
     }
 
@@ -100,7 +105,5 @@
         visibility: visible;
         opacity: 1;
         z-index: 2;
-        // переход к состоянию открыто
-        transition: opacity $transition-fast, opacity $transition-fast, border-left $transition-slow;
     }
 }

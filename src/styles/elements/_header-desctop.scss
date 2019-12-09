@@ -9,7 +9,6 @@
 
         &__col {
             transition: width $transition-primary;
-            transition-delay: 0.4s;
             flex-shrink: 1;
 
             &:nth-child(1) {
