@@ -72,9 +72,13 @@
     }
 
     .multi-level-menu__item {
-        padding-right: 35px;
+        padding-right: 30px;
         padding-bottom: 10px;
         margin-bottom: -1px;
+
+        .multi-level-menu__heading {
+            margin-right: 30px;
+        }
 
         .multi-level-menu__column {
             background: white;
@@ -85,7 +89,7 @@
             padding-left: 25px;
             height: 100%;
             position: absolute;
-            top: 0;
+            top: 2px;
             right: 0px;
             min-width: 280px;
             transform: translate(100%, 0%);
