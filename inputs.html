@@ -1,51 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Элементы ввода, текстовые поля, поиск</title>
-        <style>
-            .checkbox {
-                margin-right: 20px;
-            }
-        </style>
-    <link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?4e0fcd37688dd5a51023" rel="stylesheet"><link href="css/ds-utils.css?4e0fcd37688dd5a51023" rel="stylesheet"><link href="css/ds-ui-kit.css?4e0fcd37688dd5a51023" rel="stylesheet"></head>
-    <body>
-        <h1 class="ds-title">Элементы ввода, текстовые поля, поиск, чекбоксы</h1>
 
-        <h1 class="ds-title">Чекбоксы</h1>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Элементы ввода, текстовые поля, поиск</title>
+    <style>
+        .checkbox {
+            margin-right: 20px;
+        }
+    </style>
+<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?bb1f279530a7d40d3b40" rel="stylesheet"><link href="css/ds-utils.css?bb1f279530a7d40d3b40" rel="stylesheet"><link href="css/ds-ui-kit.css?bb1f279530a7d40d3b40" rel="stylesheet"></head>
 
-        <div class="ds-wrapper">
-            <p>Все состояния и виды меняются с помощью <span class="ds-hl"> классов-модификаторов:</span></p>
-            <ul class="ds-сontent-list">
-                <li>checkbox_accent</li>
-                <li>checkbox_inverted</li>
-                <li>checkbox_circle</li>
-                <li>checkbox_no-chx</li>
-            </ul>
-            <p>При отсутствии текста необходимо оставить элемент label и стереть только сам текст внутри.</p>
+<body>
+    <h1 class="ds-title">Элементы ввода, текстовые поля, поиск, чекбоксы</h1>
+
+    <h1 class="ds-title">Чекбоксы</h1>
+
+    <div class="ds-wrapper">
+        <p>Все состояния и виды меняются с помощью <span class="ds-hl"> классов-модификаторов:</span></p>
+        <ul class="ds-сontent-list">
+            <li>checkbox_accent</li>
+            <li>checkbox_inverted</li>
+            <li>checkbox_circle</li>
+            <li>checkbox_no-chx</li>
+        </ul>
+        <p>При отсутствии текста необходимо оставить элемент label и стереть только сам текст внутри.</p>
+    </div>
+
+    <h2 class="ds-title">Стандартный чекбокс</h2>
+
+    <div class="ds-wrapper">
+        <div class="checkbox">
+            <input class="checkbox__input" type="checkbox" id="chx-01" />
+            <label class="checkbox__label" for="chx-01">Стандартный</label>
         </div>
-
-        <h2 class="ds-title">Стандартный чекбокс</h2>
-
-        <div class="ds-wrapper">
-            <div class="checkbox">
-                <input class="checkbox__input" type="checkbox" id="chx-01" />
-                <label class="checkbox__label" for="chx-01">Стандартный</label>
-            </div>
-            <div class="checkbox">
-                <input checked="checked" class="checkbox__input" type="checkbox" id="chx-011" />
-                <label class="checkbox__label" for="chx-011">Стандартный нажатый</label>
-            </div>
-            <div class="checkbox checkbox_circle">
-                <input checked="checked" class="checkbox__input" type="checkbox" id="chx-012" />
-                <label class="checkbox__label" for="chx-012">Стандартный нажатый круглый</label>
-            </div>
+        <div class="checkbox">
+            <input checked="checked" class="checkbox__input" type="checkbox" id="chx-011" />
+            <label class="checkbox__label" for="chx-011">Стандартный нажатый</label>
         </div>
+        <div class="checkbox checkbox_circle">
+            <input checked="checked" class="checkbox__input" type="checkbox" id="chx-012" />
+            <label class="checkbox__label" for="chx-012">Стандартный нажатый круглый</label>
+        </div>
+    </div>
 
-        <div class="ds-code-wrapper">
-            <script type="text/plain" class="language-markup">
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
                 <div class="checkbox">
                     <input class="checkbox__input" type="checkbox" id="chx-01" />
                     <label class="checkbox__label" for="chx-01">Стандартный</label>
@@ -61,27 +63,27 @@
                     <label class="checkbox__label" for="chx-012">Стандартный нажатый круглый</label>
                 </div>
             </script>
+    </div>
+
+    <h2 class="ds-title">Акцентный чекбокс</h2>
+
+    <div class="ds-wrapper">
+        <div class="checkbox checkbox_accent">
+            <input class="checkbox__input" type="checkbox" id="chx-02" />
+            <label class="checkbox__label" for="chx-02">Акцентный</label>
         </div>
-
-        <h2 class="ds-title">Акцентный чекбокс</h2>
-
-        <div class="ds-wrapper">
-            <div class="checkbox checkbox_accent">
-                <input class="checkbox__input" type="checkbox" id="chx-02" />
-                <label class="checkbox__label" for="chx-02">Акцентный</label>
-            </div>
-            <div class="checkbox checkbox_accent">
-                <input checked="checked" class="checkbox__input" type="checkbox" id="chx-022" />
-                <label class="checkbox__label" for="chx-022">Акцентный нажатый</label>
-            </div>
-            <div class="checkbox checkbox_accent checkbox_circle">
-                <input checked="checked" class="checkbox__input" type="checkbox" id="chx-023" />
-                <label class="checkbox__label" for="chx-023">Акцентный нажатый круглый</label>
-            </div>
+        <div class="checkbox checkbox_accent">
+            <input checked="checked" class="checkbox__input" type="checkbox" id="chx-022" />
+            <label class="checkbox__label" for="chx-022">Акцентный нажатый</label>
         </div>
+        <div class="checkbox checkbox_accent checkbox_circle">
+            <input checked="checked" class="checkbox__input" type="checkbox" id="chx-023" />
+            <label class="checkbox__label" for="chx-023">Акцентный нажатый круглый</label>
+        </div>
+    </div>
 
-        <div class="ds-code-wrapper">
-            <script type="text/plain" class="language-markup">
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
                 <div class="checkbox checkbox_accent">
                     <input class="checkbox__input" type="checkbox" id="chx-02" />
                     <label class="checkbox__label" for="chx-02">Акцентный</label>
@@ -97,27 +99,27 @@
                     <label class="checkbox__label" for="chx-023">Акцентный нажатый круглый</label>
                 </div>
             </script>
+    </div>
+
+    <h2 class="ds-title">Инвертированный чекбокс</h2>
+
+    <div class="ds-wrapper">
+        <div class="checkbox checkbox_inverted">
+            <input class="checkbox__input" type="checkbox" id="chx-03" />
+            <label class="checkbox__label" for="chx-03">Инвертированный</label>
         </div>
-
-        <h2 class="ds-title">Инвертированный чекбокс</h2>
-
-        <div class="ds-wrapper">
-            <div class="checkbox checkbox_inverted">
-                <input class="checkbox__input" type="checkbox" id="chx-03" />
-                <label class="checkbox__label" for="chx-03">Инвертированный</label>
-            </div>
-            <div class="checkbox checkbox_inverted">
-                <input checked="checked" class="checkbox__input" type="checkbox" id="chx-031" />
-                <label class="checkbox__label" for="chx-031">Инвертированный нажатый</label>
-            </div>
-            <div class="checkbox checkbox_inverted checkbox_circle">
-                <input checked="checked" class="checkbox__input" type="checkbox" id="chx-032" />
-                <label class="checkbox__label" for="chx-032">Инвертированный нажатый круглый</label>
-            </div>
+        <div class="checkbox checkbox_inverted">
+            <input checked="checked" class="checkbox__input" type="checkbox" id="chx-031" />
+            <label class="checkbox__label" for="chx-031">Инвертированный нажатый</label>
         </div>
+        <div class="checkbox checkbox_inverted checkbox_circle">
+            <input checked="checked" class="checkbox__input" type="checkbox" id="chx-032" />
+            <label class="checkbox__label" for="chx-032">Инвертированный нажатый круглый</label>
+        </div>
+    </div>
 
-        <div class="ds-code-wrapper">
-            <script type="text/plain" class="language-markup">
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
                 <div class="checkbox checkbox_inverted">
                     <input class="checkbox__input" type="checkbox" id="chx-03" />
                     <label class="checkbox__label" for="chx-03">Инвертированный</label>
@@ -133,47 +135,47 @@
                     <label class="checkbox__label" for="chx-032">Инвертированный нажатый круглый</label>
                 </div>
             </script>
+    </div>
+
+    <h2 class="ds-title">Чекбокс без значка, только текст</h2>
+
+    <div class="ds-wrapper">
+        <div class="checkbox checkbox_no-chx">
+            <input class="checkbox__input" type="checkbox" id="chx-04" />
+            <label class="checkbox__label" for="chx-04">Без значка</label>
         </div>
+    </div>
 
-        <h2 class="ds-title">Чекбокс без значка, только текст</h2>
-
-        <div class="ds-wrapper">
-            <div class="checkbox checkbox_no-chx">
-                <input class="checkbox__input" type="checkbox" id="chx-04" />
-                <label class="checkbox__label" for="chx-04">Без значка</label>
-            </div>
-        </div>
-
-        <div class="ds-code-wrapper">
-            <script type="text/plain" class="language-markup">
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
                 <div class="checkbox checkbox_no-chx">
                     <input class="checkbox__input" type="checkbox" id="chx-04" />
                     <label class="checkbox__label" for="chx-04">Без значка</label>
                 </div>
             </script>
+    </div>
+
+    <h2 class="ds-title">Чекбокс без текста, только значки</h2>
+
+    <div class="ds-wrapper">
+        <div class="checkbox">
+            <input checked="checked" class="checkbox__input" type="checkbox" id="chx-05" />
+            <label class="checkbox__label" for="chx-05"></label>
         </div>
 
-        <h2 class="ds-title">Чекбокс без текста, только значки</h2>
-
-        <div class="ds-wrapper">
-            <div class="checkbox">
-                <input checked="checked" class="checkbox__input" type="checkbox" id="chx-05" />
-                <label class="checkbox__label" for="chx-05"></label>
-            </div>
-
-            <div class="checkbox checkbox_accent">
-                <input checked="checked" class="checkbox__input" type="checkbox" id="chx-06" />
-                <label class="checkbox__label" for="chx-06"></label>
-            </div>
-
-            <div class="checkbox checkbox_accent checkbox_circle">
-                <input checked="checked" class="checkbox__input" type="checkbox" id="chx-07" />
-                <label class="checkbox__label" for="chx-07"></label>
-            </div>
+        <div class="checkbox checkbox_accent">
+            <input checked="checked" class="checkbox__input" type="checkbox" id="chx-06" />
+            <label class="checkbox__label" for="chx-06"></label>
         </div>
 
-        <div class="ds-code-wrapper">
-            <script type="text/plain" class="language-markup">
+        <div class="checkbox checkbox_accent checkbox_circle">
+            <input checked="checked" class="checkbox__input" type="checkbox" id="chx-07" />
+            <label class="checkbox__label" for="chx-07"></label>
+        </div>
+    </div>
+
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
                 <div class="checkbox">
                     <input checked="checked" class="checkbox__input" type="checkbox" id="chx-05" />
                     <label class="checkbox__label" for="chx-05"></label>
@@ -189,23 +191,23 @@
                     <label class="checkbox__label" for="chx-07"></label>
                 </div>
             </script>
-        </div>
+    </div>
 
-        <h2 class="ds-title">Поиск</h2>
-        <div class="ds-wrapper">
-            <!-- блок поиска -->
-            <div class="search">
-                <!-- строка поиска -->
-                <input class="search__bar" type="text" placeholder="Поиск" />
-                <!-- кнопка поиска -->
-                <button class="search__button">
-                    <img src="images/search.svg" />
-                </button>
-            </div>
+    <h2 class="ds-title">Поиск</h2>
+    <div class="ds-wrapper">
+        <!-- блок поиска -->
+        <div class="search">
+            <!-- строка поиска -->
+            <input class="search__bar" type="text" placeholder="Поиск" />
+            <!-- кнопка поиска -->
+            <button class="search__button">
+                <img src="images/search.svg" />
+            </button>
         </div>
+    </div>
 
-        <div class="ds-code-wrapper">
-            <script type="text/plain" class="language-markup">
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
                 <div class="search">
                     <!-- строка поиска -->
                     <input class="search__bar" type="text" placeholder="Поиск" />
@@ -215,181 +217,258 @@
                     </button>
                 </div>
             </script>
-        </div>
+    </div>
 
-        <h2 class="ds-title">Поиск с категориями</h2>
-        <div class="ds-wrapper">
-            <!-- блок поиска -->
-            <div class="search has-categories">
-                <!-- строка поиска -->
-                <input class="search__bar" type="text" placeholder="Поиск" />
-                <!-- кнопка поиска -->
-                <button class="search__button">
-                    <img src="images/search.svg" />
-                </button>
-                <!-- блок выпадающей категории поиска -->
-                <div class="search__category">
-                    <!-- добавить .dropdown-fixed-list_expanded для раскрытия меню категорий -->
-                    <div class="dropdown-fixed-list">
-                        <!-- текущее значение -->
-                        <span class="dropdown-fixed-list__current">По товарам</span>
-                        <!-- лист всех значений -->
-                        <ul class="dropdown-fixed-list__list">
-                            <li class="dropdown-fixed-list__list-item">По товарам</li>
-                            <li class="dropdown-fixed-list__list-item">По форуму</li>
-                        </ul>
-                    </div>
+    <h2 class="ds-title">Поиск с категориями</h2>
+    <div class="ds-wrapper">
+        <!-- блок поиска -->
+        <div class="search has-categories">
+            <!-- строка поиска -->
+            <input class="search__bar" type="text" placeholder="Поиск" />
+            <!-- кнопка поиска -->
+            <button class="search__button">
+                <img src="images/search.svg" />
+            </button>
+            <!-- блок выпадающей категории поиска -->
+            <div class="search__category">
+                <!-- добавить .dropdown-fixed-list_expanded для раскрытия меню категорий -->
+                <div class="dropdown-fixed-list">
+                    <!-- текущее значение -->
+                    <span class="dropdown-fixed-list__current">По товарам</span>
+                    <!-- лист всех значений -->
+                    <ul class="dropdown-fixed-list__list">
+                        <li class="dropdown-fixed-list__list-item">По товарам</li>
+                        <li class="dropdown-fixed-list__list-item">По форуму</li>
+                    </ul>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="ds-code-wrapper">
-            <script type="text/plain" class="language-markup">
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
                 <!-- блок поиска -->
-                <div class="search has-categories">
-                    <!-- строка поиска -->
-                    <input class="search__bar" type="text" placeholder="Поиск" />
-                    <!-- кнопка поиска -->
-                    <button class="search__button">
-                        <img src="images/search.svg" />
-                    </button>
-                    <!-- блок выпадающей категории поиска -->
-                    <div class="search__category">
-                        <!-- добавить .dropdown-fixed-list_expanded для раскрытия меню категорий -->
-                        <div class="dropdown-fixed-list">
-                            <!-- текущее значение -->
-                            <span class="dropdown-fixed-list__current">По товарам</span>
-                            <!-- лист всех значений -->
-                            <ul class="dropdown-fixed-list__list">
-                                <li class="dropdown-fixed-list__list-item">По товарам</li>
-                                <li class="dropdown-fixed-list__list-item">По форуму</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </script>
-        </div>
-
-        <!-- Поле ввода пароля -->
-        <h1 class="ds-title">Поле ввода пароля</h1>
-        <div class="ds-wrapper">
-            <div class="ds-text">
-                Для смены состояний, необходимо присвоить элементу<span class="ds-hl">ds-inputs-form</span>:<br> 1) класс <span class="ds-hl">is-typing</span> при вводе текста; <br>
-                2) класс<span class="ds-hl">is-error</span> при ошибке ввода;<br>
-                3) класс <span class="ds-hl">is-hidden-snowflake</span> для скрытия красной снежинки;
-            </div>
-            <div class="ds-divider">
-                <div class="ds-inputs-form  input-password">
-                    <span class="snowflake"></span>
-                    <input class="ds-inputs-form__input" type="password" maxlength="20" minlength="6" required>
-                    <input type="checkbox" name="" id="passEye">
-                    <label class="passEye-label" for="passEye"></label>
+        <div class="search has-categories">
+            <!-- строка поиска -->
+            <input class="search__bar" type="text" placeholder="Поиск" />
+            <!-- кнопка поиска -->
+            <button class="search__button">
+                <img src="images/search.svg" />
+            </button>
+            <!-- блок выпадающей категории поиска -->
+            <div class="search__category">
+                <!-- добавить .dropdown-fixed-list_expanded для раскрытия меню категорий -->
+                <div class="dropdown-fixed-list">
+                    <!-- текущее значение -->
+                    <span class="dropdown-fixed-list__current">По товарам</span>
+                    <!-- лист всех значений -->
+                    <ul class="dropdown-fixed-list__list">
+                        <li class="dropdown-fixed-list__list-item">По товарам</li>
+                        <li class="dropdown-fixed-list__list-item">По форуму</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    
-        <div class="ds-code-wrapper">
-            <script type="text/plain" class="language-markup">
+        </script>
+    </div>
+
+    <!-- Поле ввода пароля -->
+    <h1 class="ds-title">Поля ввода</h1>
+    <h2 class="ds-title">Поле ввода пароля</h2>
+    <div class="ds-wrapper">
+        <div class="ds-text">
+            Для смены состояний, необходимо присвоить элементу<span class="ds-hl">ds-inputs-component</span>:<br> 1) класс
+            <span class="ds-hl">is-typing</span> при вводе текста; <br>
+            2) класс<span class="ds-hl">is-error</span> при ошибке ввода;<br>
+            3) класс <span class="ds-hl">is-hidden-snowflake</span> для скрытия красной снежинки;
+        </div>
+        <div class="ds-divider">
+            <div class="ds-inputs-component">
                 <div class="ds-inputs-form  input-password">
                     <span class="snowflake"></span>
-                    <input class="ds-inputs-form__input" type="password" maxlength="20" minlength="6" required>
+                    <input class="ds-inputs-form__input" type="password" maxlength="30" minlength="6" required>
                     <input type="checkbox" name="" id="passEye">
                     <label class="passEye-label" for="passEye"></label>
                 </div>
-            </script>
+                <div class="ds-inputs-form__info-block">
+                    <span class="ds-inputs-form__txt-info">6-30 символов</span>
+                    <span class="ds-inputs-form__txt-error">Слишком короткий</span>
+                </div>
+            </div>
         </div>
+    </div>
 
-        <!-- Поле ввода логина -->
-        <h1 class="ds-title">Поле ввода логина</h1>
-        <div class="ds-wrapper">
-            <div class="ds-divider">
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
+            <div class="ds-inputs-component">
+                <div class="ds-inputs-form  input-password">
+                    <span class="snowflake"></span>
+                    <input class="ds-inputs-form__input" type="password" maxlength="30" minlength="6" required>
+                    <input type="checkbox" name="" id="passEye">
+                    <label class="passEye-label" for="passEye"></label>
+                </div>
+                <div class="ds-inputs-form__info-block">
+                    <span class="ds-inputs-form__txt-info">6-30 символов</span>
+                    <span class="ds-inputs-form__txt-error">Слишком короткий</span>
+                </div>
+            </div>    
+        </script>
+    </div>
+
+    <!-- Поле ввода логина -->
+    <h2 class="ds-title">Поле ввода логина</h2>
+    <div class="ds-wrapper">
+        <div class="ds-divider">
+            <div class="ds-inputs-component">
+                <div class="ds-inputs-form  input-login">
+                    <span class="snowflake"></span>
+                    <input type="text" name="" id="" maxlength="22" minlength="3">
+                </div>
+                <div class="ds-inputs-form__info-block">
+                    <span class="ds-inputs-form__txt-info">3-22 символа</span>
+                    <span class="ds-inputs-form__txt-error ds-inputs-form__txt-error_mw203">Извините, пользователь с
+                        таким именем уже существует</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
+            <div class="ds-inputs-component">
                 <div class="ds-inputs-form  input-login">
                     <span class="snowflake"></span>
                     <input type="text" name="" id="">
                 </div>
-            </div>
-        </div>
-    
-        <div class="ds-code-wrapper">
-            <script type="text/plain" class="language-markup">
-                <div class="ds-inputs-form  input-login">
-                    <span class="snowflake"></span>
-                    <input type="text" name="" id="">
+                <div class="ds-inputs-form__info-block">
+                    <span class="ds-inputs-form__txt-info">3-22 символа</span>
+                    <span class="ds-inputs-form__txt-error ds-inputs-form__txt-error_mw203">Извините, пользователь с
+                        таким именем уже существует</span>
                 </div>
-            </script>
-        </div>
+            </div>    
+        </script>
+    </div>
 
-        <!-- Поле ввода почты -->
-        <h1 class="ds-title">Поле ввода почты</h1>
-        <div class="ds-wrapper">
-            <div class="ds-divider">
+    <!-- Поле ввода почты -->
+    <h2 class="ds-title">Поле ввода почты</h2>
+    <div class="ds-wrapper">
+        <div class="ds-divider">
+            <div class="ds-inputs-component">
                 <div class="ds-inputs-form  input-email">
                     <span class="snowflake"></span>
-                    <input type="text" name="" id="">
+                    <input type="email" name="" id="">
+                </div>
+                <div class="ds-inputs-form__info-block">
+                    <span class="ds-inputs-form__txt-info">Будет использоваться для восстановления доступа</span>
+                    <span class="ds-inputs-form__txt-error ds-inputs-form__txt-error_mw160">Уже используется другим
+                        пользователем</span>
                 </div>
             </div>
         </div>
-    
-        <div class="ds-code-wrapper">
-            <script type="text/plain" class="language-markup">
+    </div>
+
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
+            <div class="ds-inputs-component">
                 <div class="ds-inputs-form  input-email">
                     <span class="snowflake"></span>
-                    <input type="text" name="" id="">
+                    <input type="email" name="" id="">
                 </div>
-            </script>
-        </div>
+                <div class="ds-inputs-form__info-block">
+                    <span class="ds-inputs-form__txt-info">Будет использоваться для восстановления доступа</span>
+                    <span class="ds-inputs-form__txt-error ds-inputs-form__txt-error_mw160">Уже используется другим
+                        пользователем</span>
+                </div>
+            </div>
+        </script>
+    </div>
 
-        <!-- Поле ввода телефона -->
-        <h1 class="ds-title">Поле ввода телефона</h1>
-        <div class="ds-wrapper">
-            <div class="ds-divider">
+    <!-- Поле ввода телефона -->
+    <h2 class="ds-title">Поле ввода телефона</h2>
+    <div class="ds-wrapper">
+        <div class="ds-divider">
+            <div class="ds-inputs-component">
                 <div class="ds-inputs-form  input-phone">
                     <span class="snowflake"></span>
-                    <input type="text" name="" id="">
+                    <input type="tel" name="" id="">
+                </div>
+                <div class="ds-inputs-form__info-block">
+                    <span class="ds-inputs-form__txt-info">
+                        Будет отправлено СМС с кодом подтверждения
+                        <i class="ds-icon ds-inputs-form__icon-info icon-info has-tooltip">
+                            <!-- <span class="tooltip  tooltip_right"></span> -->
+                        </i>
+                    </span>
+                    <span class="ds-inputs-form__txt-error ds-inputs-form__txt-error_mw160"> Уже используется другим
+                        пользователем</span>
                 </div>
             </div>
         </div>
-    
-        <div class="ds-code-wrapper">
-            <script type="text/plain" class="language-markup">
+    </div>
+
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
+            <div class="ds-inputs-component">
                 <div class="ds-inputs-form  input-phone">
                     <span class="snowflake"></span>
-                    <input type="text" name="" id="">
+                    <input type="tel" name="" id="">
                 </div>
-            </script>
-        </div>
+                <div class="ds-inputs-form__info-block">
+                    <span class="ds-inputs-form__txt-info">
+                        Будет отправлено СМС с кодом подтверждения
+                        <i class="ds-icon ds-inputs-form__icon-info icon-info has-tooltip">
+                            <!-- <span class="tooltip  tooltip_right">Если у вас возникли проблемы с регистрацией или входом
+                                на форум - пишите на адрес службы поддержки
+                                <a class="link link_colored bold"
+                                    href="mailto:support@63pokupki.ru">support@63pokupki.ru</a>
+                            </span> -->
+                        </i>
+                    </span>
+                    <span class="ds-inputs-form__txt-error ds-inputs-form__txt-error_mw160"> Уже используется другим
+                        пользователем</span>
+                </div>
+            </div>
+        </script>
+    </div>
 
-        <!-- Поле "Повторите пароль" -->
-        <h1 class="ds-title">Поле повторного ввода пароля</h1>
-        <div class="ds-wrapper">
-            <div class="ds-divider">
-                <div class="ds-inputs-component">
-                    <div class="ds-inputs-form  input-password input-password-repeat"> 
-                        <span class="snowflake"></span>
-                        <input class="ds-inputs-form__input" type="password" maxlength="20" minlength="6" required>
-                        <input type="checkbox" name="" id="repeat-passEye">
-                        <label class="passEye-label" for="repeat-passEye"></label>
-                    </div>
-                    <div class="ds-inputs-form__info-block">
-                        <span class="ds-inputs-form__txt-info">nhgnhg</span>
-                        <span class="ds-inputs-form__txt-error">nhgfngfh</span>
-                    </div>
+    <!-- Поле "Повторите пароль" -->
+    <h2 class="ds-title">Поле повторного ввода пароля</h2>
+    <div class="ds-wrapper">
+        <div class="ds-divider">
+            <div class="ds-inputs-component">
+                <div class="ds-inputs-form  input-password input-password-repeat">
+                    <span class="snowflake"></span>
+                    <input class="ds-inputs-form__input" type="password" maxlength="30" minlength="6" required>
+                    <input type="checkbox" name="" id="repeat-passEye">
+                    <label class="passEye-label" for="repeat-passEye"></label>   
+                </div>
+                <div class="ds-inputs-form__info-block">
+                    <span class="ds-inputs-form__txt-info"></span>
+                    <span class="ds-inputs-form__txt-error">Введённые пароли не совпадают</span>
                 </div>
             </div>
         </div>
-    
-        <div class="ds-code-wrapper">
-            <script type="text/plain" class="language-markup">
-                <div class="ds-inputs-form  input-password input-password-repeat"> 
+    </div>
+
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
+            <div class="ds-inputs-component">
+                <div class="ds-inputs-form  input-password input-password-repeat">
                     <span class="snowflake"></span>
                     <input class="ds-inputs-form__input" type="password" maxlength="20" minlength="6" required>
-                    <input type="checkbox" name="" id="passEye">
-                    <label class="passEye-label" for="passEye"></label>
+                    <input type="checkbox" name="" id="repeat-passEye">
+                    <label class="passEye-label" for="repeat-passEye"></label>
                 </div>
-            </script>
-        </div>
+                <div class="ds-inputs-form__info-block">
+                    <span class="ds-inputs-form__txt-info"></span>
+                    <span class="ds-inputs-form__txt-error">Введённые пароли не совпадают</span>
+                </div>
+            </div>
+        </script>
+    </div>
 
-    
 
-    <script type="text/javascript" src="js/highlight-syntax.js?4e0fcd37688dd5a51023"></script><script type="text/javascript" src="js/ds-utils.js?4e0fcd37688dd5a51023"></script><script type="text/javascript" src="js/ds-ui-kit.js?4e0fcd37688dd5a51023"></script></body>
+
+<script type="text/javascript" src="js/highlight-syntax.js?bb1f279530a7d40d3b40"></script><script type="text/javascript" src="js/ds-utils.js?bb1f279530a7d40d3b40"></script><script type="text/javascript" src="js/ds-ui-kit.js?bb1f279530a7d40d3b40"></script></body>
+
 </html>

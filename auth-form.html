@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Окно входа/авторизации</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?4e0fcd37688dd5a51023" rel="stylesheet"><link href="css/ds-utils.css?4e0fcd37688dd5a51023" rel="stylesheet"><link href="css/ds-ui-kit.css?4e0fcd37688dd5a51023" rel="stylesheet"></head>
+<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?bb1f279530a7d40d3b40" rel="stylesheet"><link href="css/ds-utils.css?bb1f279530a7d40d3b40" rel="stylesheet"><link href="css/ds-ui-kit.css?bb1f279530a7d40d3b40" rel="stylesheet"></head>
 
 <body>
 
@@ -58,22 +58,106 @@
                     <!-- Форма регистрации -->
                     <form id="register" action="./ucp.php?mode=register" method="post" name="" class="auth-form__form auth-form__form-sign-up">
                         <div class="auth-form__heading">Регистрация</div>
+                        <div class="auth-form__txt">Начните экономить до 70% уже через 1 минут</div>
+                        <!-- Контейнер инбутов -->
                         <div class="auth-form__login-pass-container">
+                            <!-- Блок логин/почта/телефон -->
                             <div class="auth-form__login-container">
-                                <div class="ds-inputs-form input-login">
-                                    <input type="text" name="" id="">
+                                <!-- Логин -->
+                                <div class="ds-inputs-component">
+                                    <div class="ds-inputs-form  input-login">
+                                        <span class="snowflake"></span>
+                                        <input type="text" name="" id="" required maxlength="22" minlength="3">
+                                    </div>
+                                    <div class="ds-inputs-form__info-block">
+                                        <span class="ds-inputs-form__txt-info">3-22 символа</span>
+                                        <span class="ds-inputs-form__txt-error ds-inputs-form__txt-error_mw203">Извините, пользователь с
+                                            таким именем уже существует</span>
+                                    </div>
+                                </div>                            
+                                <!-- Почта -->
+                                <div class="ds-inputs-component">
+                                    <div class="ds-inputs-form  input-email">
+                                        <span class="snowflake"></span>
+                                        <input type="email" name="" id="" required>
+                                    </div>
+                                    <div class="ds-inputs-form__info-block">
+                                        <span class="ds-inputs-form__txt-info">Будет использоваться для восстановления доступа</span>
+                                        <span class="ds-inputs-form__txt-error ds-inputs-form__txt-error_mw160">Уже используется другим
+                                            пользователем</span>
+                                    </div>
                                 </div>
-                                <div class="ds-inputs-form input-mail">
-                                    <input type="text" name="" id="">
+                                <!-- Телефон -->
+                                <div class="ds-inputs-component">
+                                    <div class="ds-inputs-form  input-phone">
+                                        <span class="snowflake"></span>
+                                        <input type="tel" name="" id="" required>
+                                    </div>
+                                    <div class="ds-inputs-form__info-block">
+                                        <span class="ds-inputs-form__txt-info">
+                                            Будет отправлено СМС с кодом подтверждения
+                                            <i class="ds-icon ds-inputs-form__icon-info icon-info has-tooltip">
+                                                <!-- <span class="tooltip  tooltip_right">Если у вас возникли проблемы с регистрацией или входом
+                                                    на форум - пишите на адрес службы поддержки
+                                                    <a class="link link_colored bold"
+                                                        href="mailto:support@63pokupki.ru">support@63pokupki.ru</a>
+                                                </span> -->
+                                            </i>
+                                        </span>
+                                        <span class="ds-inputs-form__txt-error ds-inputs-form__txt-error_mw160"> Уже используется другим
+                                            пользователем</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="auth-form__pass-container"></div>
+                            <!-- Блок инпутов пароль -->
+                            <div class="auth-form__pass-container">
+                                <!-- Пароль -->
+                                <div class="ds-inputs-component">
+                                    <div class="ds-inputs-form  input-password">
+                                        <span class="snowflake"></span>
+                                        <input class="ds-inputs-form__input" type="password" maxlength="30" minlength="6" required>
+                                        <input type="checkbox" name="" id="auth-form__passEye">
+                                        <label class="passEye-label" for="auth-form__passEye"></label>
+                                    </div>
+                                    <div class="ds-inputs-form__info-block">
+                                        <span class="ds-inputs-form__txt-info">6-30 символов</span>
+                                        <span class="ds-inputs-form__txt-error">Слишком короткий</span>
+                                    </div>
+                                </div>
+                                <!-- Повторите пароль -->
+                                <div class="ds-inputs-component">
+                                    <div class="ds-inputs-form  input-password input-password-repeat">
+                                        <span class="snowflake"></span>
+                                        <input class="ds-inputs-form__input" type="password" maxlength="30" minlength="6" required>
+                                        <input type="checkbox" name="" id="auth-form__repeat-passEye">
+                                        <label class="passEye-label" for="auth-form__repeat-passEye"></label>
+                                    </div>
+                                    <div class="ds-inputs-form__info-block">
+                                        <span class="ds-inputs-form__txt-info"></span>
+                                        <span class="ds-inputs-form__txt-error">Введённые пароли не совпадают</span>
+                                    </div>
+                                </div>
+                                <div class="auth-form__txt-footnote">
+                                        Регистрируясь на Сайте, вы заключаете 
+                                        <a class="link link_colored" href="https://63pokupki.ru/files/docs/public_offer.pdf" target="_blank">соглашение на использование сервисов Сайта</a> 
+                                        и просмотр размещенной на Сайте информации, принимаете условия 
+                                        <a class="link link_colored" href="https://63pokupki.ru/files/docs/site_rules.pdf" target="_blank">Правил Сайта</a>
+                                        , даете 
+                                        <a class="link link_colored" href="https://63pokupki.ru/files/docs/personal_data.pdf" target="_blank">Согласие на обработку персональных данных</a> и знакомитесь с положениями 
+                                        <a class="link link_colored" href="https://63pokupki.ru/files/docs/privacy_policy.pdf" target="_blank">Политики конфиденциальности</a>.
+                                </div>
+                            </div>
                         </div>
                         <div class="auth-form__phone-container">
                             <div class="auth-form__phone"></div>
                             <div class="auth-form__phone-txt"></div>
                         </div>
-                        <div class="auth-form__btn-container"></div>
+                        <div class="auth-form__btn-container">
+                            <!-- Для отображения активной кнопки, удалить класс ds-btn_disabled и добавить ds-btn_inverse -->
+                                <button class="auth-form__btn-register ds-btn ds-btn_disabled">
+                                    <div class="ds-btn__text">Зарегистрироваться</div>
+                                </button>
+                        </div>
 
                     </form>
                 </div>
@@ -90,6 +174,6 @@
 
 
 
-<script type="text/javascript" src="js/highlight-syntax.js?4e0fcd37688dd5a51023"></script><script type="text/javascript" src="js/ds-utils.js?4e0fcd37688dd5a51023"></script><script type="text/javascript" src="js/ds-ui-kit.js?4e0fcd37688dd5a51023"></script></body>
+<script type="text/javascript" src="js/highlight-syntax.js?bb1f279530a7d40d3b40"></script><script type="text/javascript" src="js/ds-utils.js?bb1f279530a7d40d3b40"></script><script type="text/javascript" src="js/ds-ui-kit.js?bb1f279530a7d40d3b40"></script></body>
 
 </html>
