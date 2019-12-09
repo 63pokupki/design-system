@@ -74,7 +74,7 @@
     // }
 
     
-    input {
+    input { 
         width: 97%;
         height: 100%;
         border: none;
@@ -196,7 +196,7 @@
     }
 
     
-    #passEye {
+    input[type="checkbox"] {
         display: none;
         &:checked ~.passEye-label:after  {
             display: none;

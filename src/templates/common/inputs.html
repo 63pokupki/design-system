@@ -273,7 +273,8 @@
     </div>
 
     <!-- Поле ввода пароля -->
-    <h1 class="ds-title">Поле ввода пароля</h1>
+    <h1 class="ds-title">Поля ввода</h1>
+    <h2 class="ds-title">Поле ввода пароля</h2>
     <div class="ds-wrapper">
         <div class="ds-text">
             Для смены состояний, необходимо присвоить элементу<span class="ds-hl">ds-inputs-component</span>:<br> 1) класс
@@ -285,7 +286,7 @@
             <div class="ds-inputs-component">
                 <div class="ds-inputs-form  input-password">
                     <span class="snowflake"></span>
-                    <input class="ds-inputs-form__input" type="password" maxlength="20" minlength="6" required>
+                    <input class="ds-inputs-form__input" type="password" maxlength="30" minlength="6" required>
                     <input type="checkbox" name="" id="passEye">
                     <label class="passEye-label" for="passEye"></label>
                 </div>
@@ -302,7 +303,7 @@
             <div class="ds-inputs-component">
                 <div class="ds-inputs-form  input-password">
                     <span class="snowflake"></span>
-                    <input class="ds-inputs-form__input" type="password" maxlength="20" minlength="6" required>
+                    <input class="ds-inputs-form__input" type="password" maxlength="30" minlength="6" required>
                     <input type="checkbox" name="" id="passEye">
                     <label class="passEye-label" for="passEye"></label>
                 </div>
@@ -315,13 +316,13 @@
     </div>
 
     <!-- Поле ввода логина -->
-    <h1 class="ds-title">Поле ввода логина</h1>
+    <h2 class="ds-title">Поле ввода логина</h2>
     <div class="ds-wrapper">
         <div class="ds-divider">
             <div class="ds-inputs-component">
                 <div class="ds-inputs-form  input-login">
                     <span class="snowflake"></span>
-                    <input type="text" name="" id="">
+                    <input type="text" name="" id="" maxlength="22" minlength="3">
                 </div>
                 <div class="ds-inputs-form__info-block">
                     <span class="ds-inputs-form__txt-info">3-22 символа</span>
@@ -349,13 +350,13 @@
     </div>
 
     <!-- Поле ввода почты -->
-    <h1 class="ds-title">Поле ввода почты</h1>
+    <h2 class="ds-title">Поле ввода почты</h2>
     <div class="ds-wrapper">
         <div class="ds-divider">
             <div class="ds-inputs-component">
                 <div class="ds-inputs-form  input-email">
                     <span class="snowflake"></span>
-                    <input type="text" name="" id="">
+                    <input type="email" name="" id="">
                 </div>
                 <div class="ds-inputs-form__info-block">
                     <span class="ds-inputs-form__txt-info">Будет использоваться для восстановления доступа</span>
@@ -371,7 +372,7 @@
             <div class="ds-inputs-component">
                 <div class="ds-inputs-form  input-email">
                     <span class="snowflake"></span>
-                    <input type="text" name="" id="">
+                    <input type="email" name="" id="">
                 </div>
                 <div class="ds-inputs-form__info-block">
                     <span class="ds-inputs-form__txt-info">Будет использоваться для восстановления доступа</span>
@@ -383,23 +384,19 @@
     </div>
 
     <!-- Поле ввода телефона -->
-    <h1 class="ds-title">Поле ввода телефона</h1>
+    <h2 class="ds-title">Поле ввода телефона</h2>
     <div class="ds-wrapper">
         <div class="ds-divider">
             <div class="ds-inputs-component">
                 <div class="ds-inputs-form  input-phone">
                     <span class="snowflake"></span>
-                    <input type="text" name="" id="">
+                    <input type="tel" name="" id="">
                 </div>
                 <div class="ds-inputs-form__info-block">
                     <span class="ds-inputs-form__txt-info">
                         Будет отправлено СМС с кодом подтверждения
                         <i class="ds-icon ds-inputs-form__icon-info icon-info has-tooltip">
-                            <span class="tooltip  tooltip_right">Если у вас возникли проблемы с регистрацией или входом
-                                на форум - пишите на адрес службы поддержки
-                                <a class="link link_colored bold"
-                                    href="mailto:support@63pokupki.ru">support@63pokupki.ru</a>
-                            </span>
+                            <!-- <span class="tooltip  tooltip_right"></span> -->
                         </i>
                     </span>
                     <span class="ds-inputs-form__txt-error ds-inputs-form__txt-error_mw160"> Уже используется другим
@@ -414,17 +411,17 @@
             <div class="ds-inputs-component">
                 <div class="ds-inputs-form  input-phone">
                     <span class="snowflake"></span>
-                    <input type="text" name="" id="">
+                    <input type="tel" name="" id="">
                 </div>
                 <div class="ds-inputs-form__info-block">
                     <span class="ds-inputs-form__txt-info">
                         Будет отправлено СМС с кодом подтверждения
                         <i class="ds-icon ds-inputs-form__icon-info icon-info has-tooltip">
-                            <span class="tooltip  tooltip_right">Если у вас возникли проблемы с регистрацией или входом
+                            <!-- <span class="tooltip  tooltip_right">Если у вас возникли проблемы с регистрацией или входом
                                 на форум - пишите на адрес службы поддержки
                                 <a class="link link_colored bold"
                                     href="mailto:support@63pokupki.ru">support@63pokupki.ru</a>
-                            </span>
+                            </span> -->
                         </i>
                     </span>
                     <span class="ds-inputs-form__txt-error ds-inputs-form__txt-error_mw160"> Уже используется другим
@@ -435,15 +432,15 @@
     </div>
 
     <!-- Поле "Повторите пароль" -->
-    <h1 class="ds-title">Поле повторного ввода пароля</h1>
+    <h2 class="ds-title">Поле повторного ввода пароля</h2>
     <div class="ds-wrapper">
         <div class="ds-divider">
             <div class="ds-inputs-component">
                 <div class="ds-inputs-form  input-password input-password-repeat">
                     <span class="snowflake"></span>
-                    <input class="ds-inputs-form__input" type="password" maxlength="20" minlength="6" required>
+                    <input class="ds-inputs-form__input" type="password" maxlength="30" minlength="6" required>
                     <input type="checkbox" name="" id="repeat-passEye">
-                    <label class="passEye-label" for="repeat-passEye"></label>
+                    <label class="passEye-label" for="repeat-passEye"></label>   
                 </div>
                 <div class="ds-inputs-form__info-block">
                     <span class="ds-inputs-form__txt-info"></span>
