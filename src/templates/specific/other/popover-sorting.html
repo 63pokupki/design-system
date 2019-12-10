@@ -11,39 +11,45 @@
 <body>
     <div class="ds-wrapper">
         <h1 class="ds-title">Всплывающая сортировка</h1>
-        <ds-text>Изначально, кнопка неактивна <span class="ds-hl">_disabled</span>.
-            Кнопка становится активной если добавить модификатор <span class="ds-hl">_selected</span></ds-text>.
+        <ds-text>Если выбрана позиция, присвоить класс <span class="ds-hl">.is-selected</span>элементу <span class="ds-hl">sorting</span></ds-text>.
         <div class="ds-wrapper">
             <div class="ds-divider">
-                <div class="ds-popover_sorting ds-popover is-visible">
-                    <div class="checkbox_no-chx">
-                        <input class="checkbox__input" type="checkbox" id="chx-s-01" />
-                        <label class="checkbox__label" for="chx-s-01">дате добавления</label>
-                    </div>
-                    <div class="checkbox_no-chx">
-                        <input class="checkbox__input" type="checkbox" id="chx-s-02" />
-                        <label class="checkbox__label" for="chx-s-02">релевантности</label>
-                    </div>
-                    <div class="checkbox_no-chx">
-                        <input class="checkbox__input" type="checkbox" id="chx-s-03" />
-                        <label class="checkbox__label" for="chx-s-03">рейтингу закупки</label>
-                    </div>
-                    <div class="checkbox_no-chx">
-                        <input class="checkbox__input" type="checkbox" id="chx-s-04" />
-                        <label class="checkbox__label" for="chx-s-04">среднему сроку доставки</label>
-                    </div>
-                    <div class="checkbox_no-chx">
-                        <input class="checkbox__input" type="checkbox" id="chx-s-05" />
-                        <label class="checkbox__label" for="chx-s-05">собранности</label>
-                    </div>
-                    <div class="checkbox_no-chx">
-                        <input class="checkbox__input" type="checkbox" id="chx-s-06" />
-                        <label class="checkbox__label" for="chx-s-06">организатору</label>
-                    </div>
-                    <div class="checkbox_no-chx">
-                        <input class="checkbox__input" type="checkbox" id="chx-s-07" />
-                        <label class="checkbox__label" for="chx-s-07">рейтингу организатора</label>
-                    </div>
+                <div class="sorting">                    
+                    <label class="sorting__btn">
+                        <input class="sorting__input" type="checkbox" name="" id="sorting">
+                        <div class="sorting__name">Сортировка по:</div>
+                        <span class="sorting__selected-position">Позиция 1 на десктопе</span>
+                        <div class="ds-popover_sorting ds-popover">
+                            <div class="checkbox_no-chx">
+                                <input class="checkbox__input" type="checkbox" id="chx-s-01" />
+                                <label class="checkbox__label" for="chx-s-01">дате добавления</label>
+                            </div>
+                            <div class="checkbox_no-chx">
+                                <input class="checkbox__input" type="checkbox" id="chx-s-02" />
+                                <label class="checkbox__label" for="chx-s-02">релевантности</label>
+                            </div>
+                            <div class="checkbox_no-chx">
+                                <input class="checkbox__input" type="checkbox" id="chx-s-03" />
+                                <label class="checkbox__label" for="chx-s-03">рейтингу закупки</label>
+                            </div>
+                            <div class="checkbox_no-chx">
+                                <input class="checkbox__input" type="checkbox" id="chx-s-04" />
+                                <label class="checkbox__label" for="chx-s-04">среднему сроку доставки</label>
+                            </div>
+                            <div class="checkbox_no-chx">
+                                <input class="checkbox__input" type="checkbox" id="chx-s-05" />
+                                <label class="checkbox__label" for="chx-s-05">собранности</label>
+                            </div>
+                            <div class="checkbox_no-chx">
+                                <input class="checkbox__input" type="checkbox" id="chx-s-06" />
+                                <label class="checkbox__label" for="chx-s-06">организатору</label>
+                            </div>
+                            <div class="checkbox_no-chx">
+                                <input class="checkbox__input" type="checkbox" id="chx-s-07" />
+                                <label class="checkbox__label" for="chx-s-07">рейтингу организатора</label>
+                            </div>
+                        </div>
+                    </label>
                 </div>
             </div>
         </div>

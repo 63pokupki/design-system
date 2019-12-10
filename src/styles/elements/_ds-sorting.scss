@@ -2,6 +2,7 @@
     display: inline-flex;
     flex-direction: column;
     justify-content: flex-start;
+    user-select: none;
     
     &.is-selected {
         .sorting__selected-position {
@@ -21,6 +22,23 @@
             color: #606266;
         }
     }
+    &__input {
+        display: none;
+        &:checked {
+            ~.ds-popover {
+               max-height: 200px;
+               visibility: visible;
+               opacity: 1; 
+            }
+        }
+    }
+    //Окно со списком popover
+    .ds-popover_sorting {
+        position: absolute;
+        top: 25px;
+        right: -25px;
+    }
+
 
     &__btn {
         display: flex;
