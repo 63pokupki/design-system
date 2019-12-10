@@ -33,10 +33,11 @@
     .heart-menu {
         position: absolute;
         z-index: 5;
-        bottom: 0px;
-        right: 155px;
-        transform: translateY(100%);
+        bottom: -12px;
+        left: 50%;
+        transform: translate(-50%,100%);
         display: none;
+        min-width: 190px;
         padding: 19px 27px;
         box-shadow: 0px 0px 16px rgba(105, 153, 247, 0.2);
 
@@ -76,9 +77,9 @@
     .user-profile-menu {
         position: absolute;
         z-index: 5;
-        bottom: 0px;
-        right: 30px;
-        transform: translateY(100%);
+        bottom: -10px;
+        left: 50%;
+        transform: translate(-50%, 100%);
         display: none;
 
         &.is-active {
@@ -134,6 +135,7 @@
     &__icon {
         margin-right: 15px;
         text-decoration: none;
+        position: relative;
 
         &:first-child {
             margin-left: 20px;
