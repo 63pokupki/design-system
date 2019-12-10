@@ -63,6 +63,11 @@
             display: none;
         }
     }
+    .checkbox__input:checked {
+        ~.checkbox__label {
+            color: $color-primary-light;
+        }
+    }
 }
 
 .checkbox_circle {
