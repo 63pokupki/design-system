@@ -12,11 +12,19 @@
 
     <h1 class="ds-title">Окно входа/авторизации</h1>
     <div class="ds-wrapper">
-        <div class="ds-text">У окна два состояния: 1) окно входа(по дефолту), 2) окно авторизации.
-            Для отображения окна авторизации, необходимо присвоить модификатор <span
-                class="ds-hl">auth-form_sign-up</span>
+        <div class="ds-text">У окна два состояния: 1) окно входа(по дефолту), 2) окно регистрации.
+            Для отображения окна регистрации, необходимо присвоить модификатор 
+            <span class="ds-hl">auth-form_sign-up</span>
             элементу <span class="ds-hl">auth-form</span>.
         </div>
+        <div class="ds-text">
+            Для смены состояний полей ввода, необходимо присвоить элементу<span class="ds-hl">ds-inputs-component</span>:<br> 1) класс
+            <span class="ds-hl">is-typing</span> при вводе текста; <br>
+            2) класс<span class="ds-hl">is-error</span> при ошибке ввода;<br>
+            3) класс <span class="ds-hl">is-hidden-snowflake</span> для скрытия красной снежинки; <br>
+            4) класс <span class="ds-hl">is-hidden-info</span> для скрытия подсказок  снизу;
+        </div>
+    
         <div class="ds-divider" style="background: #4a89dc;">
             <!-- ФОрма компонент -->
             <div class="auth-form" style="margin: 0 auto;">
@@ -32,18 +40,32 @@
                     <form id="login" action="../phpBB3/ucp.php?mode=login&sid=37bbe2851bbf9589b26ee21691d841f8" method="post" name="" data-focus="username" class="auth-form__form auth-form__form-sign-in">
                         <div class="auth-form__heading">Вход на сайт</div>
                         <!-- Поле логин -->
-                        <div class="ds-inputs-form input-login">
-                            <input type="text" name="" id="" maxlength="20" minlength="6" required>
+                        <div class="ds-inputs-component is-hidden-info is-hidden-snowflake">
+                            <div class="ds-inputs-form  input-login">
+                                <span class="snowflake"></span>
+                                <input type="text" name="" id="">
+                            </div>
+                            <div class="ds-inputs-form__info-block">
+                                <span class="ds-inputs-form__txt-info">3-22 символа</span>
+                                <span class="ds-inputs-form__txt-error ds-inputs-form__txt-error_mw203">Извините, пользователь с
+                                    таким именем уже существует</span>
+                            </div>
                         </div>
                         <!-- Предупреждение -->
                         <span class="auth-form__error-message">Неверный логин или пароль</span>
                         <!-- Поле пароль -->
-                        <div class="input-password ds-inputs-form">
-                            <input id="ds-inputs-form__input-password" class="ds-inputs-form__input" type="password"
-                                maxlength="20" minlength="6" required>
-                            <input type="checkbox" name="" id="passEye">
-                            <label class="passEye-label" for="passEye"></label>
-                        </div>
+                        <div class="ds-inputs-component is-hidden-info is-hidden-snowflake">
+                            <div class="ds-inputs-form  input-password">
+                                <span class="snowflake"></span>
+                                <input class="ds-inputs-form__input" type="password" maxlength="30" minlength="6" required>
+                                <input type="checkbox" name="" id="passEye">
+                                <label class="passEye-label" for="passEye"></label>
+                            </div>
+                            <div class="ds-inputs-form__info-block">
+                                <span class="ds-inputs-form__txt-info">6-30 символов</span>
+                                <span class="ds-inputs-form__txt-error">Слишком короткий</span>
+                            </div>
+                        </div>                        
                         <!-- Чекбокс -->
                         <div class="checkbox auth-form__checkbox">
                             <input class="checkbox__input" type="checkbox" id="chx-01" />

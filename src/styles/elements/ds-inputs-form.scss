@@ -27,11 +27,26 @@
         }
 
     }
+    //Скрыть снежинку
     &.is-hidden-snowflake {
-        >.snowflake {
+        .snowflake {
             display: none;
         }
-    }    
+    }
+    //Скрыть блок с подсказками снизу
+    &.is-hidden-info {
+        min-height: 0;
+        .ds-inputs-form__info-block {
+            display: none;
+        }
+    }
+    &.is-unavailable {
+        border-color: $color-input-border;
+        &:before {
+            color: $color-input-border;
+        }
+    }
+    
 
 }
 .ds-inputs-form {
@@ -39,7 +54,7 @@
     height: 48px;
     margin: 13px;
     padding: 0 20px;
-    border: 1px solid $light-gray-sum-btn;
+    border: 1px solid $color-input-border;
     border-radius: 2px;
     outline: none;
     position: relative;
