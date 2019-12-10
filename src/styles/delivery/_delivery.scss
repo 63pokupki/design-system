@@ -385,3 +385,37 @@
 }
 
 
+//Вертикальное меню слева
+.delivery__vertical-menu {
+    
+    .link_text {
+        font-size: 14px;
+        color: $color-text-base;
+        &.is-active {
+            position: relative;
+            font-weight: 600;
+            color: $color-primary-light;
+
+            &:before {
+                content: "";
+                position: absolute;
+                bottom: -3px;
+                left: -4px;
+                height: 2px;
+                width: 100%;
+                width: calc(100% + 8px);
+                background: $color-primary-light;
+            }
+
+        }
+        &:hover {
+            color: $color-primary-light;
+        }
+        
+    }
+
+}
+
+
+
+
