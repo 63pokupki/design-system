@@ -41,12 +41,17 @@
         }
     }
     &.is-unavailable {
-        border-color: $color-input-border;
-        &:before {
-            color: $color-input-border;
+        .ds-inputs-form {
+            border-color: $light-gray-link-color;
+            &:before {
+                color: $light-gray-link-color;
+            }
+            input {
+                display: none;
+            }
+
         }
-    }
-    
+    }    
 
 }
 .ds-inputs-form {
@@ -58,6 +63,20 @@
     border-radius: 2px;
     outline: none;
     position: relative;
+    &:before {
+        display: inline-flex;
+        height: 15px;
+        position: absolute;
+        top: -12px;
+        left: 5px;
+        padding: 0 10px;
+        font-family: Open Sans;
+        font-weight: 600;
+        font-size: 15px;        
+        z-index: 20;
+        color: $color-text-base;
+    }
+
 
     // // Ввод текста в поле
     // &.is-typing {
@@ -158,17 +177,6 @@
 .input-login {
     &:before {
         content: "Логин";
-        display: inline-flex;
-        height: 15px;
-        position: absolute;
-        top: -12px;
-        left: 5px;
-        padding: 0 10px;
-        font-family: Open Sans;
-        font-weight: 600;
-        font-size: 15px;
-        color: $light-gray-sum-btn;
-        z-index: 20;
     }
     &:after {
         content: "";
@@ -187,17 +195,6 @@
 .input-password {
     &:before {
         content: "Пароль";
-        display: inline-flex;
-        height: 15px;
-        position: absolute;
-        top: -12px;
-        left: 5px;
-        padding: 0 10px;
-        font-family: Open Sans;
-        font-weight: 600;
-        font-size: 15px;
-        color: $light-gray-sum-btn;
-        z-index: 20;
     }
     &:after {
         content: "";
@@ -260,17 +257,6 @@
 .input-email {
     &:before {
         content: "Email";
-        display: inline-flex;
-        height: 15px;
-        position: absolute;
-        top: -12px;
-        left: 5px;
-        padding: 0 10px;
-        font-family: Open Sans;
-        font-weight: 600;
-        font-size: 15px;
-        color: $light-gray-sum-btn;
-        z-index: 20;
     }
     &:after {
         content: "";
@@ -293,17 +279,6 @@
 
     &:before {
         content: "Номер телефона";
-        display: inline-flex;
-        height: 15px;
-        position: absolute;
-        top: -12px;
-        left: 5px;
-        padding: 0 10px;
-        font-family: Open Sans;
-        font-weight: 600;
-        font-size: 15px;
-        color: $light-gray-sum-btn;
-        z-index: 20;
     }
     &:after {
         content: "";
