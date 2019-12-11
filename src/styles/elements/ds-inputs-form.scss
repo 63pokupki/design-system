@@ -136,6 +136,7 @@
         font-size: 11px;
         color: $color-input-txt-info;
         position: relative;
+        user-select: none;
     }
     &__txt-error {
         display: flex;
@@ -146,6 +147,7 @@
         font-size: 12px;
         color: $color-input-border-error;
         visibility: hidden;
+        user-select: none;
         &_mw160 {
             max-width: 160px;
         }
@@ -156,7 +158,8 @@
     &__icon-info {
         position: absolute;
         top: 10px;
-        left: 140px;                
+        left: 140px;
+        user-select: none;                
     }
 
 }
