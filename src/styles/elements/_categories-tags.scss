@@ -11,23 +11,50 @@
     &__row {
         display: flex;
         align-items: stretch;
-
-        &:hover {
-            position: relative;
-            z-index: 3;
-            box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.3);
-        }
     }
 
     &__img {
         width: 100%;
         height: 100%;
         display: block;
+        transition: transform $transition-primary;
+
+        &:hover {
+            transform: scale(1.03);
+            transition: transform $transition-primary;
+        }
     }
 
     &__link {
         display: block;
         width: 100%;
         height: 100%;
+        overflow: hidden;
+        position: relative;
+
+        &:before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background: black;
+            opacity: 0;
+            transition: opacity $transition-primary;
+        }
+
+        &:hover:before {
+            opacity: 0.15;
+            z-index: 1;
+            transition: opacity $transition-primary;
+        }
+
+        &:hover {
+            .categories-tags__img {
+                transform: scale(1.02);
+                transition: transform $transition-primary;
+            }
+        }
     }
 }
