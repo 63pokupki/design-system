@@ -61,18 +61,18 @@
         width: 100%;
         padding: 0 50px 15px 50px;
         position: relative;
-        &:before {
-            content: "Email";
-            display: inline-flex;
-            height: 15px;
-            background: #fff;
-            position: absolute;
-            top: 2px;
-            left: 55px;
-            padding: 0 10px;
-            font-size: 15px;
-            color: $light-gray-sum-btn;
-        } 
+        // &:before {
+        //     content: "Email";
+        //     display: inline-flex;
+        //     height: 15px;
+        //     background: #fff;
+        //     position: absolute;
+        //     top: 2px;
+        //     left: 55px;
+        //     padding: 0 10px;
+        //     font-size: 15px;
+        //     color: $light-gray-sum-btn;
+        // } 
  
     }
     &__input {
@@ -90,6 +90,29 @@
            font-weight: 500;
            color: $light-gray-link-color;
        }
+       &:focus {
+            border-color: $color-primary-light;
+            ~.modal-confirm-mail__label {
+                &:before {
+                    color: $color-primary-light;
+                }
+            }
+       }
+    }
+    &__label {
+        &:before {
+            content: "Email";
+            display: inline-flex;
+            height: 15px;
+            background: #fff;
+            position: absolute;
+            top: 2px;
+            left: 55px;
+            padding: 0 10px;
+            font-size: 15px;
+            color: $light-gray-sum-btn;
+        } 
+
     }
     &__btn {
         width: 222px;
@@ -124,9 +147,9 @@
         font-weight: 600;
         color: $color-text-base;
     }
-
-    // Mobile
-    &.mobile {
+            
+    @media (max-width: 415px) {
+            // Mobile
         .modal__wrap {
             max-width: 300px;
             padding: 15px 15px 4px 15px;
@@ -167,7 +190,52 @@
         .modal-confirm-mail__info {
             font-size: 8px;
         }
+    
+
     }
+    // // Mobile
+    // &.mobile {
+    //     .modal__wrap {
+    //         max-width: 300px;
+    //         padding: 15px 15px 4px 15px;
+    //     }
+    //     .modal__header {
+    //         font-size: 15px;
+    //         margin: 0 0 25px;
+    //     }
+    //     .modal-confirm-mail__description {
+    //         margin: 15px 0 10px;
+    //         padding: 0;
+    //         font-size: 12px;
+    //     }
+    //     .modal-confirm-mail__img {
+    //         min-height: 49px;
+    //     }
+    //     .modal-confirm-mail__info {
+    //         display: none;
+    //         &.mobile {
+    //             display: flex;
+    //             padding: 0;
+    //         }
+    //     }
+    //     .modal-confirm-mail__form {
+    //         padding: 0;
+    //         margin: 10px 0 0 0;
+    //         &:before {
+    //             left: 5px;
+    //         }
+    //     }
+    //     .modal-confirm-mail__input {
+    //         margin: 13px 0;
+    //     }
+    //     .modal-confirm-mail__footer {
+    //         margin: 0 0 10px;
+    //         font-size: 11px;
+    //     }
+    //     .modal-confirm-mail__info {
+    //         font-size: 8px;
+    //     }
+    // }
 }
 
 
