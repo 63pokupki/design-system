@@ -1,18 +1,22 @@
 // многоуровневое вложенное меню
 .multi-level-menu {
-    display: block;
+    display: flex;
+    justify-content: space-between;
     background: $background-color-primary;
     padding: 30px;
     font-size: 14px;
     font-weight: normal;
     color: $color-text-base;
     position: relative;
+    align-items: flex-start;
 
     &__column {
         padding-right: 20px;
         position: relative;
         min-height: 350px;
         display: inline-block;
+        flex-shrink: 0;
+        width: 100%;
     }
 
     &__heading-wrapper {
@@ -22,7 +26,7 @@
     }
     &__heading {
         text-transform: uppercase;
-        margin-right: 50px;
+        margin-right: 35px;
     }
     &__all {
         font-size: 12px;
@@ -59,29 +63,51 @@
 
 .multi-level-menu_has-subcategories {
 
+    & > .multi-level-menu__column {
+        padding-right: 0;
+    }
+
     .multi-level-menu__column {
-        border-right: 1px solid #e3e3e3;
+        width: initial;
     }
 
     .multi-level-menu__item {
+        padding-right: 30px;
+        padding-bottom: 10px;
+        margin-bottom: -1px;
+
+        .multi-level-menu__heading {
+            margin-right: 30px;
+        }
+
         .multi-level-menu__column {
+            background: white;
+            border-left: 1px solid transparent;
             visibility: hidden;
             opacity: 0;
             z-index: 0;
+            padding-left: 25px;
+            height: 100%;
             position: absolute;
-            top: 0;
-            right: -30px;
+            top: 2px;
+            right: 0px;
             min-width: 280px;
             transform: translate(100%, 0%);
-            transition: opacity $transition-medium, visibility $transition-medium;
+
+            .link {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                max-width: 199px;
+                white-space: nowrap;
+            }
         }
     }
 
     .multi-level-menu__item:hover > .multi-level-menu__column,
     .multi-level-menu__column.multi-level-menu__column_is-expanded {
+        border-left: 1px solid #e3e3e3;
         visibility: visible;
         opacity: 1;
         z-index: 2;
-        transition: opacity $transition-medium, visibility $transition-medium;
     }
 }
