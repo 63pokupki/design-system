@@ -1,6 +1,6 @@
 {
   "name": "@63pokupki/design-system",
-  "version": "0.0.82",
+  "version": "0.0.85",
   "description": "UI component kit and design-system for 63 Pokupki project",
   "main": "dist/css/ds-ui-kit.css",
   "scripts": {
@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.6.2",
-    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/plugin-transform-runtime": "^7.7.4",
     "@babel/preset-env": "7.6.2",
     "autoprefixer": "9.6.1",
     "babel-loader": "8.0.6",

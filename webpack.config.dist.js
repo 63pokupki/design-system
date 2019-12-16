@@ -15,7 +15,7 @@ module.exports = {
     }, //объект с точками входа
     output: {
         path: path.join(__dirname, "dist/"), //общий путь для выходных файлов
-        filename: "js/[name].js" //в этом параметре мы индивидуально добавляем необходимую директорию перед именем файлов
+        filename: "js/[name].js?[hash]" //в этом параметре мы индивидуально добавляем необходимую директорию перед именем файлов
     },
     watch: false, //Слежение за изменениями
     devtool: "source-map", //Инструменты разработчика
@@ -123,7 +123,7 @@ module.exports = {
                     loader: "file",
                     options: {
                         limit: 2048,
-                        name: "images/[name].[ext]"
+                        name: "images/[name].[ext]?[hash]"
                     }
                 }
             },
@@ -134,7 +134,7 @@ module.exports = {
                     query: {
                         publicPath: "../",
                         limit: 2048,
-                        name: "fonts/[name].[ext]"
+                        name: "fonts/[name].[ext]?[hash]"
                     }
                 }
             },
@@ -147,7 +147,7 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: "css/[name].css"
+            filename: "css/[name].css?[hash]"
         }),
         new CopyPlugin([{ from: "src/images/**/*", to: "images", flatten: true, test: /images\/.*\.(jpg|png|gif|svg)$/ }])
     ],
