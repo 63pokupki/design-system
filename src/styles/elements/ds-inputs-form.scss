@@ -2,13 +2,6 @@
     display: block;
     width: 100%;
     min-height: 100px;
-    // Ввод текста в поле
-    &.is-typing {
-        border-color: $color-primary-light;
-        &:before {
-            color: $color-primary-light;
-        }
-    }
 
     //Ошибка ввода
     &.is-error {
@@ -124,7 +117,7 @@
     &__txt-error {
         display: flex;
         justify-content: flex-end; 
-        width: 85%;       
+        width: 100%;       
         text-align: left;
         font-weight: 600;
         font-size: 12px;
