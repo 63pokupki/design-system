@@ -56,67 +56,50 @@
 }
 .ds-inputs-form {
     display: block;
+    min-width: 200px;
     height: 48px;
     margin: 13px;
-    padding: 0 20px;
-    border: 1px solid $color-input-border;
-    border-radius: 2px;
-    outline: none;
     position: relative;
-    &:before {
-        display: inline-flex;
-        height: 15px;
-        position: absolute;
-        top: -12px;
-        left: 5px;
-        padding: 0 10px;
-        font-family: Open Sans;
-        font-weight: 600;
-        font-size: 15px;        
-        z-index: 20;
-        color: $color-text-base;
-    }
-
-
-    // // Ввод текста в поле
-    // &.is-typing {
-    //     border-color: $color-primary-light;
-    //     &:before {
-    //         color: $color-primary-light;
-    //     }
-    // }
-
-    // //Ошибка ввода
-    // &.is-error {
-    //     border-color: $color-input-border-error;
-    //     background: $color-input-bg-error;
-    //     input {
-    //         background: $color-input-bg-error;
-    //     }
-    //     &:before {
-    //         color: $color-input-border-error;
-    //     }
-    //     .ds-inputs-form__txt-error {
-    //         visibility: visible;
-    //     }
-
-    // }
-    // &.is-hidden-snowflake {
-    //     >.snowflake {
-    //         display: none;
-    //     }
-    // }
-
     
-    input { 
-        width: 97%;
+    &__input { 
+        width: 100%;
+        min-width: 200px;
         height: 100%;
+        padding: 0 40px 0 20px;
         border: none;
         outline: none;
         font-size: 14px;
         font-weight: 600;
         color: $dark-grey-color;
-            
+        border: 1px solid $color-input-border;
+        border-radius: 2px;
+        outline: none;
+        &:focus {
+            border: 1px solid $color-primary-light;
+            ~.ds-inputs-form__label:before {
+                color: $color-primary-light;
+            }
+        }
+    
+    }
+    &__label {
+        position: absolute;
+        left: 0;
+
+        &:before {
+            display: inline-flex;
+            height: 15px;
+            position: absolute;
+            top: -12px;
+            left: 5px;
+            padding: 0 10px;
+            font-family: Open Sans;
+            font-weight: 600;
+            font-size: 15px;        
+            z-index: 20;
+            color: $color-text-base;
+        }
+    
     }
 
     //Info-block
@@ -178,8 +161,11 @@
 
 // Login
 .input-login {
-    &:before {
-        content: "Логин";
+    .ds-inputs-form__label {
+        &:before {
+            content: "Логин";
+        }
+
     }
     &:after {
         content: "";
@@ -187,7 +173,7 @@
         width: 66px;
         height: 2px;
         position: absolute;
-        top: -2px;
+        top: 0px;
         left: 5px;
         z-index: 10;
     }
@@ -196,8 +182,10 @@
 
 // Password
 .input-password {
-    &:before {
-        content: "Пароль";
+    .ds-inputs-form__label {
+        &:before {
+            content: "Пароль";
+        }
     }
     &:after {
         content: "";
@@ -205,7 +193,7 @@
         width: 75px;
         height: 2px;
         position: absolute;
-        top: -2px;
+        top: 0px;
         left: 5px;
         z-index: 10;
     }
@@ -258,8 +246,10 @@
 
 //Поле ввода почты
 .input-email {
-    &:before {
-        content: "Email";
+    .ds-inputs-form__label {
+        &:before {
+            content: "Email";
+        }
     }
     &:after {
         content: "";
@@ -267,7 +257,7 @@
         width: 60px;
         height: 2px;
         position: absolute;
-        top: -2px;
+        top: 0;
         left: 4px;
         z-index: 10;
     }
@@ -280,8 +270,11 @@
         max-width: 159px;
     }
 
-    &:before {
-        content: "Номер телефона";
+    .ds-inputs-form__label {
+        &:before {
+            content: "Номер телефона";
+            white-space: nowrap;
+        }
     }
     &:after {
         content: "";
@@ -289,7 +282,7 @@
         width: 147px;
         height: 2px;
         position: absolute;
-        top: -2px;
+        top: 0;
         left: 4px;
         z-index: 10;
     }
@@ -301,8 +294,11 @@
 
 //Повторный ввод пароля
 .input-password-repeat {
-    &:before {
-        content: "Повторите пароль"!important;
+    .ds-inputs-form__label {
+        &:before {
+            content: "Повторите пароль";
+            white-space: nowrap;
+        }
     }
     &:after {
         width: 160px;
