@@ -1,8 +1,9 @@
 .auth-form {
-   
-    display: flex;
-    max-width: 455px;
-    flex-direction: column;
+    min-width: 300px;
+    display: inline-block;
+    &__form-sign-in {
+        max-width: 455px;
+    }
 
     &__txt {
         text-align: center;
@@ -11,19 +12,18 @@
         margin: 0 0 20px 0;
         &-footnote {
             max-width: 349px;
-            margin: 10px 0 0 0;
+            margin: 0;
+            padding: 0 0 0 28px;
             font-size: 10px;
             line-height: 11px;
+
         }
     }
 
 
     &_sign-up {
-        max-width: 850px;
+        // max-width: 850px;
         .auth-form__right-tab {
-            // background: #fff;
-            // font-weight: 600;
-            // color: $click-load-color;
             &:after {
                 content: "";
                 position: absolute;
@@ -240,6 +240,7 @@
     }
 
     // РЕГИСТРАЦИЯ
+    
     &__login-pass-container {
         display: flex;
     }
@@ -248,7 +249,8 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        width: 50%;
+        width: 100%;
+        max-width: 350px;
     }
     &__login-container {
         margin-right: 24px;
@@ -263,9 +265,101 @@
         height: 45px;
 
     }
+    &__phone-container {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    &__phone {
+        display: flex;
+        width: 100%;
+        max-width: 350px;
+    }
+    &__phone-txt {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 350px;
+        margin: 13px;
+    }
+    @media (min-width: 768px) and (max-width: 1279px) {
+        .auth-form {
+            &__form-sign-up {
+                padding: 20px 10px;
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        .ds-inputs-form {
+            &__txt-info {
+                max-width: 150px;
+            }
+            // &__txt-error {
+            //     font-size: 10px;
+            // }
+            &__txt-error-login {
+                max-width: 202px;
+            }
+            &__txt-error-phone {
+                max-width: 133px;
+            }
+            &__txt-error-email {
+                max-width: 160px;
+            }        
+
+
+        }
+
+        .auth-form {
+            max-width: 455px;
+            &__login-pass-container {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            &__login-container {
+                margin-right: 0;
+            }
+            &__phone-container {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            &__txt-footnote {
+                padding: 0px 4px 0 15px;
+            }
+            &__form-sign-up {
+                max-width: 455px;
+            }
+            &__right-tab {
+                &:after {
+                    right: calc(50% - 10px);
+                }
+            }
+            // Чекбокс
+            &__auth-tabs {
+                
+                &:checked ~.auth-form__right-tab {
+                    &:before {
+                        left: calc(50%-10px);
+                    }
+                    &:after {
+                        right: calc(50%-200px); 
+                    }
+                }
+                &:checked ~.auth-form__left-tab {
+                    &:before {
+                        display: none;
+                    }
+                    &:after {
+                        display: none;
+                    }
+
+                }
+            }
+        }
+        
+    }
 
 }
-
 
 
 

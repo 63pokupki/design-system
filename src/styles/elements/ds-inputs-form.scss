@@ -2,13 +2,6 @@
     display: block;
     width: 100%;
     min-height: 100px;
-    // Ввод текста в поле
-    &.is-typing {
-        border-color: $color-primary-light;
-        &:before {
-            color: $color-primary-light;
-        }
-    }
 
     //Ошибка ввода
     &.is-error {
@@ -115,6 +108,7 @@
         display: flex;
         width: 50%;
         max-width: 170px;
+        padding: 0 15px 0 0;
         font-weight: 600;
         font-size: 11px;
         color: $color-input-txt-info;
@@ -124,24 +118,24 @@
     &__txt-error {
         display: flex;
         justify-content: flex-end; 
-        width: 85%;       
+        width: 100%;       
         text-align: left;
         font-weight: 600;
         font-size: 12px;
         color: $color-input-border-error;
         visibility: hidden;
         user-select: none;
-        &_mw160 {
+        &-email, &-phone {
             max-width: 160px;
         }
-        &_mw203 {
+        &-login {
             max-width: 203px;
         }
     }
     &__icon-info {
         position: absolute;
         top: 10px;
-        left: 140px;
+        right: 0;
         user-select: none;                
     }
 
@@ -315,36 +309,6 @@
 }
 
 
-// Лейбл
-// Скопировать в инпут и заменить текст в content: "" у before
-// В зависимости от длинны текста, необходимо будет 
-// менять ширину и позицию left
-
-
-// &:before {
-//     content: "Лейбл";
-//     display: inline-flex;
-//     height: 15px;
-//     position: absolute;
-//     top: -12px;
-//     left: 5px;
-//     padding: 0 10px;
-//     font-family: Open Sans;
-//     font-weight: 600;
-//     font-size: 15px;
-//     color: $light-gray-sum-btn;
-//     z-index: 20;
-// }
-// &:after {
-//     content: "";
-//     background: url("~images/auth-form/bg-line-label-input.svg");
-//     width: 66px;
-//     height: 2px;
-//     position: absolute;
-//     top: -2px;
-//     left: 4px;
-//     z-index: 10;
-// }
 
 
 
