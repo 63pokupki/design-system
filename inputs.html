@@ -11,7 +11,7 @@
             margin-right: 20px;
         }
     </style>
-<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?e028128fff6eb505626b" rel="stylesheet"><link href="css/ds-utils.css?e028128fff6eb505626b" rel="stylesheet"><link href="css/ds-ui-kit.css?e028128fff6eb505626b" rel="stylesheet"></head>
+<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?cd9c889ff0d98e2b7c7a" rel="stylesheet"><link href="css/ds-utils.css?cd9c889ff0d98e2b7c7a" rel="stylesheet"><link href="css/ds-ui-kit.css?cd9c889ff0d98e2b7c7a" rel="stylesheet"></head>
 
 <body>
     <h1 class="ds-title">Элементы ввода, текстовые поля, поиск, чекбоксы</h1>
@@ -278,7 +278,7 @@
     <div class="ds-wrapper">
         <div class="ds-text">
             Для смены состояний, необходимо присвоить элементу<span class="ds-hl">ds-inputs-component</span>:<br>
-             1) класс<span class="ds-hl">.is-typing</span> при вводе текста; <br>
+            1) класс<span class="ds-hl">.is-typing</span> при вводе текста; <br>
             2) класс<span class="ds-hl">.is-error</span> при ошибке ввода;<br>
             3) класс <span class="ds-hl">.is-hidden-snowflake</span> для скрытия красной снежинки;<br>
             4) класс <span class="ds-hl">.is-unavailable</span> для неактивного состояния поля;
@@ -287,7 +287,8 @@
             <div class="ds-inputs-component">
                 <div class="ds-inputs-form  input-password">
                     <span class="snowflake"></span>
-                    <input class="ds-inputs-form__input" type="password" maxlength="30" minlength="6" required>
+                    <input id="ds-inputs-form__input-password" class="ds-inputs-form__input" type="password" maxlength="30" minlength="6" required>
+                    <label class="ds-inputs-form__label" for="ds-inputs-form__input-password"></label>
                     <input type="checkbox" name="" id="passEye">
                     <label class="passEye-label" for="passEye"></label>
                 </div>
@@ -323,7 +324,8 @@
             <div class="ds-inputs-component">
                 <div class="ds-inputs-form  input-login">
                     <span class="snowflake"></span>
-                    <input type="text" name="" id="" maxlength="22" minlength="3">
+                    <input id="ds-inputs-form__input-login" class="ds-inputs-form__input" type="text" name="" id="" maxlength="22" minlength="3">
+                    <label class="ds-inputs-form__label" for="ds-inputs-form__input-login"></label>
                 </div>
                 <div class="ds-inputs-form__info-block">
                     <span class="ds-inputs-form__txt-info">3-22 символа</span>
@@ -357,7 +359,8 @@
             <div class="ds-inputs-component">
                 <div class="ds-inputs-form  input-email">
                     <span class="snowflake"></span>
-                    <input type="email" name="" id="">
+                    <input id="ds-inputs-form__email" class="ds-inputs-form__input" type="email" name="" id="">
+                    <label class="ds-inputs-form__label" for="ds-inputs-form__input-email"></label>
                 </div>
                 <div class="ds-inputs-form__info-block">
                     <span class="ds-inputs-form__txt-info">Будет использоваться для восстановления доступа</span>
@@ -391,7 +394,8 @@
             <div class="ds-inputs-component">
                 <div class="ds-inputs-form  input-phone">
                     <span class="snowflake"></span>
-                    <input type="tel" name="" id="">
+                    <input id="ds-inputs-form__phone" class="ds-inputs-form__input" type="tel" name="" id="">
+                    <label class="ds-inputs-form__label" for="ds-inputs-form__input-phone"></label>
                 </div>
                 <div class="ds-inputs-form__info-block">
                     <span class="ds-inputs-form__txt-info">
@@ -439,7 +443,8 @@
             <div class="ds-inputs-component">
                 <div class="ds-inputs-form  input-password input-password-repeat">
                     <span class="snowflake"></span>
-                    <input class="ds-inputs-form__input" type="password" maxlength="30" minlength="6" required>
+                    <input id="ds-inputs-form__input-password-repeat" class="ds-inputs-form__input" type="password" maxlength="30" minlength="6" required>
+                    <label class="ds-inputs-form__label" for="ds-inputs-form__input-password-repeat"></label>
                     <input type="checkbox" name="" id="repeat-passEye">
                     <label class="passEye-label" for="repeat-passEye"></label>   
                 </div>
@@ -470,6 +475,6 @@
 
 
 
-<script type="text/javascript" src="js/highlight-syntax.js?e028128fff6eb505626b"></script><script type="text/javascript" src="js/ds-utils.js?e028128fff6eb505626b"></script><script type="text/javascript" src="js/ds-ui-kit.js?e028128fff6eb505626b"></script></body>
+<script type="text/javascript" src="js/highlight-syntax.js?cd9c889ff0d98e2b7c7a"></script><script type="text/javascript" src="js/ds-utils.js?cd9c889ff0d98e2b7c7a"></script><script type="text/javascript" src="js/ds-ui-kit.js?cd9c889ff0d98e2b7c7a"></script></body>
 
 </html>
