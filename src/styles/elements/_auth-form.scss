@@ -290,9 +290,26 @@
         }
     }
     @media (max-width: 768px) {
-        .ds-inputs-form__txt-error {
-            font-size: 10px;
+        .ds-inputs-form {
+            &__txt-info {
+                max-width: 150px;
+            }
+            // &__txt-error {
+            //     font-size: 10px;
+            // }
+            &__txt-error-login {
+                max-width: 202px;
+            }
+            &__txt-error-phone {
+                max-width: 133px;
+            }
+            &__txt-error-email {
+                max-width: 160px;
+            }        
+
+
         }
+
         .auth-form {
             max-width: 455px;
             &__login-pass-container {
@@ -338,8 +355,6 @@
 
                 }
             }
-
-        
         }
         
     }
