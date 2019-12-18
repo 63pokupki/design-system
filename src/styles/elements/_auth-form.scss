@@ -240,6 +240,7 @@
         color: $color-text-heading;
     }
 
+
 // РЕГИСТРАЦИЯ
     
     &__login-pass-container {
@@ -375,6 +376,99 @@
         }
         
     }
+    &__phone-container {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    &__phone {
+        display: flex;
+        width: 100%;
+        max-width: 350px;
+    }
+    &__phone-txt {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 350px;
+        margin: 13px;
+    }
+    @media (min-width: 768px) and (max-width: 1279px) {
+        .auth-form {
+            &__form-sign-up {
+                padding: 20px 10px;
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        .ds-inputs-form {
+            &__txt-info {
+                max-width: 150px;
+            }
+            // &__txt-error {
+            //     font-size: 10px;
+            // }
+            &__txt-error-login {
+                max-width: 202px;
+            }
+            &__txt-error-phone {
+                max-width: 133px;
+            }
+            &__txt-error-email {
+                max-width: 160px;
+            }        
+
+
+        }
+
+        .auth-form {
+            max-width: 455px;
+            &__login-pass-container {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            &__login-container {
+                margin-right: 0;
+            }
+            &__phone-container {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            &__txt-footnote {
+                padding: 0px 4px 0 15px;
+            }
+            &__form-sign-up {
+                max-width: 455px;
+            }
+            &__right-tab {
+                &:after {
+                    right: calc(50% - 10px);
+                }
+            }
+            // Чекбокс
+            &__auth-tabs {
+                
+                &:checked ~.auth-form__right-tab {
+                    &:before {
+                        left: calc(50%-10px);
+                    }
+                    &:after {
+                        right: calc(50%-200px); 
+                    }
+                }
+                &:checked ~.auth-form__left-tab {
+                    &:before {
+                        display: none;
+                    }
+                    &:after {
+                        display: none;
+                    }
+
+                }
+            }
+        }
+        
+    }
 
 // Восстановление пароля
     &__form-password-recovery {
@@ -446,6 +540,5 @@
         }
     }
 }
-
 
 
