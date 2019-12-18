@@ -90,7 +90,7 @@
                         class="auth-form__form auth-form__form-sign-up">
                         <div class="auth-form__heading">Регистрация</div>
                         <div class="auth-form__txt">Начните экономить до 70% уже через 1 минуту</div>
-                        <!-- Контейнер инбутов -->
+                        <!-- Контейнер инпутов -->
                         <div class="auth-form__login-pass-container">
                             <!-- Блок логин/почта/телефон -->
                             <div class="auth-form__login-container">
@@ -99,7 +99,7 @@
                                     <div class="ds-inputs-form  input-login">
                                         <span class="snowflake"></span>
                                         <input id="ds-inputs-form__input-login" class="ds-inputs-form__input"
-                                            type="text" name="" id="" maxlength="22" minlength="3">
+                                            type="text" name="username" id="" maxlength="22" minlength="3" tabindex="4">
                                         <label class="ds-inputs-form__label" for="ds-inputs-form__input-login"></label>
                                     </div>
                                     <div class="ds-inputs-form__info-block">
@@ -115,7 +115,7 @@
                                     <div class="ds-inputs-form  input-email">
                                         <span class="snowflake"></span>
                                         <input id="ds-inputs-form__email" class="ds-inputs-form__input" type="email"
-                                            name="" id="">
+                                            name="email" maxlength="25" tabindex="5">
                                         <label class="ds-inputs-form__label" for="ds-inputs-form__input-email"></label>
                                     </div>
                                     <div class="ds-inputs-form__info-block">
@@ -134,7 +134,7 @@
                                     <div class="ds-inputs-form  input-password">
                                         <span class="snowflake"></span>
                                         <input id="ds-inputs-form__input-password" class="ds-inputs-form__input"
-                                            type="password" maxlength="30" minlength="6" required>
+                                            type="password" maxlength="30" minlength="6" tabindex="6" autocomplete="off" required>
                                         <label class="ds-inputs-form__label"
                                             for="ds-inputs-form__input-password"></label>
                                         <input type="checkbox" name="" id="passEye-form-reg">
@@ -151,7 +151,7 @@
                                         <span class="snowflake"></span>
                                         <input id="ds-inputs-form__input-password-repeat"
                                             class="ds-inputs-form__input" type="password" maxlength="30"
-                                            minlength="6" required>
+                                            minlength="6" tabindex="7" autocomplete="off" required>
                                         <label class="ds-inputs-form__label"
                                             for="ds-inputs-form__input-password-repeat"></label>
                                         <input type="checkbox" name="" id="repeat-passEye">
@@ -172,7 +172,7 @@
                                     <div class="ds-inputs-form  input-phone">
                                         <span class="snowflake"></span>
                                         <input id="ds-inputs-form__phone" class="ds-inputs-form__input" type="tel"
-                                            name="" id="">
+                                            name="" data-validate-url="/forum/phpBB3/app.php/phone/validate" tabindex="8">
                                         <label class="ds-inputs-form__label" for="ds-inputs-form__input-phone"></label>
                                     </div>
                                     <div class="ds-inputs-form__info-block">
@@ -211,7 +211,7 @@
                         </div>
                         <div class="auth-form__btn-container">
                             <!-- Для отображения активной кнопки, удалить класс ds-btn_disabled и добавить ds-btn_inverse -->
-                            <button class="auth-form__btn-register ds-btn ds-btn_disabled">
+                            <button class="auth-form__btn-register ds-btn ds-btn_disabled" tabindex="9">
                                 <div class="ds-btn__text">Зарегистрироваться</div>
                             </button>
                         </div>
