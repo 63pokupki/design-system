@@ -99,9 +99,13 @@
                                     <div class="ds-inputs-form  input-login">
                                         <span class="snowflake"></span>
                                         <input id="ds-inputs-form__input-login" class="ds-inputs-form__input"
+<<<<<<< HEAD
+                                            type="text" name="username" id="" maxlength="22" minlength="3" tabindex="4">
+=======
 
                                             type="text" name="username" id="" maxlength="22" minlength="3" tabindex="4">
 
+>>>>>>> 77fa12ef566aea3da9f11f2b869fa3e7e3c506d3
                                         <label class="ds-inputs-form__label" for="ds-inputs-form__input-login"></label>
                                     </div>
                                     <div class="ds-inputs-form__info-block">
@@ -117,9 +121,13 @@
                                     <div class="ds-inputs-form  input-email">
                                         <span class="snowflake"></span>
                                         <input id="ds-inputs-form__email" class="ds-inputs-form__input" type="email"
+<<<<<<< HEAD
+                                            name="email" maxlength="25" tabindex="5">
+=======
 
                                             name="email" maxlength="25" tabindex="5">
 
+>>>>>>> 77fa12ef566aea3da9f11f2b869fa3e7e3c506d3
                                         <label class="ds-inputs-form__label" for="ds-inputs-form__input-email"></label>
                                     </div>
                                     <div class="ds-inputs-form__info-block">
@@ -138,13 +146,19 @@
                                     <div class="ds-inputs-form  input-password">
                                         <span class="snowflake"></span>
                                         <input id="ds-inputs-form__input-password" class="ds-inputs-form__input"
+<<<<<<< HEAD
+=======
 
+>>>>>>> 77fa12ef566aea3da9f11f2b869fa3e7e3c506d3
                                             type="password" maxlength="30" minlength="6" tabindex="6" autocomplete="off" required>
                                         <label class="ds-inputs-form__label"
                                             for="ds-inputs-form__input-password"></label>
                                         <input type="checkbox" name="" id="passEye-form-reg">
                                         <label class="passEye-label" for="passEye-form-reg"></label>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 77fa12ef566aea3da9f11f2b869fa3e7e3c506d3
                                     </div>
                                     <div class="ds-inputs-form__info-block">
                                         <span class="ds-inputs-form__txt-info">6-30 символов</span>
@@ -157,9 +171,13 @@
                                         <span class="snowflake"></span>
                                         <input id="ds-inputs-form__input-password-repeat"
                                             class="ds-inputs-form__input" type="password" maxlength="30"
+<<<<<<< HEAD
+                                            minlength="6" tabindex="7" autocomplete="off" required>
+=======
 
                                             minlength="6" tabindex="7" autocomplete="off" required>
 
+>>>>>>> 77fa12ef566aea3da9f11f2b869fa3e7e3c506d3
                                         <label class="ds-inputs-form__label"
                                             for="ds-inputs-form__input-password-repeat"></label>
                                         <input type="checkbox" name="" id="repeat-passEye">
@@ -180,9 +198,13 @@
                                     <div class="ds-inputs-form  input-phone">
                                         <span class="snowflake"></span>
                                         <input id="ds-inputs-form__phone" class="ds-inputs-form__input" type="tel"
+<<<<<<< HEAD
+                                            name="" data-validate-url="/forum/phpBB3/app.php/phone/validate" tabindex="8">
+=======
 
                                             name="" data-validate-url="/forum/phpBB3/app.php/phone/validate" tabindex="8">
 
+>>>>>>> 77fa12ef566aea3da9f11f2b869fa3e7e3c506d3
                                         <label class="ds-inputs-form__label" for="ds-inputs-form__input-phone"></label>
                                     </div>
                                     <div class="ds-inputs-form__info-block">
@@ -218,7 +240,7 @@
                                         target="_blank">Политики конфиденциальности</a>.
                                 </div>            
                             </div>
-
+<<<<<<< HEAD
                         </div>
                         <div class="auth-form__btn-container">
                             <!-- Для отображения активной кнопки, удалить класс ds-btn_disabled и добавить ds-btn_inverse -->
@@ -262,7 +284,62 @@
                                     <label class="ds-inputs-form__label" for="ds-inputs-form__input-phone"></label>
                                 </div>
                             </div> 
+=======
+>>>>>>> 77fa12ef566aea3da9f11f2b869fa3e7e3c506d3
 
+                        </div>
+                        <!-- Ошибка указаных данных -->
+                        <div class="auth-form__txt-error">Неверно указаны данные, попропуйте еще раз</div>
+                        <!-- Кнопка восстановить -->
+                        <div class="auth-form__btn-container">
+                            <!-- Для отображения активной кнопки, удалить класс ds-btn_disabled и добавить ds-btn_inverse -->
+<<<<<<< HEAD
+                            <button class="auth-form__btn-recovery ds-btn ds-btn_disabled" tabindex="9">
+                                <div class="ds-btn__text">Восстановить</div>
+                            </button>
+=======
+                            <button class="auth-form__btn-register ds-btn ds-btn_disabled" tabindex="9">
+                                <div class="ds-btn__text">Зарегистрироваться</div>
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Форма восстановления пароля -->
+                    <form class="auth-form__form auth-form__form-password-recovery is-hidden" action="/forum/phpBB3/app.php/remind" method="post">
+                        <div class="auth-form__content-container">
+                            <div class="auth-form__heading">Восстановление пароля</div>
+                            <div class="auth-form__txt">Заполните ОДНО любое поле, которое помните</div>
+                            <!-- Логин -->
+                            <div class="ds-inputs-component is-error">
+                                <div class="ds-inputs-form  input-login">
+                                    <span class="snowflake"></span>
+                                    <input id="ds-inputs-form__input-login" class="ds-inputs-form__input"
+                                        type="text" name="username" id="" maxlength="22" minlength="3" tabindex="4">
+                                    <label class="ds-inputs-form__label" for="ds-inputs-form__input-login"></label>
+                                </div>
+                            </div> 
+                            <div class="auth-form__txt-or">или</div>
+                            <!-- Email -->
+                            <div class="ds-inputs-component">
+                                <div class="ds-inputs-form  input-email">
+                                    <span class="snowflake"></span>
+                                    <input id="ds-inputs-form__email" class="ds-inputs-form__input" type="email"
+                                        name="email" maxlength="25" tabindex="5">
+                                    <label class="ds-inputs-form__label" for="ds-inputs-form__input-email"></label>
+                                </div>
+                            </div>
+                            <div class="auth-form__txt-or">или</div>
+                            <!-- Телефон -->
+                            <div class="ds-inputs-component">
+                                <div class="ds-inputs-form  input-phone">
+                                    <span class="snowflake"></span>
+                                    <input id="ds-inputs-form__phone" class="ds-inputs-form__input" type="tel"
+                                        name="" data-validate-url="/forum/phpBB3/app.php/phone/validate" tabindex="8">
+                                    <label class="ds-inputs-form__label" for="ds-inputs-form__input-phone"></label>
+                                </div>
+                            </div> 
+
+>>>>>>> 77fa12ef566aea3da9f11f2b869fa3e7e3c506d3
                         </div>
                         <!-- Ошибка указаных данных -->
                         <div class="auth-form__txt-error">Неверно указаны данные, попропуйте еще раз</div>
