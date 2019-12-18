@@ -46,16 +46,8 @@ $button-border-radius: 24px;
         color: $color-primary-light;
         background: white;
         opacity: .6;
-        &:hover {
-            color: $color-primary-light;
-            background: white;
-            cursor: default;    
-        }
-        &:active {
-            transform: scale(1)!important;
-        }
-    
-
+        user-select: none;
+        pointer-events: none; 
     }
 
     &_flex {
