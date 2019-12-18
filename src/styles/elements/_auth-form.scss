@@ -240,6 +240,10 @@
         color: $color-text-heading;
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 77fa12ef566aea3da9f11f2b869fa3e7e3c506d3
 // РЕГИСТРАЦИЯ
     
     &__login-pass-container {
@@ -375,7 +379,49 @@
         }
         
     }
+    &__phone-container {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    &__phone {
+        display: flex;
+        width: 100%;
+        max-width: 350px;
+    }
+    &__phone-txt {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 350px;
+        margin: 13px;
+    }
+    @media (min-width: 768px) and (max-width: 1279px) {
+        .auth-form {
+            &__form-sign-up {
+                padding: 20px 10px;
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        .ds-inputs-form {
+            &__txt-info {
+                max-width: 150px;
+            }
+            // &__txt-error {
+            //     font-size: 10px;
+            // }
+            &__txt-error-login {
+                max-width: 202px;
+            }
+            &__txt-error-phone {
+                max-width: 133px;
+            }
+            &__txt-error-email {
+                max-width: 160px;
+            }        
 
+<<<<<<< HEAD
 // Восстановление пароля
     &__form-password-recovery {
         display: block;
@@ -446,6 +492,129 @@
         }
     }
 }
+=======
 
+        }
+
+        .auth-form {
+            max-width: 455px;
+            &__login-pass-container {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            &__login-container {
+                margin-right: 0;
+            }
+            &__phone-container {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            &__txt-footnote {
+                padding: 0px 4px 0 15px;
+            }
+            &__form-sign-up {
+                max-width: 455px;
+            }
+            &__right-tab {
+                &:after {
+                    right: calc(50% - 10px);
+                }
+            }
+            // Чекбокс
+            &__auth-tabs {
+                
+                &:checked ~.auth-form__right-tab {
+                    &:before {
+                        left: calc(50%-10px);
+                    }
+                    &:after {
+                        right: calc(50%-200px); 
+                    }
+                }
+                &:checked ~.auth-form__left-tab {
+                    &:before {
+                        display: none;
+                    }
+                    &:after {
+                        display: none;
+                    }
+
+                }
+            }
+        }
+        
+    }
+
+// Восстановление пароля
+    &__form-password-recovery {
+        display: block;
+        width: 455px;
+        padding: 20px 0 28px 0;
+        .ds-inputs-component {
+            min-height: auto;
+        }
+        .ds-inputs-form {
+            margin-bottom: 5px;
+        }
+        &.is-hidden {
+            display: none;
+        }
+        .auth-form__heading {
+            font-size: 18px;
+        } 
+    }
+
+    // Контейнер контента
+    &__content-container {
+        display: block;
+        padding: 0 39px;
+    }
+    // Блок "или"
+    &__txt-or {
+        display: block;
+        max-height: 12px;
+        text-align: center;
+        font-size: 13px;
+        color: $color-text-light-grey;
+    }
+    //Блок Ошибка указаных данных
+    &__txt-error {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 26px;
+        max-height: 26px;
+        margin: 15px 0;
+        background: $color-input-bg-error;
+        font-size: 13px;
+        color: $color-input-border-error;
+    }
+    &__btn-recovery {
+        width: 220px;
+        height: 45px;
+        font-size: 18px;
+        font-weight: 500;
+    }
+>>>>>>> 77fa12ef566aea3da9f11f2b869fa3e7e3c506d3
+
+    @media (max-width: 768px) {
+        .auth-form__content-container {
+            padding-left: 2px;
+            padding-right: 2px;
+        }
+        .auth-form__form-password-recovery {
+            max-width: 305px;
+            padding-left: 2px;
+            padding-right: 2px;
+            .auth-form__txt {
+                padding: 0 50px;
+            }
+        }
+        .auth-form__txt-error {
+            font-size: 12px;
+        }
+    }
+}
 
 
