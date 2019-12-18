@@ -452,7 +452,7 @@
                         left: calc(50%-10px);
                     }
                     &:after {
-                        right: calc(50%-200px); 
+                        right: calc(50%-10px); 
                     }
                 }
                 &:checked ~.auth-form__left-tab {
