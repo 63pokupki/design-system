@@ -312,6 +312,10 @@
 
         .auth-form {
             max-width: 455px;
+            &__form {
+                padding-left: 2px;
+                padding-right: 2px;
+            }
             &__login-pass-container {
                 justify-content: center;
                 flex-wrap: wrap;
@@ -334,7 +338,15 @@
                     right: calc(50% - 10px);
                 }
             }
-            // Чекбокс
+            //Регистрируясь на сайте
+            &__phone-txt {
+                margin: 13px 0;
+            }
+            &__phone-container, 
+            &__login-pass-container {
+                display: block;
+            }
+            // ТАбы
             &__auth-tabs {
                 
                 &:checked ~.auth-form__right-tab {
@@ -342,7 +354,7 @@
                         left: calc(50%-10px);
                     }
                     &:after {
-                        right: calc(50%-200px); 
+                        right: calc(50%-175px); 
                     }
                 }
                 &:checked ~.auth-form__left-tab {
