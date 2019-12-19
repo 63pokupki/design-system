@@ -318,8 +318,8 @@
                 max-width: 305px;
             }
             &__form {
-                padding-left: 2px;
-                padding-right: 2px;
+                padding-left: 0;
+                padding-right: 0;
             }
             &__login-pass-container {
                 justify-content: center;
@@ -528,8 +528,6 @@
         }
         .auth-form__form-password-recovery {
             max-width: 305px;
-            padding-left: 2px;
-            padding-right: 2px;
             .auth-form__txt {
                 padding: 0 50px;
             }
