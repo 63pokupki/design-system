@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Другие компоненты статичной страницы закупки</title>
-    <link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?3c4d5a419e6185541418" rel="stylesheet"><link href="css/ds-utils.css?3c4d5a419e6185541418" rel="stylesheet"><link href="css/ds-ui-kit.css?3c4d5a419e6185541418" rel="stylesheet"></head>
+    <link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?c05639b5e723ac2ac541" rel="stylesheet"><link href="css/ds-utils.css?c05639b5e723ac2ac541" rel="stylesheet"><link href="css/ds-ui-kit.css?c05639b5e723ac2ac541" rel="stylesheet"></head>
     <body>
         <body>
             <h1 class="ds-title">Другие компоненты статичной страницы закупки</h1>
@@ -427,22 +427,131 @@
                 </script>
             </div>
 
-            <h2 class="ds-title">Статус закупки</h2>
+            <h2 class="ds-title">Статусы закупки</h2>
+
             <div class="ds-wrapper">
-                <p>Класс <span class="ds-hl">green</span> временный! Позже к блоку будут дописаны модификаторы</p>
-            </div>
-            <div class="ds-wrapper">
-                <span class="stock-status green">
-                    <i class="ds-icon icon-box stock-status__icon"></i>
-                    <span class="stock-status__text">Сбор с 30.05.2018</span>
-                </span>
+                <div class="ds-divider">
+                    <span class="stock-status is-open">
+                        <i class="ds-icon stock-status__icon"></i>
+                        <span class="stock-status__text">Сбор с 30.05.2018</span>
+                    </span>
+                </div>
+                <div class="ds-divider">
+                    <span class="stock-status is-soon-stop">
+                        <i class="ds-icon stock-status__icon"></i>
+                        <span class="stock-status__text">Скоро стоп с 30.09.2018</span>
+                    </span>
+                </div>
+                <div class="ds-divider">
+                    <span class="stock-status is-fix">
+                        <i class="ds-icon stock-status__icon"></i>
+                        <span class="stock-status__text">Фиксирую с 31.09.2018</span>
+                    </span>
+                </div>
+                <div class="ds-divider">
+                    <span class="stock-status is-sorting">
+                        <i class="ds-icon stock-status__icon"></i>
+                        <span class="stock-status__text">Сортировка с 02.10.2018</span>
+                    </span>
+                </div>
+                <div class="ds-divider">
+                    <span class="stock-status is-close">
+                        <i class="ds-icon stock-status__icon"></i>
+                        <span class="stock-status__text">Не состоялась с 01.10.2018</span>
+                    </span>
+                </div>
+                <div class="ds-divider">
+                    <span class="stock-status is-delivery">
+                        <i class="ds-icon stock-status__icon"></i>
+                        <span class="stock-status__text">Сдано на доставку в пункты с 01.10.2018</span>
+                    </span>
+                </div>
+                <div class="ds-divider">
+                    <span class="stock-status is-waiting-cargo">
+                        <i class="ds-icon stock-status__icon"></i>
+                        <span class="stock-status__text">Ожидание груза с 01.10.2018</span>
+                    </span>
+                </div>
+                <div class="ds-divider">
+                    <span class="stock-status is-waiting-invoice">
+                        <i class="ds-icon stock-status__icon"></i>
+                        <span class="stock-status__text">Ожидание счета с 01.10.2018</span>
+                    </span>
+                </div>
+                <div class="ds-divider">
+                    <span class="stock-status is-pay">
+                        <i class="ds-icon stock-status__icon"></i>
+                        <span class="stock-status__text">Оплата с 01.10.2018</span>
+                    </span>
+                </div>
+                <div class="ds-divider">
+                    <span class="stock-status is-ready">
+                        <i class="ds-icon stock-status__icon"></i>
+                        <span class="stock-status__text">Заказ в пункте выдачи с 01.10.2018</span>
+                    </span>
+                </div>
             </div>
 
             <div class="ds-code-wrapper">
                 <script type="text/plain" class="language-markup">
-                    <span class="stock-status green">
-                        <i class="ds-icon icon-box stock-status__icon"></i>
+
+                    <span class="stock-status is-open">
+                        <i class="ds-icon stock-status__icon"></i>
                         <span class="stock-status__text">Сбор с 30.05.2018</span>
+                    </span>
+
+
+                    <span class="stock-status is-soon-stop">
+                        <i class="ds-icon stock-status__icon"></i>
+                        <span class="stock-status__text">Скоро стоп с 30.09.2018</span>
+                    </span>
+
+
+                    <span class="stock-status is-fix">
+                        <i class="ds-icon stock-status__icon"></i>
+                        <span class="stock-status__text">Фиксирую с 31.09.2018</span>
+                    </span>
+
+
+                    <span class="stock-status is-sorting">
+                        <i class="ds-icon stock-status__icon"></i>
+                        <span class="stock-status__text">Сортировка с 02.10.2018</span>
+                    </span>
+
+
+                    <span class="stock-status is-close">
+                        <i class="ds-icon stock-status__icon"></i>
+                        <span class="stock-status__text">Не состоялась с 01.10.2018</span>
+                    </span>
+
+
+                    <span class="stock-status is-delivery">
+                        <i class="ds-icon stock-status__icon"></i>
+                        <span class="stock-status__text">Сдано на доставку в пункты с 01.10.2018</span>
+                    </span>
+
+
+                    <span class="stock-status is-waiting-cargo">
+                        <i class="ds-icon stock-status__icon"></i>
+                        <span class="stock-status__text">Ожидание груза с 01.10.2018</span>
+                    </span>
+
+
+                    <span class="stock-status is-waiting-invoice">
+                        <i class="ds-icon stock-status__icon"></i>
+                        <span class="stock-status__text">Ожидание счета с 01.10.2018</span>
+                    </span>
+
+
+                    <span class="stock-status is-pay">
+                        <i class="ds-icon stock-status__icon"></i>
+                        <span class="stock-status__text">Оплата с 01.10.2018</span>
+                    </span>
+
+
+                    <span class="stock-status is-ready">
+                        <i class="ds-icon stock-status__icon"></i>
+                        <span class="stock-status__text">Заказ в пункте выдачи с 01.10.2018</span>
                     </span>
                 </script>
             </div>
@@ -498,6 +607,6 @@
                     </i>
                 </script>
             </div>
-        <script type="text/javascript" src="js/highlight-syntax.js?3c4d5a419e6185541418"></script><script type="text/javascript" src="js/ds-utils.js?3c4d5a419e6185541418"></script><script type="text/javascript" src="js/ds-ui-kit.js?3c4d5a419e6185541418"></script></body>
+        <script type="text/javascript" src="js/highlight-syntax.js?c05639b5e723ac2ac541"></script><script type="text/javascript" src="js/ds-utils.js?c05639b5e723ac2ac541"></script><script type="text/javascript" src="js/ds-ui-kit.js?c05639b5e723ac2ac541"></script></body>
     </body>
 </html>
