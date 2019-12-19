@@ -310,17 +310,20 @@ document.addEventListener("DOMContentLoaded", () => {
 (()=> {
     let af = document.querySelectorAll(".auth-form");
 
-    af.forEach((a)=> {
-        let btn_link      = a.querySelector(".auth-form__link-to-recovery-password"),
-            form_signUp   = a.querySelector(".auth-form__form-sign-in"),
-            form_recovery = a.querySelector(".auth-form__form-password-recovery");
-
-        btn_link.addEventListener("click",(bl)=> {
-            bl.preventDefault();
-            form_signUp.style.display   = "none";
-            form_recovery.style.display = "block";
+    if (af) {
+        af.forEach((a)=> {
+            let btn_link      = a.querySelector(".auth-form__link-to-recovery-password"),
+                form_signUp   = a.querySelector(".auth-form__form-sign-in"),
+                form_recovery = a.querySelector(".auth-form__form-password-recovery");
+    
+            btn_link.addEventListener("click",(bl)=> {
+                bl.preventDefault();
+                form_signUp.style.display   = "none";
+                form_recovery.style.display = "block";
+            });
+    
         });
+    }
+})();
 
-    });
-})()
 
