@@ -14,6 +14,10 @@
         flex-shrink: 1.2;
     }
 
+    &__right {
+        flex-shrink: 0;
+    }
+
     // тег
     &__tag {
         font-size: 10px;
@@ -28,6 +32,9 @@
         color: #1d1e1f;
         font-weight: bold;
         font-size: 16px;
+        &::first-letter {
+            text-transform: capitalize;
+        }
     }
 
     &__status-icon {

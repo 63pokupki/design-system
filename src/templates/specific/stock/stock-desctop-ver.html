@@ -175,25 +175,26 @@
         <div class="wrapper">
             <div class="stock-d">
                 <div class="nav-bc-bar">
-                    <nav class="breadcrumb">
-                        <ol class="breadcrumb__list">
-                            <li class="breadcrumb__item">
-                                <a class="link" href="#">Новые закупки</a>
-                            </li>
-                            <li class="breadcrumb__item">
-                                <a class="link" href="#">Совместные покупки</a>
-                            </li>
-                            <!-- активная крошка имеет модификатор active -->
-                            <li class="breadcrumb__item breadcrumb__item_active">
-                                <a class="link" href="#">PHIBE. Финальная распродажа + основная коллекция</a>
-                            </li>
-                        </ol>
-                    </nav>
                     <div>
                         <a href="#" class="link nav-bc-bar__notification">Уведомления (145)</a>
                         <a href="#" class="link">Личные сообщения (147)</a>
                     </div>
                 </div>
+    
+                <nav class="breadcrumb" style="margin-bottom: 25px;">
+                    <ol class="breadcrumb__list">
+                        <li class="breadcrumb__item">
+                            <a class="link" href="#">Новые закупки</a>
+                        </li>
+                        <li class="breadcrumb__item">
+                            <a class="link" href="#">Совместные покупки</a>
+                        </li>
+                        <!-- активная крошка имеет модификатор active -->
+                        <li class="breadcrumb__item breadcrumb__item_active">
+                            <a class="link" href="#">PHIBE. Финальная распродажа + основная коллекция</a>
+                        </li>
+                    </ol>
+                </nav>
                 <div class="stock-d__banner">
                     <div class="sp-offer-slider">
                         <button class="sp-offer-slider__prev">
@@ -242,8 +243,8 @@
                                     >#TOP
                                     <span class="tooltip tooltip_top  tooltip_ta-c">Топ-закупка</span>
                                 </span>
-                                <span class="stock-status green stock-brief__status">
-                                    <i class="ds-icon icon-box stock-status__icon"></i>
+                                <span class="stock-status is-open stock-brief__status">
+                                    <i class="ds-icon stock-status__icon"></i>
                                     <span class="stock-status__text">Сбор с 30.05.2018</span>
                                 </span>
                             </div>
@@ -276,9 +277,9 @@
                                 </div>
                             </div>
                             <div class="stock-brief__row">
-                                <button class="ds-btn ds-btn_flex stock-brief__send">
+                                <a class="ds-btn ds-btn_flex stock-brief__send">
                                     <span class="ds-btn__text">Личное сообщение</span>
-                                </button>
+                                </a>
                                 <button class="ds-btn ds-btn_flex stock-brief__discuss">
                                     <span class="ds-btn__text">Вопрос-ответ</span>
                                     <span class="num-of-discussions">
