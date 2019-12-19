@@ -154,7 +154,7 @@
         width: 100%;
         background: #ffffff;
         position: relative;
-        padding: 20px 39px;
+        padding: 20px 0;
         border-radius: 10px;
         &.is-error {
             >.ds-inputs-form {
@@ -168,6 +168,9 @@
                 }
             }
             .auth-form__error-message {
+                visibility: visible;
+            }
+            .auth-form__txt-error {
                 visibility: visible;
             }
         }
@@ -211,7 +214,8 @@
     }
     // Кнопка вход
     &__btn-enter {
-        margin: 25px 13px;
+        width: 200px;
+        margin: 25px auto;
         min-height: 45px;
         border: 1px solid $click-load-color;
         font-weight: 500;
@@ -283,13 +287,6 @@
         width: 100%;
         max-width: 350px;
         margin: 13px;
-    }
-    @media (min-width: 768px) and (max-width: 1279px) {
-        .auth-form {
-            &__form-sign-up {
-                padding: 20px 10px;
-            }
-        }
     }
     @media (max-width: 768px) {
         // Инпуты
@@ -391,13 +388,6 @@
         width: 100%;
         max-width: 350px;
         margin: 13px;
-    }
-    @media (min-width: 768px) and (max-width: 1279px) {
-        .auth-form {
-            &__form-sign-up {
-                padding: 20px 10px;
-            }
-        }
     }
     @media (max-width: 768px) {
         .ds-inputs-form {
@@ -513,6 +503,7 @@
         background: $color-input-bg-error;
         font-size: 13px;
         color: $color-input-border-error;
+        visibility: hidden;
     }
     &__btn-recovery {
         width: 220px;
