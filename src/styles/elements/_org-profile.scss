@@ -37,10 +37,16 @@
         font-size: 12px;
         font-weight: bold;
         margin-bottom: 3px;
+        &::first-letter {
+            text-transform: capitalize;
+        }
     }
 
     &__status {
         font-size: 10px;
+        &::first-letter {
+            text-transform: capitalize;
+        }
     }
 
     &__message {

@@ -6,7 +6,7 @@ $button-border-radius: 24px;
 // кнопка с категориями
 .menu-btn {
     color: $color-primary-light;
-    
+
     &__icon {
         margin-right: 10px;
         font-size: 16px;
@@ -36,26 +36,37 @@ $button-border-radius: 24px;
     padding: 7px 18px;
     font-weight: 600;
     font-size: $button-font-size;
+    text-decoration: none;
+    line-height: 135%;
     transition: background $transition-ultra-fast, color $transition-ultra-fast;
+    
+    &::first-letter {
+        text-transform: capitalize;
+    }
 
-    &:hover, &_hover {
+    &__text {
+        &::first-letter {
+            text-transform: capitalize;
+        }
+    }
+
+    &:hover,
+    &_hover {
         color: white;
         background: $color-primary-light;
     }
     &_disabled {
         color: $color-primary-light;
         background: white;
-        opacity: .6;
+        opacity: 0.6;
         &:hover {
             color: $color-primary-light;
             background: white;
-            cursor: default;    
+            cursor: default;
         }
         &:active {
-            transform: scale(1)!important;
+            transform: scale(1) !important;
         }
-    
-
     }
 
     &_flex {
@@ -69,7 +80,7 @@ $button-border-radius: 24px;
         &:hover {
             color: $color-primary-light;
             background: white;
-        }        
+        }
     }
 
     &:active {

@@ -92,6 +92,8 @@ button {
     justify-content: center;
     -moz-appearance: none;
     -webkit-appearance: none;
+    font: 600 14px $font-primary;
+    
     &:focus {
         outline: none;
     }
