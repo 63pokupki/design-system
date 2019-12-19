@@ -14,6 +14,10 @@
         cursor: pointer;
         position: relative;
 
+        &::first-letter {
+            text-transform: capitalize;
+        }
+
         &:before {
             content: "";
             display: block;
