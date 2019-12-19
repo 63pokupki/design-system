@@ -2,13 +2,6 @@
     display: block;
     width: 100%;
     min-height: 100px;
-    // Ввод текста в поле
-    &.is-typing {
-        border-color: $color-primary-light;
-        &:before {
-            color: $color-primary-light;
-        }
-    }
 
     //Ошибка ввода
     &.is-error {
@@ -56,67 +49,50 @@
 }
 .ds-inputs-form {
     display: block;
+    min-width: 200px;
     height: 48px;
     margin: 13px;
-    padding: 0 20px;
-    border: 1px solid $color-input-border;
-    border-radius: 2px;
-    outline: none;
     position: relative;
-    &:before {
-        display: inline-flex;
-        height: 15px;
-        position: absolute;
-        top: -12px;
-        left: 5px;
-        padding: 0 10px;
-        font-family: Open Sans;
-        font-weight: 600;
-        font-size: 15px;        
-        z-index: 20;
-        color: $color-text-base;
-    }
-
-
-    // // Ввод текста в поле
-    // &.is-typing {
-    //     border-color: $color-primary-light;
-    //     &:before {
-    //         color: $color-primary-light;
-    //     }
-    // }
-
-    // //Ошибка ввода
-    // &.is-error {
-    //     border-color: $color-input-border-error;
-    //     background: $color-input-bg-error;
-    //     input {
-    //         background: $color-input-bg-error;
-    //     }
-    //     &:before {
-    //         color: $color-input-border-error;
-    //     }
-    //     .ds-inputs-form__txt-error {
-    //         visibility: visible;
-    //     }
-
-    // }
-    // &.is-hidden-snowflake {
-    //     >.snowflake {
-    //         display: none;
-    //     }
-    // }
-
     
-    input { 
-        width: 97%;
+    &__input { 
+        width: 100%;
+        min-width: 200px;
         height: 100%;
+        padding: 0 40px 0 20px;
         border: none;
         outline: none;
         font-size: 14px;
         font-weight: 600;
         color: $dark-grey-color;
-            
+        border: 1px solid $color-input-border;
+        border-radius: 2px;
+        outline: none;
+        &:focus {
+            border: 1px solid $color-primary-light;
+            ~.ds-inputs-form__label:before {
+                color: $color-primary-light;
+            }
+        }
+    
+    }
+    &__label {
+        position: absolute;
+        left: 0;
+
+        &:before {
+            display: inline-flex;
+            height: 15px;
+            position: absolute;
+            top: -12px;
+            left: 5px;
+            padding: 0 10px;
+            font-family: Open Sans;
+            font-weight: 600;
+            font-size: 14px; 
+            z-index: 20;
+            color: $color-text-base;
+        }
+    
     }
 
     //Info-block
@@ -132,6 +108,7 @@
         display: flex;
         width: 50%;
         max-width: 170px;
+        padding: 0 15px 0 0;
         font-weight: 600;
         font-size: 11px;
         color: $color-input-txt-info;
@@ -141,24 +118,24 @@
     &__txt-error {
         display: flex;
         justify-content: flex-end; 
-        width: 85%;       
+        width: 100%;       
         text-align: left;
         font-weight: 600;
         font-size: 12px;
         color: $color-input-border-error;
         visibility: hidden;
         user-select: none;
-        &_mw160 {
+        &-email, &-phone {
             max-width: 160px;
         }
-        &_mw203 {
+        &-login {
             max-width: 203px;
         }
     }
     &__icon-info {
         position: absolute;
         top: 10px;
-        left: 140px;
+        right: 0;
         user-select: none;                
     }
 
@@ -178,16 +155,19 @@
 
 // Login
 .input-login {
-    &:before {
-        content: "Логин";
+    .ds-inputs-form__label {
+        &:before {
+            content: "Логин";
+        }
+
     }
     &:after {
         content: "";
         background: url("~images/auth-form/bg-line-label-input.svg");
         width: 66px;
-        height: 2px;
+        height: 1px;
         position: absolute;
-        top: -2px;
+        top: 0px;
         left: 5px;
         z-index: 10;
     }
@@ -196,16 +176,18 @@
 
 // Password
 .input-password {
-    &:before {
-        content: "Пароль";
+    .ds-inputs-form__label {
+        &:before {
+            content: "Пароль";
+        }
     }
     &:after {
         content: "";
         background: url("~images/auth-form/bg-line-label-input.svg");
         width: 75px;
-        height: 2px;
+        height: 1px;
         position: absolute;
-        top: -2px;
+        top: 0px;
         left: 5px;
         z-index: 10;
     }
@@ -258,16 +240,18 @@
 
 //Поле ввода почты
 .input-email {
-    &:before {
-        content: "Email";
+    .ds-inputs-form__label {
+        &:before {
+            content: "Email";
+        }
     }
     &:after {
         content: "";
         background: url("~images/auth-form/bg-line-label-input.svg");
         width: 60px;
-        height: 2px;
+        height: 1px;
         position: absolute;
-        top: -2px;
+        top: 0;
         left: 4px;
         z-index: 10;
     }
@@ -280,16 +264,19 @@
         max-width: 159px;
     }
 
-    &:before {
-        content: "Номер телефона";
+    .ds-inputs-form__label {
+        &:before {
+            content: "Номер телефона";
+            white-space: nowrap;
+        }
     }
     &:after {
         content: "";
         background: url("~images/auth-form/bg-line-label-input.svg");
         width: 147px;
-        height: 2px;
+        height: 1px;
         position: absolute;
-        top: -2px;
+        top: 0;
         left: 4px;
         z-index: 10;
     }
@@ -301,8 +288,11 @@
 
 //Повторный ввод пароля
 .input-password-repeat {
-    &:before {
-        content: "Повторите пароль"!important;
+    .ds-inputs-form__label {
+        &:before {
+            content: "Повторите пароль";
+            white-space: nowrap;
+        }
     }
     &:after {
         width: 160px;
@@ -319,36 +309,6 @@
 }
 
 
-// Лейбл
-// Скопировать в инпут и заменить текст в content: "" у before
-// В зависимости от длинны текста, необходимо будет 
-// менять ширину и позицию left
-
-
-// &:before {
-//     content: "Лейбл";
-//     display: inline-flex;
-//     height: 15px;
-//     position: absolute;
-//     top: -12px;
-//     left: 5px;
-//     padding: 0 10px;
-//     font-family: Open Sans;
-//     font-weight: 600;
-//     font-size: 15px;
-//     color: $light-gray-sum-btn;
-//     z-index: 20;
-// }
-// &:after {
-//     content: "";
-//     background: url("~images/auth-form/bg-line-label-input.svg");
-//     width: 66px;
-//     height: 2px;
-//     position: absolute;
-//     top: -2px;
-//     left: 4px;
-//     z-index: 10;
-// }
 
 
 

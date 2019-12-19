@@ -58,15 +58,9 @@ $button-border-radius: 24px;
     &_disabled {
         color: $color-primary-light;
         background: white;
-        opacity: 0.6;
-        &:hover {
-            color: $color-primary-light;
-            background: white;
-            cursor: default;
-        }
-        &:active {
-            transform: scale(1) !important;
-        }
+        opacity: .6;
+        user-select: none;
+        pointer-events: none; 
     }
 
     &_flex {

@@ -277,17 +277,23 @@
     <h2 class="ds-title">Поле ввода пароля</h2>
     <div class="ds-wrapper">
         <div class="ds-text">
+
             Для смены состояний, необходимо присвоить элементу<span class="ds-hl">ds-inputs-component</span>:<br>
-             1) класс<span class="ds-hl">.is-typing</span> при вводе текста; <br>
-            2) класс<span class="ds-hl">.is-error</span> при ошибке ввода;<br>
-            3) класс <span class="ds-hl">.is-hidden-snowflake</span> для скрытия красной снежинки;<br>
-            4) класс <span class="ds-hl">.is-unavailable</span> для неактивного состояния поля;
+            
+            1) класс<span class="ds-hl">.is-error</span> при ошибке ввода;<br>
+            2) класс <span class="ds-hl">.is-hidden-snowflake</span> для скрытия красной снежинки;<br>
+            3) класс <span class="ds-hl">.is-unavailable</span> для неактивного состояния поля;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 77fa12ef566aea3da9f11f2b869fa3e7e3c506d3
         </div>
         <div class="ds-divider">
             <div class="ds-inputs-component">
                 <div class="ds-inputs-form  input-password">
                     <span class="snowflake"></span>
-                    <input class="ds-inputs-form__input" type="password" maxlength="30" minlength="6" required>
+                    <input id="ds-inputs-form__input-password" class="ds-inputs-form__input" type="password" maxlength="30" minlength="6" required>
+                    <label class="ds-inputs-form__label" for="ds-inputs-form__input-password"></label>
                     <input type="checkbox" name="" id="passEye">
                     <label class="passEye-label" for="passEye"></label>
                 </div>
@@ -304,7 +310,8 @@
             <div class="ds-inputs-component">
                 <div class="ds-inputs-form  input-password">
                     <span class="snowflake"></span>
-                    <input class="ds-inputs-form__input" type="password" maxlength="30" minlength="6" required>
+                    <input id="ds-inputs-form__input-password" class="ds-inputs-form__input" type="password" maxlength="30" minlength="6" required>
+                    <label class="ds-inputs-form__label" for="ds-inputs-form__input-password"></label>
                     <input type="checkbox" name="" id="passEye">
                     <label class="passEye-label" for="passEye"></label>
                 </div>
@@ -312,7 +319,7 @@
                     <span class="ds-inputs-form__txt-info">6-30 символов</span>
                     <span class="ds-inputs-form__txt-error">Слишком короткий</span>
                 </div>
-            </div>    
+            </div>
         </script>
     </div>
 
@@ -323,7 +330,8 @@
             <div class="ds-inputs-component">
                 <div class="ds-inputs-form  input-login">
                     <span class="snowflake"></span>
-                    <input type="text" name="" id="" maxlength="22" minlength="3">
+                    <input id="ds-inputs-form__input-login" class="ds-inputs-form__input" type="text" name="" id="" maxlength="22" minlength="3">
+                    <label class="ds-inputs-form__label" for="ds-inputs-form__input-login"></label>
                 </div>
                 <div class="ds-inputs-form__info-block">
                     <span class="ds-inputs-form__txt-info">3-22 символа</span>
@@ -339,14 +347,15 @@
             <div class="ds-inputs-component">
                 <div class="ds-inputs-form  input-login">
                     <span class="snowflake"></span>
-                    <input type="text" name="" id="">
+                    <input id="ds-inputs-form__input-login" class="ds-inputs-form__input" type="text" name="" id="" maxlength="22" minlength="3">
+                    <label class="ds-inputs-form__label" for="ds-inputs-form__input-login"></label>
                 </div>
                 <div class="ds-inputs-form__info-block">
                     <span class="ds-inputs-form__txt-info">3-22 символа</span>
                     <span class="ds-inputs-form__txt-error ds-inputs-form__txt-error_mw203">Извините, пользователь с
                         таким именем уже существует</span>
                 </div>
-            </div>    
+            </div>
         </script>
     </div>
 
@@ -357,11 +366,12 @@
             <div class="ds-inputs-component">
                 <div class="ds-inputs-form  input-email">
                     <span class="snowflake"></span>
-                    <input type="email" name="" id="">
+                    <input id="ds-inputs-form__email" class="ds-inputs-form__input" type="email" name="" id="">
+                    <label class="ds-inputs-form__label" for="ds-inputs-form__input-email"></label>
                 </div>
                 <div class="ds-inputs-form__info-block">
                     <span class="ds-inputs-form__txt-info">Будет использоваться для восстановления доступа</span>
-                    <span class="ds-inputs-form__txt-error ds-inputs-form__txt-error_mw160">Уже используется другим
+                    <span class="ds-inputs-form__txt-error ds-inputs-form__txt-error_email">Уже используется другим
                         пользователем</span>
                 </div>
             </div>
@@ -373,11 +383,12 @@
             <div class="ds-inputs-component">
                 <div class="ds-inputs-form  input-email">
                     <span class="snowflake"></span>
-                    <input type="email" name="" id="">
+                    <input id="ds-inputs-form__email" class="ds-inputs-form__input" type="email" name="" id="">
+                    <label class="ds-inputs-form__label" for="ds-inputs-form__input-email"></label>
                 </div>
                 <div class="ds-inputs-form__info-block">
                     <span class="ds-inputs-form__txt-info">Будет использоваться для восстановления доступа</span>
-                    <span class="ds-inputs-form__txt-error ds-inputs-form__txt-error_mw160">Уже используется другим
+                    <span class="ds-inputs-form__txt-error ds-inputs-form__txt-error_email">Уже используется другим
                         пользователем</span>
                 </div>
             </div>
@@ -391,7 +402,8 @@
             <div class="ds-inputs-component">
                 <div class="ds-inputs-form  input-phone">
                     <span class="snowflake"></span>
-                    <input type="tel" name="" id="">
+                    <input id="ds-inputs-form__phone" class="ds-inputs-form__input" type="tel" name="" id="">
+                    <label class="ds-inputs-form__label" for="ds-inputs-form__input-phone"></label>
                 </div>
                 <div class="ds-inputs-form__info-block">
                     <span class="ds-inputs-form__txt-info">
@@ -400,7 +412,7 @@
                             <!-- <span class="tooltip  tooltip_right"></span> -->
                         </i>
                     </span>
-                    <span class="ds-inputs-form__txt-error ds-inputs-form__txt-error_mw160"> Уже используется другим
+                    <span class="ds-inputs-form__txt-error ds-inputs-form__txt-error-phone"> Уже используется другим
                         пользователем</span>
                 </div>
             </div>
@@ -412,20 +424,17 @@
             <div class="ds-inputs-component">
                 <div class="ds-inputs-form  input-phone">
                     <span class="snowflake"></span>
-                    <input type="tel" name="" id="">
+                    <input id="ds-inputs-form__phone" class="ds-inputs-form__input" type="tel" name="" id="">
+                    <label class="ds-inputs-form__label" for="ds-inputs-form__input-phone"></label>
                 </div>
                 <div class="ds-inputs-form__info-block">
                     <span class="ds-inputs-form__txt-info">
                         Будет отправлено СМС с кодом подтверждения
                         <i class="ds-icon ds-inputs-form__icon-info icon-info has-tooltip">
-                            <!-- <span class="tooltip  tooltip_right">Если у вас возникли проблемы с регистрацией или входом
-                                на форум - пишите на адрес службы поддержки
-                                <a class="link link_colored bold"
-                                    href="mailto:support@63pokupki.ru">support@63pokupki.ru</a>
-                            </span> -->
+                            <!-- <span class="tooltip  tooltip_right"></span> -->
                         </i>
                     </span>
-                    <span class="ds-inputs-form__txt-error ds-inputs-form__txt-error_mw160"> Уже используется другим
+                    <span class="ds-inputs-form__txt-error ds-inputs-form__txt-error_phone"> Уже используется другим
                         пользователем</span>
                 </div>
             </div>
@@ -439,7 +448,8 @@
             <div class="ds-inputs-component">
                 <div class="ds-inputs-form  input-password input-password-repeat">
                     <span class="snowflake"></span>
-                    <input class="ds-inputs-form__input" type="password" maxlength="30" minlength="6" required>
+                    <input id="ds-inputs-form__input-password-repeat" class="ds-inputs-form__input" type="password" maxlength="30" minlength="6" required>
+                    <label class="ds-inputs-form__label" for="ds-inputs-form__input-password-repeat"></label>
                     <input type="checkbox" name="" id="repeat-passEye">
                     <label class="passEye-label" for="repeat-passEye"></label>   
                 </div>
@@ -456,9 +466,10 @@
             <div class="ds-inputs-component">
                 <div class="ds-inputs-form  input-password input-password-repeat">
                     <span class="snowflake"></span>
-                    <input class="ds-inputs-form__input" type="password" maxlength="20" minlength="6" required>
+                    <input id="ds-inputs-form__input-password-repeat" class="ds-inputs-form__input" type="password" maxlength="30" minlength="6" required>
+                    <label class="ds-inputs-form__label" for="ds-inputs-form__input-password-repeat"></label>
                     <input type="checkbox" name="" id="repeat-passEye">
-                    <label class="passEye-label" for="repeat-passEye"></label>
+                    <label class="passEye-label" for="repeat-passEye"></label>   
                 </div>
                 <div class="ds-inputs-form__info-block">
                     <span class="ds-inputs-form__txt-info"></span>
