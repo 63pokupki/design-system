@@ -48,14 +48,11 @@
         background: transparent;
     }
 }
-// @media (max-width: 992px) {
-//     .about-us__video {
-//         &-container {
-//             width: 675px;
-//             height: 372px;
-//         }
-//     }
-// }
+@media (max-width: 768px) {
+    .about-us__video {
+        padding: 5% 1%;
+    }
+}
 
 
 
