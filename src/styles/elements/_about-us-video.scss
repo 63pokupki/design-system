@@ -4,6 +4,12 @@
     align-items: center;
     width: 100%;
     margin: 0 auto;
+    padding: 15%;
+    background-color: #FFFFFF;
+    background: url("https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__video/about-us-video_bg.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
 
     &-container {
         display: flex;
@@ -11,6 +17,7 @@
         width: 100%;
         z-index: 10;
         position: relative;
+        background: transparent;
     }
     &-player {
         display: flex;
@@ -20,6 +27,7 @@
         border: 3px solid #254F8C;
         z-index: 10;
         position: relative;
+        background: #ffffff;
     }
     &-bg {
         display: block;
@@ -37,6 +45,7 @@
         left: 0;
         width: 100%;
         height: 100%;
+        background: transparent;
     }
 }
 // @media (max-width: 992px) {
