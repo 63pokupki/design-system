@@ -5,15 +5,14 @@
 
     //Ошибка ввода
     &.is-error {
-        .ds-inputs-form {
-            border-color: $color-input-border-error;
-            background: $color-input-bg-error;
+        .ds-inputs-form__label {
             &:before {
-                color: $color-input-border-error;
+                color: $color-input-border-error!important;
             }
         }
         input {
             background: $color-input-bg-error;
+            border-color: $color-input-border-error;
         }
         .ds-inputs-form__txt-error {
             visibility: visible;
@@ -64,7 +63,7 @@
         font-size: 14px;
         font-weight: 600;
         color: $dark-grey-color;
-        border: 1px solid $color-input-border;
+        border: 1px solid $color-text-base;
         border-radius: 2px;
         outline: none;
         &:focus {

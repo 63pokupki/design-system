@@ -156,22 +156,34 @@
         position: relative;
         padding: 20px 0;
         border-radius: 10px;
-        &.is-error {
-            >.ds-inputs-form {
-                background: #FFF1F1;
-                border-color: $color-input-border-error;
-                >input {
+        &-sign-in {
+            &.is-error {
+                >.ds-inputs-form {
                     background: #FFF1F1;
+                    border-color: $color-input-border-error;
+                    >input {
+                        background: #FFF1F1;
+                    }
+                    &:before {
+                        color: $color-input-border-error;
+                    }
                 }
-                &:before {
-                    color: $color-input-border-error;
+                .auth-form__error-message {
+                    visibility: visible;
                 }
-            }
-            .auth-form__error-message {
-                visibility: visible;
-            }
-            .auth-form__txt-error {
-                visibility: visible;
+                // .auth-form__txt-error {
+                //     visibility: visible;
+                // }
+                .ds-inputs-form__label {
+                    &:before {
+                        color: $color-input-border-error!important;
+                    }
+                }
+                input {
+                    background: $color-input-bg-error;
+                    border-color: $color-input-border-error;
+                }
+        
             }
         }
         // Форма регистрации
@@ -205,6 +217,7 @@
     //Сообщение об ошибке
     &__error-message {
         display: flex;
+        justify-content: flex-end;
         visibility: hidden;
         align-self: flex-end;
         margin: 0 13px 0 0;
@@ -230,6 +243,7 @@
         font-weight: 600;
         margin: 0 0 10px 0;
         appearance: none;
+        color: $color-primary-light;
     }
 
     // ЗАголовок формы
@@ -504,6 +518,9 @@
         font-size: 13px;
         color: $color-input-border-error;
         visibility: hidden;
+        &.is-visible {
+            visibility: visible;
+        }
     }
     &__btn-recovery {
         width: 220px;
