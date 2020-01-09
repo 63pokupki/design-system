@@ -23,10 +23,13 @@
             1) класс<span class="ds-hl">is-error</span> при ошибке ввода;<br>
             2) класс <span class="ds-hl">is-hidden-snowflake</span> для скрытия красной снежинки; <br>
             3) класс <span class="ds-hl">is-hidden-info</span> для скрытия подсказок снизу;<br>
-            4) класс <span class="ds-hl">.is-unavailable</span> для неактивного состояния поля;
+            4) класс <span class="ds-hl">.is-unavailable</span> для неактивного состояния поля; <br>
             <br>
             Если введены неправельные данные, появляется текст с ошибкой над кнопкой. Для этого, необходимо
-            присвоить класс <span class="ds-hl">is-error</span>элементу<span class="ds-hl">auth-form__form</span>.
+            присвоить класс <span class="ds-hl">is-error</span>элементу<span class="ds-hl">auth-form__form</span>. <br>
+            <br>
+            Для отображения активной кнопки, удалить класс <span class="ds-hl">.ds-btn_disabled</span> и добавить <span class="ds-hl">.ds-btn_inverse</span>.
+
         </div>
 
         <div class="ds-divider ds-center" style="background: #4a89dc;">
@@ -46,7 +49,7 @@
                         
                         <div class="auth-form__heading">Вход на сайт</div>
                         <div class="auth-form__content-container">
-                            <!-- Поле логин -->
+                            <!-- Поле логин -->                            
                             <div class="ds-inputs-component is-hidden-info is-hidden-snowflake">
                                 <div class="ds-inputs-form  input-login">
                                     <span class="snowflake"></span>
@@ -85,7 +88,8 @@
                             </div>
 
                         </div>
-                        <button class="ds-btn auth-form__btn-enter">
+                        <!-- Для отображения активной кнопки, удалить класс ds-btn_disabled и добавить ds-btn_inverse -->
+                        <button class="ds-btn auth-form__btn-enter ds-btn_disabled">
                             <div class="ds-btn__text">Вход</div>
                         </button>
                         <a class="auth-form__link-to-recovery-password link link_colored" href="">Забыли пароль?</a>
@@ -220,7 +224,7 @@
     
                             </div>
                         </div>
-                        <!-- Кнопка восстановить -->
+                        <!-- Кнопка зарегистрироваться -->
                         <div class="auth-form__btn-container">
                             <!-- Для отображения активной кнопки, удалить класс ds-btn_disabled и добавить ds-btn_inverse -->
                             <button class="auth-form__btn-register ds-btn ds-btn_disabled" tabindex="9">

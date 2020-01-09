@@ -9,8 +9,8 @@
         margin: 20px 0 30px 0;
         &-footnote {
             max-width: 349px;
-            margin: 0;
-            padding: 0 0 0 28px;
+            margin: 13px 0 0 0;
+            padding: 0;
             font-size: 10px;
             line-height: 11px;
 
@@ -156,22 +156,34 @@
         position: relative;
         padding: 20px 0;
         border-radius: 10px;
-        &.is-error {
-            >.ds-inputs-form {
-                background: #FFF1F1;
-                border-color: $color-input-border-error;
-                >input {
+        &-sign-in {
+            &.is-error {
+                >.ds-inputs-form {
                     background: #FFF1F1;
+                    border-color: $color-input-border-error;
+                    >input {
+                        background: #FFF1F1;
+                    }
+                    &:before {
+                        color: $color-input-border-error;
+                    }
                 }
-                &:before {
-                    color: $color-input-border-error;
+                .auth-form__error-message {
+                    visibility: visible;
                 }
-            }
-            .auth-form__error-message {
-                visibility: visible;
-            }
-            .auth-form__txt-error {
-                visibility: visible;
+                // .auth-form__txt-error {
+                //     visibility: visible;
+                // }
+                .ds-inputs-form__label {
+                    &:before {
+                        color: $color-input-border-error!important;
+                    }
+                }
+                input {
+                    background: $color-input-bg-error;
+                    border-color: $color-input-border-error;
+                }
+        
             }
         }
         // Форма регистрации
@@ -205,6 +217,7 @@
     //Сообщение об ошибке
     &__error-message {
         display: flex;
+        justify-content: flex-end;
         visibility: hidden;
         align-self: flex-end;
         margin: 0 13px 0 0;
@@ -230,6 +243,7 @@
         font-weight: 600;
         margin: 0 0 10px 0;
         appearance: none;
+        color: $color-primary-light;
     }
 
     // ЗАголовок формы
@@ -258,7 +272,7 @@
         max-width: 350px;
     }
     &__login-container {
-        margin-right: 24px;
+        margin-right: 65px;
     }
     &__btn-container {
         display: flex;
@@ -280,13 +294,26 @@
         display: flex;
         width: 100%;
         max-width: 350px;
+        margin: 0 65px 0 0;
     }
     &__phone-txt {
         display: flex;
         justify-content: space-between;
         width: 100%;
         max-width: 350px;
-        margin: 13px;
+        margin: 0;
+    }
+    @media (max-width: 840px) {
+        .auth-form__login-container {
+            margin-right: 42px;
+            
+        }
+        .auth-form__content-container {
+            padding: 0 23px;
+        }
+        .auth-form__phone {
+            margin: 0 43px 0 0;
+        }
     }
     @media (max-width: 768px) {
         // Инпуты
@@ -315,8 +342,8 @@
                 max-width: 305px;
             }
             &__form {
-                padding-left: 0;
-                padding-right: 0;
+                padding-left: 15px;
+                padding-right: 15px;
             }
             &__login-pass-container {
                 justify-content: center;
@@ -330,7 +357,7 @@
                 flex-wrap: wrap;
             }
             &__txt-footnote {
-                padding: 0px 4px 0 15px;
+                padding: 0;
             }
             &__form-sign-up {
                 max-width: 455px;
@@ -342,7 +369,7 @@
             }
             //Регистрируясь на сайте
             &__phone-txt {
-                margin: 13px 0;
+                margin: 13px;
             }
             &__phone-container, 
             &__login-pass-container {
@@ -376,18 +403,6 @@
         display: flex;
         width: 100%;
         justify-content: space-between;
-    }
-    &__phone {
-        display: flex;
-        width: 100%;
-        max-width: 350px;
-    }
-    &__phone-txt {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        max-width: 350px;
-        margin: 13px;
     }
     @media (max-width: 768px) {
         .ds-inputs-form {
@@ -504,6 +519,9 @@
         font-size: 13px;
         color: $color-input-border-error;
         visibility: hidden;
+        &.is-visible {
+            visibility: visible;
+        }
     }
     &__btn-recovery {
         width: 220px;
