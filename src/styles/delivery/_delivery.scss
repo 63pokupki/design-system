@@ -357,22 +357,22 @@
 }
 
 .delivery-component {
-    @media (min-width: 601px) {
+    @media (min-width: 769px) {
         .delivery__desktop {
             display: block;
         }
     }
-    @media (max-width: 600px) {
+    @media (max-width: 769px) {
         .delivery__desktop {
             display: none;
         }
     }
-    @media (min-width: 601px) {
+    @media (min-width: 769px) {
         .delivery__mobile {
             display: none;
         }
     }
-    @media (max-width: 600px) {
+    @media (max-width: 769px) {
         .delivery__mobile {
             display: block;
         }

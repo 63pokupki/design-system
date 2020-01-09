@@ -162,7 +162,7 @@ function flatten(array) {
 
 const detective = new Detective();
 
-const templates_array = detective.get_files("src/templates/specific/header/", "header-common.html");
+const templates_array = detective.get_files("src/templates/specific/delivery/", "delivery.html");
 const styles_array = detective.get_files("src/styles/elements", ".scss");
 
 const linked = detective.find_dependencies(templates_array, styles_array);

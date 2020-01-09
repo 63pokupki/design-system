@@ -1,0 +1,15 @@
+@import "~styles/utils/utils";
+
+.ds {
+    @import "~styles/elements/_collapse-block.scss";
+    @import "~styles/elements/_ds-arrow-desk.scss";
+    @import "~styles/elements/_ds-btn.scss";
+    @import "~styles/elements/_search.scss";
+    @import "~styles/elements/_link.scss";
+    @import "~styles/elements/_tooltip.scss";
+    @import "~styles/elements/_vertical-menu.scss";
+    @import "~styles/delivery/_delivery_mobile.scss";
+    @import "~styles/delivery/_delivery.scss";
+    @import "~styles/elements/_breadcrumb.scss";
+    @import "~styles/elements/_nav-bc-bar.scss";
+}

@@ -10,7 +10,8 @@ module.exports = {
         // "categories-icons-sprite": entry["categories-icons-sprite"],
         "footer": ["./src/styles/page/footer.scss"],
         "header": ["./src/styles/page/header.scss"],
-        "item-page": ["./src/styles/page/item-page.scss"]
+        "item-page": ["./src/styles/page/item-page.scss"],
+        "delivery": ["./src/styles/page/delivery.scss"],
         // "stock" : entry["stock"],
     }, //объект с точками входа
     output: {
