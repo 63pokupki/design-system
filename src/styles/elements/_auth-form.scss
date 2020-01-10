@@ -303,101 +303,19 @@
         max-width: 350px;
         margin: 0;
     }
-    @media (max-width: 840px) {
+    @media (min-width: 769px) {
         .auth-form__login-container {
             margin-right: 42px;
             
         }
+    }
+    @media (max-width: 840px) {
         .auth-form__content-container {
             padding: 0 23px;
         }
         .auth-form__phone {
             margin: 0 43px 0 0;
         }
-    }
-    @media (max-width: 768px) {
-        // Инпуты
-        .ds-inputs-form {
-            &__txt-info {
-                max-width: 150px;
-            }
-            // &__txt-error {
-            //     font-size: 10px;
-            // }
-            &__txt-error-login {
-                max-width: 202px;
-            }
-            &__txt-error-phone {
-                max-width: 133px;
-            }
-            &__txt-error-email {
-                max-width: 160px;
-            }        
-
-
-        }
-        // Инпуты
-        .auth-form {
-            &__form-sign-in {
-                max-width: 305px;
-            }
-            &__form {
-                padding-left: 15px;
-                padding-right: 15px;
-            }
-            &__login-pass-container {
-                justify-content: center;
-                flex-wrap: wrap;
-            }
-            &__login-container {
-                margin-right: 0;
-            }
-            &__phone-container {
-                justify-content: center;
-                flex-wrap: wrap;
-            }
-            &__txt-footnote {
-                padding: 0;
-            }
-            &__form-sign-up {
-                max-width: 455px;
-            }
-            &__right-tab {
-                &:after {
-                    right: calc(50% - 10px);
-                }
-            }
-            //Регистрируясь на сайте
-            &__phone-txt {
-                margin: 13px;
-            }
-            &__phone-container, 
-            &__login-pass-container {
-                display: block;
-            }
-            // ТАбы
-            &__auth-tabs {
-                
-                &:checked ~.auth-form__right-tab {
-                    &:before {
-                        left: calc(50%-10px);
-                    }
-                    &:after {
-                        right: calc(50%-175px); 
-                    }
-                }
-                &:checked ~.auth-form__left-tab {
-                    &:before {
-                        display: none;
-                    }
-                    &:after {
-                        display: none;
-                    }
-
-                }
-            }
-        }
-        
     }
     &__phone-container {
         display: flex;
@@ -420,26 +338,32 @@
             }
             &__txt-error-email {
                 max-width: 160px;
-            }        
-
-
+            }  
         }
-
         .auth-form {
             max-width: 455px;
-            &__login-pass-container {
+            &__form {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            &__login-pass-container,
+            &__phone-container {
+                display: block;
                 justify-content: center;
                 flex-wrap: wrap;
             }
             &__login-container {
-                margin-right: 0;
-            }
-            &__phone-container {
-                justify-content: center;
-                flex-wrap: wrap;
+                margin-right: 0!important;
             }
             &__txt-footnote {
-                padding: 0px 4px 0 15px;
+                padding: 0;
+            }
+            //Регистрируясь на сайте
+            &__phone-txt {
+                margin: 13px 0;
+            }            
+            &__form-sign-in {
+                max-width: 305px;
             }
             &__form-sign-up {
                 max-width: 455px;
@@ -449,7 +373,20 @@
                     right: calc(50% - 10px);
                 }
             }
-            // Чекбокс
+            &__content-container {
+                padding-left: 2px;
+                padding-right: 2px;
+            }
+            &__form-password-recovery {
+                max-width: 305px;
+                .auth-form__txt {
+                    padding: 0 50px;
+                }
+            }
+            &__txt-error {
+                font-size: 12px;
+            }    
+            // Табы
             &__auth-tabs {
                 
                 &:checked ~.auth-form__right-tab {
@@ -470,8 +407,7 @@
 
                 }
             }
-        }
-        
+        }        
     }
 
 // Восстановление пароля
@@ -528,22 +464,6 @@
         height: 45px;
         font-size: 18px;
         font-weight: 500;
-    }
-
-    @media (max-width: 768px) {
-        .auth-form__content-container {
-            padding-left: 2px;
-            padding-right: 2px;
-        }
-        .auth-form__form-password-recovery {
-            max-width: 305px;
-            .auth-form__txt {
-                padding: 0 50px;
-            }
-        }
-        .auth-form__txt-error {
-            font-size: 12px;
-        }
     }
 }
 
