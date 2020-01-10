@@ -1,13 +1,18 @@
 // краткая информация о закупке
 .stock-brief {
     display: flex;
-    justify-content: space-between;
     align-items: stretch;
-    padding: 18px 40px;
+    padding: 5px 40px;
     width: 100%;
     max-width: 1120px;
     background-color: white;
     box-shadow: 0px 2px 16px rgba(0, 44, 128, 0.18);
+
+    &__tags {
+        display: flex;
+        flex-direction: column;
+        margin-right: 30px;
+    }
 
     &__left {
         margin-right: 25px;
@@ -16,15 +21,24 @@
 
     &__right {
         flex-shrink: 0;
+        margin-left: auto;
+    }
+
+    &__favorite {
+        .favorite__icon {
+            min-width: 29px;
+        }
     }
 
     // тег
     &__tag {
         font-size: 10px;
         color: #1e2023b7;
-        margin-right: 30px;
         min-width: 32px;
-        margin-top: 3px;
+        height: 46px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     // название закупки
@@ -32,6 +46,8 @@
         color: #1d1e1f;
         font-weight: bold;
         font-size: 16px;
+        height: 46px;
+        line-height: 100%;
         &::first-letter {
             text-transform: capitalize;
         }
@@ -52,7 +68,8 @@
     &__row {
         display: flex;
         align-items: center;
-        margin-bottom: 15px;
+        height: 46px;
+        line-height: 100%;
         &:last-child {
             margin-bottom: unset;
         }
@@ -60,15 +77,12 @@
 
     &__row-heading {
         align-items: baseline;
-        margin-bottom: 25px;
-    }
-
-    &__d-mg {
-        margin-bottom: 10px;
     }
 
     & &__rating {
-        font-size: 32px;
+        font-size: 30px;
+        line-height: inherit;
+        font-weight: bold;
     }
 
     &__org {
