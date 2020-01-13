@@ -156,7 +156,7 @@
             }
             span {
                 font-size: 16px;
-                color: $light-gray-txt-color;
+                color: $color-text-base;
             }
         }
         &__goods-param {
@@ -175,7 +175,7 @@
 
         }
         &__btn-link {
-            color: $light-gray-link-color;
+            color: $color-text-light-grey;
             font-size: 10px;
         }
         &__content {
@@ -230,7 +230,7 @@
             height: 20px;
             min-width: 20px;
             border-radius: 50%;
-            background: $light-gray-sum-btn;
+            background: $color-inactive;
             color: #ffffff;
             &:active {
                 transform: scale(.95);
@@ -272,7 +272,7 @@
             }
             p {
                 font-size: 11px;
-                color: $light-gray-txt-color;
+                color: $color-text-base;
                 max-height: 30px;
                 overflow: hidden;
                 transition: all .5s;

@@ -9,14 +9,14 @@
     &__stock {
         font-weight: 600;
         font-size: 14px;
-        color: $color-primary-light;
+        color: $color-primary;
         margin-bottom: 15px;
         line-height: 21px;
     }
 
     &__sku {
         font-size: 12px;
-        color: #606266;
+        color: $color-text-base;
         margin-bottom: 27px;
     }
 
@@ -40,7 +40,7 @@
     .favorite {
         &__icon {
             font-size: 22px;
-            color: $color-primary-light;
+            color: $color-primary;
         }
     }
 
@@ -118,7 +118,7 @@
         &-label {
             font-weight: 600;
             font-size: 14px;
-            color: #1d1e1f;
+            color: $color-text-heading;
             margin-bottom: 10px;
             display: flex;
             align-items: center;
@@ -141,7 +141,7 @@
         }
 
         &-expand {
-            color: #a2a3a5;
+            color: $color-text-light-grey;
             text-decoration: underline;
             font-size: 12px;
         }
@@ -151,7 +151,7 @@
         font-size: 12px;
         line-height: 18px;
         text-align: center;
-        color: #a2a3a5;
+        color: $color-text-light-grey;
         margin-bottom: 21px;
     }
 
@@ -239,7 +239,7 @@
             bottom: auto;
             top: -18px;
             left: -6px;
-            background: #36a6f2;
+            background: $color-primary;
             font-weight: 600;
             font-size: 12px;
             line-height: 17px;

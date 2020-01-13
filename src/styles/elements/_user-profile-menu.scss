@@ -1,6 +1,6 @@
 .user-profile-menu {
     padding: 5px;
-    color: #1D1E1F;
+    color: $color-text-heading;
     min-width: 305px;
     box-shadow: 0px 0px 16px rgba(105, 153, 247, 0.25);
 
@@ -35,7 +35,7 @@
         color: #38393b;
 
         &:hover {
-            color: #36a6f2;
+            color: $color-primary;
         }
     }
 }

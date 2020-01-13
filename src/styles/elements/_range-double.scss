@@ -6,7 +6,7 @@
         justify-content: space-between;
         align-items: center;
         font-size: 11px;
-        color: #606266;
+        color: $color-text-base;
         margin-bottom: 10px;
     }
 
@@ -20,7 +20,7 @@
     &__active {
         position: absolute;
         height: 100%;
-        background: #36a6f2;
+        background: $color-primary;
         max-width: 100%;
         min-width: 0%;
     }
@@ -31,7 +31,7 @@
         cursor: pointer;
         height: 16px;
         width: 16px;
-        background: #318cca;
+        background: $color-primary;
         border: 1px solid #ffffff;
         border-radius: 50%;
         top: 50%;

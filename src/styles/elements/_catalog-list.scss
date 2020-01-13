@@ -8,7 +8,7 @@
         background: #e8f3f9;
         font-weight: bold;
         font-size: 13px;
-        color: #318cca;
+        color: $color-primary;
         border-radius: 0px 0px 2px 2px;
     }
 
@@ -17,7 +17,7 @@
         margin: unset;
         font-size: 12px;
         font-weight: normal;
-        color: #1d1e1f;
+        color: $color-text-heading;
     }
 
     &__subcategory-list {
@@ -46,7 +46,7 @@
         }
 
         .catalog-list__badge-retail-price {
-            background: #318cca;
+            background: $color-primary;
             border-bottom: 1px solid #1a6aa1;
         }
 
@@ -59,7 +59,7 @@
     &__item {
         padding: 0px 5px 12px 0;
         font-size: 11px;
-        color: #606266;
+        color: $color-text-base;
         overflow: hidden;
         position: relative;
 

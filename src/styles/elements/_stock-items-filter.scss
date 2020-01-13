@@ -60,7 +60,7 @@
     &__list,
     &__matrix {
         font-size: 15px;
-        color: #c4c4c4;
+        color: $color-inactive;
         transition: color $transition-primary;
 
         &:active {
@@ -75,7 +75,7 @@
 
     &__displayed {
         font-size: 12px;
-        color: #606266;
+        color: $color-text-base;
     }
 
     &__search {
@@ -105,7 +105,7 @@
         .checkbox__label {
             white-space: nowrap;
             font-size: 12px;
-            color: #606266;
+            color: $color-text-base;
 
             &:hover {
                 color: $color-primary;

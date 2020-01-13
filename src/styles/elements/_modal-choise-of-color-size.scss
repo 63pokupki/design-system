@@ -34,7 +34,7 @@
                 margin: 0 0 10px 3px;
                 padding: 0;
                 font-size: 10px;
-                color: $light-gray-link-color;
+                color: $color-text-light-grey;
             }    
 
             .item-params-list {
@@ -52,7 +52,7 @@
             
                 &__item.is-selected {
                     transition: background-color $transition-fast, color $transition-fast;
-                    background-color: #318cca;
+                    background-color: $color-primary;
                     color: white;
                 }
 
@@ -100,7 +100,7 @@
                 box-shadow: none;
                 font-size: 9px;
                 background: $pink-popover-color;
-                color: $light-gray-txt-color;
+                color: $color-text-base;
                 &:before {
                     left: 20px;
                     background: $pink-popover-color;
@@ -152,7 +152,7 @@
             height: 20px;
             min-width: 20px;
             border-radius: 50%;
-            background: $light-gray-sum-btn;
+            background: $color-inactive;
             color: #ffffff;
             &:active {
                 transform: scale(.95);

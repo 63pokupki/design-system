@@ -59,7 +59,7 @@
             min-height: 50px;
             margin-bottom: 20px;
             padding: 0 15px;
-            border: 2px solid $light-gray-link-color;
+            border: 2px solid $color-text-light-grey;
             border-radius: 3px;
             cursor: pointer;
 
@@ -87,7 +87,7 @@
                 text-align: center;
                 font-size: 14px;
                 font-weight: 600;
-                color: $light-gray-link-color;
+                color: $color-text-light-grey;
             }
             &-purchase {
                 padding: 0;    
@@ -122,7 +122,7 @@
         &__selected-position {
             // border: none;
             font-size: 16px;
-            color: $light-gray-txt-color;
+            color: $color-text-base;
 
             &:after {
                 content: "";
@@ -192,7 +192,7 @@
             background: #fff;
             border: 2px solid $click-load-color;
             border-radius: 3px;
-            color: $light-gray-txt-color;
+            color: $color-text-base;
 
             list-style: none;
             opacity: 0;

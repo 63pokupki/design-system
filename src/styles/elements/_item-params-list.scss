@@ -9,7 +9,7 @@
     overflow: hidden;
 
     &.is-error {
-        border: 1px solid #ffafaf;
+        border: 1px solid $error-primary;
         box-sizing: border-box;
         border-radius: 4px;
     }
@@ -20,7 +20,7 @@
         font-size: 12px;
         padding: 3px 5px;
         border-radius: 12px;
-        color: #606266;
+        color: $color-text-base;
         margin-right: 5px;
         margin-bottom: 3px;
         min-width: 23px;
@@ -32,13 +32,13 @@
         }
 
         &:hover {
-            color: #318cca;
+            color: $color-primary;
         }
     }
 
     &__item.is-selected {
         transition: background-color $transition-fast, color $transition-fast;
-        background-color: $color-primary-light;
+        background-color: $color-primary;
         color: white;
     }
 }

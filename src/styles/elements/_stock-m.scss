@@ -2,7 +2,7 @@
     .modal__header {
         font-weight: 600;
         font-size: 16px;
-        color: #606266;
+        color: $color-text-base;
     }
     .modal__wrap {
         min-width: 264px;
@@ -18,7 +18,7 @@
         margin-bottom: 10px;
         &__label {
             font-size: 14px;
-            color: #606266;
+            color: $color-text-base;
         }
     }
 }
@@ -70,7 +70,7 @@
 
             &__btn {
                 display: block;
-                color: #606266;
+                color: $color-text-base;
                 font-weight: 600;
 
                 &:after {

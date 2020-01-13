@@ -29,7 +29,7 @@
     &__body {
         font-size: 12px;
         width: 100%;
-        color: #606266;
+        color: $color-text-base;
         max-height: 0;
         overflow: hidden;
         transition: max-height $transition-primary, margin-top $transition-slow;

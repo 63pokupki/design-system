@@ -12,13 +12,13 @@
     &__heading {
         font-weight: 600;
         font-size: 16px;
-        color: #1d1e1f;
+        color: $color-text-heading;
         margin-right: 30px;
     }
 
     &__heading-meta {
         font-size: 11px;
-        color: #1d1e1f;
+        color: $color-text-heading;
         opacity: 0.5;
         overflow: hidden;
         white-space: nowrap;
@@ -50,7 +50,7 @@
     &__filters-heading {
         font-size: 14px;
         line-height: 45px;
-        color: #1d1e1f;
+        color: $color-text-heading;
     }
 
     &__uncheck-all {

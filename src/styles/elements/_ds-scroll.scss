@@ -4,7 +4,7 @@
         display: flex;
         min-width: 10px;
         width: 50px;
-        background: $color-primary-light;
+        background: $color-primary;
         border-radius: 15px;
         cursor: pointer;
     }
@@ -13,7 +13,7 @@
         display: inline-flex;
         width: 100%;
         height: 7px;
-        background: $scroll-bg-color;
+        background: $color-graphics-elements;
         border-radius: 15px;
         
     }
@@ -23,7 +23,7 @@
         width: 8px;
         min-height: 25px;
         height: 100%;
-        background: $scroll-bg-color;
+        background: $color-graphics-elements;
         border-radius: 15px;
         .ds-scroll__slider {
             min-width: 8px;

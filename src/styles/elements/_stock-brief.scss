@@ -43,7 +43,7 @@
 
     // название закупки
     &__heading {
-        color: #1d1e1f;
+        color: $color-text-heading;
         font-weight: bold;
         font-size: 16px;
         height: 46px;
@@ -110,11 +110,11 @@
 
 .stock-brief_disabled {
     .stock-brief__data {
-        color: #c4c4c4;
+        color: $color-inactive;
     }
 
     .stock-brief__heading {
-        color: #c4c4c4;
+        color: $color-inactive;
     }
 
     .stock-brief__status {

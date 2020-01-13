@@ -38,7 +38,7 @@
         justify-content: center;
         position: relative;
         border-radius: 50%;
-        background: #c4c4c4;
+        background: $color-inactive;
         width: 20px;
         height: 20px;
 
@@ -59,6 +59,6 @@
         width: 30px;
         font-size: 16px;
         color: #000000;
-        border-bottom: 1px solid #36a6f2;
+        border-bottom: 1px solid $color-primary;
     }
 }

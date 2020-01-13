@@ -1,7 +1,7 @@
 .modal-confirm-mail {
     &.is-active {
         .modal-confirm-mail__btn {
-            background: $color-primary-light;
+            background: $color-primary;
             color: #fff;
             cursor: pointer;
             &:active, :focus {
@@ -9,11 +9,11 @@
             }  
         }
         .modal-confirm-mail__input {
-            border-color: $color-primary-light;            
+            border-color: $color-primary;            
         }
         .modal-confirm-mail__form {
             &:before {
-                color: $color-primary-light;
+                color: $color-primary;
             }
         }
     }
@@ -71,7 +71,7 @@
         //     left: 55px;
         //     padding: 0 10px;
         //     font-size: 15px;
-        //     color: $light-gray-sum-btn;
+        //     color: $color-inactive;
         // } 
  
     }
@@ -86,7 +86,7 @@
        height: 48px;
        margin: 13px;
        padding: 0 20px;
-       border: 1px solid #C4C4C4;
+       border: 1px solid $color-inactive;
        border-radius: 2px;
        font-size: 14px;
        font-weight: 600;
@@ -94,13 +94,13 @@
        outline: none;
        &::placeholder {
            font-weight: 500;
-           color: $light-gray-link-color;
+           color: $color-text-light-grey;
        }
        &:focus {
-            border-color: $color-primary-light;
+            border-color: $color-primary;
             ~.modal-confirm-mail__label {
                 &:before {
-                    color: $color-primary-light;
+                    color: $color-primary;
                 }
             }
        }
@@ -116,7 +116,7 @@
             left: 20px;
             padding: 0 10px;
             font-size: 15px;
-            color: $light-gray-sum-btn;
+            color: $color-inactive;
         } 
 
     }
@@ -141,7 +141,7 @@
         padding: 0 39px;
         font-size: 9px;
         text-align: center;
-        color: $light-gray-link-color;
+        color: $color-text-light-grey;
         &.mobile {
             display: none;
         }

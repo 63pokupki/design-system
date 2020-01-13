@@ -5,7 +5,7 @@
 
     &:hover {
         .btn-sum__sum-num {
-            border-bottom: 1px solid $color-primary-light;
+            border-bottom: 1px solid $color-primary;
         }
     }
     &__sum-num {
@@ -19,7 +19,7 @@
 
         &:active,
         &:focus {
-            border-bottom: 1px solid $color-primary-light;
+            border-bottom: 1px solid $color-primary;
         }
     }
 
@@ -39,7 +39,7 @@
 
         &:active {
             transform: scale(0.95);
-            background: $color-primary-light;
+            background: $color-primary;
         }
         &:after,
         &:before {

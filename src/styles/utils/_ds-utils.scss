@@ -1,4 +1,5 @@
 /* Внутренние стили дизайн системы - они не должны включаться в конечную сборку! */
+$color-primary: #36A6F2;
 
 body {
     background: #eef2f4;
@@ -24,7 +25,7 @@ body {
     cursor: pointer;
     width: 52px;
     height: 52px;
-    background: #36a6f2;
+    background: $color-primary;
     border-radius: 50%;
     box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
     position: fixed;
@@ -132,7 +133,7 @@ body {
     h5 {
         padding: 5px;
         background: #93d4ff;
-        border-bottom: 2px solid #318cca;
+        border-bottom: 2px solid $color-primary;
     }
 }
 
@@ -177,6 +178,6 @@ pre[class*="language-"] {
     }
 
     &::-webkit-scrollbar-thumb {
-        background-color: #318cca;
+        background-color: $color-primary;
     }
 }

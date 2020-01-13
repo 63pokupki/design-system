@@ -9,7 +9,7 @@
         display: block;
         width: 100%;
         height: 1px;
-        background: $light-gray-sum-btn;
+        background: $color-inactive;
         opacity: .5;
         // border: 1px;
 
@@ -34,9 +34,9 @@
         &__link-user-location {
             position: relative;
             margin: 0 20px 0 0;
-            color: $color-primary-light;
+            color: $color-primary;
             text-decoration: none;
-            border-bottom: 1px dashed $color-primary-light;
+            border-bottom: 1px dashed $color-primary;
 
             &:before {
                 content: "";
@@ -91,7 +91,7 @@
             &-item {
                 margin-bottom: 20px;
                 &.is-active {
-                    color: $color-primary-light;
+                    color: $color-primary;
                     font-weight: 600;
 
                     .link_text {
@@ -105,7 +105,7 @@
                             height: 2px;
                             width: 100%;
                             width: calc(100% + 8px);
-                            background: $color-primary-light;
+                            background: $color-primary;
                         }
                     }
                 }
@@ -137,11 +137,11 @@
         &__link {
             font-size: 14px;
             font-weight: 600;
-            color: $color-primary-light;
+            color: $color-primary;
         }
 
         &__content-heading {
-            color: $light-gray-txt-color;
+            color: $color-text-base;
         }
 
 
@@ -151,7 +151,7 @@
             padding: 0;
             font-size: 14px;
             line-height: 1.5em;
-            color: $light-gray-txt-color;
+            color: $color-text-base;
 
             .tooltip {
                 min-width: 200px;
@@ -163,7 +163,7 @@
                 .icon-info {
                     margin-left: 10px;
                     font-size: 17px;
-                    color: $color-primary-light;
+                    color: $color-primary;
                 }
 
             }
@@ -176,7 +176,7 @@
             //Сноска
             &_footnote {
                 font-size: 12px;
-                color: $light-gray-txt-color;
+                color: $color-text-base;
             }
 
             //Жирное начертание
@@ -221,7 +221,7 @@
             max-width: 284px;
             margin: 20px 0;
             .search__bar {
-                color: $light-gray-txt-color;
+                color: $color-text-base;
             }
         }
 
@@ -257,7 +257,7 @@
                 }
 
                 a {
-                    color: $color-primary-light;
+                    color: $color-primary;
                     margin-right: 5px;
                 }
             }
@@ -268,7 +268,7 @@
             font-size: 14px;
 
             .delivery__t-col {
-                color: $light-gray-txt-color;
+                color: $color-text-base;
             }
         }
 
@@ -279,7 +279,7 @@
             align-items: flex-start;
             width: 100%;
             margin: 10px 0;
-            // border-bottom: 1px solid $light-gray-sum-btn;
+            // border-bottom: 1px solid $color-inactive;
         }
 
         &__t-col {
@@ -287,7 +287,7 @@
             flex-direction: column;
             min-width: 33.33%;
             margin: 0 10px 0 0;
-            color: $light-gray-txt-color;
+            color: $color-text-base;
 
             .delivery__txt {
                 line-height: 25px;
@@ -312,7 +312,7 @@
             &-heading {
                 font-size: 18px;
                 font-weight: 600;
-                color: $light-gray-txt-color;
+                color: $color-text-base;
             }
 
             &-ul {
@@ -320,7 +320,7 @@
             }
 
             span {
-                color: $color-primary-light;
+                color: $color-primary;
             }
         }
 
@@ -330,7 +330,7 @@
             justify-content: center;
             align-items: center;
             padding: 30px;
-            color: $light-gray-txt-color;
+            color: $color-text-base;
 
             &-btn-desk {
                 width: 284px;
@@ -392,7 +392,7 @@
         &.is-active {
             position: relative;
             font-weight: 600;
-            color: $color-primary-light;
+            color: $color-primary;
 
             &:before {
                 content: "";
@@ -402,12 +402,12 @@
                 height: 2px;
                 width: 100%;
                 width: calc(100% + 8px);
-                background: $color-primary-light;
+                background: $color-primary;
             }
 
         }
         &:hover {
-            color: $color-primary-light;
+            color: $color-primary;
         }
         
     }

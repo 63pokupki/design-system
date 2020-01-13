@@ -41,7 +41,7 @@
 
     &__menu-opened {
         position: relative;
-        color: #36a6f2;
+        color: $color-primary;
 
         &:after {
             position: absolute;

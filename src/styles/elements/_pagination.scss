@@ -17,11 +17,11 @@
         a {
             font-weight: 600;
             text-decoration: none;
-            color: $light-gray-txt-color;
+            color: $color-text-base;
         }
 
         &:hover, &:active {
-            background: $color-primary-light;
+            background: $color-primary;
             a {
                 color: #fff;
             }
@@ -41,7 +41,7 @@
     }
     .icon-arrow {
         &-left, &-right {
-            color: $light-gray-txt-color;
+            color: $color-text-base;
         }
     }
 }

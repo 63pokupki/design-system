@@ -127,9 +127,9 @@
         &__link-user-location {
             position: relative;
             margin: 0 20px 0 0;
-            color: $color-primary-light;
+            color: $color-primary;
             text-decoration: none;
-            border-bottom: 1px dashed $color-primary-light;
+            border-bottom: 1px dashed $color-primary;
 
             &:before {
                 content: "";
@@ -171,7 +171,7 @@
 
             &-item {
                 &.is-active {
-                    color: $color-primary-light;
+                    color: $color-primary;
                     font-weight: 600;
 
                     .link_text {
@@ -185,7 +185,7 @@
                             height: 2px;
                             width: 100%;
                             width: calc(100% + 8px);
-                            background: $color-primary-light;
+                            background: $color-primary;
                         }
                     }
                 }
@@ -194,7 +194,7 @@
 
         &__heading-delivery-cost {
             margin: 0 0 10px 0;
-            color: $light-gray-txt-color;
+            color: $color-text-base;
         }
 
         &__btn-toggle-wrap {
@@ -215,11 +215,11 @@
         &__link {
             font-size: 14px;
             font-weight: 600;
-            color: $color-primary-light;
+            color: $color-primary;
         }
 
         &__content-heading {
-            color: $light-gray-txt-color;
+            color: $color-text-base;
         }
 
         //Текст
@@ -228,9 +228,9 @@
             // padding: 0 70px 0 0;
             font-size: 14px;
             line-height: 1.5em;
-            color: $light-gray-txt-color;
+            color: $color-text-base;
             .icon-info {
-                color: $color-primary-light;
+                color: $color-primary;
             }
             .tooltip {
                 min-width: 200px;
@@ -239,7 +239,7 @@
             //Сноска
             &_footnote {
                 font-size: 14px;
-                color: $light-gray-txt-color;
+                color: $color-text-base;
             }
 
             //Жирное начертание
@@ -281,7 +281,7 @@
         &__card-search {
             margin: 30px 0;
             .search__bar {
-                color: $light-gray-txt-color;
+                color: $color-text-base;
             }
         }
 
@@ -315,7 +315,7 @@
                 }
 
                 a {
-                    color: $color-primary-light;
+                    color: $color-primary;
                 }
             }
         }
@@ -325,7 +325,7 @@
             font-size: 12px;
 
             .delivery__t-col {
-                color: $light-gray-txt-color;
+                color: $color-text-base;
             }
         }
         &__courier {
@@ -387,7 +387,7 @@
                 left: 0;
                 width: 100%;
                 height: 1px;
-                background: $light-gray-sum-btn;
+                background: $color-inactive;
             }
             &:before {
                 top: 0;
@@ -456,7 +456,7 @@
                     padding: 0 23% 0 0;
                     font-size: 12px;
                     font-weight: normal;
-                    color: $light-gray-txt-color; 
+                    color: $color-text-base; 
                  }
  
             }
@@ -467,7 +467,7 @@
             flex-direction: column;
             min-width: 33.33%;
             margin: 0 10px 0 0;
-            color: $light-gray-txt-color;
+            color: $color-text-base;
 
             .delivery__txt {
                 line-height: 25px;
@@ -498,7 +498,7 @@
             &-heading {
                 font-size: 18px;
                 font-weight: 600;
-                color: $light-gray-txt-color;
+                color: $color-text-base;
             }
 
             &-ul {
@@ -509,7 +509,7 @@
             }
 
             span {
-                color: $color-primary-light;
+                color: $color-primary;
             }
         }
 
@@ -520,7 +520,7 @@
             align-items: center;
             padding: 15px;
             background: #fff;
-            color: $light-gray-txt-color;
+            color: $color-text-base;
             &-heading {
                 font-family: Open Sans;
                 text-align: center;

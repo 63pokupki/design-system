@@ -9,7 +9,7 @@
         transition: transform .3s;
     }
     &__checkbox:checked ~ .switcher__label {
-        background: #318CCA;
+        background: $color-primary;
         transition: background-color .3s;
     }
     //Обёртка кнопки

@@ -5,7 +5,7 @@
 
     &__bar {
         background: #ffffff;
-        border: 1.5px solid #36a6f2;
+        border: 1.5px solid $color-primary;
         border-radius: 48px;
         padding-left: 20px;
         padding-right: 50px;
@@ -17,7 +17,7 @@
         }
 
         &::placeholder {
-            color: #a2a3a5;
+            color: $color-text-light-grey;
             font-size: 12px;
         }
 

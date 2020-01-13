@@ -4,13 +4,13 @@
     &__text {
         font-size: 12px;
         line-height: 17px;
-        color: #606266;
+        color: $color-text-base;
         margin-right: 15px;
     }
 
     &__item {
         margin-right: 4px;
-        color: #c4c4c4;
+        color: $color-inactive;
         font-size: 14px;
 
         &:hover {
@@ -27,7 +27,7 @@
 
         &.is-selected {
             position: relative;
-            color: #606266;
+            color: $color-text-base;
             &:after {
                 content: "";
                 position: absolute;

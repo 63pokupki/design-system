@@ -34,9 +34,9 @@
     }
     &.is-unavailable {
         .ds-inputs-form {
-            border-color: $light-gray-link-color;
+            border-color: $color-text-light-grey;
             &:before {
-                color: $light-gray-link-color;
+                color: $color-text-light-grey;
             }
             input {
                 display: none;
@@ -67,9 +67,9 @@
         border-radius: 2px;
         outline: none;
         &:focus {
-            border: 1px solid $color-primary-light;
+            border: 1px solid $color-primary;
             ~.ds-inputs-form__label:before {
-                color: $color-primary-light;
+                color: $color-primary;
             }
         }
     

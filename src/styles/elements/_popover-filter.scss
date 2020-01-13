@@ -8,7 +8,7 @@
         margin-bottom: 6px;
 
         &__label {
-            color: $light-gray-txt-color;
+            color: $color-text-base;
             font-size: 10px;
             &:after {
                 transform: translate(-24px, -75%) rotate(-45deg);
@@ -54,7 +54,7 @@
         }
         &_disabled {
             cursor: not-allowed;
-            color: #318cca;
+            color: $color-primary;
             background: #fff;
 
         }

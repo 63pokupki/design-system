@@ -5,7 +5,7 @@ $button-border-radius: 24px;
 
 // кнопка с категориями
 .menu-btn {
-    color: $color-primary-light;
+    color: $color-primary;
 
     &__icon {
         margin-right: 10px;
@@ -29,9 +29,9 @@ $button-border-radius: 24px;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
-    color: $color-primary-light;
+    color: $color-primary;
     background: white;
-    border: 1px solid $color-primary-light;
+    border: 1px solid $color-primary;
     border-radius: $button-border-radius;
     padding: 7px 18px;
     font-weight: 600;
@@ -53,10 +53,10 @@ $button-border-radius: 24px;
     &:hover,
     &_hover {
         color: white;
-        background: $color-primary-light;
+        background: $color-primary;
     }
     &_disabled {
-        color: $color-primary-light;
+        color: $color-primary;
         background: white;
         opacity: .6;
         user-select: none;
@@ -69,10 +69,10 @@ $button-border-radius: 24px;
     }
 
     &_inverse {
-        background: $color-primary-light;
+        background: $color-primary;
         color: white;
         &:hover {
-            color: $color-primary-light;
+            color: $color-primary;
             background: white;
         }
     }

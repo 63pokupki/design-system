@@ -23,13 +23,13 @@
         display: block;
         font-weight: 600;
         font-size: 12px;
-        color: #1d1e1f;
+        color: $color-text-heading;
         margin-bottom: 4px;
     }
 
     &__date {
         font-size: 12px;
-        color: #a2a3a5;
+        color: $color-text-light-grey;
     }
 
     &__text {

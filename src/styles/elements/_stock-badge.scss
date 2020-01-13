@@ -30,7 +30,7 @@
 
 // значок "уже заказали"
 .stock-badge_already {
-    background: #318cca;
+    background: $color-primary;
 
     &:before {
         border-top: 7px solid #2c6aa4;

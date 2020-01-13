@@ -44,7 +44,7 @@
         margin-right: 15px;
 
         &.is-selected {
-            border: 2px solid $color-primary-light;
+            border: 2px solid $color-primary;
         }
     }
 
@@ -173,7 +173,7 @@
         font-weight: 600;
         font-size: 12px;
         line-height: 17px;
-        color: #1d1e1f;
+        color: $color-text-heading;
         margin-bottom: 5px;
         display: flex;
         align-items: center;
@@ -252,7 +252,7 @@
         font-size: 12px;
         line-height: 17px;
         color: white;
-        background: $color-primary-light;
+        background: $color-primary;
         width: 145px;
         padding: 10px;
         position: absolute;
@@ -293,7 +293,7 @@
     .collapse-section__heading {
         font-weight: 600;
         font-size: 16px;
-        color: #1d1e1f;
+        color: $color-text-heading;
     }
 
     &__stock-name {
@@ -316,7 +316,7 @@
     &__sku {
         font-size: 12px;
         line-height: 22px;
-        color: #606266;
+        color: $color-text-base;
         margin-bottom: 25px;
     }
 

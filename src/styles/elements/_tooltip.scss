@@ -1,5 +1,5 @@
-$tooltip-background-color: #e0eef7;
-$tooltip-background-color-accent: #36A6F2;
+$tooltip-background-color: $color-graphics-elements;
+$tooltip-background-color-accent: $color-primary;
 $tooltip-triangle-size: 6px;
 
 // всплывающая подсказка при наведении
@@ -134,12 +134,12 @@ $tooltip-triangle-size: 6px;
 
     // вид подсказки с ошибкой
     &.tooltip_error {
-        background-color: #FFD7D7;
-        color: #606266;
+        background-color: $error-light;
+        color: $color-text-base;
         font-weight: 400;
 
         &:before {
-            background-color: #FFD7D7;
+            background-color: $error-light;
         }
     }
 }
