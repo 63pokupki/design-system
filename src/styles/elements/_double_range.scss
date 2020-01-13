@@ -5,8 +5,9 @@
 
     &__active {
         position: absolute;
-        height: 2px;
-		width: 150px;
+		height: 2px;
+		min-width: 0;
+		max-width: 100%;
 		margin: 2px;
 		background-color: $color-primary;
 		z-index: 5;
