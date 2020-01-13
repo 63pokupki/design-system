@@ -84,7 +84,15 @@
         flex-shrink: 1;
 
         .search__bar {
-            height: 30px;
+            height: 26px;
+            border: 1px solid $color-primary;
+        }
+
+        .search__button {
+            img {
+                width: 22px;
+                height: 22px;
+            }
         }
     }
 
