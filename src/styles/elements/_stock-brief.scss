@@ -35,7 +35,7 @@
         font-size: 10px;
         color: #1e2023b7;
         min-width: 32px;
-        height: 46px;
+        height: 48px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -46,7 +46,7 @@
         color: $color-text-heading;
         font-weight: bold;
         font-size: 16px;
-        height: 46px;
+        height: 48px;
         line-height: 100%;
         max-width: 560px;
         margin: 0;
@@ -70,7 +70,7 @@
     &__row {
         display: flex;
         align-items: center;
-        height: 46px;
+        height: 48px;
         line-height: 100%;
         &:last-child {
             margin-bottom: unset;
