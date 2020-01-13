@@ -1,6 +1,6 @@
 .catalog-list {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 
     &__category {
         border-top: 1px solid $color-primary;
@@ -13,7 +13,7 @@
     }
 
     &__subcategory {
-        padding: 12px 10px 12px;
+        padding: 12px 10px 0px;
         margin: unset;
         font-size: 12px;
         font-weight: normal;

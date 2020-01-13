@@ -138,9 +138,7 @@
                         </ul>
                         <!-- .multi-level-menu_has-subcategories для отображения подменю при их наличии-->
                         <!-- .multi-level-menu__column_is-expanded к колонке для постоянного отображения колонки -->
-                        <nav
-                            class="multi-level-menu categories-bar__menu  multi-level-menu_has-subcategories"
-                        >
+                        <nav class="multi-level-menu categories-bar__menu  multi-level-menu_has-subcategories">
                             <div class="multi-level-menu__column">
                                 <span class="multi-level-menu__heading semi-bold">Категории</span>
                                 <a class="link link_colored multi-level-menu__all" href="#">Смотреть все</a>
@@ -180,7 +178,7 @@
                         <a href="#" class="link">Личные сообщения (147)</a>
                     </div>
                 </div>
-    
+
                 <nav class="breadcrumb" style="margin-bottom: 25px;">
                     <ol class="breadcrumb__list">
                         <li class="breadcrumb__item">
@@ -214,22 +212,32 @@
                     </div>
                 </div>
                 <div class="stock-d__brief">
-                    <!-- Добавить модификатор stock-brief_disabled для неактивной закупки -->
-                    <!-- Добавить модификатор stock-brief_disabled для неактивной закупки -->
                     <div class="stock-brief">
+                        <div class="stock-brief__tags">
+                            <span class="stock-brief__tag">
+                                <span class="has-tooltip"
+                                    >#SALE
+                                    <span class="tooltip tooltip_top tooltip_ta-c">Топ-закупка</span>
+                                </span>
+                            </span>
+                            <span class="stock-brief__tag">
+                                <span class="has-tooltip"
+                                    >#0 %
+                                    <span class="tooltip tooltip_top tooltip_ta-c">Топ-закупка</span>
+                                </span>
+                            </span>
+                            <span class="stock-brief__tag">
+                                <span class="has-tooltip"
+                                    >#TOP
+                                    <span class="tooltip tooltip_top tooltip_ta-c">Топ-закупка</span>
+                                </span>
+                            </span>
+                        </div>
                         <div class="stock-brief__col stock-brief__left">
                             <div class="stock-brief__row">
-                                <span class="stock-brief__tag has-tooltip"
-                                    >#SALE
-                                    <span class="tooltip tooltip_top  tooltip_ta-c">Распродажа</span>
-                                </span>
                                 <span class="stock-brief__data">21 выкуп стартовал 25 августа</span>
                             </div>
                             <div class="stock-brief__row stock-brief__row-heading">
-                                <span class="stock-brief__tag has-tooltip"
-                                    >#0 %
-                                    <span class="tooltip tooltip_top  tooltip_ta-c">Орг. сбор 0%</span>
-                                </span>
                                 <span class="stock-brief__heading"
                                     >Dimma fashion studio. Распродажа. Модный бренд для мам
                                     <i class="ds-icon icon-star rating-star stock-brief__rating has-tooltip">
@@ -239,10 +247,6 @@
                                 </span>
                             </div>
                             <div class="stock-brief__row">
-                                <span class="stock-brief__tag has-tooltip"
-                                    >#TOP
-                                    <span class="tooltip tooltip_top  tooltip_ta-c">Топ-закупка</span>
-                                </span>
                                 <span class="stock-status is-open stock-brief__status">
                                     <i class="ds-icon stock-status__icon"></i>
                                     <span class="stock-status__text">Сбор с 30.05.2018</span>
@@ -277,9 +281,9 @@
                                 </div>
                             </div>
                             <div class="stock-brief__row">
-                                <a class="ds-btn ds-btn_flex stock-brief__send">
+                                <button class="ds-btn ds-btn_flex stock-brief__send">
                                     <span class="ds-btn__text">Личное сообщение</span>
-                                </a>
+                                </button>
                                 <button class="ds-btn ds-btn_flex stock-brief__discuss">
                                     <span class="ds-btn__text">Вопрос-ответ</span>
                                     <span class="num-of-discussions">
@@ -339,10 +343,7 @@
                                                     <i class="ds-icon icon-arrow-right"></i>
                                                 </button>
                                                 <div class="stock-sizes-grid__images">
-                                                    <img
-                                                        src="~images/1.jpg"
-                                                        class="stock-sizes-grid__img is-active"
-                                                    />
+                                                    <img src="~images/1.jpg" class="stock-sizes-grid__img is-active" />
                                                     <img src="~images/size-grid.png" class="stock-sizes-grid__img" />
                                                     <img src="~images/size-grid.png" class="stock-sizes-grid__img" />
                                                 </div>
@@ -500,103 +501,106 @@
                                         <label class="checkbox__label" for="c-01z">Одежда и обувь для детей</label>
                                     </div>
                                 </div>
+
                                 <div class="catalog-list__subcategory">
                                     <div class="checkbox">
                                         <input checked="checked" class="checkbox__input" type="checkbox" id="c-02z" />
                                         <label class="checkbox__label" for="c-02z">Обувь для детей</label>
                                     </div>
+                                    <ul class="catalog-list__subcategory-list">
+                                        <li class="catalog-list__item has-badge">
+                                            <div class="checkbox">
+                                                <input
+                                                    checked="checked"
+                                                    class="checkbox__input"
+                                                    type="checkbox"
+                                                    id="c-03z"
+                                                />
+                                                <label class="checkbox__label" for="c-03z"
+                                                    >Зимняя ортопедическая детская обувь</label
+                                                >
+                                            </div>
+                                            <span title="Скидка" class="catalog-list__badge-sale">SALE</span>
+                                        </li>
+                                        <li class="catalog-list__item has-badge">
+                                            <div class="checkbox">
+                                                <input
+                                                    checked="checked"
+                                                    class="checkbox__input"
+                                                    type="checkbox"
+                                                    id="c-04z"
+                                                />
+                                                <label class="checkbox__label" for="c-04z"
+                                                    >Детские ортопедические туфли</label
+                                                >
+                                            </div>
+                                            <span title="Розничная цена" class="catalog-list__badge-retail-price"
+                                                >РЦ</span
+                                            >
+                                        </li>
+                                        <li class="catalog-list__item">
+                                            <div class="checkbox">
+                                                <input
+                                                    checked="checked"
+                                                    class="checkbox__input"
+                                                    type="checkbox"
+                                                    id="c-05z"
+                                                />
+                                                <label class="checkbox__label" for="c-05z"
+                                                    >Демисезонная ортопедическая</label
+                                                >
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <ul class="catalog-list__subcategory-list">
-                                    <li class="catalog-list__item has-badge">
-                                        <div class="checkbox">
-                                            <input
-                                                checked="checked"
-                                                class="checkbox__input"
-                                                type="checkbox"
-                                                id="c-03z"
-                                            />
-                                            <label class="checkbox__label" for="c-03z"
-                                                >Зимняя ортопедическая детская обувь</label
-                                            >
-                                        </div>
-                                        <span title="Скидка" class="catalog-list__badge-sale">SALE</span>
-                                    </li>
-                                    <li class="catalog-list__item has-badge">
-                                        <div class="checkbox">
-                                            <input
-                                                checked="checked"
-                                                class="checkbox__input"
-                                                type="checkbox"
-                                                id="c-04z"
-                                            />
-                                            <label class="checkbox__label" for="c-04z"
-                                                >Детские ортопедические туфли</label
-                                            >
-                                        </div>
-                                        <span title="Розничная цена" class="catalog-list__badge-retail-price">РЦ</span>
-                                    </li>
-                                    <li class="catalog-list__item">
-                                        <div class="checkbox">
-                                            <input
-                                                checked="checked"
-                                                class="checkbox__input"
-                                                type="checkbox"
-                                                id="c-05z"
-                                            />
-                                            <label class="checkbox__label" for="c-05z"
-                                                >Демисезонная ортопедическая</label
-                                            >
-                                        </div>
-                                    </li>
-                                </ul>
 
                                 <div class="catalog-list__subcategory">
                                     <div class="checkbox">
                                         <input checked="checked" class="checkbox__input" type="checkbox" id="c-06z" />
                                         <label class="checkbox__label" for="c-06z">Верхняя одежда для детей</label>
                                     </div>
+                                    <ul class="catalog-list__subcategory-list">
+                                        <li class="catalog-list__item">
+                                            <div class="checkbox">
+                                                <input
+                                                    checked="checked"
+                                                    class="checkbox__input"
+                                                    type="checkbox"
+                                                    id="c-07z"
+                                                />
+                                                <label class="checkbox__label" for="c-07z"
+                                                    >Зимняя ортопедическая детская обувь</label
+                                                >
+                                            </div>
+                                        </li>
+                                        <li class="catalog-list__item">
+                                            <div class="checkbox">
+                                                <input
+                                                    checked="checked"
+                                                    class="checkbox__input"
+                                                    type="checkbox"
+                                                    id="c-08z"
+                                                />
+                                                <label class="checkbox__label" for="c-08z"
+                                                    >Детские ортопедические туфли</label
+                                                >
+                                            </div>
+                                        </li>
+                                        <li class="catalog-list__item">
+                                            <div class="checkbox">
+                                                <input
+                                                    checked="checked"
+                                                    class="checkbox__input"
+                                                    type="checkbox"
+                                                    id="c-09z"
+                                                />
+                                                <label class="checkbox__label" for="c-09z"
+                                                    >Демисезонная ортопедическая детская</label
+                                                >
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <ul class="catalog-list__subcategory-list">
-                                    <li class="catalog-list__item">
-                                        <div class="checkbox">
-                                            <input
-                                                checked="checked"
-                                                class="checkbox__input"
-                                                type="checkbox"
-                                                id="c-07z"
-                                            />
-                                            <label class="checkbox__label" for="c-07z"
-                                                >Зимняя ортопедическая детская обувь</label
-                                            >
-                                        </div>
-                                    </li>
-                                    <li class="catalog-list__item">
-                                        <div class="checkbox">
-                                            <input
-                                                checked="checked"
-                                                class="checkbox__input"
-                                                type="checkbox"
-                                                id="c-08z"
-                                            />
-                                            <label class="checkbox__label" for="c-08z"
-                                                >Детские ортопедические туфли</label
-                                            >
-                                        </div>
-                                    </li>
-                                    <li class="catalog-list__item">
-                                        <div class="checkbox">
-                                            <input
-                                                checked="checked"
-                                                class="checkbox__input"
-                                                type="checkbox"
-                                                id="c-09z"
-                                            />
-                                            <label class="checkbox__label" for="c-09z"
-                                                >Демисезонная ортопедическая детская</label
-                                            >
-                                        </div>
-                                    </li>
-                                </ul>
                             </div>
                             <div class="catalog-list">
                                 <div class="catalog-list__category">
@@ -610,98 +614,100 @@
                                         <input checked="checked" class="checkbox__input" type="checkbox" id="c-02y" />
                                         <label class="checkbox__label" for="c-02y">Обувь для детей</label>
                                     </div>
+                                    <ul class="catalog-list__subcategory-list">
+                                        <li class="catalog-list__item has-badge">
+                                            <div class="checkbox">
+                                                <input
+                                                    checked="checked"
+                                                    class="checkbox__input"
+                                                    type="checkbox"
+                                                    id="c-03y"
+                                                />
+                                                <label class="checkbox__label" for="c-03y"
+                                                    >Зимняя ортопедическая детская обувь</label
+                                                >
+                                            </div>
+                                            <span title="Скидка" class="catalog-list__badge-sale">SALE</span>
+                                        </li>
+                                        <li class="catalog-list__item has-badge">
+                                            <div class="checkbox">
+                                                <input
+                                                    checked="checked"
+                                                    class="checkbox__input"
+                                                    type="checkbox"
+                                                    id="c-04y"
+                                                />
+                                                <label class="checkbox__label" for="c-04y"
+                                                    >Детские ортопедические туфли</label
+                                                >
+                                            </div>
+                                            <span title="Розничная цена" class="catalog-list__badge-retail-price"
+                                                >РЦ</span
+                                            >
+                                        </li>
+                                        <li class="catalog-list__item">
+                                            <div class="checkbox">
+                                                <input
+                                                    checked="checked"
+                                                    class="checkbox__input"
+                                                    type="checkbox"
+                                                    id="c-05y"
+                                                />
+                                                <label class="checkbox__label" for="c-05y"
+                                                    >Демисезонная ортопедическая</label
+                                                >
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <ul class="catalog-list__subcategory-list">
-                                    <li class="catalog-list__item has-badge">
-                                        <div class="checkbox">
-                                            <input
-                                                checked="checked"
-                                                class="checkbox__input"
-                                                type="checkbox"
-                                                id="c-03y"
-                                            />
-                                            <label class="checkbox__label" for="c-03y"
-                                                >Зимняя ортопедическая детская обувь</label
-                                            >
-                                        </div>
-                                        <span title="Скидка" class="catalog-list__badge-sale">SALE</span>
-                                    </li>
-                                    <li class="catalog-list__item has-badge">
-                                        <div class="checkbox">
-                                            <input
-                                                checked="checked"
-                                                class="checkbox__input"
-                                                type="checkbox"
-                                                id="c-04y"
-                                            />
-                                            <label class="checkbox__label" for="c-04y"
-                                                >Детские ортопедические туфли</label
-                                            >
-                                        </div>
-                                        <span title="Розничная цена" class="catalog-list__badge-retail-price">РЦ</span>
-                                    </li>
-                                    <li class="catalog-list__item">
-                                        <div class="checkbox">
-                                            <input
-                                                checked="checked"
-                                                class="checkbox__input"
-                                                type="checkbox"
-                                                id="c-05y"
-                                            />
-                                            <label class="checkbox__label" for="c-05y"
-                                                >Демисезонная ортопедическая</label
-                                            >
-                                        </div>
-                                    </li>
-                                </ul>
 
                                 <div class="catalog-list__subcategory">
                                     <div class="checkbox">
                                         <input checked="checked" class="checkbox__input" type="checkbox" id="c-06y" />
                                         <label class="checkbox__label" for="c-06y">Верхняя одежда для детей</label>
                                     </div>
+                                    <ul class="catalog-list__subcategory-list">
+                                        <li class="catalog-list__item">
+                                            <div class="checkbox">
+                                                <input
+                                                    checked="checked"
+                                                    class="checkbox__input"
+                                                    type="checkbox"
+                                                    id="c-07y"
+                                                />
+                                                <label class="checkbox__label" for="c-07y"
+                                                    >Зимняя ортопедическая детская обувь</label
+                                                >
+                                            </div>
+                                        </li>
+                                        <li class="catalog-list__item">
+                                            <div class="checkbox">
+                                                <input
+                                                    checked="checked"
+                                                    class="checkbox__input"
+                                                    type="checkbox"
+                                                    id="c-08y"
+                                                />
+                                                <label class="checkbox__label" for="c-08y"
+                                                    >Детские ортопедические туфли</label
+                                                >
+                                            </div>
+                                        </li>
+                                        <li class="catalog-list__item">
+                                            <div class="checkbox">
+                                                <input
+                                                    checked="checked"
+                                                    class="checkbox__input"
+                                                    type="checkbox"
+                                                    id="c-09y"
+                                                />
+                                                <label class="checkbox__label" for="c-09y"
+                                                    >Демисезонная ортопедическая детская</label
+                                                >
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <ul class="catalog-list__subcategory-list">
-                                    <li class="catalog-list__item">
-                                        <div class="checkbox">
-                                            <input
-                                                checked="checked"
-                                                class="checkbox__input"
-                                                type="checkbox"
-                                                id="c-07y"
-                                            />
-                                            <label class="checkbox__label" for="c-07y"
-                                                >Зимняя ортопедическая детская обувь</label
-                                            >
-                                        </div>
-                                    </li>
-                                    <li class="catalog-list__item">
-                                        <div class="checkbox">
-                                            <input
-                                                checked="checked"
-                                                class="checkbox__input"
-                                                type="checkbox"
-                                                id="c-08y"
-                                            />
-                                            <label class="checkbox__label" for="c-08y"
-                                                >Детские ортопедические туфли</label
-                                            >
-                                        </div>
-                                    </li>
-                                    <li class="catalog-list__item">
-                                        <div class="checkbox">
-                                            <input
-                                                checked="checked"
-                                                class="checkbox__input"
-                                                type="checkbox"
-                                                id="c-09y"
-                                            />
-                                            <label class="checkbox__label" for="c-09y"
-                                                >Демисезонная ортопедическая детская</label
-                                            >
-                                        </div>
-                                    </li>
-                                </ul>
                             </div>
                             <button class="link link_hover stock-aside__show-all">Показать все</button>
                         </div>
@@ -711,7 +717,7 @@
                                 <span class="stock-aside__filters-heading">Фильтры</span>
                                 <button class="link stock-aside__uncheck-all">Сбросить все</button>
                             </div>
-                            <div class="stock-dropdown-filter is-expanded">
+                            <div class="stock-dropdown-filter has-tooltip-force">
                                 <div class="stock-dropdown-filter__head">
                                     <div class="stock-dropdown-filter__heading">Ценовой диапазон</div>
                                     <div class="stock-dropdown-filter__meta">От 0 - до 12 500</div>
@@ -722,10 +728,24 @@
                                             <span class="range-double__min">0 руб.</span>
                                             <span class="range-double__max">12 500 руб.</span>
                                         </div>
-                                        <div class="range-double__bar">
-                                            <div class="range-double__thumb-min" style="left: 0%;"></div>
-                                            <div class="range-double__active" style="left: 0%; width: 50%;"></div>
-                                            <div class="range-double__thumb-max" style="left: 50%;"></div>
+                                        <div>
+                                            <div class="input-range">
+                                                <input
+                                                    class="input-range__left"
+                                                    type="range"
+                                                    value="80"
+                                                    min="0"
+                                                    max="100"
+                                                />
+                                                <div class="input-range__active"></div>
+                                                <input
+                                                    class="input-range__right"
+                                                    type="range"
+                                                    value="10"
+                                                    min="0"
+                                                    max="100"
+                                                />
+                                            </div>
                                         </div>
                                     </div>
                                     <button class="tooltip tooltip_right stock-dropdown-filter__accept">
@@ -739,7 +759,7 @@
                                 </div>
                                 <div class="stock-dropdown-filter__body"></div>
                             </div>
-                            <div class="stock-dropdown-filter is-expanded  has-tooltip-force">
+                            <div class="stock-dropdown-filter has-tooltip-force">
                                 <div class="stock-dropdown-filter__head">
                                     <div class="stock-dropdown-filter__heading">Размер</div>
                                     <div class="stock-dropdown-filter__meta">
@@ -789,9 +809,12 @@
                                         <li class="item-params-list__item">S</li>
                                     </ul>
                                     <button class="link link_hover stock-dropdown-filter__toggle">Показать все</button>
+                                    <button class="tooltip tooltip_right stock-dropdown-filter__accept">
+                                        Применить
+                                    </button>
                                 </div>
                             </div>
-                            <div class="stock-dropdown-filter is-expanded  has-tooltip-force">
+                            <div class="stock-dropdown-filter has-tooltip-force">
                                 <div class="stock-dropdown-filter__head">
                                     <div class="stock-dropdown-filter__heading">Цвет</div>
                                     <div class="stock-dropdown-filter__meta">Желтый, красный, белый..</div>
@@ -819,6 +842,9 @@
                                         <li class="item-params-list__item">серо-бурмалиновый</li>
                                     </ul>
                                     <button class="link link_hover stock-dropdown-filter__toggle">Показать все</button>
+                                    <button class="tooltip tooltip_right stock-dropdown-filter__accept">
+                                        Применить
+                                    </button>
                                 </div>
                             </div>
                         </div>

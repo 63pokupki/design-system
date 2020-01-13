@@ -63,10 +63,12 @@
         font-size: 10px;
         margin-left: auto;
         margin-right: 8px;
+        font-weight: $font-weight-primary;
     }
 
     &__clear {
         font-size: 10px;
+        font-weight: $font-weight-primary;
     }
 
     &__body {
@@ -82,6 +84,7 @@
         padding: 0 5px;
         margin-bottom: 20px;
         margin-top: 10px;
+        font-weight: $font-weight-primary;
 
         &:active {
             @include deep-click(0.95);
