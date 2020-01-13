@@ -113,9 +113,6 @@ $main-padding-modal: 20px;
     }
     &__header {
         margin-bottom: 20px;
-        &::first-letter {
-            text-transform: uppercase;
-        }
     }
 
     &__content {

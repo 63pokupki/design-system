@@ -139,14 +139,17 @@
 
         // Правый блок
         &__heading {
-            display: flex;
+            display: block;
             flex-wrap: wrap;
             font-size: 20px;
             margin-bottom: 15px;
+
             &::first-letter {
-                text-transform: capitalize;
+                text-transform: uppercase;
             }
+            
         }
+        
         &__price {
             margin-bottom: 5px;
             p {

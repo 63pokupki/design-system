@@ -9,9 +9,10 @@
     }
 
     &__org-btns {
-        display: flex;
+        float: right;
         align-items: center;
         margin-left: 20px;
+        margin-top: 20px;
     }
 
     &__get-position {
@@ -126,9 +127,11 @@
         line-height: 20px;
         color: #1e2023;
         margin-bottom: 15px;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
+        display: block;
+
+        &::first-letter {
+            text-transform: uppercase;
+        }
     }
 
     &__wrapper {
