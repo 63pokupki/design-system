@@ -1,0 +1,94 @@
+.how-cookie {
+    &__container {
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+        background: #fff; 
+    }
+    &__content {
+        display: block;
+        width: 100%;
+        padding: 5px;
+        background: #fff;
+        user-select: none;
+    }
+    &__content-header {
+        display: flex;
+        flex-direction: column;
+        padding: 5px 30px 15px;
+    }
+    &__content-header-heading {
+        font-size: 24px;
+        color: $color-text-heading;
+    }
+    &__collapse-block {
+        &.is-toggle {
+            .how-cookie__card-content {
+                margin-top: 15px;
+            }
+        }
+    }
+    &__toggle-btn {
+        height: 20px;
+    }
+    &__card-content {
+        margin: 0;
+        padding: 0 0 0 35px;
+    }
+    &__txt {
+        &-large {
+            font-size: 22px;
+            color: $color-text-base;
+            line-height: 30px;
+            span {
+                font-weight: 600;
+            }
+    
+        }
+        &-middle {
+            font-size: 14px;
+            color: $color-text-base;
+            line-height: 30px;
+            span {
+                font-weight: 600;                
+            }    
+        }
+    }
+    &__card-heading {
+        position: relative;
+        margin: 0 0 0 35px;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -35px;
+            display: block;
+            width: 30px;
+            height: 30px;
+            background: url("https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/how-to-clear-cookie/chrome.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    &__img-chrome-menu {
+        width: 20px;
+        height: 20px;
+        padding: 2px;
+        background: #d6d6d6;
+    }
+}
+
+
+
+
+
+
+@media (min-width: 769px) {
+    .how-cookie__desktop {
+        display: block;
+    }
+}
+
+
