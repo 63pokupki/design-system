@@ -1,4 +1,5 @@
 .how-cookie {
+    min-width: 320px;
     &__container {
         display: flex;
         width: 100%;
@@ -124,8 +125,7 @@
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
-        }
- 
+        } 
     }
     // Opera
     &__opera-icon {
