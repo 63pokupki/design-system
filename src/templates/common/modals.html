@@ -992,6 +992,10 @@
 
     <!-- Модалка сообщение организатору v.1.1 -->
     <h1 class="ds-title">Модалка сообщение организатору v.1.1</h1>
+    <div class="ds-text">Если поле ввода в фокусе, присвоить класс <span class="ds-hl">.is-active</span> элементу <span
+        class="ds-hl">modal__select-org</span>.</div>
+    <div class="ds-text">Чтобы отобразить блок с ошибкой, необходимо присвоить класс <span class="ds-hl">.is-error</span>, элементу <span
+            class="ds-hl">modal-message-for-org</span>.</div>
     <div class="modal modal-message-for-org is-visible demo">
         <div class="modal__wrap" style="margin: 10px">
             <div class="modal__btn-close"><i class="ds-icon icon-close"></i></div>
@@ -1010,12 +1014,17 @@
                         <input class="modal__download-file" type="file" name="" id="gh">
                     </label>
                 </div>
+                <!-- Блок с ошибкой -->
+                <!-- Чтобы его отобразить, необходимо присвоить класс .is-error, элементу modal-message-for-org -->
+                <div class="modal__error-block">
+                    Ошибка при загрузке файла: несоответствие требованиям
+                </div>
                 <div class="modal__info">
                     <span>Максимальный вес файла - 5 мб., размер - 800х600</span>
                     <span>Допустимые форматы: jpg, png</span>
                 </div>
                 <div class="modal__img-block">
-                    <div class="img-container_small"><img src="~images/short-img.jpg" alt=""></div>
+                    <div class="img-container_small"><img src="~images/card-long.png" alt=""></div>
                     <div class="img-container_small"><img src="~images/short-img.jpg" alt=""></div>
                     <div class="img-container_small"><img src="~images/short-img.jpg" alt=""></div>
                     <div class="img-container_small"><img src="~images/short-img.jpg" alt=""></div>
