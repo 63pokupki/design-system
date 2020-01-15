@@ -1,0 +1,31 @@
+.modal-not-auth {
+    .modal {
+        &__content {
+            max-width: 380px;
+            font-size: 16px;
+            line-height: 28px;
+            text-align: center;
+        }
+        &__wrap {
+            padding: 30px;
+        }
+        &__header {
+            margin-top: 0;
+        }
+    }
+    &__btn-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 20px 0 0 0;
+        padding: 0px 12px;
+    }
+    .ds-btn {
+        width: 168px;
+        height: 36px;
+        &__text {
+            font-size: 14px;
+        }
+    }
+}
+

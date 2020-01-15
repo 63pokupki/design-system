@@ -56,7 +56,8 @@
         &-middle {
             font-size: 14px;
             color: $color-text-base;
-            line-height: 30px;
+            line-height: 1.5em;
+            margin-bottom: 10px;
             span {
                 font-weight: 600;                
             }    
@@ -222,6 +223,10 @@
     }
     .how-cookie__card-content {
         padding: 0;
+    }
+    .how-cookie__txt-middle {
+        line-height: 1.5em;
+        margin-bottom: 10px;
     }
 }
 
