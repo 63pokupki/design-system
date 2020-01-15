@@ -26,7 +26,9 @@
         font-size: 24px;
         color: $color-text-heading;
     }
+    // Collapse
     &__collapse-block {
+        padding: 15px;
         &.is-toggle {
             .how-cookie__card-content {
                 margin-top: 15px;
@@ -34,6 +36,7 @@
         }
     }
     &__toggle-btn {
+        top: 18px!important;
         height: 20px;
     }
     &__card-content {
@@ -65,15 +68,15 @@
     &__card-heading {
         position: relative;
         margin: 0 0 0 35px;
+        font-size: 16px;
         &:before {
             content: "";
             position: absolute;
-            top: 0;
+            top: -1px;
             left: -35px;
             display: block;
-            width: 30px;
-            height: 30px;
-            background: url("https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/how-to-clear-cookie/chrome.svg");
+            width: 24px;
+            height: 24px;
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -82,126 +85,78 @@
     // Chrome
     &__chrome-icon {
         &:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -35px;
-            display: block;
-            width: 30px;
-            height: 30px;
             background: url("https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/how-to-clear-cookie/chrome.svg");
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
+
         }
+
     }
     // yandex
     &__yandex-icon {
         &:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -35px;
-            display: block;
-            width: 30px;
-            height: 30px;
             background: url("https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/how-to-clear-cookie/yandex.png");
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
+
         }
     }
     // Safari
     &__safari-icon {
         &:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -35px;
-            display: block;
-            width: 30px;
-            height: 30px;
             background: url("https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/how-to-clear-cookie/safari.svg");
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
+
         } 
     }
     // Opera
     &__opera-icon {
         &:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -35px;
-            display: block;
-            width: 30px;
-            height: 30px;
             background: url("https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/how-to-clear-cookie/opera.png");
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
+
         }
     }
     // Mozilla
     &__mozilla-icon {
         &:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -35px;
-            display: block;
-            width: 30px;
-            height: 30px;
             background: url("https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/how-to-clear-cookie/Mozilla-Firefox.png");
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
+
         }
     }
     // IE
     &__ie-icon {
         &:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -35px;
-            display: block;
-            width: 30px;
-            height: 30px;
             background: url("https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/how-to-clear-cookie/ie.png");
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
+
         }
     }
     // Edge
     &__edge-icon {
         &:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -35px;
-            display: block;
-            width: 30px;
-            height: 30px;
             background: url("https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/how-to-clear-cookie/edge.png");
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
+
         }
 
     }
     //Samsung 
     &__samsung-icon {
         &:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -35px;
-            display: block;
-            width: 30px;
-            height: 30px;
             background: url("https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/how-to-clear-cookie/samsung-internet.png");
             background-size: contain;
             background-repeat: no-repeat;
@@ -212,13 +167,6 @@
     //Android
     &__android-icon {
         &:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -35px;
-            display: block;
-            width: 30px;
-            height: 30px;
             background: url("https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/how-to-clear-cookie/android-browser.png");
             background-size: contain;
             background-repeat: no-repeat;
@@ -229,13 +177,6 @@
     //mi
     &__mi-icon {
         &:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -35px;
-            display: block;
-            width: 30px;
-            height: 30px;
             background: url("https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/how-to-clear-cookie/xiaomi-browser.png");
             background-size: contain;
             background-repeat: no-repeat;
@@ -266,7 +207,7 @@
     .how-cookie__card-heading {
         font-size: 14px;
         &:before {
-            top: -6px;
+            top: -2px;
         }
     }
     .how-cookie__content-header {
@@ -277,6 +218,9 @@
     }
     .how-cookie__content-heading {
         margin: 0;
+    }
+    .how-cookie__card-content {
+        padding: 0;
     }
 }
 
