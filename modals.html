@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Модальные окна</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?380d106158ef22fedbce" rel="stylesheet"><link href="css/ds-utils.css?380d106158ef22fedbce" rel="stylesheet"><link href="css/ds-ui-kit.css?380d106158ef22fedbce" rel="stylesheet"></head>
+<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?e0ac9a79a8214275ae6c" rel="stylesheet"><link href="css/ds-utils.css?e0ac9a79a8214275ae6c" rel="stylesheet"><link href="css/ds-ui-kit.css?e0ac9a79a8214275ae6c" rel="stylesheet"></head>
 
 <body class="body__modals" style="position: relative;">
 
@@ -990,6 +990,61 @@
         </script>
     </div>
 
+    <!-- Модалка сообщение организатору v.1.1 -->
+    <h1 class="ds-title">Модалка сообщение организатору v.1.1</h1>
+    <div class="modal modal-message-for-org is-visible demo">
+        <div class="modal__wrap" style="margin: 10px">
+            <div class="modal__btn-close"><i class="ds-icon icon-close"></i></div>
+            <div class="modal__header">Сообщение организатору</div>
+            <div class="modal__content">
+                <!-- Если поле ввода в фокусе, присвоить класс .is-active элементу modal__select-org -->
+                <div id="select_purchase" class="modal__select-org modal__select-org-purchase"
+                    style="position: relative">
+                    <input type="text" value="О спорт - ты жизнь! Самокаты BIBITU, велосипеды..."
+                        class="modal__selected-position modal__theme-txt">
+                </div>
+                <div id="select_catalog" class="modal__select-org modal__select-org-catalog">
+                    <textarea wrap="soft" class="modal__selected-position modal__textarea"
+                        name="footer__message-for-org" id="" cols="30" rows="5">bla-bla-bla</textarea>
+                    <label class="modal__download-file-wrap" for="gh">
+                        <input class="modal__download-file" type="file" name="" id="gh">
+                    </label>
+                </div>
+                <div class="modal__info">
+                    <span>Максимальный вес файла - 5 мб., размер - 800х600</span>
+                    <span>Допустимые форматы: jpg, png</span>
+                </div>
+                <div class="modal__img-block">
+                    <div class="img-container_small"><img src="images/short-img.jpg" alt=""></div>
+                    <div class="img-container_small"><img src="images/short-img.jpg" alt=""></div>
+                    <div class="img-container_small"><img src="images/short-img.jpg" alt=""></div>
+                    <div class="img-container_small"><img src="images/short-img.jpg" alt=""></div>
+                    <div class="img-container_small"><img src="images/short-img.jpg" alt=""></div>
+                    <div class="img-container_small"><img src="images/short-img.jpg" alt=""></div>
+                    <div class="img-container_small"><img src="images/short-img.jpg" alt=""></div>
+                    <div class="img-container_small"><img src="images/short-img.jpg" alt=""></div>
+                    <div class="img-container_small"><img src="images/short-img.jpg" alt=""></div>
+                </div>
+                <div class="btn-container">
+                    <button class="ds-btn ds-btn_hover btn-copy">
+                        <div class="ds-btn__text">Отправить</div>
+                    </button>
+                    <button class="ds-btn modal__btn-cancel">
+                        <div class="ds-btn__text">Отмена</div>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="modal__bg" style="position: absolute;"></div>
+    </div>
+
+    <div class="ds-code-wrapper">
+        <script type="text/plain" class="language-markup">
+            <!-- Скопировать код элемента сюда -->
+        </script>
+    </div>
+
+
     <!-- Мобильная модалка список каталогов -->
     <h1 class="ds-title">Модалка "Список каталогов" мобильная</h1>
     <div class="ds-text">Для отображения кнопки "Перенести", присвоить класс <span class="ds-hl">.is-selected</span>
@@ -1702,7 +1757,7 @@
 
         <div class="ds-code-wrapper">
             <script type="text/plain" class="language-markup">
-                <div class="modal modal-confirm-mail demo is-visible">
+                <div class="modal modal-confirm-mail is-visible">
                     <div class="modal__wrap" style="margin: 10px">
                         <div class="modal__btn-close"><i class="ds-icon icon-close"></i></div>
                         <h2 class="modal__header">Добро пожаловать на 63pokupki.ru. Спасибо, что выбрали нас!</h2>
@@ -1730,12 +1785,63 @@
                             <div class="modal-confirm-mail__footer">С заботой о вас, 63pokupki.ru</div>
                         </div>
                     </div>
-                    <div class="modal__bg" style="position: absolute;"></div>
+                    <div class="modal__bg"></div>
                 </div>   
             </script>   
         </div>
+
+        <h1 class="ds-title">Вы не авторизованы</h1>
+        <div class="ds-divider">
+            <!-- Вы не авторизованы -->
+            <!-- _modal-not-auth.scss -->
+            <div class="ds-wrapper">
+                <div class="ds-divider" style="position: relative;">
+                    <div class="modal modal-not-auth demo is-visible">
+                        <div class="modal__wrap" style="margin: 10px">
+                            <div class="modal__btn-close"><i class="ds-icon icon-close"></i></div>
+                            <h2 class="modal__header">Вы не авторизованы</h2>
+                            <div class="modal__content">
+                                Для продолжения, пожалуйста, войдите в свой аккаунт или зарегистрируйтесь
+                            </div>
+                            <div class="modal-not-auth__btn-container">
+                                <button class="ds-btn modal__btn-cancel">
+                                    <div class="ds-btn__text">Вход</div>
+                                </button>
+                                <button class="ds-btn ds-btn_hover btn-copy">
+                                    <div class="ds-btn__text">Регистрация</div>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="modal__bg" style="position: absolute;"></div>
+                    </div>   
+                </div>
+            </div>
+        </div>
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <div class="modal modal-not-auth demo is-visible">
+                    <div class="modal__wrap" style="margin: 10px">
+                        <div class="modal__btn-close"><i class="ds-icon icon-close"></i></div>
+                        <h2 class="modal__header">Вы не авторизованы</h2>
+                        <div class="modal__content">
+                            Для продолжения, пожалуйста, войдите в свой аккаунт или зарегистрируйтесь
+                        </div>
+                        <div class="modal-not-auth__btn-container">
+                            <button class="ds-btn modal__btn-cancel">
+                                <div class="ds-btn__text">Вход</div>
+                            </button>
+                            <button class="ds-btn ds-btn_hover btn-copy">
+                                <div class="ds-btn__text">Регистрация</div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="modal__bg" style="position: absolute;"></div>
+                </div>
+            </script>
+        </div>
+    
     
 
-<script type="text/javascript" src="js/highlight-syntax.js?380d106158ef22fedbce"></script><script type="text/javascript" src="js/ds-utils.js?380d106158ef22fedbce"></script><script type="text/javascript" src="js/ds-ui-kit.js?380d106158ef22fedbce"></script></body>
+<script type="text/javascript" src="js/highlight-syntax.js?e0ac9a79a8214275ae6c"></script><script type="text/javascript" src="js/ds-utils.js?e0ac9a79a8214275ae6c"></script><script type="text/javascript" src="js/ds-ui-kit.js?e0ac9a79a8214275ae6c"></script></body>
 
 </html>
