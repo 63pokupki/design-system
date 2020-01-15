@@ -207,6 +207,20 @@
                 }
             }
         }
+        &__info {
+            display: flex;
+            flex-direction: column;
+            margin: 0 2px 10px;
+            span {
+                line-height: 26px;
+            }
+        }
+        &__img-block {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
     }
 }
 
