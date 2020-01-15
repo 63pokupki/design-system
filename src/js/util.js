@@ -123,20 +123,16 @@ if (hearts) {
     })
 }
 
+
 //Разворачивающийся блок
 (() => {
     let toggleBlock = document.querySelectorAll(".collapse-block");
 
     if (toggleBlock) {
         toggleBlock.forEach(t => {
-            // let btn_toggle = t.querySelector(".arrow");
-            let btn_toggle = t.querySelector(".collapse-block__header");
-
-            if (btn_toggle) {
-                btn_toggle.addEventListener("click", () => {
-                    t.classList.toggle("is-toggle");
-                });
-            }
+            t.addEventListener("click", ()=> {
+                t.classList.toggle("is-toggle");
+            })
         });
     }
 })();
