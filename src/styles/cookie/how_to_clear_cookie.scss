@@ -18,6 +18,9 @@
         flex-direction: column;
         padding: 5px 30px 15px;
     }
+    &__content-heading {
+        margin: 0 0 0 30px;
+    }
     &__content-header-heading {
         font-size: 24px;
         color: $color-text-heading;
@@ -55,6 +58,9 @@
             }    
         }
     }
+    &__txt-important {
+        color: $important-color;
+    }
     &__card-heading {
         position: relative;
         margin: 0 0 0 35px;
@@ -72,11 +78,182 @@
             background-position: center;
         }
     }
+    // Chrome
+    &__chrome-icon {
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -35px;
+            display: block;
+            width: 30px;
+            height: 30px;
+            background: url("https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/how-to-clear-cookie/chrome.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    // yandex
+    &__yandex-icon {
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -35px;
+            display: block;
+            width: 30px;
+            height: 30px;
+            background: url("https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/how-to-clear-cookie/yandex.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    // Safari
+    &__safari-icon {
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -35px;
+            display: block;
+            width: 30px;
+            height: 30px;
+            background: url("https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/how-to-clear-cookie/safari.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+ 
+    }
+    // Opera
+    &__opera-icon {
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -35px;
+            display: block;
+            width: 30px;
+            height: 30px;
+            background: url("https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/how-to-clear-cookie/opera.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    // Mozilla
+    &__mozilla-icon {
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -35px;
+            display: block;
+            width: 30px;
+            height: 30px;
+            background: url("https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/how-to-clear-cookie/Mozilla-Firefox.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    // IE
+    &__ie-icon {
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -35px;
+            display: block;
+            width: 30px;
+            height: 30px;
+            background: url("https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/how-to-clear-cookie/ie.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    // Edge
+    &__edge-icon {
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -35px;
+            display: block;
+            width: 30px;
+            height: 30px;
+            background: url("https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/how-to-clear-cookie/edge.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+    }
+    //Samsung 
+    &__samsung-icon {
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -35px;
+            display: block;
+            width: 30px;
+            height: 30px;
+            background: url("https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/how-to-clear-cookie/samsung-internet.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+    }
+    //Android
+    &__android-icon {
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -35px;
+            display: block;
+            width: 30px;
+            height: 30px;
+            background: url("https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/how-to-clear-cookie/android-browser.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+    }
+    //mi
+    &__mi-icon {
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -35px;
+            display: block;
+            width: 30px;
+            height: 30px;
+            background: url("https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/how-to-clear-cookie/xiaomi-browser.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+    }
+
     &__img-chrome-menu {
         width: 20px;
         height: 20px;
         padding: 2px;
         background: #d6d6d6;
+    }
+    .vertical-margin {
+        display: block;
+        height: 20px;
+        min-height: 20px;
     }
 }
 
@@ -85,9 +262,21 @@
 
 
 
-@media (min-width: 769px) {
-    .how-cookie__desktop {
-        display: block;
+@media (max-width: 769px) {
+    .how-cookie__card-heading {
+        font-size: 14px;
+        &:before {
+            top: -6px;
+        }
+    }
+    .how-cookie__content-header {
+        padding: 5px 0px 15px;
+    }
+    .how-cookie__txt-large {
+        font-size: 16px;
+    }
+    .how-cookie__content-heading {
+        margin: 0;
     }
 }
 
