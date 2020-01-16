@@ -4,7 +4,8 @@
        .modal__error-block {
            display: flex;
        } 
-    }    
+    }
+        
     .modal {
         &__wrap {
             max-width: 550px;
@@ -51,13 +52,34 @@
                     }
                 }
 
-                &-copy {
+                &_send {
                     margin-right: 25px;
                 }
             }
+            .btn_send {
+                .ds-loader {
+                    display: none;
+                    &:after {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+                &.is-load {
+                    background: #fff;
+                    pointer-events: none;
+                    .ds-loader {
+                        display: inline-flex;
+                    }
+                    .ds-btn__text {
+                        display: none;
+                    }
+                }
+            }    
+
         }
 
         &__select-org {
+            position: relative;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -66,8 +88,6 @@
             min-height: 50px;
             margin-bottom: 20px;
             padding: 0 15px;
-            border: 2px solid $color-text-light-grey;
-            border-radius: 3px;
             cursor: pointer;
 
             &.is-active {
@@ -82,20 +102,6 @@
                     max-height: 180px;
                 }
             }
-            &:after {
-                content: "";
-                position: absolute;
-                left: 13px;
-                top: -11px;
-                background: #fff;
-                width: auto;
-                padding: 0 2%;
-                height: 15px;
-                text-align: center;
-                font-size: 14px;
-                font-weight: 600;
-                color: $color-text-light-grey;
-            }
             &-purchase {
                 padding: 0;    
             }
@@ -104,9 +110,9 @@
                 content: "Тема";
             }
     
-            &-catalog:after {
-                content: "Сообщение";
-            }
+            // &-catalog:after {
+            //     content: "Сообщение";
+            // }
             &-catalog {
                 min-height: 100px;
                 padding: 0;
@@ -127,7 +133,6 @@
         }    
 
         &__selected-position {
-            // border: none;
             font-size: 16px;
             color: $color-text-base;
 
@@ -137,15 +142,42 @@
             }
         }
         &__textarea {
+            position: relative;
             width: 100%;
             height: 100px;
             min-height: 100px;
             max-height: 100px;
             padding: 15px 30px 15px 15px;
-            border: none;
+            border: 2px solid $color-text-light-grey;
+            border-radius: 3px;
             resize: none;
             appearance: none;
             outline: none;
+            &:focus {
+                border: 2px solid $color-primary;
+                ~.modal__textarea-label {
+                    &:after {
+                        color: $color-primary;
+                    }
+                }
+            }
+        }
+        &__textarea-label {
+            position: absolute;
+            &:after {
+                content: "Сообщение";
+                position: absolute;
+                left: 6px;
+                top: -61px;
+                background: #fff;
+                width: auto;
+                padding: 0 10px;
+                height: 15px;
+                text-align: center;
+                font-size: 14px;
+                font-weight: 600;
+                color: $color-text-light-grey;    
+            }
         }
 
         &__theme-txt {
@@ -264,6 +296,63 @@
             color: #FFFFFF;
             font-size: 14px;
             font-weight: 600;            
+        }
+        &__img-block {
+            >.img-container_small {
+                position: relative;
+                &.is-load {
+                    .ds-loader {
+                        visibility: visible!important;
+                    }
+                }
+                &.img-preloader {
+                    display: none;
+                    &.is-visible {
+                        display: flex;
+                    }
+                    &:before {
+                       left: 10px; 
+                    }
+                    .ds-loader {
+                        visibility: visible!important;
+                        &:after {
+                            left: 7px;
+                            top: 8px;
+                        }
+                    }
+                    border: 2px dashed $color-primary;
+                }    
+                .ds-loader {
+                    visibility: hidden;
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    right: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 100%;
+                    &:after {
+                        position: absolute;
+                        left: 10px;
+                        top: 10px;
+                        width: 30px;
+                        height: 30px;
+                        z-index: 15;
+                    }
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+                        background-color: rgba(255, 255, 255, 0.7);
+                        z-index: 14;
+                    }
+    
+                    z-index: 11;
+                }
+            }
         }
     }
 }

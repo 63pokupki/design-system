@@ -112,14 +112,20 @@ btn_sum.forEach(m => {
 });
 
 //Закрытие картинок в модалке "Сообщение организатору"
-// (()=> {
-//     let modal_msg_org = document.querySelectorAll(".modal-message-for-org");
-//     if (modal_msg_org) {
-//         modal_msg_org.forEach((mso)=>{
-//            let close_btn = mso.querySelectorAll(""); 
-//         })
-//     }
-// })()
+(()=> {
+    let modal_msg_org = document.querySelectorAll(".modal-message-for-org");
+    if (modal_msg_org) {
+        modal_msg_org.forEach((mso)=>{
+           let close_btn = mso.querySelectorAll(".img-container_small");
+           close_btn.forEach((cb)=> {
+               cb.addEventListener("click", ()=> {
+                    cb.parentNode.removeChild(cb);
+               });
+           }); 
+        })
+    }
+})()
+
 
 // <!-- Сердечко -->
 

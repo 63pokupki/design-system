@@ -307,6 +307,30 @@
     }
 }
 
+//Модалка сообщение организатору
+.modal-message-for-org {
+    .ds-inputs-form__label {
+        &:before {
+            content: "Тема";
+            white-space: nowrap;
+            color: $color-text-light-grey;
+        }
+    }
+    .input-login {
+        &:after {
+            height: 2px;
+            width: 55px; 
+        }
+    }
+    .ds-inputs-form__input {
+        border: 2px solid $color-text-light-grey;
+        &:focus {
+            border: 2px solid $color-primary;
+        }
+    }
+        
+}
+
 
 
 
