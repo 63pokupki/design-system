@@ -10,15 +10,25 @@
     font-weight: 600;
     color: $statusbar_empty-color-txt;  
     user-select: none;
+    position: relative;
     
     &__line {
         @extend .statusbar;
+        position: absolute;
+        min-width: 2%;
         height: 100%;   
-        padding-left: 7px;
-        background: $color-primary;        
+        background: $color-primary;
+    }
+    &__txt {
+        display: inline-flex;
+        color: #fff;
+        z-index: 10;
+        padding: 0 10px;
+        flex-wrap: nowrap;
         span {
             margin: 0 3px;
         }
+
     }
     &_middle {
         height: 27px;
