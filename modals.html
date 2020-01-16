@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Модальные окна</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?fe54bc0964ee231e65dd" rel="stylesheet"><link href="css/ds-utils.css?fe54bc0964ee231e65dd" rel="stylesheet"><link href="css/ds-ui-kit.css?fe54bc0964ee231e65dd" rel="stylesheet"></head>
+<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?3fb300acf98f4bd51813" rel="stylesheet"><link href="css/ds-utils.css?3fb300acf98f4bd51813" rel="stylesheet"><link href="css/ds-ui-kit.css?3fb300acf98f4bd51813" rel="stylesheet"></head>
 
 <body class="body__modals" style="position: relative;">
 
@@ -992,26 +992,39 @@
 
     <!-- Модалка сообщение организатору v.1.1 -->
     <h1 class="ds-title">Модалка сообщение организатору v.1.1</h1>
-    <div class="ds-text">Если поле ввода в фокусе, присвоить класс <span class="ds-hl">.is-active</span> элементу <span
-        class="ds-hl">modal__select-org</span>.</div>
+    <div class="ds-text">Для включения лоадера, присвоить класс <span class="ds-hl">.is-load</span> элементу<span class="ds-hl">img-container_small</span>
+    для изображения и элементу <span class="ds-hl">btn_send</span> для кнопки</div>
+    <div class="ds-text">Для добавления прелоадера перед загрузкой изображения, присвоить класс <span class="ds-hl">.is-visible</span> элементу <span class="ds-hl">"img-container_small img-preloader"</span></div>
     <div class="ds-text">Чтобы отобразить блок с ошибкой, необходимо присвоить класс <span class="ds-hl">.is-error</span>, элементу <span
             class="ds-hl">modal-message-for-org</span>.</div>
+    
     <div class="modal modal-message-for-org is-visible demo">
         <div class="modal__wrap" style="margin: 10px">
             <div class="modal__btn-close"><i class="ds-icon icon-close"></i></div>
             <div class="modal__header">Сообщение организатору</div>
             <div class="modal__content">
                 <!-- Если поле ввода в фокусе, присвоить класс .is-active элементу modal__select-org -->
-                <div id="select_purchase" class="modal__select-org modal__select-org-purchase"
+                <!-- <div id="select_purchase" class="modal__select-org modal__select-org-purchase"
                     style="position: relative">
                     <input type="text" value="О спорт - ты жизнь! Самокаты BIBITU, велосипеды..."
                         class="modal__selected-position modal__theme-txt">
+                </div> -->
+                <div class="ds-inputs-component">
+                    
+                    <!-- Стили для инпутов ds-inputs-form.scss -->
+                    <div class="ds-inputs-form  input-login">
+                        <input id="ds-inputs-form__input-login" class="ds-inputs-form__input" type="text" name="" id="">
+                        <label class="ds-inputs-form__label" for="ds-inputs-form__input-login"></label>
+                    </div>
                 </div>
                 <div id="select_catalog" class="modal__select-org modal__select-org-catalog">
-                    <textarea wrap="soft" class="modal__selected-position modal__textarea"
-                        name="footer__message-for-org" id="" cols="30" rows="5">bla-bla-bla</textarea>
-                    <label class="modal__download-file-wrap" for="gh">
-                        <input class="modal__download-file" type="file" name="" id="gh">
+                    <textarea id="modal__textarea" wrap="soft" class="modal__selected-position modal__textarea"
+                        name="footer__message-for-org" id="" cols="30" rows="5">bla-bla-bla
+                    </textarea>
+                    <label class="modal__textarea-label" for="modal__textarea">
+                    </label>
+                    <label class="modal__download-file-wrap" for="gh11">
+                        <input class="modal__download-file" type="file" name="" id="gh11">
                     </label>
                 </div>
                 <!-- Блок с ошибкой -->
@@ -1024,7 +1037,8 @@
                     <span>Допустимые форматы: jpg, png</span>
                 </div>
                 <div class="modal__img-block">
-                    <div class="img-container_small"><img src="images/card-long.png" alt=""></div>
+                    <!-- Для включения лоадера, присвоить класс .is-load элементу img-container_small -->
+                    <div class="img-container_small"><div class="ds-loader"></div><img src="images/card-long.png" alt=""></div>
                     <div class="img-container_small"><img src="images/short-img.jpg" alt=""></div>
                     <div class="img-container_small"><img src="images/short-img.jpg" alt=""></div>
                     <div class="img-container_small"><img src="images/short-img.jpg" alt=""></div>
@@ -1033,10 +1047,12 @@
                     <div class="img-container_small"><img src="images/short-img.jpg" alt=""></div>
                     <div class="img-container_small"><img src="images/short-img.jpg" alt=""></div>
                     <div class="img-container_small"><img src="images/short-img.jpg" alt=""></div>
+                    <div class="img-container_small img-preloader"><div class="ds-loader"></div></div>
                 </div>
                 <div class="btn-container">
-                    <button class="ds-btn ds-btn_hover btn-copy">
+                    <button class="ds-btn ds-btn_hover btn_send">
                         <div class="ds-btn__text">Отправить</div>
+                        <div class="ds-loader"></div>
                     </button>
                     <button class="ds-btn modal__btn-cancel">
                         <div class="ds-btn__text">Отмена</div>
@@ -1851,6 +1867,6 @@
     
     
 
-<script type="text/javascript" src="js/highlight-syntax.js?fe54bc0964ee231e65dd"></script><script type="text/javascript" src="js/ds-utils.js?fe54bc0964ee231e65dd"></script><script type="text/javascript" src="js/ds-ui-kit.js?fe54bc0964ee231e65dd"></script></body>
+<script type="text/javascript" src="js/highlight-syntax.js?3fb300acf98f4bd51813"></script><script type="text/javascript" src="js/ds-utils.js?3fb300acf98f4bd51813"></script><script type="text/javascript" src="js/ds-ui-kit.js?3fb300acf98f4bd51813"></script></body>
 
 </html>
