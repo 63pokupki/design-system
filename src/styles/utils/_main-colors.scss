@@ -23,6 +23,9 @@
 .txt-color-white {
     color: #FFFFFF;
 }
+.txt-color-error {
+    color: $error-red;
+}
 
 // Цвета заливки
 
@@ -48,6 +51,9 @@
 }
 .bg-color-color-primary {
     background-color: #fff;
+}
+.bg-color-error {
+    background-color: $error-red;
 }
 
 
