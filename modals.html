@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Модальные окна</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?3fb300acf98f4bd51813" rel="stylesheet"><link href="css/ds-utils.css?3fb300acf98f4bd51813" rel="stylesheet"><link href="css/ds-ui-kit.css?3fb300acf98f4bd51813" rel="stylesheet"></head>
+<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?51a280fcaeff58f770a1" rel="stylesheet"><link href="css/ds-utils.css?51a280fcaeff58f770a1" rel="stylesheet"><link href="css/ds-ui-kit.css?51a280fcaeff58f770a1" rel="stylesheet"></head>
 
 <body class="body__modals" style="position: relative;">
 
@@ -1065,7 +1065,71 @@
 
     <div class="ds-code-wrapper">
         <script type="text/plain" class="language-markup">
-            <!-- Скопировать код элемента сюда -->
+            <div class="modal modal-message-for-org is-visible">
+                <div class="modal__wrap" style="margin: 10px">
+                    <div class="modal__btn-close"><i class="ds-icon icon-close"></i></div>
+                    <div class="modal__header">Сообщение организатору</div>
+                    <div class="modal__content">
+                        <!-- Если поле ввода в фокусе, присвоить класс .is-active элементу modal__select-org -->
+                        <!-- <div id="select_purchase" class="modal__select-org modal__select-org-purchase"
+                            style="position: relative">
+                            <input type="text" value="О спорт - ты жизнь! Самокаты BIBITU, велосипеды..."
+                                class="modal__selected-position modal__theme-txt">
+                        </div> -->
+                        <div class="ds-inputs-component">
+                            
+                            <!-- Стили для инпутов ds-inputs-form.scss -->
+                            <div class="ds-inputs-form  input-login">
+                                <input id="ds-inputs-form__input-login" class="ds-inputs-form__input" type="text" name="" id="">
+                                <label class="ds-inputs-form__label" for="ds-inputs-form__input-login"></label>
+                            </div>
+                        </div>
+                        <div id="select_catalog" class="modal__select-org modal__select-org-catalog">
+                            <textarea id="modal__textarea" wrap="soft" class="modal__selected-position modal__textarea"
+                                name="footer__message-for-org" id="" cols="30" rows="5">bla-bla-bla
+                            </textarea>
+                            <label class="modal__textarea-label" for="modal__textarea">
+                            </label>
+                            <label class="modal__download-file-wrap" for="gh11">
+                                <input class="modal__download-file" type="file" name="" id="gh11">
+                            </label>
+                        </div>
+                        <!-- Блок с ошибкой -->
+                        <!-- Чтобы его отобразить, необходимо присвоить класс .is-error, элементу modal-message-for-org -->
+                        <div class="modal__error-block">
+                            Ошибка при загрузке файла: несоответствие требованиям
+                        </div>
+                        <div class="modal__info">
+                            <span>Максимальный вес файла - 5 мб., размер - 800х600</span>
+                            <span>Допустимые форматы: jpg, png</span>
+                        </div>
+                        <div class="modal__img-block">
+                            <!-- Для включения лоадера, присвоить класс .is-load элементу img-container_small -->
+                            <div class="img-container_small"><div class="ds-loader"></div><img src="images/card-long.png" alt=""></div>
+                            <div class="img-container_small"><img src="images/short-img.jpg" alt=""></div>
+                            <div class="img-container_small"><img src="images/short-img.jpg" alt=""></div>
+                            <div class="img-container_small"><img src="images/short-img.jpg" alt=""></div>
+                            <div class="img-container_small"><img src="images/short-img.jpg" alt=""></div>
+                            <div class="img-container_small"><img src="images/short-img.jpg" alt=""></div>
+                            <div class="img-container_small"><img src="images/short-img.jpg" alt=""></div>
+                            <div class="img-container_small"><img src="images/short-img.jpg" alt=""></div>
+                            <div class="img-container_small"><img src="images/short-img.jpg" alt=""></div>
+                            <div class="img-container_small img-preloader"><div class="ds-loader"></div></div>
+                        </div>
+                        <div class="btn-container">
+                            <button class="ds-btn ds-btn_hover btn_send">
+                                <div class="ds-btn__text">Отправить</div>
+                                <div class="ds-loader"></div>
+                            </button>
+                            <button class="ds-btn modal__btn-cancel">
+                                <div class="ds-btn__text">Отмена</div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal__bg""></div>
+            </div>
+        
         </script>
     </div>
 
@@ -1867,6 +1931,6 @@
     
     
 
-<script type="text/javascript" src="js/highlight-syntax.js?3fb300acf98f4bd51813"></script><script type="text/javascript" src="js/ds-utils.js?3fb300acf98f4bd51813"></script><script type="text/javascript" src="js/ds-ui-kit.js?3fb300acf98f4bd51813"></script></body>
+<script type="text/javascript" src="js/highlight-syntax.js?51a280fcaeff58f770a1"></script><script type="text/javascript" src="js/ds-utils.js?51a280fcaeff58f770a1"></script><script type="text/javascript" src="js/ds-ui-kit.js?51a280fcaeff58f770a1"></script></body>
 
 </html>
