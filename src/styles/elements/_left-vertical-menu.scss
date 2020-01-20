@@ -17,7 +17,8 @@
         margin-bottom: 13px;
         display: flex;
         align-items: center;
-
+        flex-wrap: nowrap;
+        white-space: nowrap;
     }
 
     &__item:last-child {
@@ -45,15 +46,13 @@
         }
         &:hover {
             color: $color-primary;
-        }
-        
-    }
+        }        
+    }    
     @media (max-width: 768px) {
-        .left-vertical-menu {
+        & {
             display: none;
         }
     }
-
 }
 
 
