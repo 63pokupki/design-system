@@ -17,6 +17,7 @@
         margin-bottom: 13px;
         display: flex;
         align-items: center;
+
     }
 
     &__item:last-child {
@@ -46,6 +47,11 @@
             color: $color-primary;
         }
         
+    }
+    @media (max-width: 768px) {
+        .left-vertical-menu {
+            display: none;
+        }
     }
 
 }
