@@ -129,6 +129,18 @@
                         transform: scale(.95);
                     }
                 }
+                &.is-error {
+                    .modal__textarea {
+                        border-color: $color-input-border-error;
+                        background: $color-input-bg-error;
+                    }
+                    .modal__textarea-label {
+                        &:after {
+                            color: $color-input-border-error;
+                        }
+                    }
+                }
+    
             }    
         }    
 
