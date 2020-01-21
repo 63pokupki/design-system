@@ -1,5 +1,7 @@
 # Блок актуальное
 
+![alt-текст](https://github.com/63pokupki/design-system/blob/design-system_Ivan/src/images/relevant/relevant.png)
+
 - В редакторе кода открываем проект, где лежит блок актуальное (sp-frontend);
 - обновляем dev ветку **git pull**;
 - создаём свою ветку;
