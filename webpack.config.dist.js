@@ -12,8 +12,7 @@ module.exports = {
         "header": ["./src/styles/page/header.scss"],
         "item-page": ["./src/styles/page/item-page.scss"],
         "delivery": ["./src/styles/page/delivery.scss"],
-        "how_to_clear_cookie": ["./src/styles/page/how_to_clear_cookie.scss"],
-        "left-vertical-menu": ["./src/styles/page/left-vertical-menu.scss"],
+        "how_to_clear_cookie": ["./src/styles/page/how_to_clear_cookie.scss"],        
         // "stock" : entry["stock"],
     }, //объект с точками входа
     output: {
