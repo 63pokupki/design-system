@@ -11,11 +11,11 @@
 
 - Заменяем изображения. Копируем новые изображения к себе в локальный репозиторий : /sp-frontend/src/common/images/relevant/r-block). Старые изображения **УДАЛЯЕМ**;
 - Далее в строках: 
-          - import image_1 from "images/relevant/hat-main.jpg";
-	  - import image_2 from "images/relevant/bag.jpg";
-	  - import image_3 from "images/relevant/brooch.jpg";
-	  - import image_4 from "images/relevant/belt.png";
-	  - import image_5 from "images/relevant/gloves.jpg";
+          ..* import image_1 from "images/relevant/hat-main.jpg";
+	  ..* import image_2 from "images/relevant/bag.jpg";
+	  ..* import image_3 from "images/relevant/brooch.jpg";
+	  ..* import image_4 from "images/relevant/belt.png";
+	  ..* import image_5 from "images/relevant/gloves.jpg";
       меняем имена изображений на имена вновь загруженные;
 - Меням заголовок в **heading**: "Уютная осень";
 - Меням текст и ссылки на странице
