@@ -52,31 +52,73 @@
                 }
             }
         }
+        // Select
+        &__select-position-wrap {
+            display: flex;
+            width: 100%;
+            margin: 0 0 20px 0;
+            position: relative;
+            .ds-triangle {
+                position: absolute;
+                right: 0;
+                top: 0;
+                z-index: 14;
+                margin: 17px 10px 0 0;
+                &:after {
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+    
+        }
+        &__select-position {
+            width: 100%;
+            padding: 15px 30px 15px 15px;
+            background: transparent;
+            font-size: 16px;
+            color: $color-text-base;
+            border: 0;
+            appearance: none;
+            outline: none;
+            cursor: pointer;
+            position: relative;
+            z-index: 12;
+            &:focus {
+                ~.modal__select {
+                    border-color: $click-load-color;
+                    &-purchase:after {
+                        color: $color-primary;
+                    }
+            
+                    &-catalog:after {
+                        color: $color-primary;
+                    }
+        
+                }                
+            }
+            >option {
+                background: $background-color-primary;
+                cursor: pointer;
+            }
+        }
 
         &__select {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: relative;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
             min-height: 50px;
             margin-bottom: 20px;
-            padding: 0 15px;
+            padding: 0;
+            background: $background-color-primary;
             border: 2px solid $color-text-light-grey;
             border-radius: 3px;
             cursor: pointer;
-
-            &.is-toggle {
-                border: 2px solid $click-load-color;
-
-                &:after {
-                    color: $click-load-color;
-                }
-
-                .modal__toggle-list {
-                    opacity: 1;
-                    max-height: 180px;
-                }
-            }
+            z-index: 10;
             &:after {
                 content: "";
                 position: absolute;
@@ -89,7 +131,7 @@
                 font-size: 14px;
                 font-weight: 600;
                 color: $color-text-light-grey;
-            }
+            }            
     
             &-purchase:after {
                 content: "Закупка";
@@ -99,15 +141,7 @@
                 content: "Каталог";
             }
     
-            .ds-triangle {
-                &:after {
-                    width: 10px;
-                    height: 10px;
-                }
-            }
-        }
-
-    
+        }  
 
         &__selected-position {
             font-size: 16px;
@@ -152,6 +186,23 @@
                 }
             }
         }
+        
     }
+    @media (min-width: 768px) {
+        .modal__wrap {
+            min-width: 550px;
+        }
+    }
+    @media (max-width: 768px) {
+        .modal__wrap {
+            min-width: 450px;
+        }
+    }
+    @media (max-width: 600px) {
+        .modal__wrap {
+            min-width: 300px;
+        }
+    }
+
 }
 
