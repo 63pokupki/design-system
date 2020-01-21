@@ -12,7 +12,7 @@
 - Заменяем изображения. Копируем новые изображения к себе в локальный репозиторий : /sp-frontend/src/common/images/relevant/r-block). Старые изображения **УДАЛЯЕМ**;
 - Далее в строках:
 ```javascript 
-      ..*import image_1 from "images/relevant/hat-main.jpg";
+          ..*import image_1 from "images/relevant/hat-main.jpg";
 	  ..*import image_2 from "images/relevant/bag.jpg";
 	  ..*import image_3 from "images/relevant/brooch.jpg";
 	  ..*import image_4 from "images/relevant/belt.png";
@@ -23,7 +23,7 @@
 - Меням текст и ссылки на странице
 ```javascript
 	  **text_1**: "Постельное белье",
-      **link_1**: "";
+          **link_1**: "";
 ```
 - Проверяем: **npm run deploy_local** (http://dev.63pokupki.ru/forum/phpBB3/app.php/main);
 - Если всё правильно, индексируем **git add .**;

@@ -42,3 +42,4 @@ npm publish --access public
 1. [Как пользоваться шрифтовыми иконками](./docs/fonts-icons.md)
 1. [Работа с svg-спрайтом](./docs/svg-sprite.md)
 1. [Блок "Актуальное". Замена контента.](./docs/relevant-block.md)
+1. [Замена баннеров во всплывающем меню.](./docs/menu-banners.md)
