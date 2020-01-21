@@ -41,3 +41,4 @@ npm publish --access public
 1. [Как пользоваться дизайн-системой](./docs/how.md)
 1. [Как пользоваться шрифтовыми иконками](./docs/fonts-icons.md)
 1. [Работа с svg-спрайтом](./docs/svg-sprite.md)
+1. [Блок "Актуальное". Замена контента.](./docs/relevant-block.md)
