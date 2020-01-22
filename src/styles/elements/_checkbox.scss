@@ -46,7 +46,7 @@
         }
     }
 
-    &__input:checked + &__label {
+    &__input:checked  + &__label{
         &:after {
             display: block;
         }
