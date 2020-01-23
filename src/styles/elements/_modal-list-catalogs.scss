@@ -1,15 +1,37 @@
 .modal-list-catalogs {
+    position: fixed;
+    bottom: 10px;
     .modal {
+        &__wrap {
+            &.is-toggle {
+                .modal__content {
+                    max-height: 1000px;
+                    padding: 15px;
+                    transition: all .3s;
+                    overflow-x: auto;    
+                }
+                .icon-arrow-down {
+                    transform: rotate(0deg);
+                    transition: all .3s;
+                }
+
+            }
+        }
         &__content {
             display: flex;
             flex-direction: column;
-            padding: 15px;
+            padding: 0;
             box-shadow: 0px 0px 5px 0px rgba(97, 97, 97, 0.14); 
+            max-height: 0;
+            height: auto;
+            overflow-x: hidden;
+            transition: all .8s;
 
             h3 {
                 font-size: 14px;
                 margin-top: 0;
                 margin: 0 0 15px 25px;
+                position: relative;
             }
 
             &-row {
@@ -60,6 +82,7 @@
             width: 100%;
             padding: 10px 10px 10px 40px;
             box-shadow: 0px 0px 5px 0px rgba(97, 97, 97, 0.14); 
+            position: relative;
 
             &-row {
                 display: flex;
@@ -67,6 +90,20 @@
                 align-items: center;
                 margin: 5px 0;
                 color: $dark-grey-color;
+                position: relative;
+
+                .icon-arrow-down {
+                    position: absolute;
+                    right: 25px;
+                    top: 0;
+                    color: $color-primary;
+                    transform: rotate(180deg);
+                    transition: all .3s;
+
+                    &:hover {
+                        color: $color-text-base;
+                    }
+                }
 
                 .link_hover {
                     margin: 0 0 0 20px;
