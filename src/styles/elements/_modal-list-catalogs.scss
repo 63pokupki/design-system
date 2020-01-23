@@ -1,6 +1,7 @@
 .modal-list-catalogs {
     position: fixed;
     bottom: 10px;
+    align-items: flex-end!important;
     .modal {
         &__wrap {
             &.is-toggle {
