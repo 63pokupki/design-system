@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Модальные окна</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?3ab5ea17544ee0e33ba8" rel="stylesheet"><link href="css/ds-utils.css?3ab5ea17544ee0e33ba8" rel="stylesheet"><link href="css/ds-ui-kit.css?3ab5ea17544ee0e33ba8" rel="stylesheet"></head>
+<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?463b375be7f91e7bb14e" rel="stylesheet"><link href="css/ds-utils.css?463b375be7f91e7bb14e" rel="stylesheet"><link href="css/ds-ui-kit.css?463b375be7f91e7bb14e" rel="stylesheet"></head>
 
 <body class="body__modals" style="position: relative;">
 
@@ -401,7 +401,7 @@
 
         <div class="ds-code-wrapper">
             <script type="text/plain" class="language-markup">
-                <div class="modal modal-copy-position is-visible" style="position: relative">
+                <div class="modal modal-copy-position is-visible demo">
                     <div class="modal__wrap" style="margin: 10px">
                         <div class="modal__btn-close"><i class="ds-icon icon-close"></i></div>
                         <div class="modal__header">Копирование позиции</div>
@@ -410,28 +410,34 @@
                                 и еще 15<br> названий цветов и прочего
                             </div>
                             <!-- Для раскрытия списка, необходимо присвоить класс .is-toggle, элементу modal__select -->
-                            <div class="modal__select modal__select-purchase">
-                                <span class="modal__selected-position">position-1</span>
+                            <!-- <span class="modal__selected-position">position-1</span> -->
+                            <!-- Закупка -->
+                            <div class="modal__select-position-wrap">
+                                <select class="modal__select-position" name="" id="sel1234">
+                                    <option class="modal-copy-position__option" value="main-position-1" selected>Выберите закупку</option>
+                                    <option value="position-2"><span>position-2 Самокаты, всё для самокатов</span></option>
+                                    <option value="position-3">position-3</option>
+                                    <option value="position-4">position-4</option>
+                                    <option value="position-5">position-5</option>                                    
+                                </select>                                
+                                <label for="sel1234" class="modal__select modal__select-purchase">
+                                </label>
                                 <button class="ds-triangle"></button>
-                                <ul class="modal__toggle-list">
-                                    <li>position-1</li>
-                                    <li>position-2</li>
-                                    <li>position-3</li>
-                                    <li>position-4</li>
-                                    <li>position-5</li>
-                                </ul>
                             </div>
-                            <div class="modal__select modal__select-catalog">
-                                <span class="modal__selected-position">position-1</span>
+                            <!-- Каталог -->
+                            <div class="modal__select-position-wrap">
+                                <select class="modal__select-position" name="" id="sel123">
+                                    <option value="main-position-1" selected>Выберите каталог</option>
+                                    <option value="position-2">position-2</option>
+                                    <option value="position-3">position-3</option>
+                                    <option value="position-4">position-4</option>
+                                    <option value="position-5">position-5</option>                                    
+                                </select>                                
+                                <label for="sel123" class="modal__select modal__select-catalog">
+                                </label>
                                 <button class="ds-triangle"></button>
-                                <ul class="modal__toggle-list">
-                                    <li>position-1</li>
-                                    <li>position-2</li>
-                                    <li>position-3</li>
-                                    <li>position-4</li>
-                                    <li>position-5</li>
-                                </ul>
                             </div>
+
                             <div class="btn-container">
                                 <button class="ds-btn ds-btn_hover btn-copy">
                                     <div class="ds-btn__text">Копировать</div>
@@ -442,8 +448,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="modal__bg"></div>
-                </div>    
+                    <div class="modal__bg" style="position: absolute;"></div>
+                </div>
             </script>
         </div>
     </div>
@@ -630,10 +636,10 @@
         <div class="ds-code-wrapper">
             <script type="text/plain" class="language-markup">
                 <div class="modal modal-list-catalogs is-visible demo">
-                    <div class="modal__wrap" style="margin: 10px">
+                    <div class="modal__wrap is-toggle" style="margin: 10px">
                         <!-- <div class="modal__btn-close"><i class="ds-icon icon-close"></i></div> -->
-                        <div class="modal__content is-toggle">
-                            <h3>Список доступных каталогов<i class="ds-icon icon-arrow-down"></i></h3>
+                        <div class="modal__content">
+                            <h3>Список доступных каталогов</h3>
                             <!-- Для сворачивания списка, наобходимо присвоить класс .is-toggle
                                 элементу modal__content-row -->
                             <div class="modal__content-row">
@@ -770,6 +776,7 @@
 
                             </div>
                             <button class="link link_hover">Скрыть список позиций</button>
+
                         </div>
                         <div class="modal__footer">
                             <div class="modal__footer-row">
@@ -785,10 +792,11 @@
                                 <button class="ds-btn ds-btn_hover">
                                     <div class="ds-btn__text">Перенести</div>
                                 </button>
+                                <i class="ds-icon icon-arrow-down"></i>
                             </div>
                         </div>
                     </div>
-                    <div class="modal__bg" style="position: absolute;"></div>
+                    <!-- <div class="modal__bg" style="position: absolute;"></div> -->
                 </div>
             </script>
         </div>
@@ -2022,6 +2030,6 @@
     
     
 
-<script type="text/javascript" src="js/highlight-syntax.js?3ab5ea17544ee0e33ba8"></script><script type="text/javascript" src="js/ds-utils.js?3ab5ea17544ee0e33ba8"></script><script type="text/javascript" src="js/ds-ui-kit.js?3ab5ea17544ee0e33ba8"></script></body>
+<script type="text/javascript" src="js/highlight-syntax.js?463b375be7f91e7bb14e"></script><script type="text/javascript" src="js/ds-utils.js?463b375be7f91e7bb14e"></script><script type="text/javascript" src="js/ds-ui-kit.js?463b375be7f91e7bb14e"></script></body>
 
 </html>
