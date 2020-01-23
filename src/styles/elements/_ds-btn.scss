@@ -40,6 +40,20 @@ $button-border-radius: 24px;
     line-height: 135%;
     transition: background $transition-ultra-fast, color $transition-ultra-fast;
     
+    &.is-loader {
+        & {
+            min-width: 160px;
+            min-height: 32px;
+            padding: 0 18px;
+        }
+        .ds-btn__text {
+            display: none;
+        }
+        .ds-loader {
+            display: inline-flex;
+        }
+    }
+
     &::first-letter {
         text-transform: capitalize;
     }
@@ -75,6 +89,9 @@ $button-border-radius: 24px;
             color: $color-primary;
             background: white;
         }
+    }
+    .ds-loader {
+        display: none;
     }
 
     &:active {

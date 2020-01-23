@@ -1,11 +1,21 @@
 .modal-list-catalogs {
-    position: fixed;
-    bottom: 10px;
+    display: flex;
     align-items: flex-end!important;
-    .modal {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $background-color-primary;
+    z-index: 9999;
+
+    .modal-container {
+        display: flex;
         &__wrap {
+            width: 100%;
+            padding: 0;
             &.is-toggle {
-                .modal__content {
+                .modal-container__content {
                     max-height: 1000px;
                     padding: 15px;
                     transition: all .3s;
@@ -14,6 +24,9 @@
                 .icon-arrow-down {
                     transform: rotate(0deg);
                     transition: all .3s;
+                }
+                .modal-container__footer {
+                    border-top: 1px solid $color-primary;
                 }
 
             }
@@ -27,7 +40,7 @@
             max-height: 0;
             height: auto;
             overflow-x: hidden;
-            transition: all .8s;
+            transition: all .1s;
 
             h3 {
                 font-size: 14px;
@@ -82,8 +95,7 @@
             display: flex;
             flex-direction: column;
             width: 100%;
-            padding: 10px 10px 10px 40px;
-            box-shadow: 0px 0px 5px 0px rgba(97, 97, 97, 0.14); 
+            padding: 0px 40px 10px;
             position: relative;
 
             &-row {
@@ -93,22 +105,25 @@
                 margin: 5px 0;
                 color: $dark-grey-color;
                 position: relative;
+                &:nth-child(1) {
+                    height: 20px;
+                    justify-content: center;
+                    cursor: pointer;
+                }
+                &:nth-child(3) {
+                    justify-content: space-between;
+                }
 
                 .icon-arrow-down {
-                    position: absolute;
-                    right: 25px;
-                    top: 0;
+                    padding: 10px 200px;
                     color: $color-primary;
                     transform: rotate(180deg);
                     transition: all .3s;
-
-                    &:hover {
-                        color: $color-text-base;
-                    }
+                    font-size: 10px;
                 }
 
                 .link_hover {
-                    margin: 0 0 0 20px;
+                    margin: 0 10px;
                     font-size: 14px;
                     white-space: nowrap;
                 }
@@ -116,24 +131,63 @@
             .ds-btn_hover {
                 min-width: 160px;
                 height: 30px;
-                margin-left: 40px;
-            }
+            }            
             span {
                 white-space: nowrap;
             }
         }
+        &__span-wrap {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        &__btn-container {
+            display: flex;
+            justify-content: space-between;
+            width: 310px;
+            .row {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .link_hover {
+                margin: 0;
+            }
+        }
         &__selected-catalog {            
             width: 415px;
-            margin: 0 12px 0 5px;
+            margin: 0 12px 0 0;
             overflow: hidden;
             font-weight: 600;
             text-overflow: ellipsis;
             color: $dark-brown-color;
+            span {
+                font-weight: normal;
+            }
         }
 
     }
 }
 
+@media (max-width: 768px) {
+    .modal-list-catalogs .modal-container__content-row .checkbox {
+        flex-basis: 100%;
+    }
+    .modal-list-catalogs {
+        .modal-container {
+            &__footer-row {
+                &:nth-child(3) {
+                    flex-wrap: wrap;
+                }
+            }
+            &__btn-container {
+                margin: 20px 0 0 0;
+            }
+            &__selected-catalog {
+                width: 100%;
+            }
+        }
+    }
+}
 
-
+  
 

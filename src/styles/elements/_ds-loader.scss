@@ -17,6 +17,12 @@
             height: 100px;
         }
     }
+    &_small {
+        &:after {
+            width: 25px;
+            height: 25px;
+        }
+    }
 }
 
 @keyframes rotate {
