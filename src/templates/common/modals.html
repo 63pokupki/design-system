@@ -561,16 +561,16 @@
             элементу <span class="ds-hl">modal__content-row</span>
         </div>
         <div class="ds-text"> Для сворачивания верхней части, наобходимо присвоить класс <span class="ds-hl">.is-toggle</span>
-            элементу <span class="ds-hl">modal__content</span>
+            элементу <span class="ds-hl">modal__wrap</span>
         </div>
 
         <div class="ds-wrapper">
             <div class="ds-divider">
                 <div class="modal modal-list-catalogs is-visible demo">
-                    <div class="modal__wrap" style="margin: 10px">
+                    <div class="modal__wrap is-toggle" style="margin: 10px">
                         <!-- <div class="modal__btn-close"><i class="ds-icon icon-close"></i></div> -->
-                        <div class="modal__content is-toggle">
-                            <h3>Список доступных каталогов<i class="ds-icon icon-arrow-down"></i></h3>
+                        <div class="modal__content">
+                            <h3>Список доступных каталогов</h3>
                             <!-- Для сворачивания списка, наобходимо присвоить класс .is-toggle
                                 элементу modal__content-row -->
                             <div class="modal__content-row">
@@ -723,10 +723,11 @@
                                 <button class="ds-btn ds-btn_hover">
                                     <div class="ds-btn__text">Перенести</div>
                                 </button>
+                                <i class="ds-icon icon-arrow-down"></i>
                             </div>
                         </div>
                     </div>
-                    <div class="modal__bg" style="position: absolute;"></div>
+                    <!-- <div class="modal__bg" style="position: absolute;"></div> -->
                 </div>
             </div>
         </div>
