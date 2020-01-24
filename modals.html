@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Модальные окна</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?463b375be7f91e7bb14e" rel="stylesheet"><link href="css/ds-utils.css?463b375be7f91e7bb14e" rel="stylesheet"><link href="css/ds-ui-kit.css?463b375be7f91e7bb14e" rel="stylesheet"></head>
+<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?155152353d9f96963f5b" rel="stylesheet"><link href="css/ds-utils.css?155152353d9f96963f5b" rel="stylesheet"><link href="css/ds-ui-kit.css?155152353d9f96963f5b" rel="stylesheet"></head>
 
 <body class="body__modals" style="position: relative;">
 
@@ -467,14 +467,14 @@
 
         <div class="ds-wrapper">
             <div class="ds-divider">
-                <div class="modal modal-list-catalogs is-visible demo">
-                    <div class="modal__wrap is-toggle" style="margin: 10px">
-                        <!-- <div class="modal__btn-close"><i class="ds-icon icon-close"></i></div> -->
-                        <div class="modal__content">
+                <div class="modal-container modal-list-catalogs is-visible demo">
+                    <div class="modal-container__wrap is-toggle">
+                        <!-- <div class="modal-container__btn-close"><i class="ds-icon icon-close"></i></div> -->
+                        <div class="modal-container__content">
                             <h3>Список доступных каталогов</h3>
                             <!-- Для сворачивания списка, наобходимо присвоить класс .is-toggle
-                                элементу modal__content-row -->
-                            <div class="modal__content-row">
+                                элементу modal-container__content-row -->
+                            <div class="modal-container__content-row">
                                 <div class="checkbox checkbox_accent checkbox_circle">
                                     <input checked="checked" class="checkbox__input" type="checkbox" id="chx-022" />
                                     <label class="checkbox__label" for="chx-022">
@@ -542,9 +542,9 @@
 
                             <h3>Список выбранных позиций</h3>
                             <!-- Для сворачивания списка, наобходимо присвоить класс .is-toggle
-                                элементу modal__content-row -->
+                                элементу modal-container__content-row -->
 
-                            <div class="modal__content-row">
+                            <div class="modal-container__content-row">
                                 <div class="checkbox checkbox_accent checkbox_circle">
                                     <input checked="checked" class="checkbox__input" type="checkbox" id="chx-022" />
                                     <label class="checkbox__label" for="chx-022">
@@ -610,25 +610,31 @@
                             <button class="link link_hover">Скрыть список позиций</button>
 
                         </div>
-                        <div class="modal__footer">
-                            <div class="modal__footer-row">
+                        <div class="modal-container__footer">
+                            <div class="modal-container__footer-row"><i class="ds-icon icon-arrow-down"></i></div>
+                            <div class="modal-container__footer-row">
                                 <span>Для переноса выбрано:</span>
                                 <button class="link link_hover">16 позиций</button>
                                 <button class="link link_hover">Сбросить</button>
                             </div>
-                            <div class="modal__footer-row">
-                                <span>В каталог: </span>
-                                <span class="modal__selected-catalog">Велосипеды для юношей, подростков и взрослых
+                            <div class="modal-container__footer-row">                                    
+                                <span class="modal-container__selected-catalog"><span>В каталог: </span>Велосипеды для юношей, подростков и взрослых
                                     парней</span>
-                                <button class="link link_hover">Выбрать каталог</button>
-                                <button class="ds-btn ds-btn_hover">
-                                    <div class="ds-btn__text">Перенести</div>
-                                </button>
-                                <i class="ds-icon icon-arrow-down"></i>
+                                <div class="modal-container__btn-container">                                    
+                                    <div class="row">
+                                        <button class="link link_hover">Выбрать каталог</button>
+                                    </div>
+                                    <div class="row">
+                                        <button class="ds-btn ds-btn_hover">
+                                            <div class="ds-btn__text">Перенести</div>
+                                            <div class="ds-loader ds-loader_small"></div>
+                                        </button>    
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="modal__bg" style="position: absolute;"></div> -->
+                    <!-- <div class="modal-container__bg" style="position: absolute;"></div> -->
                 </div>
             </div>
         </div>
@@ -2030,6 +2036,6 @@
     
     
 
-<script type="text/javascript" src="js/highlight-syntax.js?463b375be7f91e7bb14e"></script><script type="text/javascript" src="js/ds-utils.js?463b375be7f91e7bb14e"></script><script type="text/javascript" src="js/ds-ui-kit.js?463b375be7f91e7bb14e"></script></body>
+<script type="text/javascript" src="js/highlight-syntax.js?155152353d9f96963f5b"></script><script type="text/javascript" src="js/ds-utils.js?155152353d9f96963f5b"></script><script type="text/javascript" src="js/ds-ui-kit.js?155152353d9f96963f5b"></script></body>
 
 </html>
