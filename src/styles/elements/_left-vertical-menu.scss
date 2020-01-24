@@ -3,6 +3,8 @@
 .left-vertical-menu {
     display: inline-block;
     background: $background-color-primary;
+    min-width: 190px;  
+
 
     &__section {
         border-bottom: 1px solid rgba(49, 140, 202, 0.25);
