@@ -37,10 +37,20 @@
         </div>
 
         <h2 class="ds-title">Стандартные кнопки</h2>
+        <div class="ds-text ds-center">
+            Для добавления лоадера, необходимо вставить в кнопку, элемент с классом <span class="ds-hl">"ds-loader ds-loader_small"</span>
+            и присвоить элементу <span class="ds-hl">ds-btn</span> класс <span class="ds-hl">is-loader</span>
+        </div>
         <div class="ds-wrapper">
             <div class="ds-divider">
                 <button class="ds-btn">
                     <div class="ds-btn__text">Стандартная кнопка</div>
+                </button>
+            </div>
+            <div class="ds-divider">
+                <button class="ds-btn is-loader">
+                    <div class="ds-btn__text">Стандартная кнопка с лоадером</div>
+                    <div class="ds-loader ds-loader_small"></div>
                 </button>
             </div>
             <div class="ds-divider">
@@ -76,6 +86,11 @@
             <script type="text/plain" class="language-markup">
                 <button class="ds-btn">
                     <div class="ds-btn__text">Стандартная кнопка</div>
+                </button>
+
+                <button class="ds-btn is-loader">
+                    <div class="ds-btn__text">Стандартная кнопка с лоадером</div>
+                    <div class="ds-loader ds-loader_small"></div>
                 </button>
 
                 <button class="ds-btn ds-btn_hover">
