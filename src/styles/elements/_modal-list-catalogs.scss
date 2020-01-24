@@ -3,20 +3,25 @@
     align-items: flex-end!important;
     position: fixed;
     width: 100%;
+    min-width: 430px;
+    padding: 1% 10% 1%;
     left: 0;
     right: 0;
     bottom: 0;
-    background: $background-color-primary;
-    z-index: 9999;
+    background: #0000004d;
+    z-index: 9999;    
 
     .modal-container {
         display: flex;
         &__wrap {
             width: 100%;
             padding: 0;
+            background: $background-color-primary;
+
             &.is-toggle {
                 .modal-container__content {
                     max-height: 1000px;
+                    width: 100%;
                     padding: 15px;
                     transition: all .3s;
                     overflow-x: auto;    
@@ -97,6 +102,7 @@
             width: 100%;
             padding: 0px 40px 10px;
             position: relative;
+            box-shadow: 0 0 5px 0 rgba(97,97,97,.14);
 
             &-row {
                 display: flex;
@@ -120,6 +126,9 @@
                     transform: rotate(180deg);
                     transition: all .3s;
                     font-size: 10px;
+                    &:hover {
+                        color: $color-text-base;
+                    }
                 }
 
                 .link_hover {
@@ -168,12 +177,15 @@
     }
 }
 
+
 @media (max-width: 768px) {
     .modal-list-catalogs .modal-container__content-row .checkbox {
         flex-basis: 100%;
     }
     .modal-list-catalogs {
+        padding: 0;
         .modal-container {
+           
             &__footer-row {
                 &:nth-child(3) {
                     flex-wrap: wrap;
@@ -185,9 +197,31 @@
             &__selected-catalog {
                 width: 100%;
             }
+            
         }
     }
 }
+@media (max-width: 500px) {
+    .modal-list-catalogs {
+        .modal-container {
+            &__btn-container {
+                width: 100%;
+                flex-wrap: wrap;
+                .row {
+                    width: 100%;
+                }
+                .link_hover {
+                    margin: 0 0 20px 0;
+                }
+                .ds-btn_hover {
+                    min-width: 300px;
+                    font-size: 16px;
+                    padding: 4px 18px;
+                }    
+            }            
+        }
+    }
 
+}
   
 
