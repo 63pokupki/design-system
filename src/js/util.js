@@ -338,5 +338,46 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 })();
 
+// ПАнель с каталогами для орга
+let modalListCat = document.querySelectorAll(".modal-list-catalogs");
 
+if (modalListCat) {
+    modalListCat.forEach((mlc)=> {
+        let content   = mlc.querySelector(".modal-container__wrap"),
+            toggleBtn = mlc.querySelector(".icon-arrow-down");
+        if (content && toggleBtn) {
+            toggleBtn.addEventListener("click", ()=> {
+                content.classList.toggle("is-toggle");
+            })
+        }
+    }); 
 
+}
+
+// stock-desctop-org-ver вызов панели орга
+let pageStockOrg =document.querySelectorAll(".stock-d__main");
+
+if (pageStockOrg) {
+    pageStockOrg.forEach((pso)=> {
+       let checkbox = pso.querySelectorAll(".checkbox__input"),
+           goTo     = pso.querySelector(".ds-btn_hover"),
+           panel    = pso.querySelector(".modal-list-catalogs");           
+
+       if (checkbox) {
+           checkbox.forEach((chx)=>{
+               chx.addEventListener("click",()=> {
+                   console.log("Click");
+                   if (panel) {
+                       panel.classList.toggle("demo");
+                   }
+               });
+           });
+       }
+       if (goTo) {
+        goTo.addEventListener("click", ()=> {
+            panel.classList.toggle("demo");
+        });
+    }
+
+    });
+}
