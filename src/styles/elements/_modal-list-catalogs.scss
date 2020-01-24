@@ -10,8 +10,12 @@
     bottom: 0;
     background: #0000004d;
     z-index: 9999; 
+    visibility: hidden;
     &.demo {
         position: relative;
+    }
+    &.is-visible {
+        visibility: visible;
     }   
 
     .modal-container {

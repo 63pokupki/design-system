@@ -368,14 +368,14 @@ if (pageStockOrg) {
                chx.addEventListener("click",()=> {
                    console.log("Click");
                    if (panel) {
-                       panel.classList.toggle("demo");
+                       panel.classList.toggle("is-visible");
                    }
                });
            });
        }
        if (goTo) {
         goTo.addEventListener("click", ()=> {
-            panel.classList.toggle("demo");
+            panel.classList.toggle("is-visible");
         });
     }
 
