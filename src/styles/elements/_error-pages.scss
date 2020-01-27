@@ -1,0 +1,75 @@
+.error-pages {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    &__container {
+        display: flex;
+        flex-direction: row;
+    }
+    &__left-col {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        margin: 0 20px 0 0;
+        h1 {
+            color: $color-text-heading;
+            font-weight: normal;
+        }
+        h3 {
+            font-weight: normal;
+            font-size: 20px;
+            color: $color-text-heading;
+        }
+    }
+    &__right-col {
+        display: flex;
+
+    }
+    &__img {
+        max-width: 465px;
+    }
+    &__txt {
+        font-size: 16px;
+        font-style: normal;
+        color: $color-text-base;
+    }
+    &__link {
+        color: $color-primary;
+    }
+    // Разделительная линия
+    .vm {
+        display: block;
+        &-40 {
+            min-height: 40px; 
+        }
+        &-20 {
+            min-height: 20px;
+        }
+    }
+
+    @media (max-width: 769px) {
+        .error-pages__container {
+            justify-content: center;
+            flex-wrap: wrap-reverse;
+        }
+        .error-pages__right-col {
+            text-align: center;
+        }
+    }
+    @media (max-width: 500px) {
+        .error-pages__txt {
+            font-size: 14px;
+        }
+        .error-pages__row {
+            h1 {
+                font-size: 18px;
+            }
+            h3 {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+
+
