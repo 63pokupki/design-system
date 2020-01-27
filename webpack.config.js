@@ -119,7 +119,8 @@ module.exports = {
                     loader: "file",
                     options: {
                         limit: 2048,
-                        name: "images/[name].[ext]"
+                        name: "images/[name].[ext]",
+                        esModule: false
                     }
                 }
             },
@@ -129,7 +130,8 @@ module.exports = {
                 use: {
                     loader: "file",
                     options: {
-                        name: "favicon.ico"
+                        name: "favicon.ico",
+                        esModule: false
                     }
                 }
             },

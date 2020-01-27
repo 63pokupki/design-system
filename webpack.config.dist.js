@@ -125,7 +125,8 @@ module.exports = {
                     loader: "file",
                     options: {
                         limit: 2048,
-                        name: "images/[name].[ext]?[hash]"
+                        name: "images/[name].[ext]?[hash]",
+                        esModule: false
                     }
                 }
             },
@@ -136,7 +137,8 @@ module.exports = {
                     query: {
                         publicPath: "../",
                         limit: 2048,
-                        name: "fonts/[name].[ext]?[hash]"
+                        name: "fonts/[name].[ext]?[hash]",
+                        esModule: false
                     }
                 }
             },
