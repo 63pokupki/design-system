@@ -10,7 +10,7 @@
         position: relative;
         overflow-x: visible;
         overflow-y: hidden;
-        padding-bottom: 40px;
+        padding-bottom: 30px;
 
         &:after {
             content: "";
@@ -51,6 +51,20 @@
         font-weight: 600;
         &:active {
             @include deep-click(0.95);
+        }
+    }
+
+    .stock-sizes-grid {
+        &__images {
+            max-width: 80%;
+            height: 300px;
+        }
+
+        &__img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
         }
     }
 }

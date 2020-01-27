@@ -17,7 +17,8 @@
         margin: unset;
         font-size: 12px;
         font-weight: normal;
-        color: $color-text-heading;
+        color: darken($color-text-heading, 10%);
+        text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
     }
 
     &__subcategory-list {
@@ -62,7 +63,7 @@
         color: $color-text-base;
         overflow: hidden;
         position: relative;
-
+        text-shadow: none;
         &:last-child {
             padding-bottom: 15px;
         }
