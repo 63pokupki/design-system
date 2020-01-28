@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?b80ae9c242db42e4b229" rel="stylesheet"><link href="css/ds-utils.css?b80ae9c242db42e4b229" rel="stylesheet"><link href="css/ds-ui-kit.css?b80ae9c242db42e4b229" rel="stylesheet"></head>
+<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?dd977d63486af0fcec13" rel="stylesheet"><link href="css/ds-utils.css?dd977d63486af0fcec13" rel="stylesheet"><link href="css/ds-ui-kit.css?dd977d63486af0fcec13" rel="stylesheet"></head>
 
 <body>
 
@@ -55,25 +55,81 @@
     
     <!-- Слайдер с банерами -->
     <div class="ds-wrapper">
-        <h1 class="ds-title">Слайдер с баннерами        </h1>
-        <div class="ds-text">Опция: при добавлении класса <span class="ds-hl">.no-btn</span> скрываются кнопки.</div>
-        <div class="ds-text">Смещение элементов слайдера происходит при изменении свойства
-            transform: translateX(0) у элемента <span class="ds-hl">slider-wrap</span>
+        <h1 class="ds-title">Слайдер с баннерами</h1>
+        <div class="ds-text">Смещение баннеров происходит при изменении свойства
+            transform: translateX() у элемента <span class="ds-hl">slider-banners__container</span>
         </div>
         <div class="ds-wrapper">
         <!-- v.2 -->
         <div class="ds-divider">
             <div class="slider slider-banners">
-                <div id="1" class="slide slide1"><a href="#"><div class="img-container_resp"><img src="images/s-banners-holika.png" alt="Car"></div></a></div id="">
-                <div id="2" class="slide slide2"><a href="#"><div class="img-container_resp"><img src="images/s-banners-holika.png" alt="Car"></div></a></div>
-                <div id="3" class="slide slide3"><a href="#"><div class="img-container_resp"><img src="images/s-banners-holika.png" alt="Car"></div></a></div>
-                <div id="4" class="slide slide4"><a href="#"><div class="img-container_resp"><img src="images/s-banners-holika.png" alt="Car"></div></a></div>
-           </div>
+                <i class="ds-icon icon-arrow-left"></i>
+                <div class="slider-banners__wrap">
+                    <div class="slider-banners__container">
+                        <div id="1" class="slide slide1 is-active">
+                            <a href="#">
+                                <div class="img-container_resp"><img src="images/s-banners-holika.png" alt="Car">
+                                </div>
+                            </a>
+                        </div>
+                        <div id="2" class="slide slide2">
+                            <a href="#">
+                                <div class="img-container_resp"><img src="images/s-banners-holika.png" alt="Car">
+                                </div>
+                            </a>
+                        </div>
+                        <div id="3" class="slide slide3">
+                            <a href="#">
+                                <div class="img-container_resp"><img src="images/s-banners-holika.png" alt="Car">
+                                </div>
+                            </a></div>
+                        <div id="4" class="slide slide4">
+                            <a href="#">
+                                <div class="img-container_resp"><img src="images/s-banners-holika.png" alt="Car">
+                                </div>
+                            </a>
+                        </div>        
+                    </div>
+                </div>
+                <i class="ds-icon icon-arrow-right"></i>
+            </div>
         </div>
 
 
         <div class="ds-code-wrapper">
             <script type="text/plain" class="language-markup">
+                <div class="slider slider-banners">
+                    <i class="ds-icon icon-arrow-left"></i>
+                    <div class="slider-banners__wrap">
+                        <div class="slider-banners__container">
+                            <div id="1" class="slide slide1 is-active">
+                                <a href="#">
+                                    <div class="img-container_resp"><img src="images/s-banners-holika.png" alt="Car">
+                                    </div>
+                                </a>
+                            </div>
+                            <div id="2" class="slide slide2">
+                                <a href="#">
+                                    <div class="img-container_resp"><img src="images/s-banners-holika.png" alt="Car">
+                                    </div>
+                                </a>
+                            </div>
+                            <div id="3" class="slide slide3">
+                                <a href="#">
+                                    <div class="img-container_resp"><img src="images/s-banners-holika.png" alt="Car">
+                                    </div>
+                                </a></div>
+                            <div id="4" class="slide slide4">
+                                <a href="#">
+                                    <div class="img-container_resp"><img src="images/s-banners-holika.png" alt="Car">
+                                    </div>
+                                </a>
+                            </div>        
+                        </div>
+                    </div>
+                    <i class="ds-icon icon-arrow-right"></i>
+                </div>
+    
             </script>
         </div>
     </div>
@@ -83,6 +139,6 @@
     <!-- ds-slider.scss -->
 
 
-<script type="text/javascript" src="js/highlight-syntax.js?b80ae9c242db42e4b229"></script><script type="text/javascript" src="js/ds-utils.js?b80ae9c242db42e4b229"></script><script type="text/javascript" src="js/ds-ui-kit.js?b80ae9c242db42e4b229"></script></body>
+<script type="text/javascript" src="js/highlight-syntax.js?dd977d63486af0fcec13"></script><script type="text/javascript" src="js/ds-utils.js?dd977d63486af0fcec13"></script><script type="text/javascript" src="js/ds-ui-kit.js?dd977d63486af0fcec13"></script></body>
 
 </html>
