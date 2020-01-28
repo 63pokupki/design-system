@@ -77,74 +77,59 @@
 // Слайдер с баннерами
 // v2
 .slider-banners {
-	// width: 500px;
 	max-width: 800px;
-    height: 100px;
-    margin: auto;
-    margin-top: 25px;
-    border: 1px solid black;
     position: relative;
     overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    .icon-arrow-left {
+        position: absolute;
+        left: 0px;
+        top: calc(50%-25px);
+        padding: 10px;
+        color: $color-primary;
+        font-size: 30px;       
+        z-index: 12;
+        &:hover {
+            color: $color-text-base;
+        } 
+    }
+    .icon-arrow-right {
+        position: absolute;
+        right: 0px; 
+        top: calc(50%-25px);
+        padding: 10px;
+        color: $color-primary;
+        font-size: 30px; 
+        z-index: 12;
+        &:hover {
+            color: $color-text-base;
+        }
+    }
+    &__wrap {
+        display: flex;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+    &__container {
+        display: flex;
+        transition: transform 0.7s ease
+    }
+    
+    @media (max-width: 600px) {
+        .icon-arrow-right, 
+        .icon-arrow-left {
+            font-size: 20px;
+            top: calc(50%-20px);
+
+        }
+    }
 }
 
 .slide {
-	// width: 500px;
-	max-width: 800px;
-    height: 100px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    animation-name: slide;
-    animation-duration: 20s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    flex: 0 0 100%;
+    max-width: 100%;
 }
 
-.slide1 {
-    animation-delay: 20s;
-}
-
-.slide2 {
-    animation-delay: 10s;
-}
-
-.slide3 {
-    animation-delay: 5s;
-}
-
-.slide4 {
-    animation-delay: 10s;
-}
-
-@keyframes slide {
-    from {
-        top: 0;
-        left: 0;
-    }
-
-    12.5% {
-        transform: translate(0px, 0px);
-    }
-
-    25% {
-        transform: translate(-800px, 0);
-    }
-
-    36% {
-        transform: translate(-800px, 300px);
-    }
-
-    37% {
-        transform: translate(800px, 300px);
-    }
-
-    87.5% {
-        transform: translate(800px, 0);
-
-    }
-
-    to {
-        transform: (0px, 0px);
-	}
-}	
 

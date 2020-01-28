@@ -3,6 +3,16 @@
     min-width: 300px;
     margin: 0 auto;
 
+    &__bg {
+        display: flex;
+        width: 100%;
+        padding: 40px 0;
+        background: url("~images/auth-form/auth-form-bg.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: repeat;
+    }
+
     &__txt {
         text-align: center;
         font-size: 12px;
@@ -71,6 +81,8 @@
             background: #fff;
             font-weight: 600;
             color: $click-load-color;
+            box-shadow: 0px 0px 15px rgba(49, 140, 202, 0.2);
+
             &:before {
                 left: calc(50%-10px);
             }
@@ -84,6 +96,7 @@
             background: transparent;
             font-weight: 500;
             color: $dark-grey-color;
+            box-shadow: none;
             &:before {
                 display: none;
             }
@@ -116,6 +129,7 @@
         border-bottom-left-radius: 0px;
         border-bottom-right-radius: 0px;
         color: $dark-grey-color;
+
         &:after {
             content: "";
             position: absolute;
@@ -135,6 +149,7 @@
         border-bottom-right-radius: 0px;
         font-weight: 600;
         color: $click-load-color;
+        box-shadow: 0px 0px 15px rgba(49, 140, 202, 0.2);
 
     }
     // 
@@ -147,6 +162,8 @@
         background: #ffffff;
         border-radius: 10px;
         position: relative;
+        box-shadow: 0px 7px 15px rgba(49, 140, 202, 0.2);
+
     }
 
     // Форма
@@ -232,8 +249,8 @@
         margin: 25px auto;
         min-height: 45px;
         border: 1px solid $click-load-color;
-        font-weight: 500;
-        font-size: 18px;
+        font-weight: 600;
+        font-size: 16px;
         color: $click-load-color;
     }
 
@@ -283,8 +300,8 @@
     &__btn-register {
         width: 220px;
         height: 45px;
-        font-size: 18px;
-        font-weight: 500;
+        font-size: 16px;
+        font-weight: 600;
     }
     &__phone-container {
         display: flex;
@@ -463,8 +480,8 @@
     &__btn-recovery {
         width: 220px;
         height: 45px;
-        font-size: 18px;
-        font-weight: 500;
+        font-size: 16px;
+        font-weight: 600;
     }
 }
 
