@@ -29,4 +29,13 @@
         color: rgb(102, 102, 102);
         margin-right: 5px;
     }
+
+    &__bar {
+        .statusbar {
+            height: 24px;
+            &__txt {
+                font-size: 12px;
+            }
+        }
+    }
 }
