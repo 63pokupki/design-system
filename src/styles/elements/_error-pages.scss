@@ -5,11 +5,13 @@
     &__container {
         display: flex;
         flex-direction: row;
+        justify-content: space-around;
     }
     &__left-col {
         display: flex;
         flex-direction: column;
-        padding: 20px;
+        justify-content: flex-end;
+        padding: 20px 0 45px 0;
         margin: 0 20px 0 0;
         h1 {
             color: $color-text-heading;
@@ -35,6 +37,9 @@
     }
     &__link {
         color: $color-primary;
+        &_bold {
+            font-weight: 600;
+        }
     }
     // Разделительная линия
     .vm {
@@ -45,6 +50,10 @@
         &-20 {
             min-height: 20px;
         }
+    }
+
+    @media (max-width: 1124px) {
+        padding: 56px 20px 0;
     }
 
     @media (max-width: 769px) {
