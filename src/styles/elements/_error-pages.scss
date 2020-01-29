@@ -5,19 +5,22 @@
     &__container {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
     }
     &__left-col {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         padding: 20px 0 45px 0;
-        margin: 0 20px 0 0;
+        margin: 0;
         h1 {
+            margin: 22px 0 5px 0;
+            font-size: 32px;
             color: $color-text-heading;
             font-weight: normal;
         }
         h3 {
+            margin: 20px 0 12px 0;
             font-weight: normal;
             font-size: 20px;
             color: $color-text-heading;
@@ -33,7 +36,11 @@
     &__txt {
         font-size: 16px;
         font-style: normal;
-        color: $color-text-base;
+        line-height: 28px;
+        color: $color-text-heading;
+        &-contacts {
+            font-size: 14px;
+        }
     }
     &__link {
         color: $color-primary;
@@ -47,8 +54,8 @@
         &-40 {
             min-height: 40px; 
         }
-        &-20 {
-            min-height: 20px;
+        &-15 {
+            min-height: 15px;
         }
     }
 
