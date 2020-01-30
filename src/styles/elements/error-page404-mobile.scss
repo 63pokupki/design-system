@@ -7,21 +7,11 @@
     height: 845px;
     margin: auto;
     position: relative;
-    // &:before {
-    //     position: absolute;
-    //     right: 49px;
-    //     top: 56px;
-    //     content: "";
-    //     width: 17px;
-    //     height: 710px;
-    //     background-color: $background-color-primary;
-    // }
 
     &__content {
         display: block;
         overflow-y: auto;
         height: 685px;
-        // border-radius: 39px;
         width: 370px;
         margin-left: 20px;
         &::before {
@@ -37,6 +27,9 @@
             background-repeat: no-repeat;
             z-index: 56;
         }
+    }
+    .error-pages {
+        padding: 0 15px;
     }
     .header-touch {
         position: sticky;
