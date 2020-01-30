@@ -1,10 +1,11 @@
 .error-pages {
     display: flex;
     flex-direction: column;
+    background: $background-color-primary;
     padding: 0 20px;
     &__header-mobile {
         display: none;
-        justify-content: center;
+        justify-content: flex-start;
         width: 100%;
     }
     &__container {
