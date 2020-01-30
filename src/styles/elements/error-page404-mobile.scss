@@ -1,0 +1,51 @@
+.simulator-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 450px;
+    min-width: 450px;
+    height: 845px;
+    margin: auto;
+    position: relative;
+    // &:before {
+    //     position: absolute;
+    //     right: 49px;
+    //     top: 56px;
+    //     content: "";
+    //     width: 17px;
+    //     height: 710px;
+    //     background-color: $background-color-primary;
+    // }
+
+    &__content {
+        display: block;
+        overflow-y: auto;
+        height: 685px;
+        // border-radius: 39px;
+        width: 370px;
+        margin-left: 20px;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("~images/iphone/iphone.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 56;
+        }
+    }
+    .header-touch {
+        position: sticky;
+    }
+    .footer {
+        &__advantage {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+
