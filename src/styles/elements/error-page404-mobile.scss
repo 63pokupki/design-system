@@ -6,26 +6,48 @@
     min-width: 450px;
     height: 845px;
     margin: auto;
+    padding: 0 0 0 10px;
     position: relative;
+    border: 10px solid black;
+    border-radius: 40px;
+    border-left: 15px solid black;
+    background: #000;
+    &::after {
+        content: "";
+        width: 100px;
+        height: 40px;
+        border: 1px solid silver;
+        border-radius: 20px;
+        position: absolute;
+        bottom: 10px;
+        left: 157px;
+    }
+    &::before {
+        content: "";
+        width: 100px;
+        height: 5px;
+        border: 1px solid silver;
+        border-radius: 20px;
+        position: absolute;
+        top: 20px;
+        left: 157px;
+    }
+
 
     &__content {
         display: block;
         overflow-y: auto;
         height: 685px;
-        width: 370px;
-        margin-left: 20px;
-        &::before {
-            content: '';
+        width: 100%;
+        border: 1px solid black;
+        &::after {
+            content: "";
+            height: 800px;
+            width: 15px;
+            background: #000;
             position: absolute;
-            top: 0;
-            left: 0;
             right: 0;
-            bottom: 0;
-            background: url("~images/iphone/iphone.png");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            z-index: 56;
+            top: 10px;
         }
     }
     .error-pages {
