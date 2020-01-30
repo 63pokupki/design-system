@@ -108,7 +108,45 @@
             }
         }
     }
+    &.mob {
+            .error-pages__header-mobile {
+                display: flex;
+                .error-pages__row {
+                    max-width: 510px;
+                }
+            }
+            .error-pages__header-desktop {
+                display: none;
+            }
+            .error-pages__container {
+                justify-content: center;
+                flex-wrap: wrap-reverse;
+            }
+            .error-pages__right-col {
+                text-align: center;
+            }
+            .error-pages {
+                padding: 56px 15px 0;
+            }
+            .error-pages__header-mobile {
+                .error-pages__txt {
+                    font-size: 12px;
+                }
+            }
+    
+            .error-pages__txt {
+                font-size: 14px;
+            }
+            .error-pages__row {
+                h1 {
+                    font-size: 18px;
+                }
+                h3 {
+                    font-size: 16px;
+                }
+            }
+        
+    }
 }
-
 
 
