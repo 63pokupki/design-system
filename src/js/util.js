@@ -209,15 +209,10 @@ sidebar_array.forEach(sidebar => {
 
     if (cardActive) {
         cardActive.forEach(c => {
-            let btnToggle = c.querySelectorAll(".arrow");
-
-            if (btnToggle) {
-                btnToggle.forEach(bt => {
-                    bt.addEventListener("click", () => {
-                        c.classList.toggle("is-toggle");
-                    });
-                });
-            }
+            
+            c.addEventListener("click", () => {
+                c.classList.toggle("is-toggle");
+            });
         });
     }
 })();
