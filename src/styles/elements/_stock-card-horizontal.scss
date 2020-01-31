@@ -12,7 +12,6 @@
         float: right;
         align-items: center;
         margin-left: 20px;
-        margin-top: 20px;
     }
 
     &__get-position {
@@ -129,6 +128,10 @@
         margin-bottom: 15px;
         display: block;
 
+        .checkbox {
+            max-width: 80%;
+        }
+        
         &::first-letter {
             text-transform: uppercase;
         }

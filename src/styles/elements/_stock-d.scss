@@ -17,6 +17,10 @@
 
     &__catalog-edit {
         margin-bottom: 10px;
+        display: block;
+        cursor: pointer;
+        user-select: none;
+        text-decoration: none;
     }
 
     &__full {
