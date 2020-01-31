@@ -111,6 +111,7 @@
         width: 100%;
         position: relative;
         overflow: hidden;
+        max-height: 100px;
     }
     &__container {
         display: flex;
