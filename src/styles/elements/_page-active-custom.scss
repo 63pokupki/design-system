@@ -1,3 +1,4 @@
+// page-active-custom
 .pac {
     background: #fff;
 
@@ -22,6 +23,10 @@
             overflow: hidden;
         }
     }
+    .search {
+        max-width: 426px;
+        margin: 20px auto;
+    }
 
     .wrapper-active-cards {
         display: block;
@@ -39,6 +44,29 @@
             top: 20px;
             right: -25px;
             z-index: 9999;
+        }
+    }
+    @media (max-width: 992px) {
+        .card-active-custom-desktop {
+            display: none;
+        }
+    }
+    @media (min-width: 993px) {
+        .card-active-custom.tablet {
+            display: none;
+        }
+    }
+    @media (max-width: 769px)  {
+        .card-active-custom.tablet {
+            display: none;
+        }
+        .header-wrap-card__tabs {
+            display: none;
+        }
+    }
+    @media (min-width: 769px) {
+        .card-active-custom__wrap.mobile {
+            display: none;
         }
     }
 }
@@ -63,3 +91,5 @@ footer {
     margin-top: 100px;
 
 }
+
+

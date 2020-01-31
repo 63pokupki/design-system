@@ -9,28 +9,6 @@
     padding: 0 25px;
     background: $card-color-bg;
 
-    //Опции:
-    &_tablet, &_mobile {
-        .header-wrap-card__container-switcher {
-            display: flex;
-            width: 100%;
-        }
-        .header-wrap-card__switcher-desktop {
-            display: none;
-        }  
-    }
-    &_mobile {
-        .header-wrap-card__container-switcher {
-            .header-wrap-card__switcher-name {
-                order: 1;
-                margin-right: 10px;
-            }
-            .switcher__label {
-                order: 2;
-            }
-    
-        }
-    }
     &__tabs {
         display: flex;
         flex-direction: row;
@@ -90,6 +68,7 @@
         align-items: center;
         justify-content: flex-end;
         height: 40px;
+        padding: 0 20px;
         background: $bg-wrapper-card-color;
     }
     &__sorting {
@@ -101,10 +80,9 @@
         color: $color-text-base;
     }
     &__switcher {
-        margin-right: 10px;
         &-name {
             margin-left: 10px;
-            font-size: 12px;
+            font-size: 11px;
             color: $light-gray-color;
         }
         input:checked ~ .wrapper-card__switcher-name {
@@ -121,6 +99,30 @@
         background: $bg-wrapper-card-color;
         &.is-visible {
             display: flex;
+        }
+    }
+    @media (max-width: 992px) {
+        & {
+            padding: 0;
+            margin: 0;
+            border-top: 1px solid $color-primary;
+
+        }
+        .header-wrap-card {
+            &__tabs {
+                display: none;
+            }
+            &__sort {
+                flex-wrap: wrap;
+                padding: 0 20px;
+            }
+            &__switcher-desktop {
+                display: none;
+            }
+            &__container-switcher {
+                display: flex;
+                width: 100%;
+            }
         }
     }
 }
