@@ -131,7 +131,7 @@
         .checkbox {
             max-width: 80%;
         }
-        
+
         &::first-letter {
             text-transform: uppercase;
         }
@@ -147,6 +147,14 @@
         height: 262px;
         background: white;
         margin-right: 32px;
+
+        &:hover {
+            .stock-card-horizontal__prev,
+            .stock-card-horizontal__next,
+            .stock-card-horizontal__favorite {
+                display: block;
+            }
+        }
     }
 
     &__images-wrapper {
@@ -155,6 +163,7 @@
 
     &__prev,
     &__next {
+        display: none;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -203,7 +212,8 @@
         display: block;
     }
 
-    &__favorite {
+    .stock-card-horizontal__favorite {
+        display: none;
         position: absolute;
         top: 10px;
         right: 10px;
