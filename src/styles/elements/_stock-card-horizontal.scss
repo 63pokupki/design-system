@@ -152,7 +152,7 @@
             .stock-card-horizontal__prev,
             .stock-card-horizontal__next,
             .stock-card-horizontal__favorite {
-                display: block;
+                display: flex;
             }
         }
     }
@@ -167,12 +167,27 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        width: 32px;
-        height: 32px;
-        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: 50%;
+        width: 26px;
+        height: 26px;
+        background-color: rgba(255, 255, 255, 0.7);
         color: $color-primary;
-        font-size: 18px;
+        font-size: 13px;
         z-index: 2;
+
+        @media screen and (max-width: 1024px) {
+            display: flex;
+        }
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 1);
+        }
+
+        i {
+            &:before {
+                font-weight: 600;
+            }
+        }
 
         &:active {
             i {
@@ -182,11 +197,11 @@
     }
 
     &__prev {
-        left: 0;
+        left: 8px;
     }
 
     &__next {
-        right: 0;
+        right: 8px;
     }
 
     .stock-badge_rows {
