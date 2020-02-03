@@ -168,6 +168,14 @@
         display: block;
     }
 
+    .stock-card-vertical__favorite-w {
+        position: absolute;
+        width: 25%;
+        height: 25%;
+        top: 0;
+        right: 0;
+    }
+
     .stock-card-vertical__favorite {
         display: none;
         position: absolute;
@@ -176,6 +184,14 @@
 
         @media screen and (max-width: 1024px) {
             display: block;
+            top: 6px;
+            right: 6px;
+            height: 26px;
+            width: 26px;
+
+            i {
+                font-size: 12px;
+            }
         }
     }
 
@@ -187,6 +203,8 @@
         overflow: hidden;
         max-height: 40px;
         margin-bottom: 10px;
+        height: 40px;
+
         &::first-letter {
             text-transform: uppercase;
         }
