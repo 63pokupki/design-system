@@ -240,5 +240,11 @@
         position: absolute;
         top: 10px;
         right: 10px;
+
+        @media screen and (max-width: 1024px) {
+            .tooltip {
+                display: none;
+            }
+        }
     }
 }

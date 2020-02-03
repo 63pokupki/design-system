@@ -189,6 +189,10 @@
             height: 26px;
             width: 26px;
 
+            .tooltip {
+                display: none;
+            }
+
             i {
                 font-size: 12px;
             }
