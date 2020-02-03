@@ -59,22 +59,35 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            // min-width: 350px;
-            // min-height: 300px;
             height: auto;
             cursor: pointer;
             .arrow {
+                display: none;
                 position: absolute;
                 top: calc(50%-22px);
                 background: rgba(255, 255, 255, .7);
                 z-index: 10;
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+
+                &:hover {
+                    background: rgba(255, 255, 255, 1);
+                }
+
                 &-right {
-                    right: 0;
+                    right: 10px;
                 }
                 &-left {
-                    left: 0;
+                    left: 10px;
                 }
             }  
+
+            &:hover {
+                .arrow {
+                    display: flex;
+                }
+            }
 
         }
 
@@ -222,6 +235,7 @@
                 }
             }
             .favorite {
+                min-width: 23px;
                 &__icon {
                     font-size: 22px;
                 }
