@@ -38,7 +38,7 @@
 - Переходим в core-static
 - Ищем **header.hbs**
 - **Ctrl+F** ищем **categories-tags__link**
-- меняем необходимую ссылку <a href="/forum/phpBB3/app.php/purchases?filter_womens_day=1"
+- меняем необходимую ссылку "/forum/phpBB3/app.php/purchases?filter_womens_day=1"
 - как правило, меняется только часть после вопросительного знака, в нашем случае filter_womens_day=1
 - **git add .**
 - **git commit -m "Edit links categories-tags"**
