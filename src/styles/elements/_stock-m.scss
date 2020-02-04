@@ -194,7 +194,7 @@
             }
 
             &__image {
-                max-height: initial;
+                max-height: 300px;
             }
 
             &__main {
@@ -303,4 +303,9 @@
             }
         }
     }
+}
+
+// отбивка товаров
+.stock-m-item-w {
+    margin-bottom: 15px;
 }

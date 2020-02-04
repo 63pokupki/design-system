@@ -1,18 +1,18 @@
-
 .modal-message-for-org {
     &.is-error {
-       .modal__error-block {
-           display: flex;
-       } 
+        .modal__error-block {
+            display: flex;
+        }
     }
-        
+
     .modal {
         &__wrap {
             max-width: 550px;
         }
         &__btn-close {
             margin: 6px 5px 0 0;
-            &:after, &:before {
+            &:after,
+            &:before {
                 display: none;
             }
         }
@@ -20,7 +20,6 @@
         &__header {
             font-size: 20px;
             font-weight: 600;
-
         }
 
         &__position-name {
@@ -45,10 +44,12 @@
                     margin-top: 10px;
 
                     .ds-btn {
-                        width: 160px;
+                        max-width: 160px;
+                        width: 100%;
                         height: 32px;
                         font-size: 14px;
                         padding: 0 18px;
+                        height: 44px;
                     }
                 }
 
@@ -74,8 +75,7 @@
                         display: none;
                     }
                 }
-            }    
-
+            }
         }
 
         &__select-org {
@@ -84,9 +84,8 @@
             justify-content: space-between;
             align-items: center;
             position: relative;
-            min-width: 485px;
             min-height: 50px;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             padding: 0 15px;
             cursor: pointer;
 
@@ -103,13 +102,13 @@
                 }
             }
             &-purchase {
-                padding: 0;    
+                padding: 0;
             }
-    
+
             &-purchase:after {
                 content: "Тема";
             }
-    
+
             // &-catalog:after {
             //     content: "Сообщение";
             // }
@@ -123,10 +122,10 @@
                     z-index: 999;
                     .icon-clip {
                         font-size: 18px;
-                        color: $sky-blue-color;                        
+                        color: $sky-blue-color;
                     }
                     &:active {
-                        transform: scale(.95);
+                        transform: scale(0.95);
                     }
                 }
                 &.is-error {
@@ -140,9 +139,8 @@
                         }
                     }
                 }
-    
-            }    
-        }    
+            }
+        }
 
         &__selected-position {
             font-size: 16px;
@@ -150,7 +148,6 @@
 
             &:after {
                 content: "";
-
             }
         }
         &__textarea {
@@ -167,7 +164,7 @@
             outline: none;
             &:focus {
                 border: 2px solid $color-primary;
-                ~.modal__textarea-label {
+                ~ .modal__textarea-label {
                     &:after {
                         color: $color-primary;
                     }
@@ -188,7 +185,7 @@
                 text-align: center;
                 font-size: 14px;
                 font-weight: 600;
-                color: $color-text-light-grey;    
+                color: $color-text-light-grey;
             }
         }
 
@@ -198,11 +195,11 @@
             border: none;
             appearance: none;
             min-height: 50px;
-            outline: none;           
+            outline: none;
         }
         &__download-file {
             position: absolute;
-            top:10px;
+            top: 10px;
             right: 10px;
             outline: 0;
             opacity: 0;
@@ -263,6 +260,8 @@
             display: flex;
             flex-direction: column;
             margin: 0 2px 10px;
+            font-size: 12px;
+            color: $color-text-base;
             span {
                 line-height: 26px;
             }
@@ -294,7 +293,7 @@
             }
             img {
                 width: 48px;
-                height: 48px;                
+                height: 48px;
             }
         }
         &__error-block {
@@ -306,16 +305,16 @@
             margin-bottom: 16px;
             border-radius: 3px;
             background: $error-primary;
-            color: #FFFFFF;
+            color: #ffffff;
             font-size: 14px;
-            font-weight: 600;            
+            font-weight: 600;
         }
         &__img-block {
-            >.img-container_small {
+            > .img-container_small {
                 position: relative;
                 &.is-load {
                     .ds-loader {
-                        visibility: visible!important;
+                        visibility: visible !important;
                     }
                 }
                 &.img-preloader {
@@ -324,17 +323,17 @@
                         display: flex;
                     }
                     &:before {
-                       left: 10px; 
+                        left: 10px;
                     }
                     .ds-loader {
-                        visibility: visible!important;
+                        visibility: visible !important;
                         &:after {
                             left: 7px;
                             top: 8px;
                         }
                     }
                     border: 2px dashed $color-primary;
-                }    
+                }
                 .ds-loader {
                     visibility: hidden;
                     position: absolute;
@@ -362,13 +361,46 @@
                         background-color: rgba(255, 255, 255, 0.7);
                         z-index: 14;
                     }
-    
+
                     z-index: 11;
                 }
             }
         }
     }
+
+    @media screen and (max-width: 480px) {
+        .modal {
+            &__header {
+                font-size: 18px;
+            }
+
+            &__content {
+                .btn-container {
+                    flex-direction: column;
+
+                    .ds-btn {
+                        height: 38px;
+                        max-width: 248px;
+                    }
+
+                    .btn_send {
+                        margin-right: 0;
+                        margin-bottom: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    .ds-inputs-component {
+        min-height: 80px;
+    }
+
+    .ds-inputs-form {
+        &__input {
+            font-weight: $font-weight-primary;
+            color: $color-text-base;
+            font-size: 16px;
+        }
+    }
 }
-
-
-
