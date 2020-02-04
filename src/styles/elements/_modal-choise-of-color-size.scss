@@ -27,6 +27,10 @@
                 margin: 0 0 5px 3px;
                 font-weight: 600;
                 max-width: 90%;
+
+                &::first-letter {
+                    text-transform: uppercase;
+                }
             }
 
             .link_hover {

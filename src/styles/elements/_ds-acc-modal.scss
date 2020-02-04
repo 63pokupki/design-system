@@ -63,6 +63,11 @@ $main-padding-modal: 15px;
         background: #fff;
         padding: $main-padding-modal;
         z-index: 1001;
+
+        @media screen and (max-width: 480px) {
+            max-width: 98vw;
+        }
+        
         .modal__btn-close {
             position: absolute;
             display: flex;
