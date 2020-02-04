@@ -342,7 +342,8 @@
             }
 
             //Слайдер
-            .ds-slider {
+            .slider {
+                margin: 20px 0 0 0;
                 .slider-wrap {
                     max-width: 305px;
                 }
@@ -414,13 +415,13 @@
             //Класс is-toggle открывает полное описание по клику
             &.is-toggle {
                 max-height: 200px;
-                p {
+                a {
                     white-space: normal;
                 }
 
             }
 
-            p {
+            a {
                 padding-right: 40px;
                 overflow: hidden; //фиксирует высоту и ширину
                 cursor: pointer;
@@ -442,8 +443,12 @@
         }
 
         .card-active-custom__description {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             min-width: 305px;
             max-width: 650px;
+
         }
 
         .card-active-custom__img-wrap {
