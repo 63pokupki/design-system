@@ -181,6 +181,7 @@
         position: absolute;
         top: 18px;
         right: 16px;
+        z-index: 1;
 
         @media screen and (max-width: 1024px) {
             display: block;
