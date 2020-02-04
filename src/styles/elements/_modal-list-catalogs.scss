@@ -3,7 +3,7 @@
     align-items: flex-end!important;
     position: fixed;
     width: 100%;
-    min-width: 430px;
+    // min-width: 430px;
     padding: 1% 10% 1%;
     left: 0;
     right: 0;
@@ -118,6 +118,11 @@
                 margin: 5px 0;
                 color: $dark-grey-color;
                 position: relative;
+
+                &.flex-wrap {
+                    flex-wrap: wrap;
+                }
+
                 &:nth-child(1) {
                     height: 20px;
                     justify-content: center;
@@ -139,14 +144,14 @@
                 }
 
                 .link_hover {
-                    margin: 0 10px;
+                    margin-right: 10px;
                     font-size: 14px;
                     white-space: nowrap;
                 }
             }
             .ds-btn_hover {
                 min-width: 160px;
-                height: 30px;
+                height: 32px;
             }            
             span {
                 white-space: nowrap;
@@ -160,6 +165,7 @@
             display: flex;
             justify-content: space-between;
             width: 310px;
+            flex-shrink: 0;
             .row {
                 display: flex;
                 justify-content: center;
@@ -203,6 +209,7 @@
             }
             &__selected-catalog {
                 width: 100%;
+                white-space: normal !important;
             }
             
         }
@@ -222,7 +229,7 @@
                 }
                 .ds-btn_hover {
                     min-width: 300px;
-                    font-size: 16px;
+                    font-size: 14px;
                     padding: 4px 18px;
                 }    
             }            

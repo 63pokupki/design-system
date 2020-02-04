@@ -1,4 +1,4 @@
-$main-padding-modal: 20px;
+$main-padding-modal: 15px;
 
 .modal {
     display: flex;
@@ -59,7 +59,7 @@ $main-padding-modal: 20px;
         align-items: center;
         flex-direction: column;
         max-width: 90vw;
-        max-height: 90vh;
+        max-height: 95vh;
         background: #fff;
         padding: $main-padding-modal;
         z-index: 1001;

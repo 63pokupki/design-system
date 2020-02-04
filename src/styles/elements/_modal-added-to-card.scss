@@ -1,10 +1,7 @@
 .modal-added-to-card {
 
     .modal {
-        &__wrap {
-            max-width: 415px;
-        }
-
+        
         &__header {
             font-size: 20px;
             font-weight: 600;
@@ -25,15 +22,43 @@
 
         &__btn-container {
             display: inline-flex;
-            margin-top: 25px;
+            margin-top: 0px;
 
             .ds-btn {
-                width: 173px;
-                height: 30px;
-                padding: 6px 18px;
+                width: 182px;
+                height: 44px;
+                font-size: 14px;
+                white-space: nowrap;
+            }
 
-                &.btn-in-card {
-                    margin-right: 15px;
+            .btn-in-card {
+                margin-right: 15px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 640px) {
+        .modal {
+            &__wrap {
+                padding: 30px;
+            }
+
+            &__header {
+                font-weight: $font-weight-primary;
+            }
+
+            &__btn-container {
+                flex-direction: column;
+                width: 100%;
+
+                .ds-btn {
+                    width: 100%;
+                    max-width: 262px;
+                }
+
+                .btn-in-card {
+                    margin-right: 0;
+                    margin-bottom: 20px;
                 }
             }
         }

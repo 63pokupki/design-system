@@ -33,7 +33,7 @@
             flex-direction: column;
             justify-content: flex-start;
             min-width: 100%;
-            margin: 0 7px 5px 0;
+            margin: 0;
             overflow: visible;
 
             .btn {
@@ -263,7 +263,7 @@
             font-size: 12px;
             color: $color-text-base;
             span {
-                line-height: 26px;
+                line-height: 22px;
             }
         }
         &__img-block {
