@@ -234,6 +234,10 @@
         font-size: 12px;
         color: $dark-grey-color;
         overflow: auto;
+        a {
+            color: $dark-grey-color;
+            text-decoration: none;
+        }
     }
     &__slider {
         margin: 15px 5px;
