@@ -173,6 +173,7 @@
             &__heading {
                 font-size: 16px;
                 margin-bottom: 20px;
+                height: auto;
             }
 
             &__price {
@@ -193,7 +194,7 @@
             }
 
             &__image {
-                max-height: 390px;
+                max-height: initial;
             }
 
             &__main {
