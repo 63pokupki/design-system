@@ -8,22 +8,8 @@
     background: $card-color-bg;
     transition: box-shadow .3s;
     z-index: 5;
-
+    position: relative;
     &:hover {
-        position: relative;
-        box-shadow: 1px 1px 6px rgba(65, 149, 206, 0.4);
-        transition: box-shadow .5s;
-        z-index: 999;
-    }
-}
-
-
-.card-active-custom-desktop {
-
-    display: flex;
-    background: #fff;
-    &:hover {
-        // box-shadow: 0px 2px 16px rgba(105, 153, 247, 0.18);
         &:after {
             content: "";
             top: 3px;
@@ -33,17 +19,25 @@
             position: absolute;
             box-shadow: 0px 2px 16px rgba(105, 153, 247, 0.18);
             z-index: 1;
-        }
-    
+        }        
     }
+
+}
+
+
+.card-active-custom-desktop {
+
+    display: flex;
+    background: #fff;
     cursor: pointer;
     position: relative;
-
     
     &.is-toggle {
         margin: 0 0 10px 0;
         &:hover {
-            box-shadow: none;
+            &:after {
+                box-shadow: none;
+            }
         }
         .card-active-custom-desktop__toggle-block {
             max-height: 500px;
@@ -70,6 +64,7 @@
         height: 100%;
         padding: 25px;
         z-index: 5;
+        cursor: pointer;
     }
 
     //Header

@@ -1,9 +1,11 @@
 // @import "variables.scss";
 .card-active-custom__wrap {
+    margin: 0 0 10px 0;
     &.tablet {
         min-width: 768px;
         &.card-active-custom__wrap {
             width: 100%;
+            cursor: pointer;
         }
 
         &.is-toggle {
@@ -35,6 +37,11 @@
                 transition: all .3s;
             }
             
+            &:hover {
+                &:after {
+                    box-shadow: none;
+                }
+            }    
         }
         //ОТображает изображения в подкатергориях
         &.desktop-subcat {
@@ -71,6 +78,7 @@
             flex-direction: column;
             justify-content: space-between;
             width: 100%;
+            cursor: pointer;
             &-heading {
                 display: flex;
                 flex-direction: row;
