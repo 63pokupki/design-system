@@ -240,13 +240,22 @@
     <!-- loader -->
     <h1 class="ds-title">Лоадер</h1>
     <div class="ds-wrapper">
-        <div class="ds-text">Для лоадера на больших экранах необходимо присвоить модификатор
+        <div class="ds-text">Для лоадера на больших экранах необходимо присвоить класс
             <span class="ds-hl">ds-loader_large</span> элементу <span class="ds-hl">ds-loader</span>.
         </div>
+        <div class="ds-text">Для лоадера с задним фоном необходимо присвоить класс
+            <span class="ds-hl">ds-loader_bg</span> элементу <span class="ds-hl">ds-loader</span> и поместить его в контейнер <span class="ds-hl">ds-loader-container</span>. При этом, у элемента в котором должен располагаться лоадер, необходимо выставить <span class="ds-hl">position: relative</span>.
+        </div>
+
         <div class="ds-divider">
             <div class="ds-loader ds-loader_small"></div>
             <div class="ds-loader"></div>
             <div class="ds-loader ds-loader_large"></div>
+        </div>
+        <div class="ds-divider" style="background: #000; position: relative; height: 100px;">
+            <div class="ds-loader-container">
+                <div class="ds-loader ds-loader_bg ds-loader_large"></div>
+            </div>
         </div>
     </div>
 
@@ -255,7 +264,11 @@
             <div class="ds-loader ds-loader_small"></div>
             <div class="ds-loader"></div>
             <div class="ds-loader ds-loader_large"></div>
-
+            <div class="ds-loader ds-loader_bg ds-loader_large"></div>
+            <!-- Лоадер с задним фоном -->
+            <div class="ds-loader-container">
+                <div class="ds-loader ds-loader_bg ds-loader_large"></div>
+            </div>
             </script>
     </div>
 
