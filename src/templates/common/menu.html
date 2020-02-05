@@ -493,33 +493,37 @@
             </script>
         </div>
 
-        <h1 class="ds-title">Меню-фильтр</h1>
+        <h1 class="ds-title">Меню-фильтр категорий</h1>
         <div class="ds-wrapper">
+            <div class="ds-text">
+                Отличия отображения категорий и подкатегории:<br> - когда выбрана подкатегория есть только стрелка назад,<br> - но когда выбраны категории 1 или категории 2 уровня,то есть фильтр который дает возможность переключаться между равнозначными переменными + появляется стрелка вниз, справа от названия выбранной категории.
+            </div>
             <div class="ds-divider">
-                <div class="active-custom-menu-filter is-toggle">
-                    <div class="active-custom-menu-filter__checked-position">
-                        <div class="active-custom-menu-filter__btn-arrow-left">
+                <!-- ac - это active custom -->
+                <div class="ac-menu-filter-categories is-toggle">
+                    <div class="ac-menu-filter-categories__checked-position">
+                        <a class="ac-menu-filter-categories__checked-position-link" href="http://" target="_blank" rel="noopener noreferrer">
                             <i class="ds-icon icon-arrow-line-left"></i>
-                        </div>
-                        <a class="active-custom-menu-filter__checked-position-link" href="http://" target="_blank" rel="noopener noreferrer">Верхняя одежда для детей</a>
-                        <div class="active-custom-menu-filter__btn-arrow-down">
+                            Верхняя одежда для детей
+                        </a>
+                        <div class="ac-menu-filter-categories__btn-arrow-down">
                             <i class="ds-icon icon-arrow-down"></i>
                         </div>
                     </div>
-                    <ul class="active-custom-menu-filter__items-wrap">
-                        <li class="active-custom-menu-filter__item">
-                            <a class="active-custom-menu-filter__item-link" href="http://" target="_blank" rel="noopener noreferrer">Верхняя одежда для детей</a class=""></li>
-                        <li class="active-custom-menu-filter__item">
-                            <a class="active-custom-menu-filter__item-link" href="http://" target="_blank" rel="noopener noreferrer">Одежда для детей</a></li>
-                        <li class="active-custom-menu-filter__item">
-                            <a class="active-custom-menu-filter__item-link" href="http://" target="_blank" rel="noopener noreferrer">Обувь для детей</a></li>
-                        <li class="active-custom-menu-filter__item">
-                            <a class="active-custom-menu-filter__item-link" href="http://" target="_blank" rel="noopener noreferrer">Бельё, колготки, носки</a></li>
+                    <ul class="ac-menu-filter-categories__items-wrap">
+                        <li class="ac-menu-filter-categories__item">
+                            <a class="ac-menu-filter-categories__item-link" href="http://" target="_blank" rel="noopener noreferrer">Верхняя одежда для детей</a class=""></li>
+                        <li class="ac-menu-filter-categories__item">
+                            <a class="ac-menu-filter-categories__item-link" href="http://" target="_blank" rel="noopener noreferrer">Одежда для детей</a></li>
+                        <li class="ac-menu-filter-categories__item">
+                            <a class="ac-menu-filter-categories__item-link" href="http://" target="_blank" rel="noopener noreferrer">Обувь для детей</a></li>
+                        <li class="ac-menu-filter-categories__item">
+                            <a class="ac-menu-filter-categories__item-link" href="http://" target="_blank" rel="noopener noreferrer">Бельё, колготки, носки</a></li>
                     </ul>
-                    <div class="active-custom-menu-filter__btn-container">
+                    <div class="ac-menu-filter-categories__btn-container">
                         <!-- Для добавления лоадера, необходимо вставить в кнопку, элемент с классом
 "ds-loader ds-loader_small" и присвоить элементу ds-btn класс is-loader -->
-                        <button class="ds-btn ds-btn_inverse active-custom-menu-filter__btn-apply">
+                        <button class="ds-btn ds-btn_inverse ac-menu-filter-categories__btn-apply">
                             <div class="ds-btn__text">Применить</div>
                             <div class="ds-loader ds-loader_small"></div>
                         </button>
