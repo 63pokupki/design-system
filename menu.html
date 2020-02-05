@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Меню</title>
-    <link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?70c516ef77036284cf85" rel="stylesheet"><link href="css/ds-utils.css?70c516ef77036284cf85" rel="stylesheet"><link href="css/ds-ui-kit.css?70c516ef77036284cf85" rel="stylesheet"></head>
+    <link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?3e68b44a62e424bc7f29" rel="stylesheet"><link href="css/ds-utils.css?3e68b44a62e424bc7f29" rel="stylesheet"><link href="css/ds-ui-kit.css?3e68b44a62e424bc7f29" rel="stylesheet"></head>
     <body>
         <h1 class="ds-title">Меню</h1>
         <h2 class="ds-title">Вертикальное простое меню</h2>
@@ -534,10 +534,39 @@
     
         <div class="ds-code-wrapper">
             <script type="text/plain" class="language-markup">
-                <!-- Скопировать код элемента сюда -->
+                <!-- ac - это active custom -->
+                <div class="ac-menu-filter-categories is-toggle">
+                    <div class="ac-menu-filter-categories__checked-position">
+                        <a class="ac-menu-filter-categories__checked-position-link" href="http://" target="_blank" rel="noopener noreferrer">
+                            <i class="ds-icon icon-arrow-line-left"></i>
+                            Верхняя одежда для детей
+                        </a>
+                        <div class="ac-menu-filter-categories__btn-arrow-down">
+                            <i class="ds-icon icon-arrow-down"></i>
+                        </div>
+                    </div>
+                    <ul class="ac-menu-filter-categories__items-wrap">
+                        <li class="ac-menu-filter-categories__item">
+                            <a class="ac-menu-filter-categories__item-link" href="http://" target="_blank" rel="noopener noreferrer">Верхняя одежда для детей</a class=""></li>
+                        <li class="ac-menu-filter-categories__item">
+                            <a class="ac-menu-filter-categories__item-link" href="http://" target="_blank" rel="noopener noreferrer">Одежда для детей</a></li>
+                        <li class="ac-menu-filter-categories__item">
+                            <a class="ac-menu-filter-categories__item-link" href="http://" target="_blank" rel="noopener noreferrer">Обувь для детей</a></li>
+                        <li class="ac-menu-filter-categories__item">
+                            <a class="ac-menu-filter-categories__item-link" href="http://" target="_blank" rel="noopener noreferrer">Бельё, колготки, носки</a></li>
+                    </ul>
+                    <div class="ac-menu-filter-categories__btn-container">
+                        <!-- Для добавления лоадера, необходимо вставить в кнопку, элемент с классом "ds-loader ds-loader_small" и присвоить элементу ds-btn класс is-loader -->
+                        <button class="ds-btn ds-btn_inverse ac-menu-filter-categories__btn-apply">
+                            <div class="ds-btn__text">Применить</div>
+                            <div class="ds-loader ds-loader_small"></div>
+                        </button>
+                    </div>
+                </div>
+
             </script>
         </div>
     
     
-    <script type="text/javascript" src="js/highlight-syntax.js?70c516ef77036284cf85"></script><script type="text/javascript" src="js/ds-utils.js?70c516ef77036284cf85"></script><script type="text/javascript" src="js/ds-ui-kit.js?70c516ef77036284cf85"></script></body>
+    <script type="text/javascript" src="js/highlight-syntax.js?3e68b44a62e424bc7f29"></script><script type="text/javascript" src="js/ds-utils.js?3e68b44a62e424bc7f29"></script><script type="text/javascript" src="js/ds-ui-kit.js?3e68b44a62e424bc7f29"></script></body>
 </html>
