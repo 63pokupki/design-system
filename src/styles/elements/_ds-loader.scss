@@ -1,6 +1,7 @@
 .ds-loader {
     width: 45px;
     height: 45px;
+    margin: auto;
 
     &:after {
         content: "";
@@ -11,6 +12,18 @@
         background-size: contain;
         animation: rotate 5s infinite linear;
     }
+    &_bg {
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: $background-color-primary;
+            opacity: .8;
+        }
+    }
     &_large {
         width: 100px;
         height: 100px;
@@ -20,6 +33,20 @@
         height: 25px;
     }
 }
+// Контейнер
+
+.ds-loader-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+
 
 @keyframes rotate {
     from {

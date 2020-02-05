@@ -1,7 +1,8 @@
 // ac - это active custom
 .ac-menu-filter-categories {
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
+    margin: 0 20px;    
     background: $background-color-primary;
     border-top: 1px solid #D8D8D8;
     border-bottom: 1px solid #CCE2F1;
@@ -18,10 +19,6 @@
         .ac-menu-filter-categories__btn-arrow-down {
             transform: rotate(180deg);
         }
-    }
-    // Отображение стрелки вниз
-    &.is-select {
-
     }
     
     &__checked-position {
