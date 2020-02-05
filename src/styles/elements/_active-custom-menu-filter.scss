@@ -95,5 +95,17 @@
     }
 }
 
+@media (max-width: 992px) {
+    .ac-menu-filter-categories {
+        margin: 0;
+    }
+    .ac-menu-filter-categories__items-wrap {
+        padding: 5px 0 5px 20px;
+    }
+    .ac-menu-filter-categories__checked-position {
+        padding: 0 0 0 10px;
+    }
+}
+
 
 
