@@ -30,7 +30,7 @@
         font-size: 12px;
         width: 100%;
         color: $color-text-base;
-        max-height: 0;
+        max-height: 50px;
         overflow: hidden;
         transition: max-height $transition-primary, margin-top $transition-slow;
     }
@@ -48,5 +48,12 @@
         max-height: 500px;
         margin-top: 10px;
         transition: max-height $transition-primary, margin-top $transition-primary;
+    }
+}
+.collapse-section.is-expanded-button {
+    .collapse-section__heading {
+        &:after {
+            display: none;
+        }
     }
 }
