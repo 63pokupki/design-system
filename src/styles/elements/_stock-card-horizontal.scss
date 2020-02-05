@@ -92,7 +92,6 @@
         position: relative;
         left: -5px;
         max-height: 50px;
-        min-height: 50px;
     }
 
     .item-params-list__item {
@@ -112,6 +111,10 @@
         line-height: 17px;
         color: $color-text-heading;
         margin-bottom: 5px;
+
+        &::first-letter {
+            text-transform: uppercase;
+        }
     }
 
     &__fee {
@@ -127,6 +130,7 @@
         color: #1e2023;
         margin-bottom: 15px;
         display: block;
+        min-height: 35px;
 
         .checkbox {
             max-width: 80%;
@@ -233,6 +237,7 @@
         height: 50px;
         top: 0;
         right: 0;
+        z-index: 1;
     }
 
     .stock-card-horizontal__favorite {

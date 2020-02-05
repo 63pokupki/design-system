@@ -57,6 +57,10 @@
 
     &__filters {
         margin-bottom: 15px;
+
+        .item-params-list.is-expanded {
+            margin-bottom: 10px;
+        }
     }
 
     &__filters-head {
