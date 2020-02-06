@@ -61,3 +61,15 @@
         transform: rotate(360deg);
     }
 }
+
+@media (max-width: 768px) {
+    .ds-loader-container {
+        position: fixed;
+    }
+    .ds-loader_bg {
+        margin: auto;        
+    }
+}
+
+
+
