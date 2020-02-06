@@ -1,7 +1,7 @@
 .ds-loader {
     width: 45px;
     height: 45px;
-    margin: auto;
+    margin: 0 auto;
 
     &:after {
         content: "";
@@ -43,8 +43,12 @@
     left: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
     z-index: 99;
+    
+    &_bottom {
+        align-items: flex-end;
+    }
+
 }
 
 
