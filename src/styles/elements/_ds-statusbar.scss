@@ -32,15 +32,15 @@
     }
     &_middle {
         height: 27px;
-        .statusbar {
+        .statusbar__txt {
             font-size: 12px;
         }
 
     }
     &_large {
         height: 30px;
-        .statusbar {
-            font-size: 14px;
+        .statusbar__txt {
+            font-size: 12px;
         }
 
     }

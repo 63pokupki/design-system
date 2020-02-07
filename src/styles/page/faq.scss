@@ -1,0 +1,78 @@
+.faq {
+    display: flex;
+    width: 100%;
+    padding: 0 35px;
+    background: url("~images/faq/faq-bg.svg");
+    background-repeat: no-repeat;
+    background-position: 0 -220px;
+    background-size: cover;
+    &__header {
+       display: flex;
+       flex-direction: column;
+       padding: 0 0 45px 0;
+    }
+    &__heading-support {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 20px 0;
+
+        // Центр поддержки
+        h3 {
+            font-size: 26px;
+            font-weight: normal;
+        }
+    }
+    &__btn {
+        height: 40px;
+        margin: 0 20px;
+        font-size: 13px;
+        text-transform: uppercase;
+    }
+    &__link-block-container {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    &__link-block {
+        display: flex;
+        width: 256px;
+        height: 230px;
+        border: 1px solid black;
+    }
+    &__link-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0 40px 0;
+        h2 {
+            font-size: 25px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .faq__btn-container {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            margin: 13px 0 20px 0;
+            .faq__btn {
+                height: 45px;
+                font-size: 16px;
+                text-transform: none;
+            }
+        }
+    }
+    // Частые вопросы
+    &__heading-fq {
+        h3 {
+            font-size: 26px;
+            font-weight: normal;
+        }
+    }
+}
+
+
+
+
+
