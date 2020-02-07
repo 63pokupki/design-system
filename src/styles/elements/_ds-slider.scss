@@ -81,6 +81,9 @@
     position: relative;
     overflow: hidden;
     margin: 20px auto;
+    .ds-icon {
+        z-index: 2;
+    }
 
     .icon-arrow-left {
         position: absolute;
@@ -89,7 +92,6 @@
         padding: 10px;
         color: $color-primary;
         font-size: 30px;       
-        z-index: 9;
         &:hover {
             color: $color-text-base;
         } 
@@ -101,7 +103,6 @@
         padding: 10px;
         color: $color-primary;
         font-size: 30px; 
-        z-index: 12;
         &:hover {
             color: $color-text-base;
         }

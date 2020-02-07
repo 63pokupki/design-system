@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    z-index: 2;
 
     &__active {
         position: absolute;
@@ -56,7 +57,7 @@ input[type="range"]::-webkit-slider-thumb {
     border: none;
     cursor: pointer;
     pointer-events: all; // Позволяет взаимодействовать с нижележащими элементами(Ползунками)
-    z-index: 5;
+    z-index: 2;
     position: relative;
 
     &:active {
@@ -70,7 +71,7 @@ input[type="range"]::-moz-range-thumb {
     border: 1px solid #ffffff !important;
     width: 16px;
     height: 16px;
-    z-index: 6;
+    z-index: 2;
     border-radius: 10px;
     border: none;
     cursor: pointer;
