@@ -16,31 +16,33 @@ const steps = [
             <li><b>Ряды можно смотреть прямо в карточке товара</b>
                 и делать сортировку по заполненности рядов</b></li>
         </ol>
-        <p class="semi-bold">Хотите подробнее?</p>
+        <p class="semi-bold">Хотите подробнее?</p> 
         </div>`,
-        nextLabel: "Посмотреть22",
+        nextLabel: "Посмотреть",
         tooltipClass: "onboarding-template onboarding-template_start"
     },
     {
         intro: `Все товары закупки расположены сразу под ее описанием. Сначала идут те товары, которые уже заказаны в этом выкупе - на них стоит синий значок
         с количеством заказов.`,
-        nextLabel: "Далее"
+        nextLabel: "Далее",
+        element: document.querySelector('.stock-badge.stock-badge_already')
     },
     {
-        intro: `В закупке можно отсортировать товары  по популярности, цене, названию, новизне и заполненности рядов. 
+        intro: `В закупке можно отсортировать товары по популярности, цене, названию, новизне и заполненности рядов. 
         <br><br>
         Например, если отсортировать по заполненности рядов и выбрать в фильтре
          37 размер, то сверху будут товары,
         где 37 размер в ряду свободен, а сам ряд
-        при этом максимально заполнен.`
-    },
-    {
-        intro: `В закупке можно отсортировать товары  по популярности, цене, названию, новизне и заполненности рядов. 
-        <br><br>
-        Например, если отсортировать по заполненности рядов и выбрать в фильтре
-         37 размер, то сверху будут товары,
-        где 37 размер в ряду свободен, а сам ряд
-        при этом максимально заполнен.`
+        при этом максимально заполнен.`,
+        element: document.querySelector('.ds-popover_sorting.ds-popover'),
+        beforeStep: () => {
+            let el = document.querySelector('.ds-popover_sorting.ds-popover');
+            el.style.transition = 'none';
+            
+            if (el) {
+                el.classList.add('is-visible')
+            }
+        }
     },
 ];
 
@@ -55,7 +57,8 @@ const DEFAULT_OPTIONS = {
     hideNext: true,
     showProgress: true,
     showBullets: false,
-    showStepNumbers: false
+    showStepNumbers: false,
+    scrollTo: 'tooltip'
 };
 
 window.addEventListener("DOMContentLoaded", fMain);
@@ -65,37 +68,52 @@ window.addEventListener("DOMContentLoaded", fMain);
  */
 function fMain() {
     let intro = introJs();
-    window.intro = intro;
 
-    // переопределения для некоторых шагов
-    intro.onbeforechange(function()  {
-        
-        switch (this._currentStep) {
-            case 0:
-                this.setOptions({
-                    ...DEFAULT_OPTIONS,
-                    nextLabel: steps[intro._currentStep].nextLabel,
-                    tooltipClass: steps[intro._currentStep].tooltipClass
-                });
-                break;
-
-            default:
-                this.setOptions({
-                    ...DEFAULT_OPTIONS,
-                    nextLabel: steps[intro._currentStep].nextLabel || DEFAULT_OPTIONS.nextLabel
-                });
-                break;
-        }
-    });
-
-    intro.setOptions({
-        ...DEFAULT_OPTIONS,
-        steps
-    });
+    fUpdatePropertiesStepByStepHook(intro, DEFAULT_OPTIONS, steps);
 
     intro.start();
 
     fInitCloseButton(intro);
+}
+
+/**
+ * Обновление настроек под каждый шаг подсказок, смена текста, оформления и тд
+ * @param  {} onboarding - объект подсказок
+ * @param  {} default_options - стандартные настройки
+ * @param  {} steps - объект шагов с нестандартными настройками
+ */
+function fUpdatePropertiesStepByStepHook(onboarding, default_options, steps) {
+    // установка стандартных настроек
+    onboarding.setOptions({
+        ...default_options,
+        steps
+    });
+    // установка настроек под каждый шаг
+    onboarding.onbeforechange(() => {
+        let step = steps[onboarding._currentStep];
+
+        onboarding.setOptions({
+            ...default_options,
+            nextLabel: step.nextLabel || default_options.nextLabel,
+            prevLabel: step.prevLabel || default_options.prevLabel,
+            doneLabel: step.doneLabel || default_options.doneLabel,
+            skipLabel: step.skipLabel || default_options.skipLabel,
+            tooltipClass: step.tooltipClass || default_options.tooltipClass
+        });
+
+        if (step.beforeStep) {
+            step.beforeStep();
+            onboarding.refresh();
+        }
+
+        console.log("onbeforechange");
+    });
+
+    onboarding.onafterchange((item) => {
+       console.log("onafterchange");
+       onboarding.refresh();
+       console.dir(item);
+    });
 }
 
 /**
@@ -120,5 +138,3 @@ function fInitCloseButton(onboarding) {
         el.append(close);
     }
 }
-
-fMain();
