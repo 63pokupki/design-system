@@ -1,0 +1,396 @@
+.faq-d {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 35px;
+    background: url("~images/faq/Component5.svg");
+    background-repeat: no-repeat;
+    background-position: 0 -220px;
+    background-size: cover;
+    &__header {
+       display: flex;
+       flex-direction: column;
+       padding: 0 0 45px 0;
+    }
+    &__heading-support {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 20px 0;
+
+        // Центр поддержки
+        h3 {
+            font-size: 26px;
+            font-weight: normal;
+        }
+    }
+    &__btn {
+        height: 40px;
+        margin: 0 15px;
+        font-size: 13px;
+        text-transform: uppercase;
+        .ds-btn__text {
+            white-space: nowrap;
+        }
+    }
+    &__link-block-container {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    &__adaptive-height {
+        margin: 0 15px;
+        max-width: 256px;
+        width: 100%;
+        // &:nth-child(1) {
+        //     background: url("~images/faq/link-block-1.svg");
+        //     background-position: center;
+        //     background-size: cover;
+        //     background-repeat: no-repeat;
+        // }
+        // &:nth-child(2) {
+        //     background: url("~images/faq/link-block-2.svg");
+        //     background-position: center;
+        //     background-size: cover;
+        //     background-repeat: no-repeat;
+        // }
+        // &:nth-child(3) {
+        //     background: url("~images/faq/link-block-3.svg");
+        //     background-position: center;
+        //     background-size: cover;
+        //     background-repeat: no-repeat; 
+        // }
+        // &:nth-child(4) {
+        //     background: url("~images/faq/link-block-4.svg");
+        //     background-position: center;
+        //     background-size: cover;
+        //     background-repeat: no-repeat;
+        // }
+
+
+        >div {
+            position:relative;
+            width:100%;
+            padding-bottom:100%;
+        }
+    }
+    &__link-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        position:absolute;
+        width:100%;
+        height:100%;
+        padding: 0 0 20px 0;
+        background-color: transparent;
+        border: 1px solid black;
+        &:nth-child(4) {
+            padding: 0 0 40px 0;
+        }
+
+        h3 {
+            margin: 0;
+            font-size: 2vw;
+            // font-size: 28px;
+            font-weight: 800;
+            color: #FFF;
+            text-transform: uppercase;
+        }
+        p {
+            margin: 13px 0 0 0;
+            color: #fff;
+        }
+    }
+    &__link-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0 40px 0;
+        h2 {
+            font-size: 25px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .faq-d__btn-container {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            margin: 13px 0 20px 0;
+            .faq__btn {
+                height: 45px;
+                font-size: 16px;
+                text-transform: none;
+            }
+        }
+    }
+    // Частые вопросы
+    &__heading-fq {
+        h3 {
+            font-size: 26px;
+            font-weight: normal;
+        }
+    }
+    &__question {
+        display: flex;
+        flex-direction: column;
+    }
+    &__question-col {
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        position: relative;
+    }
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+    }
+    &__img-ellipse {
+        position: absolute;
+        z-index: 1;
+        top: -8px;
+        left: 30px;
+    }
+    &__question-heading {
+        height: 48px;
+        margin: 0 0 30px 60px;
+        max-width: 190px;
+        font-size: 18px;
+        font-weight: 600;
+        color: #000000;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 5;
+        &::after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: -10px;
+            left: -55px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    &__question-link {
+        max-width: 260px;
+        padding: 5px;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 20px;
+        color: $color-text-heading;
+        text-decoration: none;        
+    }
+    &__question-link-container {
+        display: flex;
+        flex-direction: column;
+    }
+    &__question-link-toggle {
+        display: flex;
+        flex-direction: column;
+    }
+    &__more {
+        font-size: 14px;
+        font-weight: normal;
+        color: $color-text-base;
+        padding: 5px;
+    }
+
+    // Вход в аккаунт
+    &__acc {        
+        .faq-d__question-heading {
+            position: relative;
+            &:after {
+                content: "";
+                display: inline-block;
+                width: 42px;
+                height: 42px;
+                position: absolute;
+                top: -10px;
+                left: -53px;
+                background: url("~images/faq/faq-acc.svg");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+    }
+    // Функционал
+    &__func {
+        .faq-d__question-heading {
+            position: relative;
+            &:after {
+                content: "";
+                display: inline-block;
+                width: 42px;
+                height: 29px;
+                position: absolute;
+                top: 8px;
+                left: -55px;
+                background: url("~images/faq/faq-func.svg");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+        >img {
+            top: 2px;
+            left: 35px;
+        }
+    }
+
+    // Заказ
+    &__order {
+        .faq-d__question-heading {
+            position: relative;
+            &:after {
+                content: "";
+                display: inline-block;
+                width: 60px;
+                height: 46px;
+                position: absolute;
+                top: -12px;
+                left: -62px;                background: url("~images/faq/faq-order.svg");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+    }
+    // Корзина
+    &__basket {
+        .faq-d__question-heading {
+            position: relative;
+            &:after {
+                content: "";
+                display: inline-block;
+                width: 60px;
+                height: 46px;
+                position: absolute;
+                top: -12px;
+                left: -68px;                background: url("~images/faq/faq-basket.svg");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+    }
+    // Оплата
+    &__payment {
+        .faq-d__question-heading {
+            position: relative;
+            &:after {
+                content: "";
+                display: inline-block;
+                width: 63px;
+                height: 76px;
+                position: absolute;
+                top: -15px;
+                left: -68px;                background: url("~images/faq/faq-payment.png");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+        >img {
+            top: 3px;
+        }
+
+    }
+    // Доставка
+    &__delivery {
+        .faq-d__question-heading {
+            position: relative;
+            &:after {
+                content: "";
+                display: inline-block;
+                width: 64px;
+                height: 37px;
+                position: absolute;
+                top: 7px;
+                left: -75px;                background: url("~images/faq/faq-delivery.svg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+        >img {
+            top: 3px;
+        }
+
+    }
+    
+    // Возврат
+    &__return {
+        .faq-d__question-heading {
+            position: relative;
+            &:after {
+                content: "";
+                display: inline-block;
+                width: 40px;
+                height: 35px;
+                position: absolute;
+                top: 7px;
+                left: -53px;                background: url("~images/faq/faq-return.svg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+        >img {
+            top: 3px;
+        }
+
+    }     
+
+    // Обратная связь
+    &__feedback {
+        .faq-d__question-heading {
+            position: relative;
+            &:after {
+                content: "";
+                display: inline-block;
+                width: 52px;
+                height: 53px;
+                position: absolute;
+                top: -10px;
+                left: -62px;                background: url("~images/faq/faq-feedback.svg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+    }
+    
+    // Блок внимание!!!
+    &__block-warning {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 85px;
+        margin: 10px 0 60px 0;
+        background-color: rgba(255, 208, 153, 0.3);
+        font-size: 14px;
+        font-weight: 600;
+        color: #000000;
+    }
+    &__support-link {
+        margin: 0 0 0 5px;
+        color: $color-primary;
+        font-weight: 600;
+    }
+
+}
+
+@media (max-width: 1024px) {
+    .faq-d {
+        margin: 56px 0 0 0;
+        padding: 0;
+    }
+}
+
+
+
