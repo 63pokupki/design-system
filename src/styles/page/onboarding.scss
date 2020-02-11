@@ -4,7 +4,7 @@
 
 .onboarding-template_start.onboarding-template {
     padding: 20px 35px 30px;
-    width: 495px;
+    width: 520px;
 
     .onboarding-template__heading {
         font-weight: bold;
@@ -22,7 +22,7 @@
         color: $color-primary;
     }
 
-    .onboarding-template__list{
+    .onboarding-template__list {
         text-align: left;
         margin: 0 0 0 15px;
         padding: 0;
@@ -58,42 +58,164 @@
         margin-left: 25px;
     }
 
+    .introjs-donebutton {
+        cursor: pointer;
+        display: inline-flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        background: #36a6f2;
+        border: none;
+        border-radius: 24px;
+        text-shadow: none;
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        padding: 7px 38px;
+        font-weight: 600;
+        text-decoration: none;
+        line-height: 135%;
+        box-sizing: border-box;
+        height: 36px;
+        margin: 0;
+    }
+
     .introjs-tooltiptext {
         max-width: 100%;
         text-align: center;
-        margin: auto;
+        margin: auto auto 10px;
         color: #1d1e1f;
         line-height: 24px;
         font-size: 14px;
     }
 }
 
-.onboarding-template {
-    display: flex !important;
-    flex-direction: column;
-    justify-content: space-between;
-    border-top: 2px solid #ffb21c;
-    width: 468px;
-    max-width: initial;
+// шаблон для внешний окон - первый и последний
+.introjs-tooltip.onboarding-base-outer {
+    padding: 20px 35px 30px;
+    width: 520px;
+
+    .onboarding-base-outer__heading {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 26px;
+        text-align: center;
+        color: $color-text-heading;
+    }
+
+    .onboarding-base-outer__accent {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 26px;
+        text-align: center;
+        color: $color-primary;
+    }
+
+    &:before {
+        left: auto;
+        right: 0;
+        width: 89px;
+        height: 183px;
+        bottom: 10px;
+        background: url("~images/onboarding/lisa-inverted.png") no-repeat center;
+    }
+
+    .introjs-tooltipbuttons {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .introjs-progress {
+        display: none;
+    }
+
+    .introjs-nextbutton {
+        max-width: 164px;
+        height: 36px;
+    }
+
+    .introjs-skipbutton {
+        margin-left: 25px;
+    }
+
+    .introjs-donebutton {
+        cursor: pointer;
+        display: inline-flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        background: #36a6f2;
+        border: none;
+        border-radius: 24px;
+        text-shadow: none;
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        padding: 7px 38px;
+        font-weight: 600;
+        text-decoration: none;
+        line-height: 135%;
+        box-sizing: border-box;
+        height: 36px;
+        margin: 0;
+    }
+
+    .introjs-tooltiptext {
+        max-width: 100%;
+        text-align: center;
+        margin: auto auto 10px;
+        color: #1d1e1f;
+        line-height: 24px;
+        font-size: 14px;
+    }
+}
+
+// базовый шаблон шагов
+.introjs-tooltip.onboarding-base-steps {
     padding: 22px 38px 20px 18px;
-    box-sizing: border-box;
-    box-shadow: 0px 2px 20px rgba(77, 183, 255, 0.5);
     min-height: 280px;
-    font-family: "Open Sans", sans-serif;
 
     &:before {
         display: block;
         content: "";
         position: absolute;
         left: 0;
-        bottom: 50px;
+        bottom: 45px;
         width: 112px;
         height: 230px;
         background: url("~images/onboarding/lisa.png") no-repeat center;
         background-size: contain;
     }
 
-    &__close {
+    .introjs-tooltiptext {
+        max-width: 70%;
+        text-align: center;
+        margin: auto 0 auto auto;
+    }
+}
+
+// переопределения стандартного вида окна
+.introjs-tooltip {
+    display: flex !important;
+    flex-direction: column;
+    border-top: 2px solid #ffb21c;
+    min-width: 468px;
+    max-width: initial;
+    padding: 25px 25px 20px;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 20px rgba(77, 183, 255, 0.5);
+    font-family: "Open Sans", sans-serif;
+    transition: none;
+
+    .introjs-tooltiptext {
+        text-align: center;
+        margin: auto auto 10px;
+        color: #1d1e1f;
+        line-height: 24px;
+        font-size: 14px;
+    }
+
+    .introjs-tooltip__close {
         position: absolute;
         display: flex;
         justify-content: center;
@@ -120,77 +242,72 @@
         background-color: rgba(49, 140, 202, 0.35);
     }
 
-    .introjs-nextbutton {
-        cursor: pointer;
+    .introjs-progressbar {
+        background-color: #36a6f2;
+    }
+
+    // кнопки
+    .introjs-button,
+    .introjs-tooltipbuttons .introjs-button.introjs-donebutton {
+        margin: 0;
         display: inline-flex;
+        font-family: inherit;
+        height: 32px;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-weight: 600;
+        line-height: 135%;
         flex-wrap: nowrap;
         align-items: center;
         justify-content: center;
+        padding: 7px 25px;
+        border: none;
+        font-size: 14px;
         color: #fff;
         background: #36a6f2;
-        border: none;
         border-radius: 24px;
         text-shadow: none;
-        font-family: "Open Sans", sans-serif;
-        font-size: 14px;
-        width: 100%;
-        max-width: 112px;
-        padding: 7px 18px;
-        font-weight: 600;
-        text-decoration: none;
-        line-height: 135%;
-        box-sizing: border-box;
-        height: 32px;
     }
 
-    .introjs-skipbutton {
-        text-decoration: none;
+    .introjs-button:hover {
+        box-shadow: none;
+    }
+
+    .introjs-button.introjs-prevbutton {
+        display: none;
+    }
+
+    .introjs-button.introjs-skipbutton {
         color: #36a6f2;
-        font-weight: 600;
         font-size: 12px;
-        font-family: "Open Sans", sans-serif;
         background: transparent;
-        border: none;
         margin-right: 25px;
         padding: 0;
-        display: inline-flex;
-        align-items: center;
-        height: 32px;
+    }
+
+    .introjs-tooltipbuttons {
+        margin-left: 170px;
+        margin-top: 20px;
+    }
+
+    .introjs-hidden {
+        display: none;
+    }
+
+    ol,
+    ul {
+        text-align: left;
+        margin: 0 0 0 15px;
+        padding: 0;
+    }
+
+    li {
+        margin-bottom: 12px;
     }
 }
 
-// подсветка элемента
-.onboarding-template-highlight {
+// переопределения стандартного вида подсветки
+.introjs-tooltipReferenceLayer {
     box-shadow: none;
-}
-
-.introjs-button:hover {
-    box-shadow: none;
-}
-
-.introjs-button.introjs-prevbutton {
-    display: none;
-}
-
-.introjs-hidden {
-    display: none !important;
-}
-
-.introjs-arrow.bottom {
-    bottom: -15px;
-    border: 8px solid transparent;
-    border-top-color: #fff;
-}
-
-.introjs-progressbar {
-    background-color: #36a6f2;
-}
-
-.introjs-tooltiptext {
-    max-width: 70%;
-    text-align: center;
-    margin: auto 0 auto auto;
-    color: #1d1e1f;
-    line-height: 24px;
-    font-size: 14px;
+    transition: all 0.1s linear;
 }
