@@ -16,6 +16,7 @@
 - перходим в  [репозиторий](https://github.com/63pokupki/design-system/branches);
 - делаем **New pull request**;
 - обновляем у себя ветку **master** **git pull**
+- обновляем  **NPM**
 
 #### Меняем ссылки к тегам:
 
