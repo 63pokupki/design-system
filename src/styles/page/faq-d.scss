@@ -1,12 +1,18 @@
 .faq-d {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 1280px;
     padding: 0 35px;
-    background: url("~images/faq/Component5.svg");
+    background: url("~images/faq/faq-bg.png");
     background-repeat: no-repeat;
-    background-position: 0 -220px;
-    background-size: cover;
+    background-position: -103px -51px;
+    background-size: 131%;
+    
+    // Крошки
+    .breadcrumb {
+        margin: 25px 0 25px 35px;
+    }
+
     &__header {
        display: flex;
        flex-direction: column;
@@ -21,12 +27,14 @@
 
         // Центр поддержки
         h3 {
+            margin: 0;
             font-size: 26px;
             font-weight: normal;
+
         }
     }
     &__btn {
-        height: 40px;
+        height: 45px;
         margin: 0 15px;
         font-size: 13px;
         text-transform: uppercase;
@@ -37,36 +45,40 @@
     &__link-block-container {
         display: flex;
         width: 100%;
-        justify-content: space-between;
+        justify-content: center;
+        margin: 28px 0 0 16px;
     }
     &__adaptive-height {
         margin: 0 15px;
         max-width: 256px;
         width: 100%;
-        // &:nth-child(1) {
-        //     background: url("~images/faq/link-block-1.svg");
-        //     background-position: center;
-        //     background-size: cover;
-        //     background-repeat: no-repeat;
-        // }
-        // &:nth-child(2) {
-        //     background: url("~images/faq/link-block-2.svg");
-        //     background-position: center;
-        //     background-size: cover;
-        //     background-repeat: no-repeat;
-        // }
-        // &:nth-child(3) {
-        //     background: url("~images/faq/link-block-3.svg");
-        //     background-position: center;
-        //     background-size: cover;
-        //     background-repeat: no-repeat; 
-        // }
-        // &:nth-child(4) {
-        //     background: url("~images/faq/link-block-4.svg");
-        //     background-position: center;
-        //     background-size: cover;
-        //     background-repeat: no-repeat;
-        // }
+        &:nth-child(1) {
+            background: url("~images/faq/link-block-1.svg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            box-shadow: inset 0px 4px 0 0px rgba(216,238,254,1);
+        }
+        &:nth-child(2) {
+            background: url("~images/faq/link-block-2.svg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            box-shadow: inset 0px 4px 0 0px rgba(216,238,254,1);
+        }
+        &:nth-child(3) {
+            background: url("~images/faq/link-block-3.svg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            box-shadow: inset 0px 4px 0 0px rgba(216,238,254,1); 
+        }
+        &:nth-child(4) {
+            background: url("~images/faq/link-block-4.svg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
 
 
         >div {
@@ -81,11 +93,11 @@
         justify-content: flex-end;
         align-items: center;
         position:absolute;
-        width:100%;
-        height:100%;
+        width: 256px;
+        height:230px;
         padding: 0 0 20px 0;
         background-color: transparent;
-        border: 1px solid black;
+        // border: 1px solid black;
         &:nth-child(4) {
             padding: 0 0 40px 0;
         }
