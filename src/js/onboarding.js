@@ -18,8 +18,8 @@ const steps = [
         </ol>
         <p class="semi-bold">Хотите подробнее?</p> 
         </div>`,
-        nextLabel: "Посмотреть",
-        tooltipClass: "onboarding-base-outer"
+        nextLabel: "Посмотреть"
+        // tooltipClass: "onboarding-base-outer"
     },
     {
         intro: `Все товары закупки расположены сразу под ее описанием. Сначала идут те товары, которые уже заказаны в этом выкупе - на них стоит синий значок
@@ -36,12 +36,16 @@ const steps = [
         при этом максимально заполнен.`,
         element: document.querySelector(".ds-popover_sorting.ds-popover"),
         beforeStep: () => {
-            let el = document.querySelector(".ds-popover_sorting.ds-popover");
-            el.classList.add("disable-transition");
+            try {
+                let el = document.querySelector(
+                    ".ds-popover_sorting.ds-popover"
+                );
+                el.classList.add("disable-transition");
 
-            if (el) {
-                el.classList.add("is-visible");
-            }
+                if (el) {
+                    el.classList.add("is-visible");
+                }
+            } catch (e) {}
         }
     },
     {
@@ -90,7 +94,7 @@ const steps = [
         <span>Бежим заказывать!</span>
         </div>`,
         doneLabel: "Перейти к покупкам",
-        tooltipClass: "onboarding-base-outer",
+        // tooltipClass: "onboarding-base-outer",
         beforeStep: () => {
             fScrollTo();
         }
@@ -98,7 +102,7 @@ const steps = [
 ];
 
 const DEFAULT_OPTIONS = {
-    tooltipClass: "onboarding-base-steps",
+    // tooltipClass: "onboarding-base-steps",
     skipLabel: "Пропустить",
     doneLabel: "Закончить",
     prevLabel: "Назад",

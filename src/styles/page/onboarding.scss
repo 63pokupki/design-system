@@ -213,6 +213,36 @@
     li {
         margin-bottom: 12px;
     }
+
+    @media screen and (max-width: 900px) {
+        min-width: 300px;
+        padding: 20px 30px;
+
+        .introjs-progress {
+            position: absolute;
+            display: none;
+        }
+
+        .introjs-tooltipbuttons {
+            text-align: center;
+            margin-left: 0;
+            margin-top: 10px;
+        }
+
+        .introjs-skipbutton {
+            margin-left: 25px;
+        }
+
+        .introjs-tooltiptext {
+            margin: 0;
+            font-size: 12px;
+        }
+
+        .introjs-button {
+            height: 30px;
+            font-size: 12px;
+        }
+    }
 }
 
 // переопределения стандартного вида подсветки
