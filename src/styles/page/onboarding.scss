@@ -81,6 +81,52 @@
         text-align: center;
         margin: auto 0 auto auto;
     }
+
+    @media screen and (max-width: 900px) {
+        min-width: 280px;
+        max-width: 300px;
+        min-height: unset;
+        padding: 20px 30px;
+
+        .introjs-progress {
+            position: absolute;
+            display: none;
+        }
+
+        .introjs-tooltipbuttons {
+            text-align: center;
+            margin-left: 0;
+            margin-top: 10px;
+        }
+
+        .introjs-skipbutton {
+            margin-left: 25px;
+        }
+
+        .introjs-tooltiptext {
+            max-width: 100%;
+            margin: 0;
+            font-size: 12px;
+        }
+
+        .introjs-button, .introjs-button.introjs-donebutton {
+            height: 30px;
+            font-size: 12px;
+        }
+
+        &:before {
+            display: block;
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: -2px;
+            transform: translate(-50%, -100%);
+            width: 102px;
+            height: 109px;
+            background: url("~images/onboarding/lisa-mobile.png") no-repeat center;
+            background-size: contain;
+        }
+    }
 }
 
 // переопределения стандартного вида окна
@@ -245,12 +291,6 @@
         }
     }
 }
-
-// точечное выделение элемента красной границей
-// .introjs-tooltip-point-target {
-//     outline: 2px solid white;
-//     box-shadow: 0 0 7px 2px rgba(0,0,0,0.6);
-// }
 
 // переопределения стандартного вида подсветки
 .introjs-tooltipReferenceLayer {

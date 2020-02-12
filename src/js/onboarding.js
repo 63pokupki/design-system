@@ -183,7 +183,7 @@ const steps = [
 // ];
 
 const DEFAULT_OPTIONS = {
-    // tooltipClass: "onboarding-base-steps",
+    tooltipClass: "onboarding-base-steps",
     skipLabel: "Пропустить",
     doneLabel: "Закончить",
     prevLabel: "Назад",
