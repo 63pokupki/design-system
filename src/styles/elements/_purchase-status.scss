@@ -1,0 +1,103 @@
+.ds-purchase-status {
+    display: none;
+    width: 100%;
+    &.is-active {
+        display: flex;
+    } 
+    .ds-icon {
+        margin: 0 12px 0 0;
+        font-size: 34px;
+        font-weight: 600;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    // Текст
+    &__txt,
+    &__date {
+        margin: 0 0 0 5px;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    // Сбор
+    &__assembling-icon,
+    &__assembling-txt,
+    &__assembling-date {
+        color: $green-collection-color;
+    }    
+
+    // Скоро стоп
+    &__stop-icon,
+    &__stop-txt,
+    &__stop-date {
+        color: $orange-stop-purchase-status;
+    }
+
+    // Фиксирую
+    &__fix-icon,
+    &__fix-txt,
+    &__fix-date {
+        color: $green-collection-color;
+    }
+
+    //Сортировка
+    &__sorting-icon,
+    &__sorting-txt,
+    &__sorting-date {
+        color: $yellow-sorting-purchase-status;
+    }
+
+    //Не состоялась
+    &__fail-icon,
+    &__fail-txt,
+    &__fail-date {
+        color: $red-fail-purchase-status;
+    }
+
+    //Сдано на доставку в пункты
+    &__delivery-icon,
+    &__delivery-txt,
+    &__delivery-date {
+        color: $blue-delivery-purchase-status;
+    }
+
+    //Ожидание груза
+    &__waiting-cargo-icon,
+    &__waiting-cargo-txt,
+    &__waiting-cargo-date {
+        color: $light-green-waiting-purchase-status;
+    }
+
+    //Ожидание счёта
+    &__waiting-acc-icon,
+    &__waiting-acc-txt,
+    &__waiting-acc-date {
+        color: $violet-waiting-acc-purchase-status;
+    }
+
+    //Оплата
+    &__payment-icon,
+    &__payment-txt,
+    &__payment-date {
+        color: $red-fail-purchase-status;
+    }
+
+    //Заказ в пункте выдачи
+    &__in-point-icon,
+    &__in-point-txt,
+    &__in-point-date {
+        color: $light-blue-in-point-purchase-status;
+    }
+    
+}
+
+
+
+
+
+
+
