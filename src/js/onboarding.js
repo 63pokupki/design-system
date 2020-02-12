@@ -37,7 +37,7 @@ const steps = [
         element: document.querySelector(".ds-popover_sorting.ds-popover"),
         beforeStep: () => {
             let el = document.querySelector(".ds-popover_sorting.ds-popover");
-            el.style.transition = "none";
+            el.classList.add("disable-transition");
 
             if (el) {
                 el.classList.add("is-visible");
@@ -60,21 +60,21 @@ const steps = [
             ".stock-d .stock-brief__col.stock-brief__right"
         )
     },
-    // {
-    //     intro: `Отобразите товары списком и смотрите более подробную информацию.
-    //     В том числе заполненность ряда
-    //     прямо в описании товара.`,
-    //     element: document.querySelector(
-    //         ".stock-d .stock-items-filter__mode .stock-items-filter__list"
-    //     )
-    // },
-    // {
-    //     intro: `Можно выбрать несколько 
-    //     фильтров и после нажатия
-    //     “Применить” останутся только
-    //     подходящие товары!`,
-    //     element: document.querySelector(".stock-d .stock-aside__filters")
-    // },
+    {
+        intro: `Отобразите товары списком и смотрите более подробную информацию.
+        В том числе заполненность ряда
+        прямо в описании товара.`,
+        element: document.querySelector(
+            ".stock-d .stock-items-filter__mode .stock-items-filter__list"
+        )
+    },
+    {
+        intro: `Можно выбрать несколько 
+        фильтров и после нажатия
+        “Применить” останутся только
+        подходящие товары!`,
+        element: document.querySelector(".stock-d .stock-aside__filters")
+    },
     {
         intro: `Чтобы находить товары быстрее, используйте поиск по закупке.`,
         element: document.querySelector(
@@ -82,15 +82,15 @@ const steps = [
         )
     },
     {
-        intro: `<div class="onboarding-template__content">
-        <div class="onboarding-template__heading">
+        intro: `<div class="onboarding-base-outer__content">
+        <div class="onboarding-base-outer__heading">
             Теперь вы знаете самое необходимое!
         </div>
         <p>Краткий видеообзор по новой странице закупки можно посмотреть <a target="_blank" href="#" class="link link_hover">здесь.</a></p>
         <span>Бежим заказывать!</span>
         </div>`,
-        // tooltipClass: "onboarding-template onboarding-template_start",
         doneLabel: "Перейти к покупкам",
+        tooltipClass: "onboarding-base-outer",
         beforeStep: () => {
             fScrollTo();
         }
@@ -134,13 +134,12 @@ function fMain() {
  * @param {Number} y - координата Y прокрутки
  */
 function fScrollTo(x = 0, y = 0) {
-    let options = {
-        top: x,
-        left: y,
-        behavior: "smooth"
-    };
-
     try {
+        const options = {
+            top: x,
+            left: y,
+            behavior: "smooth"
+        };
         window.scrollTo(options);
     } catch {
         window.scrollTo(x, y);
@@ -184,7 +183,7 @@ function fUpdatePropertiesStepByStepHook(onboarding, default_options, steps) {
  * @param  {} onboarding - объект подсказок
  */
 function fInitCloseButton(onboarding) {
-    let el = document.querySelector("." + DEFAULT_OPTIONS.tooltipClass);
+    let el = document.querySelector(".introjs-tooltip");
 
     // создание иконки крестика
     let icon = document.createElement("i");

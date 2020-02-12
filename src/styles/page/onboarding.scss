@@ -2,98 +2,10 @@
 
 @import "~styles/utils/utils";
 
-.onboarding-template_start.onboarding-template {
-    padding: 20px 35px 30px;
-    width: 520px;
-
-    .onboarding-template__heading {
-        font-weight: bold;
-        font-size: 18px;
-        line-height: 26px;
-        text-align: center;
-        color: $color-text-heading;
-    }
-
-    .onboarding-template__accent {
-        font-weight: bold;
-        font-size: 16px;
-        line-height: 26px;
-        text-align: center;
-        color: $color-primary;
-    }
-
-    .onboarding-template__list {
-        text-align: left;
-        margin: 0 0 0 15px;
-        padding: 0;
-
-        li {
-            margin-bottom: 13px;
-        }
-    }
-
-    &:before {
-        left: auto;
-        right: 0;
-        width: 89px;
-        height: 183px;
-        bottom: 10px;
-        background: url("~images/onboarding/lisa-inverted.png") no-repeat center;
-    }
-
-    .introjs-tooltipbuttons {
-        text-align: center;
-    }
-
-    .introjs-progress {
-        display: none;
-    }
-
-    .introjs-nextbutton {
-        max-width: 164px;
-        height: 36px;
-    }
-
-    .introjs-skipbutton {
-        margin-left: 25px;
-    }
-
-    .introjs-donebutton {
-        cursor: pointer;
-        display: inline-flex;
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        background: #36a6f2;
-        border: none;
-        border-radius: 24px;
-        text-shadow: none;
-        font-family: "Open Sans", sans-serif;
-        font-size: 14px;
-        padding: 7px 38px;
-        font-weight: 600;
-        text-decoration: none;
-        line-height: 135%;
-        box-sizing: border-box;
-        height: 36px;
-        margin: 0;
-    }
-
-    .introjs-tooltiptext {
-        max-width: 100%;
-        text-align: center;
-        margin: auto auto 10px;
-        color: #1d1e1f;
-        line-height: 24px;
-        font-size: 14px;
-    }
-}
-
 // шаблон для внешний окон - первый и последний
 .introjs-tooltip.onboarding-base-outer {
     padding: 20px 35px 30px;
-    width: 520px;
+    min-width: 535px;
 
     .onboarding-base-outer__heading {
         font-weight: bold;
@@ -112,6 +24,8 @@
     }
 
     &:before {
+        content: "";
+        position: absolute;
         left: auto;
         right: 0;
         width: 89px;
@@ -129,44 +43,19 @@
         display: none;
     }
 
-    .introjs-nextbutton {
-        max-width: 164px;
-        height: 36px;
+    .introjs-tooltipbuttons {
+        .introjs-donebutton,
+        .introjs-nextbutton {
+            height: 36px;
+        }
     }
 
     .introjs-skipbutton {
         margin-left: 25px;
     }
 
-    .introjs-donebutton {
-        cursor: pointer;
-        display: inline-flex;
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        background: #36a6f2;
-        border: none;
-        border-radius: 24px;
-        text-shadow: none;
-        font-family: "Open Sans", sans-serif;
-        font-size: 14px;
-        padding: 7px 38px;
-        font-weight: 600;
-        text-decoration: none;
-        line-height: 135%;
-        box-sizing: border-box;
-        height: 36px;
-        margin: 0;
-    }
-
     .introjs-tooltiptext {
-        max-width: 100%;
-        text-align: center;
-        margin: auto auto 10px;
-        color: #1d1e1f;
-        line-height: 24px;
-        font-size: 14px;
+        margin: 0;
     }
 }
 
@@ -247,8 +136,7 @@
     }
 
     // кнопки
-    .introjs-button,
-    .introjs-tooltipbuttons .introjs-button.introjs-donebutton {
+    .introjs-button {
         margin: 0;
         display: inline-flex;
         font-family: inherit;
@@ -283,6 +171,27 @@
         background: transparent;
         margin-right: 25px;
         padding: 0;
+    }
+
+    .introjs-button.introjs-donebutton {
+        margin: 0;
+        display: inline-flex;
+        font-family: inherit;
+        height: 32px;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-weight: 600;
+        line-height: 135%;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        padding: 7px 25px;
+        border: none;
+        font-size: 14px;
+        color: #fff;
+        background: #36a6f2;
+        border-radius: 24px;
+        text-shadow: none;
     }
 
     .introjs-tooltipbuttons {
