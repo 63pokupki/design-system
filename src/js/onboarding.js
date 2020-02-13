@@ -23,38 +23,36 @@ const steps = [
         intro: `Здесь вся информация
         о закупке, Размерная сетка,
         а также Отзывы.`,
-        element: document.querySelector(
-            ".stock-m .zzz"
-        )
+        element: getElement(".stock-m .zzz")
     },
     {
         intro: `Можно задать вопрос
         организатору или перейти
         к обсуждению закупки на форум.`,
-        element: document.querySelector(".stock-m-info__buttons")
+        element: getElement(".stock-m-info__buttons")
     },
     {
         intro: `По умолчанию показаны
         товары из всех каталогов.
         Отметьте нужные каталоги.`,
-        element: document.querySelector(".stock-m-control__catalogs-btn")
+        element: getElement(".stock-m-control__catalogs-btn")
     },
     {
         intro: `Поиск по закупке поможет
         находить товары быстрее.`,
-        element: document.querySelector(".search.stock-m-control__search-m, .stock-m-control__search-t")
+        element: getElement(".stock-m-control__search-m, .stock-m-control__search-t")
     },
     {
         intro: `Отобразите товары по одному
         и смотрите заполнение ряда
         прямо в описании товара.`,
-        element: document.querySelector(".stock-m-control__buttons"),
+        element: getElement(".stock-m-control__buttons")
     },
     {
         intro: `Выберите нужный размер и
         сортируйте по заполненности рядов.
         Сверху будут подходящие товары.`,
-        element: document.querySelector(".stock-m__filters")
+        element: getElement(".stock-m__filters")
     },
     {
         intro: `<div class="onboarding-content" style="font-size: 14px; margin-bottom: 15px">
@@ -196,13 +194,57 @@ window.addEventListener("DOMContentLoaded", fMain);
 function fMain() {
     let intro = introJs();
 
-    fUpdatePropertiesStepByStepHook(intro, DEFAULT_OPTIONS, steps);
+    intro = fUpdatePropertiesStepByStepHook(intro, DEFAULT_OPTIONS, steps);
 
     intro.start();
 
     fInitCloseButton(intro);
 
-    // setTimeout(() => fScrollTo(), 500);
+    setTimeout(() => fScrollTo(), 500);
+}
+
+/**
+ * Проверка видимости (существования) элемента
+ * @param {} element - элемент
+ */
+function _isElementExist(element) {
+    if (!element) {
+        throw new Error("Элемент не передан");
+    }
+
+    const { height, width } = element.getBoundingClientRect();
+
+    if (height !== 0 && width !== 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+/**
+ * Получение видимого элемента по css селектору
+ * @param {String} selector - css валидный селектор
+ */
+function getElement(selector) {
+    try {
+        if (!selector) {
+            throw new Error("Селектор не передан");
+        }
+
+        const elements = Array.prototype.slice.call(
+            document.querySelectorAll(selector)
+        );
+
+        const visibleElement = elements.find(el => _isElementExist(el));
+
+        if (!visibleElement) {
+            throw new Error("Видимый элемент не найден");
+        }
+
+        return visibleElement;
+    } catch (e) {
+        console.error(e);
+    }
 }
 
 /**
@@ -235,7 +277,8 @@ function fUpdatePropertiesStepByStepHook(onboarding, default_options, steps) {
         ...default_options,
         steps
     });
-    // установка настроек под каждый шаг
+
+    // переопределение настроек под каждый шаг
     onboarding.onbeforechange(() => {
         let step = steps[onboarding._currentStep];
 
@@ -253,6 +296,8 @@ function fUpdatePropertiesStepByStepHook(onboarding, default_options, steps) {
             onboarding.refresh();
         }
     });
+
+    return onboarding;
 }
 
 /**
