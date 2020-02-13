@@ -92,6 +92,28 @@
     &__in-point-date {
         color: $light-blue-in-point-purchase-status;
     }
+
+    //На редактировании
+    &__edit-icon,
+    &__edit-txt,
+    &__edit-date {
+        color: $grey-edit-purchase-status;
+    }
+
+    //дозаказ
+    &__add-order-icon,
+    &__add-order-txt,
+    &__add-order-date {
+        color: $blue-add-order-purchase-status;
+    }
+
+    // Анонс
+    &__announ-icon,
+    &__announ-txt,
+    &__announ-date {
+        color: $carrot-announ-purchase-status;
+    }
+
     
 }
 
