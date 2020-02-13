@@ -64,7 +64,7 @@
             &-row {
                 display: flex;
                 flex-direction: row;
-                justify-content: space-between;
+                justify-content: column-reverse;
                 flex-wrap: wrap;
                 max-height: 190px;
                 overflow-y: auto;
