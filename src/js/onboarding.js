@@ -107,9 +107,8 @@ const steps = [
         element: getElement(".ds-popover_sorting.ds-popover"),
         beforeStep: () => {
             try {
-                let el = document.querySelector(
-                    ".ds-popover_sorting.ds-popover"
-                );
+                let el = getElement(".ds-popover_sorting.ds-popover");
+                
                 el.classList.add("disable-transition");
 
                 if (el) {
@@ -186,15 +185,19 @@ window.addEventListener("DOMContentLoaded", fMain);
  * Инициализация логики
  */
 function fMain() {
-    let intro = introJs();
+    try {
+        let intro = introJs();
 
-    intro = fUpdatePropertiesStepByStepHook(intro, DEFAULT_OPTIONS, steps);
+        intro = fUpdatePropertiesStepByStepHook(intro, DEFAULT_OPTIONS, steps);
 
-    intro.start();
+        intro.start();
 
-    fInitCloseButton(intro);
+        fInitCloseButton(intro);
 
-    setTimeout(() => fScrollTo(), 500);
+        setTimeout(() => fScrollTo(), 500);
+    } catch (e) {
+        console.error(e);
+    }
 }
 
 /**
@@ -202,16 +205,20 @@ function fMain() {
  * @param {} element - элемент
  */
 function _isElementExist(element) {
-    if (!element) {
-        throw new Error("Элемент не передан");
-    }
+    try {
+        if (!element) {
+            throw new Error("Элемент не передан");
+        }
 
-    const { height, width } = element.getBoundingClientRect();
+        const { height, width } = element.getBoundingClientRect();
 
-    if (height !== 0 && width !== 0) {
-        return true;
-    } else {
-        return false;
+        if (height !== 0 && width !== 0) {
+            return true;
+        } else {
+            return false;
+        }
+    } catch (e) {
+        console.error(e);
     }
 }
 
@@ -266,32 +273,36 @@ function fScrollTo(x = 0, y = 0) {
  * @param  {} steps - объект шагов с нестандартными настройками
  */
 function fUpdatePropertiesStepByStepHook(onboarding, default_options, steps) {
-    // установка стандартных настроек
-    onboarding.setOptions({
-        ...default_options,
-        steps
-    });
-
-    // переопределение настроек под каждый шаг
-    onboarding.onbeforechange(() => {
-        let step = steps[onboarding._currentStep];
-
+    try {
+        // установка стандартных настроек
         onboarding.setOptions({
             ...default_options,
-            nextLabel: step.nextLabel || default_options.nextLabel,
-            prevLabel: step.prevLabel || default_options.prevLabel,
-            doneLabel: step.doneLabel || default_options.doneLabel,
-            skipLabel: step.skipLabel || default_options.skipLabel,
-            tooltipClass: step.tooltipClass || default_options.tooltipClass
+            steps
         });
 
-        if (step.beforeStep) {
-            step.beforeStep();
-            onboarding.refresh();
-        }
-    });
+        // переопределение настроек под каждый шаг
+        onboarding.onbeforechange(() => {
+            let step = steps[onboarding._currentStep];
 
-    return onboarding;
+            onboarding.setOptions({
+                ...default_options,
+                nextLabel: step.nextLabel || default_options.nextLabel,
+                prevLabel: step.prevLabel || default_options.prevLabel,
+                doneLabel: step.doneLabel || default_options.doneLabel,
+                skipLabel: step.skipLabel || default_options.skipLabel,
+                tooltipClass: step.tooltipClass || default_options.tooltipClass
+            });
+
+            if (step.beforeStep) {
+                step.beforeStep();
+                onboarding.refresh();
+            }
+        });
+
+        return onboarding;
+    } catch (e) {
+        console.error(e);
+    }
 }
 
 /**
@@ -299,20 +310,24 @@ function fUpdatePropertiesStepByStepHook(onboarding, default_options, steps) {
  * @param  {} onboarding - объект подсказок
  */
 function fInitCloseButton(onboarding) {
-    let el = document.querySelector(".introjs-tooltip");
+    try {
+        let el = document.querySelector(".introjs-tooltip");
 
-    // создание иконки крестика
-    let icon = document.createElement("i");
-    icon.className = "ds-icon icon-close";
+        // создание иконки крестика
+        let icon = document.createElement("i");
+        icon.className = "ds-icon icon-close";
 
-    // создание кнопки
-    let close = document.createElement("button");
-    close.append(icon);
-    close.className = `introjs-tooltip__close`;
-    close.addEventListener("click", () => onboarding.exit(true));
+        // создание кнопки
+        let close = document.createElement("button");
+        close.append(icon);
+        close.className = `introjs-tooltip__close`;
+        close.addEventListener("click", () => onboarding.exit(true));
 
-    // добавление кнопки
-    if (el) {
-        el.append(close);
+        // добавление кнопки
+        if (el) {
+            el.append(close);
+        }
+    } catch (e) {
+        console.error(e);
     }
 }
