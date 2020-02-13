@@ -63,8 +63,8 @@
 
             &-row {
                 display: flex;
-                flex-direction: row;
-                justify-content: column-reverse;
+                flex-direction: column-reverse;
+                justify-content: flex-start;
                 flex-wrap: wrap;
                 max-height: 190px;
                 overflow-y: auto;
