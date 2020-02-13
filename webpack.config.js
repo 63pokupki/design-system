@@ -98,7 +98,6 @@ module.exports = {
             {
                 test: /\.html$/,
                 exclude: /(node_modules|bower_components)/,
-                include: path.resolve(__dirname, "src/templates"),
                 use: [
                     {
                         loader: "html-loader",
@@ -164,9 +163,23 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: "index.html?[hash]",
             template: "index.html",
-            favicon: path.resolve(__dirname, "favicon.ico")
+            favicon: path.resolve(__dirname, "favicon.ico"),
+            excludeChunks: ['onboarding']
         }),
-        ...templates
+        ...templates,
+        // отдельные шаблоны под onboarding
+        new HtmlWebpackPlugin({
+            filename: "onboarding-stock-desctop.html",
+            template: "./src/module/onboarding/onboarding-stock-desctop.html",
+            favicon: path.resolve(__dirname, "favicon.ico"),
+            // excludeChunks: ['ds-utils']
+        }),
+        new HtmlWebpackPlugin({
+            filename: "onboarding-stock-mobile.html",
+            template: "./src/module/onboarding/onboarding-stock-mobile.html",
+            favicon: path.resolve(__dirname, "favicon.ico"),
+            // excludeChunks: ['ds-utils']
+        })
     ],
     optimization: {
         //настройки оптимизации и минификации

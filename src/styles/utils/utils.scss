@@ -75,6 +75,7 @@ body {
 }
 
 .disable-transition {
+    transition: unset !important;
     * {
         transition: unset !important;
     }
