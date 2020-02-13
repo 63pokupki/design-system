@@ -1,0 +1,371 @@
+// Стили для подсказок на сайте
+
+@import "~styles/utils/utils";
+
+$onboarding-media-touch: 900px;
+
+// шаблон для внешний окон - первый и последний
+.introjs-tooltip.onboarding-base-outer {
+    padding: 20px 35px 30px;
+    min-width: 535px;
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: auto;
+        right: 0;
+        width: 89px;
+        height: 183px;
+        bottom: 10px;
+        background: url("~images/onboarding/lisa-inverted.png") no-repeat center;
+    }
+
+    .introjs-tooltipbuttons {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .introjs-progress {
+        display: none;
+    }
+
+    .introjs-tooltipbuttons {
+        .introjs-donebutton,
+        .introjs-nextbutton {
+            height: 36px;
+        }
+    }
+
+    .introjs-skipbutton {
+        margin-left: 25px;
+    }
+
+    .introjs-tooltiptext {
+        margin: 0;
+    }
+
+    @media screen and (max-width: $onboarding-media-touch) {
+        min-width: 300px;
+        max-width: 310px;
+        min-height: unset;
+        padding: 20px 15px;
+
+        .introjs-progress {
+            position: absolute;
+            display: none;
+        }
+
+        .introjs-tooltipbuttons {
+            text-align: center;
+            margin-left: 0;
+            margin-top: 10px;
+        }
+
+        .introjs-skipbutton {
+            margin-left: 0;
+        }
+
+        .introjs-tooltiptext {
+            max-width: 100%;
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .introjs-button,
+        .introjs-button.introjs-donebutton {
+            height: 30px;
+            font-size: 12px;
+        }
+
+        .introjs-button.introjs-nextbutton{
+            height: 32px;
+            font-size: 14px;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: auto;
+            right: 0;
+            width: 72px;
+            height: 148px;
+            bottom: 75px;
+            background: url("~images/onboarding/lisa-mobile-outer.png")
+                no-repeat center;
+        }
+    }
+}
+
+// базовый шаблон шагов
+.introjs-tooltip.onboarding-base-steps {
+    padding: 22px 38px 20px 18px;
+    min-height: 280px;
+
+    &:before {
+        display: block;
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 45px;
+        width: 112px;
+        height: 230px;
+        background: url("~images/onboarding/lisa.png") no-repeat center;
+        background-size: contain;
+    }
+
+    .introjs-tooltiptext {
+        max-width: 70%;
+        text-align: center;
+        margin: auto 0 auto auto;
+    }
+
+    @media screen and (max-width: $onboarding-media-touch) {
+        min-width: 280px;
+        max-width: 300px;
+        min-height: unset;
+        padding: 20px 30px;
+
+        .introjs-progress {
+            position: absolute;
+            display: none;
+        }
+
+        .introjs-tooltipbuttons {
+            text-align: center;
+            margin-left: 0;
+            margin-top: 10px;
+        }
+
+        .introjs-skipbutton {
+            margin-left: 0;
+        }
+
+        .introjs-tooltiptext {
+            max-width: 100%;
+            margin: 0;
+            font-size: 12px;
+        }
+
+        .introjs-button {
+            height: 30px;
+            font-size: 12px;
+        }
+
+        .introjs-button.introjs-donebutton {
+            height: 36px;
+            font-size: 14px;
+        }
+
+        &:before {
+            display: block;
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: -2px;
+            transform: translate(-50%, -100%);
+            width: 102px;
+            height: 109px;
+            background: url("~images/onboarding/lisa-mobile.png") no-repeat
+                center;
+            background-size: contain;
+        }
+    }
+}
+
+// переопределения стандартного вида окна
+.introjs-tooltip {
+    display: flex !important;
+    flex-direction: column;
+    border-top: 2px solid #ffb21c;
+    min-width: 468px;
+    max-width: initial;
+    padding: 25px 25px 20px;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 20px rgba(77, 183, 255, 0.5);
+    font-family: "Open Sans", sans-serif;
+    transition: none;
+
+    .onboarding-heading {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 26px;
+        text-align: center;
+        color: $color-text-heading;
+    }
+
+    .onboarding-accent {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 26px;
+        text-align: center;
+        color: $color-primary;
+    }
+
+    .introjs-tooltiptext {
+        text-align: center;
+        margin: auto auto 10px;
+        color: #1d1e1f;
+        line-height: 24px;
+        font-size: 14px;
+    }
+
+    .introjs-tooltip__close {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        z-index: 5;
+
+        .icon-close {
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    .introjs-progress {
+        position: absolute;
+        bottom: 28px;
+        left: 25px;
+        width: 145px;
+        height: 5px;
+        background-color: rgba(49, 140, 202, 0.35);
+    }
+
+    .introjs-progressbar {
+        background-color: #36a6f2;
+    }
+
+    // кнопки
+    .introjs-button {
+        margin: 0;
+        display: inline-flex;
+        font-family: inherit;
+        height: 32px;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-weight: 600;
+        line-height: 135%;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        padding: 7px 25px;
+        border: none;
+        font-size: 14px;
+        color: #fff;
+        background: #36a6f2;
+        border-radius: 24px;
+        text-shadow: none;
+    }
+
+    .introjs-button:hover {
+        box-shadow: none;
+    }
+
+    .introjs-button.introjs-prevbutton {
+        display: none;
+    }
+
+    .introjs-button.introjs-skipbutton {
+        color: #36a6f2;
+        font-size: 12px;
+        background: transparent;
+        margin-right: 25px;
+        padding: 0;
+    }
+
+    .introjs-button.introjs-donebutton {
+        margin: 0;
+        display: inline-flex;
+        font-family: inherit;
+        height: 32px;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-weight: 600;
+        line-height: 135%;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        padding: 7px 25px;
+        border: none;
+        font-size: 14px;
+        color: #fff;
+        background: #36a6f2;
+        border-radius: 24px;
+        text-shadow: none;
+    }
+
+    .introjs-tooltipbuttons {
+        margin-left: 170px;
+        margin-top: 20px;
+    }
+
+    .introjs-hidden {
+        display: none;
+    }
+
+    ol,
+    ul {
+        text-align: left;
+        margin: 0 0 0 15px;
+        padding: 0;
+    }
+
+    li {
+        margin-bottom: 12px;
+    }
+
+    @media screen and (max-width: $onboarding-media-touch) {
+        min-width: 280px;
+        max-width: 300px;
+        padding: 20px 30px;
+        border: 2px solid #ffb21c;
+        border-radius: 10px;
+
+        .onboarding-heading {
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        .onboarding-accent {
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        .introjs-progress {
+            position: absolute;
+            display: none;
+        }
+
+        .introjs-tooltipbuttons {
+            text-align: center;
+            margin-left: 0;
+            margin-top: 10px;
+        }
+
+        .introjs-skipbutton {
+            margin-left: 25px;
+        }
+
+        .introjs-tooltiptext {
+            margin: 0;
+            font-size: 12px;
+        }
+
+        .introjs-button,
+        .introjs-button.introjs-donebutton {
+            height: 30px;
+            font-size: 12px;
+        }
+    }
+}
+
+// переопределения стандартного вида подсветки
+.introjs-tooltipReferenceLayer {
+    box-shadow: none;
+    transition: all 0.1s linear;
+}
