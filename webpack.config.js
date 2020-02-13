@@ -98,7 +98,6 @@ module.exports = {
             {
                 test: /\.html$/,
                 exclude: /(node_modules|bower_components)/,
-                include: path.resolve(__dirname, "src/templates"),
                 use: [
                     {
                         loader: "html-loader",
@@ -161,18 +160,30 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: "css/[name].css?[hash]"
         }),
+        ...templates,
         new HtmlWebpackPlugin({
             filename: "index.html?[hash]",
             template: "index.html",
+            favicon: path.resolve(__dirname, "favicon.ico"),
+            excludeChunks: ["onboarding"]
+        }),
+        // отдельные шаблоны под onboarding
+        new HtmlWebpackPlugin({
+            filename: "onboarding-stock-desctop.html",
+            template: "./src/module/onboarding/onboarding-stock-desctop.html",
             favicon: path.resolve(__dirname, "favicon.ico")
         }),
-        ...templates
+        new HtmlWebpackPlugin({
+            filename: "onboarding-stock-mobile.html",
+            template: "./src/module/onboarding/onboarding-stock-mobile.html",
+            favicon: path.resolve(__dirname, "favicon.ico")
+        })
     ],
     optimization: {
         //настройки оптимизации и минификации
         removeAvailableModules: false,
         removeEmptyChunks: false,
         splitChunks: false,
-        noEmitOnErrors: true,
+        noEmitOnErrors: true
     }
 };
