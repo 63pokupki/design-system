@@ -2,26 +2,12 @@
 
 @import "~styles/utils/utils";
 
+$onboarding-media-touch: 900px;
+
 // шаблон для внешний окон - первый и последний
 .introjs-tooltip.onboarding-base-outer {
     padding: 20px 35px 30px;
     min-width: 535px;
-
-    .onboarding-base-outer__heading {
-        font-weight: bold;
-        font-size: 18px;
-        line-height: 26px;
-        text-align: center;
-        color: $color-text-heading;
-    }
-
-    .onboarding-base-outer__accent {
-        font-weight: bold;
-        font-size: 16px;
-        line-height: 26px;
-        text-align: center;
-        color: $color-primary;
-    }
 
     &:before {
         content: "";
@@ -57,6 +43,57 @@
     .introjs-tooltiptext {
         margin: 0;
     }
+
+    @media screen and (max-width: $onboarding-media-touch) {
+        min-width: 300px;
+        max-width: 310px;
+        min-height: unset;
+        padding: 20px 15px;
+
+        .introjs-progress {
+            position: absolute;
+            display: none;
+        }
+
+        .introjs-tooltipbuttons {
+            text-align: center;
+            margin-left: 0;
+            margin-top: 10px;
+        }
+
+        .introjs-skipbutton {
+            margin-left: 0;
+        }
+
+        .introjs-tooltiptext {
+            max-width: 100%;
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .introjs-button,
+        .introjs-button.introjs-donebutton {
+            height: 30px;
+            font-size: 12px;
+        }
+
+        .introjs-button.introjs-nextbutton{
+            height: 32px;
+            font-size: 14px;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: auto;
+            right: 0;
+            width: 72px;
+            height: 148px;
+            bottom: 75px;
+            background: url("~images/onboarding/lisa-mobile-outer.png")
+                no-repeat center;
+        }
+    }
 }
 
 // базовый шаблон шагов
@@ -82,7 +119,7 @@
         margin: auto 0 auto auto;
     }
 
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: $onboarding-media-touch) {
         min-width: 280px;
         max-width: 300px;
         min-height: unset;
@@ -100,7 +137,7 @@
         }
 
         .introjs-skipbutton {
-            margin-left: 25px;
+            margin-left: 0;
         }
 
         .introjs-tooltiptext {
@@ -109,9 +146,14 @@
             font-size: 12px;
         }
 
-        .introjs-button, .introjs-button.introjs-donebutton {
+        .introjs-button {
             height: 30px;
             font-size: 12px;
+        }
+
+        .introjs-button.introjs-donebutton {
+            height: 36px;
+            font-size: 14px;
         }
 
         &:before {
@@ -123,7 +165,8 @@
             transform: translate(-50%, -100%);
             width: 102px;
             height: 109px;
-            background: url("~images/onboarding/lisa-mobile.png") no-repeat center;
+            background: url("~images/onboarding/lisa-mobile.png") no-repeat
+                center;
             background-size: contain;
         }
     }
@@ -141,6 +184,22 @@
     box-shadow: 0px 2px 20px rgba(77, 183, 255, 0.5);
     font-family: "Open Sans", sans-serif;
     transition: none;
+
+    .onboarding-heading {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 26px;
+        text-align: center;
+        color: $color-text-heading;
+    }
+
+    .onboarding-accent {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 26px;
+        text-align: center;
+        color: $color-primary;
+    }
 
     .introjs-tooltiptext {
         text-align: center;
@@ -260,10 +319,22 @@
         margin-bottom: 12px;
     }
 
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: $onboarding-media-touch) {
         min-width: 280px;
         max-width: 300px;
         padding: 20px 30px;
+        border: 2px solid #ffb21c;
+        border-radius: 10px;
+
+        .onboarding-heading {
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        .onboarding-accent {
+            font-size: 14px;
+            line-height: 24px;
+        }
 
         .introjs-progress {
             position: absolute;
@@ -285,7 +356,8 @@
             font-size: 12px;
         }
 
-        .introjs-button, .introjs-button.introjs-donebutton {
+        .introjs-button,
+        .introjs-button.introjs-donebutton {
             height: 30px;
             font-size: 12px;
         }

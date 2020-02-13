@@ -1,25 +1,23 @@
 const introJs = require("intro.js");
 
+// мобильные шаги
 const steps = [
     {
-        intro: `<div class="onboarding-base-outer__content">
-        <div class="onboarding-base-outer__heading">
-            Привет!
-        </div>
-        <div class="onboarding-base-outer__heading">
-            Это наша новая страница закупки.
-        </div>
-        <p class="onboarding-base-outer__accent">Что изменилось:</p>
-        <ol>
-            <li>Товары и описание закупки <b>теперь на одной странице</b></li>
-            <li>Теперь <b>нет отдельного списка заказов</b> других участников. Такие товары отмечены синим значком и отображаются в начале каталога</li>
-            <li><b>Ряды можно смотреть прямо в карточке товара</b>
-                и делать сортировку по заполненности рядов</b></li>
-        </ol>
-        <p class="semi-bold">Хотите подробнее?</p>
+        intro: `<div class="onboarding-content">
+            <div class="onboarding-heading">
+            Привет! Это наша новая страница закупки.
+            </div>
+            <p class="onboarding-accent">Что изменилось:</p>
+            <ol>
+                <li>Товары и описание закупки теперь на одной странице</li>
+                <li>Теперь нет отдельного списка заказов других участников. Такие товары отмечены синим значком и отображаются в начале каталога</li>
+                <li style="margin-right: 50px">Ряды можно смотреть прямо в карточке товара
+                    и делать сортировку по заполненности рядов</li>
+            </ol>
+            <p class="semi-bold">Хотите подробнее?</p>
         </div>`,
-        nextLabel: "Посмотреть"
-        // tooltipClass: "onboarding-base-outer"
+        nextLabel: "Посмотреть",
+        tooltipClass: "onboarding-base-outer"
     },
     {
         intro: `Здесь вся информация
@@ -51,13 +49,6 @@ const steps = [
         и смотрите заполнение ряда
         прямо в описании товара.`,
         element: document.querySelector(".stock-m-control__buttons"),
-        // beforeStep: () => {
-        //     let el = document.querySelector(".stock-m-control__filter-buttons");
-
-        //     if (el) {
-        //         el.classList.toggle("introjs-tooltip-point-target");
-        //     }
-        // }
     },
     {
         intro: `Выберите нужный размер и
@@ -66,21 +57,21 @@ const steps = [
         element: document.querySelector(".stock-m__filters")
     },
     {
-        intro: `<div class="onboarding-base-outer__content">
-        <div class="onboarding-base-outer__heading">
+        intro: `<div class="onboarding-content" style="font-size: 14px; margin-bottom: 15px">
+        <div class="onboarding-heading">
             Теперь вы знаете самое необходимое!
         </div>
         <p>Краткий видеообзор по новой странице закупки можно посмотреть <a target="_blank" href="#" class="link link_hover">здесь.</a></p>
         <span>Бежим заказывать!</span>
         </div>`,
         doneLabel: "Перейти к покупкам",
-        // tooltipClass: "onboarding-base-outer",
         beforeStep: () => {
             fScrollTo();
         }
     }
 ];
 
+// десктоп шаги
 // const steps = [
 //     {
 //         intro: `<div class="onboarding-base-outer__content">
