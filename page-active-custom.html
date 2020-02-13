@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Активные закупки</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?da014072cd0ec480b77f" rel="stylesheet"><link href="css/ds-utils.css?da014072cd0ec480b77f" rel="stylesheet"><link href="css/ds-ui-kit.css?da014072cd0ec480b77f" rel="stylesheet"></head>
+<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?343332e86d58978403ca" rel="stylesheet"><link href="css/ds-utils.css?343332e86d58978403ca" rel="stylesheet"><link href="css/ds-ui-kit.css?343332e86d58978403ca" rel="stylesheet"></head>
 
 <body style="background: #fff;">
     <!-- Страница активных закупок -->
@@ -491,9 +491,95 @@
                                         <div class="rating-star-org__value">4.9</div>
                                     </div>
                                 </h2>
-                                <div class="card-active-custom-desktop__collection"><i class="ds-icon icon-box"></i>Сбор
-                                    с
-                                    30.05.2019</div>
+                                <div class="card-active-custom-desktop__collection">
+                                    <!-- Контейнер статусов -->
+                                    <div class="ds-purchase-status-container">
+                                        <!-- Сбор -->
+                                        <div class="ds-purchase-status ">
+                                            <div class="ds-purchase-status__container ds-purchase-status__assembling">
+                                                <i class="ds-icon icon-box ds-purchase-status__assembling-icon"></i>
+                                                <span class="ds-purchase-status__txt ds-purchase-status__assembling-txt">Сбор c</span>
+                                                <span class="ds-purchase-status__date ds-purchase-status__assembling-date">13.02.2020</span>
+                                            </div>
+                                        </div>
+                                        <!-- Скоро стоп -->
+                                        <div class="ds-purchase-status ">
+                                            <div class="ds-purchase-status__container ds-purchase-status__stop">
+                                                <i class="ds-icon icon-box ds-purchase-status__stop-icon"></i>
+                                                <span class="ds-purchase-status__txt ds-purchase-status__stop-txt">Скоро стоп c</span>
+                                                <span class="ds-purchase-status__date ds-purchase-status__stop-date">13.02.2020</span>
+                                            </div>
+                                        </div>
+                                        <!-- Фиксирую -->
+                                        <div class="ds-purchase-status ">
+                                            <div class="ds-purchase-status__container ds-purchase-status__fix">
+                                                <i class="ds-icon icon-box ds-purchase-status__fix-icon"></i>
+                                                <span class="ds-purchase-status__txt ds-purchase-status__fix-txt">Фиксирую c</span>
+                                                <span class="ds-purchase-status__date ds-purchase-status__fix-date">13.02.2020</span>
+                                            </div>
+                                        </div>
+                                        <!-- Сортировка -->
+                                        <div class="ds-purchase-status ">
+                                            <div class="ds-purchase-status__container ds-purchase-status__sorting">
+                                                <i class="ds-icon icon-sort ds-purchase-status__sorting-icon"></i>
+                                                <span class="ds-purchase-status__txt ds-purchase-status__sorting-txt">Сортировка c</span>
+                                                <span class="ds-purchase-status__date ds-purchase-status__sorting-date">13.02.2020</span>
+                                            </div>
+                                        </div>
+                                        <!-- Не состоялась -->
+                                        <div class="ds-purchase-status ">
+                                            <div class="ds-purchase-status__container ds-purchase-status__fail">
+                                                <i class="ds-icon icon-stop ds-purchase-status__fail-icon"></i>
+                                                <span class="ds-purchase-status__txt ds-purchase-status__fail-txt">Не состоялась c</span>
+                                                <span class="ds-purchase-status__date ds-purchase-status__fail-date">13.02.2020</span>
+                                            </div>
+                                        </div>
+                                        <!-- Сдано на доставку в пункты -->
+                                        <div class="ds-purchase-status ">
+                                            <div class="ds-purchase-status__container ds-purchase-status__delivery">
+                                                <i class="ds-icon icon-boxes ds-purchase-status__delivery-icon"></i>
+                                                <span class="ds-purchase-status__txt ds-purchase-status__delivery-txt">Сдано на доставку в
+                                                    пункты c</span>
+                                                <span class="ds-purchase-status__date ds-purchase-status__delivery-date">13.02.2020</span>
+                                            </div>
+                                        </div>
+                                        <!-- Ожидание груза -->
+                                        <div class="ds-purchase-status is-active">
+                                            <div class="ds-purchase-status__container ds-purchase-status__waiting-cargo">
+                                                <i class="ds-icon icon-car ds-purchase-status__waiting-cargo-icon"></i>
+                                                <span class="ds-purchase-status__txt ds-purchase-status__waiting-cargo-txt">Ожидание груза
+                                                    c</span>
+                                                <span class="ds-purchase-status__date ds-purchase-status__waiting-cargo-date">13.02.2020</span>
+                                            </div>
+                                        </div>
+                                        <!-- Ожидание счёта -->
+                                        <div class="ds-purchase-status ">
+                                            <div class="ds-purchase-status__container ds-purchase-status__waiting-acc">
+                                                <i class="ds-icon icon-sandglass ds-purchase-status__waiting-acc-icon"></i>
+                                                <span class="ds-purchase-status__txt ds-purchase-status__waiting-acc-txt">Ожидание счёта
+                                                    c</span>
+                                                <span class="ds-purchase-status__date ds-purchase-status__waiting-acc-date">13.02.2020</span>
+                                            </div>
+                                        </div>
+                                        <!-- Оплата -->
+                                        <div class="ds-purchase-status ">
+                                            <div class="ds-purchase-status__container ds-purchase-status__payment">
+                                                <i class="ds-icon icon-ruble ds-purchase-status__payment-icon"></i>
+                                                <span class="ds-purchase-status__txt ds-purchase-status__payment-txt">Оплата c</span>
+                                                <span class="ds-purchase-status__date ds-purchase-status__payment-date">13.02.2020</span>
+                                            </div>
+                                        </div>
+                                        <!-- Заказ в пункте выдачи -->
+                                        <div class="ds-purchase-status ">
+                                            <div class="ds-purchase-status__container ds-purchase-status__in-point">
+                                                <i class="ds-icon icon-map-mark ds-purchase-status__in-point-icon"></i>
+                                                <span class="ds-purchase-status__txt ds-purchase-status__in-point-txt">Заказ в пункте выдачи
+                                                    c</span>
+                                                <span class="ds-purchase-status__date ds-purchase-status__in-point-date">13.02.2020</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="card-active-custom-desktop__right">
@@ -588,9 +674,95 @@
                                         <div class="rating-star-org__value">4.9</div>
                                     </div>
                                 </h2>
-                                <div class="card-active-custom-desktop__collection"><i class="ds-icon icon-box"></i>Сбор
-                                    с
-                                    30.05.2019</div>
+                                <div class="card-active-custom-desktop__collection">
+                                    <!-- Контейнер статусов -->
+                                    <div class="ds-purchase-status-container">
+                                        <!-- Сбор -->
+                                        <div class="ds-purchase-status ">
+                                            <div class="ds-purchase-status__container ds-purchase-status__assembling">
+                                                <i class="ds-icon icon-box ds-purchase-status__assembling-icon"></i>
+                                                <span class="ds-purchase-status__txt ds-purchase-status__assembling-txt">Сбор c</span>
+                                                <span class="ds-purchase-status__date ds-purchase-status__assembling-date">13.02.2020</span>
+                                            </div>
+                                        </div>
+                                        <!-- Скоро стоп -->
+                                        <div class="ds-purchase-status ">
+                                            <div class="ds-purchase-status__container ds-purchase-status__stop">
+                                                <i class="ds-icon icon-box ds-purchase-status__stop-icon"></i>
+                                                <span class="ds-purchase-status__txt ds-purchase-status__stop-txt">Скоро стоп c</span>
+                                                <span class="ds-purchase-status__date ds-purchase-status__stop-date">13.02.2020</span>
+                                            </div>
+                                        </div>
+                                        <!-- Фиксирую -->
+                                        <div class="ds-purchase-status ">
+                                            <div class="ds-purchase-status__container ds-purchase-status__fix">
+                                                <i class="ds-icon icon-box ds-purchase-status__fix-icon"></i>
+                                                <span class="ds-purchase-status__txt ds-purchase-status__fix-txt">Фиксирую c</span>
+                                                <span class="ds-purchase-status__date ds-purchase-status__fix-date">13.02.2020</span>
+                                            </div>
+                                        </div>
+                                        <!-- Сортировка -->
+                                        <div class="ds-purchase-status ">
+                                            <div class="ds-purchase-status__container ds-purchase-status__sorting">
+                                                <i class="ds-icon icon-sort ds-purchase-status__sorting-icon"></i>
+                                                <span class="ds-purchase-status__txt ds-purchase-status__sorting-txt">Сортировка c</span>
+                                                <span class="ds-purchase-status__date ds-purchase-status__sorting-date">13.02.2020</span>
+                                            </div>
+                                        </div>
+                                        <!-- Не состоялась -->
+                                        <div class="ds-purchase-status ">
+                                            <div class="ds-purchase-status__container ds-purchase-status__fail">
+                                                <i class="ds-icon icon-stop ds-purchase-status__fail-icon"></i>
+                                                <span class="ds-purchase-status__txt ds-purchase-status__fail-txt">Не состоялась c</span>
+                                                <span class="ds-purchase-status__date ds-purchase-status__fail-date">13.02.2020</span>
+                                            </div>
+                                        </div>
+                                        <!-- Сдано на доставку в пункты -->
+                                        <div class="ds-purchase-status ">
+                                            <div class="ds-purchase-status__container ds-purchase-status__delivery">
+                                                <i class="ds-icon icon-boxes ds-purchase-status__delivery-icon"></i>
+                                                <span class="ds-purchase-status__txt ds-purchase-status__delivery-txt">Сдано на доставку в
+                                                    пункты c</span>
+                                                <span class="ds-purchase-status__date ds-purchase-status__delivery-date">13.02.2020</span>
+                                            </div>
+                                        </div>
+                                        <!-- Ожидание груза -->
+                                        <div class="ds-purchase-status is-active">
+                                            <div class="ds-purchase-status__container ds-purchase-status__waiting-cargo">
+                                                <i class="ds-icon icon-car ds-purchase-status__waiting-cargo-icon"></i>
+                                                <span class="ds-purchase-status__txt ds-purchase-status__waiting-cargo-txt">Ожидание груза
+                                                    c</span>
+                                                <span class="ds-purchase-status__date ds-purchase-status__waiting-cargo-date">13.02.2020</span>
+                                            </div>
+                                        </div>
+                                        <!-- Ожидание счёта -->
+                                        <div class="ds-purchase-status ">
+                                            <div class="ds-purchase-status__container ds-purchase-status__waiting-acc">
+                                                <i class="ds-icon icon-sandglass ds-purchase-status__waiting-acc-icon"></i>
+                                                <span class="ds-purchase-status__txt ds-purchase-status__waiting-acc-txt">Ожидание счёта
+                                                    c</span>
+                                                <span class="ds-purchase-status__date ds-purchase-status__waiting-acc-date">13.02.2020</span>
+                                            </div>
+                                        </div>
+                                        <!-- Оплата -->
+                                        <div class="ds-purchase-status ">
+                                            <div class="ds-purchase-status__container ds-purchase-status__payment">
+                                                <i class="ds-icon icon-ruble ds-purchase-status__payment-icon"></i>
+                                                <span class="ds-purchase-status__txt ds-purchase-status__payment-txt">Оплата c</span>
+                                                <span class="ds-purchase-status__date ds-purchase-status__payment-date">13.02.2020</span>
+                                            </div>
+                                        </div>
+                                        <!-- Заказ в пункте выдачи -->
+                                        <div class="ds-purchase-status ">
+                                            <div class="ds-purchase-status__container ds-purchase-status__in-point">
+                                                <i class="ds-icon icon-map-mark ds-purchase-status__in-point-icon"></i>
+                                                <span class="ds-purchase-status__txt ds-purchase-status__in-point-txt">Заказ в пункте выдачи
+                                                    c</span>
+                                                <span class="ds-purchase-status__date ds-purchase-status__in-point-date">13.02.2020</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="card-active-custom-desktop__right">
@@ -686,9 +858,95 @@
                                         <div class="rating-star-org__value">4.9</div>
                                     </div>
                                 </h2>
-                                <div class="card-active-custom-desktop__collection"><i class="ds-icon icon-box"></i>Сбор
-                                    с
-                                    30.05.2019</div>
+                                <div class="card-active-custom-desktop__collection">
+                                    <!-- Контейнер статусов -->
+                                    <div class="ds-purchase-status-container">
+                                        <!-- Сбор -->
+                                        <div class="ds-purchase-status ">
+                                            <div class="ds-purchase-status__container ds-purchase-status__assembling">
+                                                <i class="ds-icon icon-box ds-purchase-status__assembling-icon"></i>
+                                                <span class="ds-purchase-status__txt ds-purchase-status__assembling-txt">Сбор c</span>
+                                                <span class="ds-purchase-status__date ds-purchase-status__assembling-date">13.02.2020</span>
+                                            </div>
+                                        </div>
+                                        <!-- Скоро стоп -->
+                                        <div class="ds-purchase-status ">
+                                            <div class="ds-purchase-status__container ds-purchase-status__stop">
+                                                <i class="ds-icon icon-box ds-purchase-status__stop-icon"></i>
+                                                <span class="ds-purchase-status__txt ds-purchase-status__stop-txt">Скоро стоп c</span>
+                                                <span class="ds-purchase-status__date ds-purchase-status__stop-date">13.02.2020</span>
+                                            </div>
+                                        </div>
+                                        <!-- Фиксирую -->
+                                        <div class="ds-purchase-status ">
+                                            <div class="ds-purchase-status__container ds-purchase-status__fix">
+                                                <i class="ds-icon icon-box ds-purchase-status__fix-icon"></i>
+                                                <span class="ds-purchase-status__txt ds-purchase-status__fix-txt">Фиксирую c</span>
+                                                <span class="ds-purchase-status__date ds-purchase-status__fix-date">13.02.2020</span>
+                                            </div>
+                                        </div>
+                                        <!-- Сортировка -->
+                                        <div class="ds-purchase-status ">
+                                            <div class="ds-purchase-status__container ds-purchase-status__sorting">
+                                                <i class="ds-icon icon-sort ds-purchase-status__sorting-icon"></i>
+                                                <span class="ds-purchase-status__txt ds-purchase-status__sorting-txt">Сортировка c</span>
+                                                <span class="ds-purchase-status__date ds-purchase-status__sorting-date">13.02.2020</span>
+                                            </div>
+                                        </div>
+                                        <!-- Не состоялась -->
+                                        <div class="ds-purchase-status ">
+                                            <div class="ds-purchase-status__container ds-purchase-status__fail">
+                                                <i class="ds-icon icon-stop ds-purchase-status__fail-icon"></i>
+                                                <span class="ds-purchase-status__txt ds-purchase-status__fail-txt">Не состоялась c</span>
+                                                <span class="ds-purchase-status__date ds-purchase-status__fail-date">13.02.2020</span>
+                                            </div>
+                                        </div>
+                                        <!-- Сдано на доставку в пункты -->
+                                        <div class="ds-purchase-status ">
+                                            <div class="ds-purchase-status__container ds-purchase-status__delivery">
+                                                <i class="ds-icon icon-boxes ds-purchase-status__delivery-icon"></i>
+                                                <span class="ds-purchase-status__txt ds-purchase-status__delivery-txt">Сдано на доставку в
+                                                    пункты c</span>
+                                                <span class="ds-purchase-status__date ds-purchase-status__delivery-date">13.02.2020</span>
+                                            </div>
+                                        </div>
+                                        <!-- Ожидание груза -->
+                                        <div class="ds-purchase-status is-active">
+                                            <div class="ds-purchase-status__container ds-purchase-status__waiting-cargo">
+                                                <i class="ds-icon icon-car ds-purchase-status__waiting-cargo-icon"></i>
+                                                <span class="ds-purchase-status__txt ds-purchase-status__waiting-cargo-txt">Ожидание груза
+                                                    c</span>
+                                                <span class="ds-purchase-status__date ds-purchase-status__waiting-cargo-date">13.02.2020</span>
+                                            </div>
+                                        </div>
+                                        <!-- Ожидание счёта -->
+                                        <div class="ds-purchase-status ">
+                                            <div class="ds-purchase-status__container ds-purchase-status__waiting-acc">
+                                                <i class="ds-icon icon-sandglass ds-purchase-status__waiting-acc-icon"></i>
+                                                <span class="ds-purchase-status__txt ds-purchase-status__waiting-acc-txt">Ожидание счёта
+                                                    c</span>
+                                                <span class="ds-purchase-status__date ds-purchase-status__waiting-acc-date">13.02.2020</span>
+                                            </div>
+                                        </div>
+                                        <!-- Оплата -->
+                                        <div class="ds-purchase-status ">
+                                            <div class="ds-purchase-status__container ds-purchase-status__payment">
+                                                <i class="ds-icon icon-ruble ds-purchase-status__payment-icon"></i>
+                                                <span class="ds-purchase-status__txt ds-purchase-status__payment-txt">Оплата c</span>
+                                                <span class="ds-purchase-status__date ds-purchase-status__payment-date">13.02.2020</span>
+                                            </div>
+                                        </div>
+                                        <!-- Заказ в пункте выдачи -->
+                                        <div class="ds-purchase-status ">
+                                            <div class="ds-purchase-status__container ds-purchase-status__in-point">
+                                                <i class="ds-icon icon-map-mark ds-purchase-status__in-point-icon"></i>
+                                                <span class="ds-purchase-status__txt ds-purchase-status__in-point-txt">Заказ в пункте выдачи
+                                                    c</span>
+                                                <span class="ds-purchase-status__date ds-purchase-status__in-point-date">13.02.2020</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="card-active-custom-desktop__right">
@@ -831,12 +1089,93 @@
                     </div>
                     <div class="card-active-custom__header-collection">
                         <div class="card-active-custom__collection start">
-                            <div class="card-active-custom__purchaseStatus">
-                                <span class="stock-status is-open">
-                                    <i class="ds-icon stock-status__icon"></i>
-                                    <span class="stock-status__text">Сбор с 30.05.2018</span>
-                                </span>
+                            <div class="ds-purchase-status-container">
+                                <!-- Сбор -->
+                                <div class="ds-purchase-status ">
+                                    <div class="ds-purchase-status__container ds-purchase-status__assembling">
+                                        <i class="ds-icon icon-box ds-purchase-status__assembling-icon"></i>
+                                        <span class="ds-purchase-status__txt ds-purchase-status__assembling-txt">Сбор c</span>
+                                        <span class="ds-purchase-status__date ds-purchase-status__assembling-date">13.02.2020</span>
+                                    </div>
+                                </div>
+                                <!-- Скоро стоп -->
+                                <div class="ds-purchase-status ">
+                                    <div class="ds-purchase-status__container ds-purchase-status__stop">
+                                        <i class="ds-icon icon-box ds-purchase-status__stop-icon"></i>
+                                        <span class="ds-purchase-status__txt ds-purchase-status__stop-txt">Скоро стоп c</span>
+                                        <span class="ds-purchase-status__date ds-purchase-status__stop-date">13.02.2020</span>
+                                    </div>
+                                </div>
+                                <!-- Фиксирую -->
+                                <div class="ds-purchase-status ">
+                                    <div class="ds-purchase-status__container ds-purchase-status__fix">
+                                        <i class="ds-icon icon-box ds-purchase-status__fix-icon"></i>
+                                        <span class="ds-purchase-status__txt ds-purchase-status__fix-txt">Фиксирую c</span>
+                                        <span class="ds-purchase-status__date ds-purchase-status__fix-date">13.02.2020</span>
+                                    </div>
+                                </div>
+                                <!-- Сортировка -->
+                                <div class="ds-purchase-status ">
+                                    <div class="ds-purchase-status__container ds-purchase-status__sorting">
+                                        <i class="ds-icon icon-sort ds-purchase-status__sorting-icon"></i>
+                                        <span class="ds-purchase-status__txt ds-purchase-status__sorting-txt">Сортировка c</span>
+                                        <span class="ds-purchase-status__date ds-purchase-status__sorting-date">13.02.2020</span>
+                                    </div>
+                                </div>
+                                <!-- Не состоялась -->
+                                <div class="ds-purchase-status ">
+                                    <div class="ds-purchase-status__container ds-purchase-status__fail">
+                                        <i class="ds-icon icon-stop ds-purchase-status__fail-icon"></i>
+                                        <span class="ds-purchase-status__txt ds-purchase-status__fail-txt">Не состоялась c</span>
+                                        <span class="ds-purchase-status__date ds-purchase-status__fail-date">13.02.2020</span>
+                                    </div>
+                                </div>
+                                <!-- Сдано на доставку в пункты -->
+                                <div class="ds-purchase-status ">
+                                    <div class="ds-purchase-status__container ds-purchase-status__delivery">
+                                        <i class="ds-icon icon-boxes ds-purchase-status__delivery-icon"></i>
+                                        <span class="ds-purchase-status__txt ds-purchase-status__delivery-txt">Сдано на доставку в
+                                            пункты c</span>
+                                        <span class="ds-purchase-status__date ds-purchase-status__delivery-date">13.02.2020</span>
+                                    </div>
+                                </div>
+                                <!-- Ожидание груза -->
+                                <div class="ds-purchase-status is-active">
+                                    <div class="ds-purchase-status__container ds-purchase-status__waiting-cargo">
+                                        <i class="ds-icon icon-car ds-purchase-status__waiting-cargo-icon"></i>
+                                        <span class="ds-purchase-status__txt ds-purchase-status__waiting-cargo-txt">Ожидание груза
+                                            c</span>
+                                        <span class="ds-purchase-status__date ds-purchase-status__waiting-cargo-date">13.02.2020</span>
+                                    </div>
+                                </div>
+                                <!-- Ожидание счёта -->
+                                <div class="ds-purchase-status ">
+                                    <div class="ds-purchase-status__container ds-purchase-status__waiting-acc">
+                                        <i class="ds-icon icon-sandglass ds-purchase-status__waiting-acc-icon"></i>
+                                        <span class="ds-purchase-status__txt ds-purchase-status__waiting-acc-txt">Ожидание счёта
+                                            c</span>
+                                        <span class="ds-purchase-status__date ds-purchase-status__waiting-acc-date">13.02.2020</span>
+                                    </div>
+                                </div>
+                                <!-- Оплата -->
+                                <div class="ds-purchase-status ">
+                                    <div class="ds-purchase-status__container ds-purchase-status__payment">
+                                        <i class="ds-icon icon-ruble ds-purchase-status__payment-icon"></i>
+                                        <span class="ds-purchase-status__txt ds-purchase-status__payment-txt">Оплата c</span>
+                                        <span class="ds-purchase-status__date ds-purchase-status__payment-date">13.02.2020</span>
+                                    </div>
+                                </div>
+                                <!-- Заказ в пункте выдачи -->
+                                <div class="ds-purchase-status ">
+                                    <div class="ds-purchase-status__container ds-purchase-status__in-point">
+                                        <i class="ds-icon icon-map-mark ds-purchase-status__in-point-icon"></i>
+                                        <span class="ds-purchase-status__txt ds-purchase-status__in-point-txt">Заказ в пункте выдачи
+                                            c</span>
+                                        <span class="ds-purchase-status__date ds-purchase-status__in-point-date">13.02.2020</span>
+                                    </div>
+                                </div>
                             </div>
+
                         </div>
                         <div class="card-active-custom__status-block">
                             <p>Орзанизатор</p>
@@ -943,12 +1282,93 @@
                     </div>
                     <div class="card-active-custom__header-collection">
                         <div class="card-active-custom__collection start">
-                            <div class="card-active-custom__purchaseStatus">
-                                <span class="stock-status is-open">
-                                    <i class="ds-icon stock-status__icon"></i>
-                                    <span class="stock-status__text">Сбор с 30.05.2018</span>
-                                </span>
+                            <div class="ds-purchase-status-container">
+                                <!-- Сбор -->
+                                <div class="ds-purchase-status ">
+                                    <div class="ds-purchase-status__container ds-purchase-status__assembling">
+                                        <i class="ds-icon icon-box ds-purchase-status__assembling-icon"></i>
+                                        <span class="ds-purchase-status__txt ds-purchase-status__assembling-txt">Сбор c</span>
+                                        <span class="ds-purchase-status__date ds-purchase-status__assembling-date">13.02.2020</span>
+                                    </div>
+                                </div>
+                                <!-- Скоро стоп -->
+                                <div class="ds-purchase-status ">
+                                    <div class="ds-purchase-status__container ds-purchase-status__stop">
+                                        <i class="ds-icon icon-box ds-purchase-status__stop-icon"></i>
+                                        <span class="ds-purchase-status__txt ds-purchase-status__stop-txt">Скоро стоп c</span>
+                                        <span class="ds-purchase-status__date ds-purchase-status__stop-date">13.02.2020</span>
+                                    </div>
+                                </div>
+                                <!-- Фиксирую -->
+                                <div class="ds-purchase-status ">
+                                    <div class="ds-purchase-status__container ds-purchase-status__fix">
+                                        <i class="ds-icon icon-box ds-purchase-status__fix-icon"></i>
+                                        <span class="ds-purchase-status__txt ds-purchase-status__fix-txt">Фиксирую c</span>
+                                        <span class="ds-purchase-status__date ds-purchase-status__fix-date">13.02.2020</span>
+                                    </div>
+                                </div>
+                                <!-- Сортировка -->
+                                <div class="ds-purchase-status ">
+                                    <div class="ds-purchase-status__container ds-purchase-status__sorting">
+                                        <i class="ds-icon icon-sort ds-purchase-status__sorting-icon"></i>
+                                        <span class="ds-purchase-status__txt ds-purchase-status__sorting-txt">Сортировка c</span>
+                                        <span class="ds-purchase-status__date ds-purchase-status__sorting-date">13.02.2020</span>
+                                    </div>
+                                </div>
+                                <!-- Не состоялась -->
+                                <div class="ds-purchase-status ">
+                                    <div class="ds-purchase-status__container ds-purchase-status__fail">
+                                        <i class="ds-icon icon-stop ds-purchase-status__fail-icon"></i>
+                                        <span class="ds-purchase-status__txt ds-purchase-status__fail-txt">Не состоялась c</span>
+                                        <span class="ds-purchase-status__date ds-purchase-status__fail-date">13.02.2020</span>
+                                    </div>
+                                </div>
+                                <!-- Сдано на доставку в пункты -->
+                                <div class="ds-purchase-status ">
+                                    <div class="ds-purchase-status__container ds-purchase-status__delivery">
+                                        <i class="ds-icon icon-boxes ds-purchase-status__delivery-icon"></i>
+                                        <span class="ds-purchase-status__txt ds-purchase-status__delivery-txt">Сдано на доставку в
+                                            пункты c</span>
+                                        <span class="ds-purchase-status__date ds-purchase-status__delivery-date">13.02.2020</span>
+                                    </div>
+                                </div>
+                                <!-- Ожидание груза -->
+                                <div class="ds-purchase-status is-active">
+                                    <div class="ds-purchase-status__container ds-purchase-status__waiting-cargo">
+                                        <i class="ds-icon icon-car ds-purchase-status__waiting-cargo-icon"></i>
+                                        <span class="ds-purchase-status__txt ds-purchase-status__waiting-cargo-txt">Ожидание груза
+                                            c</span>
+                                        <span class="ds-purchase-status__date ds-purchase-status__waiting-cargo-date">13.02.2020</span>
+                                    </div>
+                                </div>
+                                <!-- Ожидание счёта -->
+                                <div class="ds-purchase-status ">
+                                    <div class="ds-purchase-status__container ds-purchase-status__waiting-acc">
+                                        <i class="ds-icon icon-sandglass ds-purchase-status__waiting-acc-icon"></i>
+                                        <span class="ds-purchase-status__txt ds-purchase-status__waiting-acc-txt">Ожидание счёта
+                                            c</span>
+                                        <span class="ds-purchase-status__date ds-purchase-status__waiting-acc-date">13.02.2020</span>
+                                    </div>
+                                </div>
+                                <!-- Оплата -->
+                                <div class="ds-purchase-status ">
+                                    <div class="ds-purchase-status__container ds-purchase-status__payment">
+                                        <i class="ds-icon icon-ruble ds-purchase-status__payment-icon"></i>
+                                        <span class="ds-purchase-status__txt ds-purchase-status__payment-txt">Оплата c</span>
+                                        <span class="ds-purchase-status__date ds-purchase-status__payment-date">13.02.2020</span>
+                                    </div>
+                                </div>
+                                <!-- Заказ в пункте выдачи -->
+                                <div class="ds-purchase-status ">
+                                    <div class="ds-purchase-status__container ds-purchase-status__in-point">
+                                        <i class="ds-icon icon-map-mark ds-purchase-status__in-point-icon"></i>
+                                        <span class="ds-purchase-status__txt ds-purchase-status__in-point-txt">Заказ в пункте выдачи
+                                            c</span>
+                                        <span class="ds-purchase-status__date ds-purchase-status__in-point-date">13.02.2020</span>
+                                    </div>
+                                </div>
                             </div>
+
                         </div>
                         <div class="card-active-custom__status-block">
                             <p>Орзанизатор</p>
@@ -1055,12 +1475,93 @@
                     </div>
                     <div class="card-active-custom__header-collection">
                         <div class="card-active-custom__collection start">
-                            <div class="card-active-custom__purchaseStatus">
-                                <span class="stock-status is-open">
-                                    <i class="ds-icon stock-status__icon"></i>
-                                    <span class="stock-status__text">Сбор с 30.05.2018</span>
-                                </span>
+                            <div class="ds-purchase-status-container">
+                                <!-- Сбор -->
+                                <div class="ds-purchase-status ">
+                                    <div class="ds-purchase-status__container ds-purchase-status__assembling">
+                                        <i class="ds-icon icon-box ds-purchase-status__assembling-icon"></i>
+                                        <span class="ds-purchase-status__txt ds-purchase-status__assembling-txt">Сбор c</span>
+                                        <span class="ds-purchase-status__date ds-purchase-status__assembling-date">13.02.2020</span>
+                                    </div>
+                                </div>
+                                <!-- Скоро стоп -->
+                                <div class="ds-purchase-status ">
+                                    <div class="ds-purchase-status__container ds-purchase-status__stop">
+                                        <i class="ds-icon icon-box ds-purchase-status__stop-icon"></i>
+                                        <span class="ds-purchase-status__txt ds-purchase-status__stop-txt">Скоро стоп c</span>
+                                        <span class="ds-purchase-status__date ds-purchase-status__stop-date">13.02.2020</span>
+                                    </div>
+                                </div>
+                                <!-- Фиксирую -->
+                                <div class="ds-purchase-status ">
+                                    <div class="ds-purchase-status__container ds-purchase-status__fix">
+                                        <i class="ds-icon icon-box ds-purchase-status__fix-icon"></i>
+                                        <span class="ds-purchase-status__txt ds-purchase-status__fix-txt">Фиксирую c</span>
+                                        <span class="ds-purchase-status__date ds-purchase-status__fix-date">13.02.2020</span>
+                                    </div>
+                                </div>
+                                <!-- Сортировка -->
+                                <div class="ds-purchase-status ">
+                                    <div class="ds-purchase-status__container ds-purchase-status__sorting">
+                                        <i class="ds-icon icon-sort ds-purchase-status__sorting-icon"></i>
+                                        <span class="ds-purchase-status__txt ds-purchase-status__sorting-txt">Сортировка c</span>
+                                        <span class="ds-purchase-status__date ds-purchase-status__sorting-date">13.02.2020</span>
+                                    </div>
+                                </div>
+                                <!-- Не состоялась -->
+                                <div class="ds-purchase-status ">
+                                    <div class="ds-purchase-status__container ds-purchase-status__fail">
+                                        <i class="ds-icon icon-stop ds-purchase-status__fail-icon"></i>
+                                        <span class="ds-purchase-status__txt ds-purchase-status__fail-txt">Не состоялась c</span>
+                                        <span class="ds-purchase-status__date ds-purchase-status__fail-date">13.02.2020</span>
+                                    </div>
+                                </div>
+                                <!-- Сдано на доставку в пункты -->
+                                <div class="ds-purchase-status ">
+                                    <div class="ds-purchase-status__container ds-purchase-status__delivery">
+                                        <i class="ds-icon icon-boxes ds-purchase-status__delivery-icon"></i>
+                                        <span class="ds-purchase-status__txt ds-purchase-status__delivery-txt">Сдано на доставку в
+                                            пункты c</span>
+                                        <span class="ds-purchase-status__date ds-purchase-status__delivery-date">13.02.2020</span>
+                                    </div>
+                                </div>
+                                <!-- Ожидание груза -->
+                                <div class="ds-purchase-status is-active">
+                                    <div class="ds-purchase-status__container ds-purchase-status__waiting-cargo">
+                                        <i class="ds-icon icon-car ds-purchase-status__waiting-cargo-icon"></i>
+                                        <span class="ds-purchase-status__txt ds-purchase-status__waiting-cargo-txt">Ожидание груза
+                                            c</span>
+                                        <span class="ds-purchase-status__date ds-purchase-status__waiting-cargo-date">13.02.2020</span>
+                                    </div>
+                                </div>
+                                <!-- Ожидание счёта -->
+                                <div class="ds-purchase-status ">
+                                    <div class="ds-purchase-status__container ds-purchase-status__waiting-acc">
+                                        <i class="ds-icon icon-sandglass ds-purchase-status__waiting-acc-icon"></i>
+                                        <span class="ds-purchase-status__txt ds-purchase-status__waiting-acc-txt">Ожидание счёта
+                                            c</span>
+                                        <span class="ds-purchase-status__date ds-purchase-status__waiting-acc-date">13.02.2020</span>
+                                    </div>
+                                </div>
+                                <!-- Оплата -->
+                                <div class="ds-purchase-status ">
+                                    <div class="ds-purchase-status__container ds-purchase-status__payment">
+                                        <i class="ds-icon icon-ruble ds-purchase-status__payment-icon"></i>
+                                        <span class="ds-purchase-status__txt ds-purchase-status__payment-txt">Оплата c</span>
+                                        <span class="ds-purchase-status__date ds-purchase-status__payment-date">13.02.2020</span>
+                                    </div>
+                                </div>
+                                <!-- Заказ в пункте выдачи -->
+                                <div class="ds-purchase-status ">
+                                    <div class="ds-purchase-status__container ds-purchase-status__in-point">
+                                        <i class="ds-icon icon-map-mark ds-purchase-status__in-point-icon"></i>
+                                        <span class="ds-purchase-status__txt ds-purchase-status__in-point-txt">Заказ в пункте выдачи
+                                            c</span>
+                                        <span class="ds-purchase-status__date ds-purchase-status__in-point-date">13.02.2020</span>
+                                    </div>
+                                </div>
                             </div>
+
                         </div>
                         <div class="card-active-custom__status-block">
                             <p>Орзанизатор</p>
@@ -1173,11 +1674,92 @@
                         <!-- Рейтинг -->
                     </div>
                     <div class="card-active-custom__collection">
-                        <div class="card-active-custom__purchaseStatus ">
-                            <span class="stock-status is-open">
-                                <i class="ds-icon stock-status__icon"></i>
-                                <span class="stock-status__text">Сбор с 30.05.2018</span>
-                            </span>
+                        <!-- Контейнер статусов -->
+                        <div class="ds-purchase-status-container">
+                            <!-- Сбор -->
+                            <div class="ds-purchase-status ">
+                                <div class="ds-purchase-status__container ds-purchase-status__assembling">
+                                    <i class="ds-icon icon-box ds-purchase-status__assembling-icon"></i>
+                                    <span class="ds-purchase-status__txt ds-purchase-status__assembling-txt">Сбор c</span>
+                                    <span class="ds-purchase-status__date ds-purchase-status__assembling-date">13.02.2020</span>
+                                </div>
+                            </div>
+                            <!-- Скоро стоп -->
+                            <div class="ds-purchase-status ">
+                                <div class="ds-purchase-status__container ds-purchase-status__stop">
+                                    <i class="ds-icon icon-box ds-purchase-status__stop-icon"></i>
+                                    <span class="ds-purchase-status__txt ds-purchase-status__stop-txt">Скоро стоп c</span>
+                                    <span class="ds-purchase-status__date ds-purchase-status__stop-date">13.02.2020</span>
+                                </div>
+                            </div>
+                            <!-- Фиксирую -->
+                            <div class="ds-purchase-status ">
+                                <div class="ds-purchase-status__container ds-purchase-status__fix">
+                                    <i class="ds-icon icon-box ds-purchase-status__fix-icon"></i>
+                                    <span class="ds-purchase-status__txt ds-purchase-status__fix-txt">Фиксирую c</span>
+                                    <span class="ds-purchase-status__date ds-purchase-status__fix-date">13.02.2020</span>
+                                </div>
+                            </div>
+                            <!-- Сортировка -->
+                            <div class="ds-purchase-status ">
+                                <div class="ds-purchase-status__container ds-purchase-status__sorting">
+                                    <i class="ds-icon icon-sort ds-purchase-status__sorting-icon"></i>
+                                    <span class="ds-purchase-status__txt ds-purchase-status__sorting-txt">Сортировка c</span>
+                                    <span class="ds-purchase-status__date ds-purchase-status__sorting-date">13.02.2020</span>
+                                </div>
+                            </div>
+                            <!-- Не состоялась -->
+                            <div class="ds-purchase-status ">
+                                <div class="ds-purchase-status__container ds-purchase-status__fail">
+                                    <i class="ds-icon icon-stop ds-purchase-status__fail-icon"></i>
+                                    <span class="ds-purchase-status__txt ds-purchase-status__fail-txt">Не состоялась c</span>
+                                    <span class="ds-purchase-status__date ds-purchase-status__fail-date">13.02.2020</span>
+                                </div>
+                            </div>
+                            <!-- Сдано на доставку в пункты -->
+                            <div class="ds-purchase-status ">
+                                <div class="ds-purchase-status__container ds-purchase-status__delivery">
+                                    <i class="ds-icon icon-boxes ds-purchase-status__delivery-icon"></i>
+                                    <span class="ds-purchase-status__txt ds-purchase-status__delivery-txt">Сдано на доставку в
+                                        пункты c</span>
+                                    <span class="ds-purchase-status__date ds-purchase-status__delivery-date">13.02.2020</span>
+                                </div>
+                            </div>
+                            <!-- Ожидание груза -->
+                            <div class="ds-purchase-status is-active">
+                                <div class="ds-purchase-status__container ds-purchase-status__waiting-cargo">
+                                    <i class="ds-icon icon-car ds-purchase-status__waiting-cargo-icon"></i>
+                                    <span class="ds-purchase-status__txt ds-purchase-status__waiting-cargo-txt">Ожидание груза
+                                        c</span>
+                                    <span class="ds-purchase-status__date ds-purchase-status__waiting-cargo-date">13.02.2020</span>
+                                </div>
+                            </div>
+                            <!-- Ожидание счёта -->
+                            <div class="ds-purchase-status ">
+                                <div class="ds-purchase-status__container ds-purchase-status__waiting-acc">
+                                    <i class="ds-icon icon-sandglass ds-purchase-status__waiting-acc-icon"></i>
+                                    <span class="ds-purchase-status__txt ds-purchase-status__waiting-acc-txt">Ожидание счёта
+                                        c</span>
+                                    <span class="ds-purchase-status__date ds-purchase-status__waiting-acc-date">13.02.2020</span>
+                                </div>
+                            </div>
+                            <!-- Оплата -->
+                            <div class="ds-purchase-status ">
+                                <div class="ds-purchase-status__container ds-purchase-status__payment">
+                                    <i class="ds-icon icon-ruble ds-purchase-status__payment-icon"></i>
+                                    <span class="ds-purchase-status__txt ds-purchase-status__payment-txt">Оплата c</span>
+                                    <span class="ds-purchase-status__date ds-purchase-status__payment-date">13.02.2020</span>
+                                </div>
+                            </div>
+                            <!-- Заказ в пункте выдачи -->
+                            <div class="ds-purchase-status ">
+                                <div class="ds-purchase-status__container ds-purchase-status__in-point">
+                                    <i class="ds-icon icon-map-mark ds-purchase-status__in-point-icon"></i>
+                                    <span class="ds-purchase-status__txt ds-purchase-status__in-point-txt">Заказ в пункте выдачи
+                                        c</span>
+                                    <span class="ds-purchase-status__date ds-purchase-status__in-point-date">13.02.2020</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="card-active-custom__statusbar">
@@ -1263,11 +1845,92 @@
                         <!-- Рейтинг -->
                     </div>
                     <div class="card-active-custom__collection">
-                        <div class="card-active-custom__purchaseStatus ">
-                            <span class="stock-status is-open">
-                                <i class="ds-icon stock-status__icon"></i>
-                                <span class="stock-status__text">Сбор с 30.05.2018</span>
-                            </span>
+                        <!-- Контейнер статусов -->
+                        <div class="ds-purchase-status-container">
+                            <!-- Сбор -->
+                            <div class="ds-purchase-status ">
+                                <div class="ds-purchase-status__container ds-purchase-status__assembling">
+                                    <i class="ds-icon icon-box ds-purchase-status__assembling-icon"></i>
+                                    <span class="ds-purchase-status__txt ds-purchase-status__assembling-txt">Сбор c</span>
+                                    <span class="ds-purchase-status__date ds-purchase-status__assembling-date">13.02.2020</span>
+                                </div>
+                            </div>
+                            <!-- Скоро стоп -->
+                            <div class="ds-purchase-status ">
+                                <div class="ds-purchase-status__container ds-purchase-status__stop">
+                                    <i class="ds-icon icon-box ds-purchase-status__stop-icon"></i>
+                                    <span class="ds-purchase-status__txt ds-purchase-status__stop-txt">Скоро стоп c</span>
+                                    <span class="ds-purchase-status__date ds-purchase-status__stop-date">13.02.2020</span>
+                                </div>
+                            </div>
+                            <!-- Фиксирую -->
+                            <div class="ds-purchase-status ">
+                                <div class="ds-purchase-status__container ds-purchase-status__fix">
+                                    <i class="ds-icon icon-box ds-purchase-status__fix-icon"></i>
+                                    <span class="ds-purchase-status__txt ds-purchase-status__fix-txt">Фиксирую c</span>
+                                    <span class="ds-purchase-status__date ds-purchase-status__fix-date">13.02.2020</span>
+                                </div>
+                            </div>
+                            <!-- Сортировка -->
+                            <div class="ds-purchase-status ">
+                                <div class="ds-purchase-status__container ds-purchase-status__sorting">
+                                    <i class="ds-icon icon-sort ds-purchase-status__sorting-icon"></i>
+                                    <span class="ds-purchase-status__txt ds-purchase-status__sorting-txt">Сортировка c</span>
+                                    <span class="ds-purchase-status__date ds-purchase-status__sorting-date">13.02.2020</span>
+                                </div>
+                            </div>
+                            <!-- Не состоялась -->
+                            <div class="ds-purchase-status ">
+                                <div class="ds-purchase-status__container ds-purchase-status__fail">
+                                    <i class="ds-icon icon-stop ds-purchase-status__fail-icon"></i>
+                                    <span class="ds-purchase-status__txt ds-purchase-status__fail-txt">Не состоялась c</span>
+                                    <span class="ds-purchase-status__date ds-purchase-status__fail-date">13.02.2020</span>
+                                </div>
+                            </div>
+                            <!-- Сдано на доставку в пункты -->
+                            <div class="ds-purchase-status ">
+                                <div class="ds-purchase-status__container ds-purchase-status__delivery">
+                                    <i class="ds-icon icon-boxes ds-purchase-status__delivery-icon"></i>
+                                    <span class="ds-purchase-status__txt ds-purchase-status__delivery-txt">Сдано на доставку в
+                                        пункты c</span>
+                                    <span class="ds-purchase-status__date ds-purchase-status__delivery-date">13.02.2020</span>
+                                </div>
+                            </div>
+                            <!-- Ожидание груза -->
+                            <div class="ds-purchase-status is-active">
+                                <div class="ds-purchase-status__container ds-purchase-status__waiting-cargo">
+                                    <i class="ds-icon icon-car ds-purchase-status__waiting-cargo-icon"></i>
+                                    <span class="ds-purchase-status__txt ds-purchase-status__waiting-cargo-txt">Ожидание груза
+                                        c</span>
+                                    <span class="ds-purchase-status__date ds-purchase-status__waiting-cargo-date">13.02.2020</span>
+                                </div>
+                            </div>
+                            <!-- Ожидание счёта -->
+                            <div class="ds-purchase-status ">
+                                <div class="ds-purchase-status__container ds-purchase-status__waiting-acc">
+                                    <i class="ds-icon icon-sandglass ds-purchase-status__waiting-acc-icon"></i>
+                                    <span class="ds-purchase-status__txt ds-purchase-status__waiting-acc-txt">Ожидание счёта
+                                        c</span>
+                                    <span class="ds-purchase-status__date ds-purchase-status__waiting-acc-date">13.02.2020</span>
+                                </div>
+                            </div>
+                            <!-- Оплата -->
+                            <div class="ds-purchase-status ">
+                                <div class="ds-purchase-status__container ds-purchase-status__payment">
+                                    <i class="ds-icon icon-ruble ds-purchase-status__payment-icon"></i>
+                                    <span class="ds-purchase-status__txt ds-purchase-status__payment-txt">Оплата c</span>
+                                    <span class="ds-purchase-status__date ds-purchase-status__payment-date">13.02.2020</span>
+                                </div>
+                            </div>
+                            <!-- Заказ в пункте выдачи -->
+                            <div class="ds-purchase-status ">
+                                <div class="ds-purchase-status__container ds-purchase-status__in-point">
+                                    <i class="ds-icon icon-map-mark ds-purchase-status__in-point-icon"></i>
+                                    <span class="ds-purchase-status__txt ds-purchase-status__in-point-txt">Заказ в пункте выдачи
+                                        c</span>
+                                    <span class="ds-purchase-status__date ds-purchase-status__in-point-date">13.02.2020</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="card-active-custom__statusbar">
@@ -1453,6 +2116,6 @@
     </script>
 
 
-<script type="text/javascript" src="js/highlight-syntax.js?da014072cd0ec480b77f"></script><script type="text/javascript" src="js/ds-utils.js?da014072cd0ec480b77f"></script><script type="text/javascript" src="js/ds-ui-kit.js?da014072cd0ec480b77f"></script></body>
+<script type="text/javascript" src="js/highlight-syntax.js?343332e86d58978403ca"></script><script type="text/javascript" src="js/ds-utils.js?343332e86d58978403ca"></script><script type="text/javascript" src="js/ds-ui-kit.js?343332e86d58978403ca"></script></body>
 
 </html>
