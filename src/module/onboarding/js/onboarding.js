@@ -1,7 +1,7 @@
 const introJs = require("intro.js");
 
 const steps = {
-    mobile: () => [
+    touch: () => [
         {
             intro: `<div class="onboarding-content">
                 <div class="onboarding-heading">
@@ -183,6 +183,8 @@ const DEFAULT_OPTIONS = {
     exitOnOverlayClick: false
 };
 
+const touchpoint = 768;
+
 window.addEventListener("DOMContentLoaded", fMain);
 
 /**
@@ -191,7 +193,7 @@ window.addEventListener("DOMContentLoaded", fMain);
 function fMain() {
     try {
         let intro = introJs();
-        const steps = _getStepByMediaMode();
+        const steps = _getStepsByMediaMode(touchpoint);
 
         intro = fUpdatePropertiesStepByStepHook(intro, DEFAULT_OPTIONS, steps);
 
@@ -208,15 +210,14 @@ function fMain() {
 /**
  * Определение режима показа - мобильные/десктоп
  */
-function _getStepByMediaMode() {
+function _getStepsByMediaMode(media) {
     try {
         const w = document.documentElement.clientWidth;
-        console.log(w);
-        
-        if (w <= 768) {
-            return steps.mobile()
+
+        if (w <= media) {
+            return steps.touch();
         } else {
-            return steps.desctop()
+            return steps.desctop();
         }
     } catch (e) {
         console.error(e);

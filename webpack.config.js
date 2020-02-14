@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { VueLoaderPlugin } = require("vue-loader");
 
 const { templates } = require("./util.js");
 
@@ -37,6 +38,10 @@ module.exports = {
     module: {
         //Загрузчики
         rules: [
+            {
+                test: /\.vue$/,
+                loader: 'vue-loader'
+            },
             {
                 test: /\.js$/,
                 exclude: /(node_modules|bower_components)/,
@@ -157,6 +162,7 @@ module.exports = {
         ]
     },
     plugins: [
+        new VueLoaderPlugin(),
         new MiniCssExtractPlugin({
             filename: "css/[name].css?[hash]"
         }),
@@ -164,28 +170,34 @@ module.exports = {
             filename: "index.html?[hash]",
             template: "index.html",
             favicon: path.resolve(__dirname, "favicon.ico"),
-            excludeChunks: ['onboarding']
+            excludeChunks: ["onboarding", "onboarding-admin"]
         }),
         ...templates,
         // отдельные шаблоны под onboarding
         new HtmlWebpackPlugin({
             filename: "onboarding-stock-desctop.html",
-            template: "./src/module/onboarding/onboarding-stock-desctop.html",
+            template: "./src/module/onboarding/template/onboarding-stock-desctop.html",
             favicon: path.resolve(__dirname, "favicon.ico"),
-            // excludeChunks: ['ds-utils']
+            excludeChunks: ["onboarding-admin"]
         }),
         new HtmlWebpackPlugin({
             filename: "onboarding-stock-mobile.html",
-            template: "./src/module/onboarding/onboarding-stock-mobile.html",
+            template: "./src/module/onboarding/template/onboarding-stock-mobile.html",
             favicon: path.resolve(__dirname, "favicon.ico"),
-            // excludeChunks: ['ds-utils']
-        })
+            excludeChunks: ["onboarding-admin"]
+        }),
+        new HtmlWebpackPlugin({
+            filename: "onboarding-admin.html",
+            template: "./src/module/onboarding/template/onboarding-admin.html",
+            favicon: path.resolve(__dirname, "favicon.ico"),
+            excludeChunks: ["onboarding"]
+        }),
     ],
     optimization: {
         //настройки оптимизации и минификации
         removeAvailableModules: false,
         removeEmptyChunks: false,
         splitChunks: false,
-        noEmitOnErrors: true,
+        noEmitOnErrors: true
     }
 };
