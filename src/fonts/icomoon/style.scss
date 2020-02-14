@@ -1,5 +1,15 @@
 @import "~fonts/icomoon/variables";
 
+
+.icon-purchase-status-announ:before {
+  content: "\e92e";
+}
+.icon-purchase-status-add-order:before {
+  content: "\e92b";
+}
+.icon-purchase-status-edit:before {
+  content: "\e92d";
+}
 .icon-mail-envelope:before {
   content: "\e908";
 }
@@ -132,4 +142,3 @@
 .icon-vk:before {
   content: "\e92c";
 }
-
