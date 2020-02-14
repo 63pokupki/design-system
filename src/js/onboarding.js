@@ -50,7 +50,7 @@ const steps = {
             intro: `Отобразите товары по одному
             и смотрите заполнение ряда
             прямо в описании товара.`,
-            element: getElement(".stock-m-control__buttons")
+            element: getElement(".stock-m-control__filter-buttons")
         },
         {
             intro: `Выберите нужный размер и
@@ -179,7 +179,8 @@ const DEFAULT_OPTIONS = {
     showBullets: false,
     showStepNumbers: false,
     scrollTo: "tooltip",
-    disableInteraction: true
+    disableInteraction: true,
+    exitOnOverlayClick: false
 };
 
 window.addEventListener("DOMContentLoaded", fMain);
