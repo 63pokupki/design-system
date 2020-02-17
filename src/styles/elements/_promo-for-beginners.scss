@@ -9,7 +9,7 @@
 
     &__row {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         padding: 45px 0;
@@ -37,6 +37,22 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        &.is-view {
+            background: url("~images/promo-for-beginners/banner-view.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            .promo-for-begginners__col {
+                visibility: hidden;
+            }
+            .promo-for-begginners__timer {
+                display: none;
+                
+                .timer-reverse__num {
+                    color: #000000;    
+                }
+            }
+        }
         .promo-for-begginners__heading {
             font-size: 18px;
             font-weight: 600;
@@ -50,6 +66,7 @@
         .promo-for-begginners__btn {
             margin: 62px 0;
         }
+
     }
     &__timer {
         display: flex;

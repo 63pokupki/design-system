@@ -3,7 +3,7 @@
     flex-direction: row;
     margin: unset;
     padding: unset;
-    
+
     &__item {
         display: flex;
         justify-content: center;
@@ -14,6 +14,7 @@
         border-radius: 2px;
         background: $pagination-color;
         cursor: pointer;
+
         a {
             padding: 5px 10px;
             font-weight: 600;
@@ -21,13 +22,18 @@
             color: $color-text-base;
         }
 
-        &:hover, &:active {
+        &:hover,
+        &:active {
             background: $color-primary;
+
             a {
                 color: #fff;
             }
+
             .icon-arrow {
-                &-left, &-right {
+
+                &-left,
+                &-right {
                     color: #fff;
                 }
             }
@@ -35,17 +41,32 @@
 
         &.is-active {
             background: $color-primary;
+
             a {
                 color: #fff;
             }
         }
     }
+
     .icon-arrow {
-        &-left, &-right {
+
+        &-left,
+        &-right {
             color: $color-text-base;
         }
     }
 }
 
+.pagination__item--disabled {
+    pointer-events: none;
+    opacity: .5;
+}
 
+.pagination__item--active {
+    background-color: #36a6f2;
+    pointer-events: none;
 
+    a {
+        color: #fff;
+    }
+}

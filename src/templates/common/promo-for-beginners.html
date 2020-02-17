@@ -184,12 +184,14 @@
 
     <div class="promo-for-begginners">
         <div class="promo-for-begginners__row promo-for-begginners__header">
-            <h3 class="promo-for-begginners__heading">Вы зарегистрировались на сайте 63pokupki! <br>У нас отличная новость!</h3>
-            <p class="promo-for-begginners__txt">Мы объявляем акцию для новых пользователей - “Тест драйв товаров с 63pokupki” и разыгрываем набор популярных товаров 63pokupki!</p>
-            <p class="promo-for-begginners__txt">Этот набор - наш хит и гордость и мы с радостью делимся им с вами!</p>
+            <div class="promo-for-begginners__col">
+                <h3 class="promo-for-begginners__heading">Вы зарегистрировались на сайте 63pokupki! <br>У нас отличная новость!</h3>
+                <p class="promo-for-begginners__txt">Мы объявляем акцию для новых пользователей - “Тест драйв товаров с 63pokupki” и разыгрываем набор популярных товаров 63pokupki!</p>
+                <p class="promo-for-begginners__txt">Этот набор - наш хит и гордость и мы с радостью делимся им с вами!</p>
+            </div>
         </div>
         <!-- Баннер -->
-        <div class="promo-for-begginners__banner">
+        <div class="promo-for-begginners__banner is-view">
             <div class="promo-for-begginners__col">
                 <div class="promo-for-begginners__heading">До конца акции осталось:</div>
                 <div class="promo-for-begginners__timer">
@@ -200,40 +202,64 @@
                         </div>
                     </div>        
                 </div>
-                <div class="promo-for-begginners__txt">Внимание! Срок действия акции - с 17 по 29 февраля.</div>
+                <div class="promo-for-begginners__txt">Внимание! Срок действия акции - с 17 по 29 февраля.                    
+                </div>
 
                 <a href="" target="_blank" class="ds-btn ds-btn_inverse promo-for-begginners__btn">
                     <div class="ds-btn__text">Посмотреть, что внутри</div>
                 </a>
             </div>
         </div>
+        <!-- Таймер отображаемый после нажатия на кнопку "Посмотреть, что внутри" -->
+        <div class="promo-for-begginners__row">
+            <div class="promo-for-begginners__col">
+                <div class="promo-for-begginners__txt">Внимание! Срок действия акции - с 17 по 29 февраля.                    
+                </div>
+                <div class="promo-for-begginners__heading">До конца акции осталось:</div>
+            </div>
+            <div class="promo-for-begginners__col">
+                <div class="promo-for-begginners__timer">
+                    <div class="timer-reverse">
+                        <div class="timer-reverse__num">
+                            <span id="days" class="timer-reverse__time"></span>
+                            <span class="timer-reverse__txt">дней</span>
+                        </div>
+                    </div>        
+                </div>
+            </div>
+        </div>
+       
+
         <!-- Что нужно сделать -->
         <div class="promo-for-begginners__row promo-for-begginners__instruction">
-            <h3 class="promo-for-begginners__heading">Что нужно сделать, чтобы выиграть приз?</h3>
-            <div class="promo-for-begginners__vm-30"></div>
-            <p class="promo-for-begginners__txt">1. Зарегистрироваться на сайте 63pokupki.ru в период с 17 по 29 февраля;</p>
-            <p class="promo-for-begginners__txt">2. Получить удовольствие от шоппинга на сайте 63pokupki и обязательно положить в корзину <br>хотя бы 1 товар в течение 2 суток после дня регистрации;</p>
-            <p class="promo-for-begginners__txt">3. Оставить этот товар в корзине до конца акции и выкупить его;</p>
-            <p class="promo-for-begginners__txt">4. Следить за новостями на этой странице - 3 марта мы подведем итоги и разыграем среди <br>участников набор самых популярных товаров сайта;</p>
-            <p class="promo-for-begginners__txt">5. Получить свой приз в пункте выдачи заказов, который вы указали в своем личном кабинете на сайте.</p>
-            <div class="promo-for-begginners__vm-30"></div>
-            <a href="https://63pokupki.ru/forum/phpBB3/ucp.php?mode=login&redirect=https://63pokupki.ru/forum/phpBB3/app.php/main" target="_blank" class="ds-btn ds-btn_inverse promo-for-begginners__btn">
-                <div class="ds-btn__text">Зарегистрироваться</div>
-            </a>
-
+            <div class="promo-for-begginners__col">
+                <h3 class="promo-for-begginners__heading">Что нужно сделать, чтобы выиграть приз?</h3>
+                <div class="promo-for-begginners__vm-30"></div>
+                <p class="promo-for-begginners__txt">1. Зарегистрироваться на сайте 63pokupki.ru в период с 17 по 29 февраля;</p>
+                <p class="promo-for-begginners__txt">2. Получить удовольствие от шоппинга на сайте 63pokupki и обязательно положить в корзину <br>хотя бы 1 товар в течение 2 суток после дня регистрации;</p>
+                <p class="promo-for-begginners__txt">3. Оставить этот товар в корзине до конца акции и выкупить его;</p>
+                <p class="promo-for-begginners__txt">4. Следить за новостями на этой странице - 3 марта мы подведем итоги и разыграем среди <br>участников набор самых популярных товаров сайта;</p>
+                <p class="promo-for-begginners__txt">5. Получить свой приз в пункте выдачи заказов, который вы указали в своем личном кабинете на сайте.</p>
+                <div class="promo-for-begginners__vm-30"></div>
+                <a href="https://63pokupki.ru/forum/phpBB3/ucp.php?mode=login&redirect=https://63pokupki.ru/forum/phpBB3/app.php/main" target="_blank" class="ds-btn ds-btn_inverse promo-for-begginners__btn">
+                    <div class="ds-btn__text">Зарегистрироваться</div>
+                </a>
+            </div>    
         </div>
         <div class="promo-for-begginners__gl">Удачи и приятного шоппинга!</div>
         <div class="promo-for-begginners__row">
-            <p class="promo-for-begginners__txt">Что дальше?</p>
-            <p class="promo-for-begginners__txt">Вы можете вернуться
-                <a class="link link_colored" href="https://63pokupki.ru/forum/phpBB3/app.php/main" target="_blank" rel="noopener noreferrer">на главную</a>
-                - там всё самое актуальное!
-            </p>
-            <p class="promo-for-begginners__txt">Или посмотрите 
-                <a class="link link_colored" href="https://63pokupki.ru/forum/phpBB3/app.php/purchases?filter_top_purchase=1" target="_blank" rel="noopener noreferrer">Топ-закупки</a>
-                - популярные закупки сайта!
-            </p>
-            <a class="promo-for-begginners__regulations-link" href="http://" target="_blank" rel="noopener noreferrer">Положение об акции</a>
+            <div class="promo-for-begginners__col">
+                <p class="promo-for-begginners__txt">Что дальше?</p>
+                <p class="promo-for-begginners__txt">Вы можете вернуться
+                    <a class="link link_colored" href="https://63pokupki.ru/forum/phpBB3/app.php/main" target="_blank" rel="noopener noreferrer">на главную</a>
+                    - там всё самое актуальное!
+                </p>
+                <p class="promo-for-begginners__txt">Или посмотрите 
+                    <a class="link link_colored" href="https://63pokupki.ru/forum/phpBB3/app.php/purchases?filter_top_purchase=1" target="_blank" rel="noopener noreferrer">Топ-закупки</a>
+                    - популярные закупки сайта!
+                </p>
+                <a class="promo-for-begginners__regulations-link" href="http://" target="_blank" rel="noopener noreferrer">Положение об акции</a>
+            </div>
         </div>
     </div>
 
