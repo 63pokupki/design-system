@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ошибка 404</title>
+    <title>Акция для новичков</title>
 <link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?d9eb20994f726363480d" rel="stylesheet"><link href="css/ds-utils.css?d9eb20994f726363480d" rel="stylesheet"><link href="css/ds-ui-kit.css?d9eb20994f726363480d" rel="stylesheet"></head>
-<body style="max-width: 1184px; margin: 0 auto;">
-    <!-- Шапка -->
+<body>
+    <!-- Хедер -->
     <header class="header">
         <!-- шапка под десктоп -->
         <!-- шапка под десктоп -->
@@ -181,42 +180,90 @@
             </div>
         </div>
     </header>
+    <!-- Контент -->
 
-    <!-- блок с ошибкой -->
-    <div class="error-pages">
-        <div class="error-pages__header-mobile">
-            <div class="error-pages__row">
-                <h1>Ой, страница не найдена...</h1>
-                <div class="error-pages__txt">Возможно, мы ее переместили или удалили.</div>
+    <div class="promo-for-begginners">
+        <div class="promo-for-begginners__row promo-for-begginners__header">
+            <div class="promo-for-begginners__col">
+                <h3 class="promo-for-begginners__heading">Вы зарегистрировались на сайте 63pokupki! <br>У нас отличная новость!</h3>
+                <p class="promo-for-begginners__txt">Мы объявляем акцию для новых пользователей - “Тест драйв товаров с 63pokupki” и разыгрываем набор популярных товаров 63pokupki!</p>
+                <p class="promo-for-begginners__txt">Этот набор - наш хит и гордость и мы с радостью делимся им с вами!</p>
             </div>
-        </div>    
+        </div>
+        <!-- Баннер -->
+        <div class="promo-for-begginners__banner is-view">
+            <div class="promo-for-begginners__col">
+                <div class="promo-for-begginners__heading">До конца акции осталось:</div>
+                <div class="promo-for-begginners__timer">
+                    <div class="timer-reverse">
+                        <div class="timer-reverse__num">
+                            <span id="days" class="timer-reverse__time"></span>
+                            <span class="timer-reverse__txt">дней</span>
+                        </div>
+                    </div>        
+                </div>
+                <div class="promo-for-begginners__txt">Внимание! Срок действия акции - с 17 по 29 февраля.                    
+                </div>
 
-        <div class="error-pages__container">
-            <div class="error-pages__left-col">
-                <div class="error-pages__row error-pages__header-desktop">
-                    <h1>Ой,страница не найдена...</h1>
-                    <div class="error-pages__txt">Возможно, мы ее переместили или удалили.</div>
+                <a href="" target="_blank" class="ds-btn ds-btn_inverse promo-for-begginners__btn">
+                    <div class="ds-btn__text">Посмотреть, что внутри</div>
+                </a>
+            </div>
+        </div>
+        <!-- Таймер отображаемый после нажатия на кнопку "Посмотреть, что внутри" -->
+        <div class="promo-for-begginners__row">
+            <div class="promo-for-begginners__col">
+                <div class="promo-for-begginners__txt">Внимание! Срок действия акции - с 17 по 29 февраля.                    
                 </div>
-                <div class="vm-40"></div>
-                <div class="error-pages__row">
-                    <div class="error-pages__txt">Вы можете вернуться <a class="error-pages__link" href="https://63pokupki.ru/forum/phpBB3/app.php/main" target="_blank">на главную</a> - там всё самое актуальное!</div>
-                    <div class="error-pages__txt">Или посмотрите <a class="error-pages__link" href="https://63pokupki.ru/forum/phpBB3/app.php/purchases?filter_category=0&filter_sub_category=0&filter_soon_stop=0&filter_org_fee=0&filter_sale=0&filter_top_purchase=1&filter_promotion_goods=0&filter_first_on_site=0&filter_new_year=0&filter_purchase_level=0&top=0&fast=0&premium=0&purchaseOfTheDay=0&shopaholicParadise=0&direction=" target="_blank" >Топ-закупки</a> - самые популярные закупки сайта!</div>
-                </div>
-                <div class="vm-15"></div>
-                <div class="error-pages__row">
-                    <h3>Остались вопросы?</h3>
-                    <div class="error-pages__txt error-pages__txt-contacts">Позвоните нам <a class="error-pages__link error-pages__link_bold" href="tel:88007006301">8 (800) 700-63-01</a>,</div>
-                    <div class="error-pages__txt error-pages__txt-contacts">напишите в Службу поддержки через чат внизу страницы или на e-mail <a class="error-pages__link error-pages__link_bold"  target="_blank" href="mailto:support@63pokupki.ru">support@63pokupki.ru</a></div>
-                    <div class="error-pages__txt error-pages__txt-contacts">с 8.00 до 20.00 (время самарское, GMT+4). Мы с радостью вам ответим!</div>
+                <div class="promo-for-begginners__heading">До конца акции осталось:</div>
+            </div>
+            <div class="promo-for-begginners__col">
+                <div class="promo-for-begginners__timer">
+                    <div class="timer-reverse">
+                        <div class="timer-reverse__num">
+                            <span id="days" class="timer-reverse__time"></span>
+                            <span class="timer-reverse__txt">дней</span>
+                        </div>
+                    </div>        
                 </div>
             </div>
-            <div class="error-pages__right-col">
-                <div class="img-container_resp"><img class="error-pages__img" src="images/fox404.png" alt="Ошибка 404"></div>
+        </div>
+       
+
+        <!-- Что нужно сделать -->
+        <div class="promo-for-begginners__row promo-for-begginners__instruction">
+            <div class="promo-for-begginners__col">
+                <h3 class="promo-for-begginners__heading">Что нужно сделать, чтобы выиграть приз?</h3>
+                <div class="promo-for-begginners__vm-30"></div>
+                <p class="promo-for-begginners__txt">1. Зарегистрироваться на сайте 63pokupki.ru в период с 17 по 29 февраля;</p>
+                <p class="promo-for-begginners__txt">2. Получить удовольствие от шоппинга на сайте 63pokupki и обязательно положить в корзину <br>хотя бы 1 товар в течение 2 суток после дня регистрации;</p>
+                <p class="promo-for-begginners__txt">3. Оставить этот товар в корзине до конца акции и выкупить его;</p>
+                <p class="promo-for-begginners__txt">4. Следить за новостями на этой странице - 3 марта мы подведем итоги и разыграем среди <br>участников набор самых популярных товаров сайта;</p>
+                <p class="promo-for-begginners__txt">5. Получить свой приз в пункте выдачи заказов, который вы указали в своем личном кабинете на сайте.</p>
+                <div class="promo-for-begginners__vm-30"></div>
+                <a href="https://63pokupki.ru/forum/phpBB3/ucp.php?mode=login&redirect=https://63pokupki.ru/forum/phpBB3/app.php/main" target="_blank" class="ds-btn ds-btn_inverse promo-for-begginners__btn">
+                    <div class="ds-btn__text">Зарегистрироваться</div>
+                </a>
+            </div>    
+        </div>
+        <div class="promo-for-begginners__gl">Удачи и приятного шоппинга!</div>
+        <div class="promo-for-begginners__row">
+            <div class="promo-for-begginners__col">
+                <p class="promo-for-begginners__txt">Что дальше?</p>
+                <p class="promo-for-begginners__txt">Вы можете вернуться
+                    <a class="link link_colored" href="https://63pokupki.ru/forum/phpBB3/app.php/main" target="_blank" rel="noopener noreferrer">на главную</a>
+                    - там всё самое актуальное!
+                </p>
+                <p class="promo-for-begginners__txt">Или посмотрите 
+                    <a class="link link_colored" href="https://63pokupki.ru/forum/phpBB3/app.php/purchases?filter_top_purchase=1" target="_blank" rel="noopener noreferrer">Топ-закупки</a>
+                    - популярные закупки сайта!
+                </p>
+                <a class="promo-for-begginners__regulations-link" href="http://" target="_blank" rel="noopener noreferrer">Положение об акции</a>
             </div>
         </div>
     </div>
 
-    <!-- Футер     -->
+    <!-- Футер -->
     <footer class="footer__container">
         <div class="footer footer__desk">
             <div class="footer__advantage">
@@ -272,25 +319,25 @@
                                 href="https://vk.com/63pokupki_sovmestnye_pokupki_sa"
                                 target="_blank"
                             ></a>
-
+    
                             <a
                                 class="social-icon social-icon-inst"
                                 href="https://www.instagram.com/63pokupki.ru"
                                 target="_blank"
                             ></a>
-
+    
                             <a
                                 class="social-icon social-icon-ok"
                                 href="https://ok.ru/group63pokupki"
                                 target="_blank"
                             ></a>
-
+    
                             <a
                                 class="social-icon social-icon-yt"
                                 href="https://www.youtube.com/channel/UCiRG7uK7jYLhM0DAzvTlNmg"
                                 target="_blank"
                             ></a>
-
+    
                             <a
                                 class="social-icon social-icon-inst attach"
                                 href="https://www.instagram.com/pristroy63"
@@ -319,7 +366,7 @@
                 </div>
             </div>
         </div>
-
+    
         <!-- footer tab -->
         <div class="footer footer__tab">
             <div class="footer__advantage">
@@ -377,25 +424,25 @@
                             href="https://vk.com/63pokupki_sovmestnye_pokupki_sa"
                             target="_blank"
                         ></a>
-
+    
                         <a
                             class="social-icon social-icon-inst"
                             href="https://www.instagram.com/63pokupki.ru"
                             target="_blank"
                         ></a>
-
+    
                         <a
                             class="social-icon social-icon-ok"
                             href="https://ok.ru/group63pokupki"
                             target="_blank"
                         ></a>
-
+    
                         <a
                             class="social-icon social-icon-yt"
                             href="https://www.youtube.com/channel/UCiRG7uK7jYLhM0DAzvTlNmg"
                             target="_blank"
                         ></a>
-
+    
                         <a
                             class="social-icon social-icon-inst attach"
                             href="https://www.instagram.com/pristroy63"
@@ -420,7 +467,7 @@
                 </div>
             </div>
         </div>
-
+    
         <!-- footer mobile -->
         <div class="footer footer__mobile">
             <div class="footer__advantage">
@@ -475,25 +522,25 @@
                                 href="https://vk.com/63pokupki_sovmestnye_pokupki_sa"
                                 target="_blank"
                             ></a>
-
+    
                             <a
                                 class="social-icon social-icon-inst"
                                 href="https://www.instagram.com/63pokupki.ru"
                                 target="_blank"
                             ></a>
-
+    
                             <a
                                 class="social-icon social-icon-yt"
                                 href="https://www.youtube.com/channel/UCiRG7uK7jYLhM0DAzvTlNmg"
                                 target="_blank"
                             ></a>
-
+    
                             <a
                                 class="social-icon social-icon-ok"
                                 href="https://ok.ru/group63pokupki"
                                 target="_blank"
                             ></a>
-
+    
                             <a
                                 class="social-icon social-icon-inst attach"
                                 href="https://www.instagram.com/pristroy63"
@@ -520,6 +567,6 @@
             </div>
         </div>
     </footer>
-
+    
 <script type="text/javascript" src="js/highlight-syntax.js?d9eb20994f726363480d"></script><script type="text/javascript" src="js/ds-utils.js?d9eb20994f726363480d"></script><script type="text/javascript" src="js/ds-ui-kit.js?d9eb20994f726363480d"></script></body>
 </html>
