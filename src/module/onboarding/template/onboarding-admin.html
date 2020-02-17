@@ -70,6 +70,195 @@
                         </div>
                     </div>
 
+                    <!-- просмотр сценария -->
+                    <div class="steps-show border-bottom mb-4">
+                        <h3 class="mb-4 col-12 text-center">
+                            Просмотр сценария
+                        </h3>
+
+                        <div class="row mb-4">
+                            <ul class="nav nav-tabs nav-justified col-12">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#"
+                                        >Десктоп</a
+                                    >
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Мобильное</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content row">
+                            <div
+                                class="onboarding-adm-steps col-3 border-right"
+                            >
+                                <h3 class="mb-4 text-center">Шаги</h3>
+                                <div class="nav flex-column">
+                                    <button
+                                        type="button"
+                                        class="btn btn-outline-primary active mb-2 d-flex justify-content-between"
+                                    >
+                                        <span class="badge badge-light">1</span>
+                                        Начало
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="btn btn-outline-primary mb-2 d-flex justify-content-between"
+                                    >
+                                        <span class="badge badge-light">2</span>
+                                        Название шага
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="btn btn-outline-primary mb-2 d-flex justify-content-between"
+                                    >
+                                        <span class="badge badge-light">3</span>
+                                        Название шага
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="btn btn-outline-primary mb-2 d-flex justify-content-between"
+                                    >
+                                        <span class="badge badge-light">4</span>
+                                        Название шага
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="btn btn-outline-primary mb-2 d-flex justify-content-between"
+                                    >
+                                        <span class="badge badge-light">5</span>
+                                        Окончание
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="onboarding-adm-step-detail col">
+                                <h3 class="mb-4 text-center">
+                                    Просмотр шага
+                                </h3>
+
+                                <h4 class="mb-3">Основные настройки</h4>
+
+                                <form>
+                                    <div class="form-row">
+                                        <div class="form-group col-10">
+                                            <label>Название шага</label>
+                                            <input
+                                                disabled="disabled"
+                                                type="text"
+                                                class="form-control"
+                                                placeholder="Например: начало, шаг 1, окончание"
+                                            />
+                                        </div>
+                                        <div class="form-group col-2">
+                                            <label>Номер шага</label>
+                                            <input
+                                                disabled="disabled"
+                                                type="number"
+                                                class="form-control"
+                                                placeholder="1"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label
+                                            >Идентификатор элемента - валидный
+                                            css selector</label
+                                        >
+                                        <input
+                                            disabled="disabled"
+                                            type="text"
+                                            class="form-control"
+                                            placeholder="Например: .card .card-button.buy"
+                                        />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Шаблон отображения</label>
+                                        <select
+                                            disabled="disabled"
+                                            class="custom-select"
+                                            required
+                                        >
+                                            <option selected disabled value=""
+                                                >Выбрать шаблон
+                                                отображения:</option
+                                            >
+                                            <option>...</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Контент</label>
+                                        <textarea
+                                            disabled="disabled"
+                                            class="form-control"
+                                            placeholder="Текстовое наполнение шага: поддерживается обычный текст/html"
+                                            required
+                                            rows="10"
+                                        ></textarea>
+                                    </div>
+
+                                    <h4 class="mb-3 mt-4">
+                                        Кнопки
+                                    </h4>
+                                    <div class="form-row">
+                                        <div class="form-group col-6">
+                                            <label
+                                                >Начало просмотра -
+                                                "Посмотреть"</label
+                                            >
+                                            <input
+                                                disabled="disabled"
+                                                type="text"
+                                                class="form-control"
+                                                placeholder="По-умолчанию: Посмотреть"
+                                            />
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label
+                                                >Следующий шаг - "Далее"</label
+                                            >
+                                            <input
+                                                disabled="disabled"
+                                                type="text"
+                                                class="form-control"
+                                                placeholder="По-умолчанию: Далее"
+                                            />
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label
+                                                >Пропустить просмотр -
+                                                "Пропустить"</label
+                                            >
+                                            <input
+                                                disabled="disabled"
+                                                type="text"
+                                                class="form-control"
+                                                placeholder="По-умолчанию: Пропустить"
+                                            />
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label
+                                                >Окончить просмотр -
+                                                "Закончить"</label
+                                            >
+                                            <input
+                                                disabled="disabled"
+                                                type="text"
+                                                class="form-control"
+                                                placeholder="По-умолчанию: Закончить"
+                                            />
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-info" role="alert">
+                            Изменение параметров доступно в режиме
+                            редактирования черновика
+                        </div>
+                    </div>
+                    <!-- просмотр шагов -->
+
                     <!-- редактирование шагов -->
                     <div class="steps-edit">
                         <h3 class="mb-4 col-12 text-center">
@@ -259,7 +448,8 @@
                                         type="button"
                                         class="btn btn-danger"
                                     >
-                                        ВНИМАНИЕ! Применить черновик для основного сайта
+                                        ВНИМАНИЕ! Применить черновик для
+                                        основного сайта
                                     </button>
                                 </div>
                             </div>
