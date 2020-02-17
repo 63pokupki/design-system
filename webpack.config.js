@@ -56,7 +56,6 @@ module.exports = {
             {
                 test: /\.scss$/,
                 exclude: /(node_modules|bower_components)/,
-                include: path.resolve(__dirname, "src/styles"),
                 use: [
                     "style-loader",
                     {

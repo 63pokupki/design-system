@@ -1,11 +1,11 @@
-import Vue from "vue";
-import App from "./onboarding.vue";
+// import Vue from "vue";
+// import App from "./onboarding.vue";
 
-const admin = document.querySelector("#onboarding-admin");
+// const admin = document.querySelector("#onboarding-admin");
 
-if (admin) {
-    new Vue({
-        el: "#onboarding-admin",
-        render: h => h(App)
-    });
-}
+// if (admin) {
+//     new Vue({
+//         el: "#onboarding-admin",
+//         render: h => h(App)
+//     });
+// }

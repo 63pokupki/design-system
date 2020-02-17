@@ -1,11 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Onboarding admin</title>
-</head>
-<body>
-    <div id="onboarding-admin"></div>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Onboarding admin</title>
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <div class="onboarding-adm row mt-3">
+                <div class="onboarding-adm-pages col-2 border-right">
+                    <h3 class="mb-4 text-center">Страницы</h3>
+                    <div class="nav flex-column nav-pills">
+                        <a href="#" class="nav-link active">Стат. страница</a>
+                        <a class="nav-link" href="#">Карточка товара</a>
+                        <a class="nav-link" href="#">Активные закупки</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row mb-4">
+                        <h3 class="mb-4 col-12 text-center">
+                            Редактирование информации о странице
+                        </h3>
+
+                        <div class="form-row col">
+                            <div class="form-group col-6">
+                                <label>Название страницы</label>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Например: Карточка товара"
+                                />
+                            </div>
+                            <div class="form-group col-6">
+                                <label>Идентификатор страницы</label>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Например: stock_onboarding_alias"
+                                />
+                            </div>
+                        </div>
+
+                        <div class="form-group col-12">
+                            <label>Описание страницы</label>
+                            <textarea
+                                class="form-control"
+                                placeholder="Описание страницы для внутренних нужд"
+                                rows="5"
+                            ></textarea>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="alert alert-danger" role="alert">
+                                Внимание! Изменения применяются сразу. Обратите
+                                внимание на правильность идентификатора страницы
+                            </div>
+                        </div>
+
+                        <div class="form-group col">
+                            <button type="button" class="btn btn-danger">
+                                Сохранить изменения
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- редактирование шагов -->
+                    <div class="steps-edit">
+                        <h3 class="mb-4 col-12 text-center">
+                            Редактирование черновика
+                        </h3>
+
+                        <div class="row mb-4">
+                            <ul class="nav nav-tabs nav-justified col-12">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#"
+                                        >Десктоп</a
+                                    >
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Мобильное</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content row">
+                            <div
+                                class="onboarding-adm-steps col-3 border-right"
+                            >
+                                <h3 class="mb-4 text-center">Шаги</h3>
+                                <div class="nav flex-column">
+                                    <button
+                                        type="button"
+                                        class="btn btn-outline-primary active mb-2 d-flex justify-content-between"
+                                    >
+                                        <span class="badge badge-light">1</span>
+                                        Начало
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="btn btn-outline-primary mb-2 d-flex justify-content-between"
+                                    >
+                                        <span class="badge badge-light">2</span>
+                                        Название шага
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="btn btn-outline-primary mb-2 d-flex justify-content-between"
+                                    >
+                                        <span class="badge badge-light">3</span>
+                                        Название шага
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="btn btn-outline-primary mb-2 d-flex justify-content-between"
+                                    >
+                                        <span class="badge badge-light">4</span>
+                                        Название шага
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="btn btn-outline-primary mb-2 d-flex justify-content-between"
+                                    >
+                                        <span class="badge badge-light">5</span>
+                                        Окончание
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="onboarding-adm-step-detail col">
+                                <h3 class="mb-4 text-center">
+                                    Редактирование шага
+                                </h3>
+
+                                <h4 class="mb-3">Основные настройки</h4>
+
+                                <form>
+                                    <div class="form-row">
+                                        <div class="form-group col-10">
+                                            <label>Название шага</label>
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                placeholder="Например: начало, шаг 1, окончание"
+                                            />
+                                        </div>
+                                        <div class="form-group col-2">
+                                            <label>Номер шага</label>
+                                            <input
+                                                type="number"
+                                                class="form-control"
+                                                placeholder="0"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label
+                                            >Идентификатор элемента - валидный
+                                            css selector</label
+                                        >
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            placeholder="Например: .card .card-button.buy"
+                                        />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Шаблон отображения</label>
+                                        <select class="custom-select" required>
+                                            <option selected disabled value=""
+                                                >Выбрать шаблон
+                                                отображения:</option
+                                            >
+                                            <option>...</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Контент</label>
+                                        <textarea
+                                            class="form-control"
+                                            placeholder="Текстовое наполнение шага: поддерживается обычный текст/html"
+                                            required
+                                            rows="10"
+                                        ></textarea>
+                                    </div>
+
+                                    <h4 class="mb-3 mt-4">
+                                        Переопределение текста кнопок
+                                    </h4>
+                                    <div class="form-row">
+                                        <div class="form-group col-6">
+                                            <label
+                                                >Начало просмотра -
+                                                "Посмотреть"</label
+                                            >
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                placeholder="По-умолчанию: Посмотреть"
+                                            />
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label
+                                                >Следующий шаг - "Далее"</label
+                                            >
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                placeholder="По-умолчанию: Далее"
+                                            />
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label
+                                                >Пропустить просмотр -
+                                                "Пропустить"</label
+                                            >
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                placeholder="По-умолчанию: Пропустить"
+                                            />
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label
+                                                >Окончить просмотр -
+                                                "Закончить"</label
+                                            >
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                placeholder="По-умолчанию: Закончить"
+                                            />
+                                        </div>
+                                    </div>
+                                    <button
+                                        type="button"
+                                        class="btn btn-success mt-2 mb-4"
+                                    >
+                                        Сохранить шаг
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="card form-group col">
+                                <div class="card-body">
+                                    <button
+                                        type="button"
+                                        class="btn btn-success mr-4"
+                                    >
+                                        Сохранить черновик
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="btn btn-danger"
+                                    >
+                                        ВНИМАНИЕ! Применить черновик для основного сайта
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- редактирование шагов -->
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
