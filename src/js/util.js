@@ -396,12 +396,12 @@ function initClock (et) {
             let elDays = tm.querySelector("#days");            
 
             function updateClock() {
-                let t = timeRem(et);
+                let tr = timeRem(et);
             
-                elDays.innerHTML = t.days;
+                elDays.innerHTML = tr.days;
             
-                if (t.total <= 0) {
-                  clearInterval(timeinterval);
+                if (tr.total <= 0) { 
+                  clearInterval(timeinterval);                  
                 }
               }
               updateClock();
@@ -410,6 +410,7 @@ function initClock (et) {
         })        
     }
 }
-let deadline = "March 02 2020 00:00:00 GMT+0400";
+let deadline = "February 29 2020 00:00:00 GMT+0400";
+
 initClock(deadline);
 

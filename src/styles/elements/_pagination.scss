@@ -22,8 +22,7 @@
             color: $color-text-base;
         }
 
-        &:hover,
-        &:active {
+        &:hover {
             background: $color-primary;
 
             a {
@@ -46,6 +45,12 @@
                 color: #fff;
             }
         }
+        &.is-disabled {
+            pointer-events: none;
+            .ds-icon {
+                color: #e2e3e5;
+            }
+        }
     }
 
     .icon-arrow {
@@ -57,16 +62,4 @@
     }
 }
 
-.pagination__item--disabled {
-    pointer-events: none;
-    opacity: .5;
-}
 
-.pagination__item--active {
-    background-color: #36a6f2;
-    pointer-events: none;
-
-    a {
-        color: #fff;
-    }
-}

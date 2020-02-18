@@ -12,7 +12,8 @@ module.exports = {
         "header": ["./src/styles/page/header.scss"],
         "item-page": ["./src/styles/page/item-page.scss"],
         "delivery": ["./src/styles/page/delivery.scss"],
-        "cookies": ["./src/styles/page/cookies.scss"],        
+        "cookies": ["./src/styles/page/cookies.scss"],
+        "welcome-box": ["./src/styles/page/welcome-box.scss", "./src/js/welcome-box.js"],        
         // "stock" : entry["stock"],
     }, //объект с точками входа
     output: {

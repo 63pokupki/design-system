@@ -6,6 +6,29 @@
     display: block;
     max-width: 1184px;
     margin: 0 auto;
+    &.is-view {
+        .promo-for-begginners__banner {
+            background: url("~images/promo-for-beginners/banner-view.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            .promo-for-begginners__col {
+                visibility: hidden;
+            }
+            .promo-for-begginners__timer {
+                display: none;                
+            }
+
+        }
+        .timer-reverse__num {
+            margin: 0 0 0 30px;
+            color: $color-primary;
+        }
+        .promo-for-begginners__instruction {
+            padding: 10px 0;
+        }
+    }
+
 
     &__row {
         display: flex;
@@ -37,22 +60,6 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        &.is-view {
-            background: url("~images/promo-for-beginners/banner-view.svg");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            .promo-for-begginners__col {
-                visibility: hidden;
-            }
-            .promo-for-begginners__timer {
-                display: none;
-                
-                .timer-reverse__num {
-                    color: #000000;    
-                }
-            }
-        }
         .promo-for-begginners__heading {
             font-size: 18px;
             font-weight: 600;
@@ -67,6 +74,29 @@
             margin: 62px 0;
         }
 
+    }
+    &__view-block {
+        padding: 10px 0 0 0;
+       .promo-for-begginners__col {
+            align-items: flex-end;
+            .promo-for-begginners__txt {
+                margin: 0;
+            }
+            .promo-for-begginners__heading {
+                margin: 5px 0 0 0;
+            }
+        }
+        .promo-for-begginners__timer {
+            margin: 0px 0 11px 0;
+        }
+        .promo-for-begginners__txt {
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .promo-for-begginners__heading {
+            font-weight: 600;
+            font-size: 18px;
+        }
     }
     &__timer {
         display: flex;

@@ -1,0 +1,17 @@
+@import "~styles/utils/utils";
+
+.ds {
+    @import "~styles/elements/_caption-icon.scss";
+    @import "~styles/elements/_categories-bar.scss";
+    @import "~styles/elements/_dropdown-fixed-list.scss";
+    @import "~styles/elements/_ds-btn.scss";
+    @import "~styles/elements/_icon-calendar.scss";
+    @import "~styles/elements/_link.scss";
+    @import "~styles/elements/_logo.scss";
+    @import "~styles/elements/_multi-level-menu.scss";
+    @import "~styles/elements/_promo-for-beginners.scss";
+    @import "~styles/elements/_search.scss";
+    @import "~styles/elements/_support-info.scss";
+    @import "~styles/elements/_timer-revers.scss";
+    @import "~styles/elements/_tooltip.scss";
+}
