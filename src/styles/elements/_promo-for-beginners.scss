@@ -20,6 +20,9 @@
             }
 
         }
+        .promo-for-begginners__view-block {
+            display: flex;
+        }
         .timer-reverse__num {
             margin: 0 0 0 30px;
             color: $color-primary;
@@ -76,6 +79,7 @@
 
     }
     &__view-block {
+        display: none;
         padding: 10px 0 0 0;
        .promo-for-begginners__col {
             align-items: flex-end;
