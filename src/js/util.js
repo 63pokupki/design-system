@@ -378,39 +378,46 @@ if (pageStockOrg) {
 }
 
 // Timer reverse
-function timeRem (et) {
+// function timeRem (et) {
 
-    let t = Date.parse(et) - Date.parse(new Date()),
-        days = Math.floor(t / (1000 * 60 * 60 * 24));
+//     let t = Date.parse(et) - Date.parse(new Date()),
+//         days = Math.floor(t / (1000 * 60 * 60 * 24));
 
-    return {
-        total: t,
-        days: days
-    }
-}
-function initClock (et) {
-    let timer   = document.querySelectorAll(".timer-reverse");
+//     return {
+//         total: t,
+//         days: days
+//     }
+// }
+// function initClock (et) {
+//     let timer   = document.querySelectorAll(".timer-reverse");
 
-    if (timer) {
-        timer.forEach((tm) => {
-            let elDays = tm.querySelector("#days");            
+//     if (timer) {
+//         timer.forEach((tm) => {
+//             let elDays = tm.querySelector("#days");            
 
-            function updateClock() {
-                let tr = timeRem(et);
+//             function updateClock() {
+//                 let tr = timeRem(et);
             
-                elDays.innerHTML = tr.days;
+//                 elDays.innerHTML = tr.days;
             
-                if (tr.total <= 0) { 
-                  clearInterval(timeinterval);                  
-                }
-              }
-              updateClock();
-            //   Обновляем каждые сутки (1 день = 86400 секунд)
-              let timeinterval = setInterval(updateClock, 86400);
-        })        
-    }
-}
-let deadline = "February 29 2020 00:00:00 GMT+0400";
+//                 if (tr.total <= 0) { 
+//                   document.querySelector(".timer-reverse__time").innerHTML = "";  
+//                   document.querySelector(".timer-reverse__txt").innerHTML = "Акция завершена";
+//                   clearInterval(timeinterval);                  
+//                 }
+//               }
+//               updateClock();            
+//               let timeinterval = setInterval(updateClock, 86400);
+//         })        
+//     }
+// }
+// let deadline = "February 29 2020 00:00:00 GMT+0400";
 
-initClock(deadline);
+// initClock(deadline);
 
+let date = moment().add(10, "days").format("D");
+document.querySelector(".timer-reverse__time").innerHTML = date;
+let curMonth = moment().date(1);
+let nextMoth = document.querySelector(".timer-reverse__txt");
+
+nextMoth.innerHTML = curMonth.add(1, "M").format("D, MMMM");
