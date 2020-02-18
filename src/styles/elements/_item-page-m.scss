@@ -3,7 +3,6 @@
 
     &__go-back {
         padding: 15px 0;
-        margin-bottom: 20px;
     }
 
     &__stock {
@@ -80,8 +79,7 @@
         margin: 0 auto;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        width: 105px;
+        justify-content: center;
     }
 
     &__grid-expand {
@@ -89,7 +87,7 @@
     }
 
     &__params-section {
-        margin-bottom: 36px;
+        margin-bottom: 30px;
     }
 
     &__rows-legend {
@@ -300,7 +298,7 @@
         }
 
         &__image {
-            max-height: unset;
+            max-height: 306px;
         }
 
         &__wrapper {

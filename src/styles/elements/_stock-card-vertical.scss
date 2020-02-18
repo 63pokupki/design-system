@@ -210,6 +210,11 @@
         margin-bottom: 10px;
         height: 40px;
 
+        div {
+            &::first-letter {
+                text-transform: uppercase;
+            }
+        }
         &::first-letter {
             text-transform: uppercase;
         }
