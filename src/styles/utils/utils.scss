@@ -9,6 +9,10 @@ body {
     background: white;
 }
 
+body.ds {
+    margin: 0;
+}
+
 *,
 *:after,
 *:before {
@@ -19,6 +23,10 @@ body {
     max-width: 1160px;
     margin: 0 auto;
     padding: 20px;
+
+    @media screen and (max-width: 1024px) {
+        padding: 0;
+    }
 }
 
 .wrapper-header,
@@ -94,7 +102,7 @@ button {
     -moz-appearance: none;
     -webkit-appearance: none;
     font: 600 14px $font-primary;
-    
+
     &:focus {
         outline: none;
     }

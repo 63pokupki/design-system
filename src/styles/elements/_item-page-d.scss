@@ -155,7 +155,6 @@
         position: relative;
         left: -5px;
         max-height: 50px;
-        min-height: 50px;
     }
 
     .item-params-list__item {
@@ -183,6 +182,12 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        div {
+            &::first-letter {
+                text-transform: capitalize;
+            }
+        }
     }
 
     &__fee {
@@ -322,7 +327,7 @@
         font-size: 12px;
         line-height: 22px;
         color: $color-text-base;
-        margin-bottom: 25px;
+        margin-bottom: 15px;
     }
 
     &__po-w {
