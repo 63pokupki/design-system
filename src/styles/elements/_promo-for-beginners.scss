@@ -143,6 +143,19 @@
     }
 }
 
+@media (max-width: 768px) {
+    .promo-for-begginners.is-view {
+        .promo-for-begginners__view-block {
+            flex-wrap: wrap;
+        }
+        .timer-reverse__num {
+            margin: 0;
+        }
+        .promo-for-begginners__col {
+            align-items: center;
+        }
+    }
+}
 
 
 
