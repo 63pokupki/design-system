@@ -167,13 +167,20 @@
     .org-profile {
         justify-content: center;
 
+        &__name {
+            color: $color-text-heading;
+        }
+
         &__image-wrapper {
             width: 48px;
             height: 48px;
+            margin-right: 20px;
         }
 
         &__image {
             border-radius: 50%;
+            max-width: 48px;
+            max-height: 48px;
         }
     }
 
