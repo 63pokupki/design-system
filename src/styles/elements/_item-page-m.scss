@@ -3,6 +3,7 @@
 
     &__go-back {
         padding: 15px 0;
+        margin-bottom: 15px;
     }
 
     &__stock {
@@ -23,7 +24,6 @@
     &__buttons {
         display: flex;
         align-items: center;
-        margin-bottom: 15px;
         margin-right: 20px;
     }
 
@@ -112,7 +112,7 @@
         }
     }
     &__params {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
 
         &-label {
             font-weight: 600;
@@ -298,7 +298,8 @@
         }
 
         &__image {
-            max-height: 306px;
+            max-height: none;
+            max-width: 300px;
         }
 
         &__wrapper {
