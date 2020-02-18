@@ -122,9 +122,16 @@
         margin: 8px;
         line-height: 20px;
     }
+    &__vm-40 {
+        height: 40px;
+    }
     &__vm-30 {
         height: 30px;
     }
+    &__vm-20 {
+        height: 20px;
+    }
+
     &__gl {
         display: flex;
         justify-content: center;
