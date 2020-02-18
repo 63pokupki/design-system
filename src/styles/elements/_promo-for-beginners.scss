@@ -4,11 +4,11 @@
 
 .promo-for-begginners {
     display: block;
-    // max-width: 1184px;
+    max-width: 1184px;
     margin: 0 auto;
     &.is-view {
         .promo-for-begginners__banner {
-            background: url("~images/promo-for-beginners/banner-view.svg");
+            background: url("~images/promo-for-beginners/banner-view.jpg");
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -48,10 +48,9 @@
         align-items: center;
     }
     &__heading {
-        margin: 10px 0;
+        margin: 0;
         font-size: 20px;
         color: #000000;
-        line-height: 32px;
     }
     &__banner {
         display: flex;
@@ -59,7 +58,7 @@
         width: 100%;
         max-height: 490px;
         padding: 10%;
-        background: url("~images/promo-for-beginners/Banner for beginners.svg");
+        background: url("~images/promo-for-beginners/banner_for_beginners.jpg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -74,7 +73,7 @@
             font-weight: 600;
         }
         .promo-for-begginners__btn {
-            margin: 62px 0;
+            margin: 55px 0;
         }
 
     }
@@ -107,7 +106,8 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-        margin: 20px 0;
+        margin: 0  0 12px 0;
+        line-height: 73px;
     }
     &__btn {
         width: 256px;
