@@ -3,6 +3,7 @@
 
     &__go-back {
         padding: 15px 0;
+        margin-bottom: 15px;
     }
 
     &__stock {
@@ -23,7 +24,6 @@
     &__buttons {
         display: flex;
         align-items: center;
-        margin-bottom: 15px;
         margin-right: 20px;
     }
 
@@ -112,7 +112,7 @@
         }
     }
     &__params {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
 
         &-label {
             font-weight: 600;
@@ -167,13 +167,20 @@
     .org-profile {
         justify-content: center;
 
+        &__name {
+            color: $color-text-heading;
+        }
+
         &__image-wrapper {
             width: 48px;
             height: 48px;
+            margin-right: 20px;
         }
 
         &__image {
             border-radius: 50%;
+            max-width: 48px;
+            max-height: 48px;
         }
     }
 
@@ -298,7 +305,8 @@
         }
 
         &__image {
-            max-height: 306px;
+            max-height: none;
+            max-width: 300px;
         }
 
         &__wrapper {
