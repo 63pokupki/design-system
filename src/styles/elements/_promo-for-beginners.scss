@@ -32,7 +32,6 @@
         }
     }
 
-
     &__row {
         display: flex;
         flex-direction: row;
@@ -151,6 +150,9 @@
 }
 
 @media (max-width: 768px) {
+    .promo-for-begginners {
+        padding: 110px 0 0 0;
+    }
     .promo-for-begginners.is-view {
         .promo-for-begginners__view-block {
             flex-wrap: wrap;
@@ -161,6 +163,9 @@
         .promo-for-begginners__col {
             align-items: center;
         }
+    }
+    .promo-for-begginners__gl {
+        font-size: 30px;
     }
 }
 
