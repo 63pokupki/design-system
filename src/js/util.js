@@ -415,9 +415,12 @@ if (pageStockOrg) {
 
 // initClock(deadline);
 
-let date = moment().add(10, "days").format("D");
+let date = moment('February 19, 2020').format("D"); //Конкретная дата в формате: только число
 document.querySelector(".timer-reverse__time").innerHTML = date;
-let curMonth = moment().date(1);
-let nextMoth = document.querySelector(".timer-reverse__txt");
+let curMonth = moment().date(1); //День месяца
+let nextMoth = document.querySelector(".promo-for-begginners__time-inerval");
+let end = moment().endOf("Mar 17 2020", "D");
+let start = moment().startOf("Feb 17 2020", "D");
 
-nextMoth.innerHTML = curMonth.add(1, "M").format("D, MMMM");
+// nextMoth.innerHTML = curMonth.add(1, "M").format("D, MMMM");
+nextMoth.innerHTML = start-end;
