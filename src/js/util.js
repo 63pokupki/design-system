@@ -378,49 +378,18 @@ if (pageStockOrg) {
 }
 
 // Timer reverse
-// function timeRem (et) {
+let startTime = moment([2020, 1, 19]); //Дата начала
+let endTime = moment([2020, 2, 17]); //Дата окончания
 
-//     let t = Date.parse(et) - Date.parse(new Date()),
-//         days = Math.floor(t / (1000 * 60 * 60 * 24));
+let t = endTime.diff(startTime, 'days'); //РАзница между начальной и конечной датой
+document.querySelector(".timer-reverse__time").innerHTML = t;
+document.querySelector("#daysView").innerHTML = t;
 
-//     return {
-//         total: t,
-//         days: days
-//     }
-// }
-// function initClock (et) {
-//     let timer   = document.querySelectorAll(".timer-reverse");
+let btnLook = document.querySelector(".promo-for-begginners__btn-look");
+if (btnLook) {
+    btnLook.addEventListener("click", ()=> {
+        document.querySelector(".promo-for-begginners").classList.toggle("is-view");
+    });
+}
 
-//     if (timer) {
-//         timer.forEach((tm) => {
-//             let elDays = tm.querySelector("#days");            
 
-//             function updateClock() {
-//                 let tr = timeRem(et);
-            
-//                 elDays.innerHTML = tr.days;
-            
-//                 if (tr.total <= 0) { 
-//                   document.querySelector(".timer-reverse__time").innerHTML = "";  
-//                   document.querySelector(".timer-reverse__txt").innerHTML = "Акция завершена";
-//                   clearInterval(timeinterval);                  
-//                 }
-//               }
-//               updateClock();            
-//               let timeinterval = setInterval(updateClock, 86400);
-//         })        
-//     }
-// }
-// let deadline = "February 29 2020 00:00:00 GMT+0400";
-
-// initClock(deadline);
-
-let date = moment('February 19, 2020').format("D"); //Конкретная дата в формате: только число
-document.querySelector(".timer-reverse__time").innerHTML = date;
-let curMonth = moment().date(1); //День месяца
-let nextMoth = document.querySelector(".promo-for-begginners__time-inerval");
-let end = moment().endOf("Mar 17 2020", "D");
-let start = moment().startOf("Feb 17 2020", "D");
-
-// nextMoth.innerHTML = curMonth.add(1, "M").format("D, MMMM");
-nextMoth.innerHTML = start-end;

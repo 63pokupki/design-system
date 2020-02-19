@@ -12,6 +12,8 @@
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
+            box-shadow: inset 0px -9px 11px 0px rgba(250,250,250,0.58);
+
             .promo-for-begginners__col {
                 visibility: hidden;
             }
@@ -26,9 +28,6 @@
         .timer-reverse__num {
             margin: 0 0 0 30px;
             color: $color-primary;
-        }
-        .promo-for-begginners__instruction {
-            padding: 10px 0;
         }
     }
 
@@ -56,6 +55,7 @@
         justify-content: flex-start;
         width: 100%;
         max-height: 490px;
+        font-size: 28px;
         padding: 10%;
         background: url("~images/promo-for-beginners/banner_for_beginners.jpg");
         background-repeat: no-repeat;
@@ -165,7 +165,7 @@
         }
     }
     .promo-for-begginners__gl {
-        font-size: 30px;
+        font-size: 28px;
     }
 }
 
