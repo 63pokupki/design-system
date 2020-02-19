@@ -9,8 +9,8 @@
         }
     }
     &__sum-num {
-        width: 35px;
-        margin: 0 5px;
+        width: 34px;
+        margin: 0 2px;
         font-size: 16px;
         appearance: none;
         border: none;
@@ -52,11 +52,11 @@
     }
     &__plus {
         &:before {
-            width: 8px;
+            width: 10px;
             transform: rotate(90deg);
         }
         &:after {
-            width: 8px;
+            width: 10px;
         }
     }
 }

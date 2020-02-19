@@ -30,8 +30,7 @@
         font-size: 12px;
         width: 100%;
         color: $color-text-base;
-        // По просьбе Сани
-        // max-height: 0;
+        max-height: 0;
         overflow: hidden;
         transition: max-height $transition-primary, margin-top $transition-slow;
     }

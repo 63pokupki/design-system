@@ -14,7 +14,7 @@ module.exports = {
         filename: "js/[name].js?[hash]" //в этом параметре мы индивидуально добавляем необходимую директорию перед именем файлов
     },
     watchOptions: {
-        aggregateTimeout: 500, //задержка перед обновлением
+        aggregateTimeout: 250, //задержка перед обновлением
         ignored: ["dist/**/*", "build/**/*", "docs/**/*", "node_modules"], //исключения в слежении
         poll: 500 //интервал обновления
     },

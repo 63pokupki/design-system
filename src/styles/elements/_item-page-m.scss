@@ -10,7 +10,7 @@
         font-weight: 600;
         font-size: 14px;
         color: $color-primary;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
         line-height: 21px;
         display: block;
     }
@@ -18,7 +18,7 @@
     &__sku {
         font-size: 12px;
         color: $color-text-base;
-        margin-bottom: 27px;
+        margin-bottom: 23px;
     }
 
     &__buttons {
@@ -28,7 +28,7 @@
     }
 
     &__num {
-        margin-right: 10px;
+        margin-right: 12px;
     }
 
     .item-page-m__buy {
@@ -86,9 +86,9 @@
         font-size: 12px;
     }
 
-    &__params-section {
-        margin-bottom: 30px;
-    }
+    // &__params-section {
+    //     // margin-bottom: 30px;
+    // }
 
     &__rows-legend {
         margin-top: 18px;
@@ -149,6 +149,7 @@
             color: $color-text-light-grey;
             text-decoration: underline;
             font-size: 12px;
+            margin-bottom: 10px;
         }
     }
 
@@ -296,12 +297,11 @@
 
         &__heading {
             font-size: 16px;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             line-height: 25px;
             max-height: 50px;
             height: auto;
             display: flex;
-            align-items: center;
         }
 
         &__image {
