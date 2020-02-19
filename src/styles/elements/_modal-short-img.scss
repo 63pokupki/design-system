@@ -24,7 +24,7 @@
             max-width: 100%;
             position: relative;
             margin-right: 8px;
-            overflow-y: auto;
+            overflow: visible;
         }
         &__col {
             display: flex;
