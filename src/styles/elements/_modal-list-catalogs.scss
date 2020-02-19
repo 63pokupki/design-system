@@ -62,10 +62,7 @@
             }
 
             &-row {
-                display: flex;
-                flex-direction: column-reverse;
-                justify-content: flex-start;
-                flex-wrap: wrap;
+                display: block;
                 max-height: 190px;
                 overflow-y: auto;
                 overflow-x: hidden;
