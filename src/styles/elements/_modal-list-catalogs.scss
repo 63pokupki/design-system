@@ -240,7 +240,7 @@
     }
 
 }
-@media (max-width: 355px) {
+@media (max-width: 430px) {
     .modal-list-catalogs {
         .modal-container__footer-row {
             // Для переноса выбрано
@@ -249,6 +249,17 @@
                 span {
                     margin: 0 0 15px 0;
                 }
+            }            
+        }
+    }
+
+}
+@media (max-width: 355px) {
+    .modal-list-catalogs {
+        .modal-container__footer-row {
+            // Для переноса выбрано
+            &:nth-child(2) {
+                justify-content: space-between;
             }            
         }
         .modal-container__selected-catalog {
