@@ -116,14 +116,17 @@
                 color: $dark-grey-color;
                 position: relative;
 
-                &.flex-wrap {
-                    flex-wrap: wrap;
-                }
+                // &.flex-wrap {
+                //     flex-wrap: wrap;
+                // }
 
                 &:nth-child(1) {
                     height: 20px;
                     justify-content: center;
                     cursor: pointer;
+                }
+                &:nth-child(2) {
+                    flex-wrap: wrap;
                 }
                 &:nth-child(3) {
                     justify-content: space-between;
@@ -210,6 +213,9 @@
             }
             
         }
+        .modal-container__selected-catalog {
+            margin: 15px 0 0 0;
+        }
     }
 }
 @media (max-width: 500px) {
@@ -233,6 +239,33 @@
         }
     }
 
+}
+@media (max-width: 430px) {
+    .modal-list-catalogs {
+        .modal-container__footer-row {
+            // Для переноса выбрано
+            &:nth-child(2) {
+                justify-content: space-between;
+                span {
+                    margin: 0 0 15px 0;
+                }
+            }            
+        }
+    }
+
+}
+@media (max-width: 355px) {
+    .modal-list-catalogs {
+        .modal-container__footer-row {
+            // Для переноса выбрано
+            &:nth-child(2) {
+                justify-content: space-between;
+            }            
+        }
+        .modal-container__selected-catalog {
+            margin: 15px 0 0 0;
+        }
+    }
 }
   
 
