@@ -92,5 +92,9 @@
     &__selected-position {
         display: none;
         border-bottom: 1px solid $color-primary;
-    } 
+    }
+    .tooltip {
+        font-size: 9px;
+        min-width: 270px;
+    }
 }
