@@ -142,4 +142,20 @@ $tooltip-triangle-size: 6px;
             background-color: $error-light;
         }
     }
+    //Подсказка внутри подсказки
+    &.tooltip_inside {
+        font-size: 10px;
+        min-width: 120px;
+        background-color: $background-color-primary;
+        transform: translate(-25%,95%);
+        border: 1px solid $color-primary;
+        &::before {
+            top: -4px;
+            background-color: $background-color-primary;
+            border-top: 1px solid $color-primary;
+            border-left: 1px solid $color-primary;
+            left: calc(10% - 3px);
+        }
+
+    }
 }
