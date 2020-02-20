@@ -187,6 +187,13 @@
 
 
 @media (max-width: 768px) {
+    .modal-list-catalogs {
+        box-shadow: 0px 5px 6px 2px $color-primary;
+        .modal-container__content-row {
+            max-height: 70px;
+        }
+    
+    }
     .modal-list-catalogs .modal-container__content-row .checkbox {
         flex-basis: 100%;
     }
@@ -215,6 +222,10 @@
 }
 @media (max-width: 500px) {
     .modal-list-catalogs {
+        .modal-container__wrap {
+            max-height: 100vh;
+            overflow: auto;
+        }
         .modal-container {
             &__btn-container {
                 width: 100%;
