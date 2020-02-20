@@ -3,7 +3,6 @@
     align-items: flex-end!important;
     position: fixed;
     width: 100%;
-    // min-width: 430px;
     padding: 1% 10% 1%;
     left: 0;
     right: 0;
@@ -116,10 +115,6 @@
                 color: $dark-grey-color;
                 position: relative;
 
-                // &.flex-wrap {
-                //     flex-wrap: wrap;
-                // }
-
                 &:nth-child(1) {
                     height: 20px;
                     justify-content: center;
@@ -205,7 +200,7 @@
                 }
             }
             &__btn-container {
-                margin: 20px 0 0 0;
+                margin: 15px 0 0 0;
             }
             &__selected-catalog {
                 width: 100%;
@@ -226,6 +221,13 @@
                 flex-wrap: wrap;
                 .row {
                     width: 100%;
+                    &:nth-child(1) {
+                        justify-content: flex-start;
+                        .link_hover {
+                            margin: 0 0 25px;
+                        }
+
+                    }
                 }
                 .link_hover {
                     margin: 0 0 20px 0;
@@ -246,6 +248,7 @@
             // Для переноса выбрано
             &:nth-child(2) {
                 justify-content: space-between;
+                align-items: baseline;
                 span {
                     margin: 0 0 15px 0;
                 }
