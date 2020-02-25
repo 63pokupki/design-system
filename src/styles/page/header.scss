@@ -25,12 +25,13 @@
     @import "~styles/elements/_user-profile-menu.scss";
     @import "~styles/elements/_vertical-menu.scss";
     @import "~styles/elements/_left-vertical-menu.scss";
+    @import "~styles/elements/_nav-bc-bar.scss";
 
 }
 
 // опускаем контент, т.к мобильная шапка absolute
 @media screen and (max-width: 1024px) {
     body {
-        padding-top: 50px !important;
+        padding-top: 56px !important;
     }
 }
