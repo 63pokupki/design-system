@@ -22,6 +22,4 @@ module.exports = {
     // "categories-icons-sprite": ["./src/categories-icons-sprite/categories/categories-icons.js"],
      // Итоговые стили дизайн системы - включаются в конечную сборку
     "ds-ui-kit": ["./src/styles/ds-all-style.scss"],
-    // Стили статической страницы закупки и каталогов
-    // "stock": ["./src/styles/page/stock.scss"]
 };

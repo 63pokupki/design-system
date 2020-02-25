@@ -21,20 +21,41 @@ class Detective {
                 // перебираем классы шаблона
                 template.classes.forEach(class_name => {
                     if (css_classes.includes(class_name)) {
-                        linked_styles.add(style_file.name);
+                        const idxPath = style_file.path.indexOf('styles/');
+                        const namePath = style_file.path.slice(idxPath);                  
+                        linked_styles.add(namePath);
                     }
                 });
             });
             linked_styles = Array.from(linked_styles);
 
-            const styles_query = linked_styles.map(style => {
-                return `@import "~styles/elements/${style}";`
-            }).join(" ");
+            const styles_query = linked_styles
+                .map(style => {
+                    return `@import "~${style}";`;
+                })
+                .join(" ");
 
             return { template: template.name, styles: linked_styles, prepared_import: styles_query };
         });
 
         return result;
+    }
+
+    mergeResults(array) {
+        const uniq = new Set();
+        array.forEach(el => {
+            el.styles.forEach(style => {
+                uniq.add(style);
+            });
+        });
+
+        const styles_query = [...uniq]
+            .map(style => {
+                return `@import "~${style}";`;
+            })
+            .join(" ");
+
+        return styles_query;
     }
 
     get_html_classes(path_to_file) {
@@ -162,9 +183,11 @@ function flatten(array) {
 
 const detective = new Detective();
 
-const templates_array = detective.get_files("src/templates/common/", "promo-for-beginners.html");
-const styles_array = detective.get_files("src/styles", ".scss");
+const templates_array = detective.get_files("src/templates/specific/stock/", ".html");
+const styles_array = detective.get_files("src/styles/", ".scss");
 
 const linked = detective.find_dependencies(templates_array, styles_array);
 
-console.log(linked);
+const merged = detective.mergeResults(linked);
+
+console.log(merged);

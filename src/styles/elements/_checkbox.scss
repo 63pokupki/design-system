@@ -45,11 +45,11 @@
             height: 6px;
         }
     }
+}
 
-    &__input:checked  + &__label{
-        &:after {
-            display: block;
-        }
+.checkbox__input:checked + .checkbox__label {
+    &:after {
+        display: block;
     }
 }
 
@@ -68,7 +68,7 @@
         }
     }
     .checkbox__input:checked {
-        ~.checkbox__label {
+        ~ .checkbox__label {
             color: $color-primary;
         }
     }

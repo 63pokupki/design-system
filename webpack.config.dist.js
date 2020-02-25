@@ -14,7 +14,7 @@ module.exports = {
         "delivery": ["./src/styles/page/delivery.scss"],
         "cookies": ["./src/styles/page/cookies.scss"],
         "welcome-box": ["./src/styles/page/welcome-box.scss", "./src/js/welcome-box.js"],        
-        // "stock" : entry["stock"],
+        "stock" : ["./src/styles/page/stock.scss"],
     }, //объект с точками входа
     output: {
         path: path.join(__dirname, "dist/"), //общий путь для выходных файлов

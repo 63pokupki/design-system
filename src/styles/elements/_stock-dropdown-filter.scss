@@ -1,6 +1,7 @@
 .stock-dropdown-filter {
     max-width: 256px;
     border-top: 1px solid #e3e3e3;
+    padding-bottom: 5px;
 
     &__head {
         cursor: pointer;
@@ -128,7 +129,7 @@
     }
     .stock-dropdown-filter__bar {
         padding: 0 5px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         display: flex;
         opacity: 1;
         visibility: visible;

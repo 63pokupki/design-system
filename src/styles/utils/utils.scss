@@ -117,6 +117,6 @@ button {
 
 @media screen and (max-width: $desctop) {
     .nav-bc-bar {
-        display: none;
+        display: none !important;
     }
 }
