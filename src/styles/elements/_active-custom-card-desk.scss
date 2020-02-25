@@ -93,6 +93,7 @@
     &__heading-wrap {
         display: flex;
         flex-direction: column;
+        position: relative;
     }
 
     &__heading {
@@ -106,6 +107,19 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        a {
+            color: $dark-brown-color;
+            text-decoration: none;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            &:visited {
+                color: #906;
+            }
+        }
+
+
     }
 
     //HEader right
@@ -113,6 +127,8 @@
         margin-left: 5px;
         color: $gold-star-color;
         position: absolute;
+        top: 2px;
+        right: 0;
     }
 
     &__collection {
