@@ -1,6 +1,9 @@
 @import "~fonts/icomoon/variables";
 
 
+.icon-duck:before {
+  content: "\e92f";
+}
 .icon-purchase-status-announ:before {
   content: "\e92e";
 }
