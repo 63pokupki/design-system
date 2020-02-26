@@ -15,7 +15,6 @@
 @import "~styles/elements/_item-page-m.scss";
 @import "~styles/elements/_item-page-modal-grid.scss";
 @import "~styles/elements/_item-page-modal-over.scss";
-@import "~styles/elements/_item-params-list.scss";
 @import "~styles/elements/_items-recomendation.scss";
 @import "~styles/elements/_link.scss";
 @import "~styles/elements/_modal-message-for-org.scss";
@@ -29,6 +28,25 @@
 @import "~styles/elements/_stock-rows.scss";
 @import "~styles/elements/_stock-sizes-grid.scss";
 @import "~styles/elements/_tooltip.scss";
+@import "~styles/elements/_btn-add-to-cart.scss";
+@import "~styles/elements/_checkbox.scss";
+@import "~styles/elements/_ds-arrow-desk.scss";
+@import "~styles/elements/_ds-inputs_group.scss";
+@import "~styles/elements/_ds-loader.scss";
+@import "~styles/elements/_ds-popover.scss";
+@import "~styles/elements/_ds-triangle.scss";
+@import "~styles/elements/_item-params-list.scss";
+@import "~styles/elements/_modal-added-to-card.scss";
+@import "~styles/elements/_modal-choise-of-color-size.scss";
+@import "~styles/elements/_modal-confirm-mail.scss";
+@import "~styles/elements/_modal-copy-position.scss";
+@import "~styles/elements/_modal-list-catalogs.scss";
+@import "~styles/elements/_modal-not-auth.scss";
+@import "~styles/elements/_modal-short-img.scss";
+@import "~styles/elements/_product-detail-button.scss";
+@import "~styles/elements/ds-inputs-form.scss";
+@import "~styles/modals/_modal-list-catalog-mobile.scss";
+@import "~styles/utils/_main-colors.scss";
 
 .item-page .item-page-m {
     display: block;

@@ -183,11 +183,11 @@ function flatten(array) {
 
 const detective = new Detective();
 
-const templates_array = detective.get_files("src/templates/specific/stock/", ".html");
+const templates_array = detective.get_files("src/templates/common/", "modals.html");
 const styles_array = detective.get_files("src/styles/", ".scss");
 
 const linked = detective.find_dependencies(templates_array, styles_array);
 
-const merged = detective.mergeResults(linked);
+// const merged = detective.mergeResults(linked);
 
-console.log(merged);
+console.log(linked);
