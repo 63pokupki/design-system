@@ -7,7 +7,6 @@
     left: 0;
     right: 0;
     bottom: 0;
-    // background: #0000004d;
     z-index: 9999; 
     visibility: hidden;
     &.demo {
@@ -15,12 +14,6 @@
     }
     &.is-visible {
         visibility: visible;
-        body {
-            height: 100%;
-            width: 100%;
-            position: fixed;
-            overflow: hidden;
-        }
     }   
 
     .modal-container {
@@ -33,7 +26,7 @@
 
             &.is-toggle {
                 .modal-container__content {
-                    max-height: 1000px;
+                    max-height: 65vh;
                     width: 100%;
                     padding: 15px;
                     transition: all .3s;
@@ -54,7 +47,6 @@
             flex-direction: column;
             width: 100%;
             padding: 0;
-            box-shadow: 0px 0px 5px 0px rgba(97, 97, 97, 0.14); 
             max-height: 0;
             height: auto;
             overflow-x: hidden;
@@ -70,15 +62,10 @@
             &-row {
                 display: block;
                 max-height: 120px;
+                min-height: 70px;
                 overflow-y: auto;
                 overflow-x: hidden;
                 transition: all .8s;
-
-                &.is-toggle {
-                    max-height: 0;
-                    transition: all .3s;
-                    overflow: hidden;
-                }
 
                 .checkbox {
                     // flex-basis: 33.33%;
@@ -106,13 +93,58 @@
                 margin: 15px 0 25px 25px;
             }
         }
+        // Сворачивание каталогов
+        &__catalogs {
+            &.is-toggle {
+                max-height: 0;
+                min-height: 0;
+                transition: all .3s;
+                overflow: hidden;
+                ~.modal-container__btn-catalogs{                        
+                    padding-top: 0;
+                    .icon-arrow-down {
+                        transform: rotate(180deg);
+                    }
+
+                }
+
+            }
+
+        }
+        // Сворачивание позиций
+        &__positions {
+            &.is-toggle {
+                max-height: 0;
+                min-height: 0;
+                transition: all .3s;
+                overflow: hidden;
+                ~.modal-container__btn-position{                        
+                    padding-top: 0;
+                    .icon-arrow-down {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+
+        }
+
+        &__btn-catalogs,
+        &__btn-position {
+            padding: 10px;
+            color: $color-primary;
+            transition: all .3s;
+            font-size: 10px;
+            &:hover {
+                color: $color-text-base;
+            }
+
+        }
         &__footer {
             display: flex;
             flex-direction: column;
             width: 100%;
             padding: 0px 40px 10px;
             position: relative;
-            box-shadow: 0 0 5px 0 rgba(97,97,97,.14);
 
             &-row {
                 display: flex;
@@ -152,12 +184,17 @@
                 }
             }
             .ds-btn_hover {
+                display: none;
                 min-width: 160px;
                 height: 32px;
             }            
             span {
                 white-space: nowrap;
             }
+        }
+        &__selected-catalog_not-selected {
+            font-size: 12px;
+            color: #a2a3a5;
         }
         &__span-wrap {
             display: flex;
@@ -177,6 +214,23 @@
                 margin: 0;
             }
         }
+        &__selected-catalog-wrap {
+            &.is-selected {
+                .modal-container__selected-catalog_selected {
+                    display: inline;
+                    color: $color-text-heading;
+                    font-weight: 600;        
+                }
+                .modal-container__selected-catalog_not-selected {
+                    display: none;
+                }
+                .modal-container__btn-container {
+                    .ds-btn_hover {
+                        display: flex;
+                    } 
+                }
+            }
+        }
         &__selected-catalog {            
             width: 415px;
             margin: 0 12px 0 0;
@@ -187,6 +241,10 @@
             span {
                 font-weight: normal;
             }
+        }
+        // Выбранный каталог
+        &__selected-catalog_selected {
+            display: none;
         }
 
     }
@@ -214,7 +272,6 @@
             }
             &__selected-catalog {
                 width: 100%;
-                white-space: normal !important;
             }
             
         }
@@ -228,6 +285,20 @@
         .modal-container__wrap {
             max-height: 100vh;
             overflow: auto;
+            &.is-toggle {
+                .modal-container__content {
+                    padding-bottom: 0;
+                }
+                .modal-container__footer {
+                    border-top: none;
+                }
+                .modal-container__footer-row {
+                    &:nth-child(1) {
+                        display: none;
+                    }
+                }
+    
+            }
         }
         .modal-container {
             &__btn-container {
@@ -251,10 +322,29 @@
                     font-size: 14px;
                     padding: 4px 18px;
                 }    
-            }            
+            }
+        }
+        .modal-container__btn-catalogs,
+        .modal-container__btn-position {
+            margin: 0 0 20px 0;
+            border-bottom: 1px solid $color-primary;     
+        }
+        .modal-container__content { 
+            .link_hover {
+                display: none;
+            }
+        }
+        .modal-container__footer-btn-toggle {
+            display: none;
         }
     }
 
+}
+@media (min-width: 501px) {
+    .modal-container__btn-catalogs,
+    .modal-container__btn-position {
+        display: none;
+    }
 }
 @media (max-width: 430px) {
     .modal-list-catalogs {

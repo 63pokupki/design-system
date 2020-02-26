@@ -338,12 +338,30 @@ let modalListCat = document.querySelectorAll(".modal-list-catalogs");
 
 if (modalListCat) {
     modalListCat.forEach((mlc)=> {
-        let content   = mlc.querySelector(".modal-container__wrap"),
-            toggleBtn = mlc.querySelector(".icon-arrow-down");
-        if (content && toggleBtn) {
+        let content        = mlc.querySelector(".modal-container__wrap"),
+            catalogs       = mlc.querySelector(".modal-container__catalogs"),
+            positions      = mlc.querySelector(".modal-container__positions"),
+            toggleLinkPos  = mlc.querySelector(".modal-list-catalogs__selected-position-link"),
+            toggleLinkCat  = mlc.querySelector(".modal-list-catalogs__selected-catalogs-link"),
+            toggleBtnPos   = mlc.querySelector(".modal-container__btn-position"),
+            toggleBtnCat   = mlc.querySelector(".modal-container__btn-catalogs"),
+            toggleBtn      = mlc.querySelector(".modal-container__footer-btn-toggle");
+        if (content && toggleBtn && toggleLinkPos && toggleLinkCat && toggleBtnCat && toggleBtnPos && catalogs && positions) {
             toggleBtn.addEventListener("click", ()=> {
                 content.classList.toggle("is-toggle");
             })
+            toggleLinkPos.addEventListener("click", () => {
+                content.classList.toggle("is-toggle");
+            });
+            toggleLinkCat.addEventListener("click", () => {
+                content.classList.toggle("is-toggle");
+            });
+            toggleBtnPos.addEventListener("click", () => {
+                positions.classList.toggle("is-toggle");
+            });
+            toggleBtnCat.addEventListener("click", () => {
+                catalogs.classList.toggle("is-toggle");
+            });
         }
     }); 
 
