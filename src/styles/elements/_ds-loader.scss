@@ -33,6 +33,12 @@
         width: 25px;
         height: 25px;
     }
+    // Центрирует по странице даже при прокрутке
+    &_center {
+        position: sticky;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 }
 // Контейнер
 
