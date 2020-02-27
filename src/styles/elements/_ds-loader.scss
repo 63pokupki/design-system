@@ -12,6 +12,12 @@
         background-size: contain;
         animation: rotate 5s infinite linear;
     }
+    // Позволяет центрировать лоадер по центру при прокрутке
+    &_sticky {
+        position: sticky;
+        top: 50%;
+        transform: translateY(-50%);
+    }
     &_bg {
         margin: 100px 0;
         &:before {
