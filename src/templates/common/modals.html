@@ -773,24 +773,24 @@
 
         <div class="ds-code-wrapper">
             <script type="text/plain" class="language-markup">
-                <div class="modal modal-list-catalogs is-visible demo">
-                    <div class="modal__wrap is-toggle" style="margin: 10px">
-                        <!-- <div class="modal__btn-close"><i class="ds-icon icon-close"></i></div> -->
-                        <div class="modal__content">
+                <div class="modal-container modal-list-catalogs is-visible demo">
+                    <div class="modal-container__wrap">
+                        <!-- <div class="modal-container__btn-close"><i class="ds-icon icon-close"></i></div> -->
+                        <div class="modal-container__content">
                             <h3>Список доступных каталогов</h3>
                             <!-- Для сворачивания списка, наобходимо присвоить класс .is-toggle
-                                элементу modal__content-row -->
-                            <div class="modal__content-row">
+                                элементу modal-container__content-row -->
+                            <div class="modal-container__content-row modal-container__catalogs">
                                 <div class="checkbox checkbox_accent checkbox_circle">
                                     <input checked="checked" class="checkbox__input" type="checkbox" id="chx-022" />
                                     <label class="checkbox__label" for="chx-022">
-                                        <p>Позиция</p>
+                                        <p>Позиция 1</p>
                                     </label>
                                 </div>
                                 <div class="checkbox checkbox_accent checkbox_circle">
                                     <input checked="checked" class="checkbox__input" type="checkbox" id="chx-023" />
                                     <label class="checkbox__label" for="chx-023">
-                                        <p>Позиция</p>
+                                        <p>Позиция 2</p>
                                     </label>
                                 </div>
                                 <div class="checkbox checkbox_accent checkbox_circle">
@@ -802,7 +802,7 @@
                                 <div class="checkbox checkbox_accent checkbox_circle">
                                     <input checked="checked" class="checkbox__input" type="checkbox" id="chx-025" />
                                     <label class="checkbox__label" for="chx-025">
-                                        <p>Позиция</p>
+                                        <p>Позиция 4</p>
                                     </label>
                                 </div>
                                 <div class="checkbox checkbox_accent checkbox_circle">
@@ -838,29 +838,33 @@
                                 <div class="checkbox checkbox_accent checkbox_circle">
                                     <input checked="checked" class="checkbox__input" type="checkbox" id="chx-031" />
                                     <label class="checkbox__label" for="chx-031">
-                                        <p>Позиция</p>
+                                        <p>Позиция </p>
                                     </label>
                                 </div>
 
                             </div>
 
                             <button class="link link_hover">Скрыть список каталогов</button>
+                            <button class="modal-container__btn-catalogs">
+                                <i class="ds-icon icon-arrow-down"></i>
+                            </button>
+
 
                             <h3>Список выбранных позиций</h3>
                             <!-- Для сворачивания списка, наобходимо присвоить класс .is-toggle
-                                элементу modal__content-row -->
+                                элементу modal-container__content-row -->
 
-                            <div class="modal__content-row">
+                            <div class="modal-container__content-row modal-container__positions">
                                 <div class="checkbox checkbox_accent checkbox_circle">
                                     <input checked="checked" class="checkbox__input" type="checkbox" id="chx-022" />
                                     <label class="checkbox__label" for="chx-022">
-                                        <p>Позиция</p>
+                                        <p>Позиция 1</p>
                                     </label>
                                 </div>
                                 <div class="checkbox checkbox_accent checkbox_circle">
                                     <input checked="checked" class="checkbox__input" type="checkbox" id="chx-022" />
                                     <label class="checkbox__label" for="chx-023">
-                                        <p>Позиция</p>
+                                        <p>Позиция 2</p>
                                     </label>
                                 </div>
                                 <div class="checkbox checkbox_accent checkbox_circle">
@@ -872,7 +876,129 @@
                                 <div class="checkbox checkbox_accent checkbox_circle">
                                     <input checked="checked" class="checkbox__input" type="checkbox" id="chx-022" />
                                     <label class="checkbox__label" for="chx-025">
+                                        <p>Позиция 4</p>
+                                    </label>
+                                </div>
+                                <div class="checkbox checkbox_accent checkbox_circle">
+                                    <input checked="checked" class="checkbox__input" type="checkbox" id="chx-022" />
+                                    <label class="checkbox__label" for="chx-026">
                                         <p>Позиция</p>
+                                    </label>
+                                </div>
+                                <div class="checkbox checkbox_accent checkbox_circle">
+                                    <input checked="checked" class="checkbox__input" type="checkbox" id="chx-022" />
+                                    <label class="checkbox__label" for="chx-027">
+                                        <p>Позиция</p>
+                                    </label>
+                                </div>
+                                <div class="checkbox checkbox_accent checkbox_circle">
+                                    <input checked="checked" class="checkbox__input" type="checkbox" id="chx-022" />
+                                    <label class="checkbox__label" for="chx-028">
+                                        <p>Позиция</p>
+                                    </label>
+                                </div>
+                                <div class="checkbox checkbox_accent checkbox_circle">
+                                    <input checked="checked" class="checkbox__input" type="checkbox" id="chx-022" />
+                                    <label class="checkbox__label" for="chx-029">
+                                        <p>Позиция</p>
+                                    </label>
+                                </div>
+                                <div class="checkbox checkbox_accent checkbox_circle">
+                                    <input checked="checked" class="checkbox__input" type="checkbox" id="chx-022" />
+                                    <label class="checkbox__label" for="chx-030">
+                                        <p>Позиция</p>
+                                    </label>
+                                </div>
+                                <div class="checkbox checkbox_accent checkbox_circle">
+                                    <input checked="checked" class="checkbox__input" type="checkbox" id="chx-022" />
+                                    <label class="checkbox__label" for="chx-031">
+                                        <p>Позиция</p>
+                                    </label>
+                                </div>
+
+                                <div class="checkbox checkbox_accent checkbox_circle">
+                                    <input checked="checked" class="checkbox__input" type="checkbox" id="chx-022" />
+                                    <label class="checkbox__label" for="chx-022">
+                                        <p>Позиция 1</p>
+                                    </label>
+                                </div>
+                                <div class="checkbox checkbox_accent checkbox_circle">
+                                    <input checked="checked" class="checkbox__input" type="checkbox" id="chx-022" />
+                                    <label class="checkbox__label" for="chx-023">
+                                        <p>Позиция 2</p>
+                                    </label>
+                                </div>
+                                <div class="checkbox checkbox_accent checkbox_circle">
+                                    <input checked="checked" class="checkbox__input" type="checkbox" id="chx-022" />
+                                    <label class="checkbox__label" for="chx-024">
+                                        <p>Длинная позиция, оооооооооооооочень длииииинная</p>
+                                    </label>
+                                </div>
+                                <div class="checkbox checkbox_accent checkbox_circle">
+                                    <input checked="checked" class="checkbox__input" type="checkbox" id="chx-022" />
+                                    <label class="checkbox__label" for="chx-025">
+                                        <p>Позиция 4</p>
+                                    </label>
+                                </div>
+                                <div class="checkbox checkbox_accent checkbox_circle">
+                                    <input checked="checked" class="checkbox__input" type="checkbox" id="chx-022" />
+                                    <label class="checkbox__label" for="chx-026">
+                                        <p>Позиция</p>
+                                    </label>
+                                </div>
+                                <div class="checkbox checkbox_accent checkbox_circle">
+                                    <input checked="checked" class="checkbox__input" type="checkbox" id="chx-022" />
+                                    <label class="checkbox__label" for="chx-027">
+                                        <p>Позиция</p>
+                                    </label>
+                                </div>
+                                <div class="checkbox checkbox_accent checkbox_circle">
+                                    <input checked="checked" class="checkbox__input" type="checkbox" id="chx-022" />
+                                    <label class="checkbox__label" for="chx-028">
+                                        <p>Позиция</p>
+                                    </label>
+                                </div>
+                                <div class="checkbox checkbox_accent checkbox_circle">
+                                    <input checked="checked" class="checkbox__input" type="checkbox" id="chx-022" />
+                                    <label class="checkbox__label" for="chx-029">
+                                        <p>Позиция</p>
+                                    </label>
+                                </div>
+                                <div class="checkbox checkbox_accent checkbox_circle">
+                                    <input checked="checked" class="checkbox__input" type="checkbox" id="chx-022" />
+                                    <label class="checkbox__label" for="chx-030">
+                                        <p>Позиция</p>
+                                    </label>
+                                </div>
+                                <div class="checkbox checkbox_accent checkbox_circle">
+                                    <input checked="checked" class="checkbox__input" type="checkbox" id="chx-022" />
+                                    <label class="checkbox__label" for="chx-031">
+                                        <p>Позиция</p>
+                                    </label>
+                                </div>
+
+                                <div class="checkbox checkbox_accent checkbox_circle">
+                                    <input checked="checked" class="checkbox__input" type="checkbox" id="chx-022" />
+                                    <label class="checkbox__label" for="chx-022">
+                                        <p>Позиция 1</p>
+                                    </label>
+                                </div>
+                                <div class="checkbox checkbox_accent checkbox_circle">
+                                    <input checked="checked" class="checkbox__input" type="checkbox" id="chx-022" />
+                                    <label class="checkbox__label" for="chx-023">
+                                        <p>Позиция 2</p>
+                                    </label>
+                                </div>
+                                <div class="checkbox checkbox_accent checkbox_circle">
+                                    <input checked="checked" class="checkbox__input" type="checkbox" id="chx-022" />
+                                    <label class="checkbox__label" for="chx-024">
+                                        <p>Длинная позиция, оооооооооооооочень длииииинная</p>
+                                    </label>
+                                </div>
+                                <div class="checkbox checkbox_accent checkbox_circle">
+                                    <input checked="checked" class="checkbox__input" type="checkbox" id="chx-022" />
+                                    <label class="checkbox__label" for="chx-025">
+                                        <p>Позиция 4</p>
                                     </label>
                                 </div>
                                 <div class="checkbox checkbox_accent checkbox_circle">
@@ -914,27 +1040,39 @@
 
                             </div>
                             <button class="link link_hover">Скрыть список позиций</button>
-
+                            <button class="modal-container__btn-position">
+                                <i class="ds-icon icon-arrow-down"></i>
+                            </button>
                         </div>
-                        <div class="modal__footer">
-                            <div class="modal__footer-row">
-                                <span>Для переноса выбрано:</span>
-                                <button class="link link_hover">16 позиций</button>
+                        <div class="modal-container__footer">
+                            <div class="modal-container__footer-row"><i class="ds-icon icon-arrow-down modal-container__footer-btn-toggle"></i></div>
+                            <div class="modal-container__footer-row flex-wrap">
+                                <span style="margin-right: 10px;">Для переноса выбрано: </span>
+                                <button class="link link_hover modal-list-catalogs__selected-position-link">16 позиций</button>
                                 <button class="link link_hover">Сбросить</button>
                             </div>
-                            <div class="modal__footer-row">
-                                <span>В каталог: </span>
-                                <span class="modal__selected-catalog">Велосипеды для юношей, подростков и взрослых
-                                    парней</span>
-                                <button class="link link_hover">Выбрать каталог</button>
-                                <button class="ds-btn ds-btn_hover">
-                                    <div class="ds-btn__text">Перенести</div>
-                                </button>
-                                <i class="ds-icon icon-arrow-down"></i>
+                             <div class="modal-container__footer-row modal-container__selected-catalog-wrap">                   <!-- Если выбран каталог, присвоить класс .is-selected элементу modal-container__selected-catalog-wrap                 -->
+                                <span class="modal-container__selected-catalog"><span>В каталог: </span>
+                                <!-- отображается, если каталог не выбран -->
+                                <span class="modal-container__selected-catalog_not-selected">Каталог не выбран</span>
+                                <!-- Здесь отображаются выбранные каталоги -->
+                                <span class="modal-container__selected-catalog_selected">Выбранный каталог ееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееее</span>
+                                </span>
+                                <div class="modal-container__btn-container">                                    
+                                    <div class="row">
+                                        <button class="link link_hover modal-list-catalogs__selected-catalogs-link">Выбрать каталог</button>
+                                    </div>
+                                    <div class="row">
+                                        <button class="ds-btn ds-btn_hover">
+                                            <div class="ds-btn__text">Перенести</div>
+                                            <div class="ds-loader ds-loader_small"></div>
+                                        </button>    
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="modal__bg" style="position: absolute;"></div> -->
+                    <!-- <div class="modal-container__bg" style="position: absolute;"></div> -->
                 </div>
             </script>
         </div>
