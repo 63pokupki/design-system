@@ -153,9 +153,8 @@ module.exports = {
                 }
             },
             {
-                test: /categories-icons-sprite\/.*\.svg$/,
+                test: /categories-icons-sprite\/categories\/.*\.svg$/,
                 exclude: /(node_modules|bower_components)/,
-                include: path.resolve(__dirname, "categories-icons-sprite"),
                 loader: "svg-sprite-loader",
                 options: {}
             }
