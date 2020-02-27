@@ -186,6 +186,9 @@
             span {
                 font-size: 16px;
                 color: $color-text-base;
+                &:nth-child(2) {
+                    font-size: 11px;
+                }
             }
         }
         &__goods-param {
