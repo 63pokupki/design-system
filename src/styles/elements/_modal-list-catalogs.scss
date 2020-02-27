@@ -62,7 +62,6 @@
             &-row {
                 display: block;
                 max-height: 120px;
-                min-height: 70px;
                 overflow-y: auto;
                 overflow-x: hidden;
                 transition: all .8s;
@@ -284,7 +283,8 @@
     .modal-list-catalogs {
         .modal-container__wrap {
             max-height: 100vh;
-            overflow: auto;
+            overflow-x: hidden;
+            overflow-y: auto;
             &.is-toggle {
                 .modal-container__content {
                     padding-bottom: 0;
@@ -330,6 +330,10 @@
             border-bottom: 1px solid $color-primary;     
         }
         .modal-container__content { 
+            h3 {
+                margin: 0 0 15px 0; 
+            }
+
             .link_hover {
                 display: none;
             }
