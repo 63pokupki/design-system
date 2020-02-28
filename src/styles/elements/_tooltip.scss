@@ -144,7 +144,7 @@ $tooltip-triangle-size: 6px;
     }
     //Подсказка внутри подсказки
     &.tooltip_inside {
-        font-size: 10px;
+        font-size: 11px;
         min-width: 120px;
         background-color: $background-color-primary;
         transform: translate(-25%,95%);
