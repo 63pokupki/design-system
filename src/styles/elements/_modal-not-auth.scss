@@ -31,6 +31,10 @@
 
     @media screen and (max-width: 640px) {
 
+        .modal__wrap {
+            padding: 25px 20px;
+        }
+
         .modal__header {
             font-size: 20px;
         }
