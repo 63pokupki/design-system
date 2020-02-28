@@ -28,7 +28,7 @@
     &__checked-position-link {
         display: flex;
         align-items: center;
-        font-size: 10px;
+        font-size: 11px;
         color: $color-text-light-grey;
         text-transform: uppercase;
         text-decoration: none;
@@ -71,7 +71,7 @@
         margin: 10px 0;       
     }
     &__item-link {
-        font-size: 10px;
+        font-size: 11px;
         color: $color-text-light-grey;
         text-decoration: none;
         &:hover {
@@ -90,7 +90,7 @@
         max-height: 24px;
         padding: 4px 18px;
         &.ds-btn__text {
-            font-size: 10px;
+            font-size: 11px;
         }
     }
 }
