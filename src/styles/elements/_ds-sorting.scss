@@ -3,14 +3,8 @@
     flex-direction: column;
     justify-content: flex-start;
     user-select: none;
-    
-    &.is-selected {
-        .sorting__selected-position {
-            display: flex;
-        }
-        .sorting__btn:before {                 
-            display: inline-flex; 
-        }
+    &:hover {
+
     }
     //Помещает позицию в столбец
     &_col {
@@ -24,19 +18,25 @@
     }
     &__input {
         display: none;
-        &:checked {
-            ~.ds-popover {
-               max-height: 200px;
-               visibility: visible;
-               opacity: 1; 
-            }
-        }
+        // &:checked {
+        //     ~.ds-popover {
+        //        max-height: 200px;
+        //        visibility: visible;
+        //        opacity: 1; 
+        //     }
+        // }
     }
     //Окно со списком popover
     .ds-popover_sorting {
         position: absolute;
         top: 25px;
         right: -25px;
+        &:hover {
+            max-height: 1000px;
+            visibility: visible;
+            transition: all .5s ease;
+            opacity: 1;
+        }
     }
 
 
@@ -53,6 +53,13 @@
                 background-position: center;
                 background-size: cover;
             }
+            .ds-popover {
+                max-height: 1000px;
+                visibility: visible;
+                transition: all .5s ease;
+                opacity: 1; 
+            } 
+    
         }
         //Галочка слева, при выбранной позиции
         &:before {

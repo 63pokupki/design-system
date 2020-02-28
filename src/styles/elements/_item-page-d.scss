@@ -78,10 +78,27 @@
 
     &__collapse {
         margin-bottom: 15px;
+        position: relative;
+        &:after {
+            content: "";
+            width: 100%;
+            height: 50px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+            background: linear-gradient(0deg,#fff,hsla(0,0%,100%,0) 105%);
+        }
     }
 
     .collapse-section {
+        &.is-expanded {
+            &:after {
+                display: none;
+            }
+        }
         &__body {
+            max-height: 68px;
             line-height: 24px;
         }
     }
