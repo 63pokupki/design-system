@@ -271,6 +271,8 @@
     }
     &__img-box {
         display: none;
+        max-width: 260px;
+        margin: 0 auto;
     }
 
     &__for-home,
@@ -313,6 +315,24 @@
             font-size: 18px;
         }
     }
+    // Изображение на мобильном
+    .promo-for-begginners__img-box {
+        display: flex;
+    }
+    .promo-for-begginners__banner-promo {
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+        padding: 0;
+        background: none;
+        background-size: 500px;
+        height: 385px;
+        .promo-for-begginners__col {
+            width: 250px;
+            margin: 0 auto;
+        }
+    }
+
     .promo-for-begginners.is-view {
         .promo-for-begginners__view-block {
             flex-wrap: wrap;
@@ -330,7 +350,6 @@
     .promo-for-begginners__banner-promo {
         width: 100%;
         padding: 45px 0 45px 0;
-        background-size: cover;
     }
     .promo-for-begginners__instruction {
         flex-direction: column;
@@ -355,14 +374,25 @@
     .promo-for-begginners__instruction-right {
         align-items: center;
         width: 100%;
-        padding: 32px 12px 0 12px;
+        // padding: 32px 12px 45px 12px;
         h5 {
             width: 100%;
+            margin: 0 0 25px;
+            font-size: 14px;
             text-align: left;
+        }
+        h3 {
+            margin: 0 0 25px;
+            height: 48px;
+            line-height: 32px;
         }
     }
     .promo-for-begginners__instruction-left {
         padding: 45px 35px 0 35px;
+        p {
+            text-align: center;
+        }
+
     }
 
     .promo-for-begginners__btn-container {
@@ -371,7 +401,7 @@
     .promo-for-begginners__btn-container_mobile {
         display: flex;
         width: 100%;
-        margin: 20px;
+        margin: 30px 0 10px 0;
     }
     .promo-for-begginners__heading {
         font-size: 18px;
@@ -385,11 +415,20 @@
 
     }
 
+}
+@media (max-width: 768px) and (min-width: 601px) {
+    .promo-for-begginners__instruction-right {
+        padding: 32px 12px 45px 12px;
+    }
 
 }
 @media (max-width: 600px) {
-    .promo-for-begginners__instruction-right {
-        align-items: center;
+    .promo-for-begginners {
+        &__instruction-right {
+            align-items: center;
+            padding: 32px 65px 45px 65px;
+
+        }
     }
     .promo-for-begginners__container {
         flex-direction: column!important;
@@ -406,6 +445,11 @@
         p {
             margin: 5px 0;
         }
+        h3 {
+            height: auto;
+            margin: 0 0 5px 0;
+
+        }
         .promo-for-begginners__col {
             
             &:nth-child(1) {
@@ -414,28 +458,18 @@
             &:nth-child(2) {
                 padding: 20px 10px!important;
             }
-            h5 {
-                margin: 10px 0;
-                font-size: 16px;
-            }
-            h3 {
-                margin: 0px 0 10px;
-                font-weight: 500;
-                font-size: 18px;
-            }
         }
 
     }
     .promo-for-begginners__instruction-right {
         width: 100%;
-        padding: 20px 10px;
+        padding: 20px 15px;
 
     }
     .promo-for-begginners__row {
         padding: 20px 10px;
     }
     .promo-for-begginners__heading {
-        margin: 0 0 -15px 0;
         font-size: 16px;
         text-align: left;
     }
@@ -447,23 +481,6 @@
             padding: 0 20px;
         }
     }
-    .promo-for-begginners__banner-promo {
-        flex-direction: column;
-        align-items: flex-end;
-        width: 100%;
-        padding: 0;
-        background: none;
-        background-size: 500px;
-        height: 385px;
-        .promo-for-begginners__col {
-            width: 250px;
-            margin: 0 auto;
-        }
-    }
-    .promo-for-begginners__img-box {
-        display: flex;
-        width: 500px;
-    }
     .promo-for-begginners__btn-container_mobile {
         margin: 20px;
         margin: 0 0 20px 0;
@@ -472,6 +489,32 @@
         font-size: 14px;
     }
 
+}
+@media (max-width: 500px) and (min-width: 401px) {
+    .promo-for-begginners__instruction {
+        h3 {
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+    }
+}
+@media (max-width: 450px) {
+    .promo-for-begginners__instruction-left {
+        .promo-for-begginners__vm-30 {
+            display: none;
+        }
+    }
+
+} 
+@media (max-width: 400px) {
+    .promo-for-begginners__heading {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .promo-for-begginners__regulations-link {
+        margin: 20px 0 0;
+    }
 }
 
 
