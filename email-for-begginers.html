@@ -7,39 +7,192 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="x-apple-disable-message-reformatting">
     <title>Письмо для новичков</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?057e548dbef42b61f14b" rel="stylesheet"><link href="css/ds-utils.css?057e548dbef42b61f14b" rel="stylesheet"><link href="css/ds-ui-kit.css?057e548dbef42b61f14b" rel="stylesheet"></head>
+<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?5cbe968e292956bae851" rel="stylesheet"><link href="css/ds-utils.css?5cbe968e292956bae851" rel="stylesheet"><link href="css/ds-ui-kit.css?5cbe968e292956bae851" rel="stylesheet"></head>
 
 <body style="padding: 0;margin: 0;min-width: 600px;">
     <!-- Основная таблица -->
-    <table style="background-color: #ffffff;font-family: Helvetica, sans-serif; color: #1E2023; margin: 0 auto;">
+    <table style="
+    max-width: 600px;
+    min-width: 600px;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: none;    
+    background-color: #ffffff;
+    font-family: Helvetica, sans-serif; 
+    color: #1E2023; 
+    margin: 0 auto;">
         <tr>
             <td>
                 <!-- Header -->
-                <table class="header" style="background: url('https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/email/for_beginners/email-header-img.png');">
+                <table class="header" style="
+                height: 525px;
+                min-width: 600px;
+                background: url('https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/email/for_beginners/email-header-img.png');
+                background-position: bottom;
+                background-size: contain;
+                background-repeat: no-repeat;
+                border-spacing: 0;
+                border-collapse: collapse;
+                border-spacing: 0;
+                border: none; 
+                ">
                     <tr>
                         <td>
                             <!-- Name -->
-                            <table class="user-name">
+                            <table class="user-name" style="
+                                border-spacing: 0;
+                                border-collapse: collapse;
+                                border-spacing: 0;
+                                border: none; 
+                            ">
                                 <tr>
-                                    <td>
+                                    <td width="30" class="margin"></td>
+                                    <td style="
+                                    font-size: 30px;
+                                    color: #0085FF;">
                                         <span id="name">%Имя%</span>, здравствуйте!
                                     </td>
                                 </tr>
                             </table>
                             <!-- Вы зарегистрировались  -->
-                            <table class="header-txt">
-                                <tr><td>Вы зарегистрировались на нашем сайте, но так ничего</td></tr>
-                                <tr><td>и не положили в корзину. Не нашли ничего нужного</td></tr>
-                                <tr><td>для себя или растерялись? Отправляем на помощь</td></tr>
-                                <tr><td>нашего гида по шопингу. Она поможет вам</td></tr>
-                                <tr><td>разобраться и что-нибудь найти :)</td></tr>
+                            <table class="header-txt" style="
+                                border-spacing: 0;
+                                border-collapse: collapse;
+                                border-spacing: 0;
+                                border: none; 
+                            ">
+                                <tr><td width="30" class="margin"></td><td style="font-size: 15px; line-height: 30px;">Вы зарегистрировались на нашем сайте, но так ничего</td></tr>
+                                <tr><td width="30" class="margin"></td><td style="font-size: 15px; line-height: 30px;">и не положили в корзину. Не нашли ничего нужного</td></tr>
+                                <tr><td width="30" class="margin"></td><td style="font-size: 15px; line-height: 30px;">для себя или растерялись? Отправляем на помощь</td></tr>
+                                <tr><td width="30" class="margin"></td><td style="font-size: 15px; line-height: 30px;">нашего гида по шопингу. Она поможет вам</td></tr>
+                                <tr><td width="30" class="margin"></td><td style="font-size: 15px; line-height: 30px;">разобраться и что-нибудь найти :)</td></tr>
                             </table>            
+                        </td>
+                    </tr>
+                    <!-- Empty -->
+                    <tr>
+                        <td class="empty">
+
+                        </td>
+                    </tr>
+                </table>                
+            </td>
+        </tr>
+        <!-- НАчните знакомство -->
+        <tr>
+            <td>
+                <table height="90" style="
+                    border-spacing: 0;
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                    border: none; 
+                ">
+                    <tr>
+                        <td>
+                            <div class="label" style="
+                            width: 506px;
+                            height: 40px;
+                            background: #36A6F2;
+                            border-top-right-radius: 20px;
+                            border-bottom-right-radius: 20px;
+                            color: #ffffff;
+                            font-size: 16px;
+                            font-weight: 600;
+                            text-align: right;
+                            padding: 11px 15px 0 0;
+                            white-space: nowrap;
+                            ">Начните знакомство с лучших товаров на 63pokupki.ru</div>
                         </td>
                     </tr>
                 </table>
             </td>
         </tr>
+        <tr>
+            <td>
+                <table>
+                    <tr>
+                        <!-- Карточка товара -->
+                        <td><table style="text-align: center; ">
+                            <!-- Изображение -->
+                            <tr>
+                                <td width="165" height="165">
+                                    <img src="images/email-img.png" alt="">
+                                </td>
+                            </tr>
+                            <!-- Наименование -->
+                            <tr>
+                                <td><span id="card-title">Туфли Ralf Ringer</span></td>
+                            </tr>
+                            <!-- Цена -->
+                            <tr>
+                                <td><span id="card-price">3 000</span></td>
+                            </tr>
+                            <!-- Орг сбор -->
+                            <tr>
+                                <td>+Орг. сбор 16%</td>
+                            </tr>
+                            <!-- Посмотреть -->
+                            <tr>
+                                <td>
+                                    <a href="#" class="btn-look" style="
+                                    display: block;
+                                    width: 144px;
+                                    height: 36px;
+                                    margin: 20px auto;
+                                    border-radius: 20px;
+                                    background-color: #36A6F2;
+                                    color: #ffffff;
+                                    text-align: center;
+                                    padding: 10px 10px;
+                                    cursor: pointer;
+                                    text-decoration: none;
+                                    ">Посмотреть</a>
+                                </td>
+                            </tr>
+                        </table></td>
+                        <!-- Карточка товара -->
+                        <td><table>
+                            <tr>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                        </table></td>
+                        <!-- Карточка товара -->
+                        <td><table>
+                            <tr>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                        </table></td>
+                        <!-- Карточка товара -->
+                    </tr>
+                </table>
+            </td>
+        </tr>
     </table>
-<script type="text/javascript" src="js/highlight-syntax.js?057e548dbef42b61f14b"></script><script type="text/javascript" src="js/ds-utils.js?057e548dbef42b61f14b"></script><script type="text/javascript" src="js/categories-icons-sprite.js?057e548dbef42b61f14b"></script><script type="text/javascript" src="js/ds-ui-kit.js?057e548dbef42b61f14b"></script></body>
+<script type="text/javascript" src="js/highlight-syntax.js?5cbe968e292956bae851"></script><script type="text/javascript" src="js/ds-utils.js?5cbe968e292956bae851"></script><script type="text/javascript" src="js/categories-icons-sprite.js?5cbe968e292956bae851"></script><script type="text/javascript" src="js/ds-ui-kit.js?5cbe968e292956bae851"></script></body>
 
 </html>
