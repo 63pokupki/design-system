@@ -148,15 +148,33 @@
                     position: absolute;
                     left: 0px;
                     top: 0;
+
                 }
                 &-viewing {
-                    min-height: 85px;
+                    min-height: 100px;
+                    overflow-x: auto;
+                    overflow-y: hidden;
+                    // Scroll
+                    &::-webkit-scrollbar {
+                        height: 7px;
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        border-radius: 3px;
+                        background: $color-primary;
+                        width: 30px;
+                    }
+                    &::-webkit-scrollbar-track {
+                        background: #e0eef7;
+                        border-radius: 3px;
+                    }
+
                 }
 
                 &-items {
                     margin-right: 20px;
                 }
-            }
+            }           
+
         }
         &__scroll {
             display: flex;

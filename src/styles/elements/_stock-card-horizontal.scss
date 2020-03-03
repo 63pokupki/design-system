@@ -152,13 +152,13 @@
         background: white;
         margin-right: 32px;
 
-        &:hover {
-            .stock-card-horizontal__prev,
-            .stock-card-horizontal__next,
-            .stock-card-horizontal__favorite {
-                display: flex;
-            }
-        }
+        // &:hover {
+        //     .stock-card-horizontal__prev,
+        //     .stock-card-horizontal__next,
+        //     .stock-card-horizontal__favorite {
+        //         display: flex;
+        //     }
+        // }
     }
 
     &__images-wrapper {
@@ -167,7 +167,7 @@
 
     &__prev,
     &__next {
-        display: none;
+        display: flex;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -241,7 +241,7 @@
     }
 
     .stock-card-horizontal__favorite {
-        display: none;
+        display: flex;
         position: absolute;
         top: 10px;
         right: 10px;
