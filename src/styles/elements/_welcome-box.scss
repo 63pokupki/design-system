@@ -107,8 +107,6 @@
         display: flex;
         align-items: flex-start;
         padding: 0px 0 15px 0;
-        .promo-for-begginners__col {
-        }
         p {
             text-align: left;
             color: $color-text-heading;
@@ -278,8 +276,7 @@
         flex-direction: column;
     }
 }
-
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .promo-for-begginners__header {
         h1 {
             font-size: 18px;
@@ -287,21 +284,21 @@
     }
     // Изображение на мобильном
     .promo-for-begginners__img-box {
-        display: flex;
+        // display: flex;
     }
-    .promo-for-begginners__banner-promo {
-        flex-direction: column;
-        align-items: flex-end;
-        width: 100%;
-        padding: 0;
-        background: none;
-        background-size: 500px;
-        height: 385px;
-        .promo-for-begginners__col {
-            width: 250px;
-            margin: 0 auto;
-        }
-    }
+    // .promo-for-begginners__banner-promo {
+    //     // flex-direction: column;
+    //     // align-items: flex-end;
+    //     width: 100%;
+    //     padding: 0;
+    //     // background: none;
+    //     background-size: 500px;
+    //     height: 385px;
+    //     .promo-for-begginners__col {
+    //         // width: 250px;
+    //         // margin: 0 auto;
+    //     }
+    // }
 
     .promo-for-begginners.is-view {
         .promo-for-begginners__view-block {
@@ -320,6 +317,7 @@
     .promo-for-begginners__banner-promo {
         width: 100%;
         padding: 45px 0 45px 0;
+
     }
     .promo-for-begginners__instruction {
         flex-direction: column;
@@ -393,12 +391,38 @@
     }
 
 }
+@media (max-width: 767px) {
+    // Изображение на мобильном
+    .promo-for-begginners__img-box {
+        display: flex;
+    }
+    .promo-for-begginners__banner-promo {
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+        padding: 0;
+        background: none;
+        background-size: 500px;
+        height: 385px;
+        .promo-for-begginners__col {
+            width: 250px;
+            margin: 0 auto;
+        }
+    }
+    
+}
 @media (max-width: 600px) {
     .promo-for-begginners {
         &__instruction-right {
             align-items: center;
             padding: 32px 65px 45px 65px;
 
+        }
+        .promo-for-begginners__txt {
+            text-align: left;
+        }
+        .promo-for-begginners__instruction-left {
+            align-items: flex-start;
         }
     }
     .promo-for-begginners__container {
