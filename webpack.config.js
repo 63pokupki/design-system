@@ -169,28 +169,20 @@ module.exports = {
             filename: "index.html?[hash]",
             template: "index.html",
             favicon: path.resolve(__dirname, "favicon.ico"),
-            excludeChunks: ["onboarding", "onboarding-admin"]
+            excludeChunks: ["onboarding"]
         }),
         ...templates,
         // отдельные шаблоны под onboarding
         new HtmlWebpackPlugin({
             filename: "onboarding-stock-desctop.html",
             template: "./src/module/onboarding/template/onboarding-stock-desctop.html",
-            favicon: path.resolve(__dirname, "favicon.ico"),
-            excludeChunks: ["onboarding-admin"]
+            favicon: path.resolve(__dirname, "favicon.ico")
         }),
         new HtmlWebpackPlugin({
             filename: "onboarding-stock-mobile.html",
             template: "./src/module/onboarding/template/onboarding-stock-mobile.html",
-            favicon: path.resolve(__dirname, "favicon.ico"),
-            excludeChunks: ["onboarding-admin"]
-        }),
-        new HtmlWebpackPlugin({
-            filename: "onboarding-admin.html",
-            template: "./src/module/onboarding/template/onboarding-admin.html",
-            favicon: path.resolve(__dirname, "favicon.ico"),
-            excludeChunks: ["onboarding"]
-        }),
+            favicon: path.resolve(__dirname, "favicon.ico")
+        })
     ],
     optimization: {
         //настройки оптимизации и минификации
