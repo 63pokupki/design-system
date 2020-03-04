@@ -14,8 +14,8 @@
         top: 0;
         left: 0;
         position: fixed;
-        // overflow: auto;
-        overflow: hidden;
+        overflow-y: auto;
+        overflow-x: hidden;
         max-width: 90%;
         min-width: 280px;
         height: 100%;
