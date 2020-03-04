@@ -3,9 +3,6 @@
     flex-direction: column;
     justify-content: flex-start;
     user-select: none;
-    &:hover {
-
-    }
     //Помещает позицию в столбец
     &_col {
         .sorting__btn {
@@ -104,4 +101,16 @@
         font-size: 9px;
         min-width: 270px;
     }
+}
+.sorting-block .sorting__btn:focus+.ds-popover_sorting {
+    max-height: 1000px;
+    visibility: visible;
+    transition: all .5s ease;
+    opacity: 1;
+}
+.sorting-block .ds-popover_sorting:hover {
+    max-height: 1000px;
+    visibility: visible;
+    transition: all .5s ease;
+    opacity: 1;
 }
