@@ -93,15 +93,18 @@
         }
 
     }
+    &__img-box {
+        display: flex;
+        width: 100%;
+        max-width: 260px;
+        margin: 0 auto;
+    }
+
     &__banner-promo {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 45px 30% 45px 0;
-        background: url("~images/promo-for-beginners/banner_for_beginners.jpg");
-        background-repeat: no-repeat;
-        background-position: right;
-        background-size: contain;
+        padding: 5px 0;
     }
     &__instruction {
         display: flex;
@@ -235,12 +238,6 @@
         margin: 45px 0 0 0;
         color: $color-text-base;
     }
-    &__img-box {
-        display: none;
-        width: 100%;
-        max-width: 260px;
-        margin: 0 auto;
-    }
 
     &__for-home,
     &__family,
@@ -271,7 +268,7 @@
     }
     .promo-for-begginners__banner-promo {
         justify-content: flex-start;
-        padding: 45px 0 45px 30px;
+        padding: 5px 0;
     }
     .promo-for-begginners {
         &__for-home,
@@ -300,6 +297,11 @@
             font-size: 18px;
             font-weight: normal;
         }
+    }
+}
+@media (width: 768px) {
+    .promo-for-begginners__banner {
+        padding: 0 0 0 20px;
     }
 }
 @media (max-width: 768px) {
@@ -354,8 +356,6 @@
             text-align: left;
         }
         h3 {
-            margin: 0 0 25px;
-            height: 48px;
             line-height: 32px;
         }
     }
@@ -393,6 +393,10 @@
     .promo-for-begginners__instruction-right {
         padding: 32px 12px 0 12px;
     }
+    .promo-for-begginners__instruction-right {
+        height: auto;
+        margin: 0 0 0 7px;
+    }
 
 }
 @media (max-width: 767px) {
@@ -401,7 +405,7 @@
         display: flex;
     }
     .promo-for-begginners__banner-promo {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: flex-end;
         width: 100%;
         padding: 0 0 10px 0;
@@ -418,8 +422,7 @@
     .promo-for-begginners {
         &__instruction-right {
             align-items: center;
-            padding: 32px 65px 45px 65px;
-
+            padding: 32px 65px 0px;
         }
         .promo-for-begginners__txt {
             text-align: center;
