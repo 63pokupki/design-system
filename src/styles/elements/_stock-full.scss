@@ -85,4 +85,30 @@
         background: rgba(255, 255, 255, 0.4);
         z-index: 3;
     }
+
+    .stock-tabs {
+        &__label {
+            color: grey;
+        }
+        &__labels {
+            position: relative;
+            z-index: 3;
+        }
+    }
+
+    .stock-full__wrapper.is-expanded {
+        .stock-tabs {
+            position: relative;
+            z-index: 3;
+
+            &__label {
+                color: $dark-brown-color;
+            }
+            
+            &__labels {
+                position: static;
+                z-index: initial;
+            }
+        }
+    }
 }
