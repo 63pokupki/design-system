@@ -112,33 +112,31 @@ btn_sum.forEach(m => {
 });
 
 //Закрытие картинок в модалке "Сообщение организатору"
-(()=> {
+(() => {
     let modal_msg_org = document.querySelectorAll(".modal-message-for-org");
     if (modal_msg_org) {
-        modal_msg_org.forEach((mso)=>{
-           let close_btn = mso.querySelectorAll(".img-container_small");
-           close_btn.forEach((cb)=> {
-               cb.addEventListener("click", ()=> {
+        modal_msg_org.forEach(mso => {
+            let close_btn = mso.querySelectorAll(".img-container_small");
+            close_btn.forEach(cb => {
+                cb.addEventListener("click", () => {
                     cb.parentNode.removeChild(cb);
-               });
-           }); 
-        })
+                });
+            });
+        });
     }
-})()
-
+})();
 
 // <!-- Сердечко -->
 
 let hearts = document.querySelectorAll(".icon-heart-bold");
 
 if (hearts) {
-    hearts.forEach((heart) => {
-        heart.addEventListener('click', () => {
+    hearts.forEach(heart => {
+        heart.addEventListener("click", () => {
             heart.classList.toggle("icon-heart-filled");
-        })
-    })
+        });
+    });
 }
-
 
 //Разворачивающийся блок
 (() => {
@@ -146,9 +144,9 @@ if (hearts) {
 
     if (toggleBlock) {
         toggleBlock.forEach(t => {
-            t.addEventListener("click", ()=> {
+            t.addEventListener("click", () => {
                 t.classList.toggle("is-toggle");
-            })
+            });
         });
     }
 })();
@@ -209,7 +207,6 @@ sidebar_array.forEach(sidebar => {
 
     if (cardActive) {
         cardActive.forEach(c => {
-            
             c.addEventListener("click", () => {
                 c.classList.toggle("is-toggle");
             });
@@ -243,11 +240,9 @@ sidebar_array.forEach(sidebar => {
 // Сворачивание/разворачивание всех карточек на странице
 (() => {
     let switcher__label = document.querySelectorAll(".switcher__label");
-    if (switcher__label) {        
+    if (switcher__label) {
         switcher__label.forEach(sl => {
             sl.addEventListener("click", () => {
-                
-
                 let card = document.querySelectorAll(".card-active-custom");
                 if (card) {
                     card.forEach(c => {
@@ -259,37 +254,28 @@ sidebar_array.forEach(sidebar => {
     }
 })();
 
-
-
 // Окно авторизации(переключение вкладок)
-(()=> {
+(() => {
     let auth_wrap = document.querySelectorAll(".auth-form");
 
     if (auth_wrap) {
-        auth_wrap.forEach((aw)=> {
+        auth_wrap.forEach(aw => {
             let auth_tabs = aw.querySelector("#auth-tabs");
-            
 
-            auth_tabs.addEventListener("click", ()=> {
+            auth_tabs.addEventListener("click", () => {
                 if (auth_tabs.checked === true) {
                     aw.classList.toggle("auth-form_sign-up");
                     aw.querySelector(".auth-form__form-sign-up").style.display = "flex";
                     aw.querySelector(".auth-form__form-sign-in").style.display = "none";
-                }
-                else {
+                } else {
                     aw.classList.remove("auth-form_sign-up");
                     aw.querySelector(".auth-form__form-sign-up").style.display = "none";
                     aw.querySelector(".auth-form__form-sign-in").style.display = "flex";
                 }
-                
-            });  
-           
+            });
         });
     }
-
-
 })();
-    
 
 // кнопка назад
 document.addEventListener("DOMContentLoaded", () => {
@@ -314,21 +300,20 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Забыли пароль?
-(()=> {
+(() => {
     let af = document.querySelectorAll(".auth-form");
 
     if (af) {
-        af.forEach((a)=> {
-            let btn_link      = a.querySelector(".auth-form__link-to-recovery-password"),
-                form_signUp   = a.querySelector(".auth-form__form-sign-in"),
+        af.forEach(a => {
+            let btn_link = a.querySelector(".auth-form__link-to-recovery-password"),
+                form_signUp = a.querySelector(".auth-form__form-sign-in"),
                 form_recovery = a.querySelector(".auth-form__form-password-recovery");
-    
-            btn_link.addEventListener("click",(bl)=> {
+
+            btn_link.addEventListener("click", bl => {
                 bl.preventDefault();
-                form_signUp.style.display   = "none";
+                form_signUp.style.display = "none";
                 form_recovery.style.display = "block";
             });
-    
         });
     }
 })();
@@ -337,19 +322,28 @@ document.addEventListener("DOMContentLoaded", () => {
 let modalListCat = document.querySelectorAll(".modal-list-catalogs");
 
 if (modalListCat) {
-    modalListCat.forEach((mlc)=> {
-        let content        = mlc.querySelector(".modal-container__wrap"),
-            catalogs       = mlc.querySelector(".modal-container__catalogs"),
-            positions      = mlc.querySelector(".modal-container__positions"),
-            toggleLinkPos  = mlc.querySelector(".modal-list-catalogs__selected-position-link"),
-            toggleLinkCat  = mlc.querySelector(".modal-list-catalogs__selected-catalogs-link"),
-            toggleBtnPos   = mlc.querySelector(".modal-container__btn-position"),
-            toggleBtnCat   = mlc.querySelector(".modal-container__btn-catalogs"),
-            toggleBtn      = mlc.querySelector(".modal-container__footer-btn-toggle");
-        if (content && toggleBtn && toggleLinkPos && toggleLinkCat && toggleBtnCat && toggleBtnPos && catalogs && positions) {
-            toggleBtn.addEventListener("click", ()=> {
+    modalListCat.forEach(mlc => {
+        let content = mlc.querySelector(".modal-container__wrap"),
+            catalogs = mlc.querySelector(".modal-container__catalogs"),
+            positions = mlc.querySelector(".modal-container__positions"),
+            toggleLinkPos = mlc.querySelector(".modal-list-catalogs__selected-position-link"),
+            toggleLinkCat = mlc.querySelector(".modal-list-catalogs__selected-catalogs-link"),
+            toggleBtnPos = mlc.querySelector(".modal-container__btn-position"),
+            toggleBtnCat = mlc.querySelector(".modal-container__btn-catalogs"),
+            toggleBtn = mlc.querySelector(".modal-container__footer-btn-toggle");
+        if (
+            content &&
+            toggleBtn &&
+            toggleLinkPos &&
+            toggleLinkCat &&
+            toggleBtnCat &&
+            toggleBtnPos &&
+            catalogs &&
+            positions
+        ) {
+            toggleBtn.addEventListener("click", () => {
                 content.classList.toggle("is-toggle");
-            })
+            });
             toggleLinkPos.addEventListener("click", () => {
                 content.classList.toggle("is-toggle");
             });
@@ -363,51 +357,49 @@ if (modalListCat) {
                 catalogs.classList.toggle("is-toggle");
             });
         }
-    }); 
-
+    });
 }
 
 // stock-desctop-org-ver вызов панели орга
-let pageStockOrg =document.querySelectorAll(".stock-d__main");
+let pageStockOrg = document.querySelectorAll(".stock-d__main");
 
 if (pageStockOrg) {
-    pageStockOrg.forEach((pso)=> {
-       let checkbox = pso.querySelectorAll(".checkbox__input"),
-           goTo     = pso.querySelector(".ds-btn_hover"),
-           panel    = pso.querySelector(".modal-list-catalogs");           
+    pageStockOrg.forEach(pso => {
+        let checkbox = pso.querySelectorAll(".checkbox__input"),
+            goTo = pso.querySelector(".ds-btn_hover"),
+            panel = pso.querySelector(".modal-list-catalogs");
 
-       if (checkbox) {
-           checkbox.forEach((chx)=>{
-               chx.addEventListener("click",()=> {
-                   console.log("Click");
-                   if (panel) {
-                       panel.classList.toggle("is-visible");
-                   }
-               });
-           });
-       }
-       if (goTo) {
-        goTo.addEventListener("click", ()=> {
-            panel.classList.toggle("is-visible");
+        if (checkbox) {
+            checkbox.forEach(chx => {
+                chx.addEventListener("click", () => {
+                    console.log("Click");
+                    if (panel) {
+                        panel.classList.toggle("is-visible");
+                    }
+                });
+            });
+        }
+        if (goTo) {
+            goTo.addEventListener("click", () => {
+                panel.classList.toggle("is-visible");
+            });
+        }
+    });
+}
+
+try {
+    // Timer reverse
+    let startTime = moment([2020, 1, 19]); //Дата начала
+    let endTime = moment([2020, 2, 17]); //Дата окончания
+
+    let t = endTime.diff(startTime, "days"); //РАзница между начальной и конечной датой
+    document.querySelector(".timer-reverse__time").innerHTML = t;
+    document.querySelector("#daysView").innerHTML = t;
+
+    let btnLook = document.querySelector(".promo-for-begginners__btn-look");
+    if (btnLook) {
+        btnLook.addEventListener("click", () => {
+            document.querySelector(".promo-for-begginners").classList.toggle("is-view");
         });
     }
-
-    });
-}
-
-// Timer reverse
-let startTime = moment([2020, 1, 19]); //Дата начала
-let endTime = moment([2020, 2, 17]); //Дата окончания
-
-let t = endTime.diff(startTime, 'days'); //РАзница между начальной и конечной датой
-document.querySelector(".timer-reverse__time").innerHTML = t;
-document.querySelector("#daysView").innerHTML = t;
-
-let btnLook = document.querySelector(".promo-for-begginners__btn-look");
-if (btnLook) {
-    btnLook.addEventListener("click", ()=> {
-        document.querySelector(".promo-for-begginners").classList.toggle("is-view");
-    });
-}
-
-
+} catch {}
