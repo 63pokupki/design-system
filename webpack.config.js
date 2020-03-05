@@ -182,7 +182,12 @@ module.exports = {
             filename: "onboarding-stock-mobile.html",
             template: "./src/module/onboarding/template/onboarding-stock-mobile.html",
             favicon: path.resolve(__dirname, "favicon.ico")
-        })
+        }),
+        new HtmlWebpackPlugin({
+            filename: "onboarding-item.html",
+            template: "./src/module/onboarding/template/onboarding-item.html",
+            favicon: path.resolve(__dirname, "favicon.ico")
+        }),
     ],
     optimization: {
         //настройки оптимизации и минификации

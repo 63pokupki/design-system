@@ -19,7 +19,7 @@ function templates(dir = "src/templates", fileslist = [], t = []) {
                         template: path.resolve(__dirname, `${dir}/${file}`),
                         favicon: path.resolve(__dirname, "favicon.ico"),
                         cache: true,
-                        excludeChunks: ["onboarding", "onboarding-admin"]
+                        excludeChunks: ["onboarding"]
                     })
                 );
             }
