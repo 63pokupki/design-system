@@ -6,8 +6,170 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Карточка товара общая</title>
 
+        <script>
+            var steps = {
+                touch: () => [
+                    {
+                        intro: `<div class="onboarding-content">
+                <div class="onboarding-heading">
+                    Это новая Карточка товара
+                </div>
+                <p class="onboarding-accent">Основные улучшения:</p>
+                <ol>
+                    <li>Показана цена с орг. сбором</li>
+                    <li>Размерная сетка - рядом с выбором размера</li>
+                    <li style="margin-right: 50px">Задать вопрос организатору можно из карточки товара</li>
+                    <li style="margin-right: 50px">Заполнение ряда - прямо под
+описанием товара</li>
+                </ol>
+                <p class="semi-bold">Хотите подробнее?</p>
+            </div>`,
+                        nextLabel: "Посмотреть",
+                        tooltipClass: "onboarding-base-outer"
+                    },
+                    {
+                        intro: `Можно быстро перейти в закупку,
+                                чтобы посмотреть ее условия,
+                                рейтинг и отзывы.`,
+                        element: getElement(".item-page-m__stock")
+                    },
+                    {
+                        intro: `Размерная сетка
+                                открывается здесь.`,
+                        element: getElement(".item-page-m__grid-expand")
+                    },
+                    {
+                        intro: `Добавляем в список желаний
+                                теперь “сердечком”.`,
+                        element: getElement(".item-page-m__buttons .favorite")
+                    },
+                    {
+                        intro: `Можно сразу написать
+                                организатору, если есть вопросы.`,
+                        element: getElement(".item-page-m__org .org-profile__message")
+                    },
+                    {
+                        intro: `<div class="onboarding-content" style="font-size: 14px; margin-bottom: 15px">
+            <div class="onboarding-heading">
+                Приятного шопинга!
+            </div>
+            <p>Краткий видеообзор по новой странице закупки можно посмотреть <a target="_blank" href="#" class="link link_hover">здесь.</a></p>
+            <span>Бежим заказывать!</span>
+            </div>`,
+                        doneLabel: "Перейти к покупкам"
+                    }
+                ],
+                desctop: () => [
+                    {
+                        intro: `<div class="onboarding-content">
+            <div class="onboarding-heading">
+                А так теперь выглядит
+наша новая Карточка товара
+            </div>
+            <p class="onboarding-accent">Основные улучшения:</p>
+            <ol>
+                <li>Сразу под ценой товара указывается его стоимость с орг. сбором</b></li>
+                <li>Посмотреть размерную сетку вы можете по ссылке рядом с выбором размера</li>
+                <li>Написать организатору теперь можно из карточки товара</li>
+                <li>Заполненность рядов по товару можно посмотреть
+    сразу под описанием</li>
+            </ol>
+            <p class="semi-bold">Хотите подробнее?</p>
+            </div>`,
+                        nextLabel: "Посмотреть",
+                        tooltipClass: "onboarding-base-outer"
+                    },
+                    {
+                        intro: `Чтобы перейти в закупку для просмотра ее условий, рейтинга и отзывов, нужно кликнуть по ее названию.`,
+                        nextLabel: "Далее",
+                        element: getElement(".item-page-d__stock-name")
+                    },
+                    {
+                        intro: `Сумму с орг. сбором можно посмотреть до добавления в корзину.`,
+                        element: getElement(".item-page-d__price-w")
+                    },
+                    {
+                        intro: `При наличии размерная сетка открывается рядом с характеристикой размера`,
+                        element: getElement(".item-page-d__size-grid-link")
+                    },
+                    {
+                        intro: `Если товар собирается рядами, 
+то заполнение рядов смотрим
+сразу под описанием.`,
+                        element: getElement(".onb-rows")
+                    },
+                    {
+                        intro: `Можно сразу написать организатору,
+если есть вопрос по товару или закупке.`,
+                        element: getElement(".item-page-d__message")
+                    },
+                    {
+                        intro: `Добавляем в список желаний
+теперь “сердечком”.`,
+                        element: getElement(".item-page-d__buttons .favorite")
+                    },
+                    {
+                        intro: `<div class="onboarding-content">
+            <div class="onboarding-heading">
+                Теперь вы знаете самое необходимое!
+            </div>
+            <p>Краткий видеообзор по новой странице закупки можно посмотреть <a target="_blank" href="#" class="link link_hover">здесь.</a></p>
+            <span>Бежим заказывать!</span>
+            </div>`,
+                        doneLabel: "Перейти к покупкам",
+                        tooltipClass: "onboarding-base-outer"
+                    }
+                ]
+            };
+
+            /**
+             * Получение видимого элемента по css селектору
+             * @param {String} selector - css валидный селектор
+             */
+            function getElement(selector) {
+                try {
+                    if (!selector) {
+                        throw new Error("Селектор не передан");
+                    }
+
+                    const elements = Array.prototype.slice.call(document.querySelectorAll(selector));
+
+                    const visibleElement = elements.find(el => _isElementExist(el));
+
+                    if (!visibleElement) {
+                        throw new Error("Видимый элемент не найден: " + selector);
+                    }
+
+                    return visibleElement;
+                } catch (e) {
+                    console.error(e);
+                }
+            }
+
+            /**
+             * Проверка видимости (существования) элемента
+             * @param {} element - элемент
+             */
+            function _isElementExist(element) {
+                try {
+                    if (!element) {
+                        throw new Error("Элемент не передан");
+                    }
+
+                    const { height, width } = element.getBoundingClientRect();
+
+                    if (height !== 0 && width !== 0) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                } catch (e) {
+                    console.error(e);
+                }
+            }
+        </script>
+
         <style>
-            
             body {
                 min-width: 320px;
             }
@@ -30,7 +192,7 @@
                 }
             }
         </style>
-    <link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?1074e338906425e041e4" rel="stylesheet"><link href="css/ds-utils.css?1074e338906425e041e4" rel="stylesheet"><link href="css/ds-ui-kit.css?1074e338906425e041e4" rel="stylesheet"></head>
+    <link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?1074e338906425e041e4" rel="stylesheet"><link href="css/onboarding.css?1074e338906425e041e4" rel="stylesheet"><link href="css/ds-utils.css?1074e338906425e041e4" rel="stylesheet"><link href="css/ds-ui-kit.css?1074e338906425e041e4" rel="stylesheet"></head>
     <body>
         <!-- модалки -->
         <!-- размерная сетка -->
@@ -190,7 +352,7 @@
                     <div class="item-page-m__params-section">
                         <div class="item-page-m__params">
                             <div class="item-page-m__params-label">
-                               <span>Цвет:</span> 
+                                <span>Цвет:</span>
                             </div>
                             <ul class="item-params-list">
                                 <li class="item-params-list__item">Синий</li>
@@ -622,7 +784,7 @@
                                             размерная сетка
                                         </button>
                                     </div>
-                                    <ul class="item-params-list is-error item-page-d__params-list">
+                                    <ul class="item-params-list item-page-d__params-list">
                                         <li class="item-params-list__item">36</li>
                                         <li class="item-params-list__item">37</li>
                                         <li class="item-params-list__item">38</li>
@@ -645,9 +807,6 @@
                                         <li class="item-params-list__item">XL</li>
                                         <li class="item-params-list__item">L</li>
                                     </ul>
-                                    <span class="tooltip tooltip_error"
-                                        >Чтобы добавить товар в корзину, выберите необходимый параметр</span
-                                    >
                                     <button class="link link_hover item-page-d__expand">Скрыть/раскрыть</button>
                                 </div>
                             </div>
@@ -696,8 +855,8 @@
                                     Натуральная кожа.
                                 </div>
                             </div>
-                            <div class="collapse-section is-expanded">
-                                <span class="collapse-section__heading">Заполненность рядов</span>
+                            <div class="collapse-section onb-rows">
+                                <span class="collapse-section__heading">Таблица рядов</span>
                                 <div class="collapse-section__body">
                                     <div class="stock-rows">
                                         <div class="stock-rows__numeration">
@@ -927,5 +1086,5 @@
             <!-- конец десктоп вид -->
         </div>
         <!-- контент -->
-    <script type="text/javascript" src="js/highlight-syntax.js?1074e338906425e041e4"></script><script type="text/javascript" src="js/ds-utils.js?1074e338906425e041e4"></script><script type="text/javascript" src="js/categories-icons-sprite.js?1074e338906425e041e4"></script><script type="text/javascript" src="js/ds-ui-kit.js?1074e338906425e041e4"></script></body>
+    <script type="text/javascript" src="js/highlight-syntax.js?1074e338906425e041e4"></script><script type="text/javascript" src="js/onboarding.js?1074e338906425e041e4"></script><script type="text/javascript" src="js/ds-utils.js?1074e338906425e041e4"></script><script type="text/javascript" src="js/categories-icons-sprite.js?1074e338906425e041e4"></script><script type="text/javascript" src="js/ds-ui-kit.js?1074e338906425e041e4"></script></body>
 </html>
