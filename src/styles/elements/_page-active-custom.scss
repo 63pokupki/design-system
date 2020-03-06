@@ -20,7 +20,20 @@
         padding: 0 25px;
         background: #fff;
         h2 {
+            height: 20px;
             font-size: 14px;
+            a {
+                display: flex;
+                width: 130px;
+                justify-content: space-between;
+                text-decoration: none;
+                &:visited {
+                    color: #906;
+                }
+            }
+            .icon-arrow-line-left {
+                font-size: 20px;
+            }
         }
 
         .slider {
