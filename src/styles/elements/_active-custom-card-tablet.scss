@@ -32,9 +32,9 @@
                 opacity: 1;
                 transition: all .3s;
             }
-            .card-active-custom__btn-toggle {
+            .icon-arrow-down {
                 transform: rotate(180deg);
-                transition: all .3s;
+                transition: all $transition-slow;
             }
             
             &:hover {
@@ -42,6 +42,9 @@
                     box-shadow: none;
                 }
             }    
+        }
+        .icon-arrow-down {
+            transition: all $transition-slow;
         }
         //ОТображает изображения в подкатергориях
         &.desktop-subcat {

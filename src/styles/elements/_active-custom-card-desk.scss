@@ -40,11 +40,14 @@
             opacity: 1;
             transition: all .8s;
         }
-        .arrow-down {
+        .icon-arrow-down {
             transform: rotate(-180deg);
             transition: all $transition-slow;
         }
 
+    }
+    .icon-arrow-down {
+        transition: all $transition-slow;
     }
 
     &__wrap {

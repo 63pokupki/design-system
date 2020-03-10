@@ -120,4 +120,10 @@
             }
         }
     }
+    &__show-all {
+        .checkbox__label {
+            font-size: 12px;
+            color: $color-primary;
+        }
+    }
 }
