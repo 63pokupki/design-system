@@ -4,6 +4,11 @@
     justify-content: flex-start;
     user-select: none;
     //Помещает позицию в столбец
+    &.is-selected {
+        .sorting__selected-position {
+            display: flex;
+        }
+    }
     &_col {
         .sorting__btn {
             flex-direction: column;

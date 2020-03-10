@@ -9,13 +9,17 @@
 
         }
         .card-active-custom__header {
-            .arrow-wrap {
-                transform: rotate(180deg);
-                transition: all .3s;
+            .icon-arrow-down {
+                transform: rotate(-180deg);
+                transition: all $transition-slow;
             }
-        }
+            }
     }
 }
+.icon-arrow-down {
+    transition: all $transition-slow;
+}
+
 
 .card-active-custom__wrap.mobile {
 
