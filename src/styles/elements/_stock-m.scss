@@ -108,7 +108,7 @@
         &__bar {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: flex-end;
         }
     }
     .stock-card-vertical-wrapper:hover .stock-card-vertical {
@@ -243,7 +243,7 @@
         }
 
         .org-get-position-btn {
-            margin-right: 10px;
+            margin-right: 20px;
         }
 
         // отображение по умолчанию
