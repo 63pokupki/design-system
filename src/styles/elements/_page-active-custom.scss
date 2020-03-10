@@ -24,8 +24,8 @@
             font-size: 14px;
             a {
                 display: flex;
-                width: 130px;
-                justify-content: space-between;
+                width: 100%;
+                justify-content: flex-start;
                 text-decoration: none;
                 color: $color-text-heading;
                 &:visited {
@@ -33,6 +33,7 @@
                 }
             }
             .icon-arrow-line-left {
+                margin: 0 5px 0 0;
                 font-size: 20px;
             }
         }

@@ -186,8 +186,10 @@
         background: transparent;
 
         .slider-wrap {
-            max-width: 320px;
+            // max-width: 320px;
+            max-width: max-content;
             transform: translateX(0px);
+
         }
 
         .slider-viewing {
@@ -232,12 +234,14 @@
 
     .card-active-custom__slider-items {
         max-height: auto;
+        width: 320px;
     }
 
     //Подкатегории
     .card-active-custom__img-subcategory {
         display: flex;
         position: relative;
+        justify-content: center;//Андрей
         max-width: 100%;
         max-height: 100%;
         margin-right: 20px;
