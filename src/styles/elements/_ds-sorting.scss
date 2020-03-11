@@ -3,10 +3,14 @@
     flex-direction: column;
     justify-content: flex-start;
     user-select: none;
+    position: relative;
     //Помещает позицию в столбец
     &.is-selected {
         .sorting__selected-position {
             display: flex;
+        }
+        .icon-check-in {
+            visibility: visible;
         }
     }
     &_col {
@@ -20,13 +24,15 @@
     }
     &__input {
         display: none;
-        // &:checked {
-        //     ~.ds-popover {
-        //        max-height: 200px;
-        //        visibility: visible;
-        //        opacity: 1; 
-        //     }
-        // }
+    }
+    // Птичка
+    .icon-check-in {
+        visibility: hidden;
+        position: absolute;
+        top: 4px;
+        left: -18px;
+        font-size: 12px;
+        color: $color-primary;
     }
     //Окно со списком popover
     .ds-popover_sorting {

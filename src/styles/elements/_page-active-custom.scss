@@ -31,6 +31,9 @@
                 &:visited {
                     color: #906;
                 }
+                &.is-disabled {
+                    pointer-events: none;
+                }
             }
             .icon-arrow-line-left {
                 margin: 0 5px 0 0;

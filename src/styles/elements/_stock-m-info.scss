@@ -38,6 +38,12 @@
         max-height: 278px;
         overflow: hidden;
     }
+    &__img {
+        max-width: 100%;
+        max-height: 100%;
+        height: auto;
+        width: auto;    
+    }
 
     &__cond {
         font-size: 14px;

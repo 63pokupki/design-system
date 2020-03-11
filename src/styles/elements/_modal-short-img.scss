@@ -322,6 +322,11 @@
                     }
                 }
             }
+            &.is-no-blur {
+                &:after {
+                    visibility: hidden;
+                }
+            }
             h5 {
                 margin: 20px 0 0 0;
             }
