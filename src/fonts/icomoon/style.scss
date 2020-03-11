@@ -1,6 +1,8 @@
 @import "~fonts/icomoon/variables";
 
-
+.icon-check-in:before {
+  content: "\e930";
+}
 .icon-duck:before {
   content: "\e92f";
 }
