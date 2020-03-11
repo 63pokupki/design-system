@@ -53,6 +53,23 @@
     &__params {
         display: flex;
         align-items: baseline;
+        position: relative;
+        &:hover {
+            .item-params-list {
+                &:after {
+                    border-bottom: 1px solid $click-load-color;
+                }
+            }
+        }
+        // Добавляет три точки в конце
+        &.dots {
+            padding: 0 20px 0 0;
+            .item-params-list {
+                &::after {
+                    display: flex;
+                }
+            }
+        }
     }
 
     &__params-b {
@@ -65,6 +82,18 @@
 
     & &__item-params-list {
         max-height: 25px;
+        position: relative;
+        // Три точки
+        &::after {
+            content: "...";
+            display: none;
+            position: absolute;
+            top: 3px;
+            right: 0;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
     }
 
     &__other {
