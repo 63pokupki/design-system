@@ -114,8 +114,15 @@
         &__bar {
             display: flex;
             align-items: center;
-            justify-content: flex-end;
+            justify-content: space-between;
+            // Чекбокс в блоке с кнопками отображаем только на мобиле
+            // @media (min-width: 769px) {
+            //     .checkbox.checkbox_accent.checkbox_circle {
+            //         visibility: hidden;
+            //     }
+            // }
         }
+
     }
     .stock-card-vertical-wrapper:hover .stock-card-vertical {
         box-shadow: unset;
