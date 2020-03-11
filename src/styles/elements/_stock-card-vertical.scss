@@ -95,6 +95,13 @@
             .stock-card-vertical__favorite {
                 display: flex;
             }
+            .stock-card-vertical__params {
+                overflow: hidden;
+            }
+            .item-params-list {
+                flex-wrap: nowrap;
+                overflow: auto;
+            }
         }
     }
 
