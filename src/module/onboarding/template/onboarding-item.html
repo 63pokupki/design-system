@@ -56,7 +56,10 @@
             <p>Краткий видеообзор по новой странице закупки можно посмотреть <a target="_blank" href="#" class="link link_hover">здесь.</a></p>
             <span>Бежим заказывать!</span>
             </div>`,
-                        doneLabel: "Перейти к покупкам"
+                        doneLabel: "Перейти к покупкам",
+                        beforeStep: () => {
+                            fScrollTo();
+                        }
                     }
                 ],
                 desctop: () => [
@@ -117,7 +120,10 @@
             <span>Бежим заказывать!</span>
             </div>`,
                         doneLabel: "Перейти к покупкам",
-                        tooltipClass: "onboarding-base-outer"
+                        tooltipClass: "onboarding-base-outer",
+                        beforeStep: () => {
+                            fScrollTo();
+                        }
                     }
                 ]
             };
@@ -165,6 +171,24 @@
                     }
                 } catch (e) {
                     console.error(e);
+                }
+            }
+
+            /**
+             * Прокрутка
+             * @param {Number} x - координата X прокрутки
+             * @param {Number} y - координата Y прокрутки
+             */
+            function fScrollTo(x = 0, y = 0) {
+                try {
+                    const options = {
+                        top: x,
+                        left: y,
+                        behavior: "smooth"
+                    };
+                    window.scrollTo(options);
+                } catch {
+                    window.scrollTo(x, y);
                 }
             }
         </script>
