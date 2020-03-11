@@ -56,7 +56,10 @@
             <p>Краткий видеообзор по новой странице закупки можно посмотреть <a target="_blank" href="#" class="link link_hover">здесь.</a></p>
             <span>Бежим заказывать!</span>
             </div>`,
-                        doneLabel: "Перейти к покупкам"
+                        doneLabel: "Перейти к покупкам",
+                        beforeStep: () => {
+                            fScrollTo();
+                        }
                     }
                 ],
                 desctop: () => [
@@ -117,7 +120,10 @@
             <span>Бежим заказывать!</span>
             </div>`,
                         doneLabel: "Перейти к покупкам",
-                        tooltipClass: "onboarding-base-outer"
+                        tooltipClass: "onboarding-base-outer",
+                        beforeStep: () => {
+                            fScrollTo();
+                        }
                     }
                 ]
             };
@@ -167,6 +173,24 @@
                     console.error(e);
                 }
             }
+
+            /**
+             * Прокрутка
+             * @param {Number} x - координата X прокрутки
+             * @param {Number} y - координата Y прокрутки
+             */
+            function fScrollTo(x = 0, y = 0) {
+                try {
+                    const options = {
+                        top: x,
+                        left: y,
+                        behavior: "smooth"
+                    };
+                    window.scrollTo(options);
+                } catch {
+                    window.scrollTo(x, y);
+                }
+            }
         </script>
 
         <style>
@@ -192,7 +216,7 @@
                 }
             }
         </style>
-    <link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?ef95eb510a444a352f51" rel="stylesheet"><link href="css/onboarding.css?ef95eb510a444a352f51" rel="stylesheet"><link href="css/ds-utils.css?ef95eb510a444a352f51" rel="stylesheet"><link href="css/ds-ui-kit.css?ef95eb510a444a352f51" rel="stylesheet"></head>
+    <link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?e11c293a39e735768ef6" rel="stylesheet"><link href="css/onboarding.css?e11c293a39e735768ef6" rel="stylesheet"><link href="css/ds-utils.css?e11c293a39e735768ef6" rel="stylesheet"><link href="css/ds-ui-kit.css?e11c293a39e735768ef6" rel="stylesheet"></head>
     <body>
         <!-- модалки -->
         <!-- размерная сетка -->
@@ -1086,5 +1110,5 @@
             <!-- конец десктоп вид -->
         </div>
         <!-- контент -->
-    <script type="text/javascript" src="js/highlight-syntax.js?ef95eb510a444a352f51"></script><script type="text/javascript" src="js/onboarding.js?ef95eb510a444a352f51"></script><script type="text/javascript" src="js/ds-utils.js?ef95eb510a444a352f51"></script><script type="text/javascript" src="js/categories-icons-sprite.js?ef95eb510a444a352f51"></script><script type="text/javascript" src="js/ds-ui-kit.js?ef95eb510a444a352f51"></script></body>
+    <script type="text/javascript" src="js/highlight-syntax.js?e11c293a39e735768ef6"></script><script type="text/javascript" src="js/onboarding.js?e11c293a39e735768ef6"></script><script type="text/javascript" src="js/ds-utils.js?e11c293a39e735768ef6"></script><script type="text/javascript" src="js/categories-icons-sprite.js?e11c293a39e735768ef6"></script><script type="text/javascript" src="js/ds-ui-kit.js?e11c293a39e735768ef6"></script></body>
 </html>
