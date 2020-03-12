@@ -42,7 +42,7 @@
     .ds-popover_sorting {
         position: absolute;
         top: 25px;
-        left: -25px;
+        right: -25px;
         &:hover {
             max-height: 1000px;
             visibility: visible;
