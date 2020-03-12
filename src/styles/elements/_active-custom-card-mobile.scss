@@ -302,6 +302,7 @@
             color: $color-primary;
             font-weight: 700;
             text-decoration: none;
+            pointer-events: none;
         }
 
         &:before,

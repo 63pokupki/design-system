@@ -18,8 +18,6 @@
         background: $card-color-bg;
         font-size: 13px;
         color: #000;
-        border-top: 1px solid transparent;
-        border-bottom: 2px solid $bg-wrapper-card-color;
     }
     &__tab {
         display: flex;
@@ -46,6 +44,9 @@
         width: 100%;
         background: #fff;
         padding: 5px 0px;
+        border-top: 2px solid $bg-wrapper-card-color;
+        border-bottom: 2px solid $bg-wrapper-card-color;
+
         &-container {
             display: flex;
             flex-direction: row;
@@ -76,7 +77,6 @@
         margin-top: 15px;
         margin-bottom: 15px;
         font-size: 12px;
-        font-weight: 600;
         color: $color-text-base;
     }
     &__switcher {

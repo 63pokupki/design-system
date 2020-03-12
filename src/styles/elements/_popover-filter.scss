@@ -3,13 +3,13 @@
     display: inline-flex;
     width: 155px;    
     padding: 10px 15px;
-    display: block;
     .checkbox {
         margin-bottom: 6px;
 
         &__label {
             color: $color-text-base;
             font-size: 11px;
+            text-transform: lowercase;
             &:after {
                 transform: translate(-24px, -75%) rotate(-45deg);
             }
@@ -35,7 +35,7 @@
         position: absolute;
         bottom: 55px;
         left: 0;
-        opacity: .5;
+        opacity: .2;
     }
     .ds-btn-f {
         width: 124px;
