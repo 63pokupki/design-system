@@ -378,10 +378,7 @@
                 font-size: 12px;
                 font-weight: 700;
                 text-decoration: none;
-
-                &:hover {
-                    text-decoration: underline;
-                }
+                pointer-events: none;
             }
 
             &.hidden {

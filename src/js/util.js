@@ -343,6 +343,8 @@ if (modalListCat) {
         ) {
             toggleBtn.addEventListener("click", () => {
                 content.classList.toggle("is-toggle");
+                console.log("Click");
+                
             });
             toggleLinkPos.addEventListener("click", () => {
                 content.classList.toggle("is-toggle");

@@ -63,7 +63,7 @@
 
         .ds-popover {
             position: absolute;
-            top: 20px;
+            top: 30px;
             right: -25px;
             z-index: 9999;
         }
@@ -114,4 +114,11 @@ footer {
 
 }
 
+@media (max-width: 992px) {
+    .pac__all-categories {
+        h2 {
+            display: none;
+        }
+    }
+}
 
