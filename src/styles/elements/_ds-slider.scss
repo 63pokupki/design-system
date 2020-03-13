@@ -5,6 +5,8 @@
     min-width: 280px;
     height: auto;
     background: #edf5fa;
+    padding: 10px 0;
+    transform: translateX(-25px);
 
     &.no-btn {
 
@@ -65,10 +67,10 @@
             white-space: nowrap;
 
             a {
-                font-size: 14px;
+                font-size: 12px;
                 font-weight: 700;
                 text-decoration: none;
-                color: $sky-blue-color;
+                color: $color-primary;
             }
         }
     }
