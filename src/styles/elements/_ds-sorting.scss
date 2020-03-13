@@ -7,7 +7,7 @@
     //Помещает позицию в столбец
     &.is-selected {
         .sorting__selected-position {
-            display: flex;
+            display: block;
         }
         .icon-check-in {
             visibility: visible;
@@ -57,6 +57,7 @@
         flex-direction: row;
         position: relative;
         max-width: 200px;
+        outline: none;
         &:hover {
             cursor: pointer;
             // &:after {

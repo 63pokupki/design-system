@@ -199,7 +199,7 @@
     &__toggle-block-right {
         flex-direction: column;
         justify-content: space-between;
-        overflow: hidden;
+        // overflow: hidden; //Убрал, чтобы не обрезался тултип
     }
 
     &__img {
@@ -316,6 +316,7 @@
                 font-weight: 700;
                 font-size: 14px;
                 line-height: 14px;
+                color: $dark-grey-color;
                 span {
                     color: $dark-grey-color;
                     font-size: 14px;
