@@ -7,7 +7,7 @@
     //Помещает позицию в столбец
     &.is-selected {
         .sorting__selected-position {
-            display: flex;
+            display: block;
         }
         .icon-check-in {
             visibility: visible;
