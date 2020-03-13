@@ -2,6 +2,7 @@
 .org-edit-position-btn {
     font-size: 19px;
     color: $color-primary;
+    text-decoration: none;
 
     &:active {
         @include deep-click(0.9);
