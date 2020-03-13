@@ -199,7 +199,7 @@
     &__toggle-block-right {
         flex-direction: column;
         justify-content: space-between;
-        overflow: hidden;
+        // overflow: hidden; //Убрал, чтобы не обрезался тултип
     }
 
     &__img {

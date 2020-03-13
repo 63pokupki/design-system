@@ -19,7 +19,6 @@
         transform: translateY(-50%);
     }
     &_bg {
-        margin: 100px 0;
         &:before {
             content: "";
             position: absolute;
@@ -49,6 +48,7 @@
 // Контейнер
 
 .ds-loader-container {
+    padding: 100px 0 0 0;
     position: absolute;
     top: 0;
     right: 0;

@@ -29,7 +29,7 @@
     &__button {
         position: absolute;
         top: 50%;
-        right: 35px;
+        right: 20px;
         border-radius: 50%;
         transform: translateY(-50%);
         &:active {
@@ -37,6 +37,12 @@
         }
     }
 
+    &__category {
+        top: 50%;
+        right: 55px;
+        transform: translateY(-50%);
+        position: absolute;
+    }
     &__button-clear {
         position: absolute;
         width: 22px;
@@ -49,18 +55,15 @@
         transform: translateY(-50%);
         &:active {
             transform: translateY(-50%) scale(0.9);
-        }
-
-    
+        } 
+    }
+}
+// Поиск с кнопкой очистки
+.search-clear {
+    .search__button {
+        right: 35px;
     }
 
-
-    &__category {
-        top: 50%;
-        right: 55px;
-        transform: translateY(-50%);
-        position: absolute;
-    }
 }
 
 .search.has-categories {
