@@ -19,7 +19,15 @@
         width: 100%;
         padding: 0 25px;
         background: #fff;
+        // Скрываем псевдо заголовок
         h1 {
+            position: absolute;
+            clip: rect(0 0 0 0);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+        }
+        h2 {
             height: 20px;
             font-size: 14px;
             a {
@@ -39,7 +47,7 @@
                 margin: 0 5px 0 0;
                 font-size: 20px;
             }
-        }
+        }        
 
         .slider {
             overflow: hidden;
