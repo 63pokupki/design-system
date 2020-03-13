@@ -30,12 +30,14 @@
                }
            }
            p {
+                height: 14px;
                 font-size: 12px;
                 text-overflow: ellipsis;
                 // width: 90px;
                 max-width: 90px; 
                 white-space: nowrap;
                 overflow: hidden;
+
                 &::after {
                     content: attr(data-full-name);
                     visibility: hidden;
