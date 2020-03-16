@@ -23,7 +23,7 @@
     }
     &__txt {
         display: inline-flex;
-        color: #fff;
+        color: $color-primary;
         z-index: 2;
         padding: 0 10px;
         flex-wrap: nowrap;
@@ -50,11 +50,13 @@
 .statusbar.is-filled {
     background: $statusbar_filled-color-bg;
     border: none;
-    color: $statusbar-color-txt;
+    color: #ffffff;
     .statusbar__line { 
         color: #fff;
         transition: width .3s;
     }
-    
+    .statusbar__txt {
+        color: #ffffff;
+    }
 }
 
