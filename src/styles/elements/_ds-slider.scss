@@ -7,13 +7,37 @@
     background: #edf5fa;
     padding: 10px 0;
 
+    // Скрываем все кнопки
     &.no-btn {
-
+        .slider {
+            padding: 10px;
+        }
         .btn-l,
         .btn-r {
             display: none;
         }
     }
+
+    // Скрываем левую кнопку
+    &.no-l-btn {
+        .btn-l {
+            pointer-events: none;
+            img {
+                visibility: hidden;
+            }
+        }
+    }
+
+    // Скрываем правую кнопку
+    &.no-r-btn {
+        .btn-r {
+            pointer-events: none;
+            img {
+                visibility: hidden;
+            }
+        }
+    }
+    
 
     .btn-l,
     .btn-r {
