@@ -229,6 +229,12 @@
         }
     }
 
+    &__ht-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
     &__hashtags {
         display: flex;
         margin: 5px;
