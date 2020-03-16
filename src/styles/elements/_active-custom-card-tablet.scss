@@ -247,7 +247,7 @@
             display: flex;
             flex-direction: column;
             padding-left: 5%;
-            margin-right: 20px;            
+            margin-right: 20px;        
         }
         .organizer-block__rating {
             visibility: hidden;
@@ -268,11 +268,13 @@
             p {
                 margin: 0 0 0 5px;
                 color: $dark-grey-color;
+                white-space: nowrap;
             }
 
             span {
                 color: $dark-brown-color;
                 font-weight: 600;
+                white-space: nowrap;
             }
         }
         .card-active-custom__like {

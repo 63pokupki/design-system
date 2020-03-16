@@ -13,7 +13,7 @@
                 transform: rotate(-180deg);
                 transition: all $transition-slow;
             }
-            }
+        }            
     }
 }
 .icon-arrow-down {
@@ -122,7 +122,7 @@
         .organizer-block {
             display: flex;
             flex-direction: row;
-            align-items: flex-end;
+            align-items: center;
 
             p {
                 margin-right: 5px;
