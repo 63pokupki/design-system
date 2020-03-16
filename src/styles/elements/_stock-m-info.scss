@@ -352,6 +352,21 @@
         max-width: 280px;
     }
 
+    .stock-m-info__section-collapse {
+        position: relative;
+        z-index: 7;
+    }
+
+    .stock-m-info__collapse.is-expanded {
+        .collapse-section__heading {
+            color: $dark-brown-color;
+        }
+    }
+
+    .collapse-section__heading {
+        color: grey;
+    }
+
     &:after {
         content: "";
         position: absolute;
