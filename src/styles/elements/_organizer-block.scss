@@ -56,18 +56,9 @@
                     transition: .3s; 
                                         
                 }
-                &::before {
-                    content: "";
-                    height: 14px;;
-                    width: 3px;
-                    background-color: #fff;
-                    position: absolute;
-                    left: 84px;
-                    top: 0;
-                }
                 &:hover::after {
                     visibility: visible;
-                    opacity: 1;                                               
+                    opacity: 1;                                           
                 }
             } 
         }        
