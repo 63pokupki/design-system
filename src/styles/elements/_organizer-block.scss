@@ -53,7 +53,17 @@
                     transition: .3s;
                     font-size: 12px;
                     font-weight: 600;
-                    transition: .3s;                     
+                    transition: .3s; 
+                                        
+                }
+                &::before {
+                    content: "";
+                    height: 14px;;
+                    width: 3px;
+                    background-color: #fff;
+                    position: absolute;
+                    left: 84px;
+                    top: 0;
                 }
                 &::before {
                     content: "";
