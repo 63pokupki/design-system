@@ -14,7 +14,7 @@ module.exports = {
         "./node_modules/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js",
         "./node_modules/prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"
     ],
-    "onboarding": ["./node_modules/intro.js/introjs.css", "./src/styles/page/onboarding.scss", "./src/module/onboarding/js/onboarding.js"],
+    "onboarding": ["./node_modules/@63pokupki/onboarding-core/index.css", "./src/styles/page/onboarding.scss", "./src/module/onboarding/js/onboarding.js"],
     // Внутренние стили дизайн системы - не включается в конечную сборку
     "ds-utils": ["./src/styles/utils/_ds-utils.scss", "./src/js/util.js"],
     // Иконки для категорий закупок

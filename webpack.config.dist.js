@@ -15,7 +15,7 @@ module.exports = {
         "cookies": ["./src/styles/page/cookies.scss"],
         "welcome-box": ["./src/styles/page/welcome-box.scss", "./src/js/welcome-box.js"],        
         "stock" : ["./src/styles/page/stock.scss"],
-        "onboarding": ["./node_modules/intro.js/introjs.css", "./src/styles/page/onboarding.scss"],
+        "onboarding": ["./node_modules/@63pokupki/onboarding-core/index.css", "./src/styles/page/onboarding.scss"],
     }, //объект с точками входа
     output: {
         path: path.join(__dirname, "dist/"), //общий путь для выходных файлов

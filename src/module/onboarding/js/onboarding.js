@@ -1,4 +1,4 @@
-const introJs = require("intro.js");
+const introJs = require("@63pokupki/onboarding-core");
 
 const DEFAULT_OPTIONS = {
     tooltipClass: "onboarding-base-steps",
