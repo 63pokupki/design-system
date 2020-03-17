@@ -88,7 +88,9 @@
                     display: flex;
                 }
             }
-
+            .normal {
+                max-width: 100%;
+            }
         }
 
         &__arrow {
@@ -215,7 +217,7 @@
             .item-params-list {
                 position: relative;
                 left: -5px;
-                max-height: 26px;
+                // max-height: 26px;
                 transition: all .3s;
                 &.is-expanded {
                     max-height: 300px;

@@ -151,19 +151,23 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
         width: 100%;
     }
 
     &__statusbar {
         max-width: 192px;
-        text-align: center;
+        text-align: center;        
     }
 
     &__start-date-collection {
         font-size: 11px;
         margin: 10px 0 0 0;
         color: $dark-grey-color;
+    }
+
+    &__organizer-block {
+        min-width: 135px;
     }
 
     &__statusbar,
