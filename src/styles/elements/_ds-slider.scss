@@ -89,6 +89,10 @@
             margin-right: 40px;
             font-size: 12px;
             white-space: nowrap;
+            // Для активных закупок
+            &:nth-of-type(3n) {
+                margin-right: 0px !important
+            }            
 
             a {
                 font-size: 12px;
