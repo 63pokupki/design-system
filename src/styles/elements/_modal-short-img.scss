@@ -1,6 +1,11 @@
 .modal-short-img {
 
     .modal {
+
+        h5 {
+            font-size: 12px;
+        }
+        
         &__wrap {
             max-width: 768px;
             //Кнопки влево/вправо
@@ -207,13 +212,14 @@
                 font-size: 16px;
                 color: $color-text-base;
                 &:nth-child(2) {
-                    font-size: 11px;
+                    font-size: 12px;
                 }
             }
         }
         &__goods-param {
             display: flex;
             flex-direction: column;
+
             .item-params-list {
                 position: relative;
                 left: -5px;
