@@ -100,22 +100,22 @@
     }
 
     &__heading {
-        width: 400px;
+        width: 500px;
         padding-right: 50px;
         position: relative;
         margin-top: 0;
         font-size: 14px;
         font-weight: 700;
         color: $dark-brown-color;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        // white-space: nowrap;
+        // overflow: hidden;
+        // text-overflow: ellipsis;
         a {
             color: $dark-brown-color;
             text-decoration: none;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            // white-space: nowrap;
+            // overflow: hidden;
+            // text-overflow: ellipsis;
 
             &:visited {
                 color: #906;
@@ -156,7 +156,8 @@
     }
 
     &__statusbar {
-        max-width: 192px;
+        width: 100%;
+        max-width: 200px;
         text-align: center;        
     }
 
