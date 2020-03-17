@@ -99,6 +99,7 @@
     .stock-full__wrapper.is-expanded {
         .stock-tabs {
             position: relative;
+            max-height: 1000px;
             z-index: 3;
 
             &__label {
@@ -109,9 +110,6 @@
                 position: static;
                 z-index: initial;
             }
-        }
-        .stock-tabs {
-            max-height: 500px;
         }
     }
 }
