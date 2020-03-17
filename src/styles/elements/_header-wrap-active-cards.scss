@@ -81,13 +81,13 @@
         @media (max-width: 450px) {
             margin-right: 40px;
         }
-        @media (max-width: 992px) {
-            .sorting__btn {
-                &::after {
-                   right: 0; 
-                }
-            }
-        } 
+        // @media (max-width: 992px) {
+        //     .sorting__btn {
+        //         &::after {
+        //            right: 0; 
+        //         }
+        //     }
+        // } 
     }
     &__switcher {
         &-name {

@@ -131,7 +131,7 @@
             .card-active-custom__status-block {
                 display: flex;
                 flex-direction: row;
-                flex-wrap: wrap;
+                flex-wrap: nowrap;
                 justify-content: flex-start;
                 align-items: baseline;
                 flex-shrink: 0;
