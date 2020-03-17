@@ -76,12 +76,12 @@
             z-index: 9999;
         }
     }
-    @media (max-width: 992px) {
+    @media (max-width: 1080px) {
         .card-active-custom-desktop {
             display: none;
         }
     }
-    @media (min-width: 993px) {
+    @media (min-width: 1081px) {
         .card-active-custom.tablet {
             display: none;
         }

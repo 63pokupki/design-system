@@ -12,10 +12,12 @@
             text-transform: lowercase;
             &:after {
                 transform: translate(-24px, -75%) rotate(-45deg);
+                top: 8px;
             }
             &:before {
                 width: 12px;
-                height: 12px;                
+                height: 12px;
+                top: 2px;               
             }
             white-space: nowrap;
             &:hover {
