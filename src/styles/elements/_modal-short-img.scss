@@ -29,7 +29,8 @@
             max-width: 100%;
             position: relative;
             margin-right: 8px;
-            overflow: visible;
+            overflow-x: hidden;
+            overflow-y: auto;
         }
         &__col {
             display: flex;

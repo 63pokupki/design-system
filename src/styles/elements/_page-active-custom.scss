@@ -71,9 +71,15 @@
 
         .ds-popover {
             position: absolute;
-            top: 30px;
-            right: -25px;
+            right: -60px;
             z-index: 9999;
+            &::before {
+                top: -7px;
+                right: 50px;
+            }
+            @media (max-width: 992px) {
+                top: 40px;
+            }
         }
     }
     @media (max-width: 1080px) {
