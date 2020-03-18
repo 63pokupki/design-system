@@ -160,7 +160,7 @@
         }
 
         .card-active-custom__heading {
-            display: flex;
+            display: block;
             align-items: flex-start;
             font-family: Open Sans;
             font-style: normal;
@@ -418,6 +418,11 @@
                 span {
                     color: $color-primary;
                 }
+            }
+        }
+        .card-active-custom__delivery-date {
+            p::nth-child(1) {
+                margin: 0 0 5px 0;
             }
         }
         .card-active-custom__description-txt {
