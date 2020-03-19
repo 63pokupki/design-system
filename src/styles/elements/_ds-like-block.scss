@@ -15,6 +15,11 @@
         font-size: 20px;
         color: $color-primary;
     }
+    &_txt-hidden {
+        .like__text {
+            visibility: hidden;
+        }
+    }
     &:hover {
         .icon-heart {
             @extend .icon-heart-filled
