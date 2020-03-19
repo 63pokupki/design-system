@@ -53,6 +53,7 @@
     .collapse-section__body {
         max-height: 500px;
         margin-top: 10px;
+        overflow: auto;
         transition: max-height $transition-primary, margin-top $transition-primary;
     }
 }
