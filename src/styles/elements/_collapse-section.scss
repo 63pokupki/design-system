@@ -12,6 +12,12 @@
         color: #1e2023;
         position: relative;
         
+        &_no-after {
+            &::after {
+                display: none;
+            }
+        }
+        
         &:after {
             position: absolute;
             content: "";
