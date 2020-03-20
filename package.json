@@ -34,7 +34,7 @@
     "autoprefixer": "^9.7.4",
     "babel-loader": "^8.0.6",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "browserslist": "^4.9.1",
+    "browserslist": "^4.10.0",
     "copy-webpack-plugin": "^5.1.1",
     "cross-env": "^7.0.2",
     "css-loader": "^3.4.2",
@@ -62,7 +62,7 @@
     "svg-sprite-loader": "^4.2.1",
     "url-loader": "^4.0.0",
     "vue": "^2.6.11",
-    "vue-loader": "^15.9.0",
+    "vue-loader": "^15.9.1",
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.11",
     "webpack": "^4.42.0",
@@ -80,7 +80,7 @@
     "@63pokupki/onboarding-core": "latest",
     "@babel/runtime": "^7.8.7",
     "clipboard": "^2.0.6",
-    "npm": "^6.14.2",
+    "npm": "^6.14.3",
     "prismjs": "^1.19.0"
   },
   "bugs": {
