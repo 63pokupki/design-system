@@ -13,6 +13,10 @@
         margin-bottom: 10px;
         line-height: 21px;
         display: block;
+        @media screen and (max-width: 1024px) {
+            display: none;
+        }
+
     }
 
     &__sku {
@@ -41,6 +45,9 @@
         &__icon {
             font-size: 22px;
             color: $color-primary;
+        }
+        @media screen and (max-width: 1024px) {
+            display: none;
         }
     }
 
