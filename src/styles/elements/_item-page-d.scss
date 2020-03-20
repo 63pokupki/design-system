@@ -17,7 +17,27 @@
         position: relative;
 
         .slider-viewing {
-            height: 80px;
+            // height: 80px;
+            min-height: 100px;
+            overflow-x: auto;
+            overflow-y: hidden;
+
+            // Стилизованный скролл
+            &::-webkit-scrollbar {
+                height: 7px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                border-radius: 3px;
+                background: $color-primary;
+                width: 30px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: #e0eef7;
+                border-radius: 3px;
+            }
+
         }
 
         .slider-wrap {
@@ -79,6 +99,7 @@
     &__collapse {
         margin-bottom: 15px;
         position: relative;
+
         &:after {
             content: "";
             width: 100%;
@@ -87,7 +108,7 @@
             bottom: 0;
             left: 0;
             z-index: 2;
-            background: linear-gradient(0deg,#fff,hsla(0,0%,100%,0) 105%);
+            background: linear-gradient(0deg, #fff, hsla(0, 0%, 100%, 0) 105%);
         }
     }
 
@@ -97,6 +118,7 @@
                 display: none;
             }
         }
+
         &__body {
             max-height: 0;
             line-height: 24px;

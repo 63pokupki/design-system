@@ -11,6 +11,20 @@
         // padding: 0 25px;
         background: #fff;
     }
+    .search-clear {
+        @media (max-width: 450px) {
+            .search__bar {
+                height: 32px;
+            }
+            .search__button {
+                right: 50px;
+            }
+            .search__button-clear {
+                right: 26px;
+            }
+    
+        }
+    }
 
     &__all-categories {
         display: flex;
@@ -56,6 +70,13 @@
     .search {
         max-width: 426px;
         margin: 20px auto;
+        padding: 0 20px;
+        .search__button {
+            right: 55px;
+        }
+        .search__button-clear {
+            right: 32px;
+        }
     }
 
     .wrapper-active-cards {
@@ -82,6 +103,22 @@
             }
         }
     }
+
+    .header-wrap-card__switcher {
+        @media (max-width: 500px) {
+            flex-direction: row-reverse;
+            .switcher__label {
+                margin: 0 0 0 15px;
+            }
+        }
+    }
+    .header-wrap-card__container-switcher {
+        @media (max-width: 500px) {
+            height: 32px;
+        }
+    }
+
+
     @media (max-width: 1080px) {
         .card-active-custom-desktop {
             display: none;
