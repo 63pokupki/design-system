@@ -304,6 +304,10 @@
             text-decoration: none;
             pointer-events: none;
         }
+        span {
+            color: $color-primary;
+            font-weight: 700;
+        }
 
         &:before,
         &:after {
@@ -335,17 +339,30 @@
     }
 
     .card-active-custom__description-txt {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+
         a {
             padding-right: 0;
             font-size: 12px;
             color: $dark-brown-color;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
         }
 
         &.is-toggle a {
             white-space: normal;
+        }
+    }
+    .card-active-custom__delivery-date,
+    .card-active-custom__payment-method {
+        span {
+            color: #4B4B4B;
+        }
+    }
+
+    .card-active-custom__access-lvl {
+        p {
+            margin-top: 4px;
         }
     }
 
@@ -377,7 +394,6 @@
 
         span {
             font-size: 11px;
-            color: $dark-grey-color;
         }
 
         a {
