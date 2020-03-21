@@ -185,19 +185,22 @@
     .card-active-custom__slider-img {
         justify-content: center;
         position: relative;
-        max-height: 295px;
+        // max-height: 295px;
         height: auto;
         background: transparent;
 
         .slider-wrap {
             // max-width: 320px;
             max-width: max-content;
+            min-height: 100%;
             transform: translateX(0px);
 
         }
 
         .slider-viewing {
             max-width: 320px;
+            max-height: 320px;
+            height: 100%;
         }
         .arrow {
             &:after, &:before {
@@ -237,8 +240,12 @@
     }
 
     .card-active-custom__slider-items {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         max-height: auto;
         width: 320px;
+        position: relative;
     }
 
     //Подкатегории
@@ -248,50 +255,53 @@
         justify-content: center;//Андрей
         max-width: 100%;
         max-height: 100%;
-        margin-right: 20px;
+        // margin-right: 20px;
 
-        .hover-translucend {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            position: absolute;
-            top: 85%;
-            width: 100%;
-            height: 45px;
-            padding: 0 8px;
-            background: rgba(255, 255, 255, 0.8);
-            transition: .4s;
-            cursor: pointer;
-
-            p {
-                visibility: visible;
-                margin: 0;
-                font-size: 12px;
-                font-weight: 600;
-                line-height: 14px;
-                text-align: center;
-                color: $dark-grey-color;
-
-            }
-
-            p:nth-child(1) {
-                max-width: 50%;
-                text-align: left;
-            }
-
-            p:nth-child(2) {
-                font-size: 14px;
-                font-weight: 600;
-            }
-        }
 
         img {
-            width: auto;
+            width: 100%;
             margin: 0;
         }
 
     }
+    .hover-translucend {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 45px;
+        padding: 0 8px;
+        background: rgba(255, 255, 255, 0.8);
+        transition: .4s;
+        cursor: pointer;
+        z-index: 10;
+
+        p {
+            visibility: visible;
+            margin: 0;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 14px;
+            text-align: center;
+            color: $dark-grey-color;
+
+        }
+
+        p:nth-child(1) {
+            max-width: 50%;
+            text-align: left;
+        }
+
+        p:nth-child(2) {
+            font-size: 14px;
+            font-weight: 600;
+        }
+    }
+
 
     .card-active-custom__hashtags {
         display: inline-flex;
@@ -347,6 +357,9 @@
             padding-right: 0;
             font-size: 12px;
             color: $dark-brown-color;
+            // white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
         }
 
         &.is-toggle a {
@@ -379,7 +392,6 @@
     }
     
     .card-active-custom__delivery-date,
-    .card-active-custom__access-lvl,
     .card-active-custom__payment-method,
     .card-active-custom__comments {
         display: flex;
@@ -388,8 +400,8 @@
         p {
             font-size: 11px;
             font-weight: 600;
-            margin-bottom: 2px;
             color: $dark-brown-color;
+            white-space: nowrap;
         }
 
         span {
@@ -403,6 +415,19 @@
             }
         }
     }
+    .card-active-custom__delivery-date,
+    .card-active-custom__payment-method {
+        p {
+            margin-bottom: 2px;
+        }
+    }
+
+    .card-active-custom__comments {
+        p {
+            margin-bottom: 0;
+        }
+    }
+
 
 
 }
