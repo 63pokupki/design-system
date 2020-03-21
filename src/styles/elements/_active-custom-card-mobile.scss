@@ -353,7 +353,7 @@
         text-overflow: ellipsis;
         overflow: hidden;
 
-        a {
+        a, p {
             padding-right: 0;
             font-size: 12px;
             color: $dark-brown-color;
@@ -373,11 +373,6 @@
         }
     }
 
-    .card-active-custom__access-lvl {
-        p {
-            margin-top: 4px;
-        }
-    }
 
     .card-active-custom__delivery-date,
     .card-active-custom__payment-method,
@@ -392,6 +387,7 @@
     }
     
     .card-active-custom__delivery-date,
+    .card-active-custom__access-lvl,
     .card-active-custom__payment-method,
     .card-active-custom__comments {
         display: flex;
@@ -416,6 +412,7 @@
         }
     }
     .card-active-custom__delivery-date,
+    .card-active-custom__access-lvl,
     .card-active-custom__payment-method {
         p {
             margin-bottom: 2px;
