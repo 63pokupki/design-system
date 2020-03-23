@@ -15,6 +15,7 @@
     // блок с ячейками
     &__values {
         padding: 5px 1px;
+        overflow-x: auto;
     }
 
     &__org {

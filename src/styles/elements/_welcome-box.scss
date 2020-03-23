@@ -79,13 +79,13 @@
         background-color: #ff4664;
 
         .promo-for-begginners__heading {
-            font-size: 18px;
+            font-size: 85px;
             font-weight: 600;
             color: $background-color-primary;
         }
         .promo-for-begginners__txt {
             color: $background-color-primary;
-            font-size: 14px;
+            font-size: 46px;
             font-weight: 600;
         }
         .promo-for-begginners__btn {
@@ -97,7 +97,7 @@
         display: flex;
         width: 100%;
         max-width: 260px;
-        margin: 0 auto;
+        margin: 0 0 0 120px;
     }
 
     &__banner-promo {
