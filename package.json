@@ -67,7 +67,9 @@
     "vue-template-compiler": "^2.6.11",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "^3.10.3",
+    "clipboard": "^2.0.6",
+    "prismjs": "^1.19.0"
   },
   "files": [
     "dist"
@@ -81,10 +83,7 @@
   "license": "BSD-3-Clause",
   "dependencies": {
     "@63pokupki/onboarding-core": "latest",
-    "@babel/runtime": "^7.9.2",
-    "clipboard": "^2.0.6",
-    "npm": "^6.14.3",
-    "prismjs": "^1.19.0"
+    "@babel/runtime": "^7.9.2"
   },
   "bugs": {
     "url": "https://github.com/63pokupki/design-system/issues"
