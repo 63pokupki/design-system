@@ -6,13 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Модальные окна</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?946483db4cba2763403d" rel="stylesheet"><link href="css/ds-utils.css?946483db4cba2763403d" rel="stylesheet"><link href="css/ds-ui-kit.css?946483db4cba2763403d" rel="stylesheet"></head>
+<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?5c9799c3aff4de0b34ce" rel="stylesheet"><link href="css/ds-utils.css?5c9799c3aff4de0b34ce" rel="stylesheet"><link href="css/ds-ui-kit.css?5c9799c3aff4de0b34ce" rel="stylesheet"></head>
 
 <body class="body__modals" style="position: relative;">
 
     <h1 class="ds-title">Модальные окна</h1>
     <div class="ds-text ds-center bg-color-error txt-color-white">Для отключения прокрутки, при активной модалке, необходимо присвоить класс <span class="ds-hl">.disable-scroll</span> элкементу <span class="ds-hl">body</span></div>
     <div class="ds-wrapper">
+
+        <!-- Ошибка ЧС оплаты -->
+        <h2 class="ds-title">Ошибка ЧС оплаты</h2>
+        <div class="modal modal-payment-error is-visible demo">
+            <div class="modal__wrap" style="margin: 10px">
+                <div class="modal__btn-close"><i class="ds-icon icon-close"></i></div>
+                <div class="modal__header">Ошибка</div>
+                <div class="modal__content">
+                    <div class="modal-payment-error__body">
+                        <p class="modal-payment-error__txt">
+                            Вам ограничена возможность совершения новых заказов из-за неоплаты.
+                        </p>
+                        <p class="modal-payment-error__txt">Перейдите в “Корзину” для оплаты</p>
+
+                    </div>
+                </div>
+                <div class="btn-container">
+                    <button class="ds-btn btn-continue">
+                        <div class="ds-btn__text">Продолжить</div>
+                    </button>
+                    <button class="ds-btn ds-btn_hover btn-in-card">
+                        <div class="ds-btn__text">Перейти в корзину</div>
+                    </button>
+                </div>
+            </div>
+            <div class="modal__bg" style="position: absolute;"></div>
+        </div>
+    
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <div class="modal is-visible">
+                    <div class="modal__wrap" style="margin: 10px">
+                        <div class="modal__btn-close"><i class="ds-icon icon-close"></i></div>
+                        <div class="modal__header">Имя окна</div>
+                        <div class="modal__content">Здесь какой-нибудь контент</div>
+                    </div>
+                    <div class="modal__bg"></div>
+                </div>
+            </script>
+        </div>
+
         <h2 class="ds-title">Модалка-информер popover</h2>
         <div class="ds-text">Внутрь можно поместить необходимые
             элементы, например чекбоксы или просто текст</div>
@@ -2316,6 +2357,6 @@
     
     
 
-<script type="text/javascript" src="js/highlight-syntax.js?946483db4cba2763403d"></script><script type="text/javascript" src="js/ds-utils.js?946483db4cba2763403d"></script><script type="text/javascript" src="js/categories-icons-sprite.js?946483db4cba2763403d"></script><script type="text/javascript" src="js/ds-ui-kit.js?946483db4cba2763403d"></script></body>
+<script type="text/javascript" src="js/highlight-syntax.js?5c9799c3aff4de0b34ce"></script><script type="text/javascript" src="js/ds-utils.js?5c9799c3aff4de0b34ce"></script><script type="text/javascript" src="js/categories-icons-sprite.js?5c9799c3aff4de0b34ce"></script><script type="text/javascript" src="js/ds-ui-kit.js?5c9799c3aff4de0b34ce"></script></body>
 
 </html>
