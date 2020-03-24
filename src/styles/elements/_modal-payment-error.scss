@@ -1,0 +1,33 @@
+.modal-payment-error {
+    .modal__header {
+        font-size: 24px;
+        line-height: 16px;
+    }
+    &__body {
+        max-width: 365px;
+        text-align: center;
+    }
+    &__txt {
+        margin: 0;
+        font-size: 16px;
+        line-height: 28px;
+    }
+    .btn-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 25px auto 10px;
+    }
+    .ds-btn {
+        width: 180px;
+        height: 36px;
+    }
+    .ds-btn__text {
+        font-size: 14px;
+    }
+    .btn-continue {
+        margin: 0 23px 0 0;
+    }
+}
+
+
