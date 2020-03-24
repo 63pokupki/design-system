@@ -136,11 +136,22 @@
         .header-wrap-card__tabs {
             display: none;
         }
+        .slider-01 {
+            display: none;
+        }
+        .ac-menu-filter-categories {
+            display: flex;
+        }
+
     }
     @media (min-width: 768px) {
         .card-active-custom__wrap.mobile {
             display: none;
         }
+        .ac-menu-filter-categories {
+            display: none;
+        }
+
     }
 }
 
