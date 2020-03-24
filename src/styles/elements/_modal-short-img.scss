@@ -179,7 +179,9 @@
                 }
 
                 &-items {
+                    max-width: 80px;
                     margin-right: 20px;
+
                 }
             }           
 
@@ -236,6 +238,10 @@
         &__btn-link {
             color: $color-text-light-grey;
             font-size: 11px;
+            visibility: hidden;
+            &.is-visible {
+                visibility: visible;
+            }
         }
         &__content {
             &-color, &-size {
