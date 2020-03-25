@@ -293,7 +293,7 @@
             }
         }
 
-        &__minus, &__plus {
+        .btn-sum__minus, .btn-sum__plus {
             position: relative;
             width: 20px;
             height: 20px;
@@ -382,5 +382,17 @@
         }
 
     }
+    .btn-sum__minus, .btn-sum__plus {
+        background: $color-inactive;
+        color: #ffffff;
+        &:active {
+            transform: scale(.95);
+        }
+        &:hover {
+            background: $color-primary;
+        }
+
+    }
+
 }
 
