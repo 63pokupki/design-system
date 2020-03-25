@@ -10,6 +10,10 @@
         margin: 20px 0 0 0;
         // padding: 0 25px;
         background: #fff;
+        @media (max-width: 1024px) {
+            visibility: hidden;
+        }
+
     }
     .search-clear {
         @media (max-width: 450px) {
@@ -166,6 +170,9 @@ footer {
 .pagination-container {
     display: flex;
     margin-top: 100px;
+    @media (max-width: 1024px) {
+        margin: 100px 0 25px 0;
+    }
 
 }
 

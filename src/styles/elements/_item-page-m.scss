@@ -46,6 +46,9 @@
             font-size: 22px;
             color: $color-primary;
         }
+        .icon-heart-filled {
+            color: $color-favorite-icon-heart;
+        }
         @media screen and (max-width: 1024px) {
             display: none;
         }

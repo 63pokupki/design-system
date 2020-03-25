@@ -41,6 +41,7 @@
         position: relative;
         flex-direction: row;
         align-items: center;
+        margin: 0px 0 12px 0;
 
         p {
             font-size: 11px;
@@ -99,7 +100,7 @@
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        margin: 0 0 25px 0;
+        margin: 0 0 18px 0;
 
         .statusbar {
             width: 100%;
@@ -111,13 +112,13 @@
     }
     .card-active-custom__like-single {
         .icon-heart {
-            font-size: 30px;
+            font-size: 24px;
             color: $color-primary;
         }
     }
 
     .card-active-custom__organizer-block {
-        margin-bottom: 20px;
+        margin-bottom: 5px;
 
         .organizer-block {
             display: flex;
@@ -352,6 +353,7 @@
         // white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
+        margin: 15px 0 0 0;
 
         a, p {
             padding-right: 0;
