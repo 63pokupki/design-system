@@ -113,12 +113,18 @@ module.exports = {
                     {
                         loader: "html-loader",
                         options: {
-                            minimize: false,
-                            removeComments: false,
-                            collapseWhitespace: false,
-                            attrs: ["img:src", "svg:src"]
+                          minimize: false,
+                          attributes: {
+                            list: [
+                              {
+                                tag: "img",
+                                attribute: "src",
+                                type: "src"
+                              }
+                            ]
+                          }
                         }
-                    }
+                      }
                 ]
             },
             {
