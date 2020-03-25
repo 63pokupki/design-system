@@ -162,7 +162,7 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: "css/[name].css?[hash]"
         }),
-        new CopyPlugin([{ from: "src/images/**/*", to: "images", flatten: true, test: /important_images\/.*\.(jpg|png|gif|svg)$/ }])
+        new CopyPlugin([{ from: "src/images/important_images/**/*", to: "images", flatten: true, test: /.*\.(jpg|png|gif|svg)$/ }])
     ],
     optimization: {
         //настройки оптимизации и минификации
