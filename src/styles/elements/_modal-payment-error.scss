@@ -9,17 +9,21 @@
     }
     &__txt {
         margin: 0;
-        font-size: 16px;
+        font-size: 14px;
         line-height: 28px;
+    }
+    .modal__content {
+        padding: 0 15px;
     }
     .btn-container {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         width: 100%;
         margin: 25px auto 10px;
     }
     .ds-btn {
-        width: 180px;
+        width: 100%;
+        max-width: 262px;
         height: 36px;
     }
     .ds-btn__text {
