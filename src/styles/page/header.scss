@@ -19,11 +19,16 @@
 @import "~styles/elements/_sidebar-menu-touch.scss";
 @import "~styles/elements/_sidebar.scss";
 @import "~styles/elements/_support-info.scss";
-@import "~styles/elements/_tooltip.scss";
+
 @import "~styles/elements/_user-profile-menu.scss";
 @import "~styles/elements/_vertical-menu.scss";
 @import "~styles/elements/_left-vertical-menu.scss";
 @import "~styles/elements/_nav-bc-bar.scss";
+
+// ограничиваем работу для избежания конфликтов в старом проекте
+.header {
+    @import "~styles/elements/_tooltip.scss";
+}
 
 // опускаем контент, т.к мобильная шапка absolute
 @media screen and (max-width: 1024px) {
