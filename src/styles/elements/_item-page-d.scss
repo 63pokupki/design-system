@@ -412,9 +412,12 @@
 
     .item-page-params {
         display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
     }
     .item-page-d__size-grid-link  {
         margin: 0 0 0 10px;
         white-space: nowrap;
     }
+    
 }
