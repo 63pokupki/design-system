@@ -1,6 +1,6 @@
 # Замена баннеров-тегов в меню
 
-![alt-текст](https://github.com/63pokupki/design-system/blob/design-system_Ivan/src/images/banner-tags/banner-menu.png)
+![alt-текст](https://github.com/63pokupki/design-system/blob/design-system_Ivan/src/images/not_important_images/banner-menu.png)
 
 - В редакторе кода открыть проект с дизайн системой;
 - перейти в ветку master **git checkout master**;
