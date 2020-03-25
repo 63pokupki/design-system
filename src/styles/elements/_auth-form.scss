@@ -7,7 +7,7 @@
         display: flex;
         width: 100%;
         padding: 40px 0;
-        background: url("~images/auth-form/auth-form-bg.png");
+        background: url("~images/important_images/auth-form/auth-form-bg.png");
         background-position: center;
         background-size: cover;
         background-repeat: repeat;
@@ -40,7 +40,7 @@
                 display: flex;
                 width: 11px;
                 height: 11px;
-                background: url("~images/auth-form/rectangle-tab-aith.svg");
+                background: url("~images/important_images/auth-form/rectangle-tab-aith.svg");
             }
             &:before {
                 content: "";
@@ -50,7 +50,7 @@
                 display: flex;
                 width: 11px;
                 height: 11px;
-                background: url("~images/auth-form/rectangle-tab-aith.svg");
+                background: url("~images/important_images/auth-form/rectangle-tab-aith.svg");
                 transform: rotateY(180deg);
             }
 
@@ -138,7 +138,7 @@
             display: flex;
             width: 11px;
             height: 11px;
-            background: url("~images/auth-form/rectangle-tab-aith.svg");
+            background: url("~images/important_images/auth-form/rectangle-tab-aith.svg");
         }
 
     }
