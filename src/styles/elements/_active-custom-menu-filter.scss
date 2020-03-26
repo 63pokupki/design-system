@@ -99,12 +99,22 @@
     .ac-menu-filter-categories {
         display: flex;
         margin: 0;
+        &__checked-position-link {
+            &:hover {
+                color: $color-text-light-grey;
+            }
+        }
+        &__item-link {
+            &:hover {
+                color: $color-text-light-grey;
+            }
+        }        
     }
     .ac-menu-filter-categories__items-wrap {
         padding: 5px 0 5px 20px;
     }
     .ac-menu-filter-categories__checked-position {
-        padding: 0 0 0 10px;
+        padding: 0 0 0 10px;        
     }
 }
 @media (min-width: 993px) {
