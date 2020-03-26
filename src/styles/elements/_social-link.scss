@@ -6,26 +6,26 @@
     background-size: cover;
 
     &_vk {
-        background-image: url("~images/vk-icon-grey.svg");
+        background-image: url("~images/important_images/vk-icon-grey.svg");
 
         &:hover {
-            background-image: url("~images/vk-icon-colored.svg");
+            background-image: url("~images/important_images/vk-icon-colored.svg");
         }
     }
 
     &_instagram {
-        background-image: url("~images/instagram-icon-grey.svg");
+        background-image: url("~images/important_images/instagram-icon-grey.svg");
 
         &:hover {
-            background-image: url("~images/instagram-icon-colored.svg");
+            background-image: url("~images/important_images/instagram-icon-colored.svg");
         }
     }
 
     &_ok {
-        background-image: url("~images/ok-icon-grey.svg");
+        background-image: url("~images/important_images/ok-icon-grey.svg");
 
         &:hover {
-            background-image: url("~images/ok-icon-colored.svg");
+            background-image: url("~images/important_images/ok-icon-colored.svg");
         }
     }
 }
