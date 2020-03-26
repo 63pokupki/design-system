@@ -24,7 +24,10 @@
             присвоить класс <span class="ds-hl">is-error</span>элементу<span class="ds-hl">auth-form__form</span>. <br>
             <br>
             Для отображения активной кнопки, удалить класс <span class="ds-hl">.ds-btn_disabled</span> и добавить <span class="ds-hl">.ds-btn_inverse</span>.
-
+            <br>
+            <br>
+            Для активации вкладки, необходимо присвоить класс <span class="ds-hl">.is-active</span> элементу 
+            <span class="ds-hl">.auth-form__left-tab</span> или <span class="ds-hl">.auth-form__right-tab</span>
         </div>
 
         <div class="ds-divider ds-center">
@@ -33,9 +36,9 @@
                 <div class="auth-form">
                     <!-- Табы -->
                     <div class="auth-form__tab-container">
-                        <input class="auth-form__auth-tabs" type="checkbox" id="auth-tabs">
+                        <!-- <input class="auth-form__auth-tabs" type="checkbox" id="auth-tabs"> -->
                         <label class="auth-form__left-tab" for="auth-tabs">Уже есть аккаунт</label>
-                        <label class="auth-form__right-tab" for="auth-tabs">Новый аккаунт</label>
+                        <label class="auth-form__right-tab is-active" for="auth-tabs">Новый аккаунт</label>
                     </div>
                     <div class="auth-form__form-container">
                         <!-- Форма входа -->
