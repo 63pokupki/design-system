@@ -77,35 +77,40 @@
     // Чекбокс
     &__auth-tabs {
         display: none;
-        &:checked ~.auth-form__right-tab {
-            background: #fff;
-            font-weight: 600;
-            color: $click-load-color;
-            box-shadow: 0px 0px 15px rgba(49, 140, 202, 0.2);
-
-            &:before {
-                left: calc(50%-10px);
-            }
-            &:after {
-                right: calc(50%-240px); 
-            }
-
-
-        }
-        &:checked ~.auth-form__left-tab {
-            background: transparent;
-            font-weight: 500;
-            color: $dark-grey-color;
-            box-shadow: none;
-            &:before {
-                display: none;
-            }
-            &:after {
-                display: none;
-            }
-
-        }
+        background: transparent;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        color: #1d1e1f;
     }
+    //     &:checked ~.auth-form__right-tab {
+    //         background: #fff;
+    //         font-weight: 600;
+    //         color: $click-load-color;
+    //         box-shadow: 0px 0px 15px rgba(49, 140, 202, 0.2);
+
+    //         &:before {
+    //             left: calc(50%-10px);
+    //         }
+    //         &:after {
+    //             right: calc(50%-240px); 
+    //         }
+
+
+    //     }
+    //     &:checked ~.auth-form__left-tab {
+    //         background: transparent;
+    //         font-weight: 500;
+    //         color: $dark-grey-color;
+    //         box-shadow: none;
+    //         &:before {
+    //             display: none;
+    //         }
+    //         &:after {
+    //             display: none;
+    //         }
+
+    //     }
+    // }
     // 
 
     // лейблы-табы
@@ -118,38 +123,88 @@
         height: 61px;
         padding: 0 0 12px 0;
         border-radius: 10px;
-        background: #ffffff;
+        // background: #ffffff;
         font-size: 15px;
         user-select: none;        
         cursor: pointer;
 
+
     }
     &__right-tab {
-        background: transparent;
-        border-bottom-left-radius: 0px;
-        border-bottom-right-radius: 0px;
-        color: $dark-grey-color;
+        // background: transparent;
+        // border-bottom-left-radius: 0px;
+        // border-bottom-right-radius: 0px;
+        // color: $dark-grey-color;
 
-        &:after {
-            content: "";
-            position: absolute;
-            top: 39px;
-            right: calc(50%-10px);
-            display: flex;
-            width: 11px;
-            height: 11px;
-            background: url("~images/important_images/auth-form/rectangle-tab-aith.svg");
+        // &:after {
+        //     content: "";
+        //     position: absolute;
+        //     top: 39px;
+        //     right: calc(50%-10px);
+        //     display: flex;
+        //     width: 11px;
+        //     height: 11px;
+        //     background: url("~images/important_images/auth-form/rectangle-tab-aith.svg");
+        // }
+        &.is-active {
+            background: #ffffff;
+            position: relative;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+            font-weight: 600;
+            color: $click-load-color;
+            box-shadow: 0px 0px 15px rgba(49, 140, 202, 0.2);
+            &:before {
+                content: "";
+                position: absolute;
+                top: 39px;
+                left: calc(50%-122px);
+                display: flex;
+                width: 11px;
+                height: 11px;
+                background: url("~images/important_images/auth-form/rectangle-tab-aith.svg");
+                transform: rotateY(180deg);
+            }
+
+            &:after {
+                display: none;
+            }
+
         }
-
+    
     }
     &__left-tab {
-        background: #fff;
-        position: relative;
-        border-bottom-left-radius: 0px;
-        border-bottom-right-radius: 0px;
-        font-weight: 600;
-        color: $click-load-color;
-        box-shadow: 0px 0px 15px rgba(49, 140, 202, 0.2);
+        // background: #fff;
+        // position: relative;
+        // border-bottom-left-radius: 0px;
+        // border-bottom-right-radius: 0px;
+        // font-weight: 600;
+        // color: $click-load-color;
+        // box-shadow: 0px 0px 15px rgba(49, 140, 202, 0.2);
+        &.is-active {
+            background: #ffffff;
+            position: relative;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+            font-weight: 600;
+            color: $click-load-color;
+            box-shadow: 0px 0px 15px rgba(49, 140, 202, 0.2);
+            &:before {
+                display: none;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                top: 39px;
+                right: calc(50%-124px); 
+                display: flex;
+                width: 11px;
+                height: 11px;
+                background: url("~images/important_images/auth-form/rectangle-tab-aith.svg");
+            }
+
+
+        }
 
     }
     // 
