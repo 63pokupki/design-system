@@ -42,11 +42,14 @@
     .btn-l,
     .btn-r {
         display: flex;
+        align-items: center;
+        justify-content: center;
         width: 25px;
         min-width: 25px;
         cursor: pointer;
 
         img {
+            max-height: 12px;
             margin: 0 auto;
         }
 

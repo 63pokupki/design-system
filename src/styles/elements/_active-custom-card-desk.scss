@@ -178,6 +178,13 @@
     &__like {
         margin: 5px;
     }
+    &__like {
+        &.txt-hidden {
+            .like__text {
+                visibility: hidden;
+            }
+        }
+    }
 
     &__btn-block {
         display: flex;
