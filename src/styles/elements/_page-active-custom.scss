@@ -70,6 +70,10 @@
         .slider {
             overflow: hidden;
         }
+        .slider-01__prev,
+        .slider-01__next {
+            z-index: 11;
+        }
     }
     .search {
         max-width: 426px;

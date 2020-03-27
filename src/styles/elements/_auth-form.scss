@@ -158,7 +158,7 @@
                 content: "";
                 position: absolute;
                 top: 39px;
-                left: calc(50%-122px);
+                left: calc(50%-124px);
                 display: flex;
                 width: 11px;
                 height: 11px;
@@ -167,7 +167,15 @@
             }
 
             &:after {
-                display: none;
+                content: "";
+                position: absolute;
+                top: 39px;
+                right: calc(50%-125px);
+                display: flex;
+                width: 11px;
+                height: 11px;
+                background: url("~images/important_images/auth-form/rectangle-tab-aith.svg");
+
             }
 
         }
