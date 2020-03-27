@@ -369,6 +369,7 @@
             // white-space: nowrap;
             text-overflow: ellipsis;
             overflow: hidden;
+            font-weight: 300;
         }
 
         &.is-toggle a {
@@ -411,6 +412,7 @@
 
         span {
             font-size: 11px;
+            font-weight: 300;
         }
 
         a {
@@ -431,6 +433,9 @@
     .card-active-custom__comments {
         p {
             margin-bottom: 0;
+        }
+        span {
+            font-weight: normal;
         }
     }
 
