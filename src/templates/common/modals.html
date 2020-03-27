@@ -14,6 +14,8 @@
     <div class="ds-text ds-center bg-color-error txt-color-white">Для отключения прокрутки, при активной модалке, необходимо присвоить класс <span class="ds-hl">.disable-scroll</span> элкементу <span class="ds-hl">body</span></div>
     <div class="ds-wrapper">
 
+
+
         <!-- Ошибка ЧС оплаты -->
         <h2 class="ds-title">Ошибка ЧС оплаты</h2>
         <div class="modal modal-payment-error is-visible demo">
@@ -40,13 +42,26 @@
     
         <div class="ds-code-wrapper">
             <script type="text/plain" class="language-markup">
-                <div class="modal is-visible">
+                <div class="modal modal-payment-error is-visible demo">
                     <div class="modal__wrap" style="margin: 10px">
                         <div class="modal__btn-close"><i class="ds-icon icon-close"></i></div>
-                        <div class="modal__header">Имя окна</div>
-                        <div class="modal__content">Здесь какой-нибудь контент</div>
+                        <div class="modal__header">Ошибка</div>
+                        <div class="modal__content">
+                            <div class="modal-payment-error__body">
+                                <p class="modal-payment-error__txt">
+                                    У вас имеются неоплаченные заказы.
+                                </p>
+                                <p class="modal-payment-error__txt">Оплатите задолженность, чтобы</p>
+                                <p class="modal-payment-error__txt">продолжить покупки!</p>
+                            </div>
+                        </div>
+                        <div class="btn-container">
+                            <button class="ds-btn ds-btn_hover btn-in-card">
+                                <div class="ds-btn__text">Перейти в корзину</div>
+                            </button>
+                        </div>
                     </div>
-                    <div class="modal__bg"></div>
+                    <div class="modal__bg" style="position: absolute;"></div>
                 </div>
             </script>
         </div>

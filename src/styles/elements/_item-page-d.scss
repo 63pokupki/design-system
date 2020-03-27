@@ -420,9 +420,7 @@
         white-space: nowrap;
     }
     .stock-rows-help {
-        @media (min-width: 1024px) {
-            display: none;
-        }
+        display: none;
     }
     
 }
