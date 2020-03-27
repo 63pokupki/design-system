@@ -419,5 +419,10 @@
         margin: 0 0 0 10px;
         white-space: nowrap;
     }
+    .stock-rows-help {
+        @media (min-width: 1024px) {
+            display: none;
+        }
+    }
     
 }
