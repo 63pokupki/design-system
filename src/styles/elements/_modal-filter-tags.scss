@@ -1,0 +1,59 @@
+.modal-filter-tags {
+    &.modal {
+        &__content {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .modal__header {
+        margin: 15px 0 20px -40px;
+        font-size: 16px;
+        font-weight: 600;
+        color: $color-text-base;
+    }
+    // .modal-filter-tags
+    &__wrap {
+        &:after {
+            content: "";
+            width: 100%;
+            height: 1px;
+            background: $sky-blue-color;
+            position: absolute;
+            bottom: 70px;
+            left: 0;
+            opacity: .2;
+        }
+    }
+
+    &__chx-container {
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 0 15px;
+    }
+    &__btn-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 45px;
+    }
+    &__btn {
+        width: 180px;
+        height: 30px;
+        margin: 35px 25px 5px 25px;
+    }
+    .checkbox {
+        margin: 7px 0;
+    }
+    .checkbox__label {
+        color: $color-text-base;
+        &:before {
+            top: 1px;
+            transform: translateX(-28px);
+        }
+    }
+}
+
+
+
+
+
