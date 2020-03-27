@@ -424,6 +424,11 @@
                 }
             }
         }
+        .card-active-custom__comments {
+            p {
+                margin-bottom: 0;
+            }
+        }
         .card-active-custom__delivery-date {
             p::nth-child(1) {
                 margin: 0 0 5px 0;
@@ -431,7 +436,7 @@
         }
         .card-active-custom__description-txt {
             display: flex;
-            max-height: 40px;
+            // max-height: 40px;
             height: auto;
             margin-bottom: 5px;
             font-Size: 12px;
