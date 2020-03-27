@@ -10,12 +10,23 @@
         text-align: center;
         border-radius: 10px;
         padding: 5px 1px;
+        min-width: 16px;
     }
 
     // блок с ячейками
     &__values {
         padding: 5px 1px;
         overflow-x: auto;
+        position: relative;
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 20px;
+            background: linear-gradient(266deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.7371323529411764) 35%, rgba(255,255,255,0) 100%);
+        }
     }
 
     &__org {

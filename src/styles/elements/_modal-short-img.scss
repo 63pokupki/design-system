@@ -393,6 +393,13 @@
         }
 
     }
-
+    // Ширина рядов
+    .stock-rows {
+        max-width: 400px;
+    }
+    // Подсказка рядов
+    .stock-rows-help {
+        display: none;
+    }
 }
 
