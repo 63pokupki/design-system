@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Модальные окна</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?ee87bf9fc0ee0ee33503" rel="stylesheet"><link href="css/ds-utils.css?ee87bf9fc0ee0ee33503" rel="stylesheet"><link href="css/ds-ui-kit.css?ee87bf9fc0ee0ee33503" rel="stylesheet"></head>
+<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?c9829364e52f9ee31980" rel="stylesheet"><link href="css/ds-utils.css?c9829364e52f9ee31980" rel="stylesheet"><link href="css/ds-ui-kit.css?c9829364e52f9ee31980" rel="stylesheet"></head>
 
 <body class="body__modals" style="position: relative;">
 
     <h1 class="ds-title">Модальные окна</h1>
     <div class="ds-text ds-center bg-color-error txt-color-white">Для отключения прокрутки, при активной модалке, необходимо присвоить класс <span class="ds-hl">.disable-scroll</span> элкементу <span class="ds-hl">body</span></div>
     <div class="ds-wrapper">
+
+
 
         <!-- Ошибка ЧС оплаты -->
         <h2 class="ds-title">Ошибка ЧС оплаты</h2>
@@ -40,13 +42,26 @@
     
         <div class="ds-code-wrapper">
             <script type="text/plain" class="language-markup">
-                <div class="modal is-visible">
+                <div class="modal modal-payment-error is-visible demo">
                     <div class="modal__wrap" style="margin: 10px">
                         <div class="modal__btn-close"><i class="ds-icon icon-close"></i></div>
-                        <div class="modal__header">Имя окна</div>
-                        <div class="modal__content">Здесь какой-нибудь контент</div>
+                        <div class="modal__header">Ошибка</div>
+                        <div class="modal__content">
+                            <div class="modal-payment-error__body">
+                                <p class="modal-payment-error__txt">
+                                    У вас имеются неоплаченные заказы.
+                                </p>
+                                <p class="modal-payment-error__txt">Оплатите задолженность, чтобы</p>
+                                <p class="modal-payment-error__txt">продолжить покупки!</p>
+                            </div>
+                        </div>
+                        <div class="btn-container">
+                            <button class="ds-btn ds-btn_hover btn-in-card">
+                                <div class="ds-btn__text">Перейти в корзину</div>
+                            </button>
+                        </div>
                     </div>
-                    <div class="modal__bg"></div>
+                    <div class="modal__bg" style="position: absolute;"></div>
                 </div>
             </script>
         </div>
@@ -2358,6 +2373,6 @@
     
     
 
-<script type="text/javascript" src="js/highlight-syntax.js?ee87bf9fc0ee0ee33503"></script><script type="text/javascript" src="js/ds-utils.js?ee87bf9fc0ee0ee33503"></script><script type="text/javascript" src="js/categories-icons-sprite.js?ee87bf9fc0ee0ee33503"></script><script type="text/javascript" src="js/ds-ui-kit.js?ee87bf9fc0ee0ee33503"></script></body>
+<script type="text/javascript" src="js/highlight-syntax.js?c9829364e52f9ee31980"></script><script type="text/javascript" src="js/ds-utils.js?c9829364e52f9ee31980"></script><script type="text/javascript" src="js/categories-icons-sprite.js?c9829364e52f9ee31980"></script><script type="text/javascript" src="js/ds-ui-kit.js?c9829364e52f9ee31980"></script></body>
 
 </html>
