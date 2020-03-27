@@ -42,7 +42,7 @@
             }    
 
             .item-params-list {
-                max-height: 25px;
+                // max-height: 25px;
                 border: 1px solid transparent;
                 transition: all .5s;
                 margin-left: -3px;
@@ -84,9 +84,6 @@
                 flex-direction: column;
                 margin-bottom: 20px;
                 position: relative;
-                .item-params-list {
-                    max-height: 25px;
-                }
                 .item-params-list__item {
                     padding: 3px 5px;
                 }
