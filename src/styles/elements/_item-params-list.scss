@@ -33,6 +33,13 @@
 
         &:hover {
             color: $color-primary;
+            span, a {
+                color: $color-primary;
+            }
+        }
+
+        span, a {
+            color: $color-text-base;
         }
     }
 
