@@ -46,6 +46,9 @@
     }
     .checkbox__label {
         color: $color-text-base;
+        &:after {
+            transform: translateX(-23px) rotate(-45deg);
+        }
         &:before {
             top: 1px;
             transform: translateX(-28px);
