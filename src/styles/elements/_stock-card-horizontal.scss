@@ -209,6 +209,12 @@
         right: 8px;
     }
 
+    .item-horizontal-params {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
     .stock-badge_rows {
         position: absolute;
         left: -10px;

@@ -45,6 +45,7 @@
         margin: 7px 0;
     }
     .checkbox__label {
+        text-transform: lowercase;
         color: $color-text-base;
         &:after {
             transform: translateX(-23px) rotate(-45deg);
