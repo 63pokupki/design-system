@@ -1,10 +1,14 @@
 .modal-added-to-card {
+    .modal__wrap {
+        max-width: 415px;
+    }
 
     .modal {
         
         &__header {
             font-size: 20px;
-            font-weight: 600;
+            font-weight: 700;
+            margin: 15px 0 15px;
         }
 
         &__content {
@@ -26,14 +30,18 @@
             justify-content: center;
             align-items: center;
             margin-top: 0px;
+            margin-bottom: 15px;
+
 
             .ds-btn {
-                width: 182px;
-                height: 44px;
+                width: 174px;
+                height: 32px;
                 font-size: 14px;
                 white-space: nowrap;
             }
-
+            .ds-btn__text {
+                font-size: 12px;
+            }
             .btn-in-card {
                 margin-right: 15px;
             }
