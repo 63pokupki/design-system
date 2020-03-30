@@ -36,8 +36,8 @@
         font-size: 12px;
         width: 100%;
         color: $color-text-base;
-        max-height: 0;
-        overflow: hidden;
+        // max-height: 0;
+        // overflow: hidden;
         transition: max-height $transition-primary, margin-top $transition-slow;
     }
 }
