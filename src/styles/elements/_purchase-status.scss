@@ -40,15 +40,15 @@
     // Фиксирую
     &__fix-icon,
     &__fix-txt,
-    &__fix-date {
-        color: $green-collection-color;
+    &__fix-date {        
+        color: $yellow-sorting-purchase-status;
     }
 
     //Сортировка
     &__sorting-icon,
     &__sorting-txt,
     &__sorting-date {
-        color: $yellow-sorting-purchase-status;
+        color: $green-collection-color;        
     }
 
     //Не состоялась
