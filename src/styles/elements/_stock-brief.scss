@@ -17,11 +17,20 @@
     &__left {
         margin-right: 25px;
         flex-shrink: 1.2;
+        .stock-brief__row {
+            &:nth-child(1) {
+                justify-content: space-between;
+            }
+        }
     }
 
     &__right {
         flex-shrink: 0;
         margin-left: auto;
+    }
+
+    &__old-design {
+        font-size: 11px;
     }
 
     &__favorite {

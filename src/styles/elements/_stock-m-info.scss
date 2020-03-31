@@ -29,6 +29,13 @@
         color: $color-text-heading;
         padding: 10px 20px;
     }
+    &__old-design {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto 30px;        
+        font-size: 12px;
+    }
 
     &__img-w {
         display: flex;

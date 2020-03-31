@@ -10,7 +10,9 @@
             display: block;
         }
         .icon-check-in {
-            visibility: visible;
+            @media (max-width: 1024px) {
+                visibility: visible;
+            }
         }
     }
     &:hover {
@@ -101,6 +103,9 @@
             background-size: cover;
             opacity: 0.6;               
             cursor: pointer;
+            @media (max-width: 1024px) {
+                right: 5px;
+            }
         }
         // Название элемента сортировки 
     }
@@ -113,13 +118,14 @@
     //Выбранная позиция(span)
     &__selected-position {
         display: none;
-        // border-bottom: 1px solid $color-primary;
         width: 100%;
         overflow: hidden;
         white-space: nowrap;
-        // text-overflow: ellipsis;
         display: block;
-        
+        @media (min-width: 1025px) {
+            border-bottom: 1px solid $color-primary;
+            text-overflow: ellipsis;
+        }                       
     }
     .tooltip {
         font-size: 9px;
