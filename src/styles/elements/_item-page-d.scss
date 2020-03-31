@@ -182,6 +182,9 @@
         max-width: 43%;
         margin-right: 30px;
         margin-bottom: 22px;
+        @media (max-width: 767px) {
+            max-width: 100%;
+        }
 
         .tooltip {
             bottom: 12px;

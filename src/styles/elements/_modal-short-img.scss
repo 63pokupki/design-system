@@ -401,5 +401,13 @@
     .stock-rows-help {
         display: none;
     }
+    // Разворачивающийся блок с рядами
+    .collapse-section {
+        overflow: visible;
+    }
+    .collapse-section__body {
+        overflow: hidden;
+        max-height: 0;
+    }
 }
 
