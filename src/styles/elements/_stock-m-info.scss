@@ -90,6 +90,12 @@
                 }
             }
         }
+        @media screen and (max-width: 767px) {
+            .favorite__text {
+                display: none;
+            }
+        }
+        
     }
 
     &__tabs-expand {
