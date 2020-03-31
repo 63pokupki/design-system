@@ -61,11 +61,15 @@
             margin: 0 auto;
         }
 
+
         .sorting {
             position: relative;
 
             &__selected-position {
                 border-bottom: unset;
+                @media (max-width: 1024px) {
+                    display: none;
+                }
             }
 
             &__btn {

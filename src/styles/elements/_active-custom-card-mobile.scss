@@ -386,6 +386,7 @@
 
     .card-active-custom__delivery-date,
     .card-active-custom__payment-method,
+    .card-active-custom__access-lvl,
     .card-active-custom__comments {
         margin-right: 10px;
     }
@@ -432,7 +433,7 @@
 
     .card-active-custom__comments {
         p {
-            margin-bottom: 0;
+            margin-bottom: -2;
         }
         span {
             font-weight: normal;
