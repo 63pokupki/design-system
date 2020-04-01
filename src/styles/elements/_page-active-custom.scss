@@ -96,10 +96,14 @@
     .header-wrap-card__sorting {
         .sorting__btn {
             position: relative;
+            @media (min-width: 1025px) {
+                max-width: none;
+            }
         }
 
         .ds-popover {
             position: absolute;
+            top: 25px;
             right: -60px;
             z-index: 9999;
             &::before {

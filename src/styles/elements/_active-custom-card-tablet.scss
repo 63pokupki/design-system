@@ -139,7 +139,7 @@
                 align-items: baseline;
                 flex-shrink: 0;
                 width: 210px;
-                margin: 18px 0 0 0;
+                margin: 15px 0 0 0;
                 .like {
                     display: flex;
                     align-items: flex-start;
@@ -172,7 +172,7 @@
             font-size: 14px;
             line-height: 19px;
             flex-shrink: 2;
-            max-width: 70%;
+            padding: 0 60px 0 0;
 
             a {
                 color: $dark-brown-color;
@@ -203,15 +203,15 @@
 
 
         //Левый блок шапки
-        .card-active-custom__header-left-block {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start;
-            width: 545px;
-            min-width: 460px;
-            margin-right: 33px;
-        }
+        // .card-active-custom__header-left-block {
+        //     display: flex;
+        //     flex-direction: column;
+        //     justify-content: flex-start;
+        //     align-items: flex-start;
+        //     width: 545px;
+        //     min-width: 460px;
+        //     margin-right: 33px;
+        // }
         .card-active-custom__collection {
             display: flex;
             margin: 5px 0;
@@ -400,7 +400,7 @@
         .card-active-custom__description-status {
             display: flex;
             justify-content: flex-start;
-            margin-top: 25px;
+            margin-top: 20px;
             
         }
         .card-active-custom__delivery-date,
@@ -445,7 +445,7 @@
             display: flex;
             // max-height: 40px;
             height: auto;
-            margin-bottom: 5px;
+            margin: 10px 0 5px 0;
             font-Size: 12px;
             line-height: 16px;
             text-align: left;            

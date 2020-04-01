@@ -145,9 +145,16 @@
                         </span>
                     </div>
                     <div class="stock-brief__row">
-                        <span class="stock-brief__status bold">
+                        <!-- для скрытия статуса, необходимо добавить класс is-hidden, элементу stock-brief__status
+                        или stock-brief__status-added
+                        -->
+                        <span class="stock-brief__status bold is-hidden">
                             Сбор закрыт. Чтобы не пропустить открытие
                             <a class="link link_hover" href="#"> добавьте закупку в избранное</a>
+                        </span>
+                        <!-- Если закупка добавлена -->
+                        <span class="stock-brief__status-added">
+                            Закупка не активна. Вы уже добавили ее в <span class="link link_hover">избранное</span>.  Мы отправим вам уведомление об открытии нового выкупа в календарь.
                         </span>
                     </div>
                 </div>

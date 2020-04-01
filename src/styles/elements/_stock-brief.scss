@@ -128,5 +128,16 @@
 
     .stock-brief__status {
         font-size: 12px;
+        &.is-hidden {
+            display: none;
+        }
+
+    }
+    .stock-brief__status-added {
+        font-size: 12px;
+        font-weight: 700;
+        &.is-hidden {
+            display: none;
+        }
     }
 }
