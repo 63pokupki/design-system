@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Карточка с основной информацией о закупке</title>
-    <link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?9fa27382ca2e914785ab" rel="stylesheet"><link href="css/ds-utils.css?9fa27382ca2e914785ab" rel="stylesheet"><link href="css/ds-ui-kit.css?9fa27382ca2e914785ab" rel="stylesheet"></head>
+    <link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?e1781bc99439eb7c0fbc" rel="stylesheet"><link href="css/ds-utils.css?e1781bc99439eb7c0fbc" rel="stylesheet"><link href="css/ds-ui-kit.css?e1781bc99439eb7c0fbc" rel="stylesheet"></head>
     <body>
 
         <h1 class="ds-title">Карточка с основной информацией о закупке</h1>
@@ -28,12 +28,12 @@
                         </div>
                         <div class="stock-tabs">
                             <div class="stock-tabs__labels">
-                                <div class="link stock-tabs__label is-active">Описание</div>
+                                <div class="link stock-tabs__label">Описание</div>
                                 <div class="link stock-tabs__label">Особые правила</div>
                                 <div class="link stock-tabs__label">Размерная сетка</div>
-                                <div class="link stock-tabs__label">Отзывы</div>
+                                <div class="link stock-tabs__label is-active">Отзывы</div>
                             </div>
-                            <div class="stock-tabs__sections"> 
+                            <div class="stock-tabs__sections">   
                                 <div class="stock-tabs__section">
                                     Оптовая обувная компания «Сити-Класс» предлагает большой ассортимент женской и
                                     мужской обуви оптом. Обувь на все сезоны: летняя обувь, зимняя обувь, демисезонная
@@ -76,6 +76,14 @@
                                     <div class="stock-reviews">
                                         <a class="link link_colored stock-reviews__all" href="#">Все отзывы (250)</a>
                                         <div class="stock-reviews__reviews">
+                                            <!-- Нет отзывов -->
+                                            <!-- is-hidden - прячет stock-reviews__no-reviews -->
+                                            <div class="stock-reviews__no-reviews">
+                                                <span>
+                                                    Это новая закупка на сайте. <span class="nowrap">К сожалению, у нее пока нет отзывов.</span>  
+                                                    <br>Но вы можете оставить свой отзыв первым! 
+                                                </span>
+                                            </div>
                                             <div class="stock-reviews__review">
                                                 <div class="stock-reviews__info">
                                                     <a href="#" class="link stock-reviews__name">nasty4242</a>
@@ -201,6 +209,22 @@
 
                 <div class="stock-full__w-expand">
                     <button class="link link_hover stock-full__expand">Показать больше</button>
+                </div>
+                <!-- для скрытия статуса, необходимо добавить класс is-hidden, элементу stock-full__status-add
+                    или stock-full__status-added
+                -->
+                <!-- Если не добавлена в избранное -->
+                <div class="stock-full__status-add is-hidden">
+                    <span>Сейчас нет активного сбора. Чтобы не пропустить открытие, </span>
+                    <span class="stock-full__status-link link link_hover"> добавьте закупку в избранное.</span>
+                </div>
+                <!-- Если добавлена в избранное -->
+                <div class="stock-full__status-added">
+                    <span>Сейчас нет активного сбора. Закупка добавлена вами в
+                        <span class="stock-full__status-link link link_hover">избранное</span>. 
+                        Следите за уведомлениями в календаре - мы отправим вам приглашение в
+                        новый выкуп. 
+                    </span>
                 </div>
             </div>
         </div>
@@ -900,5 +924,5 @@
                 </div>
             </script>
         </div>
-    <script type="text/javascript" src="js/highlight-syntax.js?9fa27382ca2e914785ab"></script><script type="text/javascript" src="js/ds-utils.js?9fa27382ca2e914785ab"></script><script type="text/javascript" src="js/categories-icons-sprite.js?9fa27382ca2e914785ab"></script><script type="text/javascript" src="js/ds-ui-kit.js?9fa27382ca2e914785ab"></script></body>
+    <script type="text/javascript" src="js/highlight-syntax.js?e1781bc99439eb7c0fbc"></script><script type="text/javascript" src="js/ds-utils.js?e1781bc99439eb7c0fbc"></script><script type="text/javascript" src="js/categories-icons-sprite.js?e1781bc99439eb7c0fbc"></script><script type="text/javascript" src="js/ds-ui-kit.js?e1781bc99439eb7c0fbc"></script></body>
 </html>
