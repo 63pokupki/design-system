@@ -62,7 +62,15 @@
     &__container-sorting {
         display: flex;
         margin-top: 2px;
+        justify-content: space-between;
+        width: 700px;        
     }
+
+    // ОБёртка сортировки и фильтра
+    &__sorting-wrap {
+        width: 50%;
+    }
+
     &__container-switcher {
         display: none;
         flex-direction: row;

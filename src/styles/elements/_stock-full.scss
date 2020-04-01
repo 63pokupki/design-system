@@ -70,6 +70,27 @@
     }
 }
 
+// Инфо-Статусы
+.stock-full__status-add {
+    display: none;
+}
+
+// Нет отзывов
+.stock-reviews__no-reviews {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+        text-align: center;
+        &.nowrap {
+            white-space: nowrap;
+        }
+    }
+    &.is-hidden {
+        display: none;
+    }
+}
+
 .stock-full.is-disabled {
     position: relative;
     border-bottom: none;
@@ -111,5 +132,28 @@
                 z-index: initial;
             }
         }
+    }
+    // Статус - добавьте в избранное
+    .stock-full__status-add,
+    .stock-full__status-added {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+        position: relative;
+        background-color: $stock-status-add-color;
+        font-size: 14px;
+        font-weight: 600;
+        z-index: 5;
+        span {
+            text-align: center;
+        }
+        &.is-hidden {
+            display: none;
+        }
+    }
+    .stock-full__status-link {
+        margin: 0 0 0 5px;
     }
 }
