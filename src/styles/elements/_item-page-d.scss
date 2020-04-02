@@ -231,6 +231,12 @@
                 text-transform: capitalize;
             }
         }
+        
+        span {
+            &::first-letter {
+                text-transform: capitalize;
+            }
+        }
     }
 
     &__fee {
