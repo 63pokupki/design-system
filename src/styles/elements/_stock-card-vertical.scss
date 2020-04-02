@@ -74,6 +74,24 @@
                 }
             }
         }
+
+        // Всплывашка с ошибкой
+        .ds-popover {
+            position: absolute;
+            bottom: -45px;
+            right: 3px;
+            padding: 5px;
+            box-shadow: none;
+            font-size: 11px;
+            background: $pink-popover-color;
+            color: $color-text-base;
+            &:before {
+                left: 20px;
+                background: $pink-popover-color;
+                transform: rotate(45deg) translateX(3px);
+            }
+        }
+
     }
 
     &__params-b {

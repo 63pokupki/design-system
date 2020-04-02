@@ -86,7 +86,26 @@
         max-width: 45%;
         margin-right: 20px;
         margin-bottom: 20px;
+        position: relative;        
     }
+
+    // Всплывашка с ошибкой
+    .ds-popover {
+        position: absolute;
+        bottom: -26px;
+        right: 3px;
+        padding: 5px;
+        box-shadow: none;
+        font-size: 11px;
+        background: $pink-popover-color;
+        color: $color-text-base;
+        &:before {
+            left: 20px;
+            background: $pink-popover-color;
+            transform: rotate(45deg) translateX(3px);
+        }
+    }
+    
 
     .item-params-list {
         position: relative;

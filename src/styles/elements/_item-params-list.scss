@@ -12,6 +12,12 @@
         border: 1px solid $error-primary;
         box-sizing: border-box;
         border-radius: 4px;
+        ~.ds-popover {
+            max-height: 1000px;
+            visibility: visible;
+            transition: all .5s ease;
+            opacity: 1;
+        }
     }
 
     &__item {
