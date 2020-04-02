@@ -161,4 +161,32 @@ $tooltip-triangle-size: 6px;
     &.tooltip_mw-265 {
         min-width: 265px;
     }
+
+    // Тултип для пагинации
+    &__pagination {
+        span {
+            font-size: 11px;
+            white-space: nowrap;
+        }
+    }
+    &__pagination-form {
+        display: flex;
+        flex-wrap: nowrap;
+        margin: 5px 0 0 0;
+    }
+    &__pagination-input {
+        max-width: 55px;
+        margin: 0 5px 0 0;
+        border: none;
+    }
+    &__pagination-btn {
+        padding: 5px 10px;
+        background-color: $color-primary;
+        border-radius: 10px;
+        font-size: 11px;
+        color: #ffffff;
+        &:active {
+            transform: scale(.95);
+        }
+    }
 }
