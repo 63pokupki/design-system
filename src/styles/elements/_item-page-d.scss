@@ -337,8 +337,8 @@
         display: none;
         margin: 0 auto;
 
-        &.zoom-on-hover {
-            display: flex;
+        &.zoom-on-hover{
+            display: flex !important;
             align-items: center;
             height: 400px;
         }
