@@ -1,5 +1,9 @@
 .modal-short-img {
 
+    .item-page-d__params {
+        max-width: none;
+    }
+
     .modal {
 
         h5 {
@@ -65,7 +69,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: auto;
+            height: 400px;
             cursor: pointer;
             .arrow {
                 display: none;
@@ -113,16 +117,7 @@
             width: 100%;
             margin: 12px 0 0 0;
             position: relative;
-            &:after {
-                content: "";
-                position: absolute;
-                right: 0;
-                display: flex;
-                min-height: 100%;
-                width: 30px;
-                background: linear-gradient(90deg,rgba(253,253,255,0),#fff 100%,#fff)
-
-            }
+            
 
             .img-container_small {
                 display: inline-flex;
@@ -156,7 +151,6 @@
                     position: absolute;
                     left: 0px;
                     top: 0;
-
                 }
                 &-viewing {
                     min-height: 100px;
@@ -178,10 +172,35 @@
 
                 }
 
+                &-fade {
+                    position: absolute;
+                    left: 0;
+                    top: 10px;
+                    width: 100%;
+                    height: 80px;
+                    background: transparent;
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        right: 0;
+                        display: flex;
+                        min-height: 100%;
+                        width: 30px;
+                        z-index: 1;
+                        background: linear-gradient(90deg,rgba(253,253,255,0),#fff 100%,#fff)
+                    }
+                }
+
                 &-items {
                     max-width: 80px;
                     margin-right: 20px;
+                    position: relative;
+                    z-index: 1;
 
+                    &:last-child {
+                        z-index: 2;
+                    }
                 }
             }           
 

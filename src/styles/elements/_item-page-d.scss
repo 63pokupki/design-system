@@ -37,7 +37,6 @@
                 background: #e0eef7;
                 border-radius: 3px;
             }
-
         }
 
         .slider-wrap {
@@ -231,6 +230,12 @@
                 text-transform: capitalize;
             }
         }
+
+        span {
+            &::first-letter {
+                text-transform: capitalize;
+            }
+        }
     }
 
     &__fee {
@@ -331,6 +336,12 @@
         max-height: 649px;
         display: none;
         margin: 0 auto;
+
+        &.zoom-on-hover {
+            display: flex;
+            align-items: center;
+            height: 400px;
+        }
     }
 
     &__image.is-active {
@@ -419,12 +430,11 @@
         flex-direction: row-reverse;
         justify-content: flex-end;
     }
-    .item-page-d__size-grid-link  {
+    .item-page-d__size-grid-link {
         margin: 0 0 0 10px;
         white-space: nowrap;
     }
     .stock-rows-help {
         display: none;
     }
-    
 }
