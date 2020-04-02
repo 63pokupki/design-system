@@ -14,6 +14,7 @@
         img {
             min-width: 100%;
             max-height: inherit;
+            object-fit: contain;
         }
     }
     //Для очень больших экранов
