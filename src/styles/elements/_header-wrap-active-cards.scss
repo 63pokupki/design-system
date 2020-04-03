@@ -63,7 +63,12 @@
         display: flex;
         margin-top: 2px;
         justify-content: space-between;
-        width: 700px;        
+        width: 700px;
+        .ds-popover {
+            @media (max-width: 600px) {
+                display: none;
+            }
+        }        
     }
 
     // ОБёртка сортировки и фильтра
@@ -101,7 +106,7 @@
         // } 
     }
     .filter {
-        margin-right: 0;
+        margin-right: 20px;
     }
     &__switcher {
         &-name {

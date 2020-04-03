@@ -6,6 +6,14 @@
         &__bar {
             height: 32px;
         }
+        .search__button-clear {
+            right: 7px;
+        }
+    }
+    .search-clear {
+        .search__button {
+            right: 30px;
+        }
     }
 
     &__search-m {
