@@ -148,14 +148,15 @@
         .header-wrap-card__tabs {
             display: none;
         }
-        .ac-menu-filter-categories {
-            display: flex;
-        }
-
     }
     @media (min-width: 768px) {
         .card-active-custom__wrap.mobile {
             display: none;
+        }
+    }
+    @media (max-width: 1024px) {
+        .ac-menu-filter-categories {
+            display: flex;
         }
     }
 }

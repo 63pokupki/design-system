@@ -19,13 +19,13 @@
                 visibility: visible;
             }
         }
-        .sorting__btn {
-            &::after {
-                @media (max-width: 1024px) {
-                    right: 0px;
-                }
-            }
-        }
+        // .sorting__btn {
+        //     &::after {
+        //         @media (max-width: 1024px) {
+        //             right: 0px;
+        //         }
+        //     }
+        // }
 
         @media (max-width: 1024px) {
             padding: 0 0 0 20px;
