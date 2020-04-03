@@ -11,6 +11,9 @@
             @media (min-width: 1025px) {
                 border-bottom: 1px solid $color-primary;
                 text-overflow: ellipsis;
+            }
+            @media (max-width: 1024px) {
+                transform: translateX(-20px);
             }                       
     
         }
@@ -19,16 +22,17 @@
                 visibility: visible;
             }
         }
-        // .sorting__btn {
-        //     &::after {
-        //         @media (max-width: 1024px) {
-        //             right: 0px;
-        //         }
-        //     }
-        // }
 
         @media (max-width: 1024px) {
             padding: 0 0 0 20px;
+            .sorting__btn {
+                &::after {
+                    @media (max-width: 1024px) {
+                        right: 0px;
+                    }
+                }
+            }   
+
         }
     }
     &:hover {
@@ -127,6 +131,7 @@
         margin-right: 5px;
         // padding: 0 15px 0 0;
         font-weight: 600;
+        
     }
     //Выбранная позиция(span)
     &__selected-position {
@@ -144,11 +149,42 @@
     @media (max-width: 1024px) {
         .sorting__btn {
             flex-direction: column;
+            &:after {
+                display: none;
+            }
         }
         .sorting__selected-position {
             font-size: 10px;
             color: $light-gray-color;
+        }
+        .sorting__name {
+            max-width: 65px;
+            //Треугольник справа
+            &:after {
+                content: "";
+                position: absolute;
+                display: flex;
+                width: 8px;
+                height: 8px;
+                top: 6px;
+                background: url("~images/important_images/active_custom_card/arrow-point-to-down.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                opacity: 0.6;               
+            }
         }        
+        .sorting__name-filter {
+            &:after {
+                left: 75px;
+            }
+        }
+        .sorting__name-sorting {
+            &:after {
+                left: 100px;
+            }
+        }
+
     }
 }
 .sorting-block .sorting__btn:focus+.ds-popover_sorting {
