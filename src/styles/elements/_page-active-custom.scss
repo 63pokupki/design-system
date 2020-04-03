@@ -141,6 +141,21 @@
             display: none;
         }
     }
+
+    @media (max-width: 1024px) {
+        .ac-menu-filter-categories {
+            display: flex;
+        }
+        .slider-01 {
+            display: none;
+        }
+        .pac__all-categories {
+            display: none;
+        }
+
+    }
+
+
     @media (max-width: 767px)  {
         .card-active-custom.tablet {
             display: none;
@@ -148,10 +163,6 @@
         .header-wrap-card__tabs {
             display: none;
         }
-        .ac-menu-filter-categories {
-            display: flex;
-        }
-
     }
     @media (min-width: 768px) {
         .card-active-custom__wrap.mobile {

@@ -51,7 +51,8 @@
                     transition: .3s;
                     font-size: 12px;
                     font-weight: 600;
-                    transition: .3s; 
+                    transition: .3s;
+                    z-index: 10; 
                                         
                 }
                 &:hover::after {
