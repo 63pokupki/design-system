@@ -21,7 +21,8 @@
             justify-content: flex-start;
             min-width: 100%;
             // margin: 0 7px 5px 0;
-            overflow: visible;
+            overflow-y: auto;
+            overflow-x: visible;
 
             h5 {
                 margin: 0 0 5px 3px;
@@ -44,8 +45,11 @@
             .item-params-list {
                 // max-height: 25px;
                 border: 1px solid transparent;
+                border-radius: 3px;
                 transition: all .5s;
                 margin-left: -3px;
+                overflow: auto;
+                max-height: 85px;
             
                 &__item {
                     list-style: none;
@@ -69,19 +73,23 @@
                 display: flex;
                 flex-direction: column;
                 position: relative;
-                margin-bottom: 10px;
+                margin: 0 0 10px 5px;
 
                 &.is-warning {
                     .item-params-list {                     
                         border: 1px solid $pink-popover-color;
                     }
+                    .ds-popover {
+                        visibility: visible;
+                    }
+
                 } 
             }
 
             &-size {
                 display: flex;
                 flex-direction: column;
-                margin-bottom: 20px;
+                margin: 0 0 20px 5px;
                 position: relative;
                 .item-params-list__item {
                     padding: 3px 5px;
@@ -89,6 +97,9 @@
                 &.is-warning {
                     .item-params-list {                     
                         border: 1px solid $pink-popover-color;
+                    }
+                    .ds-popover {
+                        visibility: visible;
                     }
                 } 
             }
@@ -101,6 +112,7 @@
                 font-size: 11px;
                 background: $pink-popover-color;
                 color: $color-text-base;
+                visibility: hidden;
                 &:before {
                     left: 20px;
                     background: $pink-popover-color;
@@ -179,6 +191,13 @@
             }
         }
 
+    }
+    
+    // Для Сани
+    .item-page-d__params.params {
+        .ds-popover {
+            bottom: -45px;
+        }
     }
 }
 

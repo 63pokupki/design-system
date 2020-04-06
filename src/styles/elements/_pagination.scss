@@ -52,6 +52,15 @@
             }
         }
     }
+    &__go-page {
+        background: $color-primary;
+    }
+
+    .icon-arrow-back {
+        transform: scaleX(-1);
+        color: #ffffff;
+
+    }
 
     .icon-arrow {
 
