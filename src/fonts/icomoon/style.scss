@@ -1,5 +1,9 @@
 @import "~fonts/icomoon/variables";
 
+
+.icon-arrow-back:before {
+  content: "\e931";
+}
 .icon-check-in:before {
   content: "\e930";
 }
