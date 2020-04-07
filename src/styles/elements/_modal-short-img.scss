@@ -283,6 +283,13 @@
                     }
                     margin: 20px 0 5px 0;
                 }
+                // Для фронта
+                &.item-page-d__params {
+                    .ds-popover {
+                        bottom: -47px;
+                    }
+                }
+            
             }
             &-size {
                 margin-bottom: 15px;
