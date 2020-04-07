@@ -29,7 +29,23 @@
         visibility: visible;
         transition: all .5s ease;
         opacity: 1;
-    }      
+    }   
+    &_warning {
+        position: absolute;
+        bottom: -20px;
+        right: 3px;
+        padding: 5px;
+        box-shadow: none;
+        font-size: 11px;
+        background: $error-light;
+        color: #606266;
+        &:before {
+            left: 20px;
+            background: #ffd7d7;
+            transform: rotate(45deg) translateX(3px);    
+        }
+    
+    }   
 }
 
 
