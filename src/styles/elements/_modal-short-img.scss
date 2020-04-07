@@ -264,6 +264,19 @@
         }
         &__content {
             &-color, &-size {
+                position: relative;
+                &.is-warning {
+                    .item-params-list {
+                        border: 1px solid $error-light;
+                        border-radius: 3px;
+                    }
+                    .ds-popover {
+                        bottom: -25px;
+                        visibility: visible;
+                        max-height: 300px;
+                        opacity: 1;
+                    }
+                }
                 h5 {
                     &::first-letter {
                         text-transform: capitalize;

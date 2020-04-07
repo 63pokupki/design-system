@@ -282,6 +282,19 @@
                 <div class="ds-popover is-visible"></div>
             </script>
         </div>
+        <!-- Поповер с ошибкой -->
+        <div class="ds-text">Чтобы поповер отображался под необходимым блоком, у блока должно быть position: relative</div>
+        <div class="ds-divider" style="width: 120px; height: 1px; position: relative;">
+            <div class="ds-popover ds-popover_warning is-visible">
+                Ошибка
+            </div>
+        </div>
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <div class="ds-popover ds-popover_warning is-visible"></div>
+            </script>
+        </div>
+
     </div>
 
 
@@ -1444,6 +1457,8 @@
                                     <li class="item-params-list__item">красный</li>
                                     <li class="item-params-list__item">бежевый</li>
                                 </ul>
+                                <div class="ds-popover ds-popover_warning">Чтобы добавить товар в корзину,<br>
+                                    выберите необходимый параметр</div>
                                 <!-- Чтобы отобразить кнопку, необходимо присвоить ей класс .is-visible -->
                                 <button class="modal__btn-link link link_hover is-visible">Ещё цвета</button>
                             </div>
@@ -1460,6 +1475,8 @@
                                     <li class="item-params-list__item">42</li>
                                     <li class="item-params-list__item">43</li>
                                 </ul>
+                                <div class="ds-popover ds-popover_warning">Чтобы добавить товар в корзину,<br>
+                                    выберите необходимый параметр</div>
                                 <!-- Чтобы отобразить кнопку, необходимо присвоить ей класс .is-visible -->
                                 <button class="modal__btn-link link link_hover is-visible">Ещё размеры</button>
                             </div>
