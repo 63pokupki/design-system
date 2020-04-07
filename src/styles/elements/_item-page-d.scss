@@ -79,6 +79,7 @@
 
     &__l {
         margin-right: 33px;
+        min-width: 50%;
     }
 
     &__org-btns {
@@ -155,7 +156,8 @@
 
     &__body {
         padding-top: 0;
-        width: calc(50% - 20px);
+        // width: calc(50% - 20px);
+
     }
 
     &__price-w {
@@ -272,7 +274,7 @@
 
     &__images-wrapper {
         position: relative;
-        max-width: 400px;
+        max-width: 544px;
     }
 
     &__prev,
@@ -418,9 +420,13 @@
     &__share-links {
         display: flex;
         align-items: center;
+        justify-content: space-between;
 
         .social-link {
             margin-right: 15px;
+        }
+        .link_hover {
+            font-size: 12px;
         }
     }
 
