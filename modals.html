@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Модальные окна</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?5d31aa5257c0ed80b0a6" rel="stylesheet"><link href="css/ds-utils.css?5d31aa5257c0ed80b0a6" rel="stylesheet"><link href="css/ds-ui-kit.css?5d31aa5257c0ed80b0a6" rel="stylesheet"></head>
+<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?39fb4b171adcefc49eff" rel="stylesheet"><link href="css/ds-utils.css?39fb4b171adcefc49eff" rel="stylesheet"><link href="css/ds-ui-kit.css?39fb4b171adcefc49eff" rel="stylesheet"></head>
 
 <body class="body__modals" style="position: relative;">
 
@@ -282,6 +282,19 @@
                 <div class="ds-popover is-visible"></div>
             </script>
         </div>
+        <!-- Поповер с ошибкой -->
+        <div class="ds-text">Чтобы поповер отображался под необходимым блоком, у блока должно быть position: relative</div>
+        <div class="ds-divider" style="width: 120px; height: 1px; position: relative;">
+            <div class="ds-popover ds-popover_warning is-visible">
+                Ошибка
+            </div>
+        </div>
+        <div class="ds-code-wrapper">
+            <script type="text/plain" class="language-markup">
+                <div class="ds-popover ds-popover_warning is-visible"></div>
+            </script>
+        </div>
+
     </div>
 
 
@@ -1444,6 +1457,8 @@
                                     <li class="item-params-list__item">красный</li>
                                     <li class="item-params-list__item">бежевый</li>
                                 </ul>
+                                <div class="ds-popover ds-popover_warning">Чтобы добавить товар в корзину,<br>
+                                    выберите необходимый параметр</div>
                                 <!-- Чтобы отобразить кнопку, необходимо присвоить ей класс .is-visible -->
                                 <button class="modal__btn-link link link_hover is-visible">Ещё цвета</button>
                             </div>
@@ -1460,6 +1475,8 @@
                                     <li class="item-params-list__item">42</li>
                                     <li class="item-params-list__item">43</li>
                                 </ul>
+                                <div class="ds-popover ds-popover_warning">Чтобы добавить товар в корзину,<br>
+                                    выберите необходимый параметр</div>
                                 <!-- Чтобы отобразить кнопку, необходимо присвоить ей класс .is-visible -->
                                 <button class="modal__btn-link link link_hover is-visible">Ещё размеры</button>
                             </div>
@@ -2753,6 +2770,6 @@
 
 
 
-<script type="text/javascript" src="js/highlight-syntax.js?5d31aa5257c0ed80b0a6"></script><script type="text/javascript" src="js/ds-utils.js?5d31aa5257c0ed80b0a6"></script><script type="text/javascript" src="js/categories-icons-sprite.js?5d31aa5257c0ed80b0a6"></script><script type="text/javascript" src="js/ds-ui-kit.js?5d31aa5257c0ed80b0a6"></script></body>
+<script type="text/javascript" src="js/highlight-syntax.js?39fb4b171adcefc49eff"></script><script type="text/javascript" src="js/ds-utils.js?39fb4b171adcefc49eff"></script><script type="text/javascript" src="js/categories-icons-sprite.js?39fb4b171adcefc49eff"></script><script type="text/javascript" src="js/ds-ui-kit.js?39fb4b171adcefc49eff"></script></body>
 
 </html>
