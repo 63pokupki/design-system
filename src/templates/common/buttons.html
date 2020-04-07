@@ -324,6 +324,10 @@
         <div class="ds-text ds-center"> 
             Чтобы сделать кнопку активной, необходимо присвоить класс <span class="ds-hl">is-active</span> элементу <span class="ds-hl">pagination__item</span>
         </div>
+        <div class="ds-text ds-center"> 
+            Кнопки перехода на первую и последнюю страницу отображаются только при разрешении меньше 767px
+        </div>
+
         <div class="ds-wrapper">
             <ul class="pagination">
                 <li class="pagination__item pagination__go-page has-tooltip">
@@ -336,6 +340,7 @@
                         </form>
                     </div>
                 </li>
+                <li class="pagination__item pagination__first-page"><i class="ds-icon icon-arrow-left-line"></i></li>
                 <li class="pagination__item is-disabled"><i class="ds-icon icon-arrow-left"></i></li>
                 <li class="pagination__item "><a href="">1</a></li>
                 <li class="pagination__item"><a href="">2</a></li>
@@ -345,6 +350,7 @@
                 <li class="pagination__item"><a href="">...</a></li>
                 <li class="pagination__item"><a href="">23</a></li>
                 <li class="pagination__item"><i class="ds-icon icon-arrow-right"></i></li>
+                <li class="pagination__item pagination__last-page"><i class="ds-icon icon-arrow-right-line"></i></li>
             </ul>
         </div>
         <div class="ds-code-wrapper">

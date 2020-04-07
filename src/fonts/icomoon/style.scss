@@ -1,6 +1,11 @@
 @import "~fonts/icomoon/variables";
 
-
+.icon-arrow-left-line:before {
+  content: "\e932";
+}
+.icon-arrow-right-line:before {
+  content: "\e933";
+}
 .icon-arrow-back:before {
   content: "\e931";
 }

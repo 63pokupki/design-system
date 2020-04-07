@@ -29,12 +29,8 @@
                 color: #fff;
             }
 
-            .icon-arrow {
-
-                &-left,
-                &-right {
-                    color: #fff;
-                }
+            .ds-icon {
+                color: #fff;                
             }
         }
 
@@ -52,7 +48,9 @@
             }
         }
     }
+    // Переход на конкретную страницу
     &__go-page {
+        display: none;
         background: $color-primary;
     }
 
@@ -67,6 +65,18 @@
         &-left,
         &-right {
             color: $color-text-base;
+        }
+    }
+    &__first-page,
+    &__last-page {
+        display: none;
+        color: $color-text-base;                
+    }
+
+    @media (max-width: 767px) {
+        .pagination__first-page,
+        .pagination__last-page {
+            display: flex;
         }
     }
 }
