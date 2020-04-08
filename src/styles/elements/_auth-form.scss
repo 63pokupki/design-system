@@ -3,6 +3,13 @@
     min-width: 300px;
     margin: 0 auto;
 
+    @media (max-width: 992px) {
+        max-width: 748px;
+    }
+    @media (max-width: 767px) {
+        max-width: 304px;
+    }
+
     &__bg {
         display: flex;
         width: 100%;
@@ -22,10 +29,19 @@
             max-width: 349px;
             margin: 13px 0 0 0;
             padding: 0;
-            font-size: 10px;
-            line-height: 11px;
+            font-size: 11px;
+            line-height: 15px;
 
         }
+    }
+
+    .ds-inputs-form__txt-info {
+        font-size: 12px;
+        font-weight: normal;
+    } 
+
+    .ds-inputs-form__txt-error {
+        font-weight: normal;
     }
 
 
@@ -82,37 +98,6 @@
         border-bottom-right-radius: 0;
         color: #1d1e1f;
     }
-    //     &:checked ~.auth-form__right-tab {
-    //         background: #fff;
-    //         font-weight: 600;
-    //         color: $click-load-color;
-    //         box-shadow: 0px 0px 15px rgba(49, 140, 202, 0.2);
-
-    //         &:before {
-    //             left: calc(50%-10px);
-    //         }
-    //         &:after {
-    //             right: calc(50%-240px); 
-    //         }
-
-
-    //     }
-    //     &:checked ~.auth-form__left-tab {
-    //         background: transparent;
-    //         font-weight: 500;
-    //         color: $dark-grey-color;
-    //         box-shadow: none;
-    //         &:before {
-    //             display: none;
-    //         }
-    //         &:after {
-    //             display: none;
-    //         }
-
-    //     }
-    // }
-    // 
-
     // лейблы-табы
     &__right-tab, &__left-tab {
         display: flex;
@@ -276,9 +261,11 @@
         // Форма входа
         &-sign-in {
             display: flex;
-            width: 455px;
+            width: 100%;
+            max-width: 455px;
             flex-direction: column;
             justify-content: flex-start;
+
         }
     
         // Поле логина
@@ -290,11 +277,15 @@
         }
     }
     &__checkbox {
-        margin: 3px 13px;
+        margin: 9px 0;
         font-size: 12px;
         font-weight: normal;
         color: $color-text-base;
     }
+    &__checkbox-remember {
+        margin-top: 0;
+    }
+
     //Сообщение об ошибке
     &__error-message {
         display: flex;
@@ -309,7 +300,7 @@
     // Кнопка вход
     &__btn-enter {
         width: 200px;
-        margin: 25px auto;
+        margin: 17px auto 25px;
         min-height: 45px;
         border: 1px solid $click-load-color;
         font-weight: 600;
@@ -384,18 +375,58 @@
         max-width: 350px;
         margin: 0;
     }
-    @media (min-width: 769px) {
+    @media (min-width: 768px) {
+        .auth-form__heading {
+            font-size: 22px;
+        }
+        .auth-form__form-password-recovery {
+            .auth-form__txt {
+                margin: 20px 0 30px;
+            }
+        }
         .auth-form__login-container {
-            margin-right: 42px;
-            
+            margin-right: 42px;            
         }
     }
-    @media (max-width: 840px) {
+    @media (max-width: 992px) and (min-width: 768px) {
+        
+        // Вход на сайт
+        .auth-form__form-sign-in {
+            .ds-inputs-component {
+                min-width: 350px;
+            }
+            .auth-form__content-container {
+                padding: 0 52px;
+            }
+            .auth-form__heading {
+                margin: 0 0 10px 0;
+            }
+        }
+        //------------------------//
+
+        // Восстановление пароля
+        .auth-form__form-password-recovery {
+            .auth-form__content-container {
+                padding: 0 52px;
+            }
+        }
+        //------------------------//
+
+        .auth-form__heading {
+            margin: 0;
+        }
+        .auth-form__txt {
+            margin: 10px 0 15px;
+        }
+
         .auth-form__content-container {
             padding: 0 23px;
         }
-        .auth-form__phone {
-            margin: 0 43px 0 0;
+        .ds-inputs-form__icon-info {
+            top: 2px;
+        }  
+        .ds-inputs-component {
+            min-width: 330px;
         }
     }
     &__phone-container {
@@ -403,35 +434,106 @@
         width: 100%;
         justify-content: space-between;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 992px) {
+        .ds-inputs-form__info-block-phone {
+            flex-direction: column-reverse;
+            margin: -7px 0 0;
+
+            .ds-inputs-form__txt-info,
+            .ds-inputs-form__txt-error {
+                width: 100%;
+                max-width: 100%;
+            }
+            .ds-inputs-form__txt-error {
+                display: none;
+            }
+        }
+
+        .ds-inputs-component {
+            &.is-error {
+                .ds-inputs-form__txt-error {
+                    display: flex;
+                }
+            }
+        }
+
+    }
+
+    @media (max-width: 767px) {
+        .auth-form {
+            max-width: 455px;
+            &__login-pass-container,
+            &__phone-container {
+                display: block;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+        }
+    }
+
+    @media (max-width: 767px) {
+
+        .auth-form__phone-container {
+            .auth-form__txt-footnote {
+                margin: 0;
+            }
+        }
         .ds-inputs-form {
-            &__txt-info {
+            &__txt-error-login {
                 max-width: 150px;
             }
-            // &__txt-error {
-            //     font-size: 10px;
-            // }
-            &__txt-error-login {
-                max-width: 202px;
+            &__info-block-phone {
+                .ds-inputs-form__txt-error {
+                    margin: 0 0 10px 0;    
+                }
+                .ds-inputs-form__txt-info {
+                    width: 100%;
+                    max-width: 205px;
+                    padding: 0 0 0 30px;
+                }
+                .ds-inputs-form__icon-info {
+                    top: 5px;
+                    font-size: 20px;
+                }
+            }
+            &__info-block-mail {
+                .ds-inputs-form__txt-info {
+                    flex-wrap: wrap;
+                    width: 100%;
+                    padding: 0;
+                    font-size: 12px;
+                    font-weight: normal;
+                    line-height: 12px;
+                    >span {
+                        white-space: nowrap;
+                        line-height: 0px;
+                    }
+                }
+            }
+            &__txt-info-pass {
+                white-space: nowrap;
+            }
+            &__txt-error-email {
+                width: auto;
+                font-size: 11px;
+                line-height: 12px;
             }
             &__txt-error-phone {
                 max-width: 133px;
             }
-            &__txt-error-email {
-                max-width: 160px;
-            }  
         }
         .auth-form {
-            max-width: 455px;
+            // max-width: 455px;
             &__form {
                 padding-left: 15px;
                 padding-right: 15px;
             }
             &__login-pass-container,
             &__phone-container {
-                display: block;
+                // display: block;
                 justify-content: center;
-                flex-wrap: wrap;
+                // flex-wrap: wrap;
             }
             &__login-container {
                 margin-right: 0!important;
@@ -443,9 +545,9 @@
             &__phone-txt {
                 margin: 13px 0;
             }            
-            &__form-sign-in {
-                max-width: 305px;
-            }
+            // &__form-sign-in {
+            //     max-width: 305px;
+            // }
             &__form-sign-up {
                 max-width: 455px;
             }
@@ -501,6 +603,11 @@
         }
         .ds-inputs-form {
             margin-bottom: 5px;
+        }
+        &.is-error {
+            .auth-form__txt-error {
+                visibility: visible;
+            }
         }
         &.is-hidden {
             display: none;

@@ -114,6 +114,9 @@
         color: $color-input-txt-info;
         position: relative;
         user-select: none;
+        &.phone {
+            padding: 0 0 0 22px;
+        }
     }
     &__txt-error {
         display: flex;
@@ -135,7 +138,7 @@
     &__icon-info {
         position: absolute;
         top: 10px;
-        right: 0;
+        left: 0;
         user-select: none;                
     }
 
@@ -159,7 +162,6 @@
         &:before {
             content: "Логин";
         }
-
     }
     &:after {
         content: "";
@@ -170,6 +172,12 @@
         top: 0px;
         left: 5px;
         z-index: 10;
+    }
+    .snowflake {
+        &:before {
+            top: -15px;
+            left: 60px;
+        }
     }
 
 }
