@@ -19,7 +19,7 @@ module.exports = {
     }, //объект с точками входа
     output: {
         path: path.join(__dirname, "dist/"), //общий путь для выходных файлов
-        filename: "js/[name].js?[hash]" //в этом параметре мы индивидуально добавляем необходимую директорию перед именем файлов
+        filename: "js/[name].js" //в этом параметре мы индивидуально добавляем необходимую директорию перед именем файлов
     },
     watch: false, //Слежение за изменениями
     devtool: "source-map", //Инструменты разработчика
@@ -160,7 +160,7 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: "css/[name].css?[hash]"
+            filename: "css/[name].css"
         }),
         new CopyPlugin([{ from: "src/images/important_images/**/*", to: "images", flatten: true, test: /.*\.(jpg|png|gif|svg)$/ }])
     ],
