@@ -115,6 +115,8 @@
         position: relative;
         user-select: none;
         &.phone {
+            width: 100%;
+            max-width: 163px;
             padding: 0 0 0 22px;
         }
     }
@@ -129,10 +131,10 @@
         visibility: hidden;
         user-select: none;
         &-email, &-phone {
-            max-width: 160px;
+            max-width: 152px;
         }
         &-login {
-            max-width: 203px;
+            max-width: 182px;
         }
     }
     &__icon-info {
@@ -149,7 +151,7 @@
     &:before {
         content: "*";
         position: absolute;
-        top: -12px;
+        top: -15px;
         left: 5px;
         font-size: 12px;
         color: $color-input-border-error;
@@ -175,7 +177,6 @@
     }
     .snowflake {
         &:before {
-            top: -15px;
             left: 60px;
         }
     }
@@ -184,6 +185,11 @@
 
 // Password
 .input-password {
+    .snowflake {
+        &:before {
+            left: 70px;
+        }
+    }
     .ds-inputs-form__label {
         &:before {
             content: "Пароль";
@@ -248,6 +254,12 @@
 
 //Поле ввода почты
 .input-email {
+    .snowflake {
+        &:before {
+            left: 55px;
+        }
+    }
+
     .ds-inputs-form__label {
         &:before {
             content: "Email";
@@ -268,6 +280,12 @@
 
 //Поле ввода телефона
 .input-phone {
+    .snowflake {
+        &:before {
+            left: 135px;
+        }
+    }
+
     .ds-inputs-form__txt-error {
         max-width: 159px;
     }
@@ -296,6 +314,12 @@
 
 //Повторный ввод пароля
 .input-password-repeat {
+    .snowflake {
+        &:before {
+            left: 148px;
+        }
+    }
+
     .ds-inputs-form__label {
         &:before {
             content: "Повторите пароль";

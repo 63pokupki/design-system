@@ -116,21 +116,6 @@
 
     }
     &__right-tab {
-        // background: transparent;
-        // border-bottom-left-radius: 0px;
-        // border-bottom-right-radius: 0px;
-        // color: $dark-grey-color;
-
-        // &:after {
-        //     content: "";
-        //     position: absolute;
-        //     top: 39px;
-        //     right: calc(50%-10px);
-        //     display: flex;
-        //     width: 11px;
-        //     height: 11px;
-        //     background: url("~images/important_images/auth-form/rectangle-tab-aith.svg");
-        // }
         &.is-active {
             background: #ffffff;
             position: relative;
@@ -155,25 +140,22 @@
                 content: "";
                 position: absolute;
                 top: 39px;
-                right: calc(50%-125px);
+                right: calc(50%-124px);
                 display: flex;
                 width: 11px;
                 height: 11px;
                 background: url("~images/important_images/auth-form/rectangle-tab-aith.svg");
 
             }
-
+            @media (max-width: 767px) {
+                &:before {
+                    left: calc(50% - 86px);
+                }
+            }
         }
     
     }
     &__left-tab {
-        // background: #fff;
-        // position: relative;
-        // border-bottom-left-radius: 0px;
-        // border-bottom-right-radius: 0px;
-        // font-weight: 600;
-        // color: $click-load-color;
-        // box-shadow: 0px 0px 15px rgba(49, 140, 202, 0.2);
         &.is-active {
             background: #ffffff;
             position: relative;
@@ -195,7 +177,11 @@
                 height: 11px;
                 background: url("~images/important_images/auth-form/rectangle-tab-aith.svg");
             }
-
+            @media (max-width: 767px) {
+                &:after {
+                    right: calc(50% - 86px);
+                }
+            }
 
         }
 
@@ -566,30 +552,10 @@
                     padding: 0 50px;
                 }
             }
+    
             &__txt-error {
                 font-size: 12px;
             }    
-            // Табы
-            &__auth-tabs {
-                
-                &:checked ~.auth-form__right-tab {
-                    &:before {
-                        left: calc(50%-10px);
-                    }
-                    &:after {
-                        right: calc(50%-10px); 
-                    }
-                }
-                &:checked ~.auth-form__left-tab {
-                    &:before {
-                        display: none;
-                    }
-                    &:after {
-                        display: none;
-                    }
-
-                }
-            }
         }        
     }
 
@@ -598,6 +564,30 @@
         display: block;
         width: 455px;
         padding: 20px 0 28px 0;
+
+        // Если сообщение отправлено
+        &.is-send {
+            .auth-form__txt,
+            .ds-inputs-component,
+            .auth-form__txt-or,
+            .auth-form__btn-recovery,
+            .auth-form__txt-error {
+                display: none;
+            }
+            .auth-form__form-password-recovery-txt {
+                display: block;
+                padding: 50px 39px;
+            }
+            .link_colored {
+                display: block;
+            }
+            @media (max-width: 767px) {
+                .auth-form__form-password-recovery-txt {
+                    padding: 30px 20px;
+                }
+            }
+        }
+
         .ds-inputs-component {
             min-height: auto;
         }
@@ -614,7 +604,22 @@
         }
         .auth-form__heading {
             font-size: 18px;
+        }
+        .link_colored {
+            display: none;
+            font-size: 16px;
+            font-weight: 500;
         } 
+    }
+
+    &__form-password-recovery-txt {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        text-align: center;        
+        font-size: 16px;
+        color: $color-text-base;
+        line-height: 20px;
     }
 
     // Контейнер контента
