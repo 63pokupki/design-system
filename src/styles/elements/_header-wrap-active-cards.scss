@@ -64,6 +64,9 @@
         margin-top: 2px;
         justify-content: space-between;
         width: 700px;
+        @media (max-width: 1024px) {
+            width: 350px;
+        }
         .ds-popover {
             @media (max-width: 600px) {
                 display: none;

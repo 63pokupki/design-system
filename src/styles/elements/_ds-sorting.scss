@@ -11,11 +11,7 @@
             @media (min-width: 1025px) {
                 border-bottom: 1px solid $color-primary;
                 text-overflow: ellipsis;
-            }
-            @media (max-width: 1024px) {
-                transform: translateX(-20px);
-            }                       
-    
+            }    
         }
         .icon-check-in {
             @media (max-width: 1024px) {
