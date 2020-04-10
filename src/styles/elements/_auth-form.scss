@@ -510,16 +510,9 @@
             }
         }
         .auth-form {
-            // max-width: 455px;
-            &__form {
-                padding-left: 15px;
-                padding-right: 15px;
-            }
             &__login-pass-container,
             &__phone-container {
-                // display: block;
                 justify-content: center;
-                // flex-wrap: wrap;
             }
             &__login-container {
                 margin-right: 0!important;
@@ -531,9 +524,6 @@
             &__phone-txt {
                 margin: 13px 0;
             }            
-            // &__form-sign-in {
-            //     max-width: 305px;
-            // }
             &__form-sign-up {
                 max-width: 455px;
             }
@@ -543,13 +533,15 @@
                 }
             }
             &__content-container {
-                padding-left: 2px;
-                padding-right: 2px;
+                padding: 20px 15px 28px;
             }
             &__form-password-recovery {
                 max-width: 305px;
                 .auth-form__txt {
                     padding: 0 50px;
+                }
+                .auth-form__txt-error {
+                    margin: -10px 0 15px 0;
                 }
             }
     

@@ -119,6 +119,9 @@
             max-width: 163px;
             padding: 0 0 0 22px;
         }
+        &.email {
+            padding: 0;
+        }
     }
     &__txt-error {
         display: flex;
