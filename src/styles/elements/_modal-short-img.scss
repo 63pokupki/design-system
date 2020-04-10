@@ -331,30 +331,6 @@
                 text-align: center;
             }
         }
-
-        .btn-sum__minus, .btn-sum__plus {
-            position: relative;
-            width: 20px;
-            height: 20px;
-            min-width: 20px;
-            border-radius: 50%;
-            background: $color-inactive;
-            color: #ffffff;
-            &:active {
-                transform: scale(.95);
-            }
-            &:after, &:before {
-                content: "";
-                position: absolute;
-                width: 5px;
-                height: 2px;
-                background: #ffffff;
-            }
-            &:hover {
-                background: $color-primary;
-            }
-
-        }
         &__plus {
             &:before {
                 width: 8px;
@@ -418,17 +394,6 @@
             .icon-eye {
                 margin-right: 12px;
             }
-        }
-
-    }
-    .btn-sum__minus, .btn-sum__plus {
-        background: $color-inactive;
-        color: #ffffff;
-        &:active {
-            transform: scale(.95);
-        }
-        &:hover {
-            background: $color-primary;
         }
 
     }
