@@ -23,6 +23,7 @@
             // margin: 0 7px 5px 0;
             overflow-y: auto;
             overflow-x: hidden;
+            position: relative;
 
             h5 {
                 margin: 0 0 5px 3px;
@@ -122,6 +123,10 @@
 
         &__btn-container {
             display: flex;
+            position: sticky;
+            bottom: 0;
+            left: 0;
+            background: $background-color-primary;
             .btn-add-to-card {
                 max-height: 32px;
                 min-width: 160px;    
