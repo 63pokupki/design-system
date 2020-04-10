@@ -242,6 +242,22 @@
         &-sign-up {
             // display: none;
             flex-direction: column;
+            &.is-enter-code {
+                .auth-form__phone-container,
+                .auth-form__login-pass-container,
+                .auth-form__txt,
+                .auth-form__heading,
+                .auth-form__btn-container {
+                    display: none;
+                }
+                .auth-form__enter-code {
+                    display: flex;
+                    .auth-form__heading,
+                    .auth-form__btn-container {
+                        display: flex;
+                    }
+                }
+            }
 
         }
         // Форма входа
@@ -649,6 +665,63 @@
         height: 45px;
         font-size: 16px;
         font-weight: 600;
+    }
+    // Введите код из смс
+    &__enter-code {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        min-width: 444px;
+        margin: 0 auto;
+        text-align: center;
+        &.is-error {
+            .auth-form__txt-error {
+                visibility: visible;
+            }
+            .ds-inputs-form__input {
+                // border: 1px solid #36a6f2;
+                background: $color-input-bg-error;
+                border-color: $color-input-border-error;
+                &:focus {
+                    ~.ds-inputs-form__label {
+                        &:before {
+                            color: $color-input-border-error;
+                        }
+                    }
+        
+                }
+            }
+            .ds-inputs-form__label {
+                &:before {
+                    color: $color-input-border-error;
+                }
+            }
+        }
+        .ds-inputs-component {
+            max-width: 175px;
+            min-height: 45px;
+        }
+        .ds-inputs-form {
+            min-width: 100%;
+            margin: 23px 0 0 0;
+        }
+        .auth-form__txt-error {
+            margin: 0;
+            background: transparent;
+            font-size: 12px;
+            font-weight: 600;
+        }
+    }
+    &__btn-confirm {
+        width: 220px;
+        height: 45px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    &__send-repeated {
+        font-size: 12px;
+        color: $color-text-base;
     }
 }
 

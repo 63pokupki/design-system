@@ -343,6 +343,32 @@
     }
 }
 
+// Поле ввода кода из смс
+.input-send-sms {
+    .ds-inputs-form__label {
+        &:before {
+            content: "Код";
+            white-space: nowrap;
+            color: $color-primary;
+        }        
+    }
+    &:after {
+        content: "";
+        background: url("~images/important_images/auth-form/bg-line-label-input.svg");
+        width: 45px;
+        height: 5px;
+        position: absolute;
+        top: 0px;
+        left: 5px;
+        z-index: 10;
+    }
+    .ds-inputs-form__input {
+        min-width: 175px;
+        border: 1px solid $color-primary;
+    }
+
+}
+
 //Модалка сообщение организатору
 .modal-message-for-org {
     .ds-inputs-form__label {
