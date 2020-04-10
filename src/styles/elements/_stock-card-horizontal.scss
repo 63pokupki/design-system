@@ -90,7 +90,9 @@
     }
 
     .item-page-d__params {
-        bottom: -47px;
+        .ds-popover {
+            bottom: -47px;
+        }
     }
 
     // Всплывашка с ошибкой
