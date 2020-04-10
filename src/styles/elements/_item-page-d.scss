@@ -184,8 +184,13 @@
         width: 100%;
         margin-right: 30px;
         margin-bottom: 22px;
+        position: relative;
         @media (max-width: 767px) {
             max-width: 100%;
+        }
+
+        .ds-popover {
+            bottom: -47px;
         }
 
         .tooltip {
