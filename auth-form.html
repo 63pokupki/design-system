@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Окно входа/авторизации</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?808bc63127a66e8cbbff" rel="stylesheet"><link href="css/ds-utils.css?808bc63127a66e8cbbff" rel="stylesheet"><link href="css/ds-ui-kit.css?808bc63127a66e8cbbff" rel="stylesheet"></head>
+<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?0ebd16d613d94762b7cd" rel="stylesheet"><link href="css/ds-utils.css?0ebd16d613d94762b7cd" rel="stylesheet"><link href="css/ds-ui-kit.css?0ebd16d613d94762b7cd" rel="stylesheet"></head>
 
 <body>
 
@@ -657,6 +657,85 @@
 
     </div>
 
+    <!-- Одельно форма авторизации с ошибками -->
+    <div class="ds-center">Для отображения ошибки, необходимо присвоить класс <span class="ds-hl">is-error</span> 
+    элементу <span class="ds-hl">ds-inputs-component</span></div>
+    <div class="ds-wrapper" style="background: #36A6F2; padding: 0;">
+        <!-- ФОрма компонент -->
+        <div style="display: flex; margin: 0 auto;">
+            <div class="auth-form">
+                <!-- Табы -->
+                <div class="auth-form__tab-container">
+                    <!-- <input class="auth-form__auth-tabs" type="checkbox" id="auth-tabs"> -->
+                    <label class="auth-form__left-tab is-active" for="auth-tabs">Уже есть аккаунт</label>
+                    <label class="auth-form__right-tab" for="auth-tabs">Новый аккаунт</label>
+                </div>
+                <div class="auth-form__form-container">
+                    <!-- Форма входа -->
+                    <!-- Если поля заполнены неверно, присвоить класс .is-error элементу form -->
+                    <form id="login" action="../phpBB3/ucp.php?mode=login&sid=37bbe2851bbf9589b26ee21691d841f8"
+                        method="post" name="" data-focus="username" class="auth-form__form auth-form__form-sign-in">
+    
+                        <div class="auth-form__heading">Вход на сайт</div>
+                        <div class="auth-form__content-container">
+                            <!-- Поле логин -->
+                            <div class="ds-inputs-component is-error is-hidden-info is-hidden-snowflake">
+                                <div class="ds-inputs-form  input-login">
+                                    <span class="snowflake"></span>
+                                    <input id="ds-inputs-form__input-login" class="ds-inputs-form__input" type="text"
+                                        name="" id="" maxlength="22" minlength="3">
+                                    <label class="ds-inputs-form__label" for="ds-inputs-form__input-login"></label>
+                                </div>
+                                <div class="ds-inputs-form__info-block">
+                                    <span class="ds-inputs-form__txt-info">3-22 символа</span>
+                                    <span class="ds-inputs-form__txt-error ds-inputs-form__txt-error-login">Пользователь
+                                        с
+                                        таким именем уже существует</span>
+                                </div>
+                            </div>
+                            <!-- Предупреждение -->
+                            <span class="auth-form__error-message">Неверный логин или пароль</span>
+                            <!-- Поле пароль -->
+                            <div class="ds-inputs-component is-error is-hidden-info is-hidden-snowflake">
+                                <div class="ds-inputs-form  input-password">
+                                    <span class="snowflake"></span>
+                                    <input id="ds-inputs-form__input-password" class="ds-inputs-form__input" type="password"
+                                        maxlength="30" minlength="6" required>
+                                    <label class="ds-inputs-form__label" for="ds-inputs-form__input-password"></label>
+                                    <input type="checkbox" name="" id="passEye">
+                                    <label class="passEye-label" for="passEye"></label>
+                                </div>
+                                <div class="ds-inputs-form__info-block">
+                                    <span class="ds-inputs-form__txt-info">6-30 символов</span>
+                                    <span class="ds-inputs-form__txt-error">Слишком короткий</span>
+                                </div>
+                            </div>
+                            <!-- Чекбокс -->
+                            <div class="checkbox auth-form__checkbox auth-form__checkbox-remember">
+                                <input class="checkbox__input" type="checkbox" id="chx-01" />
+                                <label class="checkbox__label" for="chx-01">Запомнить меня</label>
+                            </div>
+                            <div class="checkbox auth-form__checkbox">
+                                <input class="checkbox__input" type="checkbox" id="chx-0123" />
+                                <label class="checkbox__label" for="chx-0123">Скрыть моё пребывание на конференции
+                                    на этот раз</label>
+                            </div>
+                        </div>
+                        <!-- Для отображения активной кнопки, удалить класс ds-btn_disabled и добавить ds-btn_inverse -->
+                        <button class="ds-btn auth-form__btn-enter ds-btn_disabled">
+                            <div class="ds-btn__text">Вход</div>
+                        </button>
+                        <a class="auth-form__link-to-recovery-password link link_colored" href="">Забыли пароль?</a>
+                        <!-- Если все поля заполнены, добавить кнопке класс .ds-btn_hover -->
+                    </form>
+    
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+
     <!-- ОТдельно форма восстановления пароля -->
     <h2 class="ds-center">Это окно появляется, после нажатия на кнопку "Забыли пароль"</h2>
     <div class="ds-wrapper" style="background: #36A6F2; padding: 0;">
@@ -973,6 +1052,6 @@
         </div>
     </div>
     
-<script type="text/javascript" src="js/highlight-syntax.js?808bc63127a66e8cbbff"></script><script type="text/javascript" src="js/ds-utils.js?808bc63127a66e8cbbff"></script><script type="text/javascript" src="js/categories-icons-sprite.js?808bc63127a66e8cbbff"></script><script type="text/javascript" src="js/ds-ui-kit.js?808bc63127a66e8cbbff"></script></body>
+<script type="text/javascript" src="js/highlight-syntax.js?0ebd16d613d94762b7cd"></script><script type="text/javascript" src="js/ds-utils.js?0ebd16d613d94762b7cd"></script><script type="text/javascript" src="js/categories-icons-sprite.js?0ebd16d613d94762b7cd"></script><script type="text/javascript" src="js/ds-ui-kit.js?0ebd16d613d94762b7cd"></script></body>
 
 </html>
