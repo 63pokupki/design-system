@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Окно входа/авторизации</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?0ebd16d613d94762b7cd" rel="stylesheet"><link href="css/ds-utils.css?0ebd16d613d94762b7cd" rel="stylesheet"><link href="css/ds-ui-kit.css?0ebd16d613d94762b7cd" rel="stylesheet"></head>
+<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?59d3d7884fd8fd1626e4" rel="stylesheet"><link href="css/ds-utils.css?59d3d7884fd8fd1626e4" rel="stylesheet"><link href="css/ds-ui-kit.css?59d3d7884fd8fd1626e4" rel="stylesheet"></head>
 
 <body>
 
@@ -141,7 +141,7 @@
                                                     for="ds-inputs-form__input-email"></label>
                                             </div>
                                             <div class="ds-inputs-form__info-block ds-inputs-form__info-block-mail">
-                                                <div class="ds-inputs-form__txt-info">Будет использоваться для
+                                                <div class="ds-inputs-form__txt-info email">Будет использоваться для
                                                     восстановления доступа
                                                     к учётной записи
                                                 </div>
@@ -322,32 +322,35 @@
 
     <div class="ds-code-wrapper">
         <script type="text/plain" class="language-markup">
+            <!-- ФОрма компонент -->
             <div class="auth-form">
                 <!-- Табы -->
                 <div class="auth-form__tab-container">
                     <!-- <input class="auth-form__auth-tabs" type="checkbox" id="auth-tabs"> -->
-                    <label class="auth-form__left-tab" for="auth-tabs">Уже есть аккаунт</label>
-                    <label class="auth-form__right-tab is-active" for="auth-tabs">Новый аккаунт</label>
+                    <label class="auth-form__left-tab is-active" for="auth-tabs">Уже есть аккаунт</label>
+                    <label class="auth-form__right-tab" for="auth-tabs">Новый аккаунт</label>
                 </div>
                 <div class="auth-form__form-container">
                     <!-- Форма входа -->
                     <!-- Если поля заполнены неверно, присвоить класс .is-error элементу form -->
                     <form id="login" action="../phpBB3/ucp.php?mode=login&sid=37bbe2851bbf9589b26ee21691d841f8"
                         method="post" name="" data-focus="username" class="auth-form__form auth-form__form-sign-in">
-                        
+
                         <div class="auth-form__heading">Вход на сайт</div>
                         <div class="auth-form__content-container">
-                            <!-- Поле логин -->                            
+                            <!-- Поле логин -->
                             <div class="ds-inputs-component is-hidden-info is-hidden-snowflake">
                                 <div class="ds-inputs-form  input-login">
                                     <span class="snowflake"></span>
-                                    <input id="ds-inputs-form__input-login" class="ds-inputs-form__input" type="text"
-                                        name="" id="" maxlength="22" minlength="3">
+                                    <input id="ds-inputs-form__input-login" class="ds-inputs-form__input"
+                                        type="text" name="" id="" maxlength="22" minlength="3">
                                     <label class="ds-inputs-form__label" for="ds-inputs-form__input-login"></label>
                                 </div>
                                 <div class="ds-inputs-form__info-block">
                                     <span class="ds-inputs-form__txt-info">3-22 символа</span>
-                                    <span class="ds-inputs-form__txt-error ds-inputs-form__txt-error-login">Пользователь с 
+                                    <span
+                                        class="ds-inputs-form__txt-error ds-inputs-form__txt-error-login">Пользователь
+                                        с
                                         таким именем уже существует</span>
                                 </div>
                             </div>
@@ -357,9 +360,10 @@
                             <div class="ds-inputs-component is-hidden-info is-hidden-snowflake">
                                 <div class="ds-inputs-form  input-password">
                                     <span class="snowflake"></span>
-                                    <input id="ds-inputs-form__input-password" class="ds-inputs-form__input" type="password"
-                                        maxlength="30" minlength="6" required>
-                                    <label class="ds-inputs-form__label" for="ds-inputs-form__input-password"></label>
+                                    <input id="ds-inputs-form__input-password" class="ds-inputs-form__input"
+                                        type="password" maxlength="30" minlength="6" required>
+                                    <label class="ds-inputs-form__label"
+                                        for="ds-inputs-form__input-password"></label>
                                     <input type="checkbox" name="" id="passEye">
                                     <label class="passEye-label" for="passEye"></label>
                                 </div>
@@ -375,8 +379,9 @@
                             </div>
                             <div class="checkbox auth-form__checkbox">
                                 <input class="checkbox__input" type="checkbox" id="chx-0123" />
-                                <label class="checkbox__label" for="chx-0123">Скрыть моё пребывание на конференции на этот раз</label>
-                            </div>    
+                                <label class="checkbox__label" for="chx-0123">Скрыть моё пребывание на конференции
+                                    на этот раз</label>
+                            </div>
                         </div>
                         <!-- Для отображения активной кнопки, удалить класс ds-btn_disabled и добавить ds-btn_inverse -->
                         <button class="ds-btn auth-form__btn-enter ds-btn_disabled">
@@ -385,7 +390,7 @@
                         <a class="auth-form__link-to-recovery-password link link_colored" href="">Забыли пароль?</a>
                         <!-- Если все поля заполнены, добавить кнопке класс .ds-btn_hover -->
                     </form>
-                    
+
                     <!-- Форма регистрации -->
                     <form id="register" action="./ucp.php?mode=register" method="post" name=""
                         class="auth-form__form auth-form__form-sign-up">
@@ -401,14 +406,17 @@
                                         <div class="ds-inputs-form  input-login">
                                             <span class="snowflake"></span>
                                             <input id="ds-inputs-form__input-login" class="ds-inputs-form__input"
-                                                type="text" name="username" id="" maxlength="22" minlength="3" tabindex="4">
-    
-                                            <label class="ds-inputs-form__label" for="ds-inputs-form__input-login"></label>
+                                                type="text" name="username" id="" maxlength="22" minlength="3"
+                                                tabindex="4">
+
+                                            <label class="ds-inputs-form__label"
+                                                for="ds-inputs-form__input-login"></label>
                                         </div>
                                         <div class="ds-inputs-form__info-block">
                                             <span class="ds-inputs-form__txt-info">3-22 символа</span>
                                             <span
-                                                class="ds-inputs-form__txt-error ds-inputs-form__txt-error-login">Пользователь с
+                                                class="ds-inputs-form__txt-error ds-inputs-form__txt-error-login">Пользователь
+                                                с
                                                 таким именем уже существует</span>
                                         </div>
                                     </div>
@@ -416,36 +424,42 @@
                                     <div class="ds-inputs-component">
                                         <div class="ds-inputs-form  input-email">
                                             <span class="snowflake"></span>
-                                            <input id="ds-inputs-form__email" class="ds-inputs-form__input" type="email"
-                                                name="email" maxlength="25" tabindex="5">
-                                            <label class="ds-inputs-form__label" for="ds-inputs-form__input-email"></label>
+                                            <input id="ds-inputs-form__email" class="ds-inputs-form__input"
+                                                type="email" name="email" maxlength="25" tabindex="5">
+                                            <label class="ds-inputs-form__label"
+                                                for="ds-inputs-form__input-email"></label>
                                         </div>
                                         <div class="ds-inputs-form__info-block ds-inputs-form__info-block-mail">
-                                            <div class="ds-inputs-form__txt-info">Будет использоваться для 
+                                            <div class="ds-inputs-form__txt-info email">Будет использоваться для
                                                 восстановления доступа
                                                 к учётной записи
                                             </div>
-                                            <span class="ds-inputs-form__txt-error ds-inputs-form__txt-error-email">Уже
+                                            <span
+                                                class="ds-inputs-form__txt-error ds-inputs-form__txt-error-email">Уже
                                                 используется другим
                                                 пользователем</span>
                                         </div>
                                     </div>
                                 </div>
-                                    <!-- Блок инпутов пароль -->
+                                <!-- Блок инпутов пароль -->
                                 <div class="auth-form__pass-container">
                                     <!-- Пароль -->
                                     <div class="ds-inputs-component">
                                         <div class="ds-inputs-form  input-password">
                                             <span class="snowflake"></span>
-                                            <input id="ds-inputs-form__input-password" class="ds-inputs-form__input" type="password" maxlength="30" minlength="6" tabindex="6" autocomplete="off" required>
+                                            <input id="ds-inputs-form__input-password" class="ds-inputs-form__input"
+                                                type="password" maxlength="30" minlength="6" tabindex="6"
+                                                autocomplete="off" required>
                                             <label class="ds-inputs-form__label"
                                                 for="ds-inputs-form__input-password"></label>
                                             <input type="checkbox" name="" id="passEye-form-reg">
                                             <label class="passEye-label" for="passEye-form-reg"></label>
-    
+
                                         </div>
                                         <div class="ds-inputs-form__info-block">
-                                            <span class="ds-inputs-form__txt-info ds-inputs-form__txt-info-pass">6-30 символов</span>
+                                            <span
+                                                class="ds-inputs-form__txt-info ds-inputs-form__txt-info-pass">6-30
+                                                символов</span>
                                             <span class="ds-inputs-form__txt-error">Слишком короткий</span>
                                         </div>
                                     </div>
@@ -454,8 +468,9 @@
                                         <div class="ds-inputs-form  input-password input-password-repeat">
                                             <span class="snowflake"></span>
                                             <input id="ds-inputs-form__input-password-repeat"
-                                                class="ds-inputs-form__input" type="password" maxlength="30" minlength="6" tabindex="7" autocomplete="off" required>
-    
+                                                class="ds-inputs-form__input" type="password" maxlength="30"
+                                                minlength="6" tabindex="7" autocomplete="off" required>
+
                                             <label class="ds-inputs-form__label"
                                                 for="ds-inputs-form__input-password-repeat"></label>
                                             <input type="checkbox" name="" id="repeat-passEye">
@@ -463,11 +478,12 @@
                                         </div>
                                         <div class="ds-inputs-form__info-block">
                                             <span class="ds-inputs-form__txt-info"></span>
-                                            <span class="ds-inputs-form__txt-error">Введённые пароли не совпадают</span>
+                                            <span class="ds-inputs-form__txt-error">Введённые пароли не
+                                                совпадают</span>
                                         </div>
                                     </div>
                                 </div>
-                                
+
                             </div>
                             <div class="auth-form__phone-container">
                                 <div class="auth-form__phone">
@@ -475,9 +491,12 @@
                                     <div class="ds-inputs-component">
                                         <div class="ds-inputs-form  input-phone">
                                             <span class="snowflake"></span>
-                                            <input id="ds-inputs-form__phone" class="ds-inputs-form__input" type="tel"
-                                                name="" data-validate-url="/forum/phpBB3/app.php/phone/validate" tabindex="8">
-                                            <label class="ds-inputs-form__label" for="ds-inputs-form__input-phone"></label>
+                                            <input id="ds-inputs-form__phone" class="ds-inputs-form__input"
+                                                type="tel" name=""
+                                                data-validate-url="/forum/phpBB3/app.php/phone/validate"
+                                                tabindex="8">
+                                            <label class="ds-inputs-form__label"
+                                                for="ds-inputs-form__input-phone"></label>
                                         </div>
                                         <div class="ds-inputs-form__info-block ds-inputs-form__info-block-phone">
                                             <span class="ds-inputs-form__txt-info phone">
@@ -491,7 +510,7 @@
                                                 пользователем
                                             </span>
                                         </div>
-                                    </div>                                    
+                                    </div>
                                 </div>
                                 <div class="auth-form__phone-txt">
                                     <div class="auth-form__txt-footnote">
@@ -501,19 +520,21 @@
                                             target="_blank">соглашение на использование сервисов Сайта</a>
                                         и просмотр размещенной на Сайте информации, принимаете условия
                                         <a class="link link_colored"
-                                            href="https://63pokupki.ru/files/docs/site_rules.pdf" target="_blank">Правил
+                                            href="https://63pokupki.ru/files/docs/site_rules.pdf"
+                                            target="_blank">Правил
                                             Сайта</a>
                                         , даете
                                         <a class="link link_colored"
                                             href="https://63pokupki.ru/files/docs/personal_data.pdf"
-                                            target="_blank">Согласие на обработку персональных данных</a> и знакомитесь
+                                            target="_blank">Согласие на обработку персональных данных</a> и
+                                        знакомитесь
                                         с положениями
                                         <a class="link link_colored"
                                             href="https://63pokupki.ru/files/docs/privacy_policy.pdf"
                                             target="_blank">Политики конфиденциальности</a>.
-                                    </div>            
+                                    </div>
                                 </div>
-    
+
                             </div>
                         </div>
                         <!-- Кнопка зарегистрироваться -->
@@ -528,7 +549,8 @@
                     <!-- Форма восстановления пароля -->
                     <!-- Если данные введены неверно, появляется текст с ошибкой над кнопкой, для этого необходимо присвоить
                     класс is-error элементу auth-form__form -->
-                    <form class="auth-form__form auth-form__form-password-recovery" action="/forum/phpBB3/app.php/remind" method="post">
+                    <form class="auth-form__form auth-form__form-password-recovery"
+                        action="/forum/phpBB3/app.php/remind" method="post">
                         <div class="auth-form__content-container">
                             <div class="auth-form__heading">Восстановление пароля</div>
                             <div class="auth-form__txt">Заполните ОДНО любое поле, которое помните</div>
@@ -540,7 +562,7 @@
                                         type="text" name="username" id="" maxlength="22" minlength="3" tabindex="4">
                                     <label class="ds-inputs-form__label" for="ds-inputs-form__input-login"></label>
                                 </div>
-                            </div> 
+                            </div>
                             <div class="auth-form__txt-or">или</div>
                             <!-- Email -->
                             <div class="ds-inputs-component is-hidden-snowflake">
@@ -557,12 +579,17 @@
                                 <div class="ds-inputs-form  input-phone">
                                     <span class="snowflake"></span>
                                     <input id="ds-inputs-form__phone" class="ds-inputs-form__input" type="tel"
-                                        name="" data-validate-url="/forum/phpBB3/app.php/phone/validate" tabindex="8">
+                                        name="" data-validate-url="/forum/phpBB3/app.php/phone/validate"
+                                        tabindex="8">
                                     <label class="ds-inputs-form__label" for="ds-inputs-form__input-phone"></label>
                                 </div>
-                            </div> 
+                            </div>
 
                         </div>
+                        <!-- На ваш телефон отправлено -->
+                        <div class="auth-form__form-password-recovery-txt">
+                            На ваш телeфон <span class="auth-form__recovery-phone-num">+7********15</span> отправлено <br> сообщение с новым паролем
+                        </div>                        
                         <!-- Ошибка указаных данных -->
                         <div class="auth-form__txt-error">Неверно указаны данные, попропуйте еще раз</div>
                         <!-- Кнопка восстановить -->
@@ -571,12 +598,12 @@
 
                             <button class="auth-form__btn-recovery ds-btn ds-btn_disabled" tabindex="9">
                                 <div class="ds-btn__text">Восстановить</div>
-
                             </button>
+                            <a class="link link_colored" href="#">Перейти ко входу на сайт</a>
                         </div>
                     </form>
                 </div>
-            </div>                
+            </div>
 
         </script>
     </div>
@@ -624,8 +651,8 @@
                                     <input id="ds-inputs-form__input-password" class="ds-inputs-form__input" type="password"
                                         maxlength="30" minlength="6" required>
                                     <label class="ds-inputs-form__label" for="ds-inputs-form__input-password"></label>
-                                    <input type="checkbox" name="" id="passEye">
-                                    <label class="passEye-label" for="passEye"></label>
+                                    <input type="checkbox" name="" id="passEye2">
+                                    <label class="passEye-label" for="passEye2"></label>
                                 </div>
                                 <div class="ds-inputs-form__info-block">
                                     <span class="ds-inputs-form__txt-info">6-30 символов</span>
@@ -660,7 +687,8 @@
     <!-- Одельно форма авторизации с ошибками -->
     <div class="ds-center">Для отображения ошибки, необходимо присвоить класс <span class="ds-hl">is-error</span> 
     элементу <span class="ds-hl">ds-inputs-component</span></div>
-    <div class="ds-wrapper" style="background: #36A6F2; padding: 0;">
+    <div class="ds-center">Глаз в поле пароля работает как чекбокс</div>
+    <div class="ds-wrapper" style="background: #fff1f1; padding: 20px 0;">
         <!-- ФОрма компонент -->
         <div style="display: flex; margin: 0 auto;">
             <div class="auth-form">
@@ -702,8 +730,8 @@
                                     <input id="ds-inputs-form__input-password" class="ds-inputs-form__input" type="password"
                                         maxlength="30" minlength="6" required>
                                     <label class="ds-inputs-form__label" for="ds-inputs-form__input-password"></label>
-                                    <input type="checkbox" name="" id="passEye">
-                                    <label class="passEye-label" for="passEye"></label>
+                                    <input type="checkbox" name="" id="passEye1">
+                                    <label class="passEye-label" for="passEye1"></label>
                                 </div>
                                 <div class="ds-inputs-form__info-block">
                                     <span class="ds-inputs-form__txt-info">6-30 символов</span>
@@ -738,7 +766,7 @@
 
     <!-- ОТдельно форма восстановления пароля -->
     <h2 class="ds-center">Это окно появляется, после нажатия на кнопку "Забыли пароль"</h2>
-    <div class="ds-wrapper" style="background: #36A6F2; padding: 0;">
+    <div class="ds-wrapper" style="background: #36A6F2; padding: 20px 0;">
         <div style="display: flex; margin: 0 auto;">
             <!-- ФОрма компонент -->
             <div class="auth-form">
@@ -812,10 +840,90 @@
         </div>
     </div>
 
+    <!-- ОТдельно форма восстановления пароля с ошибками -->
+    <h2 class="ds-center">Это окно появляется, после нажатия на кнопку "Забыли пароль"</h2>
+    <div class="ds-center">Если данные в поле введены неверно, присвоить класс <span class="ds-hl">is-error</span>
+        форме <span class="ds-hl">auth-form__form-password-recovery</span>
+    </div>
+    <div class="ds-wrapper" style="background: #fff1f1; padding: 20px 0;">
+        <div style="display: flex; margin: 0 auto;">
+            <!-- ФОрма компонент -->
+            <div class="auth-form">
+                <!-- Табы -->
+                <div class="auth-form__tab-container">
+                    <!-- <input class="auth-form__auth-tabs" type="checkbox" id="auth-tabs"> -->
+                    <label class="auth-form__left-tab is-active" for="auth-tabs">Уже есть аккаунт</label>
+                    <label class="auth-form__right-tab" for="auth-tabs">Новый аккаунт</label>
+                </div>
+                <div class="auth-form__form-container">
+    
+                    <!-- Форма восстановления пароля -->
+                    <!-- Если данные введены неверно, появляется текст с ошибкой над кнопкой, для этого необходимо присвоить
+                                    класс is-error элементу auth-form__form -->
+                    <!-- Если смс отправлено, присвоить класс is-send элементу form -->
+                    <form class="auth-form__form auth-form__form-password-recovery is-error" action="/forum/phpBB3/app.php/remind"
+                        method="post">
+                        <div class="auth-form__content-container">
+                            <div class="auth-form__heading">Восстановление пароля</div>
+                            <div class="auth-form__txt">Заполните ОДНО любое поле, которое помните</div>
+                            <!-- Логин -->
+                            <div class="ds-inputs-component is-error is-hidden-snowflake">
+                                <div class="ds-inputs-form  input-login">
+                                    <span class="snowflake"></span>
+                                    <input id="ds-inputs-form__input-login" class="ds-inputs-form__input" type="text"
+                                        name="username" id="" maxlength="22" minlength="3" tabindex="4">
+                                    <label class="ds-inputs-form__label" for="ds-inputs-form__input-login"></label>
+                                </div>
+                            </div>
+                            <div class="auth-form__txt-or">или</div>
+                            <!-- Email -->
+                            <div class="ds-inputs-component is-error is-hidden-snowflake">
+                                <div class="ds-inputs-form  input-email">
+                                    <span class="snowflake"></span>
+                                    <input id="ds-inputs-form__email" class="ds-inputs-form__input" type="email"
+                                        name="email" maxlength="25" tabindex="5">
+                                    <label class="ds-inputs-form__label" for="ds-inputs-form__input-email"></label>
+                                </div>
+                            </div>
+                            <div class="auth-form__txt-or">или</div>
+                            <!-- Телефон -->
+                            <div class="ds-inputs-component is-error is-hidden-snowflake">
+                                <div class="ds-inputs-form  input-phone">
+                                    <span class="snowflake"></span>
+                                    <input id="ds-inputs-form__phone" class="ds-inputs-form__input" type="tel" name=""
+                                        data-validate-url="/forum/phpBB3/app.php/phone/validate" tabindex="8">
+                                    <label class="ds-inputs-form__label" for="ds-inputs-form__input-phone"></label>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <!-- На ваш телефон отправлено -->
+                        <div class="auth-form__form-password-recovery-txt">
+                            На ваш телeфон <span class="auth-form__recovery-phone-num">+7********15</span> отправлено <br> сообщение с новым паролем
+                        </div>                        
+                        <!-- Ошибка указаных данных -->
+                        <div class="auth-form__txt-error">Неверно указаны данные, попропуйте еще раз</div>
+                        <!-- Кнопка восстановить -->
+                        <div class="auth-form__btn-container">
+                            <!-- Для отображения активной кнопки, удалить класс ds-btn_disabled и добавить ds-btn_inverse -->
+    
+                            <button class="auth-form__btn-recovery ds-btn ds-btn_disabled" tabindex="9">
+                                <div class="ds-btn__text">Восстановить</div>    
+                            </button>
+                            <a class="link link_colored" href="#">Перейти ко входу на сайт</a>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
     <!-- ОТдельно форма восстановления пароля после отправки смс-->
     <h2 class="ds-center">Это окно появляется после нажатия на кнопку "Восстановить" и отправки смс</h2>
     <div class="ds-text ds-center">Вне зависимости от того какое поле выбрано, новый пароль приходит всегда в СМС.</div>
-    <div class="ds-wrapper" style="background: #36A6F2; padding: 0;">
+    <div class="ds-wrapper" style="background: #36A6F2; padding: 20px 0;">
         <div style="display: flex; margin: 0 auto;">
             <!-- ФОрма компонент -->
             <div class="auth-form">
@@ -891,7 +999,7 @@
     </div>
 
     <!-- Отдельно форма регистрации -->
-    <div class="ds-wrapper" style="background: #36A6F2; padding: 0;">
+    <div class="ds-wrapper" style="background: #36A6F2; padding: 20px 0;">
         <div style="display: flex; margin: 0 auto;">
             <!-- ФОрма компонент -->
             <div class="auth-form" style="margin: 0 auto;">
@@ -938,7 +1046,7 @@
                                             <label class="ds-inputs-form__label" for="ds-inputs-form__input-email"></label>
                                         </div>
                                         <div class="ds-inputs-form__info-block ds-inputs-form__info-block-mail">
-                                            <div class="ds-inputs-form__txt-info">Будет использоваться для
+                                            <div class="ds-inputs-form__txt-info email">Будет использоваться для
                                                 восстановления доступа
                                                 к учётной записи
                                             </div>
@@ -1051,7 +1159,170 @@
             </div>
         </div>
     </div>
+
+    <!-- Отдельно форма регистрации с ошибками -->
+    <div class="ds-wrapper" style="background: #fff1f1; padding: 20px 0;">
+        <div style="display: flex; margin: 0 auto;">
+            <!-- ФОрма компонент -->
+            <div class="auth-form" style="margin: 0 auto;">
+                <!-- Табы -->
+                <div class="auth-form__tab-container">
+                    <!-- <input class="auth-form__auth-tabs" type="checkbox" id="auth-tabs"> -->
+                    <label class="auth-form__left-tab" for="auth-tabs">Уже есть аккаунт</label>
+                    <label class="auth-form__right-tab is-active" for="auth-tabs">Новый аккаунт</label>
+                </div>
+                <div class="auth-form__form-container">
+                    <!-- Форма регистрации -->
+                    <form id="register" action="./ucp.php?mode=register" method="post" name=""
+                        class="auth-form__form auth-form__form-sign-up">
+                        <div class="auth-form__heading">Регистрация</div>
+                        <div class="auth-form__txt">Начните экономить до 70% уже через 1 минуту</div>
+                        <div class="auth-form__content-container">
+                            <!-- Контейнер инпутов -->
+                            <div class="auth-form__login-pass-container">
+                                <!-- Блок логин/почта/телефон -->
+                                <div class="auth-form__login-container">
+                                    <!-- Логин -->
+                                    <div class="ds-inputs-component is-error">
+                                        <div class="ds-inputs-form  input-login">
+                                            <span class="snowflake"></span>
+                                            <input id="ds-inputs-form__input-login" class="ds-inputs-form__input"
+                                                type="text" name="username" id="" maxlength="22" minlength="3" tabindex="4">
+
+                                            <label class="ds-inputs-form__label" for="ds-inputs-form__input-login"></label>
+                                        </div>
+                                        <div class="ds-inputs-form__info-block">
+                                            <span class="ds-inputs-form__txt-info">3-22 символа</span>
+                                            <span
+                                                class="ds-inputs-form__txt-error ds-inputs-form__txt-error-login">Пользователь
+                                                с
+                                                таким именем уже существует</span>
+                                        </div>
+                                    </div>
+                                    <!-- Почта -->
+                                    <div class="ds-inputs-component is-error">
+                                        <div class="ds-inputs-form  input-email">
+                                            <span class="snowflake"></span>
+                                            <input id="ds-inputs-form__email" class="ds-inputs-form__input" type="email"
+                                                name="email" maxlength="25" tabindex="5">
+                                            <label class="ds-inputs-form__label" for="ds-inputs-form__input-email"></label>
+                                        </div>
+                                        <div class="ds-inputs-form__info-block ds-inputs-form__info-block-mail">
+                                            <div class="ds-inputs-form__txt-info email">Будет использоваться для
+                                                восстановления доступа
+                                                к учётной записи
+                                            </div>
+                                            <span class="ds-inputs-form__txt-error ds-inputs-form__txt-error-email">Уже
+                                                используется другим
+                                                пользователем</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Блок инпутов пароль -->
+                                <div class="auth-form__pass-container">
+                                    <!-- Пароль -->
+                                    <div class="ds-inputs-component is-error">
+                                        <div class="ds-inputs-form  input-password">
+                                            <span class="snowflake"></span>
+                                            <input id="ds-inputs-form__input-password" class="ds-inputs-form__input"
+                                                type="password" maxlength="30" minlength="6" tabindex="6" autocomplete="off"
+                                                required>
+                                            <label class="ds-inputs-form__label"
+                                                for="ds-inputs-form__input-password"></label>
+                                            <input type="checkbox" name="" id="passEye-form-reg">
+                                            <label class="passEye-label" for="passEye-form-reg"></label>
+
+                                        </div>
+                                        <div class="ds-inputs-form__info-block">
+                                            <span class="ds-inputs-form__txt-info ds-inputs-form__txt-info-pass">6-30
+                                                символов</span>
+                                            <span class="ds-inputs-form__txt-error">Слишком короткий</span>
+                                        </div>
+                                    </div>
+                                    <!-- Повторите пароль -->
+                                    <div class="ds-inputs-component is-error">
+                                        <div class="ds-inputs-form  input-password input-password-repeat">
+                                            <span class="snowflake"></span>
+                                            <input id="ds-inputs-form__input-password-repeat" class="ds-inputs-form__input"
+                                                type="password" maxlength="30" minlength="6" tabindex="7" autocomplete="off"
+                                                required>
+
+                                            <label class="ds-inputs-form__label"
+                                                for="ds-inputs-form__input-password-repeat"></label>
+                                            <input type="checkbox" name="" id="repeat-passEye">
+                                            <label class="passEye-label" for="repeat-passEye"></label>
+                                        </div>
+                                        <div class="ds-inputs-form__info-block">
+                                            <span class="ds-inputs-form__txt-info"></span>
+                                            <span class="ds-inputs-form__txt-error">Введённые пароли не
+                                                совпадают</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="auth-form__phone-container">
+                                <div class="auth-form__phone">
+                                    <!-- Телефон -->
+                                    <div class="ds-inputs-component is-error">
+                                        <div class="ds-inputs-form  input-phone">
+                                            <span class="snowflake"></span>
+                                            <input id="ds-inputs-form__phone" class="ds-inputs-form__input" type="tel"
+                                                name="" data-validate-url="/forum/phpBB3/app.php/phone/validate"
+                                                tabindex="8">
+                                            <label class="ds-inputs-form__label" for="ds-inputs-form__input-phone"></label>
+                                        </div>
+                                        <div class="ds-inputs-form__info-block ds-inputs-form__info-block-phone">
+                                            <span class="ds-inputs-form__txt-info phone">
+                                                Будет отправлено СМС с кодом подтверждения
+                                                <i class="ds-icon ds-inputs-form__icon-info icon-info has-tooltip">
+                                                    <!-- <span class="tooltip  tooltip_right"></span> -->
+                                                </i>
+                                            </span>
+                                            <span class="ds-inputs-form__txt-error ds-inputs-form__txt-error-phone"> Уже
+                                                используется другим
+                                                пользователем
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="auth-form__phone-txt">
+                                    <div class="auth-form__txt-footnote">
+                                        Регистрируясь на Сайте, вы заключаете
+                                        <a class="link link_colored" href="https://63pokupki.ru/files/docs/public_offer.pdf"
+                                            target="_blank">соглашение на использование сервисов Сайта</a>
+                                        и просмотр размещенной на Сайте информации, принимаете условия
+                                        <a class="link link_colored" href="https://63pokupki.ru/files/docs/site_rules.pdf"
+                                            target="_blank">Правил
+                                            Сайта</a>
+                                        , даете
+                                        <a class="link link_colored"
+                                            href="https://63pokupki.ru/files/docs/personal_data.pdf"
+                                            target="_blank">Согласие на обработку персональных данных</a> и
+                                        знакомитесь
+                                        с положениями
+                                        <a class="link link_colored"
+                                            href="https://63pokupki.ru/files/docs/privacy_policy.pdf"
+                                            target="_blank">Политики конфиденциальности</a>.
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Кнопка зарегистрироваться -->
+                        <div class="auth-form__btn-container">
+                            <!-- Для отображения активной кнопки, удалить класс ds-btn_disabled и добавить ds-btn_inverse -->
+                            <button class="auth-form__btn-register ds-btn ds-btn_disabled" tabindex="9">
+                                <div class="ds-btn__text">Зарегистрироваться</div>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     
-<script type="text/javascript" src="js/highlight-syntax.js?0ebd16d613d94762b7cd"></script><script type="text/javascript" src="js/ds-utils.js?0ebd16d613d94762b7cd"></script><script type="text/javascript" src="js/categories-icons-sprite.js?0ebd16d613d94762b7cd"></script><script type="text/javascript" src="js/ds-ui-kit.js?0ebd16d613d94762b7cd"></script></body>
+    
+<script type="text/javascript" src="js/highlight-syntax.js?59d3d7884fd8fd1626e4"></script><script type="text/javascript" src="js/ds-utils.js?59d3d7884fd8fd1626e4"></script><script type="text/javascript" src="js/categories-icons-sprite.js?59d3d7884fd8fd1626e4"></script><script type="text/javascript" src="js/ds-ui-kit.js?59d3d7884fd8fd1626e4"></script></body>
 
 </html>
