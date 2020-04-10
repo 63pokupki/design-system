@@ -38,16 +38,17 @@
         justify-content: center;
         position: relative;
         border-radius: 50%;
-        background: $color-inactive;
+        background: rgba(54, 166, 242, 0.5);
         width: 20px;
         height: 20px;
 
         &:hover {
-            background: $color-primary;
+            background: $color-active;
         }
 
         &:active {
             @include deep-click(0.925);
+            background: $color-primary;
         }
     }
 
