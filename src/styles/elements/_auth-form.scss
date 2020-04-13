@@ -45,33 +45,33 @@
     }
 
 
-    &_sign-up {
-        // max-width: 850px;
-        .auth-form__right-tab {
-            &:after {
-                content: "";
-                position: absolute;
-                top: 39px;
-                right: calc(50%-10px);
-                display: flex;
-                width: 11px;
-                height: 11px;
-                background: url("~images/important_images/auth-form/rectangle-tab-aith.svg");
-            }
-            &:before {
-                content: "";
-                position: absolute;
-                top: 39px;
-                left: calc(50%-240px);
-                display: flex;
-                width: 11px;
-                height: 11px;
-                background: url("~images/important_images/auth-form/rectangle-tab-aith.svg");
-                transform: rotateY(180deg);
-            }
+    // &_sign-up {
+    //     // max-width: 850px;
+    //     .auth-form__right-tab {
+    //         &:after {
+    //             content: "";
+    //             position: absolute;
+    //             top: 39px;
+    //             right: calc(50%-10px);
+    //             display: flex;
+    //             width: 11px;
+    //             height: 11px;
+    //             background: url("~images/important_images/auth-form/rectangle-tab-aith.svg");
+    //         }
+    //         &:before {
+    //             content: "";
+    //             position: absolute;
+    //             top: 39px;
+    //             left: calc(50%-240px);
+    //             display: flex;
+    //             width: 11px;
+    //             height: 11px;
+    //             background: url("~images/important_images/auth-form/rectangle-tab-aith.svg");
+    //             transform: rotateY(180deg);
+    //         }
 
-        }
-    }
+    //     }
+    // }
     &.is-active {
         .auth-form__form-sign-up {
             display: flex;
@@ -258,6 +258,14 @@
                     }
                 }
             }
+            .auth-form__login-pass-container,
+            .auth-form__phone-container {
+                @media (min-width:993px) {
+                    .ds-inputs-form__input {
+                        min-width: 350px;
+                    }
+                }
+            }
 
         }
         // Форма входа
@@ -377,6 +385,93 @@
         max-width: 350px;
         margin: 0;
     }
+
+    //Блок Ошибка указаных данных
+    &__txt-error {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 26px;
+        max-height: 26px;
+        margin: 15px 0;
+        background: $color-input-bg-error;
+        font-size: 13px;
+        color: $color-input-border-error;
+        visibility: hidden;
+        &.is-visible {
+            visibility: visible;
+        }
+    }
+    &__btn-recovery {
+        width: 220px;
+        height: 45px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    // Введите код из смс
+    &__enter-code {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        min-width: 444px;
+        margin: 0 auto;
+        text-align: center;
+        &.is-error {
+            .auth-form__txt-error {
+                visibility: visible;
+            }
+            .ds-inputs-form__input {
+                background: $color-input-bg-error;
+                border-color: $color-input-border-error;
+                &:focus {
+                    ~.ds-inputs-form__label {
+                        &:before {
+                            color: $color-input-border-error;
+                        }
+                    }
+        
+                }
+            }
+            .ds-inputs-form__label {
+                &:before {
+                    color: $color-input-border-error;
+                }
+            }
+        }
+        .ds-inputs-component {
+            max-width: 175px;
+            min-height: 45px;
+        }
+        .ds-inputs-form {
+            min-width: 100%;
+            margin: 23px 0 0 0;
+        }
+        .ds-inputs-form__input {
+            max-width: 176px;
+            font-size: 18px;
+        }
+        .auth-form__txt-error {
+            margin: 0;
+            background: transparent;
+            font-size: 12px;
+            font-weight: 600;
+        }
+    }
+    &__btn-confirm {
+        width: 220px;
+        height: 45px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    &__send-repeated {
+        font-size: 12px;
+        color: $color-text-base;
+    }
+    
+
+
     @media (min-width: 768px) {
         .auth-form__heading {
             font-size: 22px;
@@ -642,86 +737,6 @@
         text-align: center;
         font-size: 13px;
         color: $color-text-light-grey;
-    }
-    //Блок Ошибка указаных данных
-    &__txt-error {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 26px;
-        max-height: 26px;
-        margin: 15px 0;
-        background: $color-input-bg-error;
-        font-size: 13px;
-        color: $color-input-border-error;
-        visibility: hidden;
-        &.is-visible {
-            visibility: visible;
-        }
-    }
-    &__btn-recovery {
-        width: 220px;
-        height: 45px;
-        font-size: 16px;
-        font-weight: 600;
-    }
-    // Введите код из смс
-    &__enter-code {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        min-width: 444px;
-        margin: 0 auto;
-        text-align: center;
-        &.is-error {
-            .auth-form__txt-error {
-                visibility: visible;
-            }
-            .ds-inputs-form__input {
-                // border: 1px solid #36a6f2;
-                background: $color-input-bg-error;
-                border-color: $color-input-border-error;
-                &:focus {
-                    ~.ds-inputs-form__label {
-                        &:before {
-                            color: $color-input-border-error;
-                        }
-                    }
-        
-                }
-            }
-            .ds-inputs-form__label {
-                &:before {
-                    color: $color-input-border-error;
-                }
-            }
-        }
-        .ds-inputs-component {
-            max-width: 175px;
-            min-height: 45px;
-        }
-        .ds-inputs-form {
-            min-width: 100%;
-            margin: 23px 0 0 0;
-        }
-        .auth-form__txt-error {
-            margin: 0;
-            background: transparent;
-            font-size: 12px;
-            font-weight: 600;
-        }
-    }
-    &__btn-confirm {
-        width: 220px;
-        height: 45px;
-        font-size: 16px;
-        font-weight: 600;
-    }
-    &__send-repeated {
-        font-size: 12px;
-        color: $color-text-base;
     }
 }
 
