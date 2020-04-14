@@ -44,12 +44,6 @@
             }    
 
             .item-params-list {
-                // max-height: 25px;
-                border: 1px solid transparent;
-                border-radius: 3px;
-                transition: all .5s;
-                margin: 0 5px 0 -3px;
-                overflow: auto;
             
                 &__item {
                     list-style: none;
