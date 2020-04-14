@@ -17,6 +17,9 @@
         .ds-inputs-form__txt-error {
             visibility: visible;
         }
+        ~.auth-form__error-message {
+            visibility: visible;
+        }
 
     }
     //Скрыть снежинку
@@ -28,7 +31,7 @@
     //Скрыть блок с подсказками снизу
     &.is-hidden-info {
         min-height: 0;
-        .ds-inputs-form__info-block {
+        .ds-inputs-form__txt-info {
             display: none;
         }
     }
@@ -309,10 +312,6 @@
         left: 4px;
         z-index: 10;
     }
-    input {
-        color: $color-text-base;
-    }
-
 }
 
 //Повторный ввод пароля
