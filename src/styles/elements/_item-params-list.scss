@@ -7,16 +7,17 @@
     flex-wrap: wrap;
     // max-height: 78px;
     overflow: hidden;
+    position: static;
 
     &.is-error {
         border: 1px solid $error-primary;
         box-sizing: border-box;
         border-radius: 4px;
-        ~.ds-popover {
+        .ds-popover {
             max-height: 1000px;
             visibility: visible;
             transition: all .5s ease;
-            opacity: 1;
+            opacity: 1;        
         }
     }
 
@@ -53,6 +54,11 @@
         transition: background-color $transition-fast, color $transition-fast;
         background-color: $color-primary;
         color: white;
+    }
+
+    // Popover
+    .ds-popover {
+        bottom: -28px;
     }
 }
 

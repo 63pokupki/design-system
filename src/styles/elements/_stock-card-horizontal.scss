@@ -89,11 +89,11 @@
         position: relative;        
     }
 
-    .item-page-d__params {
-        .ds-popover {
-            bottom: -47px;
-        }
-    }
+    // .item-page-d__params {
+    //     .ds-popover {
+    //         bottom: -47px;
+    //     }
+    // }
 
     // Всплывашка с ошибкой
     .ds-popover {
@@ -114,7 +114,6 @@
     
 
     .item-params-list {
-        position: relative;
         left: -5px;
         // max-height: 50px;
     }
