@@ -209,6 +209,9 @@
         padding: 20px 0;
         border-radius: 10px;
         &-sign-in {
+            @media (min-width: 768px) {
+                min-width: 455px;
+            }
             &.is-error {
                 >.ds-inputs-form {
                     background: #FFF1F1;
@@ -415,9 +418,17 @@
         flex-direction: column;
         align-items: center;
         width: 100%;
-        min-width: 444px;
         margin: 0 auto;
         text-align: center;
+        @media (min-width: 768px) {
+            min-width: 444px;
+        }
+        // @media (max-width: 767px) {
+        //     .ds-inputs-component,
+        //     .ds-inputs-form__input-send-sms {
+        //         max-width: 100%;
+        //     }
+        // }
         &.is-error {
             .auth-form__txt-error {
                 visibility: visible;
@@ -441,16 +452,20 @@
             }
         }
         .ds-inputs-component {
-            max-width: 175px;
             min-height: 45px;
+            @media (min-width: 768px) {
+                max-width: 175px;
+            }
         }
         .ds-inputs-form {
             min-width: 100%;
             margin: 23px 0 0 0;
         }
-        .ds-inputs-form__input {
-            max-width: 176px;
+        .ds-inputs-form__input {            
             font-size: 18px;
+            @media (min-width: 768px) {
+                max-width: 176px;
+            }
         }
         .auth-form__txt-error {
             margin: 0;
@@ -525,6 +540,11 @@
         }  
         .ds-inputs-component {
             min-width: 330px;
+        }
+        .auth-form__enter-code {
+            .ds-inputs-component {
+                min-width: 175px;
+            }    
         }
     }
     &__phone-container {
