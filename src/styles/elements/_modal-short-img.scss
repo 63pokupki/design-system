@@ -69,7 +69,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 400px;
+            width: 355px;
+            max-height: 475px;
+            min-height: 475px;
             cursor: pointer;
             .arrow {
                 display: none;

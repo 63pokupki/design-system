@@ -36,7 +36,6 @@
     } 
 
     .ds-inputs-form__txt-info {
-        font-size: 12px;
         font-weight: normal;
     } 
 
@@ -226,9 +225,6 @@
                 .auth-form__error-message {
                     visibility: visible;
                 }
-                // .auth-form__txt-error {
-                //     visibility: visible;
-                // }
                 .ds-inputs-form__label {
                     &:before {
                         color: $color-input-border-error!important;
@@ -240,6 +236,9 @@
                 }
         
             }
+        .ds-inputs-form__txt-error-login {
+            display: none;
+        }
         }
         // Форма регистрации
         &-sign-up {
@@ -261,6 +260,11 @@
                     }
                 }
             }
+            .ds-inputs-form__txt-error-password-repeat {
+                @media (max-width: 767px) {
+                    white-space: nowrap;
+                }
+            }
             .auth-form__login-pass-container,
             .auth-form__phone-container {
                 @media (min-width:993px) {
@@ -269,7 +273,21 @@
                     }
                 }
             }
-
+            @media (max-width: 767px) {
+                .auth-form__heading {
+                    margin: 0;
+                    font-size: 18px;
+                }
+                .auth-form__txt {
+                    margin: 20px 0 0;
+                }
+                .auth-form__content-container {
+                    padding: 5px 15px 28px;
+                }
+                .ds-inputs-component {
+                    min-height: 85px;
+                }
+            }
         }
         // Форма входа
         &-sign-in {
@@ -305,7 +323,7 @@
         justify-content: flex-end;
         visibility: hidden;
         align-self: flex-end;
-        margin: 0 13px 0 0;
+        margin: 10px 0;
         font-weight: normal;
         font-size: 14px;
         color: $color-input-border-error;
@@ -400,6 +418,7 @@
         margin: 15px 0;
         background: $color-input-bg-error;
         font-size: 13px;
+        font-weight: 600;
         color: $color-input-border-error;
         visibility: hidden;
         &.is-visible {
@@ -423,12 +442,6 @@
         @media (min-width: 768px) {
             min-width: 444px;
         }
-        // @media (max-width: 767px) {
-        //     .ds-inputs-component,
-        //     .ds-inputs-form__input-send-sms {
-        //         max-width: 100%;
-        //     }
-        // }
         &.is-error {
             .auth-form__txt-error {
                 visibility: visible;
@@ -599,7 +612,7 @@
         }
         .ds-inputs-form {
             &__txt-error-login {
-                max-width: 150px;
+                max-width: 140px;
             }
             &__info-block-phone {
                 .ds-inputs-form__txt-error {
@@ -619,6 +632,7 @@
                 .ds-inputs-form__txt-info {
                     flex-wrap: wrap;
                     width: 100%;
+                    max-width: 168px;
                     padding: 0;
                     font-size: 12px;
                     font-weight: normal;
@@ -634,7 +648,6 @@
             }
             &__txt-error-email {
                 width: auto;
-                font-size: 11px;
                 line-height: 12px;
             }
             &__txt-error-phone {
@@ -663,9 +676,6 @@
                 &:after {
                     right: calc(50% - 10px);
                 }
-            }
-            &__content-container {
-                padding: 20px 15px 28px;
             }
             &__form-password-recovery {
                 max-width: 305px;
@@ -742,6 +752,7 @@
         align-items: center;
         text-align: center;        
         font-size: 16px;
+        font-weight: 600;
         color: $color-text-base;
         line-height: 20px;
     }
