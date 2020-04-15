@@ -405,3 +405,19 @@ try {
         });
     }
 } catch {}
+
+let inputPhone = document.querySelectorAll('#ds-inputs-form__phone');
+
+if (inputPhone) {
+    inputPhone.forEach((ip) => {
+        ip.addEventListener('keyup', function() {
+            this.value = this.value.replace(/[^\d]/g, '');
+        })
+    })
+}
+
+// document.querySelector('#ds-inputs-form__phone').addEventListener('keyup', function(){
+//     this.value = this.value.replace(/[^\d]/g, '');
+// });
+
+
