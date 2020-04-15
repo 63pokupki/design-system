@@ -1,5 +1,6 @@
 
 .modal-choise-of-color-size {
+    overflow: hidden;
     .modal {
         &__wrap {
             .icon-cart {
@@ -96,6 +97,9 @@
                         visibility: visible;
                     }
                 } 
+            }
+            .ds-popover {
+                z-index: 0;
             }
         }
 
