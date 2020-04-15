@@ -1,0 +1,23 @@
+@import "~styles/elements/_main-banner.scss";
+@import "~styles/elements/_main-toggle-block.scss";
+
+.main-page {
+	&__header {
+		width: 100%;
+	}
+
+	&__button {
+		height: 48px;
+		width: 245px;
+		border: none;
+
+		.ds-btn__text {
+			font-size: 18px;
+			line-height: 25px;
+		}
+
+		&_pink {
+			background-color: #FF7474;
+		}
+	}
+}
