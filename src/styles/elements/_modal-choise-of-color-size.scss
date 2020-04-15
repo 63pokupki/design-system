@@ -69,16 +69,6 @@
                 flex-direction: column;
                 position: relative;
                 margin: 0 0 10px 0;
-
-                &.is-warning {
-                    .item-params-list {                     
-                        border: 1px solid $pink-popover-color;
-                    }
-                    .ds-popover {
-                        visibility: visible;
-                    }
-
-                } 
             }
 
             &-size {
@@ -89,14 +79,6 @@
                 .item-params-list__item {
                     padding: 3px 5px;
                 }
-                &.is-warning {
-                    .item-params-list {                     
-                        border: 1px solid $pink-popover-color;
-                    }
-                    .ds-popover {
-                        visibility: visible;
-                    }
-                } 
             }
             .ds-popover {
                 z-index: 0;
