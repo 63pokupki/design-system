@@ -97,22 +97,6 @@
                     }
                 } 
             }
-            .ds-popover {
-                position: absolute;
-                bottom: -20px;
-                right: 3px;
-                padding: 5px;
-                box-shadow: none;
-                font-size: 11px;
-                background: $pink-popover-color;
-                color: $color-text-base;
-                visibility: hidden;
-                &:before {
-                    left: 20px;
-                    background: $pink-popover-color;
-                    transform: rotate(45deg) translateX(3px);
-                }
-            }
         }
 
         &__btn-container {
@@ -194,7 +178,7 @@
     // Для Сани
     .item-page-d__params.params {
         .ds-popover {
-            bottom: -45px;
+            bottom: -47px;
         }
     }
 }
