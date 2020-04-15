@@ -38,7 +38,13 @@
 
 .stock-m {
     &__back {
-        padding: 20px 20px 15px;
+        padding: 17px 20px;
+        // padding: 20px 20px 15px;
+    }
+
+    // Баннеры
+    .slider-banners {
+        padding: 0;
     }
 
     &__no-active {
@@ -182,8 +188,8 @@
         }
         .stock-card-vertical {
             &__heading {
-                font-size: 16px;
-                margin-bottom: 20px;
+                font-size: 14px;
+                margin-bottom: 14px;
                 height: auto;
             }
 
@@ -276,20 +282,20 @@
 
         // изменения в самой карточке
         .stock-card-vertical {
-            padding: 9px 7px 18px;
+            padding: 9px 7px 12px;
 
             &__heading {
                 font-size: 12px;
                 line-height: 20px;
-                margin-bottom: 15px;
+                margin-bottom: 12px;
             }
 
             &__price-wrapper {
-                margin-bottom: 10px;
+                margin-bottom: 5px;
             }
 
             &__price {
-                font-size: 16px;
+                font-size: 12px;
                 line-height: unset;
 
                 span {

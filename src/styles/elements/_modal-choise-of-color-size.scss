@@ -1,5 +1,6 @@
 
 .modal-choise-of-color-size {
+    overflow: hidden;
     .modal {
         &__wrap {
             .icon-cart {
@@ -67,51 +68,20 @@
                 display: flex;
                 flex-direction: column;
                 position: relative;
-                margin: 0 0 10px 5px;
-
-                &.is-warning {
-                    .item-params-list {                     
-                        border: 1px solid $pink-popover-color;
-                    }
-                    .ds-popover {
-                        visibility: visible;
-                    }
-
-                } 
+                margin: 0 0 10px 0;
             }
 
             &-size {
                 display: flex;
                 flex-direction: column;
-                margin: 0 0 20px 5px;
+                margin: 0 0 20px 0;
                 position: relative;
                 .item-params-list__item {
                     padding: 3px 5px;
                 }
-                &.is-warning {
-                    .item-params-list {                     
-                        border: 1px solid $pink-popover-color;
-                    }
-                    .ds-popover {
-                        visibility: visible;
-                    }
-                } 
             }
             .ds-popover {
-                position: absolute;
-                bottom: -20px;
-                right: 3px;
-                padding: 5px;
-                box-shadow: none;
-                font-size: 11px;
-                background: $pink-popover-color;
-                color: $color-text-base;
-                visibility: hidden;
-                &:before {
-                    left: 20px;
-                    background: $pink-popover-color;
-                    transform: rotate(45deg) translateX(3px);
-                }
+                z-index: 0;
             }
         }
 
@@ -194,7 +164,7 @@
     // Для Сани
     .item-page-d__params.params {
         .ds-popover {
-            bottom: -45px;
+            bottom: -47px;
         }
     }
 }
