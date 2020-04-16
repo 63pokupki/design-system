@@ -126,6 +126,8 @@
 		}
 
 		&_brand {
+			width: 70px;
+
 			&::before {
 				background-image: url("~images/important_images/main-achievement/brands.png");
 				width: 18px;
@@ -134,6 +136,8 @@
 		}
 
 		&_reviews {
+			width: 88px;
+
 			&::before {
 				background-image: url("~images/important_images/main-achievement/reviews.png");
 				width: 41px;
@@ -142,6 +146,8 @@
 		}
 
 		&_purchases {
+			width: 73px;
+
 			&::before {
 				background-image: url("~images/important_images/main-achievement/purchases.png");
 				width: 31px;
@@ -150,6 +156,8 @@
 		}
 		
 		&_protect {
+			width: 96px;
+
 			&::before {
 				background-image: url("~images/important_images/main-achievement/protect.png");
 				width: 29px;
@@ -158,6 +166,8 @@
 		}
 		
 		&_extradition {
+			width: 99px;
+			
 			&::before {
 				background-image: url("~images/important_images/main-achievement/extradition.png");
 				width: 50px;

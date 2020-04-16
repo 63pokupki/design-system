@@ -1,5 +1,9 @@
 @import "~styles/elements/_main-banner.scss";
 @import "~styles/elements/_main-toggle-block.scss";
+@import "~styles/elements/_main-slider.scss";
+@import "~styles/elements/_main-common-banner.scss";
+@import "~styles/elements/_main-news.scss";
+@import "~styles/elements/_main-brands.scss";
 
 .main-page {
 	&__header {
@@ -19,5 +23,15 @@
 		&_pink {
 			background-color: #FF7474;
 		}
+		
+		&_yellow {
+			background-color: #FFB321;
+		}
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 14px;
+		margin-left: 12px;
 	}
 }

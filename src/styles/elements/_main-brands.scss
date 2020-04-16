@@ -1,0 +1,24 @@
+.main-brands {
+	padding: 0 15px 15px;
+
+	&__list {
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0;
+		margin: 0;
+	}
+
+	&__item {
+		width: 80px;
+		height: 80px;
+		margin-right: 5%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&:nth-of-type(3n) {
+			margin-right: 0;
+		}
+	}
+}
