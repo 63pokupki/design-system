@@ -108,23 +108,11 @@
         font-size: 14px;
         font-weight: bold;
         color: $dark-brown-color;
-        // white-space: nowrap;
-        // overflow: hidden;
-        // text-overflow: ellipsis;
         a {
             margin: 0 5px 0 0;
             color: $dark-brown-color;
             text-decoration: none;
-            // white-space: nowrap;
-            // overflow: hidden;
-            // text-overflow: ellipsis;
-
-            &:visited {
-                color: #906;
-            }
         }
-
-
     }
 
     //HEader right
