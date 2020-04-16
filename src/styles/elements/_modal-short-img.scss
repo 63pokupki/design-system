@@ -12,6 +12,8 @@
         
         &__wrap {
             max-width: 768px;
+            min-width: 768px;
+            
             //Кнопки влево/вправо
             .arrow {
                 position: absolute;
