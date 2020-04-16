@@ -3,6 +3,7 @@
     overflow: hidden;
     .modal {
         &__wrap {
+            max-height: 80vh;
             .icon-cart {
                 margin: 2px 0 0 3px;
                 font-size: 15px;
@@ -79,9 +80,6 @@
                 .item-params-list__item {
                     padding: 3px 5px;
                 }
-            }
-            .ds-popover {
-                z-index: 0;
             }
         }
 
