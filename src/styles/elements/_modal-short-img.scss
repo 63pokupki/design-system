@@ -70,10 +70,10 @@
             position: relative;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             width: 355px;
             // max-height: 475px;
-            min-height: 475px;
+            // min-height: 475px;
             cursor: pointer;
             .arrow {
                 display: none;
