@@ -3,6 +3,9 @@
     align-items: center;
     color: $color-text-base;
     width: 205px;
+    @media (min-width: 992px) {
+        display: none;
+    }
 
     &__icon {
         font-size: 26px;
