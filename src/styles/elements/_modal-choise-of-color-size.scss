@@ -4,6 +4,7 @@
     .modal {
         &__wrap {
             max-height: 80vh;
+            position: fixed;
             .icon-cart {
                 margin: 2px 0 0 3px;
                 font-size: 15px;

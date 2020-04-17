@@ -200,6 +200,7 @@
     &__image {
         max-width: 100%;
         display: none;
+        max-height: 90vh;
         @media (min-width: 768px) {
             max-height: 262px;
             margin: 0 auto;
@@ -265,6 +266,9 @@
         max-height: 40px;
         margin-bottom: 10px;
         height: 40px;
+        @media (max-width: 767px) {
+            margin-bottom: 5px;
+        }
 
         div {
             &::first-letter {

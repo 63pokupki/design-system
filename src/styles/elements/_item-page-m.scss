@@ -325,7 +325,7 @@
 
         &__heading {
             font-size: 14px;
-            margin-bottom: 16px;
+            margin-bottom: 5px;
             line-height: 25px;
             max-height: 50px;
             height: auto;
@@ -358,7 +358,7 @@
         flex-wrap: wrap;
         width: 100%;
         .item-page-d__params {
-            margin-bottom: 8px; //for front
+            margin-bottom: 0px; //for front
         }
     }
 }
