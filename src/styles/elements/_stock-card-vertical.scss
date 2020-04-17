@@ -199,14 +199,20 @@
 
     &__image {
         max-width: 100%;
-        max-height: 262px;
+        // max-height: 262px;
         display: none;
-        margin: 0 auto;
+        // margin: 0 auto;
     }
 
     &__images-wrapper {
+        display: flex;
+        justify-content: center;
         position: relative;
         min-width: 100%;
+    }
+
+    &__images {
+        position: relative;
     }
 
     &__image.is-active {
