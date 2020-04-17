@@ -199,9 +199,11 @@
 
     &__image {
         max-width: 100%;
-        // max-height: 262px;
         display: none;
-        // margin: 0 auto;
+        @media (min-width: 768px) {
+            max-height: 262px;
+            margin: 0 auto;
+        }
     }
 
     &__images-wrapper {
