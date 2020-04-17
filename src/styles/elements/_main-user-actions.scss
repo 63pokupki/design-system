@@ -1,0 +1,53 @@
+.main-user-actions {
+	display: flex;
+	flex-direction: column;
+	margin-top: 10px;
+
+	&__link {
+		height: 117px;
+		width: 100%;
+		margin-bottom: 40px;
+		text-decoration: none;
+		padding: 20px 15px;
+		position: relative;
+		cursor: pointer;
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			display: block;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+
+		&_org {
+			background: linear-gradient(60.95deg, #56B943 17.9%, #36A6F2 65.23%);
+			
+			&::after {
+				width: 180px;
+				height: 127px;
+				background-image: url('~images/important_images/bags.png');
+			}
+		}
+
+		&_provider {
+			background: linear-gradient(261.45deg, #E968A8 23.23%, #36A6F2 69.45%);
+
+			&::after {
+				width: 153px;
+				height: 135px;
+				background-image: url('~images/important_images/car.png');
+			}
+		}
+	}
+
+	&__text {
+		font-weight: bold;
+		font-size: 20px;
+		line-height: 28px;
+		text-transform: capitalize;
+		color: #FFFFFF;
+	}
+}

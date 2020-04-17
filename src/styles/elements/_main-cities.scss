@@ -1,0 +1,15 @@
+.main-cities {
+	&__list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		padding: 0 10px;
+	}
+
+	&__link {
+		font-size: 14px;
+		line-height: 40px;
+		color: #606266;
+		text-decoration: none;
+	}
+}
