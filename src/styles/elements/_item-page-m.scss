@@ -22,7 +22,7 @@
     &__sku {
         font-size: 12px;
         color: $color-text-base;
-        margin-bottom: 23px;
+        margin-bottom: 24px;
     }
 
     &__buttons {
@@ -304,7 +304,7 @@
         }
 
         &__price {
-            font-size: 24px;
+            font-size: 16px;
             line-height: 22px;
 
             span {
@@ -317,15 +317,15 @@
         }
 
         &__main {
-            margin-bottom: 21px;
+            margin-bottom: 8px;
             display: flex;
             flex-wrap: wrap;
             justify-content: flex-start;
         }
 
         &__heading {
-            font-size: 16px;
-            margin-bottom: 10px;
+            font-size: 14px;
+            margin-bottom: 16px;
             line-height: 25px;
             max-height: 50px;
             height: auto;
@@ -340,6 +340,10 @@
         &__wrapper {
             height: unset;
         }
+        // for front
+        .ItemCartFormMob {
+            margin-bottom: 20px;
+        }
     }
 
     .stock-rows-help {
@@ -353,5 +357,8 @@
         display: flex;
         flex-wrap: wrap;
         width: 100%;
+        .item-page-d__params {
+            margin-bottom: 8px; //for front
+        }
     }
 }
