@@ -41,3 +41,17 @@
 		}
 	}
 }
+
+@media (min-width: 768px) {
+	.main-about-us {
+		.main-page__title {
+			text-align: center;
+		}
+
+		&__text {
+			text-align: center;
+			width: 455px;
+			margin: 0 auto;
+		}
+	}
+}

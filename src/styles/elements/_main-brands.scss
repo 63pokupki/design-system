@@ -18,3 +18,14 @@
 		justify-content: center;
 	}
 }
+
+@media (min-width: 768px) {
+	.main-brands {
+		padding: 0 40px 15px 40px;
+
+		&__item {
+			width: 90px;
+			height: 90px;
+		}
+	}
+}

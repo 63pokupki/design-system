@@ -13,3 +13,15 @@
 		text-decoration: none;
 	}
 }
+
+@media (min-width: 768px) {
+	.main-cities {
+		&__list {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			height: 290px;
+			padding: 0 40px;
+		}
+	}
+}

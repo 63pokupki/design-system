@@ -51,3 +51,14 @@
 		color: #FFFFFF;
 	}
 }
+
+@media (min-width: 768px) {
+	.main-user-actions {
+		padding: 0 40px;
+		flex-direction: row;
+
+		&__link:first-child {
+			margin-right: 5px;
+		}
+	}
+}

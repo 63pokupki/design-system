@@ -8,6 +8,7 @@
 	min-width: 320px;
 	width: 100%;
 	padding: 13px 16px 24px;
+	position: relative;
 
 	&__name {
 		font-size: 27px;
@@ -25,5 +26,28 @@
 
 	&__img {
 		max-height: 205px;
+	}
+}
+
+@media (min-width: 768px) {
+	.main-banner {
+		padding: 10px 30px;
+		height: 169px;
+		align-items: flex-start;
+
+		&__name {
+			font-size: 36px;
+		}
+	
+		&__description {
+			font-size: 21px;
+		}
+	
+		&__img {
+			position: absolute;
+			top: 0;
+			right: 5%;
+			max-height: 100%;
+		}
 	}
 }

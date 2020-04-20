@@ -9,6 +9,14 @@
 @import "~styles/elements/_main-user-actions.scss";
 
 .main-page {
+	display: flex;
+	flex-direction: column;
+
+	&__main {
+		display: flex;
+		flex-direction: column;
+	}
+
 	&__header {
 		width: 100%;
 	}
@@ -36,5 +44,115 @@
 		font-weight: 700;
 		font-size: 14px;
 		margin-left: 12px;
+	}
+}
+
+@media (min-width: 768px) {
+	.main-page {
+		&__button {
+			height: 36px;
+			width: 186px;
+
+			.ds-btn__text {
+				font-size: 13px;
+				line-height: 19px;
+			}
+		}
+
+		&__title {
+			margin: 12px 0;
+			font-size: 20px;
+			line-height: 20px;
+
+			&_ml {
+				margin-left: 40px;
+			}
+		}
+
+		.main-wrapper-first {
+			display: flex;
+			flex-direction: column;
+			flex-flow: wrap;
+			justify-content: space-between;
+			padding: 0 40px;
+
+			section:nth-of-type(1) {
+				order: 1;
+				width: 48%;
+				min-height: 501px;
+				display: flex;
+				align-items: center;
+			}
+
+			section:nth-of-type(2) {
+				order: 2;
+				margin-top: 16px;
+			}
+
+			section:nth-of-type(3) {
+				order: 3;
+				width: 48%;
+				display: flex;
+				align-items: center;
+				min-height: 501px;
+			}
+
+			section:nth-of-type(4) {
+				order: 5;
+				width: 48%;
+			}
+
+			section:nth-of-type(5) {
+				order: 3;
+				margin-top: 16px;
+			}
+		}
+
+		.main-wrapper-second {
+			display: flex;
+			flex-direction: column;
+			flex-flow: wrap;
+			justify-content: space-between;
+			padding: 0 40px;
+			
+			section:nth-of-type(1) {
+				order: 1;
+				width: 48%;
+			}
+
+			section:nth-of-type(2) {
+				order: 2;
+				width: 48%;
+			}
+
+			section:nth-of-type(3) {
+				order: 5;
+				width: 48%;
+			}
+
+			section:nth-of-type(4) {
+				order: 7;
+			}
+
+			section:nth-of-type(5) {
+				order: 3;
+				width: 48%;
+
+				.main-slider {
+					margin-top: -69%;
+				}
+			}
+
+			section:nth-of-type(6) {
+				order: 6;
+				display: none;
+			}
+
+			section:nth-of-type(7) {
+				order: 4;
+				display: none;
+			}
+		}
+
 	}
 }
