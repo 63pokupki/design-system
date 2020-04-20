@@ -1,0 +1,18 @@
+.btn-container-upDown {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    right: 50px;
+    .arrow-up {
+        margin: 0 0 20px 0;
+    }
+    z-index: 8; 
+    @media (max-width: 1024px) {
+        display: none;
+    }   
+}
+
+
+
+

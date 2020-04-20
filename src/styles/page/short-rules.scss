@@ -1,0 +1,22 @@
+.short-rules-page {
+    max-width: 1284px;
+    margin: 0 auto;
+
+    &__main-heading {
+        width: 100%;
+        text-align: center;
+        font-size: 24px;
+        color: $color-text-heading;
+    }
+    &__card-heading {
+        font-size: 20px;
+        color: $color-text-heading;
+    }
+    &__txt {
+        font-size: 14px;
+        color: $color-text-base;
+        line-height: 24px;
+    }
+}
+
+
