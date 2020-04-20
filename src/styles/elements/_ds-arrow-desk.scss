@@ -35,4 +35,12 @@
 		color: $light-gray-color;
 	}
 
+	// Синий фон
+	&_blue {
+		background: $color-primary;
+		.ds-icon {
+			color: #ffffff;
+		}
+	}
+
 }
