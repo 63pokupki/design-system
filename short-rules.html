@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Краткие правила сайта</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?49c7fb14226ab7ac83a5" rel="stylesheet"><link href="css/ds-utils.css?49c7fb14226ab7ac83a5" rel="stylesheet"><link href="css/ds-ui-kit.css?49c7fb14226ab7ac83a5" rel="stylesheet"></head>
+<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?b4371ce5f944eb44b622" rel="stylesheet"><link href="css/ds-utils.css?b4371ce5f944eb44b622" rel="stylesheet"><link href="css/ds-ui-kit.css?b4371ce5f944eb44b622" rel="stylesheet"></head>
 <body>
 
     <div class="short-rules-page">
@@ -183,7 +183,8 @@
         </header>  
         <!-- Контент -->
         <h1 class="short-rules-page__main-heading">Краткие правила участия в закупках</h1>
-        <div class="short-rules-page__collapse collapse-block">
+        <!-- 63pokupki отличается от традиционного Интернет-магазина -->
+        <div class="short-rules-page__collapse collapse-block is-toggle">
             <div class="collapse-block__header">
                 <button class="arrow arrow-down arrow_inverse arrow_transp">
                     <i class="ds-icon icon-arrow-down"></i>
@@ -193,23 +194,95 @@
             </div>
             <div class="collapse-block__content">
                 <div class="short-rules-page__card-content">
-
-
+                    <ol>
+                        <li><a class="link link_hover" href="#" target="_blank" rel="noopener noreferrer">Участник закупки</a> оставляет заявку на товар из каталога <a class="link link_hover" href="#" target="_blank" rel="noopener noreferrer">закупки</a>, помещая его в корзину.</li>
+                        <li>Из заявок участников формируется минимальная оптовая партия</li>
+                        <li>После того, как минимальная оптовая партия собрана, <a class="link link_hover" href="http://" target="_blank" rel="noopener noreferrer">Организатор закупки</a> объявляет <a class="link link_hover" href="http://" target="_blank" rel="noopener noreferrer">Стоп по закупке</a>, <br> подтверждает наличие заказанных товаров у поставщика и получает счет на всю партию.</li>
+                        <li><a class="link link_hover" href="http://" target="_blank" rel="noopener noreferrer">Участники закупки</a> оплачивают свои заказы, а <a class="link link_hover" href="http://" target="_blank" rel="noopener noreferrer">Организатор</a> - оплачивает партию поставщику.</li>
+                        <li>Партия товара поступает на склад 63pokupki, где ее сортируют по заказам участников и <br> отправляют на доставку в <a class="link link_hover" href="https://devsrv10.dev.63pokupki.ru/forum/phpBB3/app.php/delivery" target="_blank" rel="noopener noreferrer">пункты выдачи (ПВЗ)</a>.</li>
+                        <li><a class="link link_hover" href="http://" target="_blank" rel="noopener noreferrer">Участники закупки</a> получают свои заказы в пунктах выдачи или при помощи доставки <br> транспортной компанией или Почтой России.</li>
+                    <ol>
                 </div>
             </div>
         </div>
-        <div class="short-rules-page__collapse collapse-block">
+        <!-- Ожидание товара на 63pokupki -->
+        <div class="short-rules-page__collapse collapse-block is-toggle">
             <div class="collapse-block__header">
                 <button class="arrow arrow-down arrow_inverse arrow_transp">
                     <i class="ds-icon icon-arrow-down"></i>
                 </button>
-                <h2 class="short-rules-page__card-heading">63pokupki отличается от традиционного Интернет-магазина</h2>
-                <p class="short-rules-page__txt">тем, что у нас вы заказываете товары напрямую от поставщика по выгодной оптовой цене - <br> такая система заказа называется совместные покупки.</p>
+                <h2 class="short-rules-page__card-heading">Ожидание товара на 63pokupki</h2>
+                <p class="short-rules-page__txt">будет более длительным, чем в стандартном Интернет-магазине, т.к. сбор заказов 
+                    в минимальную оптовую партию <br> и ее заказ напрямую поставщику занимает чуть больше времени, 
+                    чем отгрузка в обычном Интернет-магазине</p>
             </div>
             <div class="collapse-block__content">
                 <div class="short-rules-page__card-content">
-
-
+                    <!-- Процесс организации закупки: -->
+                    <div class="short-rules-page__purchase-process">
+                        <h4>Процесс организации закупки:</h4>
+                        <div class="short-rules-page__purchase-icon-wrapper">
+                            <!-- Сбор заказов -->
+                            <div class="short-rules-page__purchase-icon-block">
+                                <div class="short-rules-page__purchase-icon">
+                                    <i class="ds-icon icon-box"></i>
+                                </div>
+                                <div class="short-rules-page__purchase-icon-name">Сбор заказов</div>
+                            </div>
+                            <!-- Стрелка -->
+                            <div class="short-rules-page__purchase-icon-block">
+                                <i class="ds-icon icon-arrow-line-right"></i>
+                            </div>
+                            <!-- Стоп по закупке -->
+                            <div class="short-rules-page__purchase-icon-block">
+                                <div class="short-rules-page__purchase-icon">
+                                    <img src="images/stop-pur.svg" alt="">
+                                </div>
+                                <div class="short-rules-page__purchase-icon-name">Стоп по закупке</div>
+                            </div>
+                            <!-- Стрелка -->
+                            <div class="short-rules-page__purchase-icon-block">
+                                <i class="ds-icon icon-arrow-line-right"></i>
+                            </div>
+                            <!-- Ожидание счёта -->
+                            <div class="short-rules-page__purchase-icon-block">
+                                <div class="short-rules-page__purchase-icon">
+                                    <img src="images/receipt-d.svg" alt="">
+                                </div>
+                                <div class="short-rules-page__purchase-icon-name">Ожидание счёта</div>
+                            </div>
+                            <!-- Стрелка -->
+                            <div class="short-rules-page__purchase-icon-block">
+                                <i class="ds-icon icon-arrow-line-right"></i>
+                            </div>
+                            <!-- Оплата заказов -->
+                            <div class="short-rules-page__purchase-icon-block">
+                                <div class="short-rules-page__purchase-icon">
+                                    <i class="ds-icon icon-ruble"></i>
+                                </div>
+                                <div class="short-rules-page__purchase-icon-name">Оплата заказов</div>
+                            </div>
+                            <!-- Стрелка -->
+                            <div class="short-rules-page__purchase-icon-block">
+                                <i class="ds-icon icon-arrow-line-right"></i>
+                            </div>
+                            <!-- Сдано на доставку -->
+                            <div class="short-rules-page__purchase-icon-block">
+                                <div class="short-rules-page__purchase-icon">
+                                    <i class="ds-icon icon-car"></i>
+                                </div>
+                                <div class="short-rules-page__purchase-icon-name">Сдано на доставку</div>
+                            </div>
+                        </div>
+                        <ol class="short-rules-page__purchase-process-list">
+                            <li><a class="link link_hover" href="http://" target="_blank" rel="noopener noreferrer">Сбор заказов</a> - в этот период участники заказывают товары, добавляя их в корзину</li>
+                            <li><a class="link link_hover" href="http://" target="_blank" rel="noopener noreferrer">Стоп по закупке</a> - остановка приема заказов при наборе минимальной оптовой партии</li>
+                            <li><a class="link link_hover" href="http://" target="_blank" rel="noopener noreferrer">Ожидание счета</a> - ожидание счета от поставщика</li>
+                            <li><a class="link link_hover" href="http://" target="_blank" rel="noopener noreferrer">Оплата заказов</a> - период в несколько дней, когда участники оплачивают свои заказы, а организатор - счет поставщика.</li>
+                            <li><a class="link link_hover" href="http://" target="_blank" rel="noopener noreferrer">Сдано на доставку</a> - заказы сданы на доставку в пункты выдачи заказов.</li>
+                        </ol>
+                        <div class="short-rules-page__txt">Ориентировочное время доставки указывается в Правилах закупки или его можно уточнить у организатора.</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -219,8 +292,10 @@
                 <button class="arrow arrow-down arrow_inverse arrow_transp">
                     <i class="ds-icon icon-arrow-down"></i>
                 </button>
-                <h2 class="short-rules-page__card-heading">63pokupki отличается от традиционного Интернет-магазина</h2>
-                <p class="short-rules-page__txt">тем, что у нас вы заказываете товары напрямую от поставщика по выгодной оптовой цене - <br> такая система заказа называется совместные покупки.</p>
+                <h2 class="short-rules-page__card-heading">Ожидание товара на 63pokupki</h2>
+                <p class="short-rules-page__txt">будет более длительным, чем в стандартном Интернет-магазине, т.к. сбор заказов 
+                    в минимальную оптовую партию <br> и ее заказ напрямую поставщику занимает чуть больше времени, 
+                    чем отгрузка в обычном Интернет-магазине</p>
             </div>
             <div class="collapse-block__content">
                 <div class="short-rules-page__card-content">
@@ -633,5 +708,5 @@
 
     
     
-<script type="text/javascript" src="js/highlight-syntax.js?49c7fb14226ab7ac83a5"></script><script type="text/javascript" src="js/ds-utils.js?49c7fb14226ab7ac83a5"></script><script type="text/javascript" src="js/categories-icons-sprite.js?49c7fb14226ab7ac83a5"></script><script type="text/javascript" src="js/ds-ui-kit.js?49c7fb14226ab7ac83a5"></script></body>
+<script type="text/javascript" src="js/highlight-syntax.js?b4371ce5f944eb44b622"></script><script type="text/javascript" src="js/ds-utils.js?b4371ce5f944eb44b622"></script><script type="text/javascript" src="js/categories-icons-sprite.js?b4371ce5f944eb44b622"></script><script type="text/javascript" src="js/ds-ui-kit.js?b4371ce5f944eb44b622"></script></body>
 </html>
