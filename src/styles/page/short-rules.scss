@@ -1,21 +1,77 @@
 .short-rules-page {
     max-width: 1284px;
     margin: 0 auto;
+    h4 {
+        color: $color-text-heading;
+    }
 
     &__main-heading {
-        width: 100%;
+        width: 100%;      
         text-align: center;
         font-size: 24px;
         color: $color-text-heading;
     }
+
     &__card-heading {
         font-size: 20px;
         color: $color-text-heading;
     }
+
     &__txt {
         font-size: 14px;
         color: $color-text-base;
         line-height: 24px;
+    }
+
+    ol {
+        padding: 0 0 0 20px;
+        color: $color-text-base;
+        li {
+            margin: 5px 0;
+            line-height: 24px;
+        }
+    }
+    &__purchase-process {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__purchase-icon-wrapper {
+        display: flex;
+        margin: 14px 0;
+    }
+
+    &__purchase-icon-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        .icon-arrow-line-right {
+            margin: 10px 20px 0;
+            font-size: 32px;
+            color: $color-primary;
+        }
+
+    }
+    &__purchase-icon {
+        width: 90px;
+        height: 65px;
+        margin: 0 auto;
+        text-align: center;
+        .ds-icon {
+            font-size: 56px;
+            color: $color-primary;
+        }
+        .icon-car {
+            font-size: 46px;
+        }
+    }
+    &__purchase-icon-name {
+        margin: 15px 0 10px 0;
+        color: $color-text-heading;
+    }
+    &__purchase-process-list {
+        margin-bottom: 20px;
     }
 }
 

@@ -4,6 +4,7 @@
     padding-bottom: 50px;
     background: #ffffff;
 
+    
     &__w {
         width: 100%;
         display: flex;
@@ -167,7 +168,7 @@
 
     &__price {
         font-weight: bold;
-        font-size: 24px;
+        font-size: 20px;
         color: #1e2023;
         line-height: 38px;
     }
@@ -454,5 +455,14 @@
     }
     .stock-rows-help {
         display: none;
+    }
+    .org-profile__rating {
+       font-size: 24px;
+    }
+    .rating-star__num {
+        font-size: 0.38em;
+    }
+    .org-profile__text {
+        margin: 0 5px 0 0 0;
     }
 }
