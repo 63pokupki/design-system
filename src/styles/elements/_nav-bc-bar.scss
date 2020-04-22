@@ -3,6 +3,14 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    
+    .ds-icon {
+        color: $color-primary;
+    }
+
+    @media (max-width: 767px) {
+        justify-content: center;
+    }
 
     &__notification {
         margin-right: 30px;
