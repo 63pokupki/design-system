@@ -1,6 +1,7 @@
 .main-common-banner {
 	display: flex;
 	flex-direction: column;
+	overflow: hidden;
 
 	&__img {
 		width: 100%;
@@ -109,4 +110,36 @@
 			height: 330px;
 		}
 	}
+}
+
+@media (min-width: 1184px) {
+	.main-common-banner {
+		&_mini {
+			width: 520px;
+			height: 225px;
+		}
+
+		&_mini {
+			.main-common-banner__wrapper-title {
+				font-size: 34px;
+				line-height: 38px;
+			}
+
+			.main-common-banner__wrapper-subtitle {
+				font-size: 16px;
+				line-height: 23px;
+			}
+
+			.main-page__button {
+				width: 192px;
+				height: 40px;
+
+				.ds-btn__text {
+					font-size: 18px;
+					line-height: 28px;
+				}
+			}
+		}
+	}
+
 }

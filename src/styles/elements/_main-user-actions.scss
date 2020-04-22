@@ -62,3 +62,27 @@
 		}
 	}
 }
+
+@media (min-width: 1184px) {
+	.main-user-actions {
+		padding: 0;
+
+		&__link {
+			height: 200px;
+
+			&_org {
+				&::after {
+					height: 110%;
+					width: 310px;
+				}
+			}
+			
+			&_provider {
+				&::after {
+					height: 110%;
+					width: 249px;
+				}
+			}
+		}
+	}
+}

@@ -45,9 +45,17 @@
 	
 		&__img {
 			position: absolute;
-			top: 0;
+			top: 50%;
+			transform: translateY(-50%);
 			right: 5%;
 			max-height: 100%;
 		}
+	}
+}
+
+@media (min-width: 1184px) {
+	.main-banner {
+		height: 260px;
+		padding: 35px 65px;
 	}
 }

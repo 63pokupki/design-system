@@ -25,6 +25,10 @@
 			z-index: 2;
 			background: linear-gradient(0deg,#fff,hsla(0,0%,100%,0) 105.88%);
 		}
+
+		&:nth-of-type(2) {
+			display: none;
+		}
 	}
 
 	&_show {
@@ -52,6 +56,33 @@
 			text-align: center;
 			width: 455px;
 			margin: 0 auto;
+		}
+	}
+}
+
+@media (min-width: 1184px) {
+	.main-about-us {
+		&__wrapper {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+
+		&__text {
+			width: 40%;
+			margin: 0;
+			text-align: left;
+
+			&:nth-of-type(2) {
+				display: block;
+			}
+
+			&-title {
+				font-size: 13px;
+				line-height: 22px;
+				font-weight: bold;
+				display: block;
+			}
 		}
 	}
 }
