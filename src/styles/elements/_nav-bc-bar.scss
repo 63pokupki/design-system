@@ -4,8 +4,14 @@
     justify-content: flex-end;
     align-items: center;
     
-    .ds-icon {
-        color: $color-primary;
+    a {
+        .ds-icon {
+            color: $color-primary;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        margin: 15px 0;
     }
 
     @media (max-width: 767px) {
