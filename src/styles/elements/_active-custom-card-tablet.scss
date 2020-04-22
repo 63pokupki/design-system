@@ -41,7 +41,37 @@
                 &:after {
                     box-shadow: none;
                 }
-            }    
+            }
+            
+            .card-active-custom__purchase-block {
+                &.short {
+                    display: none;
+                }
+                &.toggle {
+                    display: flex;
+                }    
+            }
+
+            .like {
+                &.short {
+                    display: none;
+                    margin: 8px 0 0 0;
+                }
+            }
+            .card-active-custom__header-statusbar {
+                display: flex;
+            }
+            .card-active-custom__header-collection {
+                display: flex;
+            }
+            .card-active-custom__btn-toggle {
+                &.toggle {
+                    display: flex;
+                }
+                &.short {
+                    display: none;
+                }
+            }
         }
         .icon-arrow-down {
             transition: all $transition-slow;
@@ -93,19 +123,20 @@
                 margin-right: 20px;
             }
             &-collection{
-                display: flex;
+                display: none;
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
                 margin-right: 20px;
             }
             &-statusbar {
-                display: flex;
+                display: none;
                 justify-content: flex-start;
                 align-items: center;
                 flex-wrap: nowrap;
                 position: relative;
                 margin: 10px 0;
+
                 .statusbar {
                     display: inline-flex;
                     width: 40%;
@@ -131,6 +162,14 @@
                 }
             }
 
+            // Избранное в свёрнутом состоянии
+            .like {
+                &.short {
+                    margin: 8px 0 0 0;
+                }
+            }    
+
+
             .card-active-custom__status-block {
                 display: flex;
                 flex-direction: row;
@@ -139,11 +178,10 @@
                 align-items: baseline;
                 flex-shrink: 0;
                 width: 210px;
-                margin: 12px 0 0 0;
                 .like {
                     display: flex;
                     align-items: flex-start;
-                }    
+                }                
 
                 p {
                     margin: 0 5px 0 0;
@@ -154,9 +192,17 @@
         }
         
         .card-active-custom__btn-toggle {
+            display: none;
             position: absolute;
             right: 0;
             transition: all .8s;
+            &.short {
+                display: flex;
+                top: -10px;
+            }
+            &.toggle {
+                display: none;
+            }
         }
         .card-active-custom__header-heading-wrap {
             display: flex;
@@ -177,12 +223,8 @@
             a {
                 color: $dark-brown-color;
                 text-decoration: none;
+                margin: 0 10px 0 0;
             }
-
-            .rating-star-org {
-                margin-left: 10px;
-            }
-
             .rating-star-org_icon {
                 width: 15px;
                 height: 15px;
@@ -196,15 +238,6 @@
 
 
         //Левый блок шапки
-        // .card-active-custom__header-left-block {
-        //     display: flex;
-        //     flex-direction: column;
-        //     justify-content: flex-start;
-        //     align-items: flex-start;
-        //     width: 545px;
-        //     min-width: 460px;
-        //     margin-right: 33px;
-        // }
         .card-active-custom__collection {
             display: flex;
             margin: 5px 0;
@@ -259,13 +292,27 @@
         }
 
         .card-active-custom__purchase-block {
-            display: flex;
+            display: none;
             flex-direction: row;
             justify-content: flex-start;
             align-items: center;
             flex-shrink: 0;
             width: 210px;
             font-size: 11px;
+            margin: 12px 0 0 0;
+
+            // Отображаем в свёрнутом состоянии
+            &.short {
+                display: flex;
+                height: 25px;
+                margin: 0 0 2px 0;
+
+            }
+            // Скрываем в раскрытом состоянии
+            &.toggle {
+                display: none;
+                margin: 0 0 20px 0;
+            }
 
             p {
                 margin: 0 0 0 5px;
