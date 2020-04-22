@@ -60,6 +60,7 @@
         &__col {
             display: flex;
             flex-direction: column;
+            min-width: 50%;
             // width: 384px;
             &:nth-child(2) {
                 margin-left: 40px;
