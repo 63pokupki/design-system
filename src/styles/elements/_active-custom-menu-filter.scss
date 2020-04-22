@@ -6,6 +6,7 @@
     background: $background-color-primary;
     border-top: 1px solid #D8D8D8;
     border-bottom: 1px solid #CCE2F1;
+    color: $color-text-base;
     cursor: pointer;
     // Разворачивание списка
     &.is-toggle {
@@ -29,7 +30,7 @@
         display: flex;
         align-items: center;
         font-size: 11px;
-        color: $color-text-light-grey;
+        color: $color-text-base;
         text-transform: uppercase;
         text-decoration: none;
         &:hover {
@@ -48,9 +49,9 @@
         align-items: center;
         padding: 15px 10px;
         font-size: 6px;
-        color: $color-text-light-grey;
+        color: $color-text-base;
         &:hover {
-            color: $color-primary;
+            color: $color-primary;            
         }
 
     }
@@ -72,7 +73,7 @@
     }
     &__item-link {
         font-size: 11px;
-        color: $color-text-light-grey;
+        color: $color-text-base;
         text-decoration: none;
         &:hover {
             color: $color-primary;

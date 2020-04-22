@@ -1,0 +1,30 @@
+.notification-container  {
+    display: flex;
+    flex-wrap: nowrap;
+    
+    &__icon {
+        display: inline-block;
+        font-size: 16px;
+        color: $color-primary;
+        transform: translateY(2px);
+}
+    &__name,
+    &__num {
+        margin: 0 0 2px 0;
+        font-size: 14px;
+        color: $color-text-base;
+    }
+    &__num {
+        &:after {
+            content: ")";
+        }
+        &:before {
+            content: "(";
+        }
+    }
+    &__msg {
+        margin: 0 0 0 10px;
+    }
+}
+
+

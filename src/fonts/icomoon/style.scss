@@ -1,12 +1,19 @@
 @import "~fonts/icomoon/variables";
 
+
+.icon-stop-sign:before {
+  content: "\e935";
+}
+.icon-receipt:before {
+  content: "\e934";
+}
 .icon-arrow-left-line:before {
-  content: "\e932";
+  content: "\e932";  
 }
 .icon-arrow-right-line:before {
-  content: "\e933";
+  content: "\e933";  
 }
-.icon-arrow-back:before {
+.icon-next-page:before {
   content: "\e931";
 }
 .icon-check-in:before {
