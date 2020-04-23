@@ -17,6 +17,14 @@
     @media (max-width: 767px) {
         justify-content: center;
     }
+    @media (max-width: 390px) {
+        a {
+            font-size: 12px;
+        }
+        .nav-bc-bar__notification {
+            margin-right: 5px;
+        }
+    }
 
     &__notification {
         margin-right: 30px;
