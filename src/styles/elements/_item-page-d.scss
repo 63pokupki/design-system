@@ -261,15 +261,21 @@
         font-size: 20px;
         color: #1e2023;
         margin-bottom: 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
+        display: inline-block;
+        // justify-content: space-between;
+        // align-items: flex-start;
 
         div {
             &::first-letter {
                 text-transform: capitalize;
             }
         }
+    }
+
+    // Кнопка редактирования
+    .org-edit-position-btn {
+        display: inline-flex;
+        margin: 0 0 0 10px;
     }
 
     &__wrapper {
