@@ -21,12 +21,12 @@
         a {
             font-size: 12px;
         }
-        .nav-bc-bar__notification {
-            margin-right: 5px;
-        }
     }
 
     &__notification {
         margin-right: 30px;
+        @media (max-width: 340px) {
+            margin-right: 10px;
+        }
     }
 }
