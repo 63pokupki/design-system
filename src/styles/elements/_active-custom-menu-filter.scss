@@ -33,10 +33,7 @@
         color: $color-text-base;
         text-transform: uppercase;
         text-decoration: none;
-        &:hover {
-            color: $color-primary;
-        }
-        .icon-arrow-line-left {
+         .icon-arrow-line-left {
             padding: 0 10px;
             font-size: 14px;
 
@@ -50,9 +47,9 @@
         padding: 15px 10px;
         font-size: 6px;
         color: $color-text-base;
-        &:hover {
-            color: $color-primary;            
-        }
+        // &:hover {
+        //     color: $color-primary;            
+        // }
 
     }
     &__items-wrap {
@@ -76,7 +73,7 @@
         color: $color-text-base;
         text-decoration: none;
         &:hover {
-            color: $color-primary;
+            // color: $color-primary;
             font-weight: 600;
         }
     }
@@ -100,16 +97,6 @@
     .ac-menu-filter-categories {
         display: flex;
         margin: 0;
-        &__checked-position-link {
-            &:hover {
-                color: $color-text-light-grey;
-            }
-        }
-        &__item-link {
-            &:hover {
-                color: $color-text-light-grey;
-            }
-        }        
     }
     .ac-menu-filter-categories__items-wrap {
         padding: 5px 0 5px 20px;
