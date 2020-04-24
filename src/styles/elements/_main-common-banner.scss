@@ -2,6 +2,8 @@
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
+	width: 320px;
+	margin: 0 auto;
 
 	&__img {
 		width: 100%;
@@ -104,8 +106,8 @@
 
 @media (min-width: 768px) {
 	.main-common-banner {
-		width: 320px;
-
+		margin: 0;
+		
 		&__img {
 			height: 330px;
 		}
