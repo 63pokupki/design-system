@@ -1,8 +1,18 @@
 .short-rules-page {
     max-width: 1284px;
     margin: 0 auto;
+
+    p {
+        margin: 0;
+    }
+
     h4 {
         color: $color-text-heading;
+    }
+
+    &__row {
+        display: flex;
+        width: 100%;        
     }
 
     &__main-heading {
@@ -21,6 +31,10 @@
         font-size: 14px;
         color: $color-text-base;
         line-height: 24px;
+        span {
+            font-size: 12px;
+            color: $color-text-base;
+        }
     }
 
     ol {
@@ -73,6 +87,218 @@
     &__purchase-process-list {
         margin-bottom: 20px;
     }
+
+    // Мы сохраняем для вас...
+    &__save-wholesale {
+        margin: 5px 0 0;
+    }
+
+    &__total-cost {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        max-width: 680px;
+        h4 {
+            margin: 17px 0 38px 0;
+        }        
+    }
+
+    &__total-cost,
+    &__possible-costs {
+        h4 {
+            width: 100%;
+            font-size: 18px;
+            color: $color-text-heading;
+            text-align: center;
+        }
+        background: rgba(54, 166, 242, 0.15);
+    }
+
+    &__wholesale-price,
+    &__org-collection,
+    &__delivery-type {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__wholesale-price {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 155px;
+        margin: 25px 35px 0 0;
+        padding: 0 0 60px 0;
+        position: relative;
+        .short-rules-page__block-wrap {
+            display: flex; 
+            justify-content: center;
+            width: 100%;
+            margin: 0 0 25px 0;           
+        }
+        p {
+            font-size: 18px;
+            font-weight: 700;
+            color: $color-text-heading;
+            &:first-child {
+                position: relative;
+                &:after {
+                    content: "";
+                    display: block;
+                    width: 105px;
+                    height: 3px;
+                    position: absolute;
+                    background: $color-primary;
+                    bottom: 50%;
+                    left: -9px;
+                    transform: rotate(-15deg);
+                    
+                }
+            }
+        }
+        .short-rules-page__new-price {
+            font-size: 16px;            
+            color: $color-primary;
+        }
+        .short-rules-page__txt {
+            color: $color-text-heading;
+            &:first-child {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            &:last-child {
+                line-height: 22px;
+            }
+            span {
+                display: inline-block;
+                text-align: center;
+                line-height: 22px;
+            }
+        }
+
+    }
+    &__plus {
+        display: flex;
+        align-items: flex-end;
+        font-size: 70px;
+        position: absolute;
+        bottom: 52%;
+        right: -37px;
+        span {
+            display: flex;
+        }
+    }
+
+    //
+    &__org-collection {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        max-width: 200px;
+        padding: 0 0 60px 0;
+        margin: 4px 10px 0 0;
+        .short-rules-page__txt {
+            white-space: nowrap;
+            color: $color-text-heading;
+            line-height: 30px;
+        }
+    }
+    &__org-collection-img {
+        margin: 0 0 20px 0;
+    }
+
+    //
+    &__delivery-type {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        max-width: 260px;
+
+        .short-rules-page__txt {
+            color: $color-text-heading;
+            text-align: center;
+            &:last-child {
+                margin: 10px 0 0 0;
+                line-height: 15px;
+            }
+            span {
+                display: inline-block;
+                white-space: nowrap;                
+            }
+
+        }
+    }
+    &__delivery-type-img {
+        margin: 0 0 20px 0;
+    }
+
+    //
+    &__possible-costs {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        max-width: 322px;
+        text-align: center;
+        margin: 0 0 0 15px;
+        h4 {
+            margin: 17px 0 10px 0;
+        }
+        p {
+            font-size: 14px;
+            color: $color-text-base;
+        }
+
+        .short-rules-page__row {
+            justify-content: space-around;
+        }
+
+        .short-rules-page__txt {
+            max-width: 300px;
+            margin: 0 0 15px 0;
+            line-height: 20px;            
+        }
+
+        .short-rules-page__row {
+            margin: 0 0 10px 0;
+        }
+
+        .icon-car {
+            margin: 0 0 0 8px;
+            font-size: 45px;
+            color: $color-primary;
+        }
+
+        img {
+            margin: 0 20px 0 0;
+        }
+
+        .short-rules-page__block-wrap {
+            display: flex;
+            justify-content: center;
+            flex-wrap: nowrap;
+            width: 100%;
+            padding: 0 0 20px 30px;
+            p {
+                color: $color-text-heading;
+                &:first-child {
+                    max-width: 100px;
+                    margin: 0 15px 0 0;
+                }
+                &:last-child {
+                    max-width: 166px;
+                }
+            }
+        }
+    }
+
 }
 
 
