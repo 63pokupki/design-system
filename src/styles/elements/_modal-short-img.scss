@@ -438,5 +438,10 @@
         overflow: hidden;
         max-height: 0;
     }
+    // Подсказки рядов
+    .stock-rows-legend.item-page-m__rows-legend {
+        justify-content: center;
+        max-width: 280px;
+    }
 }
 
