@@ -299,6 +299,21 @@
         }
     }
 
+    // Условия закупки
+    &__purchase-terms {
+        .short-rules-page__card-content {
+            max-width: 777px;
+            p {
+                margin: 0 0 5px 0;
+                &:first-child {
+                    margin: 7px 0 25px 0;
+                }
+            }
+        }
+    }
+
+    
+
 }
 
 
