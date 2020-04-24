@@ -122,6 +122,12 @@
 		}
 
 		&_mini {
+			.main-common-banner__wrapper {
+				&::before {
+					right: -30px;
+				}
+			}
+
 			.main-common-banner__wrapper-title {
 				font-size: 34px;
 				line-height: 38px;

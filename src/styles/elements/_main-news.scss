@@ -19,6 +19,12 @@
 		position: relative;
 	}
 
+	&__img {
+		max-height: 230px;
+		max-width: 320px;
+		overflow: hidden;
+	}
+
 	&__item {
 		width: 320px;
 		margin-right: 35px;
