@@ -24,6 +24,7 @@
         font-size: 12px;
         justify-content: flex-start;
         text-align: left;
+        white-space: nowrap;
 
         &:active {
             @include deep-click(0.975);
