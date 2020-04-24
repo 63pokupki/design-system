@@ -90,7 +90,6 @@
 
     // Мы сохраняем для вас...
     &__save-wholesale {
-        max-height: 303px;
         margin: 5px 0 0;
     }
 
@@ -101,7 +100,6 @@
         align-items: flex-start;
         width: 100%;
         max-width: 680px;
-        // margin: 5px 0 0 0;
         h4 {
             margin: 17px 0 38px 0;
         }        
@@ -206,6 +204,7 @@
         padding: 0 0 60px 0;
         margin: 4px 10px 0 0;
         .short-rules-page__txt {
+            white-space: nowrap;
             color: $color-text-heading;
             line-height: 30px;
         }
@@ -286,7 +285,7 @@
             justify-content: center;
             flex-wrap: nowrap;
             width: 100%;
-            padding: 0 0 0 30px;
+            padding: 0 0 20px 30px;
             p {
                 color: $color-text-heading;
                 &:first-child {
