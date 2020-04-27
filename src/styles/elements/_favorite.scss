@@ -36,5 +36,12 @@
         line-height: 18px;
         color: rgba(96, 98, 102, 0.75);
     }
+
+    // всплывашка избранное
+    .tooltip {
+        span {
+            white-space: nowrap;
+        }
+    }
 }
 

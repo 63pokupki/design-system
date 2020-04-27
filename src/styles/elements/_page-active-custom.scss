@@ -133,12 +133,12 @@
     }
 
 
-    @media (max-width: 1080px) {
+    @media (max-width: 1199px) {
         .card-active-custom-desktop {
             display: none;
         }
     }
-    @media (min-width: 1081px) {
+    @media (min-width: 1200px) {
         .card-active-custom.tablet {
             display: none;
         }
@@ -167,6 +167,8 @@
             display: none;
         }
     }
+    
+
 }
 
 //footer

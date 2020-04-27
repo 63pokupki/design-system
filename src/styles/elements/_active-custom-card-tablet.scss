@@ -11,6 +11,7 @@
         &.is-toggle {
             .card-active-custom__toggle-block {
                 max-height: 1000px;
+                margin-top: 15px;
                 visibility: visible;
                 opacity: 1;
                 transition: all .8s;
@@ -43,34 +44,11 @@
                 }
             }
             
-            .card-active-custom__purchase-block {
-                &.short {
-                    display: none;
-                }
-                &.toggle {
-                    display: flex;
-                }    
-            }
-
-            .like {
-                &.short {
-                    display: none;
-                    margin: 8px 0 0 0;
-                }
-            }
             .card-active-custom__header-statusbar {
                 display: flex;
             }
             .card-active-custom__header-collection {
                 display: flex;
-            }
-            .card-active-custom__btn-toggle {
-                &.toggle {
-                    display: flex;
-                }
-                &.short {
-                    display: none;
-                }
             }
         }
         .icon-arrow-down {
@@ -134,13 +112,17 @@
                 justify-content: flex-start;
                 align-items: center;
                 flex-wrap: nowrap;
-                position: relative;
+                width: 100%;
+                max-width: 235px;
                 margin: 10px 0;
+                position: absolute;
+                right: 125px;
+                bottom: 0;
 
                 .statusbar {
                     display: inline-flex;
-                    width: 40%;
-                    max-width: 270px;
+                    width: 100%;
+                    max-width: 235px;
                     margin-right: 10px;        
                     p {
                         font-style: normal;
@@ -162,13 +144,10 @@
                 }
             }
 
-            // Избранное в свёрнутом состоянии
-            .like {
-                &.short {
-                    margin: 8px 0 0 0;
-                }
-            }    
-
+            // Избранное 04.2020
+            .favorite {
+                margin: 5px 0 0 0;
+            }
 
             .card-active-custom__status-block {
                 display: flex;
@@ -192,17 +171,11 @@
         }
         
         .card-active-custom__btn-toggle {
-            display: none;
+            display: flex;
             position: absolute;
+            top: 20px;
             right: 0;
             transition: all .8s;
-            &.short {
-                display: flex;
-                top: -10px;
-            }
-            &.toggle {
-                display: none;
-            }
         }
         .card-active-custom__header-heading-wrap {
             display: flex;
@@ -218,6 +191,7 @@
             font-size: 14px;
             line-height: 19px;
             flex-shrink: 2;
+            margin: 0 0 10px 0;
             padding: 0 60px 0 0;
 
             a {
@@ -241,6 +215,7 @@
         .card-active-custom__collection {
             display: flex;
             margin: 5px 0;
+            position: relative;
         }
         .card-active-custom__collection.start {
             .stock-status__text {
@@ -292,12 +267,11 @@
         }
 
         .card-active-custom__purchase-block {
-            display: none;
+            display: flex;
             flex-direction: row;
             justify-content: flex-start;
             align-items: center;
             flex-shrink: 0;
-            width: 210px;
             font-size: 11px;
             margin: 12px 0 0 0;
 
@@ -305,7 +279,7 @@
             &.short {
                 display: flex;
                 height: 25px;
-                margin: 0 0 2px 0;
+                margin: 0 0 5px 0;
 
             }
             // Скрываем в раскрытом состоянии
@@ -315,7 +289,7 @@
             }
 
             p {
-                margin: 0 0 0 5px;
+                margin: 0 10px 0 5px;
                 color: $dark-grey-color;
                 white-space: nowrap;
             }
@@ -337,7 +311,6 @@
             display: flex;
             height: auto;
             max-height: 0;
-            margin-top: 15px;
             overflow: hidden;
             visibility: hidden;
             opacity: 0;
