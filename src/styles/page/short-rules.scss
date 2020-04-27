@@ -220,22 +220,28 @@
         justify-content: flex-start;
         align-items: center;
         max-width: 260px;
+        position: relative;
 
         .short-rules-page__txt {
             color: $color-text-heading;
             text-align: center;
-            &:last-child {
+            span {
+                display: inline-block;
+                white-space: nowrap;
+            }
+            &.span-wrap {
                 margin: 10px 0 0 0;
                 line-height: 15px;
             }
-            span {
-                display: inline-block;
-                white-space: nowrap;                
-            }
 
         }
+        .short-rules-page__plus {
+            left: -2px;
+            bottom: 46%;
+        }
+
     }
-    &__delivery-type-img {
+    &__delivery-type-img {        
         margin: 0 0 20px 0;
     }
 
