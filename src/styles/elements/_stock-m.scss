@@ -309,11 +309,13 @@
             }
 
             &__wrapper {
-                height: 147px;
+                // height: 147px;
+                max-height: inherit;
             }
 
             &__image {
-                max-height: 147px;
+                // max-height: 147px;
+                max-height: inherit;
             }
 
             &__buy {

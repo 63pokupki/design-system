@@ -471,4 +471,8 @@
     .org-profile__text {
         margin: 0 5px 0 0 0;
     }
+    .zoom-on-hover.is-active {
+        position: relative;
+        overflow: hidden;
+    }
 }
