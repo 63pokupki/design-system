@@ -100,7 +100,9 @@
 	&__button {
 		width: 148px;
 		height: 28px;
-		display: block;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
 		.ds-btn__text {
 			font-weight: 600;
