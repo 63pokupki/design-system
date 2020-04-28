@@ -21,8 +21,9 @@
 
 	&__img {
 		width: 100%;
-		height: 200px;
+		height: 205px;
 		overflow: hidden;
+		min-height: 205px;
 	}
 
 	&__item {
@@ -137,6 +138,7 @@
 
 		&__img {
 			height: 220px;
+			min-height: 220px;
 		}
 
 		&__date {
