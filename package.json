@@ -15,8 +15,7 @@
     "np": {
         "cleanup": false,
         "tests": false,
-        "yolo": true,
-        "contents": "dist"
+        "yolo": true
     },
     "homepage": "https://github.com/63pokupki/design-system",
     "repository": {
