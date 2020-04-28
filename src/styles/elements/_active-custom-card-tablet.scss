@@ -295,7 +295,7 @@
             }
 
             span {
-                color: $color-primary;
+                color: $dark-grey-color;
                 font-weight: 600;
                 white-space: nowrap;
             }
@@ -407,6 +407,11 @@
 
             &.hidden {
                 display: none;
+            }
+
+            span {
+                color: $color-primary;
+                font-weight: 600;
             }
         }
         .card-active-custom__description-status {
