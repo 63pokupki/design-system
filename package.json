@@ -9,7 +9,8 @@
     "dist": "cross-env NODE_ENV=production webpack --config webpack.config.dist.js",
     "publish:patch": "npm version patch && git push origin master && npm publish --access public",
     "detect": "node detective.js",
-    "test": "echo Nothing"
+    "test": "echo Nothing",
+    "np": "np"
   },
   "homepage": "https://github.com/63pokupki/design-system",
   "repository": {
@@ -83,7 +84,8 @@
   "license": "BSD-3-Clause",
   "dependencies": {
     "@63pokupki/onboarding-core": "latest",
-    "@babel/runtime": "^7.9.2"
+    "@babel/runtime": "^7.9.2",
+    "np": "^6.2.3"
   },
   "bugs": {
     "url": "https://github.com/63pokupki/design-system/issues"
