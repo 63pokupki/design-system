@@ -12,7 +12,10 @@
 
     &__row {
         display: flex;
-        width: 100%;        
+        width: 100%;
+        &.ds-space-between {
+            justify-content: space-between;
+        }        
     }
 
     &__main-heading {
@@ -52,18 +55,35 @@
     }
 
     &__purchase-icon-wrapper {
-        display: flex;
+        display: flex;        
         margin: 14px 0;
+        @media (max-width: 767px) {
+            flex-wrap: wrap;
+        }
     }
 
     &__purchase-icon-block {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+        // .icon-arrow-line-right {
+        //     margin: 10px 20px 0;
+        //     font-size: 32px;
+        //     color: $color-primary;
+        // }
+        @media (max-width: 767px) {
+            min-width: 126px;
+        }
+    }
+    &__arrow-right {
+        padding: 10px 0 0 0;
         .icon-arrow-line-right {
             margin: 10px 20px 0;
             font-size: 32px;
             color: $color-primary;
+            @media (max-width: 767px) {
+                margin: 0;
+            }
         }
 
     }
@@ -83,6 +103,11 @@
     &__purchase-icon-name {
         margin: 15px 0 10px 0;
         color: $color-text-heading;
+        white-space: nowrap;
+        @media (max-width: 767px) {
+            text-align: center;
+        }
+
     }
     &__purchase-process-list {
         margin-bottom: 20px;
