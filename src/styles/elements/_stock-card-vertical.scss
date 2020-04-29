@@ -200,11 +200,8 @@
     &__image {
         max-width: 100%;
         display: none;
-        max-height: 90vh;
-        @media (min-width: 768px) {
-            max-height: 262px;
-            margin: 0 auto;
-        }
+        max-height: 262px;
+        margin: 0 auto;
     }
 
     &__images-wrapper {
