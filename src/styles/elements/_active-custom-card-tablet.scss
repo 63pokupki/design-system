@@ -11,7 +11,7 @@
         &.is-toggle {
             .card-active-custom__toggle-block {
                 max-height: 1000px;
-                margin-top: 15px;
+                margin-top: 5px;
                 visibility: visible;
                 opacity: 1;
                 transition: all .8s;
@@ -53,9 +53,7 @@
             .card-active-custom__header-left {
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
-                min-height: 120px;
-
+                justify-content: space-between;                
             }
         }
         .icon-arrow-down {
@@ -101,14 +99,10 @@
             width: 100%;
             cursor: pointer;
 
-            &-left {
-                width: 450px;
-            }
-
             &-heading {
                 display: flex;
                 flex-direction: row;
-                justify-content: flex-start;
+                justify-content: space-between;
                 align-items: flex-start;
                 margin-right: 20px;
             }
@@ -117,7 +111,7 @@
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
-                margin-right: 20px;
+                width: 100%;
             }
             &-statusbar {
                 display: none;
@@ -127,9 +121,6 @@
                 width: 100%;
                 max-width: 235px;
                 margin: 10px 0;
-                position: absolute;
-                right: 125px;
-                bottom: 0;
 
                 .statusbar {
                     display: inline-flex;
@@ -159,6 +150,13 @@
             // Избранное 04.2020
             .favorite {
                 margin: 5px 0 0 0;
+                &__action {
+                    font-size: 11px;
+                }
+                .like__icon {
+                    max-width: 50px;
+                    font-size: 26px;
+                }
             }
 
             .card-active-custom__status-block {
@@ -203,7 +201,7 @@
             font-size: 14px;
             line-height: 19px;
             flex-shrink: 2;
-            margin: 0 0 10px 0;
+            // margin: 0 0 10px 0;
             padding: 0 60px 0 0;
 
             a {
@@ -264,6 +262,7 @@
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
+            padding: 0 25px 0 0;
         }
 
         .card-active-custom__header-right-block {
@@ -291,7 +290,7 @@
             &.short {
                 display: flex;
                 height: 25px;
-                margin: 0 0 5px 0;
+                margin: 0 0 10px 0;
 
             }
             // Скрываем в раскрытом состоянии
@@ -499,6 +498,7 @@
 
         .card-active-custom__toggle-left {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             position: relative;
