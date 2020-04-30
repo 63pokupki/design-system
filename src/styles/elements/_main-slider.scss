@@ -2,6 +2,7 @@
 	padding: 16px 12px;
 	max-width: 100%;
 	width: fit-content;
+	position: relative;
 
 	&__title {
 		font-size: 12px;
@@ -13,6 +14,10 @@
 			color: #1D1E1F;
 			font-weight: bold;
 		}
+	}
+
+	&__button-wrapper {
+		display: none;
 	}
 
 	&__list {
@@ -38,6 +43,10 @@
 		max-width: 160px;
 		display: flex;
 		flex-direction: column;
+
+		&:last-child {
+			margin: 0;
+		}
 
 		&-img {
 			width: 100%;
@@ -169,16 +178,93 @@
 				font-weight: bold;
 				margin-right: 10px;
 			}
-
 		}
+
+		&__button-wrapper {
+			display: block;
+			position: absolute;
+			width: calc(100% - 24px);
+			display: flex;
+			justify-content: space-between;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		&__button {
+			position: relative;
+			width: 12px;
+			height: 20px;
+			transition: opacity .2s ease;
+
+			&::after {
+				content: '';
+				display: block;
+				position: absolute;
+				left: 0;
+				width: 15px;
+				height: 2px;
+				background-color: #36A6F2;
+				border-radius: 5px;
+			}
+
+			&::before {
+				content: '';
+				display: block;
+				position: absolute;
+				left: 0;
+				width: 15px;
+				height: 2px;
+				background-color: #36A6F2;
+				border-radius: 5px;
+			}
+
+			&_left {
+				&::after {
+					transform: translateY(-5px) rotate(-45deg);
+				}
+
+				&::before {
+					transform: translateY(5px) rotate(45deg);
+				}
+			}
+
+			&_right {
+				&::after {
+					transform: translateY(-5px) rotate(45deg);
+				}
+
+				&::before {
+					transform: translateY(5px) rotate(-45deg);
+				}
+			}
+
+			&:hover {
+				opacity: .6;
+			}
+
+			&:active {
+				opacity: .4;
+			}
+		}
+
+		&__list {
+			overflow: hidden;
+			padding: 0 5px 15px;
+			margin: 0 15px;
+		}
+
+		&__item {
+			min-width: 160px;
+			max-width: 160px;
+			margin-right: 35px;
+		}
+
 		&__footer {
 			display: none;
 		}
 
 		&_big {
 			width: 100%;
-			max-width: 540px;
-			margin-left: auto;
 
 			.main-slider__list {
 				height: 740px;
@@ -188,7 +274,8 @@
 
 			.main-slider__item {
 				min-width: 255px;
-    			max-width: 255px;
+				max-width: 255px;
+				margin: 0;
 			}
 
 			.main-slider__item-img {
@@ -214,6 +301,7 @@
 				display: flex;
 				flex-direction: column;
 				flex-flow: wrap;
+				justify-content: space-between;
 			}
 		}
 	}
