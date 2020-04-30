@@ -112,6 +112,7 @@
                 justify-content: space-between;
                 align-items: center;
                 width: 100%;
+                margin: 0 0 10px 0;
             }
             &-statusbar {
                 display: none;
@@ -120,7 +121,7 @@
                 flex-wrap: nowrap;
                 width: 100%;
                 max-width: 235px;
-                margin: 10px 0;
+                margin: 10px 0 20px 0;
 
                 .statusbar {
                     display: inline-flex;
@@ -504,7 +505,7 @@
             position: relative;
             width: 100%;
             min-width: 380px;
-            max-height: 220px;
+            max-height: 240px;
             margin: 0 15px 0 0;
         }
 
