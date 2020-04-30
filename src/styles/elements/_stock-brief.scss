@@ -12,6 +12,15 @@
         display: flex;
         flex-direction: column;
         margin-right: 30px;
+        .has-tooltip {
+            background: #FF6565;
+            width: 56px;
+            height: 20px;
+            color: white;
+            font-weight: 700;
+            text-align: center;
+            padding: 2px;
+        }
     }
 
     &__left {

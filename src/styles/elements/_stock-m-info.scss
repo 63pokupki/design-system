@@ -25,10 +25,11 @@
 
     &__heading {
         text-align: center;
-        font-size: 20px;
+        font-size: 16px;
         color: $color-text-heading;
         padding: 10px 20px;
         margin: 0;
+        line-height: 28px;
     }
     &__old-design {
         display: flex;

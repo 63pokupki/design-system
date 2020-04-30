@@ -8,15 +8,17 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        min-width: 30px;
-        height: 30px;
-        margin: 0 5px;
+        min-width: 20px;
+        height: 20px;
+        margin: 0 2px;
         border-radius: 2px;
         background: $pagination-color;
         cursor: pointer;
 
         a {
-            padding: 5px 10px;
+            // padding: 5px 10px;
+            padding: 0 5px;
+            font-size: 12px;
             font-weight: 600;
             text-decoration: none;
             color: $color-text-base;
@@ -60,6 +62,11 @@
 
     }
 
+    .ds-icon {
+        font-size: 8px;
+    }
+
+    // Стрелки на первую/последнюю страницу
     .icon-arrow {
 
         &-left,
