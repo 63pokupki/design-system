@@ -19,6 +19,11 @@
             transition: all .5s ease;
             opacity: 1;        
         }
+        ~.ds-popover {
+            max-height: 1000px;
+            visibility: visible;
+            opacity: 1;
+        }
     }
 
     &__item {
