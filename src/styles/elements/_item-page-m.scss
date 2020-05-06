@@ -124,6 +124,9 @@
     &__params {
         position: relative;
         margin-bottom: 15px;
+        &.is-error {
+
+        }
 
         &-label {
             font-weight: 600;
