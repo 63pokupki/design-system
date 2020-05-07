@@ -206,7 +206,7 @@
             </div>
         </div>
         <!-- Ожидание товара на 63pokupki -->
-        <div class="collapse-block ">
+        <div class="collapse-block purchase-process is-toggle">
             <div class="collapse-block__header">
                 <button class="arrow arrow-down arrow_inverse arrow_transp">
                     <i class="ds-icon icon-arrow-down"></i>
@@ -243,7 +243,7 @@
                                     <div class="short-rules-page__purchase-icon-name">Стоп по закупке</div>
                                 </div>
                                 <!-- Стрелка -->
-                                <div class="short-rules-page__arrow-right">
+                                <div class="short-rules-page__arrow-right mobile">
                                     <i class="ds-icon icon-arrow-line-right"></i>
                                 </div>
                             </div>
@@ -268,7 +268,7 @@
                                     <div class="short-rules-page__purchase-icon-name">Оплата заказов</div>
                                 </div>
                                 <!-- Стрелка -->
-                                <div class="short-rules-page__arrow-right">
+                                <div class="short-rules-page__arrow-right mobile">
                                     <i class="ds-icon icon-arrow-line-right"></i>
                                 </div>
                             </div>
@@ -294,7 +294,7 @@
         </div>
 
         <!-- Мы сохраняем для вас оптовую цену на товар -  -->
-        <div class="collapse-block is-toggle">
+        <div class="collapse-block save-wholesale is-toggle">
             <div class="collapse-block__header">
                 <button class="arrow arrow-down arrow_inverse arrow_transp">
                     <i class="ds-icon icon-arrow-down"></i>
@@ -306,7 +306,8 @@
             </div>
             <div class="collapse-block__content">
                 <div class="short-rules-page__card-content">
-                    <div class="short-rules-page__row short-rules-page__save-wholesale">
+                    <!-- Десктоп -->
+                    <div class="short-rules-page__row short-rules-page__save-wholesale desktop">
                         <!-- Итоговая стоимость -->
                         <div class="short-rules-page__total-cost">
                             <!-- Оптовая цена поставщка -->
@@ -327,13 +328,14 @@
                                     <div class="short-rules-page__org-collection-img">
                                         <img src="~images/important_images/short-rules-page/org-col.svg" alt="">
                                     </div>
-                                    <div class="short-rules-page__txt">Организационный сбор</div>
-                                    <div class="short-rules-page__txt"><span>(от 0 до 16%)</span></div>
+                                    <div class="short-rules-page__txt">Организационный сбор<span class="short-rules-page__org-collection-interval mobile">(от 0 до 16%)</span></div>
+                                    <div class="short-rules-page__txt"><span class="short-rules-page__org-collection-interval desktop">(от 0 до 16%)</span></div>
                                 </div>
                                 <!-- Доставка -->
                                 <div class="short-rules-page__delivery-type">
                                     <div class="short-rules-page__delivery-type-img">
-                                        <img src="~images/important_images/short-rules-page/short-rules-delivery.svg" alt="">                                        
+                                        <img class="desktop" src="~images/important_images/short-rules-page/short-rules-delivery.svg" alt="">
+                                        <img class="mobile" src="~images/important_images/short-rules-page/delivery-type-img_mobile.svg" alt="">                                        
                                     </div>
                                     <div class="short-rules-page__txt">Выбор вида доставки</div>
                                     <div class="short-rules-page__txt span-wrap">
@@ -363,6 +365,10 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Мобилка -->
+                    <!-- <div class="short-rules-page__row short-rules-page__save-wholesale mobile">
+
+                    </div> -->
                 </div>
             </div>
         </div>
