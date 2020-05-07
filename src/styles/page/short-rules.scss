@@ -18,6 +18,43 @@
         }        
     }
 
+    .collapse-block {
+        &.save-wholesale {
+            .collapse-block__header {
+                @media (max-width: 767px) {
+                    padding: 0 15px;
+                }
+            }    
+        }
+        &.purchase-process {
+            .collapse-block__header {
+                @media (max-width: 767px) {
+                    padding: 0 15px;
+                }
+            }
+            .collapse-block__content {
+                @media (max-width: 767px) {
+                    padding: 0 10px;
+                }                
+            }
+            h4 {
+                @media (max-width: 767px) {
+                    margin-left: 5px;
+                }
+            }
+            .short-rules-page__txt {
+                margin: 0 5px;
+            } 
+        }
+        @media (max-width: 767px) {
+            padding: 20px 15px;
+            .arrow {
+                top: 12px;
+                right: 5px;
+            }
+        }
+    }
+
     &__main-heading {
         width: 100%;      
         text-align: center;
@@ -28,6 +65,9 @@
     &__card-heading {
         font-size: 20px;
         color: $color-text-heading;
+        @media (max-width: 767px) {
+            font-size: 16px;
+        }
     }
 
     &__txt {
@@ -85,7 +125,15 @@
                 margin: 0;
             }
         }
-
+        @media (max-width: 400px) {
+            &.mobile {
+                transform: translateX(-20px);
+                -webkit-transform: translateX(-20px);
+                -moz-transform: translateX(-20px);
+                -ms-transform: translateX(-20px);
+                -o-transform: translateX(-20px);
+}
+        }
     }
     &__purchase-icon {
         width: 90px;
@@ -116,6 +164,9 @@
     // Мы сохраняем для вас...
     &__save-wholesale {
         margin: 5px 0 0;
+        @media (max-width: 1024px) {
+            flex-wrap: wrap;
+        }
     }
 
     &__total-cost {
@@ -127,7 +178,19 @@
         max-width: 680px;
         h4 {
             margin: 17px 0 38px 0;
-        }        
+            @media (max-width: 767px) {
+                margin: 17px 0 0 0;
+                font-size: 14px;
+            }
+        }
+        .short-rules-page__row {
+            @media (max-width: 767px) {
+                flex-wrap: wrap;
+            }        
+        }
+        @media (max-width:767px) {
+            margin-bottom: 15px;
+        }
     }
 
     &__total-cost,
@@ -146,6 +209,9 @@
     &__delivery-type {
         display: flex;
         flex-direction: column;
+        @media (max-width: 767px) {
+            max-width: 100%;
+        }
     }
 
     &__wholesale-price {
@@ -161,7 +227,10 @@
             display: flex; 
             justify-content: center;
             width: 100%;
-            margin: 0 0 25px 0;           
+            margin: 0 0 25px 0;
+            @media (max-width: 767px) {
+                margin: 0 0 13px 0;
+            }           
         }
         p {
             font-size: 18px;
@@ -204,7 +273,13 @@
                 line-height: 22px;
             }
         }
-
+        @media (max-width: 767px) {
+            margin: 25px 0 0 0;
+            padding: 0 0 35px 0;
+            br {
+                display: none;
+            }
+        }
     }
     &__plus {
         display: flex;
@@ -215,6 +290,9 @@
         right: -37px;
         span {
             display: flex;
+        }
+        @media (max-width: 767px) {
+            display: none;
         }
     }
 
@@ -233,9 +311,30 @@
             color: $color-text-heading;
             line-height: 30px;
         }
+        @media (max-width: 767px) {
+            padding: 0 0 35px 0;
+        }
+
     }
     &__org-collection-img {
         margin: 0 0 20px 0;
+        @media (max-width: 767px) {
+            margin: 0 0 10px 0;
+        }
+    }
+    &__org-collection-interval {
+        &.desktop {
+            @media (max-width: 767px) {
+                display: none;
+            }
+        }
+        &.mobile {
+            display: none;
+            @media (max-width: 767px) {
+                display: inline-block;
+                margin: 0 0 0 5px;
+            }
+        }
     }
 
     //
@@ -257,6 +356,9 @@
             &.span-wrap {
                 margin: 10px 0 0 0;
                 line-height: 15px;
+                @media (max-width: 767px) {
+                    max-width: 90%;
+                }
             }
 
         }
@@ -264,10 +366,30 @@
             left: -2px;
             bottom: 46%;
         }
+        @media (max-width: 767px) {
+            margin: 0 0 30px 0;
+        }
+
 
     }
     &__delivery-type-img {        
         margin: 0 0 20px 0;
+        .desktop {
+            @media (max-width: 767px) {
+                display: none;
+            }    
+        }
+        .mobile {
+            display: none;
+            @media (max-width: 767px) {
+                display: block;
+            }
+    
+        }
+        @media (max-width: 767px) {
+            margin: 0 0 13px 0;
+        }    
+
     }
 
     //
@@ -326,6 +448,15 @@
                 &:last-child {
                     max-width: 166px;
                 }
+            }
+        }
+        @media (max-width: 767px) {
+            margin: 0;
+            .icon-car {
+                margin: 0;
+            }
+            .short-rules-page__block-wrap {
+                padding: 0 0 20px 20px;
             }
         }
     }
