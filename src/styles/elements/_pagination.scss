@@ -94,6 +94,14 @@
                     color: $color-text-base;
                 }
             }
+
+            &__item.is-active {
+                background: $color-primary;
+    
+                a {
+                    color: #fff;
+                }
+            }
         }
     }
 }
