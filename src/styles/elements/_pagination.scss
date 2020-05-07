@@ -81,9 +81,19 @@
     }
 
     @media (max-width: 767px) {
-        .pagination__first-page,
-        .pagination__last-page {
-            display: flex;
+        .pagination {
+            &__first-page,
+            &__last-page {
+                display: flex;
+            }
+
+            &__item:hover {
+                background: $pagination-color;
+
+                a {
+                    color: $color-text-base;
+                }
+            }
         }
     }
 }
