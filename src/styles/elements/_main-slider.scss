@@ -4,6 +4,12 @@
 	width: fit-content;
 	position: relative;
 
+	&_without-buttons {
+		.main-slider__button-wrapper {
+			display: none;
+		}
+	}
+
 	&__title {
 		font-size: 12px;
 		font-weight: normal;
