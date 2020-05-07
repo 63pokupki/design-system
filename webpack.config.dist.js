@@ -15,6 +15,7 @@ module.exports = {
         "cookies": ["./src/styles/page/cookies.scss"],
         "welcome-box": ["./src/styles/page/welcome-box.scss", "./src/js/welcome-box.js"],        
         "stock" : ["./src/styles/page/stock.scss"],
+        "skeleton" : ["./src/styles/page/skeleton.scss"],
         "onboarding": ["./node_modules/@63pokupki/onboarding-core/index.css", "./src/styles/page/onboarding.scss"],
     }, //объект с точками входа
     output: {
