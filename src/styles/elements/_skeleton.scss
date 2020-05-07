@@ -1,4 +1,4 @@
-$skeleton-element-color: rgba(0, 0, 0, 0.12);
+$skeleton-element-color: rgba(0, 0, 0, 0.16);
 $skeleton-line-border-radius: 15px;
 $skeleton-button-border-radius: 24px;
 $skeleton-image-border-radius: 5px;
@@ -16,7 +16,7 @@ $skeleton-margin-small: $skeleton-margin-standart / 2;
     }
 }
 
-@mixin skeleton-background-animation {
+.skeleton-el-animation {
     position: relative;
     overflow: hidden;
 
@@ -40,7 +40,7 @@ $skeleton-margin-small: $skeleton-margin-standart / 2;
     width: 100%;
     height: 100%;
     border-radius: $skeleton-border-radius;
-    box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.15);
     background-color: #ffffff;
     cursor: progress;
     user-select: none;
@@ -57,7 +57,7 @@ $skeleton-margin-small: $skeleton-margin-standart / 2;
     width: 40px;
     height: 40px;
 
-    @include skeleton-background-animation();
+    @extend .skeleton-el-animation;
 }
 
 .skeleton-divider {
@@ -79,7 +79,7 @@ $skeleton-margin-small: $skeleton-margin-standart / 2;
         margin-bottom: unset;
     }
 
-    @include skeleton-background-animation();
+    @extend .skeleton-el-animation;
 }
 
 .skeleton-head-line {
@@ -89,7 +89,7 @@ $skeleton-margin-small: $skeleton-margin-standart / 2;
     width: 100%;
     height: 24px;
 
-    @include skeleton-background-animation();
+    @extend .skeleton-el-animation;
 }
 
 .skeleton-square {
@@ -98,7 +98,7 @@ $skeleton-margin-small: $skeleton-margin-standart / 2;
     width: 100%;
     height: 150px;
 
-    @include skeleton-background-animation();
+    @extend .skeleton-el-animation;
 }
 
 /** Вспомогательные классы */
