@@ -124,6 +124,9 @@
             @media (max-width: 767px) {
                 margin: 0;
             }
+            @media (min-width: 768px) and (max-width: 1024px){
+                margin: 0 3px 0;
+            }
         }
         @media (max-width: 400px) {
             &.mobile {
@@ -186,10 +189,16 @@
         .short-rules-page__row {
             @media (max-width: 767px) {
                 flex-wrap: wrap;
+            }
+            @media (min-width: 768px) and (max-width: 1024px) {
+                justify-content: space-around;
             }        
         }
         @media (max-width:767px) {
             margin-bottom: 15px;
+        }
+        @media (min-width: 768px) and (max-width: 1024px) {
+            max-width: 100%;
         }
     }
 
@@ -294,6 +303,9 @@
         @media (max-width: 767px) {
             display: none;
         }
+        @media (min-width: 768px) and (max-width: 1024px) {
+            right: -60px;
+        }
     }
 
     //
@@ -365,6 +377,13 @@
         .short-rules-page__plus {
             left: -2px;
             bottom: 46%;
+            @media (min-width: 870px) and (max-width: 1024px) {
+                left: -50px;
+            }
+            @media (min-width: 768px) and (max-width: 870px) {
+                left: -25px;
+            }
+
         }
         @media (max-width: 767px) {
             margin: 0 0 30px 0;
@@ -403,25 +422,53 @@
         margin: 0 0 0 15px;
         h4 {
             margin: 17px 0 10px 0;
+            @media (min-width: 768px) and (max-width: 1024px) {
+                margin: 17px 0 20px;
+                text-align: left;
+            }
+
         }
         p {
             font-size: 14px;
             color: $color-text-base;
         }
 
+        .short-rules-page__possible-costs-icons {
+            @media (min-width: 768px) and (max-width: 1024px) {
+                margin: 30px 0 0 0;
+            }            
+        }
+
         .short-rules-page__row {
             justify-content: space-around;
+            margin: 0 0 10px 0;
+        }
+        .short-rules-page__col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @media (min-width: 768px) and (max-width: 1024px) {
+                align-items: flex-start;
+                padding: 0 0 12px 0;
+            }
+
         }
 
         .short-rules-page__txt {
             max-width: 300px;
             margin: 0 0 15px 0;
-            line-height: 20px;            
+            line-height: 20px;
+            
+            @media (max-width: 1024px) {
+               text-align: center;
+            } 
+            @media (min-width: 768px) and (max-width: 1024px) {
+                max-width: 340px;
+                text-align: left;
+            }
+               
         }
 
-        .short-rules-page__row {
-            margin: 0 0 10px 0;
-        }
 
         .icon-car {
             margin: 0 0 0 8px;
@@ -451,6 +498,8 @@
             }
         }
         @media (max-width: 767px) {
+            width: 100%;
+            max-width: 100%;
             margin: 0;
             .icon-car {
                 margin: 0;
@@ -458,6 +507,21 @@
             .short-rules-page__block-wrap {
                 padding: 0 0 20px 20px;
             }
+        }
+        @media (min-width: 768px) and (max-width: 1024px) {
+            flex-direction: row;
+            width: 100%;
+            max-width: 100%;
+            margin: 20px 0 0 0;
+            padding: 0 8px 0 25px;
+            justify-content: space-around;
+            .short-rules-page__block-wrap {
+                padding: 0 0 20px 20px;
+            }
+            .icon-car {
+                margin: 0;
+            }
+
         }
     }
 
