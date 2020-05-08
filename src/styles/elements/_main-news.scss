@@ -90,6 +90,10 @@
 
 	&__description-wrapper {
 		padding: 15px;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		height: 175px;
 	}
 
 	&__description {
