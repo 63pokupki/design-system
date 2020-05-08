@@ -86,25 +86,29 @@
             &__last-page {
                 display: flex;
             }
+        }
+    }
+}
 
-            &__item:hover {
-                background: $pagination-color;
+@media (-moz-touch-enabled: 1), (pointer:coarse) {
+    .pagination {
+        &__item:hover {
+            background: $pagination-color;
 
-                a {
+            a {
+                color: $color-text-base;
+
+                .ds-icon {
                     color: $color-text-base;
-
-                    .ds-icon {
-                        color: $color-text-base;
-                    }
                 }
             }
+        }
 
-            &__item.is-active {
-                background: $color-primary;
-    
-                a {
-                    color: #fff;
-                }
+        &__item.is-active {
+            background: $color-primary;
+
+            a {
+                color: #fff;
             }
         }
     }
