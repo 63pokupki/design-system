@@ -109,7 +109,7 @@ button {
 }
 
 // скрывает элементы предназначенные только для сенсорных устройств
-@media screen and (min-width: $desctop) {
+@media screen and (min-width: 1025px) {
     .touch-only {
         display: none;
     }
