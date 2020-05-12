@@ -10,6 +10,11 @@
         color: $color-text-heading;
     }
 
+    .tooltip {
+        min-width: 215px;
+        font-size: 11px;
+    }
+
     &__row {
         display: flex;
         width: 100%;
