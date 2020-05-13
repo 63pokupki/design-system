@@ -275,6 +275,10 @@
     .stock-card-vertical {
         padding: 0;
 
+        &__wrapper {
+            margin-bottom: 5px;
+        }
+
         .stock-badge {
             padding: 2px 7px;
         }
