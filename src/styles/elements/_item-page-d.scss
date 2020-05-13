@@ -19,7 +19,6 @@
         position: relative;
 
         .slider-viewing {
-            // height: 80px;
             min-height: 100px;
             overflow-x: auto;
             overflow-y: hidden;
@@ -39,6 +38,9 @@
                 background: #e0eef7;
                 border-radius: 3px;
             }
+            @media (max-width: 768px) {
+                min-height: 70px;
+            }
         }
 
         .slider-wrap {
@@ -53,6 +55,11 @@
             height: 100%;
             width: 35px;
             background: linear-gradient(270deg, #ffffff 9.01%, rgba(255, 255, 255, 0) 100%);
+        }
+        @media (max-width: 768px) {
+            max-width: 100%;
+            margin-top: 0;
+            margin-bottom: 10px;
         }
     }
 
@@ -69,6 +76,10 @@
 
         &.is-selected {
             border: 2px solid $color-primary;
+        }
+        @media (max-width: 768px) {
+            width: 50px;
+            height: 50px;
         }
     }
 
