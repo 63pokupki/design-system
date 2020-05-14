@@ -131,11 +131,14 @@
     }
     //Выбранная позиция(span)
     &__selected-position {
-        display: none;
         width: 100%;
         overflow: hidden;
         white-space: nowrap;
         text-align: right;
+        border-bottom: 1px solid #36a6f2;
+        font-size: 12px;
+        font-weight: normal;
+        color: #606266;
     }
     .tooltip {
         font-size: 9px;
