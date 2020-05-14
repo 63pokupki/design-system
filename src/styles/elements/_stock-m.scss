@@ -73,9 +73,6 @@
 
             &__selected-position {
                 border-bottom: unset;
-                // @media (max-width: 1024px) {
-                //     display: none;
-                // }
             }
 
             &__btn {
@@ -85,6 +82,10 @@
 
                 &:after {
                     display: none;
+                }
+
+                @media (max-width: 1024px) {
+                    max-width: 120px;
                 }
             }
 

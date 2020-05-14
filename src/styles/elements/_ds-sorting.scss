@@ -148,6 +148,7 @@
     @media (max-width: 1024px) {
         .sorting__btn {
             flex-direction: column;
+            max-width: 120px;
             &:after {
                 display: none;
             }
