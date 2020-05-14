@@ -6,11 +6,19 @@
     line-height: 21px;
     color: #1e2023;
     padding: 10px 25px;
-    align-items: flex-start;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     list-style: none;
     margin: 0;
 
+    &__col {
+        flex-shrink: 0;
+        padding: 5px;
+
+        p {
+            margin: 0;
+        }
+    }
 
     &__link {
         margin-right: 10px;
@@ -23,42 +31,48 @@
     &__num {
         font-size: 14px;
     }
+}
 
-    &__row {
-        width: 100%;
-        display: flex;
+@media screen and (max-width: 1024px) {
+    .stock-org-panel {
         flex-direction: column;
-        flex-wrap: wrap;
-        margin-bottom: 30px;
 
-        p {
-            margin: 0;
-        }
+        &__row {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
 
-        &:nth-of-type(1) {
-            max-height: 125px;
-            
-        }
-
-        &:nth-of-type(2) {
-            max-height: 50px;
-        }
-
-        &:nth-of-type(4) {
-            flex-direction: row;
-            justify-content: space-between;
-
-            .org-edit-catalog-btn {
-                width: 270px;
-                margin-right: auto;
+            p {
+                margin: 0;
             }
 
-            .org-warning-btn {
-                margin-right: auto;
+            &:nth-of-type(1) {
+                max-height: 125px;
+                
             }
 
-            .stock-org-panel__link {
-                margin-right: 5%;
+            &:nth-of-type(2) {
+                max-height: 50px;
+            }
+
+            &:nth-of-type(4) {
+                flex-direction: row;
+                justify-content: space-between;
+
+                .org-edit-catalog-btn {
+                    width: 270px;
+                    margin-right: auto;
+                }
+
+                .org-warning-btn {
+                    margin-right: auto;
+                }
+
+                .stock-org-panel__link {
+                    margin-right: 5%;
+                }
             }
         }
     }
