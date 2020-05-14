@@ -72,6 +72,10 @@
 
                 .stock-org-panel__link {
                     margin-right: 5%;
+
+                    &:last-child {
+                        margin-right: auto;
+                    }
                 }
             }
         }
