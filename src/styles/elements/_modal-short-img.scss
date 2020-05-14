@@ -136,6 +136,15 @@
             i {
                 font-size: 16px;
             }
+            // Псевдоэлемент, для увеличения области клика
+            &::before {
+                content: "";
+                position: absolute;
+                width: 50px;
+                height: 200px;
+                background: transparent;
+            }
+
         }
 
         &__slider {
