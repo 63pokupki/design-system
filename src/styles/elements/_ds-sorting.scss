@@ -75,7 +75,7 @@
         display: flex;
         flex-direction: row;
         position: relative;
-        max-width: 200px;
+        max-width: 240px;
         outline: none;
         &:hover {
             cursor: pointer;
@@ -139,6 +139,7 @@
         font-size: 12px;
         font-weight: normal;
         color: #606266;
+        text-overflow: ellipsis;
     }
     .tooltip {
         font-size: 9px;
