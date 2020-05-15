@@ -17,7 +17,8 @@
         margin: unset;
         font-size: 12px;
         font-weight: normal;
-        color: darken($color-text-heading, 10%);
+        // color: darken($color-text-heading, 10%);
+        color: $color-text-heading;
         text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
     }
 

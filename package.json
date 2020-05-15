@@ -1,6 +1,6 @@
 {
     "name": "@63pokupki/design-system",
-    "version": "0.0.449",
+    "version": "0.0.450",
     "description": "UI component kit and design-system for 63 Pokupki project",
     "main": "dist/css/ds-ui-kit.css",
     "scripts": {
@@ -58,7 +58,7 @@
         "match-all": "^1.2.5",
         "mini-css-extract-plugin": "^0.9.0",
         "node-sass": "^4.14.1",
-        "postcss": "^7.0.29",
+        "postcss": "^7.0.30",
         "postcss-cli": "^7.1.1",
         "postcss-import": "^12.0.1",
         "postcss-loader": "^3.0.0",
@@ -75,7 +75,7 @@
         "vue-template-compiler": "^2.6.11",
         "webpack": "^4.43.0",
         "webpack-cli": "^3.3.11",
-        "webpack-dev-server": "^3.10.3"
+        "webpack-dev-server": "^3.11.0"
     },
     "files": [
         "dist"
