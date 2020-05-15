@@ -1,0 +1,31 @@
+.insert-photo {
+    &__main-heading {
+        margin: 0 0 40px;
+        color: $color-text-heading;
+        font-size: 24px;
+    }
+    &__txt {
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        line-height: 1.5em;
+        color: $color-text-base;
+    }
+    &__txt_bold {
+        font-weight: 600;
+    }
+    &__img {
+        margin: 0 auto;
+        padding: 5px;
+
+        img {
+            margin: 0 auto;
+            box-shadow: 0px 0px 15px 1px rgba(69,66,69,0.6);
+        }
+    }
+    .mw-50 {
+        max-width: 50%;
+    }
+}
+
+
