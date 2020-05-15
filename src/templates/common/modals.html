@@ -623,7 +623,13 @@
                             <!-- <span class="modal__selected-position">position-1</span> -->
                             <!-- Закупка -->
                             <div class="modal__select-position-wrap">
-                                <select class="modal__select-position" name="" id="sel1234">
+                                <!-- для изменения количества отображаемых элементов изменить цифру в onclick -->
+                                <select class="modal__select-position" 
+                                        name="" 
+                                        id="sel1234"
+                                        style="z-index: 200"
+                                        onclick="size=(size!=1)?1:5" 
+                                        onmouseleave="size=1">
                                     <option class="modal-copy-position__option" value="main-position-1" selected>
                                         Выберите закупку</option>
                                     <option value="position-2"><span>position-2 Самокаты, всё для самокатов</span>
@@ -631,6 +637,9 @@
                                     <option value="position-3">position-3</option>
                                     <option value="position-4">position-4</option>
                                     <option value="position-5">position-5</option>
+                                    <option value="position-5">position-6</option>
+                                    <option value="position-5">position-7</option>
+                                    <option value="position-5">position-8</option>
                                 </select>
                                 <label for="sel1234" class="modal__select modal__select-purchase">
                                 </label>
