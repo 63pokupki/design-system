@@ -212,7 +212,7 @@
             }
 
             &__image {
-                // max-height: 300px;
+                max-height: 90vh;
             }
 
             &__main {
@@ -309,16 +309,19 @@
                 font-size: 11px;
             }
 
-            &__wrapper {
-                height: 147px;
-            }
+            // &__wrapper {
+            //     height: 147px;
+            // }
 
             &__image {
-                max-height: 147px;
+                max-height: 262px;
             }
 
             &__buy {
                 max-width: unset;
+            }
+            &__bar {
+                margin-bottom: 10px;
             }
         }
     }
