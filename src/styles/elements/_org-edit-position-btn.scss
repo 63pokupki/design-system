@@ -1,5 +1,6 @@
 // кнопка Редактировать позицию для организатора
 .org-edit-position-btn {
+    display: inline-flex;
     font-size: 19px;
     color: $color-primary;
     text-decoration: none;
