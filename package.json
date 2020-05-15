@@ -1,6 +1,10 @@
 {
     "name": "@63pokupki/design-system",
+<<<<<<< HEAD
     "version": "0.0.459",
+=======
+    "version": "0.0.461",
+>>>>>>> 20f5c7526f71aeca7511945fb09e8b112e99681f
     "description": "UI component kit and design-system for 63 Pokupki project",
     "main": "dist/css/ds-ui-kit.css",
     "scripts": {
@@ -47,7 +51,7 @@
         "css-loader": "^3.5.3",
         "css-mqpacker": "^7.0.0",
         "cssnano": "^4.1.10",
-        "eslint": "^6.8.0",
+        "eslint": "^7.0.0",
         "eslint-loader": "^4.0.2",
         "exports-loader": "^0.7.0",
         "file-loader": "^6.0.0",
@@ -67,7 +71,7 @@
         "sass-loader": "^8.0.2",
         "style-loader": "^1.2.1",
         "stylelint": "^13.3.3",
-        "svg-sprite-loader": "^4.3.0",
+        "svg-sprite-loader": "^5.0.0",
         "url-loader": "^4.1.0",
         "vue": "^2.6.11",
         "vue-loader": "^15.9.2",
