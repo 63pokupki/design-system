@@ -40,6 +40,7 @@
     // одна секция
     &__section {
         line-height: 170%;
+        display: none;
 
         &.is-active {
             display: block;
