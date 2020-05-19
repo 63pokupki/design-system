@@ -373,7 +373,7 @@
     &::before {
         content: attr(data-title);
         white-space: nowrap;
-        color: #36a6f2;
+        color: #c4c4c4;
         display: inline-flex;
         height: 15px;
         position: absolute;
@@ -408,7 +408,7 @@
         border-radius: 2px;
         display: flex;
         align-items: center;
-        border: 1px solid #36a6f2;
+        border: 1px solid #c4c4c4;
         cursor: pointer;
 
         &-text {
@@ -459,6 +459,15 @@
     }
 
     &_active {
+        &::before {
+            color: #36a6f2;
+        }
+        
+        .input-select__active {
+            background-color: #fff;
+            border: 1px solid #36a6f2;
+        }
+
         .input-select__options {
             height: auto;
             opacity: 1;
