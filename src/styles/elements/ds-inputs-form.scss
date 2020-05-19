@@ -415,6 +415,15 @@
             color: #1d1e1f;
             font-size: 14px;
         }
+
+        &::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: -3px;
+            height: 3px;
+            width: 100%;
+        }
     }
 
     &__options {
