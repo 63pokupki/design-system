@@ -1,5 +1,5 @@
 {
-    "version": "0.0.468",
+    "version": "0.0.469",
     "description": "UI component kit and design-system for 63 Pokupki project",
     "main": "dist/css/ds-ui-kit.css",
     "scripts": {
