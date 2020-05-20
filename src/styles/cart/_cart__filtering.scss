@@ -1,0 +1,45 @@
+
+
+.cart__filtering {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: 1120px;
+    padding: 10px 30px;
+    height: 56px;
+    box-shadow: 0px 2px 16px rgba(105, 153, 247, 0.18);
+
+    // Чекбоксы
+    .checkbox {
+        margin: 0 25px 0 0;
+    }
+    
+    .checkbox__label {
+        font-size: 14px;
+        font-weight: 600;
+        color: $color-primary;
+    }
+    .checkbox__label-all {
+        color: $color-text-heading;
+    }
+    // Поиск
+    .search {
+        max-width: 168px;
+        margin: 0 0 0 20px;
+        input {
+            height: 24px;
+        }
+    }
+    .search__button {
+        right: 10px;
+        img {
+            max-width: 20px;
+        }
+    }
+    .search__bar {
+        padding-left: 15px;
+        padding-right: 40px;
+    }
+}
