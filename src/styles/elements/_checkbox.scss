@@ -104,3 +104,17 @@
         }
     }
 }
+
+.checkbox_dot {
+    .checkbox__label {
+        &:after {
+            width: 12px;
+            height: 12px;
+            background-color: $color-primary;
+            border-radius: 50%;
+            left: -1px;
+            top: 3px;
+            // border: 2px solid $color-primary;
+        }
+    }
+}
