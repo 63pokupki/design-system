@@ -168,6 +168,10 @@
 
 @media (min-width: 1184px) {
 	.main-slider {
+		padding: 16px 12px;
+		overflow: hidden;
+		max-width: 791px;
+
 		&__title {
 			display: flex;
 			align-items: center;
@@ -189,7 +193,7 @@
 		&__button-wrapper {
 			display: block;
 			position: absolute;
-			width: calc(100% - 24px);
+			width: calc(100% - 14px);
 			display: flex;
 			justify-content: space-between;
 			top: 50%;
@@ -254,9 +258,10 @@
 		}
 
 		&__list {
-			overflow: hidden;
 			padding: 0 5px 15px;
 			margin: 0 15px;
+			overflow: visible;
+			transition: transform .2s ease;
 		}
 
 		&__item {
