@@ -244,8 +244,15 @@
 //Как вставить фотографию
 @import "~styles/insert-photo/insert-foto.scss";
 
+// Корзина 
+@import "~styles/cart/cart.scss";
+
 // Корзина фильтрация
 @import "~styles/cart/_cart__filtering.scss";
+
+// Корзина оформление заказа
+@import "~styles/cart/cart__order-payment.scss";
+
 
 
 
