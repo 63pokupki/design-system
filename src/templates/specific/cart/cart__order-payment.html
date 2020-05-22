@@ -15,6 +15,8 @@
             <div class="cart__order-payment">
                 <div class="cart__order-payment-attantion">
                    <p>Кнопка оплаты появится после выставления счёта поставщиком</p>
+                   <i class="ds-icon icon-question-mark"></i>
+                   <i class="ds-icon icon-rectangle"></i>
                 </div>
                 <button class="cart__btn-place-order ds-btn ds-btn_hover">
                     <div class="ds-btn__text">Оформить заказ</div>
@@ -31,20 +33,28 @@
                 <div class="hr"></div>
                 <p class="cart__order-number cart__txt">№ заказа: <span>19935726</span></p>
                 <div class="hr"></div>
-                <p class="cart__txt">Самовывоз из офиса:</p>
-                <a class="cart__pickup-address link link_hover" href="#">г. Самара, ул. Вилоновская, 38А</a>
-                <p class="cart__txt"></p>
+                <p class="cart__txt cart__txt_middle">Самовывоз из офиса:</p>
+                <a class="cart__pickup-address cart__txt_middle link link_hover" href="#">г. Самара, ул. Вилоновская, 38А</a>
+                
                 <div class="hr"></div>
-                <div class="cart__collapse-block collapse-block">
-                    <div class="collapse-block__header">
-                        <button class="arrow arrow-down arrow_inverse arrow_transp">
-                            <i class="ds-icon icon-arrow-down"></i>
-                        </button>
-                        <p class="cart__num-goods-in-purchase cart__txt"><span>Товаров в закупке (<span>3</span>)</span> <span class="cart__total-price-purchase">1980 ₽</span></p>
+                <div class="cart__sum-wrapper">
+                    <!-- Товаров в закупке -->
+                    <div class="cart__collapse-block collapse-block is-toggle">
+                        <div class="collapse-block__header">
+                            <button class="arrow arrow-down arrow_inverse arrow_transp">
+                                <i class="ds-icon icon-arrow-down"></i>
+                            </button>
+                            <p class="cart__num-goods-in-purchase cart__txt"><span>Товаров в закупке (<span>3</span>)</span> <span class="cart__total-price-purchase"><strong>1980 ₽</strong></span></p>
+                        </div>
+                        <div class="collapse-block__content">
+                            <div class="cart__row-jcsb cart__txt_middle"><span>Уже оплачено</span><span><strong>0 ₽</strong></span></div>
+                            <div class="cart__row-jcsb cart__txt_middle"><span>Вознаграждение агента (орг.сбор)</span><span><strong>56 ₽</strong></span></div>
+                        </div>
                     </div>
-                    <div class="collapse-block__content">
-                        <!-- Здесь какой-то контент -->
-                    </div>
+                    <div class="cart__row-jcsb cart__txt_middle"><span>Сроки поставки</span><span><strong>16 дней</strong></span></div>
+                    <div class="hr"></div>                        
+                    <div class="cart__sum cart__row-jcsb"><span><strong>Всего  к оплате</strong></span><span><strong>2 444 ₽</strong></span></div>
+
                 </div>
             </div>
         </div>

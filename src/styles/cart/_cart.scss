@@ -11,15 +11,14 @@
     &__txt_small {
         font-size: 11px;
     }
+    &__txt_middle {
+        font-size: 12px;
+    }
+
     &__txt_grey {
         color: $color-text-light-grey;
     }
 
-    &__order-number {
-        font-size: 14px;
-        font-weight: 600;
-        text-decoration: underline;
-    }
     &__num-goods-in-purchase {
         display: flex;
         justify-content: space-between;
