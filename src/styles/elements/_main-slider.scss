@@ -239,6 +239,8 @@
 			}
 
 			&_right {
+				margin-left: auto; 
+
 				&::after {
 					transform: translateY(-5px) rotate(45deg);
 				}
@@ -262,6 +264,7 @@
 			margin: 0 15px;
 			overflow: visible;
 			transition: transform .2s ease;
+			width: max-content;
 		}
 
 		&__item {
