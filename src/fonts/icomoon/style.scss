@@ -1,17 +1,21 @@
 @import "~fonts/icomoon/variables";
 
-
-.icon-stop-sign:before {
-  content: "\e935";
+.icon-question-mark:before {
+  content: "\e936";
 }
 .icon-receipt:before {
   content: "\e934";
 }
+.icon-stop-sign:before {
+  content: "\e935";
+}
 .icon-arrow-left-line:before {
-  content: "\e932";  
+  content: "\e932";
+  color: #606266;
 }
 .icon-arrow-right-line:before {
-  content: "\e933";  
+  content: "\e933";
+  color: #606266;
 }
 .icon-next-page:before {
   content: "\e931";
