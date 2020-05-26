@@ -144,7 +144,8 @@ if (hearts) {
 
     if (toggleBlock) {
         toggleBlock.forEach(t => {
-            t.addEventListener("click", () => {
+            let toggleBtn = t.querySelector(".collapse-block__header");
+            toggleBtn.addEventListener("click", () => {
                 t.classList.toggle("is-toggle");
             });
         });
