@@ -10,7 +10,7 @@
 
 <body style="background: #fff;">
     <!-- Страница активных закупок -->
-    <div class="pac" style="max-width: 1152px; margin: 0 auto;">
+    <div class="pac" style="max-width: 1152px; margin: 56px auto 0 auto;">
 
         <!-- Кнопки вверх/вниз для всей страницы -->
         <div class="btn-container-upDown">
@@ -333,6 +333,15 @@
         <!-- Крошки с фильтром -->
         <!-- ac - это active custom -->
         <!-- Стили в _active-custom-menu-filter -->
+        <div class="header-wrap-card__tabs mob">
+            <!-- Чтобы сделать вкладку активной, необходимо добавить класс .is-selected, соответствующей вкладке -->
+            <div class="header-wrap-card__tab header-wrap-card__tab_all is-selected">Все закупки</div>
+            <!-- Если выбранна вкладка "header-wrap-card__tab_unseen", добавить класс .is-visible блоку
+                        header-wrap-card__alert-info -->
+            <div class="header-wrap-card__tab header-wrap-card__tab_unseen">Непросмотренные закупки
+            </div>
+        </div>
+
         <div class="ac-menu-filter-categories is-toggle">
             <div class="ac-menu-filter-categories__checked-position">
                 <a class="ac-menu-filter-categories__checked-position-link" href="http://" target="_blank"
@@ -382,7 +391,7 @@
 
         <!-- Шапка обёртки карточек активных закупок -->
         <div class="header-wrap-card header-wrap-card_desktop">
-            <div class="header-wrap-card__tabs">
+            <div class="header-wrap-card__tabs desk">
                 <!-- Чтобы сделать вкладку активной, необходимо добавить класс .is-selected, соответствующей вкладке -->
                 <div class="header-wrap-card__tab header-wrap-card__tab_all is-selected">Все закупки</div>
                 <!-- Если выбранна вкладка "header-wrap-card__tab_unseen", добавить класс .is-visible блоку

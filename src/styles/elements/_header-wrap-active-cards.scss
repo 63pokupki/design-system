@@ -17,7 +17,21 @@
         width: 100%;
         background: $card-color-bg;
         font-size: 13px;
-        color: #000;
+        color: $color-text-heading;
+        &.mob {
+            padding: 0 30px;
+            @media (min-width: 1025px) {
+                display: none;
+            }
+            @media (max-width: 992px) {
+                padding: 0 20px;
+            }
+        }
+        &.desk {
+            @media (max-width: 1024px) {
+                display: none;
+            }
+        }
     }
     &__tab {
         display: flex;
@@ -27,12 +41,39 @@
         padding: 15px 0;
         margin-right: 80px;
         cursor: pointer;
-        &.is-selected {
-            color: $color-primary;
+        position: relative;
+        white-space: nowrap;
+        &.is-selected {            
             font-weight: 600;
+            &:after {
+                content: "";
+                display: block;
+                width: calc(100% + 6px);
+                height: 2px;
+                position: absolute;
+                left: -3px;
+                bottom: 10px;
+                background-color: $color-primary;
+                @media (max-width: 1024px) {
+                    bottom: 15px;
+                }
+        
+            }
         }
         &:hover {
-            color: $color-primary;
+            @media (min-width: 1025px) {
+                color: $color-primary;
+            }
+        }
+        @media (max-width: 1024px) {
+            height: 55px;            
+        }
+        @media (max-width: 500px) {
+            margin-right: 50px;
+            font-size: 12px;
+            &.header-wrap-card__tab_unseen {
+                margin: 0;
+            }
         }
     }
     &__sort {
@@ -44,8 +85,8 @@
         width: 100%;
         background: #fff;
         padding: 5px 0px;
-        border-top: 2px solid $bg-wrapper-card-color;
-        border-bottom: 2px solid $bg-wrapper-card-color;
+        border-top: 1px solid $color-border-header-active-pur;
+        border-bottom: 1px solid $color-border-header-active-pur;
 
         &-container {
             display: flex;
@@ -134,15 +175,16 @@
         & {
             padding: 0;
             margin: 0;
-            border-top: 1px solid $color-primary;
+            border-top: 1px solid $color-border-header-active-pur;
 
         }
         .header-wrap-card {
             &__tabs {
-                display: none;
+
             }
             &__sort {
                 flex-wrap: wrap;
+                border-bottom: 0;
             }
             &__switcher-desktop {
                 display: none;
