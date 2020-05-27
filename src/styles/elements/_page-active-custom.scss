@@ -81,15 +81,20 @@
         z-index: 11;
     }
     .search {
+        max-width: 530px;
+    }
+    .search-clear {
         max-width: 426px;
         margin: 20px auto;
         padding: 0 20px;
+
         .search__button {
             right: 55px;
         }
         .search__button-clear {
             right: 32px;
         }
+
     }
 
     .wrapper-active-cards {

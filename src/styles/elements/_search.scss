@@ -57,13 +57,13 @@
             transform: translateY(-50%) scale(0.9);
         } 
     }
-}
-// Поиск с кнопкой очистки
-.search-clear {
-    .search__button {
-        right: 35px;
+    // Поиск с кнопкой очистки
+    &.search-clear {
+        .search__button {
+            right: 35px;
+        }
+    
     }
-
 }
 
 .search.has-categories {
