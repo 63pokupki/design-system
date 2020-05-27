@@ -138,6 +138,10 @@
         }
     }
 
+    .collapse-section__body {
+        color: $dark-brown-color;
+    }
+
     &__buttons {
         display: flex;
         align-items: center;
