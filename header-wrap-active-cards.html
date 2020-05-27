@@ -1,76 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Шапка обёртки карточек активных закупок</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="css/highlight-syntax.css?8d0f32b66debd97e745b" rel="stylesheet"><link href="css/ds-utils.css?8d0f32b66debd97e745b" rel="stylesheet"><link href="css/ds-ui-kit.css?8d0f32b66debd97e745b" rel="stylesheet"></head>
-
-<body>
-
-    <h1 class="ds-title">Шапка карточек(закупки)</h1>
-    <div class="ds-wrapper">
-        <div class="ds-text">Чтобы сделать вкладку <span class="ds-hl">header-wrap-card__tab</span> активной,
-            необходимо добавить класс <span class="ds-hl">.is-selected</span>, соответствующей вкладке.
-        </div>
-        <div class="ds-text">Если выбранна вкладка <span
-                class="ds-hl">"header-wrap-card__tab_unseen"</span>(Непросмотренные закупки), добавить класс <span
-                class="ds-hl">.is-visible</span> блоку
-            <span class="ds-hl">header-wrap-card__alert-info</span>.
-        </div>
-    </div>
-    <div class="ds-divider">
-        <div class="header-wrap-card header-wrap-card_desktop">
-            <div class="header-wrap-card__tabs">
-                <!-- Чтобы сделать вкладку активной, необходимо добавить класс .is-selected, соответствующей вкладке -->
-                <div class="header-wrap-card__tab header-wrap-card__tab_all is-selected">Все закупки</div>
-                <!-- Если выбранна вкладка "header-wrap-card__tab_unseen", добавить класс .is-visible блоку
-                    header-wrap-card__alert-info -->
-                <div class="header-wrap-card__tab header-wrap-card__tab_unseen">Непросмотренные закупки</div>
-            </div>
-            <div class="header-wrap-card__sort">
-                <div class="header-wrap-card__container-sorting">
-                    <div class="header-wrap-card__sorting sorting">
-                        <div class="sorting__btn">
-                            <div class="sorting__name">Сортировка по:</div>
-                            <span class="sorting__selected-position">Позиция 1 на десктопе</span>
-                        </div>
-                    </div>
-                    <div class="header-wrap-card__sorting sorting">
-                        <div class="sorting__btn">
-                            <div class="sorting__name">Фильтр по тегу:</div>
-                            <span class="sorting__selected-position">Позиция 1 на десктопе</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- "header-wrap-card__switcher-desktop нужен для скрытия 
-                        переключателя на экранах меньше десктопа -->
-                <div class="header-wrap-card__switcher-desktop switcher">
-                    <input class="switcher__checkbox" type="checkbox" name="" id="switcher-d">
-                    <label class="switcher__label" for="switcher-d"></label>
-                    <label class="header-wrap-card__switcher-name" for="switcher-d">Полный режим
-                        отображения</label>
-                </div>
-            </div>
-            <div class="header-wrap-card__container-switcher">
-                <div class="header-wrap-card__switcher switcher">
-                    <input class="switcher__checkbox" type="checkbox" name="" id="switcher">
-                    <label class="switcher__label" for="switcher"></label>
-                    <label class="header-wrap-card__switcher-name" for="switcher">Полный режим
-                        отображения</label>
-                </div>
-            </div>
-            <!-- Если выбрана вкладка "Непросмотренные закупки", отобразить этот блок -->
-            <div class="header-wrap-card__alert-info">Здесь отображаются все закупки, которые вы еще не успели
-                посмотреть.</div>
-        </div>
-    </div>
-
-    <div class="ds-code-wrapper">
-        <script type="text/plain" class="language-markup">
-            <div class="header-wrap-card header-wrap-card_desktop">
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>Шапка обёртки карточек активных закупок</title><link rel="icon" href="favicon.ico"><link href="css/highlight-syntax.css?5e5ecaf0c4b0552a722a" rel="stylesheet"><link href="css/ds-utils.css?5e5ecaf0c4b0552a722a" rel="stylesheet"><link href="css/ds-ui-kit.css?5e5ecaf0c4b0552a722a" rel="stylesheet"></head><body><h1 class="ds-title">Шапка карточек(закупки)</h1><div class="ds-wrapper"><div class="ds-text">Чтобы сделать вкладку <span class="ds-hl">header-wrap-card__tab</span> активной, необходимо добавить класс <span class="ds-hl">.is-selected</span>, соответствующей вкладке.</div><div class="ds-text">Если выбранна вкладка <span class="ds-hl">"header-wrap-card__tab_unseen"</span>(Непросмотренные закупки), добавить класс <span class="ds-hl">.is-visible</span> блоку <span class="ds-hl">header-wrap-card__alert-info</span>.</div></div><div class="ds-divider"><div class="header-wrap-card header-wrap-card_desktop"><div class="header-wrap-card__tabs"><div class="header-wrap-card__tab header-wrap-card__tab_all is-selected">Все закупки</div><div class="header-wrap-card__tab header-wrap-card__tab_unseen">Непросмотренные закупки</div></div><div class="header-wrap-card__sort"><div class="header-wrap-card__container-sorting"><div class="header-wrap-card__sorting sorting"><div class="sorting__btn"><div class="sorting__name">Сортировка по:</div><span class="sorting__selected-position">Позиция 1 на десктопе</span></div></div><div class="header-wrap-card__sorting sorting"><div class="sorting__btn"><div class="sorting__name">Фильтр по тегу:</div><span class="sorting__selected-position">Позиция 1 на десктопе</span></div></div></div><div class="header-wrap-card__switcher-desktop switcher"><input class="switcher__checkbox" type="checkbox" name="" id="switcher-d"> <label class="switcher__label" for="switcher-d"></label> <label class="header-wrap-card__switcher-name" for="switcher-d">Полный режим отображения</label></div></div><div class="header-wrap-card__container-switcher"><div class="header-wrap-card__switcher switcher"><input class="switcher__checkbox" type="checkbox" name="" id="switcher"> <label class="switcher__label" for="switcher"></label> <label class="header-wrap-card__switcher-name" for="switcher">Полный режим отображения</label></div></div><div class="header-wrap-card__alert-info">Здесь отображаются все закупки, которые вы еще не успели посмотреть.</div></div></div><div class="ds-code-wrapper"><script type="text/plain" class="language-markup"><div class="header-wrap-card header-wrap-card_desktop">
                 <div class="header-wrap-card__tabs">
                     <!-- Чтобы сделать вкладку активной, необходимо добавить класс .is-selected, соответствующей вкладке -->
                     <div class="header-wrap-card__tab header-wrap-card__tab_all is-selected">Все закупки</div>
@@ -113,14 +41,4 @@
                 <!-- Если выбрана вкладка "Непросмотренные закупки", отобразить этот блок -->
                 <div class="header-wrap-card__alert-info">Здесь отображаются все закупки, которые вы еще не успели
                     посмотреть.</div>
-            </div>
-        </script>
-    </div>
-
-    <!-- Шапка карточек планшет -->
-
-
-
-<script type="text/javascript" src="js/highlight-syntax.js?8d0f32b66debd97e745b"></script><script type="text/javascript" src="js/ds-utils.js?8d0f32b66debd97e745b"></script><script type="text/javascript" src="js/categories-icons-sprite.js?8d0f32b66debd97e745b"></script><script type="text/javascript" src="js/ds-ui-kit.js?8d0f32b66debd97e745b"></script></body>
-
-</html>
+            </div></script></div><script src="js/highlight-syntax.js?5e5ecaf0c4b0552a722a"></script><script src="js/ds-utils.js?5e5ecaf0c4b0552a722a"></script><script src="js/categories-icons-sprite.js?5e5ecaf0c4b0552a722a"></script><script src="js/ds-ui-kit.js?5e5ecaf0c4b0552a722a"></script></body></html>
