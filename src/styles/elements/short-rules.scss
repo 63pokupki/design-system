@@ -24,19 +24,19 @@
     }
 
     .collapse-block {
-        &.save-wholesale {
-            .collapse-block__header {
-                @media (max-width: 767px) {
-                    padding: 0 15px;
-                }
-            }    
-        }
+        // &.save-wholesale {
+        //     .collapse-block__header {
+        //         @media (max-width: 767px) {
+        //             padding: 0 15px;
+        //         }
+        //     }    
+        // }
         &.purchase-process {
-            .collapse-block__header {
-                @media (max-width: 767px) {
-                    padding: 0 15px;
-                }
-            }
+            // .collapse-block__header {
+            //     @media (max-width: 767px) {
+            //         padding: 0 15px;
+            //     }
+            // }
             .collapse-block__content {
                 @media (max-width: 767px) {
                     padding: 0 10px;
@@ -68,6 +68,7 @@
     }
 
     &__card-heading {
+        padding: 0 20px 0 0;
         font-size: 20px;
         color: $color-text-heading;
         @media (max-width: 767px) {
