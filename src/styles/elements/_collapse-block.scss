@@ -74,6 +74,7 @@
             ~.collapse-block-css__content {
                 height: auto;
                 max-height: 5000px;
+                margin-top: 15px;
                 transition: all .5s ease-in-out;
                 opacity: 1;
                 -webkit-transition: all .5s ease-in-out;
@@ -93,12 +94,16 @@
         }
     }
 
+    &__header {
+        cursor: pointer;
+    }
+
     &__content {
         display: flex;
         flex-direction: column;
         height: auto;
         max-height: 0px;
-        margin-top: 15px;
+        margin-top: 0;
         // overflow: hidden;
         transition: all .1s;
         opacity: 0;

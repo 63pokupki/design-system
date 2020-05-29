@@ -417,8 +417,31 @@ if (inputPhone) {
     })
 }
 
-// document.querySelector('#ds-inputs-form__phone').addEventListener('keyup', function(){
-//     this.value = this.value.replace(/[^\d]/g, '');
-// });
+// Изменение цвета и размера шрифта копеек
+(()=> {
+    let colorSizeKopek = document.querySelectorAll(".color-size-kopek");
+    console.dir(colorSizeKopek);
+    if (colorSizeKopek) {
+        colorSizeKopek.forEach((czk) => {
+            
+            // Получаем содержимое элемента в виде строки
+            let txtCzk = czk.innerText.toString(); 
+            
+            // Получаем размер шрифта kopekSize
+            let kopekSize = window.getComputedStyle(czk).fontSize;
 
+            // Получаем последние три символа
+            let lastChar = txtCzk.substring(txtCzk.length - 3);            
+            console.dir(lastChar);
+            let kopGrey = `<span class="cart__txt_grey">${ lastChar }</span>`;
+            console.dir(kopGrey);
+            czk.innerHTML = kopGrey;
+        })
+
+    } else {
+        console.error("Нет элемента с классом .color-size-kopek. Присвойте класс необходимому элементу");
+        
+    }
+
+})()
 
