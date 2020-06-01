@@ -1,6 +1,6 @@
 {
     "name": "@63pokupki/design-system",
-    "version": "0.0.494",
+    "version": "0.0.495",
     "description": "UI component kit and design-system for 63 Pokupki project",
     "main": "dist/css/ds-ui-kit.css",
     "scripts": {
