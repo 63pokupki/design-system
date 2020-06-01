@@ -50,6 +50,12 @@
         justify-content: space-between;
     }
 
+    &__buttons {
+        @media (min-width: 769px) and (max-width: 1024px) {
+            align-items: flex-start;
+        }
+    }
+
     &__sqrt,
     &__cols {
         font-size: 18px;
