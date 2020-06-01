@@ -148,6 +148,9 @@
                 &:before {
                     transform: translateX(-20px);
                 }
+                &:after {
+                    transform: translateX(-17px) rotate(-45deg);
+                }
             }
 
             &:hover {
