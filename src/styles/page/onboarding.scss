@@ -69,6 +69,7 @@ $onboarding-media-touch: 900px;
             max-width: 100%;
             margin: 0;
             font-size: 14px;
+            z-index: 5;
         }
 
         .introjs-button,
@@ -92,6 +93,7 @@ $onboarding-media-touch: 900px;
             bottom: 75px;
             background: url("~images/important_images/onboarding/lisa-mobile-outer.png")
                 no-repeat center;
+                z-index: 1;
         }
     }
 }
