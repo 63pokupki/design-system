@@ -417,31 +417,39 @@ if (inputPhone) {
     })
 }
 
-// Изменение цвета и размера шрифта копеек
+// Изменение цвета и размера шрифта копеек 
 (()=> {
-    let colorSizeKopek = document.querySelectorAll(".color-size-kopek");
-    console.dir(colorSizeKopek);
-    if (colorSizeKopek) {
-        colorSizeKopek.forEach((czk) => {
-            
+    let price = document.querySelectorAll(".price");
+
+    if (price) {
+        price.forEach((p) => {
+            let inputInteger = p.querySelector(".price__input-integer"),
+                rub          = p.querySelector(".price__rub"),
+                kopek        = p.querySelector(".price__kopek");
+
             // Получаем содержимое элемента в виде строки
-            let txtCzk = czk.innerText.toString(); 
-            
+            let txtInIn = inputInteger.innerText.toString(); 
+
             // Получаем размер шрифта kopekSize
-            let kopekSize = window.getComputedStyle(czk).fontSize;
+            // let kopekSize = window.getComputedStyle(czk).fontSize;
 
             // Получаем последние три символа
-            let lastChar = txtCzk.substring(txtCzk.length - 3);            
-            console.dir(lastChar);
-            let kopGrey = `<span class="cart__txt_grey">${ lastChar }</span>`;
-            console.dir(kopGrey);
-            czk.innerHTML = kopGrey;
-        })
+            let lastChars = txtInIn.slice(-3);
+            console.log(lastChars);
+            // Получаем целое число, до запятой
+            let rubInteger = txtInIn.slice(0, -3);
 
+            // Записываем изменённые значения в элементы на странице    
+            rub.innerHTML   = rubInteger;
+            kopek.innerHTML = lastChars;
+
+        })
     } else {
         console.error("Нет элемента с классом .color-size-kopek. Присвойте класс необходимому элементу");
         
     }
 
-})()
+})();
+
+
 
