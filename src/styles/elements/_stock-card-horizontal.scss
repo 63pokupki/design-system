@@ -98,8 +98,9 @@
     // Всплывашка с ошибкой
     .ds-popover {
         position: absolute;
-        bottom: -26px;
-        right: 3px;
+        width: 200px;
+        bottom: -45px;
+        right: -55px;
         padding: 5px;
         box-shadow: none;
         font-size: 11px;
