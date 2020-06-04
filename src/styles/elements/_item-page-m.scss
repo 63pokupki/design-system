@@ -302,8 +302,11 @@
             font-size: 12px;
             line-height: 17px;
             color: #ffffff;
-            width: 140px;
-            padding: 3px 7px;
+            // width: 140px;
+            // padding: 3px 7px;
+            max-width: 200px;
+            padding: 1px 7px;
+            white-space: nowrap;
 
             &:before {
                 border: 5px solid transparent;
