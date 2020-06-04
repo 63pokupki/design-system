@@ -183,13 +183,22 @@
             transform: rotate(45deg) translateX(3px);
         }
     }
-    
+
+    &__link-to-catalog {
+        span {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            text-decoration: underline;
+        }
+    }
 
     &__meta {
         font-size: 12px;
         line-height: 18px;
         text-align: center;
         color: $color-text-light-grey;
+        margin-top: 21px;
         margin-bottom: 21px;
     }
 
