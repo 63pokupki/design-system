@@ -19,6 +19,12 @@
         @media (max-width: 450px) {
             .search__bar {
                 height: 32px;
+            }
+            .search__button-clear {
+                right: 5px;
+            }
+            .search__button {
+                right: 30px;
             }    
         }
     }
