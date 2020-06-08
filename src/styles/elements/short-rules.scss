@@ -1,7 +1,4 @@
 .short-rules-page {
-    max-width: 1284px;
-    margin: 0 auto;
-
     p {
         margin: 0;
     }
@@ -172,6 +169,8 @@
 
     // Мы сохраняем для вас...
     &__save-wholesale {
+        display: flex;
+        flex-direction: column;
         margin: 5px 0 0;
         @media (max-width: 1024px) {
             flex-wrap: wrap;
@@ -182,9 +181,8 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: center;
         width: 100%;
-        max-width: 680px;
         h4 {
             margin: 17px 0 38px 0;
             @media (max-width: 767px) {
@@ -208,15 +206,23 @@
         }
     }
 
+    &__total-cost-wrap {
+        display: flex;
+    }
+
     &__total-cost,
     &__possible-costs {
         h4 {
             width: 100%;
             font-size: 18px;
             color: $color-text-heading;
-            text-align: center;
         }
         background: rgba(54, 166, 242, 0.15);
+    }
+    &__total-cost {
+        h4 {
+            text-align: center;
+        }
     }
 
     &__wholesale-price,
@@ -420,14 +426,14 @@
     //
     &__possible-costs {
         display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
-        max-width: 322px;
         text-align: center;
-        margin: 0 0 0 15px;
+        margin: 15px 0 0 0;
+        padding: 20px 0;
         h4 {
-            margin: 17px 0 10px 0;
+            margin: 0px 0 15px 0;
+            text-align: left;
             @media (min-width: 768px) and (max-width: 1024px) {
                 margin: 17px 0 20px;
                 text-align: left;
@@ -440,6 +446,7 @@
         }
 
         .short-rules-page__possible-costs-icons {
+            margin: 5px 0 0 0;
             @media (min-width: 768px) and (max-width: 1024px) {
                 margin: 30px 0 0 0;
             }            
@@ -461,8 +468,9 @@
         }
 
         .short-rules-page__txt {
-            max-width: 300px;
+            max-width: 470px;
             margin: 0 0 15px 0;
+            text-align: left;
             line-height: 20px;
             
             @media (max-width: 1024px) {
