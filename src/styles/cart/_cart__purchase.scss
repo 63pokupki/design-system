@@ -1,15 +1,21 @@
 
 .cart {
     &__purchase {
-        padding: 25px 30px;
+        padding: 22px;
         .rating-star-org {
-            margin: 0 10px;
+            margin: 0 15px 0 10px;
         }
+        
+        .stock-brief__org {
+            margin: 0;
+        }
+
         .rating-star-org__value {
             font-size: 14px;
             font-weight: 600;
             color: #000000;
         }
+
         .ds-purchase-status__txt {
             font-size: 14px;
         }
@@ -28,6 +34,24 @@
             align-items: flex-end;
             width: 35%;
         }
+
+        .collapse-block-css__toggle-btn {
+            top: 15px;
+            right: 15px;
+        }
+
+        .org-profile__name {
+            margin-bottom: 0;
+        }
+    
+
+        &-heading-terms,
+        &-heading-comments {
+            font-size: 12px;
+            font-weight: 600;
+            color: $color-text-heading;
+            text-decoration: underline;
+        }
     }
     &__header-status-purchase {
         display: flex;
@@ -41,5 +65,34 @@
         font-size: 14px;
         line-height: 22px;
     }
+    &__purchase-heading-terms {
+        margin: 0 20px 0 0;
+    }
+
+    &__purchase-content-header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 40px;
+        margin-left: -22px;
+        margin-right: -22px;
+        font-size: 11px;
+        color: $color-text-heading;
+        border-top: 1px solid #b9e0fa;
+        border-bottom : 1px solid #b9e0fa;
+    }
+    &__purchase-col-50 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
+    &__purchase-col-16 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 16.5%;
+    }
+
 }
 
