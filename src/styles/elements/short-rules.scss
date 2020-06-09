@@ -59,6 +59,16 @@
             }
         }
     }
+    // Убираем переносы в мобилке
+    .collapse-block__header {
+        .short-rules-page__txt {
+            br {
+                @media (max-width: 768px) {
+                    display: none;
+                }
+            }
+        }
+    }
 
     &__main-heading {
         width: 100%;      
@@ -573,6 +583,9 @@
         text-decoration: none;
         color: $color-primary;
     }
+
+    // переносы в мобилке
+
 
 }
 
