@@ -36,6 +36,22 @@
     a {
         color: $color-primary;
     }
+    .ds-btn__text {
+        color: $background-color-primary;
+    }
+    .btn-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+        .insert-photo__txt {
+            font-size: 18px;
+        }
+    }
+    .ds-btn_hover {
+        margin: 10px;
+    }
 }
 
 
