@@ -21,13 +21,16 @@
     }
 
     .collapse-block {
-        // &.save-wholesale {
-        //     .collapse-block__header {
-        //         @media (max-width: 767px) {
-        //             padding: 0 15px;
-        //         }
-        //     }    
-        // }
+        &.save-wholesale {
+            @media (max-width: 767px) {
+                .collapse-block__header {
+                    padding: 0 15px;
+                }
+                &.collapse-block {
+                    padding: 20px 0px;
+                }
+            }
+            }
         &.purchase-process {
             // .collapse-block__header {
             //     @media (max-width: 767px) {
@@ -174,7 +177,8 @@
         margin: 5px 0 0;
         @media (max-width: 1024px) {
             flex-wrap: wrap;
-        }
+        }       
+
     }
 
     &__total-cost {
@@ -208,6 +212,10 @@
 
     &__total-cost-wrap {
         display: flex;
+        @media (max-width:767px) {
+            flex-direction: column;
+        }
+
     }
 
     &__total-cost,
@@ -241,7 +249,7 @@
         align-items: center;
         width: 100%;
         max-width: 155px;
-        margin: 25px 35px 0 0;
+        margin: 25px 80px 0 0;
         padding: 0 0 60px 0;
         position: relative;
         .short-rules-page__block-wrap {
@@ -308,7 +316,7 @@
         font-size: 70px;
         position: absolute;
         bottom: 52%;
-        right: -37px;
+        right: -65px;
         span {
             display: flex;
         }
@@ -329,7 +337,7 @@
         width: 100%;
         max-width: 200px;
         padding: 0 0 60px 0;
-        margin: 4px 10px 0 0;
+        margin: 4px 30px 0 0;
         .short-rules-page__txt {
             white-space: nowrap;
             color: $color-text-heading;
@@ -387,7 +395,7 @@
 
         }
         .short-rules-page__plus {
-            left: -2px;
+            left: -8px;
             bottom: 46%;
             @media (min-width: 870px) and (max-width: 1024px) {
                 left: -50px;
@@ -512,14 +520,22 @@
             }
         }
         @media (max-width: 767px) {
+            flex-direction: column;
             width: 100%;
             max-width: 100%;
             margin: 0;
+            padding: 20px 10px;
+            h4 {
+                text-align: center;
+            }
             .icon-car {
                 margin: 0;
             }
             .short-rules-page__block-wrap {
                 padding: 0 0 20px 20px;
+            }
+            br {
+                display: none;
             }
         }
         @media (min-width: 768px) and (max-width: 1024px) {
