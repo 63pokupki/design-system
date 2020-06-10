@@ -60,15 +60,12 @@
         }
     }
     // Убираем переносы в мобилке
-    .collapse-block__header {
-        .short-rules-page__txt {
-            br {
-                @media (max-width: 768px) {
-                    display: none;
-                }
-            }
+    br {
+        @media (max-width: 768px) {
+            display: none;
         }
     }
+
 
     &__main-heading {
         width: 100%;      
@@ -108,6 +105,11 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        @media (max-width: 370px) {
+            .collapse-block__content {
+                padding: 0;
+            }
+        }
     }
 
     &__purchase-icon-wrapper {
@@ -151,7 +153,19 @@
                 -moz-transform: translateX(-20px);
                 -ms-transform: translateX(-20px);
                 -o-transform: translateX(-20px);
-}
+            }
+        }
+        @media (max-width: 370px) {
+            position: absolute;
+            &.arrow-1,
+            &.arrow-3 {
+                left: 150px;
+            }
+            &.arrow-2,
+            &.arrow-4 {
+                right: -5px;
+            }
+
         }
     }
     &__purchase-icon {
@@ -582,10 +596,7 @@
         font-size: 14px;
         text-decoration: none;
         color: $color-primary;
-    }
-
-    // переносы в мобилке
-
+    }    
 
 }
 
