@@ -1,4 +1,7 @@
 .insert-photo {
+    &-component {
+        padding: 0 10px;
+    }
     &__main-heading {
         margin: 0 0 40px;
         color: $color-text-heading;
@@ -36,7 +39,11 @@
     a {
         color: $color-primary;
     }
+    .ds-btn {
+        padding: 10px 18px;
+    }
     .ds-btn__text {
+        font-size: 14px;
         color: $background-color-primary;
     }
     .btn-container {
@@ -46,10 +53,16 @@
         align-items: center;
         margin: 20px 0;
         .insert-photo__txt {
+            text-align: center;
             font-size: 18px;
+            font-weight: 600;
+            @media (max-width: 768px) {
+                font-size: 12px;
+            }
         }
     }
     .ds-btn_hover {
+        min-width: 285px;
         margin: 10px;
     }
 }
