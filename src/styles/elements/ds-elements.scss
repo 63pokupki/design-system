@@ -246,15 +246,14 @@
 
 // Корзина 
 @import "~styles/cart/cart.scss";
-
 // Корзина фильтрация
 @import "~styles/cart/_cart__filtering.scss";
-
 // Корзина оформление заказа
 @import "~styles/cart/cart__order-payment.scss";
-
 // Корзина. Карточка Закупки
 @import "~styles/cart/cart__purchase.scss";
+//Корзина - карточка закупки
+@import "~styles/cart/cart__item-card.scss";
 
 // цена с серыми копейками
 @import "~styles/elements/price.scss";
