@@ -43,6 +43,7 @@
         .collapse-block-css__toggle-btn {
             top: 5px;
             right: 15px;
+            cursor: pointer;
         }
 
         .org-profile__name {
@@ -62,14 +63,6 @@
         }
     }
 
-    &__purchase-click-area {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 1;
-    }
     &__header-status-purchase {
         display: flex;
         align-items: center;
@@ -96,7 +89,6 @@
         font-size: 11px;
         color: $color-text-heading;
         border-top: 1px solid #b9e0fa;
-        border-bottom : 1px solid #b9e0fa;
     }
     &__purchase-col-50 {
         display: flex;

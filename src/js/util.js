@@ -451,5 +451,24 @@ if (inputPhone) {
 
 })();
 
-
-
+// Ограничение текста и добавление трёх точек в конце
+function charactersLimit (selector, numberOfChar) {
+    let element = document.querySelectorAll(selector);
+    if (element) {
+        element.forEach((e)=> {
+            // Получаем содержимое элемента
+            let inputTxt = e.textContent;
+            //При помощи trim() удаляем пробелы вначале и вконце строки
+            //Отображаем строку от первого символа до указанного в numberOfChar
+            let shortTxt = inputTxt.trim().substring(0, numberOfChar);
+            // ЗАменяем старое содержимое на новое
+            e.innerText = shortTxt + "..."; 
+            console.log(shortTxt + "...");
+        });
+    }
+    return;
+};
+// ограничение символов у названия товара в корзине
+charactersLimit(".cart__item-title", 55);
+// ограничение символов у названия закупки в корзине
+charactersLimit(".cart__purhase-heading", 83);
