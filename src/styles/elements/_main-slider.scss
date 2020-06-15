@@ -58,6 +58,7 @@
 			width: 100%;
 			margin-bottom: 20px;
 			max-width: 100%;
+			margin-bottom: 10px;
 		}
 
 		&-name {
@@ -129,6 +130,8 @@
 
 		.main-slider__link {
 			text-decoration: none;
+			display: flex;
+			flex-direction: column;
 		}
 
 		.main-slider__title {
