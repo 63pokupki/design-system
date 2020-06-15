@@ -297,7 +297,7 @@
 			.main-slider__item {
 				min-width: 250px;
 				margin-right: 65px;
-				margin-bottom: 35px;
+				margin-bottom: 15px;
 
 				&:nth-child(2n) {
 					margin-right: 0;
@@ -308,6 +308,7 @@
 				width: fit-content;
 				height: 195px;
 				margin: 0 auto;
+				margin-bottom: 10px;
 			}
 
 			.main-slider__item-name {
