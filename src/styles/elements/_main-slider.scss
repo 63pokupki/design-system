@@ -123,8 +123,12 @@
 		}
 
 		.main-slider__item {
-			min-width: 295px;
-			max-width: 295px;
+			width: 150px;
+			margin-right: 10px;
+		}
+
+		.main-slider__link {
+			text-decoration: none;
 		}
 
 		.main-slider__title {
@@ -155,11 +159,11 @@
 			}
 
 			.main-slider__item {
-				width: 315px
+				width: 160px;
 			}
 
 			.main-slider__item-img {
-				height: 260px;
+				height: 160px;
 				width: auto;
 			}
 		}
@@ -284,12 +288,16 @@
 				height: 740px;
 				overflow: hidden;
 				padding: 0;
+				width: 100%;
 			}
 
 			.main-slider__item {
-				min-width: 255px;
-				max-width: 255px;
-				margin: 0;
+				min-width: 250px;
+				margin-right: 65px;
+
+				&:nth-child(2n) {
+					margin-right: 0;
+				}
 			}
 
 			.main-slider__item-img {
