@@ -65,7 +65,7 @@
 			font-size: 12px;
 			line-height: 18px;
 			color: #1E2023;
-			height: 50px;
+			margin-bottom: 10px;
 			padding-right: 5px;
 		}
 
@@ -205,6 +205,7 @@
 			justify-content: space-between;
 			top: 50%;
 			transform: translateY(-50%);
+			z-index: 10;
 		}
 
 		&__button {
@@ -236,6 +237,8 @@
 			}
 
 			&_left {
+				transform: translateX(-14px);
+				
 				&::after {
 					transform: translateY(-5px) rotate(-45deg);
 				}
@@ -295,7 +298,6 @@
 			}
 
 			.main-slider__item {
-				min-width: 250px;
 				margin-bottom: 15px;
 			}
 
@@ -308,10 +310,6 @@
 			.main-slider__item-name {
 				font-size: 15px;
 				line-height: 20px;
-			}
-
-			.main-slider__item-price {
-				display: none;
 			}
 
 			.main-slider__nested-wrapper:nth-child(2) {
