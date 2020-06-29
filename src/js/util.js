@@ -279,26 +279,26 @@ sidebar_array.forEach(sidebar => {
 })();
 
 // кнопка назад
-document.addEventListener("DOMContentLoaded", () => {
-    const el = document.createElement("div");
-    el.setAttribute("class", "ds-home");
-    el.addEventListener("click", go_home);
-    document.body.appendChild(el);
+// document.addEventListener("DOMContentLoaded", () => {
+//     const el = document.createElement("div");
+//     el.setAttribute("class", "ds-home");
+//     el.addEventListener("click", go_home);
+//     document.body.appendChild(el);
 
-    function go_home() {
-        const host = window.location.host;
-        const origin = window.location.origin;
-        let path;
+//     function go_home() {
+//         const host = window.location.host;
+//         const origin = window.location.origin;
+//         let path;
 
-        if (host.includes("github")) {
-            path = `${origin}/design-system/`;
-        } else {
-            path = `${origin}`;
-        }
+//         if (host.includes("github")) {
+//             path = `${origin}/design-system/`;
+//         } else {
+//             path = `${origin}`;
+//         }
 
-        window.location.href = path;
-    }
-});
+//         window.location.href = path;
+//     }
+// });
 
 // Забыли пароль?
 (() => {

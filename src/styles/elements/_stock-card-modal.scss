@@ -1,0 +1,121 @@
+.stock-card-modal {
+    &__more {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .modal {
+        &__content {
+            overflow-x: hidden;
+            overflow-y: auto;
+            width: 100%;
+        }
+        &__wrap {
+            padding: 15px 0;
+        }
+
+        @media screen and (max-width: 480px) {
+            &__wrap {
+                max-width: 95vw;
+            }
+        }
+    }
+    .item-page-m .stock-card-vertical .stock-badge_already {
+        top: -10px;
+    }
+    &__go-back {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+
+    .item-page-m .stock-card-modal__favorite {
+        display: flex;
+    }
+
+    .item-page-m .stock-card-vertical__price {
+        font-size: 20px;
+        line-height: 36px;
+    }
+
+    .item-page-m .stock-card-vertical__org {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .item-page-m .stock-card-vertical__price-wrapper {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .item-page-m .stock-card-vertical__heading {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .item-page-m__sku {
+        margin-bottom: 10px;
+    }
+
+    .item-page-m__params .item-params-list__item {
+        font-size: 12px;
+        margin-bottom: 3px;
+    }
+
+    .item-page-m__params-label {
+        font-size: 12px;
+        margin-bottom: 6px;
+    }
+
+    .item-page-m__params .item-params-list {
+        max-height: 23px;
+        margin-bottom: 6px;
+    }
+
+    .item-page-m__buttons {
+        margin-bottom: 20px;
+    }
+
+    .item-page-m .collapse-section__heading {
+        font-size: 12px;
+    }
+
+    .item-page-m .collapse-section__body {
+        font-size: 12px;
+    }
+}
+
+.stock-sticky-buy-bar {
+    align-items: center;
+    justify-content: space-between;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 18px;
+    z-index: 5000;
+    background-color: white;
+
+    &__price {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 20px;
+        color: $color-text-heading;
+    }
+
+    &__orgprice {
+        font-size: 12px;
+        line-height: 22px;
+        color: $color-text-base;
+    }
+
+    &__button {
+        width: 100%;
+        max-width: 140px;
+    }
+}
+
+.stock-sticky-buy-bar.is-visible {
+    display: flex;
+}
