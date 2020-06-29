@@ -16,7 +16,7 @@ const DEFAULT_OPTIONS = {
     exitOnOverlayClick: false
 };
 
-const touchpoint = 768;
+const touchpoint = 1024;
 
 window.addEventListener("DOMContentLoaded", fMain);
 

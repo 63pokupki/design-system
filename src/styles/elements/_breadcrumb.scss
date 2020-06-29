@@ -24,6 +24,15 @@
     }
 }
 
+.breadcrumb_limited {
+    .breadcrumb__item {
+        max-width: 30%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
 .breadcrumb__item + .breadcrumb__item:before {
     display: inline-block;
     padding-right: 4px;

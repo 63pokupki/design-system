@@ -2,46 +2,48 @@
 
 @import "~styles/utils/utils";
 
-$onboarding-media-touch: 900px;
+$onboarding-media-touch: 1024px;
 
 // шаблон для внешний окон - первый и последний
 .introjs-tooltip.onboarding-base-outer {
     padding: 20px 35px 30px;
     min-width: 535px;
 
-    &:before {
-        content: "";
-        position: absolute;
-        left: auto;
-        right: 0;
-        width: 89px;
-        height: 183px;
-        bottom: 10px;
-        background: url("~images/important_images/onboarding/lisa-inverted.png") no-repeat center;
-    }
-
-    .introjs-tooltipbuttons {
-        text-align: center;
-        margin-left: 0;
-    }
-
-    .introjs-progress {
-        display: none;
-    }
-
-    .introjs-tooltipbuttons {
-        .introjs-donebutton,
-        .introjs-nextbutton {
-            height: 36px;
+    @media screen and (min-width: $onboarding-media-touch + 1) {
+        &:before {
+            content: "";
+            position: absolute;
+            left: auto;
+            right: 0;
+            width: 89px;
+            height: 183px;
+            bottom: 10px;
+            background: url("~images/important_images/onboarding/lisa-inverted.png") no-repeat center;
         }
-    }
 
-    .introjs-skipbutton {
-        margin-left: 25px;
-    }
+        .introjs-tooltipbuttons {
+            text-align: center;
+            margin-left: 0;
+        }
 
-    .introjs-tooltiptext {
-        margin: 0;
+        .introjs-progress {
+            display: none;
+        }
+
+        .introjs-tooltipbuttons {
+            .introjs-donebutton,
+            .introjs-nextbutton {
+                height: 36px;
+            }
+        }
+
+        .introjs-skipbutton {
+            margin-left: 25px;
+        }
+
+        .introjs-tooltiptext {
+            margin: 0;
+        }
     }
 
     @media screen and (max-width: $onboarding-media-touch) {
@@ -78,22 +80,24 @@ $onboarding-media-touch: 900px;
             font-size: 12px;
         }
 
-        .introjs-button.introjs-nextbutton{
+        .introjs-button.introjs-nextbutton {
             height: 32px;
             font-size: 14px;
         }
 
-        &:before {
-            content: "";
-            position: absolute;
-            left: auto;
-            right: 0;
-            width: 72px;
-            height: 148px;
-            bottom: 75px;
-            background: url("~images/important_images/onboarding/lisa-mobile-outer.png")
-                no-repeat center;
+        .introjs-tooltiptext {
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                left: auto;
+                right: -15px;
+                width: 72px;
+                height: 148px;
+                bottom: 0px;
+                background: url("~images/important_images/onboarding/lisa-mobile-outer.png") no-repeat center;
                 z-index: 1;
+            }
         }
     }
 }
@@ -167,8 +171,7 @@ $onboarding-media-touch: 900px;
             transform: translate(-50%, -100%);
             width: 102px;
             height: 109px;
-            background: url("~images/important_images/onboarding/lisa-mobile.png") no-repeat
-                center;
+            background: url("~images/important_images/onboarding/lisa-mobile.png") no-repeat center;
             background-size: contain;
         }
     }
@@ -369,4 +372,12 @@ $onboarding-media-touch: 900px;
 // переопределения стандартного вида подсветки
 .introjs-tooltipReferenceLayer {
     box-shadow: none;
+}
+
+// показ на горизонтальной ориентации
+@media screen and (orientation: landscape) and (max-width: 1024px) {
+    .introjs-tooltip {
+        max-height: 85vh;
+        overflow-y: auto;
+    }
 }

@@ -18,6 +18,9 @@ module.exports = {
     ignored: ["dist/**/*", "build/**/*", "docs/**/*", "node_modules"], //исключения в слежении
     poll: 500 //интервал обновления
   },
+  devServer: {
+    port: 9000
+  },
   devtool: "inline-source-map", //Инструменты разработчика
   resolve: {
     alias: {
