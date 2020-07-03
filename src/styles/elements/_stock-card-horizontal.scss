@@ -25,11 +25,14 @@
     &__collapse {
         margin-bottom: 15px;
     }
+    .collapse-section__heading {
+        margin: 0 0 10px 0;
+    }
 
     &__buttons {
         display: flex;
         align-items: center;
-        margin-bottom: 20px;
+        margin-bottom: 14px;
     }
 
     &__num {
@@ -61,7 +64,7 @@
     }
 
     &__price-w {
-        margin-bottom: 12px;
+        margin-bottom: 7px;
     }
 
     &__price {
@@ -176,14 +179,6 @@
         height: 262px;
         background: white;
         margin-right: 32px;
-
-        // &:hover {
-        //     .stock-card-horizontal__prev,
-        //     .stock-card-horizontal__next,
-        //     .stock-card-horizontal__favorite {
-        //         display: flex;
-        //     }
-        // }
     }
 
     &__images-wrapper {
