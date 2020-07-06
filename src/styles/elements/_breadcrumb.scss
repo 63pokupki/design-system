@@ -1,6 +1,6 @@
 // хлебные крошки
 
-.breadcrumb {
+.ds-breadcrumb {
     margin: 10px 0;
     background-color: transparent;
     
@@ -25,8 +25,8 @@
     }
 }
 
-.breadcrumb_limited {
-    .breadcrumb__item {
+.ds-breadcrumb_limited {
+    .ds-breadcrumb__item {
         max-width: 30%;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -34,7 +34,7 @@
     }
 }
 
-.breadcrumb__item + .breadcrumb__item:before {
+.ds-breadcrumb__item + .ds-breadcrumb__item:before {
     display: inline-block;
     padding-right: 4px;
     color: #858585;
