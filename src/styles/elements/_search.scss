@@ -11,10 +11,6 @@
         padding-right: 50px;
         height: 42px;
         width: 100%;
-        @media (max-width: 767px) {
-            height: 32px;
-            border: 1px solid $color-primary;
-        }
 
         &:focus {
             outline: unset;
@@ -60,17 +56,11 @@
         &:active {
             transform: translateY(-50%) scale(0.9);
         } 
-        @media (max-width: 767px) {
-            display: none;
-        }
     }
     // Поиск с кнопкой очистки
     &.search-clear {
         .search__button {
             right: 35px;
-            @media (max-width: 767px) {
-                right: 10px;
-            }    
         }    
     }
 }
