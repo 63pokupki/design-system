@@ -472,3 +472,27 @@ function charactersLimit (selector, numberOfChar) {
 charactersLimit(".cart__item-title", 55);
 // ограничение символов у названия закупки в корзине
 charactersLimit(".cart__purhase-heading", 83);
+
+
+let itemPageBundle = document.querySelectorAll(".item-page-bundle");
+
+if (itemPageBundle) {
+
+    itemPageBundle.forEach((ipb)=> {
+        console.dir(ipb);
+        
+        
+        let rowsWrapper = ipb.querySelector('.stock-rows__values');
+        let help = ipb.querySelector('.stock-rows-help')
+        console.log("Ok");
+        
+        console.dir(help);
+        console.dir(rowsWrapper);
+
+        if (rowsWrapper.scrollWidth < rowsWrapper.clientWidth) {
+            help.style.display = 'none';        
+        }
+    });
+}
+
+
