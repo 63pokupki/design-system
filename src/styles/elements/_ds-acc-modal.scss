@@ -59,15 +59,11 @@ $main-padding-modal: 15px;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        max-width: 90vw;
-        max-height: 95vh;
+        max-width: 95%;
+        max-height: 95%;
         background: #fff;
         padding: $main-padding-modal;
         z-index: 1001;
-
-        @media screen and (max-width: 480px) {
-            max-width: 98vw;
-        }
         
         .modal__btn-close {
             position: absolute;
