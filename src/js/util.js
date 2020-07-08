@@ -474,22 +474,18 @@ charactersLimit(".cart__item-title", 55);
 charactersLimit(".cart__purhase-heading", 83);
 
 
-let itemPageBundle = document.querySelectorAll(".item-page-bundle");
+let stockMItems = document.querySelectorAll(".stock-m-items");
 
-if (itemPageBundle) {
+if (stockMItems) {
 
-    itemPageBundle.forEach((ipb)=> {
-        console.dir(ipb);
+    stockMItems.forEach((smi)=> {
+        console.dir(smi);
         
         
-        let rowsWrapper = ipb.querySelector('.stock-rows__values');
-        let help = ipb.querySelector('.stock-rows-help')
-        console.log("Ok");
-        
-        console.dir(help);
-        console.dir(rowsWrapper);
+        let rowsWrapper = smi.querySelector('.stock-rows__values');
+        let help = smi.querySelector('.stock-rows-help')
 
-        if (rowsWrapper.scrollWidth < rowsWrapper.clientWidth) {
+        if (rowsWrapper.scrollWidth <= rowsWrapper.clientWidth) {            
             help.style.display = 'none';        
         }
     });
