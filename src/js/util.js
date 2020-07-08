@@ -484,15 +484,8 @@ if (stockMItems) {
         
         let rowsWrapper = smi.querySelector('.stock-rows__values');
         let help = smi.querySelector('.stock-rows-help')
-        console.log("Ok");
-        
-        console.dir(help);
-        console.dir(rowsWrapper);
-        console.log('scroll <' + rowsWrapper.scrollWidth + 'Чем ширина ' + rowsWrapper.clientWidth);
 
-        if (rowsWrapper.scrollWidth <= rowsWrapper.clientWidth) {
-            
-            console.log('scroll <' + rowsWrapper.scrollWidth);
+        if (rowsWrapper.scrollWidth <= rowsWrapper.clientWidth) {            
             help.style.display = 'none';        
         }
     });
