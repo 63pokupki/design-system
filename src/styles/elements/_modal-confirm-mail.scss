@@ -4,6 +4,7 @@
             background: $color-primary;
             color: #fff;
             cursor: pointer;
+            pointer-events: visible;
             &:active, :focus {
                 transform: scale(0.95);
             }  
@@ -128,6 +129,7 @@
         font-size: 15px;
         font-weight: 500;
         border-color: rgba(54, 166, 242, 0.5);
+        pointer-events: none;
         &:hover {
             cursor: not-allowed;
             background: none;
@@ -135,13 +137,17 @@
         }
         &:active, :focus {
             transform: scale(1);
+        }
+        .ds-btn__text {
+            white-space: nowrap;
         }        
     }
     &__info {
-        padding: 0 39px;
-        font-size: 9px;
+        margin: 0 0 10px 0;
+        padding: 0 5px;
+        font-size: 11px;
         text-align: center;
-        color: $color-text-light-grey;
+        color: $color-text-heading;
         &.mobile {
             display: none;
         }
