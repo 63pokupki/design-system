@@ -483,12 +483,33 @@ if (stockMItems) {
         
         
         let rowsWrapper = smi.querySelector('.stock-rows__values');
-        let help = smi.querySelector('.stock-rows-help')
+        let help        = smi.querySelector('.stock-rows-help')
 
         if (rowsWrapper.scrollWidth <= rowsWrapper.clientWidth) {            
             help.style.display = 'none';        
+        } else {
+            help.style.display = 'flex';
         }
     });
 }
 
+// Окно подтверждения пароля
+(() => {
+    let confMail = document.querySelectorAll('.modal-confirm-mail');
+
+    if (confMail) {
+        confMail.forEach((cm) => {
+            let input       = cm.querySelector('.modal-confirm-mail__input');
+            input.addEventListener('keyup', () => {
+                
+                if (input.value != '') {
+                    cm.classList.add('is-active');  
+                } else {
+                    cm.classList.remove('is-active');
+                }
+
+            });
+        });
+    }
+})();
 
