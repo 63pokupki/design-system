@@ -185,6 +185,15 @@
 		margin-top: 15px;
 		width: 245px;
 	}
+
+	.main-page__button {
+		height: 48px;
+
+		.ds-btn__text {
+			font-size: 16px;
+			line-height: 22px;
+		}
+	}
 }
 
 .main-toggle-block.collapse-block.is-toggle {
@@ -197,6 +206,16 @@
 .main-toggle-block.is-toggle {
 	.main-toggle-block__content {
 		padding: 15px;
+	}
+}
+
+@media (min-width: 768px) {
+	.main-toggle-block {
+		.main-page__button {
+			height: 56px;
+			width: 264px;
+			border-radius: 30px;
+		}
 	}
 }
 
