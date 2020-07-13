@@ -1,61 +1,20 @@
 .main-banner {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	flex-direction: column;
-	height: 360px;
-	background-color: #282828;
-	min-width: 320px;
-	width: 100%;
-	padding: 13px 16px 24px;
-	position: relative;
+	width: 353px;
+	height: 520px;
 
-	&__name {
-		font-size: 27px;
-		color: #FF7474;
-		text-transform: uppercase;
-		line-height: 38px;
-		margin: 0;
-	}
-
-	&__description {
-		font-size: 16px;
-		color: #fff;
-		line-height: 22px;
-	}
-
+	&__link,
 	&__img {
-		max-height: 205px;
+		width: 100%;
+		height: 100%;
 	}
-}
 
-@media (min-width: 768px) {
-	.main-banner {
-		padding: 10px 30px;
-		height: 169px;
-		align-items: flex-start;
-
-		&__name {
-			font-size: 36px;
-		}
-	
-		&__description {
-			font-size: 21px;
-		}
-	
-		&__img {
-			position: absolute;
-			top: 50%;
-			transform: translateY(-50%);
-			right: 5%;
-			max-height: 100%;
-		}
-	}
-}
-
-@media (min-width: 1184px) {
-	.main-banner {
+	&_top {
+		width: 1184px;
 		height: 260px;
-		padding: 35px 65px;
+	}
+
+	&_mini {
+		width: 518px;
+		height: 220px;
 	}
 }

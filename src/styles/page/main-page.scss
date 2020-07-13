@@ -1,7 +1,6 @@
 @import "~styles/elements/_main-banner.scss";
 @import "~styles/elements/_main-toggle-block.scss";
 @import "~styles/elements/_main-slider.scss";
-@import "~styles/elements/_main-common-banner.scss";
 @import "~styles/elements/_main-news.scss";
 @import "~styles/elements/_main-brands.scss";
 @import "~styles/elements/_main-about-us.scss";
@@ -279,7 +278,7 @@
 				width: 70%;
 
 				.main-slider {
-					margin-right: auto;
+					margin-left: 40px;
 				}
 			}
 
@@ -318,6 +317,10 @@
 				display: block;
 				width: 70%;
 				margin-top: -190px;
+
+				.main-slider {
+					margin-left: 40px;
+				}
 			}
 
 			section:nth-of-type(8) {
@@ -326,6 +329,10 @@
 				width: 70%;
 				margin-left: 355px;
 				margin-top: -380px;
+
+				.main-slider {
+					margin-left: 40px;
+				}
 			}
 
 			section:nth-of-type(9) {
