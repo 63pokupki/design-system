@@ -221,6 +221,20 @@
 
 @media (min-width: 1184px) {
 	.main-toggle-block {
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			width: 514px;
+			height: 498px;
+			background-image: url('~images/important_images/home/desc-woman.png');
+			background-position: center;
+			background-size: contain;
+		}
+
 		&__header {
 			flex-direction: row;
 			justify-content: space-between;
@@ -249,6 +263,11 @@
 			font-size: 46px;
 			line-height: 64px;
 			text-align: left;
+			order: 1;
+		}
+
+		&__content-features-list {
+			order: 2;
 		}
 
 		&__content-title-subtitle {
@@ -267,14 +286,23 @@
 
 		&__content-features-item {
 			text-align: left;
+			font-size: 18px;
+			line-height: 36px;
 		}
 
 		&__content-achievement-list {
-			margin: 15px 0 15px;
+			margin: 30px 0 15px;
+			order: 4;
 		}
 
 		&__content-alert {
 			width: auto;
+			order: 5;
+		}
+
+		.main-page__button {
+			margin-top: 35px;
+			order: 3
 		}
 	}
 
