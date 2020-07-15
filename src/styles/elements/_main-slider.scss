@@ -148,6 +148,20 @@
 			line-height: 20px;
 		}
 
+		&__item {
+			margin-right: 10px;
+			min-width: 144px;
+			max-width: 144px;
+			max-height: 240px;
+    		height: 240px;
+		}
+
+		&__item-img {
+			max-height: 140px;
+			width: auto;
+			margin: 0 auto;
+		}
+
 		&_big {
 			.main-slider__list {
 				max-height: 940px;

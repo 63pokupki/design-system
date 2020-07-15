@@ -94,8 +94,6 @@
 				order: 1;
 				width: 48%;
 				min-height: 501px;
-				display: flex;
-				align-items: center;
 			}
 
 			section:nth-of-type(2) {
@@ -145,6 +143,7 @@
 			section:nth-of-type(2) {
 				order: 2;
 				width: 48%;
+				overflow: hidden;
 			}
 
 			section:nth-of-type(3) {
@@ -155,6 +154,7 @@
 			section:nth-of-type(4) {
 				order: 5;
 				width: 48%;
+				overflow: hidden;
 			}
 
 			section:nth-of-type(6) {
@@ -165,7 +165,7 @@
 			section:nth-of-type(7) {
 				order: 4;
 				width: 48%;
-				margin-top: -245px;
+				margin-top: -193px;
 			}
 
 			section:nth-of-type(8) {
