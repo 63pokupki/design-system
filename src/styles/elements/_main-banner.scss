@@ -1,6 +1,7 @@
 .main-banner {
 	width: 353px;
 	height: 520px;
+	margin: 0 auto;
 
 	&__link,
 	&__img {
@@ -9,12 +10,19 @@
 	}
 
 	&_top {
-		width: 1184px;
+		max-width: 1184px;
 		height: 260px;
+		width: 100%;
 	}
 
 	&_mini {
 		width: 518px;
 		height: 220px;
+	}
+}
+
+@media (min-width: 768px) {
+	.main-banner {
+		margin: 0;
 	}
 }
