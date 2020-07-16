@@ -125,6 +125,13 @@
             margin-top: 5px;
         }
     }
+
+    .stock-rows__txt-no-purchases {
+        // display: none;
+        font-size: 13px;
+        color: $color-text-heading;
+    }
+
     &__params {
         position: relative;
         margin-bottom: 15px;
