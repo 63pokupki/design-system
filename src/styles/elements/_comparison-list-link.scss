@@ -1,0 +1,76 @@
+.comparison-list-link {
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: center;
+    color: $color-text-base;
+
+    &.is-active {
+        color: $color-primary;
+    }
+
+    &__icon {
+        color: inherit;
+        margin-right: 8px;
+    }
+
+    &__link {
+        color: inherit;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
+    &__text {
+        text-decoration: underline;
+    }
+
+    &__btn:active {
+        @include deep-click();
+    }
+
+    &__btn-icon {
+        color: inherit;
+        margin-left: 8px;
+        font-size: 11px;
+        opacity: 0.6;
+        &:hover {
+            color: $color-primary;
+            opacity: 1;
+        }
+    }
+}
+
+.comparison-list-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    background-color: #ffffff;
+    font-size: 12px;
+
+    &_larger {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;  
+    }
+
+    &:hover, &.is-active {
+        .comparison-list-btn__icon {
+            opacity: 1;
+        }
+    }
+
+    &__icon {
+        color: $color-primary;
+        opacity: 0.7;
+    }
+}
+
+

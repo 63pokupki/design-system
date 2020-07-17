@@ -1,12 +1,16 @@
 @import "~fonts/icomoon/variables";
 
+.icon-closing:before {
+  content: "\e939";
+}
+.icon-chart:before {
+  content: "\e938";
+}
 .icon-order-history:before {
   content: "\e937";
-  color: #c4c4c4;
 }
 .icon-question-mark:before {
   content: "\e936";
-  color: #fffdfd;
 }
 .icon-receipt:before {
   content: "\e934";
