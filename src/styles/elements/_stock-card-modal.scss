@@ -20,6 +20,14 @@
             }
         }
     }
+    .stock-card-vertical .stock-card-vertical__compare-w {
+        right: 0;
+        left: auto;
+    }
+    .stock-card-vertical .stock-card-vertical__compare {
+        left: auto;
+        right: 8px;
+    }
     .item-page-m .stock-card-vertical .stock-badge_already {
         top: -10px;
     }
