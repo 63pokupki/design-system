@@ -23,6 +23,7 @@
         h2 {
             margin: 18px 0 10px 0;
             font-size: 24px;
+            font-weight: 600;
         }
         span, a {
             font-size: 14px;
@@ -67,6 +68,7 @@
             flex-wrap: wrap;
             width: 100%;
             max-width: 680px;
+            margin: 0 0 20px 0;
             .links__left,
             .links__right {
                 display: flex;
