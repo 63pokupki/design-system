@@ -389,4 +389,11 @@
             margin-bottom: 0px; //for front
         }
     }
+
+    // Поповер
+    .modal__content-size {
+        .ds-popover_warning {
+            bottom: -45px;
+        }
+    }
 }
