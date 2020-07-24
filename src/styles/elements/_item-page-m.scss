@@ -61,6 +61,13 @@
         background: rgba(54, 166, 242, 0.5);
     }
 
+    .collapse-section__description {
+        @media (max-width: 1024px) {
+            margin-bottom: 0;
+        }
+
+    }
+
     .collapse-section {
         margin-bottom: 15px;
 
