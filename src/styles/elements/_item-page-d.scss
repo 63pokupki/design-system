@@ -143,6 +143,12 @@
         font-size: 13px;
     }
 
+    .collapse-section__body,
+    .collapse-section__description-heading,
+    .collapse-section__rows-heading {
+        margin: 0 0 10px 0;
+    }   
+
     &__buttons {
         display: flex;
         align-items: center;
