@@ -163,7 +163,11 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: "css/[name].css"
         }),
-        new CopyPlugin([{ from: "src/images/important_images/**/*", to: "images", flatten: true, test: /.*\.(jpg|png|gif|svg)$/ }])
+        new CopyPlugin({
+            patterns: [
+                { from: "src/images/important_images/**/*", to: "images", flatten: true }
+            ]
+        })
     ],
     optimization: {
         //настройки оптимизации и минификации
