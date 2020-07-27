@@ -84,6 +84,12 @@
         font-size: 13px;
     }
 
+    .collapse-section__description-heading,
+    .collapse-section__rows-heading {
+        margin: 0 0 10px 0;
+    }   
+
+
     &__share {
         text-align: center;
         margin-bottom: 30px;
