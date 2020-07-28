@@ -126,11 +126,6 @@
     }
 
     .collapse-section {
-        &.is-expanded {
-            &:after {
-                display: none;
-            }
-        }
 
         &__body {
             // max-height: 0;
