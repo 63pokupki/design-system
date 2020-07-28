@@ -290,7 +290,30 @@
 		&__item {
 			min-width: 160px;
 			max-width: 160px;
+			height: 270px;
+			max-height: 270px;
 			margin-right: 35px;
+		}
+
+		&__item-img {
+			max-height: 160px;
+			width: 100%;
+		}
+
+		&__item-name {
+			margin-top: auto;
+			font-size: 14px;
+    		line-height: 20px;
+		}
+
+		&__item-price {
+			font-weight: 700;
+			font-size: 16px;
+		}
+
+		&__item-price_tax {
+			margin-top: 6px;
+			display: block;
 		}
 
 		&__footer {
