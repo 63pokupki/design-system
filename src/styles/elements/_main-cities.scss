@@ -12,9 +12,17 @@
 		color: #606266;
 		text-decoration: none;
 		transition: color .2s ease;
-
+		
 		&:hover {
 			color: #36a6f2;
+		}
+
+		&_active {
+			font-weight: 600;
+
+			&:hover {
+				color: #606266;
+			}
 		}
 	}
 }
