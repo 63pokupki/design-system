@@ -10,8 +10,7 @@
 	}
 
 	&_top {
-		max-width: 1184px;
-		height: 260px;
+		height: 360px;
 		width: 100%;
 	}
 
@@ -25,5 +24,10 @@
 @media (min-width: 768px) {
 	.main-banner {
 		margin: 0;
+
+		&_top {
+			max-width: 1184px;
+			height: 260px;
+		}
 	}
 }
