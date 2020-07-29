@@ -75,11 +75,18 @@
 			line-height: 16px;
 			color: #1E2023;
 
+			&_penny {
+				font-size: 14px;
+				line-height: 14px;
+				color: #A2A3A5;
+				margin-left: -3px;
+			}
+
 			&_tax {
 				font-weight: normal;
-				font-size: 12px;
-				line-height: 20px;
-				color: #1E2023;
+				font-size: 11px;
+				line-height: 1;
+				color: #A2A3A5;
 				opacity: .8;
 			}
 		}
@@ -290,7 +297,29 @@
 		&__item {
 			min-width: 160px;
 			max-width: 160px;
+			height: 270px;
+			max-height: 270px;
 			margin-right: 35px;
+		}
+
+		&__item-img {
+			max-height: 160px;
+		}
+
+		&__item-name {
+			margin-top: auto;
+			font-size: 14px;
+    		line-height: 20px;
+		}
+
+		&__item-price {
+			font-weight: 700;
+			font-size: 16px;
+
+			&_tax {
+				margin-top: 6px;
+				display: block;
+			}
 		}
 
 		&__footer {

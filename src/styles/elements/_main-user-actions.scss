@@ -50,6 +50,10 @@
 		text-transform: capitalize;
 		color: #FFFFFF;
 	}
+
+	.main-page__button {
+		display: none;
+	}
 }
 
 @media (min-width: 768px) {
@@ -69,6 +73,9 @@
 
 		&__link {
 			height: 200px;
+			display: flex;
+			flex-direction: column;
+			padding: 30px;
 
 			&_org {
 				&::after {
@@ -82,6 +89,26 @@
 					height: 110%;
 					width: 249px;
 				}
+			}
+		}
+
+		&__text {
+			font-weight: bold;
+			font-size: 35px;
+			line-height: 48px;
+		}
+
+		.main-page__button {
+			display: inline-flex;
+			width: 192px;
+			height: 40px;
+			background-color: #FFB321;
+			margin-top: 40px;
+
+			.ds-btn__text {
+				font-weight: bold;
+				font-size: 18px;
+				line-height: 1;
 			}
 		}
 	}
