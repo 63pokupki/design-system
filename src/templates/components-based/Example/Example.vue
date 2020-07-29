@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import { Example } from "../../../../libdist/components.common";
+import Example from "../../../components/Example/Example.vue";
 
 export default {
   name: "ExamplePage",

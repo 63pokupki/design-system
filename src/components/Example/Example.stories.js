@@ -11,7 +11,7 @@ export const withText = () => ({
 });
 
 export const Normal = () => ({
-  render: (h) => <Example>Пример компонента</Example>,
+  render: (h) => <Example>Пример компонента с JSX</Example>,
 });
 
 Normal.story = {
