@@ -1,7 +1,7 @@
 language: node_js
 node_js:
   - 10.15.3
-script: make
+script: pages
 deploy:
   provider: pages
   skip_cleanup: true
