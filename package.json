@@ -1,6 +1,6 @@
 {
   "name": "@63pokupki/design-system",
-  "version": "0.0.575",
+  "version": "1.0.0",
   "private": true,
   "description": "UI component kit and design-system for 63 Pokupki project",
   "author": {
@@ -12,7 +12,6 @@
     "lint": "vue-cli-service lint",
     "detect": "node detective.js",
     "dist": "cross-env NODE_ENV=production webpack --config webpack.config.dist.js",
-    "libgen": "vue-cli-service build --target lib --name components src/components/index.js --dest libdist",
     "live": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js -w",
     "np": "np",
     "publish:patch": "npm version patch && git push origin master && npm publish --access public --registry https://registry.npmjs.org",
@@ -20,11 +19,12 @@
     "storybook:serve": "vue-cli-service storybook:serve -p 6006 -c config/storybook",
     "test": "echo Nothing",
     "vue:build": "vue-cli-service build",
-    "vue:serve": "vue-cli-service serve"
+    "vue:serve": "vue-cli-service serve",
+    "libgen": "vue-cli-service build --target lib --name components src/components/index.js --dest libdist"
   },
-  "main": "dist/css/ds-ui-kit.css",
+  "main": "libdist/components.umd.min.js",
   "files": [
-    "dist"
+    "dist", "libdist"
   ],
   "dependencies": {
     "@63pokupki/onboarding-core": "latest",
@@ -78,7 +78,7 @@
     "postcss-loader": "^3.0.0",
     "postcss-preset-env": "^6.7.0",
     "prismjs": "^1.20.0",
-    "sass-loader": "^8.0.2",
+    "sass-loader": "^9.0.2",
     "style-loader": "^1.2.1",
     "stylelint": "^13.3.3",
     "svg-sprite-loader": "^5.0.0",

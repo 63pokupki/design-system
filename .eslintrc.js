@@ -16,6 +16,7 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'no-unused-vars': 'off',
     'no-multiple-empty-lines': 'off',
+    'quotes': 'off',
   },
   overrides: [
     {

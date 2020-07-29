@@ -1,15 +1,15 @@
 <template>
   <div>
     <h1>Это пример страницы на vue</h1>
-    <Example>Это кастомный тестовый компонент</Example>
+    <Example class="ds-btn">Это кастомный тестовый компонент 2</Example>
   </div>
 </template>
 
 <script>
-import Example from '../../../components/Example/Example.vue';
+import { Example } from "../../../../libdist/components.common";
 
 export default {
-  name: 'ExamplePage',
+  name: "ExamplePage",
   components: {
     Example,
   },
