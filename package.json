@@ -16,7 +16,6 @@
     "publish:patch": "npm version patch && git push origin master && npm publish --access public --registry https://registry.npmjs.org",
     "storybook:build": "vue-cli-service storybook:build -c config/storybook",
     "storybook:serve": "vue-cli-service storybook:serve -p 6006 -c config/storybook",
-    "test": "echo Nothing",
     "vue:build": "vue-cli-service build",
     "vue:serve": "vue-cli-service serve",
     "libgen": "vue-cli-service build --target lib --name components src/components/index.js --dest libdist"

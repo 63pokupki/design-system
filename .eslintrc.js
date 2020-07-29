@@ -3,27 +3,24 @@ module.exports = {
   env: {
     node: true,
   },
-  extends: [
-    'plugin:vue/essential',
-    '@vue/airbnb',
-  ],
+  extends: ["plugin:vue/essential", "@vue/airbnb"],
   parserOptions: {
-    parser: 'babel-eslint',
+    parser: "babel-eslint",
+    ecmaFeatures: {
+      modules: true,
+    },
   },
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'import/prefer-default-export': 'off',
-    'no-unused-vars': 'off',
-    'no-multiple-empty-lines': 'off',
-    'quotes': 'off',
+    "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
+    "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
+    "import/prefer-default-export": "off",
+    "no-unused-vars": "off",
+    "no-multiple-empty-lines": "off",
+    quotes: "off",
   },
   overrides: [
     {
-      files: [
-        '**/__tests__/*.{j,t}s?(x)',
-        '**/tests/unit/**/*.spec.{j,t}s?(x)',
-      ],
+      files: ["**/__tests__/*.{j,t}s?(x)", "**/tests/unit/**/*.spec.{j,t}s?(x)"],
       env: {
         jest: true,
       },

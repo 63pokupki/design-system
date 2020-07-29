@@ -2,18 +2,18 @@ import Example from "./Example.vue";
 
 export default {
   title: "Компоненты/Пример",
-  component: Example
+  component: Example,
 };
 
 export const withText = () => ({
   components: { Example },
-  template: "<Example>Пример компонента</Example>"
+  template: "<Example>Пример компонента</Example>",
 });
 
 export const Normal = () => ({
-  render: h => <Example>Пример компонента</Example>
+  render: (h) => <Example>Пример компонента</Example>,
 });
 
 Normal.story = {
-  name: "Пример компонента"
+  name: "Пример компонента",
 };
