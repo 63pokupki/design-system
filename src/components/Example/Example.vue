@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../styles/elements/_ds-btn.scss";
+@import "~styles/elements/_ds-btn.scss";
 button {
   border: 2px solid green;
 }
