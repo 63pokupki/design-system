@@ -1,6 +1,6 @@
 {
   "name": "@63pokupki/design-system",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "UI component kit and design-system for 63 Pokupki project",
   "author": {
@@ -24,7 +24,8 @@
   },
   "main": "libdist/components.umd.min.js",
   "files": [
-    "dist", "libdist"
+    "dist",
+    "libdist"
   ],
   "dependencies": {
     "@63pokupki/onboarding-core": "latest",
