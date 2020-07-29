@@ -8,10 +8,22 @@
 	<body class="main-page">
 		<header class="main-page__header">
 			<!-- Верхний баннер -->
-			<div class="main-banner main-banner_top">
-				<a class="main-banner__link" href="#">
-					<img class="main-banner__img" src="~images/not_important_images/banners/1184x260.png" alt="пикча">
-				</a>
+			<div class="main-slider main-slider_banner">
+				<div class="main-slider__button-wrapper">
+					<button class="main-slider__button main-slider__button_left"
+							v-if="sliderLeftButton"
+							@click="fOnliderSwap('left')"></button>
+					<button class="main-slider__button main-slider__button_right"
+							v-if="sliderRightButton"
+							@click="fOnliderSwap('right')"></button>
+				</div>
+				<ul class="main-slider__list">
+					<li class="main-banner main-banner_top">
+						<a class="main-banner__link" href="#">
+							<img class="main-banner__img" src="~images/not_important_images/banners/1184x260.png" alt="пикча">
+						</a>
+					</li>
+				</ul>
 			</div>
 			<!-- О сайте -->
 			<div class="main-toggle-block collapse-block is-toggle">
