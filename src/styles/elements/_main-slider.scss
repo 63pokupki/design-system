@@ -150,6 +150,7 @@
 	&_banner {
 		padding: 0;
 		width: 100%;
+		max-width: 100%;
 
 		.main-slider__button-wrapper {
 			width: 100%;
@@ -170,6 +171,10 @@
 			&_right::after {
 				left: 10px;
 			}
+		}
+
+		.main-slider__list {
+			width: max-content;
 		}
 	}
 }
@@ -323,8 +328,8 @@
 		&__item {
 			min-width: 160px;
 			max-width: 160px;
-			height: 270px;
-			max-height: 270px;
+			height: 272px;
+			max-height: 272px;
 			margin-right: 35px;
 		}
 
@@ -369,7 +374,7 @@
 			}
 
 			.main-slider__item {
-				margin-bottom: 15px;
+				margin-bottom: 20px;
 
 				&:nth-of-type(3n + 2) {
 					margin: 0 auto;
