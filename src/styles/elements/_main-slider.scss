@@ -44,6 +44,12 @@
 		}
 	}
 
+	&__link {
+		text-decoration: none;
+		display: flex;
+		flex-direction: column;
+	}
+
 	&__item {
 		min-width: 150px;
 		max-width: 160px;
@@ -133,12 +139,6 @@
 		.main-slider__item {
 			width: 150px;
 			margin-right: 10px;
-		}
-
-		.main-slider__link {
-			text-decoration: none;
-			display: flex;
-			flex-direction: column;
 		}
 
 		.main-slider__title {
@@ -325,6 +325,10 @@
 			width: max-content;
 		}
 
+		&__link {
+			height: 272px;
+		}
+
 		&__item {
 			min-width: 160px;
 			max-width: 160px;
@@ -361,7 +365,7 @@
 			width: 100%;
 
 			.main-slider__list {
-				height: 840px;
+				height: 860px;
 				overflow: hidden;
 				padding: 0;
 				width: 100%;
@@ -379,10 +383,6 @@
 				&:nth-of-type(3n + 2) {
 					margin: 0 auto;
 				}
-			}
-
-			.main-slider__link {
-				height: 272px;
 			}
 
 			.main-slider__item-img {
