@@ -20,6 +20,10 @@
 		&::nth-child(3n) {
 			margin-right: 0;
 		}
+
+		&:last-child {
+			margin-right: auto;
+		}
 	}
 
 	&__link {
