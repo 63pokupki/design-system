@@ -1,6 +1,6 @@
 {
   "name": "@63pokupki/design-system",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "UI component kit and design-system for 63 Pokupki project",
   "author": {
     "name": "63pokupki"
@@ -36,6 +36,7 @@
     "@babel/plugin-transform-runtime": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
     "@storybook/addon-actions": ">=5.3.0",
+    "@storybook/addon-backgrounds": "^5.3.19",
     "@storybook/addon-docs": ">=5.3.0",
     "@storybook/addon-knobs": ">=5.3.0",
     "@storybook/addon-links": ">=5.3.0",
