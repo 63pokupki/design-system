@@ -28,8 +28,7 @@
     "@63pokupki/onboarding-core": "latest",
     "@babel/runtime": "^7.9.6",
     "core-js": "^3.6.5",
-    "np": "^6.2.3",
-    "vue": "^2.6.11"
+    "np": "^6.2.3"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",

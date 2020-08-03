@@ -13,6 +13,15 @@
 	&_top {
 		height: 360px;
 		width: 100%;
+		max-width: 100vw;
+		display: flex;
+		justify-content: center;
+
+		.main-banner__img, 
+		.main-banner__link {
+			width: 320px;
+    		height: 360px;
+		}
 	}
 
 	&_mini {
@@ -23,6 +32,23 @@
 }
 
 @media (min-width: 768px) {
+	.main-banner {
+		margin: 0;
+
+		&_top {
+			max-width: 100vw;
+			height: 169px;
+
+			.main-banner__img, 
+			.main-banner__link {
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+}
+
+@media (min-width: 1184px) {
 	.main-banner {
 		margin: 0;
 
