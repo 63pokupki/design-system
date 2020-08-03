@@ -14,7 +14,7 @@
 
     &__link {
         color: inherit;
-        font-size: 13px;
+        font-size: 12px;
         display: flex;
         align-items: center;
         text-decoration: none;
@@ -36,7 +36,7 @@
         color: inherit;
         margin-left: 8px;
         font-size: 11px;
-        opacity: 0.6;
+        opacity: 0.7;
         &:hover {
             color: $color-primary;
             opacity: 1;
@@ -57,19 +57,23 @@
     &_larger {
         width: 32px;
         height: 32px;
-        font-size: 16px;  
+        font-size: 16px;
     }
 
-    &:hover, &.is-active {
+    &:hover,
+    &.is-active {
         .comparison-list-btn__icon {
-            opacity: 1;
+            color: $color-primary;
+        }
+    }
+
+    &:active {
+        .comparison-list-btn__icon {
+            @include deep-click(0.9);
         }
     }
 
     &__icon {
-        color: $color-primary;
-        opacity: 0.7;
+        color: $color-text-light-grey;
     }
 }
-
-

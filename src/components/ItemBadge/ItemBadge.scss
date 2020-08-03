@@ -1,0 +1,95 @@
+$ItemBadgeColor: #ffffff;
+$ItemBadgeFontSize: 10px;
+$ItemBadgeLineHeight: 16px;
+$ItemBadgeFontWeight: 600;
+$ItemBadgeBgColorAccent: #FF999F;
+$ItemBadgeBgColorAccentFlag: #AA797C;
+$ItemBadgeBgColorPrimary: #36A6F2;
+$ItemBadgeBgColorPrimaryFlag: #2c6aa4;
+$ItemBadgeFontFamily: $font-primary;
+
+
+.ItemBadge {
+    font-weight: $ItemBadgeFontWeight;
+    font-size: $ItemBadgeFontSize;
+    color: $ItemBadgeColor;
+    line-height: $ItemBadgeLineHeight;
+    padding: 1px 7px;
+    position: relative;
+    user-select: none;
+    font-family: $ItemBadgeFontFamily;
+
+    &:before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border: 7px solid transparent;
+    }
+}
+
+.ItemBadge_left-top {
+
+    &:before {
+        top: -7px;
+        left: 3px;
+        width: 0;
+        height: 0;
+        border: 7px solid transparent;
+        transform: rotate(-45deg);
+    }
+}
+
+.ItemBadge_left-bottom {
+
+    &:before {
+        bottom: -7px;
+        left: 3px;
+        width: 0;
+        height: 0;
+        border: 7px solid transparent;
+        transform: rotate(-135deg);
+    }
+}
+
+.ItemBadge_right-bottom {
+
+    &:before {
+        bottom: -7px;
+        right: 3px;
+        width: 0;
+        height: 0;
+        border: 7px solid transparent;
+        transform: rotate(135deg);
+    }
+}
+
+.ItemBadge_right-top {
+
+    &:before {
+        top: -7px;
+        right: 3px;
+        width: 0;
+        height: 0;
+        border: 7px solid transparent;
+        transform: rotate(45deg);
+    }
+}
+
+// значок рядов
+.ItemBadge_accent {
+    background-color: $ItemBadgeBgColorAccent;
+
+    &:before {
+        border-top: 7px solid $ItemBadgeBgColorAccentFlag;
+    }
+}
+
+// значок "уже заказали"
+.ItemBadge_primary {
+    background-color: $ItemBadgeBgColorPrimary;
+
+    &:before {
+        border-top: 7px solid $ItemBadgeBgColorPrimaryFlag;
+    }
+}

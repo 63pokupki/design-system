@@ -2,6 +2,7 @@
 	width: 353px;
 	height: 520px;
 	margin: 0 auto;
+	max-width: 100%;
 
 	&__link,
 	&__img {
@@ -10,19 +11,24 @@
 	}
 
 	&_top {
-		max-width: 1184px;
-		height: 260px;
+		height: 360px;
 		width: 100%;
 	}
 
 	&_mini {
 		width: 518px;
 		height: 220px;
+		max-width: 100%;
 	}
 }
 
 @media (min-width: 768px) {
 	.main-banner {
 		margin: 0;
+
+		&_top {
+			max-width: 1184px;
+			height: 260px;
+		}
 	}
 }

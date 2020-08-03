@@ -450,6 +450,7 @@
     // Подсказки рядов
     .stock-rows-legend.item-page-m__rows-legend {
         justify-content: center;
+        flex-wrap: nowrap;
         max-width: 280px;
     }
 

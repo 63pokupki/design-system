@@ -1,14 +1,11 @@
-// post css config
+/* eslint-disable */
 module.exports = {
-    plugins: {
-        "postcss-import": {
-            plugins: [require("stylelint")()]
-        },
-        "postcss-preset-env" : {},
-        "autoprefixer": {},
-        "css-mqpacker": {},
-        "cssnano": {
-            preset: 'default'
-        }
-    }
+  plugins: [
+      require("postcss-preset-env"),
+      require("autoprefixer"),
+      require("css-mqpacker"),
+      require("cssnano")({
+          preset: "default"
+      })
+  ]
 };

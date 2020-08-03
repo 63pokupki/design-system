@@ -1,0 +1,69 @@
+$BtnFavoriteColorBackground: #ffffff;
+$BtnFavoriteColorPrimary: #36a6f2;
+$BtnFavoriteColorActive: #ff3868;
+$BtnFavoriteWidth: 24px;
+$BtnFavoriteHeight: 24px;
+$BtnFavoriteFontsize: $BtnFavoriteWidth / 2;
+
+@keyframes BtnFavoriteIsLoading {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.BtnFavorite {
+    @extend %reset-button;
+
+    background-color: $BtnFavoriteColorBackground;
+    width: $BtnFavoriteWidth;
+    height: $BtnFavoriteHeight;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+    &.is-loading {
+        .BtnFavorite__icon {
+            animation: BtnFavoriteIsLoading 1.2s ease-in-out infinite;
+            color: $BtnFavoriteColorActive;
+        }
+
+        &:active {
+            .BtnFavorite__icon {
+                transform: none;
+            }
+        }
+    }
+
+    &.is-active {
+        .BtnFavorite__icon {
+            color: $BtnFavoriteColorActive;
+        }
+    }
+
+    &:active {
+        .BtnFavorite__icon {
+            transform: scale(0.9);
+        }
+    }
+
+    &:hover {
+        .BtnFavorite__icon {
+            color: $BtnFavoriteColorActive;
+        }
+    }
+
+    &__icon {
+        padding-top: 1px; // для выравнивания
+        color: $BtnFavoriteColorPrimary;
+        font-size: $BtnFavoriteFontsize;
+    }
+}
