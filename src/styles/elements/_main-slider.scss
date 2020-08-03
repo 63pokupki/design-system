@@ -54,6 +54,7 @@
 		text-decoration: none;
 		display: flex;
 		flex-direction: column;
+		height: 100%;
 	}
 
 	&__item {
@@ -79,6 +80,7 @@
 			color: #1E2023;
 			margin-bottom: 10px;
 			padding-right: 5px;
+			margin-top: auto;
 		}
 
 		&-price {
