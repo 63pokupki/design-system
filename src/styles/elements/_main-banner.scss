@@ -15,7 +15,7 @@
 	}
 
 	&_top {
-		height: 360px;
+		height: auto;
 		width: 100%;
 		max-width: 100vw;
 		display: flex;
@@ -23,8 +23,8 @@
 
 		.main-banner__img, 
 		.main-banner__link {
-			width: 320px;
-    		height: 360px;
+			width: 100%;
+    		height: auto;
 		}
 	}
 
