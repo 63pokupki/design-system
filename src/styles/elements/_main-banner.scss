@@ -1,3 +1,7 @@
+:root{
+	--scrollbar-width: calc(100vw - 100%);
+}
+
 .main-banner {
 	width: 353px;
 	height: 520px;
@@ -11,8 +15,17 @@
 	}
 
 	&_top {
-		height: 360px;
+		height: auto;
 		width: 100%;
+		max-width: 100vw;
+		display: flex;
+		justify-content: center;
+
+		.main-banner__img, 
+		.main-banner__link {
+			width: 100%;
+    		height: auto;
+		}
 	}
 
 	&_mini {
@@ -23,6 +36,23 @@
 }
 
 @media (min-width: 768px) {
+	.main-banner {
+		margin: 0;
+
+		&_top {
+			height: 169px;
+			width: calc(100vw - 17px);
+
+			.main-banner__img, 
+			.main-banner__link {
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+}
+
+@media (min-width: 1184px) {
 	.main-banner {
 		margin: 0;
 

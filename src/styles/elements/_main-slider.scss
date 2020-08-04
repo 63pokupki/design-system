@@ -42,12 +42,19 @@
 		&::-webkit-scrollbar-thumb {
 			background-color: #36A5F2;
 		}
+
+		&_top {
+			padding: 0;
+			overflow: visible;
+			min-width: 100%;
+		}
 	}
 
 	&__link {
 		text-decoration: none;
 		display: flex;
 		flex-direction: column;
+		height: 100%;
 	}
 
 	&__item {
@@ -73,6 +80,7 @@
 			color: #1E2023;
 			margin-bottom: 10px;
 			padding-right: 5px;
+			margin-top: auto;
 		}
 
 		&-price {
@@ -151,6 +159,7 @@
 		padding: 0;
 		width: 100%;
 		max-width: 100%;
+		overflow: hidden;
 
 		.main-slider__button-wrapper {
 			width: 100%;
