@@ -1,0 +1,98 @@
+$spui-Checkbox_font: $font-primary;
+$spui-Checkbox_colorLabel: #1d1e1f;
+$spui-Checkbox_colorActive: #36a6f2;
+$spui-Checkbox_colorHover: #0080f6;
+$spui-Checkbox_colorDisabled: #c4c4c4;
+$spui-Checkbox_borderWidth: 1px;
+$spui-Checkbox_borderRadius: 2px;
+$spui-Checkbox_width: 16px - $spui-Checkbox_borderWidth * 2;
+$spui-Checkbox_height: 16px - $spui-Checkbox_borderWidth * 2;
+$spui-Checkbox_fontSize: 12px;
+
+.spui-Checkbox {
+    cursor: pointer;
+    user-select: none;
+    display: inline-flex;
+
+    &__input {
+        display: none;
+    }
+    &__fake {
+        position: relative;
+        width: $spui-Checkbox_width;
+        height: $spui-Checkbox_height;
+        min-width: $spui-Checkbox_width;
+        min-height: $spui-Checkbox_height;
+        border-radius: $spui-Checkbox_borderRadius;
+        border: $spui-Checkbox_borderWidth solid $spui-Checkbox_colorActive;
+    }
+    &__text {
+        font-weight: normal;
+        font-size: $spui-Checkbox_fontSize;
+        font-family: $spui-Checkbox_font;
+        color: $spui-Checkbox_colorLabel;
+    }
+
+    &__icon {
+        color: $spui-Checkbox_colorActive;
+        font-size: 10px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.spui-Checkbox_primary.spui-Checkbox_checked {
+    .spui-Checkbox__fake {
+        background-color: $spui-Checkbox_colorActive;
+    }
+
+    .spui-Checkbox__icon {
+        color: #ffffff;
+    }
+}
+
+.spui-Checkbox_rounded {
+    .spui-Checkbox__fake {
+        border-radius: 50%;
+    }
+
+    .spui-Checkbox__icon {
+        padding-top: 1px;
+    }
+}
+
+.spui-Checkbox_waiting {
+    &:hover {
+        .spui-Checkbox__fake {
+            border: $spui-Checkbox_borderWidth solid $spui-Checkbox_colorHover;
+        }
+    }
+}
+
+.spui-Checkbox_disabled {
+    .spui-Checkbox__fake {
+        border: $spui-Checkbox_borderWidth solid $spui-Checkbox_colorDisabled;
+    }
+
+    .spui-Checkbox__text {
+        color: $spui-Checkbox_colorDisabled;
+    }
+
+    .spui-Checkbox__icon {
+        color: $spui-Checkbox_colorDisabled;
+    }
+}
+
+.spui-Checkbox_left {
+    .spui-Checkbox__text {
+        padding-left: 8px;
+    }
+}
+
+.spui-Checkbox_right {
+    .spui-Checkbox__text {
+        padding-right: 8px;
+    }
+}
