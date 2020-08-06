@@ -15,11 +15,11 @@ export const empty = () => ({
 });
 
 export const primary = () => ({
+    template: "<Button type='primary'>Кнопка стандартная</Button>",
     components: { Button },
     methods: {
         onClick: action("click")
-    },
-    template: "<Button type='primary'>Кнопка стандартная</Button>"
+    }
 });
 
 export const outlined = () => ({
@@ -27,7 +27,7 @@ export const outlined = () => ({
     methods: {
         onClick: action("click")
     },
-    template: "<Button type='outlined'>Кнопка outline</Button>"
+    template: "<Button>Кнопка outline</Button>"
 });
 
 export const loading = () => ({
