@@ -1,0 +1,64 @@
+.after-confirm-email {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 596px;
+    padding: 25px 30px;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 rgba(49, 140, 202, 0.2);
+    @media (max-width: 767px) {
+        max-width: 305px;
+    }
+
+    &__heading {
+        margin: 0 0 22px 0;
+        font-size: 22px;
+        font-weight: 600;
+        color: $color-text-heading;
+        @media (max-width: 767px) {
+            font-size: 18px;
+        }
+    
+    }
+    &__txt {
+        max-width: 360px;
+        margin: 0 0 35px 0;
+        font-size: 16px;
+        font-weight: 600;
+        color: $color-text-base;
+        text-align: center;
+        line-height: 20px;
+        @media (max-width: 767px) {
+            font-size: 12px;
+            font-weight: normal;
+        }
+          
+    }
+    &__btn {
+        width: 100%;
+        max-width: 242px;
+        height: 40px;
+        margin: 0 0 20px 0;
+        .ds-btn__text {
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
+    &__link-to-purchase {
+        font-size: 16px;
+        font-weight: 600;
+        color: $color-primary;
+        @media (max-width: 767px) {
+            font-size: 14px;
+        }
+    
+    }
+}
+
+
+
+
