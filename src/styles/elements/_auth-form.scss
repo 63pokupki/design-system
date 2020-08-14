@@ -1,6 +1,6 @@
 .auth-form {
     display: inline-block;
-    min-width: 300px;
+    // min-width: 300px;
     margin: 0 auto;
 
     @media (max-width: 992px) {
@@ -150,7 +150,7 @@
             }
             @media (max-width: 767px) {
                 &:after {
-                    right: calc(50% - 86px);
+                    right: calc(0% - 9px);
                 }
             }
 
@@ -179,9 +179,16 @@
         position: relative;
         padding: 20px 0;
         border-radius: 10px;
+
+        // авторизация
         &-sign-in {
             @media (min-width: 768px) {
                 min-width: 455px;
+            }
+            @media (max-width: 767px) {
+                .auth-form__content-container {
+                    padding: 0 13px;
+                }
             }
             &.is-error {
                 >.ds-inputs-form {
