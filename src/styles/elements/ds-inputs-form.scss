@@ -224,6 +224,24 @@
             &:before {
                 content: "";
             }
+        }
+        @media (max-width: 767px) {
+            &:after {
+                width: 232px;
+            }
+            .snowflake {
+                &:before {
+                    left: 235px;
+                }
+            }
+            .auth-form__example-login {
+                left: 153px;
+            }
+            .auth-form__example-login,
+            .auth-form__login-label {
+                top: -10px;
+                font-size: 12px;
+            }
         }  
     }
 }
