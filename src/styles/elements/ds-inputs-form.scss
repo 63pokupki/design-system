@@ -169,13 +169,13 @@
 .input-login {
     .ds-inputs-form__label {
         &:before {
-            content: "Логин/email/телефон(9271234567)";
+            content: "Логин /email /телефон";
         }
     }
     &:after {
         content: "";
         background: url("~images/important_images/auth-form/bg-line-label-input.svg");
-        width: 260px;
+        width: 270px;
         height: 5px;
         position: absolute;
         top: 0px;
@@ -184,8 +184,17 @@
     }
     .snowflake {
         &:before {
-            left: 260px;
+            left: 270px;
         }
+    }
+    .auth-form__example-login {
+        position: absolute;
+        left: 178px;
+        top: -12px;
+        font-weight: 600;
+        font-size: 14px; 
+        z-index: 20;
+        color: rgba(96, 98, 102, 0.5);
     }
 
 }
