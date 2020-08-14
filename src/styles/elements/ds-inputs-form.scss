@@ -94,6 +94,7 @@
             font-size: 14px; 
             z-index: 20;
             color: $color-text-base;
+            white-space: nowrap;
         }
     
     }
@@ -168,13 +169,13 @@
 .input-login {
     .ds-inputs-form__label {
         &:before {
-            content: "Логин";
+            content: "Логин/email/телефон(9271234567)";
         }
     }
     &:after {
         content: "";
         background: url("~images/important_images/auth-form/bg-line-label-input.svg");
-        width: 66px;
+        width: 260px;
         height: 5px;
         position: absolute;
         top: 0px;
@@ -183,7 +184,7 @@
     }
     .snowflake {
         &:before {
-            left: 60px;
+            left: 260px;
         }
     }
 
