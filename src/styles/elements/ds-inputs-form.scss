@@ -10,6 +10,9 @@
                 color: $color-input-border-error!important;
             }
         }
+        .auth-form__login-label {
+            color: $color-input-border-error!important;
+        }
         input {
             background: $color-input-bg-error;
             border-color: $color-input-border-error;
@@ -72,6 +75,9 @@
         &:focus {
             border: 1px solid $color-primary;
             ~.ds-inputs-form__label:before {
+                color: $color-primary;
+            }
+            ~.auth-form__login-label {
                 color: $color-primary;
             }
         }
@@ -169,22 +175,31 @@
 .input-login {
     .ds-inputs-form__label {
         &:before {
-            content: "Логин /email /телефон";
+            content: "Логин";
         }
     }
     &:after {
         content: "";
         background: url("~images/important_images/auth-form/bg-line-label-input.svg");
-        width: 270px;
+        width: 65px;
         height: 5px;
         position: absolute;
         top: 0px;
         left: 5px;
         z-index: 10;
     }
+    .auth-form__login-label {
+        position: absolute;
+        top: -12px;
+        left: 12px;
+        font-weight: 600;
+        font-size: 14px; 
+        z-index: 20;
+        color: $color-text-base;
+    }
     .snowflake {
         &:before {
-            left: 270px;
+            left: 65px;
         }
     }
     .auth-form__example-login {
@@ -196,7 +211,22 @@
         z-index: 20;
         color: rgba(96, 98, 102, 0.5);
     }
-
+    &__signIn {
+        &:after {
+            width: 270px;
+        }
+        .snowflake {
+            &:before {
+                left: 270px;
+            }
+        }
+        .ds-inputs-form__label {
+            &:before {
+                content: "";
+            }
+        }    
+    
+    }
 }
 
 // Password
