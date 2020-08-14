@@ -85,6 +85,10 @@
         cursor: pointer;
         color: #1d1e1f;
 
+        @media (max-width: 767px) {
+            font-size: 13px;
+        }
+
     }
     &__right-tab {
         &.is-active {
