@@ -4,11 +4,13 @@
     margin: 0 auto;
 
     @media (max-width: 992px) {
-        max-width: 748px;
+        width: 100%;
+        // max-width: 748px;
+        max-width: 90vw;
     }
-    @media (max-width: 767px) {
-        max-width: 304px;
-    }
+    // @media (max-width: 767px) {
+    //     max-width: 304px;
+    // }
 
     &__bg {
         display: flex;
@@ -87,6 +89,7 @@
 
         @media (max-width: 767px) {
             font-size: 13px;
+            max-width: none;
         }
 
     }
@@ -275,6 +278,7 @@
             flex-direction: column;
             justify-content: flex-start;
             @media (max-width: 767px) {
+                max-width: none;
                 .auth-form__content-container {
                     padding: 0 13px;
                 }
@@ -366,6 +370,9 @@
         align-items: center;
         width: 100%;
         max-width: 350px;
+        @media (max-width: 767px) {
+            max-width: none;
+        }
     }
     &__login-container {
         margin-right: 65px;
@@ -391,6 +398,10 @@
         width: 100%;
         max-width: 350px;
         margin: 0 42px 0 0;
+        @media (max-width: 767px) {
+            max-width: none;
+        } 
+
     }
     &__phone-txt {
         display: flex;
@@ -398,6 +409,16 @@
         width: 100%;
         max-width: 350px;
         margin: 0;
+        @media (max-width: 767px) {
+            max-width: none;
+        } 
+
+    }
+
+    .auth-form__txt-footnote {
+        @media (max-width: 767px) {
+            max-width: none;
+        }
     }
 
     //Блок Ошибка указаных данных
@@ -663,7 +684,7 @@
                 margin: 13px 0;
             }            
             &__form-sign-up {
-                max-width: 455px;
+                max-width: none;
             }
             &__right-tab {
                 &:after {
@@ -672,6 +693,9 @@
             }
             &__form-password-recovery {
                 max-width: 305px;
+                @media (max-width: 767px) {
+                    max-width: none;
+                }
                 .auth-form__txt {
                     padding: 0 50px;
                 }
@@ -689,7 +713,8 @@
 // Восстановление пароля
     &__form-password-recovery {
         display: block;
-        width: 455px;
+        width: 100%;
+        max-width: 455px;
         padding: 20px 0 28px 0;
 
         // Если сообщение отправлено
@@ -713,6 +738,10 @@
                     padding: 30px 20px;
                 }
             }
+        }
+
+        .auth-form__content-container {
+            padding: 0 15px;
         }
 
         .ds-inputs-component {
