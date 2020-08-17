@@ -4,13 +4,13 @@
     margin: 0 auto;
 
     @media (max-width: 992px) {
-        width: 100%;
         // max-width: 748px;
+        max-width: 455px;
+    }
+    @media (max-width: 767px) {
+        width: 100%;
         max-width: 90vw;
     }
-    // @media (max-width: 767px) {
-    //     max-width: 304px;
-    // }
 
     &__bg {
         display: flex;
@@ -716,6 +716,9 @@
         width: 100%;
         max-width: 455px;
         padding: 20px 0 28px 0;
+        @media (min-width: 992px) {
+            min-width: 455px;
+        }
 
         // Если сообщение отправлено
         &.is-send {
