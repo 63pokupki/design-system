@@ -137,6 +137,9 @@
         text-decoration: none;
         position: relative;
         text-decoration: none;
+        &:hover {
+            text-decoration: none;
+        }
 
         &:first-child {
             margin-left: 20px;
