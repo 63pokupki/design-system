@@ -4,7 +4,7 @@
     margin: 10px 0;
     background-color: transparent;
     @media (max-width: 767px) {
-        visibility: hidden;
+        display: none;
     }
     
     &__list {
