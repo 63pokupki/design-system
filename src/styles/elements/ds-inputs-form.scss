@@ -170,6 +170,7 @@
         left: 5px;
         font-size: 12px;
         color: $color-input-border-error;
+        z-index: 25;
     }
 }
 
@@ -177,7 +178,7 @@
 .input-login {
     .ds-inputs-form__label {
         &:before {
-            content: "Логин / email / телефон (9273334455)";
+            content: "Логин";
         }
     }
     &:after {
