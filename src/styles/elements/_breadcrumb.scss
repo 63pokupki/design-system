@@ -3,6 +3,9 @@
 .ds-breadcrumb {
     margin: 10px 0;
     background-color: transparent;
+    @media (max-width: 767px) {
+        visibility: hidden;
+    }
     
     &__list {
         padding-left: unset;
