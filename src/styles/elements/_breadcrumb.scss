@@ -16,12 +16,17 @@
         font-size: 12px;
         color: #858585;
         margin-right: 4px;
+        max-width: 90vw;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        
         &_active {
             color: #1e2023;
             a {
                 color: inherit;
             }
-        }
+        }        
     }
 }
 
