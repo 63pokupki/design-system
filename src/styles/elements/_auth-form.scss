@@ -1,13 +1,15 @@
 .auth-form {
     display: inline-block;
-    min-width: 300px;
+    // min-width: 300px;
     margin: 0 auto;
 
     @media (max-width: 992px) {
         max-width: 748px;
     }
     @media (max-width: 767px) {
-        max-width: 304px;
+        width: 100%;
+        max-width: 90vw;
+        padding: 0 15px;
     }
 
     &__bg {
@@ -85,6 +87,11 @@
         cursor: pointer;
         color: #1d1e1f;
 
+        @media (max-width: 767px) {
+            font-size: 13px;
+            max-width: none;
+        }
+
     }
     &__right-tab {
         &.is-active {
@@ -150,8 +157,14 @@
             }
             @media (max-width: 767px) {
                 &:after {
-                    right: calc(50% - 86px);
+                    right: calc(0% - 9px);
                 }
+            }
+            @media (min-width: 768px) and (max-width: 991) {
+                &:after {
+                    right: calc(50%-115px); 
+                }
+
             }
 
         }
@@ -179,6 +192,8 @@
         position: relative;
         padding: 20px 0;
         border-radius: 10px;
+
+        // авторизация
         &-sign-in {
             @media (min-width: 768px) {
                 min-width: 455px;
@@ -268,7 +283,12 @@
             max-width: 455px;
             flex-direction: column;
             justify-content: flex-start;
-
+            @media (max-width: 767px) {
+                max-width: none;
+                .auth-form__content-container {
+                    padding: 0 13px;
+                }
+            }
         }
     
         // Поле логина
@@ -356,6 +376,9 @@
         align-items: center;
         width: 100%;
         max-width: 350px;
+        @media (max-width: 767px) {
+            max-width: none;
+        }
     }
     &__login-container {
         margin-right: 65px;
@@ -381,6 +404,10 @@
         width: 100%;
         max-width: 350px;
         margin: 0 42px 0 0;
+        @media (max-width: 767px) {
+            max-width: none;
+        } 
+
     }
     &__phone-txt {
         display: flex;
@@ -388,6 +415,16 @@
         width: 100%;
         max-width: 350px;
         margin: 0;
+        @media (max-width: 767px) {
+            max-width: none;
+        } 
+
+    }
+
+    .auth-form__txt-footnote {
+        @media (max-width: 767px) {
+            max-width: none;
+        }
     }
 
     //Блок Ошибка указаных данных
@@ -653,7 +690,7 @@
                 margin: 13px 0;
             }            
             &__form-sign-up {
-                max-width: 455px;
+                max-width: none;
             }
             &__right-tab {
                 &:after {
@@ -662,12 +699,15 @@
             }
             &__form-password-recovery {
                 max-width: 305px;
+                @media (max-width: 767px) {
+                    max-width: none;
+                }
                 .auth-form__txt {
                     padding: 0 50px;
                 }
-                .auth-form__txt-error {
-                    margin: -10px 0 15px 0;
-                }
+                // .auth-form__txt-error {
+                //     margin: -10px 0 15px 0;
+                // }
             }
     
             &__txt-error {
@@ -679,8 +719,17 @@
 // Восстановление пароля
     &__form-password-recovery {
         display: block;
-        width: 455px;
+        width: 100%;
+        max-width: 455px;
         padding: 20px 0 28px 0;
+        @media (min-width: 768px) {
+            min-width: 455px;
+
+            .auth-form__content-container {
+                padding: 0 39px;
+            }
+    
+        }
 
         // Если сообщение отправлено
         &.is-send {
@@ -703,6 +752,10 @@
                     padding: 30px 20px;
                 }
             }
+        }
+
+        .auth-form__content-container {
+            padding: 0 15px;
         }
 
         .ds-inputs-component {

@@ -10,6 +10,9 @@
                 color: $color-input-border-error!important;
             }
         }
+        .auth-form__login-label {
+            color: $color-input-border-error!important;
+        }
         input {
             background: $color-input-bg-error;
             border-color: $color-input-border-error;
@@ -69,9 +72,13 @@
         border: 1px solid $color-text-base;
         border-radius: 2px;
         outline: none;
+        appearance: none;
         &:focus {
             border: 1px solid $color-primary;
             ~.ds-inputs-form__label:before {
+                color: $color-primary;
+            }
+            ~.auth-form__login-label {
                 color: $color-primary;
             }
         }
@@ -94,6 +101,8 @@
             font-size: 14px;
             z-index: 20;
             color: $color-text-base;
+            white-space: nowrap;
+            background: white;
         }
 
     }
@@ -168,25 +177,88 @@
 .input-login {
     .ds-inputs-form__label {
         &:before {
+<<<<<<< HEAD
             content: "Логин / email / телефон (9273334455)";
+=======
+            content: "Логин";
+            background: transparent;
+>>>>>>> 56ddde0c65403bdcc113dd801cfb45499cb44131
         }
     }
     &:after {
         content: "";
         background: url("~images/important_images/auth-form/bg-line-label-input.svg");
-        width: 66px;
-        height: 5px;
+        width: 65px;
+        height: 3px;
         position: absolute;
+<<<<<<< HEAD
         top: 0;
+=======
+        top: -1px;
+>>>>>>> 56ddde0c65403bdcc113dd801cfb45499cb44131
         left: 5px;
         z-index: 10;
     }
+    .auth-form__login-label {
+        position: absolute;
+        top: -12px;
+        left: 12px;
+        font-weight: 600;
+        font-size: 14px; 
+        z-index: 20;
+        color: $color-text-base;
+    }
     .snowflake {
         &:before {
-            left: 60px;
+            left: 65px;
         }
     }
+    .auth-form__example-login {
+        margin: 0 0 0 5px;
+        position: absolute;
+        left: 178px;
+        top: -12px;
+        font-weight: 600;
+        font-size: 14px; 
+        z-index: 20;
+        color: rgba(96, 98, 102, 0.5);
+    }
+    &__signIn {
+        &:after {
+            width: 270px;
+            top: -1px;
+            height: 3px;
 
+        }
+        .snowflake {
+            &:before {
+                left: 270px;
+            }
+        }
+        .ds-inputs-form__label {
+            &:before {
+                content: "";
+            }
+        }
+        @media (max-width: 767px) {
+            &:after {
+                width: 232px;
+            }
+            .snowflake {
+                &:before {
+                    left: 235px;
+                }
+            }
+            .auth-form__example-login {
+                left: 153px;
+            }
+            .auth-form__example-login,
+            .auth-form__login-label {
+                top: -10px;
+                font-size: 12px;
+            }
+        }  
+    }
 }
 
 // Password
@@ -201,16 +273,16 @@
             content: "Пароль";
         }
     }
-    &:after {
-        content: "";
-        background: url("~images/important_images/auth-form/bg-line-label-input.svg");
-        width: 75px;
-        height: 2px;
-        position: absolute;
-        top: 0px;
-        left: 5px;
-        z-index: 10;
-    }
+    // &:after {
+    //     content: "";
+    //     background: url("~images/important_images/auth-form/bg-line-label-input.svg");
+    //     width: 75px;
+    //     height: 2px;
+    //     position: absolute;
+    //     top: 0px;
+    //     left: 5px;
+    //     z-index: 10;
+    // }
 
 
     input[type="checkbox"] {
@@ -271,16 +343,16 @@
             content: "Email";
         }
     }
-    &:after {
-        content: "";
-        background: url("~images/important_images/auth-form/bg-line-label-input.svg");
-        width: 60px;
-        height: 2px;
-        position: absolute;
-        top: 0;
-        left: 4px;
-        z-index: 10;
-    }
+    // &:after {
+    //     content: "";
+    //     background: url("~images/important_images/auth-form/bg-line-label-input.svg");
+    //     width: 60px;
+    //     height: 3px;
+    //     position: absolute;
+    //     top: -1px;
+    //     left: 4px;
+    //     z-index: 10;
+    // }
 
 }
 
@@ -302,16 +374,16 @@
             white-space: nowrap;
         }
     }
-    &:after {
-        content: "";
-        background: url("~images/important_images/auth-form/bg-line-label-input.svg");
-        width: 147px;
-        height: 2px;
-        position: absolute;
-        top: 0;
-        left: 4px;
-        z-index: 10;
-    }
+    // &:after {
+    //     content: "";
+    //     background: url("~images/important_images/auth-form/bg-line-label-input.svg");
+    //     width: 147px;
+    //     height: 3px;
+    //     position: absolute;
+    //     top: -1px;
+    //     left: 4px;
+    //     z-index: 10;
+    // }
 }
 
 //Повторный ввод пароля

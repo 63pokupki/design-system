@@ -29,6 +29,11 @@
             <br>
             Для активации вкладки, необходимо присвоить класс <span class="ds-hl">.is-active</span> элементу
             <span class="ds-hl">.auth-form__left-tab</span> или <span class="ds-hl">.auth-form__right-tab</span>
+            <br>
+            <br>
+            Для стилизации логина при входе на сайт, необходимо присвоить класс <span class="ds-hl">.input-login__signIn</span>
+            
+            елементу <span class="ds-hl">ds-inputs-form</span>, а также добавить лейбл Логин /email /телефон - как в примере
         </div>
 
         <div class="ds-divider ds-center" style="margin: 0;">
@@ -53,11 +58,14 @@
                             <div class="auth-form__content-container">
                                 <!-- Поле логин -->
                                 <div class="ds-inputs-component is-hidden-info is-hidden-snowflake">
-                                    <div class="ds-inputs-form  input-login">
+                                    <div class="ds-inputs-form  input-login input-login__signIn">
                                         <span class="snowflake"></span>
+                                        <span class="auth-form__example-login"> (9271234567)</span>
                                         <input id="ds-inputs-form__input-login" class="ds-inputs-form__input"
                                             type="text" name="" id="" maxlength="22" minlength="3">
                                         <label class="ds-inputs-form__label" for="ds-inputs-form__input-login"></label>
+                                        <label class="auth-form__login-label" for="ds-inputs-form__input-login">Логин / email / телефон</label>
+
                                     </div>
                                     <div class="ds-inputs-form__info-block">
                                         <span class="ds-inputs-form__txt-info">3-22 символа</span>
@@ -361,6 +369,7 @@
                             <div class="ds-inputs-component is-hidden-info is-hidden-snowflake">
                                 <div class="ds-inputs-form  input-login">
                                     <span class="snowflake"></span>
+                                    <span class="auth-form__example-login">(9271234567)</span>
                                     <input id="ds-inputs-form__input-login" class="ds-inputs-form__input"
                                         type="text" name="" id="" maxlength="22" minlength="3">
                                     <label class="ds-inputs-form__label" for="ds-inputs-form__input-login"></label>
@@ -644,11 +653,13 @@
                         <div class="auth-form__content-container">
                             <!-- Поле логин -->
                             <div class="ds-inputs-component is-hidden-info is-hidden-snowflake">
-                                <div class="ds-inputs-form  input-login">
+                                <div class="ds-inputs-form  input-login input-login__signIn">
                                     <span class="snowflake"></span>
+                                    <span class="auth-form__example-login">(9271234567)</span>
                                     <input id="ds-inputs-form__input-login" class="ds-inputs-form__input" type="text"
                                         name="" id="" maxlength="22" minlength="3">
                                     <label class="ds-inputs-form__label" for="ds-inputs-form__input-login"></label>
+                                    <label class="auth-form__login-label" for="ds-inputs-form__input-login">Логин /email /телефон</label>
                                 </div>
                                 <div class="ds-inputs-form__info-block">
                                     <span class="ds-inputs-form__txt-info">3-22 символа</span>
@@ -718,11 +729,13 @@
                         <div class="auth-form__content-container">
                             <!-- Поле логин -->
                             <div class="ds-inputs-component is-error is-hidden-info is-hidden-snowflake">
-                                <div class="ds-inputs-form  input-login">
+                                <div class="ds-inputs-form  input-login input-login__signIn">
                                     <span class="snowflake"></span>
+                                    <span class="auth-form__example-login">(9271234567)</span>
                                     <input id="ds-inputs-form__input-login" class="ds-inputs-form__input" type="text"
                                         name="" id="" maxlength="22" minlength="3">
                                     <label class="ds-inputs-form__label" for="ds-inputs-form__input-login"></label>
+                                    <label class="auth-form__login-label" for="ds-inputs-form__input-login">Логин / email / телефон</label>
                                 </div>
                                 <div class="ds-inputs-form__info-block">
                                     <!-- <span class="ds-inputs-form__txt-info">3-22 символа</span>
