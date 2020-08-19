@@ -177,12 +177,7 @@
 .input-login {
     .ds-inputs-form__label {
         &:before {
-<<<<<<< HEAD
             content: "Логин / email / телефон (9273334455)";
-=======
-            content: "Логин";
-            background: transparent;
->>>>>>> 56ddde0c65403bdcc113dd801cfb45499cb44131
         }
     }
     &:after {
@@ -191,11 +186,7 @@
         width: 65px;
         height: 3px;
         position: absolute;
-<<<<<<< HEAD
-        top: 0;
-=======
         top: -1px;
->>>>>>> 56ddde0c65403bdcc113dd801cfb45499cb44131
         left: 5px;
         z-index: 10;
     }
@@ -204,7 +195,7 @@
         top: -12px;
         left: 12px;
         font-weight: 600;
-        font-size: 14px; 
+        font-size: 14px;
         z-index: 20;
         color: $color-text-base;
     }
@@ -219,7 +210,7 @@
         left: 178px;
         top: -12px;
         font-weight: 600;
-        font-size: 14px; 
+        font-size: 14px;
         z-index: 20;
         color: rgba(96, 98, 102, 0.5);
     }
@@ -257,7 +248,7 @@
                 top: -10px;
                 font-size: 12px;
             }
-        }  
+        }
     }
 }
 
