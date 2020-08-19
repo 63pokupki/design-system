@@ -46,7 +46,7 @@
             }
 
         }
-    }    
+    }
 
 }
 .ds-inputs-form {
@@ -55,8 +55,8 @@
     height: 48px;
     margin: 13px 0;
     position: relative;
-    
-    &__input { 
+
+    &__input {
         width: 100%;
         min-width: 200px;
         height: 100%;
@@ -75,7 +75,7 @@
                 color: $color-primary;
             }
         }
-    
+
     }
     &__label {
         position: absolute;
@@ -91,11 +91,11 @@
             padding: 0 10px;
             font-family: Open Sans;
             font-weight: 600;
-            font-size: 14px; 
+            font-size: 14px;
             z-index: 20;
             color: $color-text-base;
         }
-    
+
     }
 
     //Info-block
@@ -104,8 +104,8 @@
         width: 100%;
         justify-content: space-between;
         margin: -10px 0 0 0;
-        // padding: 0 13px;        
-    } 
+        // padding: 0 13px;
+    }
 
     &__txt-info {
         display: flex;
@@ -128,8 +128,8 @@
     }
     &__txt-error {
         display: flex;
-        justify-content: flex-end; 
-        width: 100%;       
+        justify-content: flex-end;
+        width: 100%;
         text-align: left;
         font-weight: 600;
         font-size: 12px;
@@ -147,7 +147,7 @@
         position: absolute;
         top: 10px;
         left: 0;
-        user-select: none;                
+        user-select: none;
     }
 
 }
@@ -168,7 +168,7 @@
 .input-login {
     .ds-inputs-form__label {
         &:before {
-            content: "Логин";
+            content: "Логин / email / телефон (9273334455)";
         }
     }
     &:after {
@@ -177,7 +177,7 @@
         width: 66px;
         height: 5px;
         position: absolute;
-        top: 0px;
+        top: 0;
         left: 5px;
         z-index: 10;
     }
@@ -212,7 +212,7 @@
         z-index: 10;
     }
 
-    
+
     input[type="checkbox"] {
         display: none;
         &:checked ~.passEye-label:after  {
@@ -227,14 +227,14 @@
         position: absolute;
         display: inline-block;
         width: 24px;
-        height: 22px; 
+        height: 22px;
         top: 12px;
         right: 12px;
         &:after {
             content: "";
             display: inline-block;
             width: 25px;
-            height: 26px;    
+            height: 26px;
             background: url("~images/important_images/password-input/passEyeClose.svg");
             background-size: contain;
             background-repeat: no-repeat;
@@ -246,7 +246,7 @@
             display: none;
             width: 25px;
             height: 16px;
-            top: 4px;    
+            top: 4px;
             background: url("~images/important_images/password-input/passEye.svg");
             background-size: contain;
             background-repeat: no-repeat;
@@ -349,7 +349,7 @@
             content: "Код";
             white-space: nowrap;
             color: $color-primary;
-        }        
+        }
     }
     &:after {
         content: "";
@@ -400,7 +400,7 @@
         border-top-color: #606266;
         z-index: 2;
     }
-    
+
     &__active {
         width: 100%;
         height: 100%;
@@ -497,7 +497,7 @@
     .input-login {
         &:after {
             height: 2px;
-            width: 55px; 
+            width: 55px;
         }
     }
     .ds-inputs-form__input {
@@ -506,7 +506,7 @@
             border: 2px solid $color-primary;
         }
     }
-        
+
 }
 
 
