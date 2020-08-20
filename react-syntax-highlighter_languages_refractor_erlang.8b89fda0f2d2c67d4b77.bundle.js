@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[37],{"70a6":function(module,exports,__webpack_require__){module.exports=__webpack_require__("daa9")("d++n")}}]);
-//# sourceMappingURL=react-syntax-highlighter_languages_refractor_erlang.8b89fda0f2d2c67d4b77.bundle.js.map
