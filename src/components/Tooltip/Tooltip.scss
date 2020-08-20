@@ -1,0 +1,119 @@
+
+$tooltip-background-color: $color-graphics-elements;
+$tooltip-background-color-accent: $color-primary;
+$tooltip-triangle-size: 6px;
+
+// всплывающая подсказка
+// стандартное положение - снизу под элементом, без треугольника
+.spui-Tooltip {
+    visibility: hidden;
+    z-index: 1;
+    bottom: -10px;
+    opacity: 0;
+    position: absolute;
+    background-color: $tooltip-background-color;
+    padding: 8px 10px;
+    line-height: 15px;
+    color: $color-text-base;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: $font-weight-primary;
+    line-height: 16px;
+    font-style: normal;
+    left: 50%;
+    font-family: $font-primary;
+    min-width: 120px;
+    transform: translate(-50%, 100%);
+    transition: opacity $transition-primary, visibility $transition-primary;
+    box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.1);
+
+    // треугольник-указатель к всплывающей подсказке
+    &:before {
+        content: "";
+        display: block;
+        width: $tooltip-triangle-size;
+        height: $tooltip-triangle-size;
+        position: absolute;
+        left: calc(50% - #{$tooltip-triangle-size}/ 2);
+        top: -3px;
+        background-color: $tooltip-background-color;
+        transform: rotate(45deg);
+    }
+
+    * {
+        font-size: inherit;
+    }
+
+    // позиция подсказки снизу - стандартное положение
+    &.spui-Tooltip_bottom {
+        @extend .spui-Tooltip;
+    }
+
+    // позиция подсказки сверху
+    &.spui-Tooltip_top {
+        bottom: auto;
+        top: -10px;
+        transform: translate(-50%, -100%);
+        &:before {
+            left: calc(50% - #{$tooltip-triangle-size}/ 2);
+            right: auto;
+            top: auto;
+            bottom: -3px;
+        }
+    }
+
+    // позиция подсказки справа
+    &.spui-Tooltip_right {
+        bottom: 50%;
+        right: -10px;
+        left: auto;
+        transform: translate(100%, 50%);
+        &:before {
+            right: auto;
+            left: -3px;
+            top: calc(50% - #{$tooltip-triangle-size}/ 2);
+            bottom: auto;
+        }
+    }
+
+    // позиция подсказки слева
+    &.spui-Tooltip_left {
+        bottom: 50%;
+        right: auto;
+        left: -10px;
+        transform: translate(-100%, 50%);
+        &:before {
+            left: auto;
+            right: -3px;
+            top: calc(50% - #{$tooltip-triangle-size}/ 2);
+            bottom: auto;
+        }
+    }
+
+    // выравнивает текст по центру
+    &.spui-Tooltip_ta-c {
+        text-align: center;
+    }
+
+    // акцентный вид подсказки
+    &.spui-Tooltip_accent {
+        background-color: $tooltip-background-color-accent;
+        color: white;
+        font-weight: 600;
+
+        &:before {
+            background-color: $tooltip-background-color-accent;
+        }
+    }
+
+    // вид подсказки с ошибкой
+    &.spui-Tooltip_error {
+        background-color: $error-light;
+        color: $color-text-base;
+        font-weight: 400;
+
+        &:before {
+            background-color: $error-light;
+        }
+    }
+}
