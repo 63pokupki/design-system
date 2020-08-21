@@ -1,0 +1,16 @@
+$themeColor: #36a6f2;
+$dotBgColor: $themeColor;
+$bgColor: #9ad2f8;
+$dotShadowFocus: none;
+$dotShadow: none;
+
+@import "~vue-slider-component/lib/theme/default.scss";
+
+.vue-slider-dot {
+    &-handle {
+        border: 1px solid white;
+        &:active {
+            background-color: #0080f6;
+        }
+    }
+}
