@@ -58,11 +58,12 @@
 		text-decoration: none;
 		display: flex;
 		flex-direction: column;
+		height: 100%;
 	}
 
 	&__item {
-		width: 142px;
-		min-width: 142px;
+		width: 150px;
+		min-width: 150px;
 		display: flex;
 		flex-direction: column;
 		margin-right: 20px;
@@ -72,11 +73,9 @@
 		}
 
 		&-img {
-			width: 100%;
-			margin-bottom: 20px;
-			max-width: 100%;
-			margin-bottom: 10px;
-			max-height: 142px;
+			max-height: 150px;
+			max-width: 150px;
+			margin: 0 auto;
 		}
 
 		&-name {
@@ -212,7 +211,7 @@
 		}
 
 		&__item-img {
-			max-height: 140px;
+			max-height: 160px;
 			width: auto;
 			margin: 0 auto;
 		}
