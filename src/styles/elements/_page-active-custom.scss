@@ -2,11 +2,6 @@
 .pac {
     background: #fff;
 
-    @media (max-width: 1024px) {
-        padding: 56px 0 0 0;
-    }
-
-
     &__breadcrumb {
         display: flex;
         align-items: center;
