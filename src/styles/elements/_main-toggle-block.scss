@@ -1,6 +1,6 @@
 .main-toggle-block {
 	margin-top: 16px;
-	padding: 0;
+	padding: 0!important;
 
 	&__header {
 		display: flex;
@@ -84,7 +84,7 @@
 		padding: 0;
 		margin: 10px 0 0;
 	}
-	
+
 	&__content-features-item {
 		font-size: 14px;
 		line-height: 24px;
@@ -154,7 +154,7 @@
 				height: 33px;
 			}
 		}
-		
+
 		&_protect {
 			width: 96px;
 
@@ -164,10 +164,10 @@
 				height: 34px;
 			}
 		}
-		
+
 		&_extradition {
 			width: 99px;
-			
+
 			&::before {
 				background-image: url("~images/important_images/main-achievement/extradition.png");
 				width: 50px;
@@ -277,7 +277,7 @@
 			font-size: 32px;
 			line-height: 52px;
 			margin-top: 0;
-	
+
 			&::after {
 				content: '*';
 				position: absolute;
@@ -288,7 +288,7 @@
 		}
 
 		&__content-features-item {
-			text-align: left; 
+			text-align: left;
 			font-size: 18px;
 			line-height: 36px;
 		}

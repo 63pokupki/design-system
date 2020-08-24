@@ -20,6 +20,10 @@
 			color: #1D1E1F;
 			font-weight: bold;
 		}
+
+		.main-slider__footer-link {
+			display: none;
+		}
 	}
 
 	&__button-wrapper {
@@ -195,6 +199,10 @@
 		&__title {
 			font-size: 20px;
 			line-height: 20px;
+
+			.main-slider__footer-link {
+				display: flex;
+			}
 		}
 
 		&__item {
@@ -207,6 +215,10 @@
 			max-height: 140px;
 			width: auto;
 			margin: 0 auto;
+		}
+
+		&__footer {
+			display: none;
 		}
 
 		&_big {
