@@ -1,0 +1,34 @@
+.spui-SelectList {
+    &__input {
+        display: none;
+    }
+
+    &__label {
+        cursor: pointer;
+        user-select: none;
+        font-size: 12px;
+        padding: 3px 5px;
+        border-radius: 12px;
+        color: $color-text-base;
+        margin-right: 5px;
+        margin-bottom: 3px;
+        min-width: 23px;
+        display: inline-flex;
+        align-items: center;
+        color: #1D1E1F;
+        justify-content: center;
+        text-align: center;
+        font-family: $font-primary;
+
+        &:hover {
+            color: #36A6F2;
+        }
+
+        &.is-selected {
+            color: white;
+            background-color: #36A6F2;
+            transition: background-color 0.25s ease, color 0.25s ease;
+        }
+
+    }
+}
