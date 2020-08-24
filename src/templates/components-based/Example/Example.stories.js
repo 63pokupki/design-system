@@ -1,14 +1,12 @@
-import Example from './Example.vue';
+import Example from "./Example.vue";
 
 export default {
-  title: 'Страницы/Пример страницы',
-  component: Example,
+    title: "Страницы/Пример страницы",
+    component: Example,
 };
 
 export const page = () => ({
-  render: (h) => <Example />,
+    render: (h) => <Example />,
 });
 
-page.story = {
-  name: 'Базовый',
-};
+page.storyName = "Базовый";
