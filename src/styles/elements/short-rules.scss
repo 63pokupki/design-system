@@ -43,6 +43,8 @@
                 }                
             }
             h4 {
+                font-size: 14px;
+                font-weight: 600;
                 @media (max-width: 767px) {
                     margin-left: 5px;
                 }
@@ -247,6 +249,7 @@
         h4 {
             width: 100%;
             font-size: 18px;
+            font-weight: 600;
             color: $color-text-heading;
         }
         background: rgba(54, 166, 242, 0.15);
