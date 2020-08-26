@@ -10,7 +10,7 @@
 		height: 2px;
 		background-color: rgba(54, 165, 242, 0.15);;
 	}
-	
+
 	&::-webkit-scrollbar-thumb {
 		background-color: #36A5F2;
 	}
@@ -58,7 +58,7 @@
 		flex-direction: column;
 		justify-content: flex-end;
 		width: 100%;
-		
+
 		&::before {
 			content: '';
 			position: absolute;
@@ -145,19 +145,20 @@
 @media (min-width: 1184px) {
 	.main-news {
 		&__item {
-			width: 355px;
+			width: 354px;
+			min-width: 354px;
+			margin-right: 53px;
 		}
 
 		&__img {
-			height: 220px;
-			min-height: 220px;
+			height: 228px;
 		}
 
 		&__date {
 			font-size: 14px;
 			line-height: 28px;
 		}
-	
+
 		&__title {
 			font-size: 24px;
 			line-height: 28px;
@@ -175,7 +176,7 @@
 		&__button {
 			width: 165px;
 			height: 32px;
-	
+
 			.ds-btn__text {
 				font-size: 14px;
 				line-height: 16px;

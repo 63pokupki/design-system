@@ -26,7 +26,7 @@
 
 		&_org {
 			background: linear-gradient(60.95deg, #56B943 17.9%, #36A6F2 65.23%);
-			
+
 			&::after {
 				width: 180px;
 				height: 127px;
@@ -42,6 +42,10 @@
 				height: 135px;
 				background-image: url('~images/important_images/car.png');
 			}
+		}
+
+		&:hover {
+			text-decoration: none;
 		}
 	}
 
@@ -93,7 +97,7 @@
 					width: 310px;
 				}
 			}
-			
+
 			&_provider {
 				&::after {
 					height: 110%;
