@@ -51,9 +51,12 @@
         }
     }
 
+    input {
+        background-color: #fff;
+    }
 
-    // Fix for webkit
-    @keyframes autofill {
+
+    @-webkit-keyframes autofill {
         to {
           color: inherit;
           background: transparent;
@@ -61,9 +64,13 @@
       }
       
     input:-webkit-autofill {
-        animation-name: autofill;
-        animation-fill-mode: both;
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
     }
+
+    input:-webkit-autofill { 
+        background-color: #ffffff !important; background-image:none !important; 
+}
 
 }
 .ds-inputs-form {

@@ -69,5 +69,8 @@
 
     &__caption-icon-w {
         text-decoration: none;
+        &:hover {
+            text-decoration: none;
+        }
     }
 }
