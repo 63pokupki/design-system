@@ -87,6 +87,10 @@
         cursor: pointer;
         color: #1d1e1f;
 
+        &:hover {
+            color: $click-load-color;
+        }
+
         @media (max-width: 767px) {
             font-size: 13px;
             max-width: none;
