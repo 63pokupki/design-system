@@ -44,6 +44,8 @@
 		font-weight: 700;
 		font-size: 14px;
 		margin-left: 12px;
+		margin-top: 22px;
+		margin-bottom: 22px;
 
 		.main-slider__footer-link {
 			display: none;
@@ -91,9 +93,18 @@
 		}
 
 		&__title {
+			display: flex;
+			align-items: center;
 			margin: 12px 0;
 			font-size: 20px;
 			line-height: 20px;
+
+			.main-slider__footer-link {
+				display: block;
+				margin-left: 10px;
+				padding: 0;
+				font-weight: 400;
+			}
 
 			&_ml {
 				margin-left: 40px;
@@ -205,16 +216,7 @@
 		&__title {
 			font-weight: 700;
 			font-size: 14px;
-			margin-left: 12px;
-			display: flex;
-			align-items: center;
 			margin: 12px 0;
-
-			.main-slider__footer-link {
-				display: block;
-				margin-left: 10px;
-				padding: 0;
-			}
 
 			.main-slider__footer-name {
 				font-size: 14px;
