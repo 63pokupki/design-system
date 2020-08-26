@@ -1,3 +1,7 @@
+input:-webkit-autofill {
+    -webkit-box-shadow:0 0 0 50px white inset; /* можно изменить на любой вариант цвета */    
+}
+
 .ds-inputs-component {
     display: block;
     width: 100%;
@@ -51,10 +55,6 @@
         }
     }
 
-    input {
-        background-color: #fff;
-    }
-
 
     @-webkit-keyframes autofill {
         to {
@@ -68,9 +68,10 @@
     -webkit-animation-fill-mode: both;
     }
 
-    input:-webkit-autofill { 
-        background-color: #ffffff !important; background-image:none !important; 
-}
+    input:-webkit-autofill {
+        -webkit-box-shadow:0 0 0 50px white inset; /* можно изменить на любой вариант цвета */    
+    }
+    
 
 }
 .ds-inputs-form {
