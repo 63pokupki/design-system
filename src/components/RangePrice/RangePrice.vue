@@ -7,7 +7,7 @@
                     :value="rangeMin"
                     @change="onChangeMin"
                     @input="calcWidth"
-                    @click="$event => setSelection($event.target)"
+                    @click="($event) => setSelection($event.target)"
                     class="spui-RangePrice__input"
                     type="text"
                 />
@@ -19,26 +19,28 @@
                     :value="rangeMax"
                     @change="onChangeMax"
                     @input="calcWidth"
-                    @click="$event => setSelection($event.target)"
+                    @click="($event) => setSelection($event.target)"
                     class="spui-RangePrice__input"
                     type="text"
                 />
                 ₽
             </span>
         </div>
-        <vue-slider
-            class="spui-RangePrice__range"
-            :min="min"
-            :max="max"
-            :dragOnClick="true"
-            v-model="_value"
-            :lazy="lazy"
-            tooltip="none"
-            :dotSize="16"
-            :order="true"
-            :duration="0.3"
-            :enableCross="true"
-        ></vue-slider>
+        <div class="spui-RangePrice__range">
+            <vue-slider
+                :min="min"
+                :max="max"
+                :dragOnClick="true"
+                v-model="_value"
+                :lazy="lazy"
+                tooltip="none"
+                :dotSize="16"
+                :order="true"
+                :duration="0.3"
+                :enableCross="true"
+                :height="'2px'"
+            ></vue-slider>
+        </div>
     </div>
 </template>
 
@@ -50,23 +52,23 @@ export default {
     props: {
         min: {
             type: Number,
-            default: 0
+            default: 0,
         },
         max: {
             type: Number,
-            default: 1000
+            default: 1000,
         },
         value: {
             type: Array,
-            default: () => [0, 1000]
+            default: () => [0, 1000],
         },
         lazy: {
             type: Boolean,
-            default: false
-        }
+            default: false,
+        },
     },
     components: {
-        VueSlider
+        VueSlider,
     },
     computed: {
         _value: {
@@ -75,7 +77,7 @@ export default {
             },
             set(value) {
                 this.$emit("input", value);
-            }
+            },
         },
         rangeMin: {
             get() {
@@ -87,7 +89,7 @@ export default {
             },
             set(value) {
                 this._value = [value, this.rangeMax];
-            }
+            },
         },
         rangeMax: {
             get() {
@@ -99,25 +101,25 @@ export default {
             },
             set(value) {
                 this._value = [this.rangeMin, value];
-            }
+            },
         },
         minWidthPx() {
             const length = this.rangeMin.toString().split("").length;
-            const width = length * 7 + "px";
+            const width = length * 8.5 + "px";
             return width;
         },
         maxWidthPx() {
             const length = this.rangeMax.toString().split("").length;
-            const width = length * 7 + "px";
+            const width = length * 8.5 + "px";
             return width;
-        }
+        },
     },
     methods: {
         calcWidth(e) {
             const el = e.target;
             const value = el.value;
             const length = value.toString().split("").length;
-            const width = length * 7 + "px";
+            const width = length * 8.5 + "px";
             el.style.width = width;
         },
         setSelection(el) {
@@ -147,8 +149,8 @@ export default {
             }
 
             this.$emit("input", [this.rangeMin, max]);
-        }
-    }
+        },
+    },
 };
 </script>
 

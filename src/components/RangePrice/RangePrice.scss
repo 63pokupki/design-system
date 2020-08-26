@@ -9,12 +9,14 @@ $RangePrice_color: $color-text-base;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin-bottom: 2px;
     }
 
     &__wrapper {
         font-family: $RangePrice_font;
         font-size: $RangePrice_fontSize;
         color: $RangePrice_color;
+        height: 18px;
         user-select: none;
     }
 
@@ -25,10 +27,15 @@ $RangePrice_color: $color-text-base;
         border: unset;
         background-color: transparent;
         border-bottom: 1px solid #9AD2F8;
-        min-width: 8px;
+        min-width: 12px;
+        height: 18px;
 
         &:focus {
             outline: 0;
         }
+    }
+
+    &__range {
+        padding: 0 5px;
     }
 }
