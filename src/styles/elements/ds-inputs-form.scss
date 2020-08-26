@@ -51,6 +51,20 @@
         }
     }
 
+
+    // Fix for webkit
+    @keyframes autofill {
+        to {
+          color: inherit;
+          background: transparent;
+        }
+      }
+      
+    input:-webkit-autofill {
+        animation-name: autofill;
+        animation-fill-mode: both;
+    }
+
 }
 .ds-inputs-form {
     display: block;
