@@ -8,6 +8,8 @@
 
     &:hover,
     &:active {
+        color: $color-primary;
+        text-decoration: none;
         opacity: 1;
         transition: opacity $transition-fast;
     }
