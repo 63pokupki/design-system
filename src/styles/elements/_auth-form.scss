@@ -89,6 +89,7 @@
 
         &:hover {
             color: $click-load-color;
+            font-weight: 600;
         }
 
         @media (max-width: 767px) {
