@@ -1,6 +1,13 @@
-input:-webkit-autofill {
-    -webkit-box-shadow:0 0 0 50px white inset; /* можно изменить на любой вариант цвета */    
+input -webkit-autofill {
+   box-shadow: 0 0 0 50px white inset; /* можно изменить на любой вариант цвета */    
 }
+
+// fix for -moz
+input {
+    filter: none;
+    -webkit-filter: none;
+}
+
 
 .ds-inputs-component {
     display: block;
@@ -56,22 +63,23 @@ input:-webkit-autofill {
     }
 
 
-    @-webkit-keyframes autofill {
+    @keyframes autofill {
         to {
           color: inherit;
           background: transparent;
         }
-      }
-      
-    input:-webkit-autofill {
-    -webkit-animation-name: autofill;
-    -webkit-animation-fill-mode: both;
     }
-
+      
+    // fix for -webkit 
     input:-webkit-autofill {
         -webkit-box-shadow:0 0 0 50px white inset; /* можно изменить на любой вариант цвета */    
     }
     
+    // fix for -moz
+    input {
+        filter: none;
+        -webkit-filter: none;
+    }
 
 }
 .ds-inputs-form {
@@ -105,6 +113,11 @@ input:-webkit-autofill {
             }
         }
 
+        // fix for -webkit 
+        input:-webkit-autofill {
+            -webkit-box-shadow:0 0 0 50px white inset; /* можно изменить на любой вариант цвета */    
+        }
+    
     }
     &__label {
         position: absolute;
