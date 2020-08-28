@@ -26,12 +26,7 @@ export const one = () => ({
             elements
         };
     },
-    methods: {
-        change(value) {
-            this.value = value;
-        },
-    },
-    template: "<SelectList :list='elements' :value='value' @change='change'></SelectList>",
+    template: "<SelectList :list='elements' v-model='value'></SelectList>",
 });
 
 export const many = () => ({
@@ -42,11 +37,6 @@ export const many = () => ({
             elements
         };
     },
-    methods: {
-        change(value) {
-            this.value = value;
-        },
-    },
     template:
-        "<SelectList :list='elements' :value='value' :one='false' @change='change'></SelectList>",
+        "<SelectList :list='elements' v-model='value' :one='false'></SelectList>",
 });

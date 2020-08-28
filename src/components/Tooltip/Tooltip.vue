@@ -29,7 +29,6 @@ export default {
         };
     },
     mounted() {
-        console.log(this._forced);
         this.$parent.$el.classList.add(this._forced);
     },
     beforeDestroy() {
