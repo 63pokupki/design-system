@@ -15,7 +15,7 @@
                     type="radio"
                     :id="index + uuid"
                 />
-                {{ element[label] || "Label не указан" }}
+                {{ getLabel(element) || "Label не указан" }}
             </label>
         </div>
         <div class="spui-SelectList__many" v-if="!one">
@@ -33,7 +33,7 @@
                     type="checkbox"
                     :id="index + uuid"
                 />
-                {{ element[label] || "Label не указан" }}
+                {{ getLabel(element) || "Label не указан" }}
             </label>
         </div>
     </div>
@@ -52,13 +52,16 @@ export default {
         },
         values: {
             type: Array,
+            required: true,
             default: () => [],
         },
         label: {
-            type: String,
-            default: "label",
+            type: Function,
+            required: true
         },
-        value: {},
+        value: {
+            required: true
+        },
     },
     data() {
         return {
@@ -83,6 +86,11 @@ export default {
             const finded = values.find((el) => isEqual(el, elm));
             return finded ? true : false;
         },
+        getLabel(value) {
+            if (value && this.label && typeof this.label === "function") {
+                return this.label(value)
+            }
+        }
     },
 };
 </script>

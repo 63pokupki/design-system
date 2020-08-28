@@ -23,10 +23,11 @@ export const one = () => ({
     data() {
         return {
             value: { label: 1 },
-            elements
+            elements,
+            label: (value) => value.label
         };
     },
-    template: "<SelectList :list='elements' v-model='value'></SelectList>",
+    template: "<SelectList :values='elements' :label='label' v-model='value'></SelectList>",
 });
 
 export const many = () => ({
@@ -34,9 +35,10 @@ export const many = () => ({
     data() {
         return {
             value: [{ label: 1 }],
-            elements
+            elements,
+            label: (value) => value.label
         };
     },
     template:
-        "<SelectList :list='elements' v-model='value' :one='false'></SelectList>",
+        "<SelectList :values='elements' :label='label' v-model='value' :one='false'></SelectList>",
 });

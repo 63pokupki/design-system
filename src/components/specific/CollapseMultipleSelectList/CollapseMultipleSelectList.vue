@@ -22,6 +22,7 @@
                 slot="default"
                 class="spui-CollapseMultipleSelectList__list"
                 v-model="_value"
+                :label="label"
                 :values="_visibleElements"
                 :one="false"
             ></SelectList>
@@ -37,7 +38,7 @@
 </template>
 
 <script>
-import { pluralize } from "@/helpers/pluralize";
+import { pluralize } from "@/helpers";
 import Collapse from "../../common/Collapse/Collapse.vue";
 import SelectList from "../../common/SelectList/SelectList.vue";
 import Tooltip from "../../common/Tooltip/Tooltip.vue";
@@ -52,15 +53,18 @@ export default {
     props: {
         heading: {
             type: String,
+            required: true,
             default: "Имя секции не передано",
         },
         open: {
             type: Boolean,
             default: false,
+            required: true
         },
         listOpen: {
             type: Boolean,
             default: false,
+            required: true
         },
         maxVisibleElements: {
             type: Number,
@@ -72,13 +76,16 @@ export default {
         },
         values: {
             type: Array,
+            required: true,
             default: () => [],
         },
         label: {
-            type: String,
-            default: "label",
+            type: Function,
+            required: true
         },
-        value: {},
+        value: {
+            required: true
+        },
     },
     computed: {
         _isSlotBeforeExist() {
@@ -160,7 +167,7 @@ export default {
             get() {
                 if (this._value && this._value.length) {
                     const str = this._value.reduce((acc, el) => {
-                        return acc + el[this.label] + ", ";
+                        return acc + this.label(el) + ", ";
                     }, "");
                     const sliced = str.slice(0, str.length - 2);
                     return sliced;

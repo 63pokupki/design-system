@@ -22,6 +22,7 @@
 </template>
 
 <script>
+import {capitalize} from "@/helpers";
 export default {
     name: "Collapse",
     props: {
@@ -57,12 +58,12 @@ export default {
         },
         _heading() {
             if (this.heading) {
-                return this.heading[0].toUpperCase() + this.heading.slice(1);
+                return capitalize(this.heading);
             }
         },
         _metainfo() {
             if (this.metainfo) {
-                return this.metainfo[0].toUpperCase() + this.metainfo.slice(1);
+                return capitalize(this.metainfo);
             }
         },
         _isSlotDefaultExist() {
@@ -79,6 +80,6 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "./Collapse.scss";
 </style>

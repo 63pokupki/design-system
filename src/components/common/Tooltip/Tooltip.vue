@@ -1,5 +1,5 @@
 <template>
-    <span @click.stop :class="[base, _type, _position, _centered]"><slot></slot></span>
+    <span :class="[base, _type, _position, _centered]"><slot></slot></span>
 </template>
 
 <script>

@@ -12,6 +12,7 @@ export const exampleSize = () => ({
             open: true,
             listOpen: false,
             showTooltip: false,
+            label: (value) => value.label,
             values: [
                 { label: "10", value: 10 },
                 { label: "20", value: 20 },
@@ -59,6 +60,7 @@ export const exampleSize = () => ({
                 :open="open"
                 :listOpen="listOpen"
                 :values="values"
+                :label="label"
                 :tooltip="showTooltip"
                 @collapse="collapseHandler"
                 @changeListOpen="changeExpandHandler"
@@ -75,6 +77,7 @@ export const exampleColor = () => ({
             open: true,
             listOpen: false,
             showTooltip: false,
+            label: (value) => value.label,
             values: [
                 { label: "красный", value: 0 },
                 { label: "синий", value: 0 },
@@ -112,6 +115,7 @@ export const exampleColor = () => ({
                 v-model="value"
                 :heading="'Цвет'"
                 :open="open"
+                :label="label"
                 :listOpen="listOpen"
                 :values="values"
                 :tooltip="showTooltip"
