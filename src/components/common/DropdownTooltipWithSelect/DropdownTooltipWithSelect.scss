@@ -1,0 +1,56 @@
+$spui-DropdownTooltipWithSelect-font: $font-primary;
+$spui-DropdownTooltipWithSelect-font-size: 12px;
+$spui-DropdownTooltipWithSelect-font-weight: 600;
+$spui-DropdownTooltipWithSelect-color: #606266;
+$spui-DropdownTooltipWithSelect-colorOnHover: #36a5f2;
+$spui-DropdownTooltipWithSelect-colorOnActive: $spui-DropdownTooltipWithSelect-colorOnHover;
+$spui-DropdownTooltipWithSelect-row-spacing: 4px;
+$spui-DropdownTooltipWithSelect-values-spacing: 3px;
+$spui-DropdownTooltipWithSelect-arrow-size: 8px;
+
+.spui-DropdownTooltipWithSelect {
+    font-family: $spui-DropdownTooltipWithSelect-font;
+    font-weight: $spui-DropdownTooltipWithSelect-font-weight;
+    display: inline-flex;
+    align-items: center;
+    font-size: $spui-DropdownTooltipWithSelect-font-size;
+    color: $spui-DropdownTooltipWithSelect-color;
+    cursor: pointer;
+
+    &:hover {
+        color: $spui-DropdownTooltipWithSelect-colorOnHover;
+    }
+
+    &:active {
+        color: $spui-DropdownTooltipWithSelect-colorOnActive;
+    }
+
+    &__wrapper {
+        display: inline-flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__heading {
+        line-height: 17px;
+        flex-shrink: 0;
+        margin-right: $spui-DropdownTooltipWithSelect-row-spacing;
+    }
+
+    &__value {
+        border-bottom: 1px solid $spui-DropdownTooltipWithSelect-colorOnActive;
+        margin-right: $spui-DropdownTooltipWithSelect-row-spacing;
+    }
+    &__arrow {
+        font-size: $spui-DropdownTooltipWithSelect-arrow-size;
+        display: inline-flex;
+        margin-bottom: 1px;
+    }
+    &__val {
+        white-space: nowrap;
+        margin: $spui-DropdownTooltipWithSelect-values-spacing;
+        &:hover {
+            color: $spui-DropdownTooltipWithSelect-colorOnActive;
+        }
+    }
+}

@@ -6,7 +6,7 @@ export default {
 };
 
 export const page = () => ({
-    render: (h) => <Example />,
+    render() {
+        return <Example />;
+    },
 });
-
-page.storyName = "Базовый";
