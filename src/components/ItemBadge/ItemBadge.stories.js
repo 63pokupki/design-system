@@ -1,7 +1,7 @@
 import ItemBadge from "./ItemBadge.vue";
 
 export default {
-    title: "Компоненты/ItemBadge",
+    title: "Общие/ItemBadge",
     component: ItemBadge
 };
 

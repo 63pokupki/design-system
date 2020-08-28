@@ -2,7 +2,7 @@ import BtnFavorite from "./BtnFavorite.vue";
 import { action } from "@storybook/addon-actions";
 
 export default {
-    title: "Компоненты/BtnFavorite",
+    title: "Общие/BtnFavorite",
     component: BtnFavorite
 };
 

@@ -3,7 +3,7 @@ import Tooltip from "./Tooltip.vue";
 const blockStyles = `margin: 100px auto 0; height: 100px; width: 100px; background: grey;`
 
 export default {
-    title: "Компоненты/Tooltip",
+    title: "Общие/Tooltip",
     component: Tooltip
 };
 

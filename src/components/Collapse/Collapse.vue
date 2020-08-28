@@ -1,21 +1,21 @@
 <template>
-    <div :class="[_isOpenedClass]" class="spui-DropdownSection">
-        <div @click="_model = !_model" class="spui-DropdownSection__head">
-            <div class="spui-DropdownSection__heading">
+    <div :class="[_isOpenedClass]" class="spui-Collapse">
+        <div @click="_model = !_model" class="spui-Collapse__head">
+            <div class="spui-Collapse__heading">
                 <span>{{ _heading }}</span
-                ><i class="spui-DropdownSection__arrow ds-icon icon-arrow-down"></i>
+                ><i class="spui-Collapse__arrow ds-icon icon-arrow-down"></i>
             </div>
-            <div class="spui-DropdownSection__metainfo">
+            <div class="spui-Collapse__metainfo">
                 {{ _metainfo }}
             </div>
         </div>
-        <div v-if="_isSlotBeforeBodyExist && _model" class="spui-DropdownSection__slot-beforebody">
+        <div v-if="_isSlotBeforeBodyExist && _model" class="spui-Collapse__slot-beforebody">
             <slot name="beforebody"></slot>
         </div>
-        <div v-if="_isSlotDefaultExist && _model" class="spui-DropdownSection__body">
+        <div v-if="_isSlotDefaultExist && _model" class="spui-Collapse__body">
             <slot></slot>
         </div>
-        <div v-if="_isSlotAfterBodyExist && _model" class="spui-DropdownSection__slot-afterbody">
+        <div v-if="_isSlotAfterBodyExist && _model" class="spui-Collapse__slot-afterbody">
             <slot name="afterbody"></slot>
         </div>
     </div>
@@ -23,7 +23,7 @@
 
 <script>
 export default {
-    name: "DropdownSection",
+    name: "Collapse",
     props: {
         heading: {
             type: String,
@@ -40,7 +40,7 @@ export default {
     },
     data() {
         return {
-            base: "spui-DropdownSection",
+            base: "spui-Collapse",
         };
     },
     computed: {
@@ -80,5 +80,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./DropdownSection.scss";
+@import "./Collapse.scss";
 </style>

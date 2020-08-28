@@ -1,18 +1,18 @@
 <template>
-    <div class="spui-DropdownSectionFilter">
+    <div class="spui-CollapseMultipleSelectList">
         <slot v-if="_isSlotBeforeExist" name="before"></slot>
-        <DropdownSection v-model="_open" :heading="heading" :metainfo="_metainfo">
+        <Collapse v-model="_open" :heading="heading" :metainfo="_metainfo">
             <template slot="beforebody">
-                <div class="spui-DropdownSectionFilter__controls">
+                <div class="spui-CollapseMultipleSelectList__controls">
                     <span>{{ _selectedPositionsNumber }}</span>
                     <span
-                        ><span @click="onSelectAll" class="spui-DropdownSectionFilter__all"
+                        ><span @click="onSelectAll" class="spui-CollapseMultipleSelectList__all"
                             >Выбрать все</span
                         >
                         <span
                             v-if="_displayClearButton"
                             @click="onClear"
-                            class="spui-DropdownSectionFilter__clear"
+                            class="spui-CollapseMultipleSelectList__clear"
                             >Очистить</span
                         ></span
                     >
@@ -20,32 +20,32 @@
             </template>
             <SelectList
                 slot="default"
-                class="spui-DropdownSectionFilter__list"
+                class="spui-CollapseMultipleSelectList__list"
                 v-model="_value"
                 :values="_visibleElements"
                 :one="false"
             ></SelectList>
             <template v-if="_displayMoreButton" slot="afterbody">
-                <div @click="onChangeExpand" class="spui-DropdownSectionFilter__more">
+                <div @click="onChangeExpand" class="spui-CollapseMultipleSelectList__more">
                     {{ listOpen ? "Свернуть" : "Показать все" }}
                 </div>
             </template>
-        </DropdownSection>
-        <Tooltip v-if="_tooltip" @click.native="onTooltipClick" class="spui-DropdownSectionFilter__tooltip" type="accent" position="right" centered forced>Применить</Tooltip>
+        </Collapse>
+        <Tooltip v-if="_tooltip" @click.native="onTooltipClick" class="spui-CollapseMultipleSelectList__tooltip" type="accent" position="right" centered forced>Применить</Tooltip>
         <slot v-if="_isSlotAfterExist" name="after"></slot>
     </div>
 </template>
 
 <script>
 import { pluralize } from "@/helpers/pluralize";
-import DropdownSection from "../DropdownSection/DropdownSection.vue";
+import Collapse from "../Collapse/Collapse.vue";
 import SelectList from "../SelectList/SelectList.vue";
 import Tooltip from "../Tooltip/Tooltip.vue";
 
 export default {
-    name: "spui-DropdownSectionFilter",
+    name: "spui-CollapseMultipleSelectList",
     components: {
-        DropdownSection,
+        Collapse,
         SelectList,
         Tooltip,
     },
@@ -203,5 +203,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./DropdownSectionFilter.scss";
+@import "./CollapseMultipleSelectList.scss";
 </style>

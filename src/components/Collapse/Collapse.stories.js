@@ -1,77 +1,77 @@
-import DropdownSection from "./DropdownSection.vue";
+import Collapse from "./Collapse.vue";
 import RangePrice from "../RangePrice/RangePrice.vue";
 import Checkbox from "../Checkbox/Checkbox.vue";
 
 export default {
-    title: "Компоненты/DropdownSection",
-    component: DropdownSection,
+    title: "Общие/Collapse",
+    component: Collapse,
 };
 
 export const empty = () => ({
-    components: { DropdownSection },
+    components: { Collapse },
     data() {
         return {
             opened: false,
         }
     },
     template: `
-    <DropdownSection v-model="opened"></DropdownSection>`,
+    <Collapse v-model="opened"></Collapse>`,
 });
 
 export const withText = () => ({
-    components: { DropdownSection },
+    components: { Collapse },
     data() {
         return {
             opened: false,
         }
     },
     template: `
-    <DropdownSection v-model="opened" heading="Секция с текстом">
+    <Collapse v-model="opened" heading="Секция с текстом">
     Текст секции
-    </DropdownSection>`,
+    </Collapse>`,
 });
 
 export const withMetaInfo = () => ({
-    components: { DropdownSection },
+    components: { Collapse },
     data() {
         return {
             opened: false,
         }
     },
     template: `
-    <DropdownSection metainfo="Текст метаинформации очень и очень длинный по своему размеру" v-model="opened" heading="Секция с мета информацией">
+    <Collapse metainfo="Текст метаинформации очень и очень длинный по своему размеру" v-model="opened" heading="Секция с мета информацией">
     Текст секции
-    </DropdownSection>`,
+    </Collapse>`,
 });
 
 export const openOnStart = () => ({
-    components: { DropdownSection },
+    components: { Collapse },
     data() {
         return {
             opened: true,
         }
     },
     template: `
-    <DropdownSection v-model="opened" heading="Изначально открытая секция">
+    <Collapse v-model="opened" heading="Изначально открытая секция">
     Текст секции
-    </DropdownSection>`,
+    </Collapse>`,
 });
 
 export const withLongText = () => ({
-    components: { DropdownSection },
+    components: { Collapse },
     data() {
         return {
             opened: false,
         }
     },
     template: `
-    <DropdownSection v-model="opened" heading="Очень и очень длинное название данной секции которое не помещается в экран">
+    <Collapse v-model="opened" heading="Очень и очень длинное название данной секции которое не помещается в экран">
     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae odio eos assumenda, libero tempora voluptate reiciendis repudiandae repellendus dolore eveniet cupiditate eum quam dicta rerum? Blanditiis voluptatem sunt doloremque odio. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae odio eos assumenda, libero tempora voluptate reiciendis repudiandae repellendus dolore eveniet cupiditate eum quam dicta rerum? Blanditiis voluptatem sunt doloremque odio. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae odio eos assumenda, libero tempora voluptate reiciendis repudiandae repellendus dolore eveniet cupiditate eum quam dicta rerum? Blanditiis voluptatem sunt doloremque odio. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae odio eos assumenda, libero tempora voluptate reiciendis repudiandae repellendus dolore eveniet cupiditate eum quam dicta rerum? Blanditiis voluptatem sunt doloremque odio.
-    </DropdownSection>`,
+    </Collapse>`,
 });
 
 export const withRange = () => ({
-    components: { DropdownSection, RangePrice },
+    components: { Collapse, RangePrice },
     data() {
         return {
             opened: false,
@@ -81,24 +81,24 @@ export const withRange = () => ({
         };
     },
     template: `
-    <DropdownSection v-model="opened" heading="Ценовой диапазон">
+    <Collapse v-model="opened" heading="Ценовой диапазон">
     <RangePrice v-model='range.value'></RangePrice>
-    </DropdownSection>`,
+    </Collapse>`,
 });
 
 export const withCheckboxes = () => ({
-    components: { DropdownSection, Checkbox },
+    components: { Collapse, Checkbox },
     data() {
         return {
             opened: false,
             checked: true,
         };
     },
-    template: `<DropdownSection v-model="opened" heading="С чекбоксом"><Checkbox v-model='checked'>Текст</Checkbox></DropdownSection>`,
+    template: `<Collapse v-model="opened" heading="С чекбоксом"><Checkbox v-model='checked'>Текст</Checkbox></Collapse>`,
 });
 
 export const withSlots = () => ({
-    components: { DropdownSection, Checkbox },
+    components: { Collapse, Checkbox },
     data() {
         return {
             opened: false,
@@ -107,11 +107,11 @@ export const withSlots = () => ({
     },
     render() {
         return (
-            <DropdownSection v-model={this.opened} heading="Со слотами - задаются только отступы и базовый размер текста">
+            <Collapse v-model={this.opened} heading="Со слотами - задаются только отступы и базовый размер текста">
                 <template slot="beforebody">Слот перед телом секции</template>
                 Текст секции
                 <template slot="afterbody">Слот после тела секции</template>
-            </DropdownSection>
+            </Collapse>
         );
     },
 });

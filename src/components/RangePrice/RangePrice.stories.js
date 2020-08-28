@@ -1,7 +1,7 @@
 import RangePrice from "./RangePrice.vue";
 
 export default {
-    title: "Компоненты/RangePrice",
+    title: "Общие/RangePrice",
     component: RangePrice
 };
 

@@ -2,7 +2,7 @@ import Checkbox from "./Checkbox.vue";
 import { action } from "@storybook/addon-actions";
 
 export default {
-    title: "Компоненты/Checkbox",
+    title: "Общие/Checkbox",
     component: Checkbox
 };
 

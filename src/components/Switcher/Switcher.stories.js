@@ -1,7 +1,7 @@
 import Switcher from "./Switcher.vue";
 
 export default {
-    title: "Компоненты/Switcher",
+    title: "Общие/Switcher",
     component: Switcher
 };
 

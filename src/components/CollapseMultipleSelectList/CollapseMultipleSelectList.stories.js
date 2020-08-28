@@ -1,12 +1,12 @@
-import DropdownSectionFilter from "./DropdownSectionFilter.vue";
+import CollapseMultipleSelectList from "./CollapseMultipleSelectList.vue";
 
 export default {
-    title: "Компоненты/DropdownSectionFilter",
-    component: DropdownSectionFilter,
+    title: "Специфичные/CollapseMultipleSelectList",
+    component: CollapseMultipleSelectList,
 };
 
 export const exampleSize = () => ({
-    components: { DropdownSectionFilter },
+    components: { CollapseMultipleSelectList },
     data() {
         return {
             open: true,
@@ -53,7 +53,7 @@ export const exampleSize = () => ({
         }
     },
     template: `<div>
-            <DropdownSectionFilter
+            <CollapseMultipleSelectList
                 v-model="value"
                 :heading="'Размер'"
                 :open="open"
@@ -69,7 +69,7 @@ export const exampleSize = () => ({
 });
 
 export const exampleColor = () => ({
-    components: { DropdownSectionFilter },
+    components: { CollapseMultipleSelectList },
     data() {
         return {
             open: true,
@@ -108,7 +108,7 @@ export const exampleColor = () => ({
         }
     },
     template: `<div>
-            <DropdownSectionFilter
+            <CollapseMultipleSelectList
                 v-model="value"
                 :heading="'Цвет'"
                 :open="open"

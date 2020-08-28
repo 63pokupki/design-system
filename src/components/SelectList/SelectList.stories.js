@@ -14,7 +14,7 @@ const elements = [
 ]
 
 export default {
-    title: "Компоненты/SelectList",
+    title: "Общие/SelectList",
     component: SelectList,
 };
 
