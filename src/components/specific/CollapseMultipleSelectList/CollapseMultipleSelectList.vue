@@ -38,9 +38,9 @@
 
 <script>
 import { pluralize } from "@/helpers/pluralize";
-import Collapse from "../Collapse/Collapse.vue";
-import SelectList from "../SelectList/SelectList.vue";
-import Tooltip from "../Tooltip/Tooltip.vue";
+import Collapse from "../../common/Collapse/Collapse.vue";
+import SelectList from "../../common/SelectList/SelectList.vue";
+import Tooltip from "../../common/Tooltip/Tooltip.vue";
 
 export default {
     name: "spui-CollapseMultipleSelectList",
