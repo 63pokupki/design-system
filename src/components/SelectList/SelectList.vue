@@ -4,7 +4,7 @@
             <label
                 class="spui-SelectList__label"
                 :class="{ 'is-selected': isEqual(selected, element) }"
-                v-for="(element, index) in list"
+                v-for="(element, index) in values"
                 :key="index"
                 :for="index + uuid"
             >
@@ -22,7 +22,7 @@
             <label
                 class="spui-SelectList__label"
                 :class="{ 'is-selected': isContain(element, selected) }"
-                v-for="(element, index) in list"
+                v-for="(element, index) in values"
                 :key="index"
                 :for="index + uuid"
             >
@@ -50,7 +50,7 @@ export default {
             type: Boolean,
             default: true,
         },
-        list: {
+        values: {
             type: Array,
             default: () => [],
         },
@@ -58,7 +58,7 @@ export default {
             type: String,
             default: "label",
         },
-        value: {}
+        value: {},
     },
     data() {
         return {
@@ -72,14 +72,15 @@ export default {
                 return this.value;
             },
             set(value) {
-                this.$emit("change", value);
+                this.$emit("input", value);
             },
         },
     },
     methods: {
         isEqual,
-        isContain(elm, list) {
-            const finded = list.find((el) => isEqual(el, elm));
+        isContain(elm, values) {
+            if (!values) return;
+            const finded = values.find((el) => isEqual(el, elm));
             return finded ? true : false;
         },
     },

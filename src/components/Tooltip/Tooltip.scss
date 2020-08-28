@@ -22,7 +22,7 @@ $tooltip-triangle-size: 6px;
     font-style: normal;
     left: 50%;
     font-family: $font-primary;
-    min-width: 120px;
+    min-width: 110px;
     transform: translate(-50%, 100%);
     transition: opacity $transition-primary, visibility $transition-primary;
     box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.1);
@@ -36,7 +36,7 @@ $tooltip-triangle-size: 6px;
         position: absolute;
         left: calc(50% - #{$tooltip-triangle-size}/ 2);
         top: -3px;
-        background-color: $tooltip-background-color;
+        background-color: inherit;
         transform: rotate(45deg);
     }
 
@@ -100,10 +100,6 @@ $tooltip-triangle-size: 6px;
         background-color: $tooltip-background-color-accent;
         color: white;
         font-weight: 600;
-
-        &:before {
-            background-color: $tooltip-background-color-accent;
-        }
     }
 
     // вид подсказки с ошибкой
@@ -111,9 +107,5 @@ $tooltip-triangle-size: 6px;
         background-color: $error-light;
         color: $color-text-base;
         font-weight: 400;
-
-        &:before {
-            background-color: $error-light;
-        }
     }
 }
