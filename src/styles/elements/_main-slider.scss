@@ -165,25 +165,68 @@
 		max-width: 100%;
 		overflow: hidden;
 
-		.main-slider__button-wrapper {
-			width: 100%;
-		}
-
 		.main-slider__button {
 			width: 32px;
 			height: 32px;
 			background: #fff;
 			opacity: .7;
 			z-index: 10;
+			position: absolute;
+
+			&_left {
+				left: 0;
+			}
+
+			&_right {
+				right: 0;
+			}
+
+			&_left,
+			&_right {
+				top: 50%;
+				transform: translateY(-50%);
+			}
 
 			&_left::before,
 			&_left::after {
+				content: "";
 				left: 5px;
+				display: block;
+				position: absolute;
+				width: 15px;
+				height: 2px;
+				background-color: #36a6f2;
+				border-radius: 5px;
 			}
+
+
 
 			&_right::before,
 			&_right::after {
+				content: "";
 				left: 10px;
+				display: block;
+				position: absolute;
+				width: 15px;
+				height: 2px;
+				background-color: #36a6f2;
+				border-radius: 5px;
+			}
+
+			&_left::before {
+				transform: translateY(5px) rotate(45deg)
+			}
+
+			&_left::after {
+				transform: translateY(-5px) rotate(-45deg);
+			}
+
+			&_right::before {
+				transform: translateY(5px) rotate(-45deg);
+			}
+			
+			&_right::after {
+				transform: translateY(-5px) rotate(45deg);
 			}
 		}
 
