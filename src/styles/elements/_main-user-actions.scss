@@ -86,7 +86,7 @@
 		}
 
 		&__link {
-			margin-bottom: 22px;
+			margin-bottom: 2px;
 		}
 		
 		&__link:first-child {
@@ -103,7 +103,7 @@
 		&__link {
 			height: 200px;
 			padding: 30px;
-			margin-bottom: 33px;
+			margin-bottom: 0;
 
 			&_org {
 				&::after {
