@@ -78,10 +78,17 @@
 			margin: 0;
 		}
 
+		&-img-container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 150px;
+			height: 150px;
+		}
+
 		&-img {
-			max-height: 150px;
-			max-width: 150px;
-			margin: 0 auto;
+			max-height: 100%;
+			max-width: 100%;
 		}
 
 		&-name {
@@ -263,13 +270,12 @@
 		&__item {
 			margin-right: 10px;
 			max-height: 240px;
-    		height: 240px;
-		}
-
-		&__item-img {
-			max-height: 160px;
-			width: auto;
-			margin: 0 auto;
+			height: 240px;
+			
+			&-img-container {
+				width: 160px;
+				height: 160px;
+			}
 		}
 
 		&__footer {
@@ -413,10 +419,6 @@
 			height: 256px;
 			max-height: 256px;
 			margin-right: 35px;
-		}
-
-		&__item-img {
-			max-height: 160px;
 		}
 
 		&__item-name {
