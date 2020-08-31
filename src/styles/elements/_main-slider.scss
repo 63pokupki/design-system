@@ -13,6 +13,7 @@
 	&__title {
 		font-size: 12px;
 		font-weight: normal;
+		margin: 12px 0;
 
 		&_subtitle {
 			font-size: 12px;
@@ -252,6 +253,7 @@
 		&__title {
 			font-size: 20px;
 			line-height: 20px;
+			margin: 20px 0;
 
 			.main-slider__footer-link {
 				display: flex;
@@ -405,15 +407,11 @@
 			width: max-content;
 		}
 
-		&__link {
-			height: 272px;
-		}
-
 		&__item {
 			min-width: 160px;
 			max-width: 160px;
-			height: 272px;
-			max-height: 272px;
+			height: 256px;
+			max-height: 256px;
 			margin-right: 35px;
 		}
 
@@ -473,11 +471,6 @@
 				margin-bottom: 10px;
 				max-height: 160px;
 				height: auto;
-			}
-
-			.main-slider__item-name {
-				font-size: 15px;
-				line-height: 20px;
 			}
 
 			.main-slider__nested-wrapper:nth-child(2) {
