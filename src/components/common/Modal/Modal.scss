@@ -1,0 +1,83 @@
+$spui-Modal-font: $font-primary;
+/* Z-index */
+$spui-Modal-z-1: 5000;
+$spui-Modal-z-2: $spui-Modal-z-1 + 1;
+$spui-Modal-z-3: $spui-Modal-z-2 + 1;
+$spui-Modal-z-4: $spui-Modal-z-3 + 1;
+
+.spui-Modal_sticky {
+    .spui-Modal__head {
+        position: sticky;
+        top: 0;
+        z-index: $spui-Modal-z-4;
+    }
+}
+.spui-Modal {
+    font-family: $spui-Modal-font;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: $spui-Modal-z-1;
+
+    &__head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 12px;
+        background-color: #ffffff;
+    }
+
+    &__slot-head {
+        
+    }
+
+    &__close {
+        @extend %reset-button;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 35px;
+        width: 35px;
+        font-size: 17px;
+        color: #1D1E1F;
+
+        &:active {
+            .icon-closing {
+                @include deep-click(0.85);
+            }
+        }
+    }
+
+    &__window {
+        background-color: #ffffff;
+        position: relative;
+        z-index: $spui-Modal-z-3;
+        max-height: 98%;
+        max-width: 98%;
+        overflow-y: auto;
+    }
+
+    &__body {
+        padding: 0 12px 12px;
+        font-size: 12px;
+    }
+
+    &__bg {
+        position: fixed;
+        z-index: $spui-Modal-z-2;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.6);
+    }
+}
