@@ -3,6 +3,12 @@
 	border-bottom: 1px solid rgba(54, 165, 242, 0.15);
 	padding: 15px 0;
 
+	.main-page__title {
+		font-weight: bold;
+		font-size: 14px;
+		margin: 15px 0 0 10px;
+	}
+
 	&__wrapper {
 		padding: 0 10px;
 	}
@@ -27,7 +33,12 @@
 		}
 
 		&:nth-of-type(2) {
-			display: none;
+			.main-about-us__text-title {
+				font-weight: bold;
+				font-size: 14px;
+				display: block;
+				margin: 15px 0;
+			}
 		}
 	}
 
@@ -49,7 +60,7 @@
 @media (min-width: 768px) {
 	.main-about-us {
 		.main-page__title {
-			text-align: center;
+			justify-content: center;
 		}
 
 		&__text {
@@ -68,13 +79,34 @@
 			flex-wrap: wrap;
 		}
 
+		.main-page__title {
+			justify-content: flex-start;
+			margin-bottom: 25px;
+			font-size: 16px;
+		}
+
 		&__text {
 			width: 40%;
 			margin: 0;
 			text-align: left;
 
+			&:first-of-type {
+				.main-about-us__text-title {
+					font-size: 12px;
+					line-height: 1.5;
+					font-weight: 400;
+					display: inline;
+				}
+			}
+
 			&:nth-of-type(2) {
 				display: block;
+
+				.main-about-us__text-title {
+					margin-top: 0;
+					font-size: 13px;
+					line-height: 1.5;
+				}
 			}
 
 			&-title {

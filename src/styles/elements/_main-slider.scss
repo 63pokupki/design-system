@@ -38,6 +38,7 @@
 		padding: 0;
 		overflow-x: scroll;
 		padding-bottom: 15px;
+		overflow-y: hidden;
 
 		&::-webkit-scrollbar {
 			height: 2px;
@@ -218,8 +219,6 @@
 				border-radius: 5px;
 			}
 
-
-
 			&_right::before,
 			&_right::after {
 				content: "";
@@ -271,11 +270,6 @@
 			margin-right: 10px;
 			max-height: 240px;
 			height: 240px;
-			
-			&-img-container {
-				width: 160px;
-				height: 160px;
-			}
 		}
 
 		&__footer {
@@ -338,9 +332,8 @@
 		}
 
 		&__button {
-			width: 32px;
-			height: 32px;
-			opacity: .7;
+			width: 15px;
+			height: 22px;
 			top: 50%;
 			transform: translateY(-50%);
 			position: absolute;
@@ -381,7 +374,7 @@
 
 			&_right {
 				margin-left: auto;
-				right: 0;
+				right: -4px;
 
 				&::after {
 					transform: translateY(-5px) rotate(45deg);
@@ -407,7 +400,7 @@
 
 		&__list {
 			padding: 0 5px 15px;
-			margin: 0 15px;
+			margin: 0 8px;
 			overflow: visible;
 			// transition: transform .2s ease;
 			width: max-content;
@@ -419,6 +412,11 @@
 			height: 256px;
 			max-height: 256px;
 			margin-right: 35px;
+
+			&-img-container {
+				width: 160px;
+				height: 160px;
+			}
 		}
 
 		&__item-name {
