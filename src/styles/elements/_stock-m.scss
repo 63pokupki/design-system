@@ -4,10 +4,12 @@
         font-size: 16px;
         color: $color-text-base;
     }
+
     .modal__wrap {
         min-width: 264px;
         border-radius: 10px;
     }
+
     .modal__content {
         display: flex;
         flex-direction: column;
@@ -16,6 +18,7 @@
 
     .checkbox {
         margin-bottom: 10px;
+
         &__label {
             font-size: 14px;
             color: $color-text-base;
@@ -40,7 +43,7 @@
     &__breadcrumb {
         padding: 0 20px;
     }
-    
+
     &__back {
         padding: 17px 20px;
         // padding: 20px 20px 15px;
@@ -76,10 +79,14 @@
 
             &__selected-position {
                 border-bottom: unset;
+
+                @media (max-width: 1024px) {
+                    display: flex;
+                }
             }
 
             &__btn {
-                display: block;
+                display: flex;
                 color: $color-text-base;
                 font-weight: 600;
 
@@ -88,6 +95,8 @@
                 }
 
                 @media (max-width: 1024px) {
+                    display: flex;
+                    flex-direction: column;
                     max-width: 120px;
                 }
             }
@@ -114,6 +123,7 @@
             }
         }
     }
+
     .stock-items-filter__show-all {
         .checkbox__label {
             margin: 0 0 0 10px;
@@ -123,6 +133,7 @@
 }
 
 .stock-m-items {
+
     // общие для всех режимов отображения изменения
     .stock-card-vertical {
         &__bar {
@@ -132,6 +143,7 @@
         }
 
     }
+
     .stock-card-vertical-wrapper:hover .stock-card-vertical {
         box-shadow: unset;
     }
@@ -144,6 +156,7 @@
     .stock-card-container.horizontal {
         .stock-card-vertical-wrapper {
             display: initial;
+
             @media screen and (min-width: 768px) {
                 display: none;
             }
@@ -152,6 +165,7 @@
         .stock-card-horizontal {
             display: none;
             margin-bottom: 25px;
+
             @media screen and (min-width: 768px) {
                 display: flex;
             }
@@ -190,6 +204,7 @@
         .stock-card-vertical-wrapper {
             margin-bottom: 15px;
         }
+
         .stock-card-vertical {
             &__heading {
                 font-size: 14px;
@@ -265,7 +280,7 @@
         .org-get-position-btn {
             margin-right: 20px;
         }
-        
+
         // отображение по умолчанию
         .stock-card-vertical-wrapper {
             width: 49.99999%;
@@ -322,6 +337,7 @@
             &__buy {
                 max-width: unset;
             }
+
             &__bar {
                 margin-bottom: 10px;
             }
