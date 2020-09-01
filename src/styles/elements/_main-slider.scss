@@ -74,6 +74,7 @@
 		display: flex;
 		flex-direction: column;
 		margin-right: 20px;
+		height: fit-content;
 
 		&:last-child {
 			margin: 0;
@@ -99,6 +100,7 @@
 			margin-bottom: 10px;
 			padding-right: 5px;
 			transition: color .2s ease;
+			margin-top: 19px;
 		}
 
 		&-price {
@@ -106,6 +108,7 @@
 			font-size: 16px;
 			line-height: 16px;
 			color: #1E2023;
+			margin-top: auto;
 
 			&_penny {
 				font-size: 14px;
@@ -242,7 +245,7 @@
 			&_right::before {
 				transform: translateY(5px) rotate(-45deg);
 			}
-			
+
 			&_right::after {
 				transform: translateY(-5px) rotate(45deg);
 			}
@@ -268,8 +271,6 @@
 
 		&__item {
 			margin-right: 10px;
-			max-height: 240px;
-			height: 240px;
 		}
 
 		&__footer {
@@ -402,25 +403,22 @@
 			padding: 0 5px 15px;
 			margin: 0 8px;
 			overflow: visible;
-			// transition: transform .2s ease;
 			width: max-content;
 		}
 
 		&__item {
 			min-width: 160px;
 			max-width: 160px;
-			height: 256px;
-			max-height: 256px;
 			margin-right: 35px;
 
 			&-img-container {
 				width: 160px;
-				height: 160px;
+				height: 240px;
 			}
 		}
 
 		&__item-name {
-			margin-top: auto;
+			margin-top: 23px;
 			font-size: 14px;
     		line-height: 20px;
 		}
@@ -444,13 +442,10 @@
 			padding: 0;
 
 			.main-slider__list {
-				height: 860px;
+				height: 730px;
 				overflow: hidden;
 				padding: 0;
 				width: 100%;
-			}
-
-			.main-slider__nested-list {
 				display: flex;
 				flex-direction: column;
 				flex-flow: wrap;
@@ -467,9 +462,7 @@
 
 			.main-slider__item-img {
 				width: auto;
-				margin: 0 auto;
-				margin-bottom: 10px;
-				max-height: 160px;
+				margin: 0 auto 10px;
 				height: auto;
 			}
 
