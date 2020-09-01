@@ -35,7 +35,9 @@
 		&:nth-of-type(2) {
 			p {
 				text-indent: 15px;
+				font-weight: normal;
 			}
+
 			.main-about-us__text-title {
 				font-weight: bold;
 				font-size: 14px;
@@ -55,7 +57,7 @@
 		}
 
 		.main-about-us__button {
-			display: none;
+			background: none;
 		}
 	}
 }
