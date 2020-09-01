@@ -1,19 +1,57 @@
 import Checkbox from "./Checkbox.vue";
-import { action } from "@storybook/addon-actions";
 
 export default {
     title: "Общие/Checkbox",
     component: Checkbox
 };
 
-export const empty = () => ({
+export const modelBoolean = () => ({
     components: { Checkbox },
     data() {
         return {
             checked: false
         }
     },
-    template: "<Checkbox v-model='checked'></Checkbox>"
+    template: `
+    <div>
+        <p>Значение: {{checked}}</p>
+        <Checkbox v-model='checked'></Checkbox>
+    </div>
+    `
+});
+
+export const modelArray = () => ({
+    components: { Checkbox },
+    data() {
+        return {
+            checked: []
+        }
+    },
+    template: `
+    <div>
+        <p>Значение: {{checked}}</p>
+        <Checkbox val="Значение 1" v-model='checked'>Значение 1</Checkbox>
+        <Checkbox val="Значение 2" v-model='checked'>Значение 2</Checkbox>
+        <Checkbox val="Значение 3" v-model='checked'>Значение 3</Checkbox>
+    </div>
+    `
+});
+
+export const onlyText = () => ({
+    components: { Checkbox },
+    data() {
+        return {
+            checked: []
+        }
+    },
+    template: `
+    <div>
+        <p>Значение: {{checked}}</p>
+        <Checkbox val="Значение 1" :onlyText="true" v-model='checked'>Значение 1</Checkbox>
+        <Checkbox val="Значение 2" :onlyText="true" v-model='checked'>Значение 2</Checkbox>
+        <Checkbox val="Значение 3" :onlyText="true" v-model='checked'>Значение 3</Checkbox>
+    </div>
+    `
 });
 
 export const withTextLeft = () => ({
@@ -23,7 +61,7 @@ export const withTextLeft = () => ({
             checked: true
         }
     },
-    template: `<Checkbox v-model='checked' :position="'left'">Со значком слева</Checkbox>`
+    template: `<Checkbox v-model='checked' position="left">Со значком слева</Checkbox>`
 });
 
 export const withTextRight = () => ({
