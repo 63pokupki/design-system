@@ -33,6 +33,7 @@
 		}
 
 		&:nth-of-type(2) {
+			display: none;
 			p {
 				text-indent: 15px;
 				font-weight: normal;
@@ -50,6 +51,10 @@
 	&_show {
 		.main-about-us__text {
 			height: auto;
+
+			&:nth-of-type(2) {
+				display: block;
+			}
 
 			&::after {
 				display: none;

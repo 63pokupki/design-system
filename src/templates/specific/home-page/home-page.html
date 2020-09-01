@@ -9,12 +9,8 @@
 		<header class="main-page__header">
 			<!-- Верхний баннер -->
 			<div class="main-slider main-slider_banner">
-                <button class="main-slider__button main-slider__button_left"
-                        v-if="sliderLeftButton"
-                        @click="fOnliderSwap('left')"></button>
-                <button class="main-slider__button main-slider__button_right"
-                        v-if="sliderRightButton"
-                        @click="fOnliderSwap('right')"></button>
+                <button class="main-slider__button main-slider__button_left"></button>
+                <button class="main-slider__button main-slider__button_right"></button>
 				<ul class="main-slider__list main-slider__list_top">
 					<li class="main-banner main-banner_top">
 						<a class="main-banner__link" href="#">
@@ -56,11 +52,11 @@
 						<li class="main-toggle-block__content-achievement-item main-toggle-block__content-achievement-item_brand">
 							7 000 брендов
 						</li>
-						<li class="main-toggle-block__content-achievement-item main-toggle-block__content-achievement-item_reviews">
+                        <li class="main-toggle-block__content-achievement-item main-toggle-block__content-achievement-item_purchases">
+                            3 млн. товаров
+                        </li>
+                        <li class="main-toggle-block__content-achievement-item main-toggle-block__content-achievement-item_reviews">
 							Реальные отзывы
-						</li>
-						<li class="main-toggle-block__content-achievement-item main-toggle-block__content-achievement-item_purchases">
-							3 млн. товаров
 						</li>
 						<li class="main-toggle-block__content-achievement-item main-toggle-block__content-achievement-item_protect">
 							Защита покупателя
