@@ -300,12 +300,12 @@
 
         // изменения в самой карточке
         .stock-card-vertical {
-            padding: 9px 7px 12px;
+            padding: 9px 7px 32px;
 
             &__heading {
                 font-size: 12px;
                 line-height: 20px;
-                margin-bottom: 12px;
+                margin-bottom: 20px;
             }
 
             &__price-wrapper {
