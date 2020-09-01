@@ -1,0 +1,114 @@
+$spui-Radio_font: $font-primary;
+$spui-Radio_colorLabel: #1d1e1f;
+$spui-Radio_colorActive: #36a6f2;
+$spui-Radio_colorHover: #0080f6;
+$spui-Radio_colorDisabled: #c4c4c4;
+$spui-Radio_borderWidth: 1px;
+$spui-Radio_borderRadius: 2px;
+$spui-Radio_width: 16px - $spui-Radio_borderWidth * 2;
+$spui-Radio_height: 17px - $spui-Radio_borderWidth * 2;
+$spui-Radio_fontSize: 12px;
+
+.spui-Radio {
+    cursor: pointer;
+    user-select: none;
+    display: inline-flex;
+
+    &__input {
+        display: none;
+    }
+    &__fake {
+        position: relative;
+        width: $spui-Radio_width;
+        height: $spui-Radio_height;
+        min-width: $spui-Radio_width;
+        min-height: $spui-Radio_height;
+        border-radius: $spui-Radio_borderRadius;
+        border: $spui-Radio_borderWidth solid $spui-Radio_colorActive;
+    }
+    &__text {
+        font-weight: normal;
+        font-size: $spui-Radio_fontSize;
+        font-family: $spui-Radio_font;
+        color: $spui-Radio_colorLabel;
+    }
+
+    &__icon {
+        color: $spui-Radio_colorActive;
+        font-size: 10px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.spui-Radio_primary.spui-Radio_checked {
+    .spui-Radio__fake {
+        background-color: $spui-Radio_colorActive;
+    }
+
+    .spui-Radio__icon {
+        color: #ffffff;
+    }
+}
+
+.spui-Radio_rounded {
+    .spui-Radio__fake {
+        border-radius: 50%;
+    }
+
+    .spui-Radio__icon {
+        padding-top: 1px;
+        font-size: 9px;
+    }
+}
+
+.spui-Radio_waiting {
+    &:hover {
+        .spui-Radio__fake {
+            border: $spui-Radio_borderWidth solid $spui-Radio_colorHover;
+        }
+    }
+}
+
+.spui-Radio_disabled {
+    cursor: default;
+    
+    .spui-Radio__fake {
+        border: $spui-Radio_borderWidth solid $spui-Radio_colorDisabled;
+    }
+
+    .spui-Radio__text {
+        color: $spui-Radio_colorDisabled;
+    }
+
+    .spui-Radio__icon {
+        color: $spui-Radio_colorDisabled;
+    }
+}
+
+.spui-Radio_left {
+    .spui-Radio__text {
+        padding-left: 8px;
+    }
+}
+
+.spui-Radio_right {
+    .spui-Radio__text {
+        padding-right: 8px;
+    }
+}
+
+.spui-Radio_only-text {
+    .spui-Radio__fake {
+        display: none;
+    }
+    .spui-Radio__text {
+        padding: 0;
+    }
+}
+
+.spui-Radio_align-center {
+    align-items: center;
+}

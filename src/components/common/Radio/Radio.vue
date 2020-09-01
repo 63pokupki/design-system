@@ -1,23 +1,23 @@
 <template>
     <label
         :for="uniqid"
-        class="spui-Checkbox"
+        class="spui-Radio"
         :class="[_position, _checkedClass, _waiting, _disabled, _rounded, _type, _onlyText, _align]"
     >
         <input
             v-model="_model"
             :value="val"
-            class="spui-Checkbox__input"
-            type="checkbox"
+            class="spui-Radio__input"
+            type="radio"
             :id="uniqid"
         />
-        <span v-if="position == 'right' && $slots.default" class="spui-Checkbox__text">
+        <span v-if="position == 'right' && $slots.default" class="spui-Radio__text">
             <slot name="default"></slot>
         </span>
-        <span class="spui-Checkbox__fake">
-            <i v-if="_checked" class="spui-Checkbox__icon ds-icon icon-check-in"></i>
+        <span class="spui-Radio__fake">
+            <i v-if="_checked" class="spui-Radio__icon ds-icon icon-check-in"></i>
         </span>
-        <span v-if="position == 'left' && $slots.default" class="spui-Checkbox__text">
+        <span v-if="position == 'left' && $slots.default" class="spui-Radio__text">
             <slot name="default"></slot>
         </span>
     </label>
@@ -25,12 +25,14 @@
 
 <script>
 import uuid from "short-uuid";
-
+import isEqual from "lodash-es/isEqual";
 export default {
-    name: "Checkbox",
+    name: "Radio",
     props: {
         value: {},
-        val: {},
+        val: {
+            required: true
+        },
         name: {
             type: String,
             default: "",
@@ -56,7 +58,7 @@ export default {
         },
         rounded: {
             type: Boolean,
-            default: false,
+            default: true,
         },
         position: {
             type: String,
@@ -68,7 +70,7 @@ export default {
     },
     data() {
         return {
-            base: "spui-Checkbox",
+            base: "spui-Radio",
             uniqid: null,
         };
     },
@@ -96,11 +98,7 @@ export default {
             const model = this._model;
             const value = this.val;
 
-            if (Array.isArray(model)) {
-                return model.indexOf(value) !== -1;
-            } else {
-                return model;
-            }
+            return isEqual(model, value);
         },
         _checkedClass() {
             return this._checked ? `${this.base}_checked` : null;
@@ -127,5 +125,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./Checkbox.scss";
+@import "./Radio.scss";
 </style>

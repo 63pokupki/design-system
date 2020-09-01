@@ -60,6 +60,7 @@ $spui-Checkbox_fontSize: 12px;
 
     .spui-Checkbox__icon {
         padding-top: 1px;
+        font-size: 9px;
     }
 }
 
@@ -72,6 +73,8 @@ $spui-Checkbox_fontSize: 12px;
 }
 
 .spui-Checkbox_disabled {
+    cursor: default;
+    
     .spui-Checkbox__fake {
         border: $spui-Checkbox_borderWidth solid $spui-Checkbox_colorDisabled;
     }
@@ -95,4 +98,17 @@ $spui-Checkbox_fontSize: 12px;
     .spui-Checkbox__text {
         padding-right: 8px;
     }
+}
+
+.spui-Checkbox_only-text {
+    .spui-Checkbox__fake {
+        display: none;
+    }
+    .spui-Checkbox__text {
+        padding: 0;
+    }
+}
+
+.spui-Checkbox_align-center {
+    align-items: center;
 }
