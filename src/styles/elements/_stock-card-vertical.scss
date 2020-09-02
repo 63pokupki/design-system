@@ -24,6 +24,7 @@
         font-size: 12px;
         color: #1e2023;
         margin-right: 5px;
+
         &::first-letter {
             text-transform: capitalize;
         }
@@ -58,6 +59,7 @@
         display: flex;
         align-items: baseline;
         position: relative;
+
         &:hover {
             .item-params-list {
                 &:after {
@@ -65,9 +67,11 @@
                 }
             }
         }
+
         // Добавляет три точки в конце
         &.dots {
             padding: 0 20px 0 0;
+
             .item-params-list {
                 &::after {
                     display: flex;
@@ -85,6 +89,7 @@
     }
 
     & &__item-params-list {
+
         // max-height: 25px;
         // Три точки
         &::after {
@@ -96,6 +101,7 @@
             font-size: 12px;
             cursor: pointer;
         }
+
         // Всплывашка с ошибкой
         .ds-popover {
             width: 200px;
@@ -118,23 +124,31 @@
     &__wrapper {
         display: flex;
         position: relative;
-        align-items: flex-start;
+        align-items: center;
         justify-content: center;
         width: 100%;
         height: 262px;
         background: white;
         margin-bottom: 15px;
 
+        @media (max-width: 767px) {
+            height: 212px;
+            margin-bottom: 0px;
+        }
+
         &:hover {
+
             .stock-card-vertical__prev,
             .stock-card-vertical__next,
             .stock-card-vertical__favorite,
             .stock-card-vertical__compare-w {
                 display: flex;
             }
+
             .stock-card-vertical__params {
                 overflow: hidden;
             }
+
             .item-params-list {
                 flex-wrap: nowrap;
                 overflow: auto;
@@ -155,6 +169,7 @@
         color: $color-primary;
         font-size: 12px;
         z-index: 2;
+
         // Псевдоэлемент, для увеличения области клика
         &::before {
             content: "";
@@ -241,6 +256,7 @@
         top: 8px;
         right: 8px;
         z-index: 1;
+
         .icon-heart-filled {
             color: $color-favorite-icon-heart;
         }
@@ -288,6 +304,7 @@
             left: 8px;
             height: 26px;
             width: 26px;
+
             .tooltip {
                 display: none;
             }
@@ -303,15 +320,13 @@
         max-height: 60px;
         margin-bottom: 10px;
         height: 60px;
-        @media (max-width: 767px) {
-            margin-bottom: 5px;
-        }
 
         div {
             &::first-letter {
                 text-transform: uppercase;
             }
         }
+
         &::first-letter {
             text-transform: uppercase;
         }
@@ -321,6 +336,22 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+
+    &__price-wrapper {
+        position: relative;
+
+        .icon-cart {
+            @media (min-width: 768px) {
+                display: none;
+            }
+
+            position: absolute;
+            right: 0;
+            top: calc(50% - 13px);
+            color: $color-primary;
+            font-size: 24px;
+        }
     }
 
     &__price {
@@ -335,6 +366,7 @@
         line-height: 18px;
         color: rgba(96, 98, 102, 0.75);
     }
+
 
     &__buy {
         width: 100%;
