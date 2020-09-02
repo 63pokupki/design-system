@@ -271,6 +271,14 @@
 
 		&__item {
 			margin-right: 10px;
+
+			&-img-container {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 142px;
+				height: 142px;
+			}
 		}
 
 		&__footer {
@@ -280,10 +288,6 @@
 		&_big {
 			.main-slider__list {
 				max-height: 940px;
-			}
-
-			.main-slider__list {
-				flex-flow: wrap;
 			}
 
 			.main-slider__item {

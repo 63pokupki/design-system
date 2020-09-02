@@ -109,11 +109,11 @@
 		width: 100px;
 		text-align: center;
 		color: #747679;
-		font-size: 11px;
+		font-size: 10px;
 		line-height: 16px;
 		padding-top: 50px;
 		position: relative;
-		margin: 0 5px 15px 5px;
+		margin: 0 3% 21px;
 
 		&::before {
 			content: '';
@@ -128,52 +128,52 @@
 		}
 
 		&_brand {
-			width: 70px;
+			width: 72px;
 
 			&::before {
 				background-image: url("~images/important_images/main-achievement/brands.png");
-				width: 20px;
-				height: 38px;
+				width: 18px;
+				height: 34px;
 			}
 		}
 
 		&_reviews {
-			width: 88px;
+			width: 90px;
 
 			&::before {
 				background-image: url("~images/important_images/main-achievement/reviews.png");
-				width: 45px;
-				height: 32px;
+				width: 41px;
+				height: 29px;
 			}
 		}
 
 		&_purchases {
-			width: 73px;
+			width: 75px;
 
 			&::before {
 				background-image: url("~images/important_images/main-achievement/purchases.png");
-				width: 34px;
-				height: 37px;
+				width: 31px;
+				height: 33px;
 			}
 		}
 
 		&_protect {
-			width: 96px;
+			width: 100px;
 
 			&::before {
 				background-image: url("~images/important_images/main-achievement/protect.png");
-				width: 32px;
-				height: 37px;
+				width: 29px;
+				height: 34px;
 			}
 		}
 
 		&_extradition {
-			width: 99px;
+			width: 102px;
 
 			&::before {
 				background-image: url("~images/important_images/main-achievement/extradition.png");
-				width: 55px;
-				height: 47px;
+				width: 50px;
+				height: 43px;
 			}
 		}
 	}
@@ -217,6 +217,98 @@
 			height: 56px;
 			width: 264px;
 			border-radius: 30px;
+		}
+
+		&__content-title {
+			order: 1;
+		}
+
+		&__content-title {
+			font-size: 38px;
+			line-height: 1;
+		}
+
+		&__content-title-subtitle {
+			font-size: 27px;
+			line-height: 44px;
+		}
+
+		&__content-features-list {
+			margin-top: 15px;
+			order: 2;
+		}
+
+		&__content-features-item {
+			font-size: 18px;
+			line-height: 36px;
+		}
+
+		&__content-achievement-list {
+			width: 600px;
+			justify-content: space-between;
+			margin-top: 24px;
+			order: 4;
+		}
+
+		&__content-achievement-item {
+			margin: 0 2% 21px;
+			font-size: 11px;
+
+			&_brand {
+				width: 79px;
+
+				&::before {
+					width: 19px;
+					height: 38px;
+				}
+			}
+
+			&_reviews {
+				width: 99px;
+
+				&::before {
+					width: 45px;
+					height: 32px;
+				}
+			}
+
+			&_purchases {
+				width: 82px;
+
+				&::before {
+					width: 34px;
+					height: 37px;
+				}
+			}
+
+			&_protect {
+				width: 107px;
+
+				&::before {
+					width: 32px;
+					height: 37px;
+				}
+			}
+
+			&_extradition {
+				width: 112px;
+
+				&::before {
+					width: 55px;
+					height: 47px;
+				}
+			}
+		}
+
+		.main-page__button {
+			 order: 3;
+			margin-top: 34px;
+		 }
+
+		&__content-alert {
+			margin-top: 0;
+			width: 100%;
+			order: 5;
 		}
 	}
 }
