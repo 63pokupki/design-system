@@ -114,6 +114,9 @@
 
 			&_ml {
 				margin-left: 40px;
+				font-weight: bold;
+				font-size: 14px;
+				line-height: 20px;
 			}
 		}
 
@@ -132,7 +135,7 @@
 
 			section:nth-of-type(2) {
 				order: 2;
-				margin-top: 43px;
+				margin-top: 97px;
 			}
 
 			section:nth-of-type(3) {
@@ -141,13 +144,13 @@
 				display: flex;
 				align-items: center;
 				height: fit-content;
-				margin-top: -102px;
+				margin-top: -159px;
 			}
 
 			section:nth-of-type(4) {
 				order: 5;
 				width: 48%;
-				margin-top: -177px;
+				margin-top: -237px;
 			}
 
 			section:nth-of-type(5) {
