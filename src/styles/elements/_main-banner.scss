@@ -30,8 +30,9 @@
 
 	&_mini {
 		width: 518px;
-		height: 220px;
+		max-height: 220px;
 		max-width: 100%;
+		height: auto;
 	}
 }
 
