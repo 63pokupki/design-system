@@ -291,13 +291,8 @@
 			}
 
 			.main-slider__item {
-				width: 160px;
+				width: 150px;
 				margin-right: 28px;
-			}
-
-			.main-slider__item-img {
-				height: 160px;
-				width: auto;
 			}
 		}
 	}
@@ -464,6 +459,7 @@
 			.main-slider__item {
 				margin-bottom: 20px;
 				margin-right: 7%;
+				width: 160px;
 
 				&:nth-of-type(3n) {
 					margin-right: 0;
