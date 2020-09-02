@@ -260,29 +260,29 @@
 @media (min-width: 768px) {
 	.main-slider {
 		&__title {
-			font-size: 20px;
 			line-height: 20px;
 			margin: 20px 0;
 
-			.main-slider__footer-link {
-				display: flex;
+			&_hot {
+				font-size: 12px;
+			}
+
+			&_subtitle {
+				font-size: 14px;
+
 			}
 		}
 
 		&__item {
-			margin-right: 10px;
+			margin-right: 28px;
 
 			&-img-container {
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				width: 142px;
-				height: 142px;
+				width: 150px;
+				height: 225px;
 			}
-		}
-
-		&__footer {
-			display: none;
 		}
 
 		&_big {
@@ -292,6 +292,7 @@
 
 			.main-slider__item {
 				width: 160px;
+				margin-right: 28px;
 			}
 
 			.main-slider__item-img {
@@ -323,6 +324,11 @@
 				color: #1D1E1F;
 				font-weight: bold;
 				margin-right: 10px;
+			}
+
+			.main-slider__footer-link {
+				display: flex;
+				padding: 0;
 			}
 		}
 
