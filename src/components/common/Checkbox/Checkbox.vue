@@ -14,9 +14,9 @@
         <span v-if="position == 'right' && $slots.default" class="spui-Checkbox__text">
             <slot name="default"></slot>
         </span>
-        <span class="spui-Checkbox__fake">
-            <i v-if="_checked" class="spui-Checkbox__icon ds-icon icon-check-in"></i>
-        </span>
+        <div class="spui-Checkbox__fake">
+            <i v-if="_checked" class="spui-Checkbox__icon ds-icon icon-check-in-checkbox"></i>
+        </div>
         <span v-if="position == 'left' && $slots.default" class="spui-Checkbox__text">
             <slot name="default"></slot>
         </span>

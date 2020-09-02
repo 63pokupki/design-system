@@ -1,0 +1,91 @@
+$spui-DropdownModalWithSelect-font: $font-primary;
+$spui-DropdownModalWithSelect-font-size: 12px;
+$spui-DropdownModalWithSelect-font-weight: 600;
+$spui-DropdownModalWithSelect-color: #606266;
+$spui-DropdownModalWithSelect-colorOnHover: #36a5f2;
+$spui-DropdownModalWithSelect-colorOnActive: $spui-DropdownModalWithSelect-colorOnHover;
+$spui-DropdownModalWithSelect-row-spacing: 4px;
+$spui-DropdownModalWithSelect-values-spacing: 3px;
+$spui-DropdownModalWithSelect-arrow-size: 8px;
+
+.spui-DropdownModalWithSelect {
+    font-family: $spui-DropdownModalWithSelect-font;
+    font-weight: $spui-DropdownModalWithSelect-font-weight;
+    font-size: $spui-DropdownModalWithSelect-font-size;
+    color: $spui-DropdownModalWithSelect-color;
+    cursor: pointer;
+
+    &:hover {
+        color: $spui-DropdownModalWithSelect-colorOnHover;
+
+        .spui-DropdownModalWithSelect__modal {
+            color: $color-text-heading;
+        }
+    }
+
+    &:active {
+        color: $spui-DropdownModalWithSelect-colorOnActive;
+
+        .spui-DropdownModalWithSelect__modal {
+            color: $color-text-heading;
+        }
+    }
+
+    &__wrapper {
+        display: inline-flex;
+        align-items: center;
+    }
+
+    &__modal {
+        color: $color-text-heading;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__modal-heading {
+        font-size: 16px;
+        line-height: 16px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 21px;
+    }
+
+    &__radios {
+        display: inline-block;
+    }
+
+    &__value {
+        font-weight: normal;
+        font-size: 10px;
+    }
+
+    &__radio {
+        display: flex;
+        font-size: 14px;
+        line-height: 14px;
+        margin-bottom: 18px;
+    }
+
+    &__heading {
+        line-height: 17px;
+        flex-shrink: 0;
+        margin-right: $spui-DropdownModalWithSelect-row-spacing;
+    }
+
+    &__arrow {
+        font-size: $spui-DropdownModalWithSelect-arrow-size;
+        display: inline-flex;
+        margin-bottom: 1px;
+    }
+    &__val {
+        white-space: nowrap;
+        margin: $spui-DropdownModalWithSelect-values-spacing;
+        &:hover {
+            color: $spui-DropdownModalWithSelect-colorOnActive;
+        }
+    }
+}

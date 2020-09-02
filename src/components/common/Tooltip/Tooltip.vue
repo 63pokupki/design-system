@@ -8,31 +8,33 @@ export default {
     props: {
         type: {
             type: String,
-            default: ""
+            default: "",
         },
         position: {
             type: String,
-            default: "bottom"
+            default: "bottom",
         },
         centered: {
             type: Boolean,
-            default: false
+            default: false,
         },
         forced: {
             type: Boolean,
-            default: false
-        }
+            default: false,
+        },
     },
     data() {
         return {
-            base: "spui-Tooltip"
+            base: "spui-Tooltip",
         };
     },
     mounted() {
-        this.$parent.$el.classList.add(this._forced);
+        this.addTooltipClassToParent();
+        this.$parent.$on("hook:updated", this.addTooltipClassToParent);
     },
     beforeDestroy() {
         this.$parent.$el.classList.remove(this._forced);
+        this.$parent.$off("hook:updated", this.addTooltipClassToParent);
     },
     computed: {
         _type() {
@@ -46,9 +48,13 @@ export default {
         },
         _forced() {
             return this.forced ? "has-tooltip-force" : "has-tooltip";
-        }
+        },
     },
-    methods: {}
+    methods: {
+        addTooltipClassToParent: function () {
+            this.$parent.$el.classList.add(this._forced);
+        },
+    },
 };
 </script>
 

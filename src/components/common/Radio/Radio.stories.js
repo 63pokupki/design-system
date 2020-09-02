@@ -90,7 +90,7 @@ export const withTextRight = () => ({
     `
 });
 
-export const primary = () => ({
+export const outlined = () => ({
     components: { Radio },
     data() {
         return {
@@ -100,9 +100,9 @@ export const primary = () => ({
     template: `
     <div>
         <p>Значение: {{checked}}</p>
-        <Radio val="Значение 1" type="primary" v-model='checked'>Значение 1</Radio>
-        <Radio val="Значение 2" type="primary" v-model='checked'>Значение 2</Radio>
-        <Radio val="Значение 3" type="primary" v-model='checked'>Значение 3</Radio>
+        <Radio val="Значение 1" type="outlined" v-model='checked'>Значение 1</Radio>
+        <Radio val="Значение 2" type="outlined" v-model='checked'>Значение 2</Radio>
+        <Radio val="Значение 3" type="outlined" v-model='checked'>Значение 3</Radio>
     </div>
     `
 });
