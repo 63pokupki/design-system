@@ -5,14 +5,17 @@ $spui-Radio_colorHover: #0080f6;
 $spui-Radio_colorDisabled: #c4c4c4;
 $spui-Radio_borderWidth: 1px;
 $spui-Radio_borderRadius: 2px;
-$spui-Radio_width: 16px - $spui-Radio_borderWidth * 2;
-$spui-Radio_height: 17px - $spui-Radio_borderWidth * 2;
+$spui-Radio_width: 16px;
+$spui-Radio_height: 16px;
 $spui-Radio_fontSize: 12px;
 
 .spui-Radio {
     cursor: pointer;
     user-select: none;
     display: inline-flex;
+    font-size: $spui-Radio_fontSize;
+    font-weight: normal;
+    color: $spui-Radio_colorLabel;
 
     &__input {
         display: none;
@@ -27,15 +30,13 @@ $spui-Radio_fontSize: 12px;
         border: $spui-Radio_borderWidth solid $spui-Radio_colorActive;
     }
     &__text {
-        font-weight: normal;
-        font-size: $spui-Radio_fontSize;
         font-family: $spui-Radio_font;
-        color: $spui-Radio_colorLabel;
     }
 
     &__icon {
         color: $spui-Radio_colorActive;
         font-size: 10px;
+        margin-top: 1px;
         position: absolute;
         left: 50%;
         top: 50%;
@@ -57,11 +58,6 @@ $spui-Radio_fontSize: 12px;
     .spui-Radio__fake {
         border-radius: 50%;
     }
-
-    .spui-Radio__icon {
-        padding-top: 1px;
-        font-size: 9px;
-    }
 }
 
 .spui-Radio_waiting {
@@ -74,7 +70,10 @@ $spui-Radio_fontSize: 12px;
 
 .spui-Radio_disabled {
     cursor: default;
-    
+
+    &.spui-Radio_primary .spui-Radio__fake {
+        background-color: #ffffff;
+    }
     .spui-Radio__fake {
         border: $spui-Radio_borderWidth solid $spui-Radio_colorDisabled;
     }

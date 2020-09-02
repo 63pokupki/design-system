@@ -1,4 +1,29 @@
-@import "~fonts/icomoon/variables";
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?dkz8c');
+  src:  url('fonts/icomoon.eot?dkz8c#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?dkz8c') format('truetype'),
+    url('fonts/icomoon.woff?dkz8c') format('woff'),
+    url('fonts/icomoon.svg?dkz8c#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 .icon-check-in-checkbox:before {
   content: "\e93a";

@@ -14,9 +14,9 @@
         <span v-if="position == 'right' && $slots.default" class="spui-Radio__text">
             <slot name="default"></slot>
         </span>
-        <span class="spui-Radio__fake">
-            <i v-if="_checked" class="spui-Radio__icon ds-icon icon-check-in"></i>
-        </span>
+        <div class="spui-Radio__fake">
+            <i v-if="_checked" class="spui-Radio__icon ds-icon icon-check-in-checkbox"></i>
+        </div>
         <span v-if="position == 'left' && $slots.default" class="spui-Radio__text">
             <slot name="default"></slot>
         </span>
@@ -51,7 +51,7 @@ export default {
         },
         type: {
             type: String,
-            default: "outline",
+            default: "primary",
             validator: function (value) {
                 return ["outline", "primary"].indexOf(value) !== -1;
             },

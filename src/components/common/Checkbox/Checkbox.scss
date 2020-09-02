@@ -5,14 +5,16 @@ $spui-Checkbox_colorHover: #0080f6;
 $spui-Checkbox_colorDisabled: #c4c4c4;
 $spui-Checkbox_borderWidth: 1px;
 $spui-Checkbox_borderRadius: 2px;
-$spui-Checkbox_width: 16px - $spui-Checkbox_borderWidth * 2;
-$spui-Checkbox_height: 17px - $spui-Checkbox_borderWidth * 2;
+$spui-Checkbox_width: 16px;
+$spui-Checkbox_height: 16px;
 $spui-Checkbox_fontSize: 12px;
 
 .spui-Checkbox {
     cursor: pointer;
     user-select: none;
     display: inline-flex;
+    font-size: $spui-Checkbox_fontSize;
+    font-weight: normal;
 
     &__input {
         display: none;
@@ -27,8 +29,6 @@ $spui-Checkbox_fontSize: 12px;
         border: $spui-Checkbox_borderWidth solid $spui-Checkbox_colorActive;
     }
     &__text {
-        font-weight: normal;
-        font-size: $spui-Checkbox_fontSize;
         font-family: $spui-Checkbox_font;
         color: $spui-Checkbox_colorLabel;
     }
@@ -60,7 +60,6 @@ $spui-Checkbox_fontSize: 12px;
 
     .spui-Checkbox__icon {
         padding-top: 1px;
-        font-size: 9px;
     }
 }
 
