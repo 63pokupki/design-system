@@ -27,6 +27,7 @@
   "dependencies": {
     "@63pokupki/onboarding-core": "latest",
     "@babel/runtime": "^7.11.2",
+    "assign-deep": "^1.0.1",
     "core-js": "^3.6.5",
     "lodash-es": "^4.17.15",
     "np": "^6.5.0",
