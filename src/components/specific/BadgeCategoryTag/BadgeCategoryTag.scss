@@ -1,0 +1,28 @@
+.spui-BadgeCategoryTag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-family: $font-primary;
+    border: 1px solid #36a6f2;
+    color: #36a6f2;
+    opacity: 0.7;
+    font-weight: 600;
+    transition: opacity 0.1s ease;
+    cursor: pointer;
+
+    &:hover, &:active {
+        transition: opacity 0.1s ease;
+        opacity: 1;
+    }
+
+    &_lg {
+        padding: 8px 17px;
+        font-size: 16px;
+    }
+
+    &_sm {
+        padding: 4px 18px;
+        font-size: 12px;
+    }
+}

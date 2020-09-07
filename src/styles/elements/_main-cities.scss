@@ -1,4 +1,8 @@
 .main-cities {
+	.main-slider__footer-link {
+		display: none;
+	}
+
 	&__list {
 		list-style: none;
 		padding: 0;
@@ -12,7 +16,7 @@
 		color: #606266;
 		text-decoration: none;
 		transition: color .2s ease;
-		
+
 		&:hover {
 			color: #36a6f2;
 		}
@@ -41,6 +45,10 @@
 
 @media (min-width: 1184px) {
 	.main-cities {
+		.main-slider__footer-link {
+			display: flex;
+		}
+
 		&__list {
 			padding: 0;
 			height: 245px;

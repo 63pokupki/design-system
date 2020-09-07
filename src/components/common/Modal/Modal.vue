@@ -66,6 +66,7 @@ export default {
     methods: {
         onClose() {
             this.$emit("close");
+            console.log("close");
         }
     },
 };

@@ -1,0 +1,96 @@
+
+// боковая панель
+.spui-Sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+
+    &__body {
+        top: 0;
+        left: 0;
+        position: fixed;
+        overflow-y: auto;
+        overflow-x: hidden;
+        max-width: calc(100% - 35px);
+        min-width: 280px;
+        height: 100%;
+        z-index: 50;
+        visibility: hidden;
+        transform: translate(-100%, 0, 0);
+        background: $background-color-primary;
+        padding-bottom: 80px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    &__background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        visibility: hidden;
+        width: 100%;
+        height: 100%;
+        z-index: 40;
+        background: rgb(96, 98, 102);
+        opacity: 0;
+    }
+
+    &__close {
+        @extend %reset-button;
+        position: absolute;
+        right: 5px;
+        top: 10px;
+        z-index: 1000;
+        color: white;
+        font-size: 20px;
+
+        &:active {
+            @include deep-click();
+        }
+    }
+}
+
+// положение сайдбара справа
+.spui-Sidebar_right {
+    left: auto;
+    right: 0;
+
+    .spui-Sidebar__body {
+        left: auto;
+        right: 0;
+        transform: translate(100%, 0, 0);
+    }
+
+    .spui-Sidebar__background {
+        left: auto;
+        right: 0;
+    }
+
+    .spui-Sidebar__close {
+        right: auto;
+        left: 5px;
+    }
+}
+
+// состояние активного сайдбара
+.spui-Sidebar_is-active {
+    visibility: visible;
+    display: flex;
+
+    .spui-Sidebar__body {
+        transform: translate(0, 0, 0);
+        visibility: visible;
+    }
+
+    .spui-Sidebar__background {
+        opacity: 0.9;
+        visibility: visible;
+    }
+}

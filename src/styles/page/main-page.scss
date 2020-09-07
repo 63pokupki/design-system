@@ -114,6 +114,9 @@
 
 			&_ml {
 				margin-left: 40px;
+				font-weight: bold;
+				font-size: 14px;
+				line-height: 20px;
 			}
 		}
 
@@ -132,7 +135,7 @@
 
 			section:nth-of-type(2) {
 				order: 2;
-				margin-top: 43px;
+				margin-top: 97px;
 			}
 
 			section:nth-of-type(3) {
@@ -140,14 +143,14 @@
 				width: 48%;
 				display: flex;
 				align-items: center;
-				min-height: 501px;
-				margin-top: -472px;
+				height: fit-content;
+				margin-top: -159px;
 			}
 
 			section:nth-of-type(4) {
 				order: 5;
 				width: 48%;
-				margin-top: -335px;
+				margin-top: -237px;
 			}
 
 			section:nth-of-type(5) {
@@ -166,28 +169,44 @@
 			section:nth-of-type(1) {
 				order: 1;
 				width: 100%;
+				margin-top: -32px;
+
+				.main-slider__footer {
+					display: none;
+				}
 			}
 
 			section:nth-of-type(2) {
 				order: 2;
 				width: 48%;
 				overflow: hidden;
+				margin-top: -15px;
+
+				.main-page__title {
+					margin-bottom: 33px;
+				}
 			}
 
 			section:nth-of-type(3) {
 				order: 3;
 				width: 48%;
+				margin-top: 9px;
 			}
 
 			section:nth-of-type(4) {
 				order: 5;
 				width: 48%;
 				overflow: hidden;
+
+				.main-page__title {
+					display: none;
+				}
 			}
 
 			section:nth-of-type(6) {
 				order: 6;
 				width: 100%;
+				margin-top: -13px;
 
 				&::after {
 					display: none;
@@ -197,7 +216,7 @@
 			section:nth-of-type(7) {
 				order: 4;
 				width: 48%;
-				margin-top: -130px;
+				margin-top: -256px;
 			}
 
 			section:nth-of-type(8) {
@@ -223,7 +242,7 @@
 			font-weight: 700;
 			font-size: 20px;
 			line-height: 1;
-			margin: 12px 0 43px;
+			margin: 12px 0 18px;
 
 			.main-slider__footer-name {
 				font-size: 14px;
@@ -289,6 +308,11 @@
 			section:nth-of-type(1) {
 				order: 2;
 				width: 53.5%;
+				margin-top: 0;
+
+				.main-page__title {
+					margin-top: 0;
+				}
 			}
 
 			section:nth-of-type(2) {
@@ -313,7 +337,7 @@
 			section:nth-of-type(4) {
 				order: 3;
 				width: 48%;
-				margin-top: -480px;
+				margin-top: -469px;
 
 				.main-page__title {
 					display: none;
@@ -322,7 +346,7 @@
 
 			section:nth-of-type(5) {
 				order: 4;
-				margin-top: -230px;
+				margin-top: -219px;
 				display: block;
 				width: 100%;
 
