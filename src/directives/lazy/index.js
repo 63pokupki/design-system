@@ -2,7 +2,11 @@ import Vue from "vue";
 import Lazy from "./lazy";
 
 const LazyC = Lazy(Vue);
-const lazy = new LazyC({});
+
+const lazy = new LazyC({
+    preLoad: 1,
+    throttleWait: 500
+});
 
 export const lazyimg = {
     bind: lazy.add.bind(lazy),
