@@ -1,0 +1,5 @@
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M90 168C99.9411 168 108 159.941 108 150C108 140.059 99.9411 132 90 132C80.0589 132 72 140.059 72 150C72 159.941 80.0589 168 90 168Z" fill="#C8C8C8"><animate attributeName="opacity" dur="1s" values="0;1;0" repeatCount="indefinite" begin="0.1"></animate></path>
+<path d="M150 168C159.941 168 168 159.941 168 150C168 140.059 159.941 132 150 132C140.059 132 132 140.059 132 150C132 159.941 140.059 168 150 168Z" fill="#C8C8C8"><animate attributeName="opacity" dur="1s" values="0;1;0" repeatCount="indefinite" begin="0.2"></animate></path>
+<path d="M210 168C219.941 168 228 159.941 228 150C228 140.059 219.941 132 210 132C200.059 132 192 140.059 192 150C192 159.941 200.059 168 210 168Z" fill="#C8C8C8"><animate attributeName="opacity" dur="1s" values="0;1;0" repeatCount="indefinite" begin="0.3"></animate></path>
+</svg>

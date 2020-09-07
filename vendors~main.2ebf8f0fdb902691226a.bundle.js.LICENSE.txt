@@ -11,6 +11,26 @@
  * Released under the MIT License.
  */
 
+/*!
+ * assign-deep <https://github.com/jonschlinkert/assign-deep>
+ *
+ * Copyright (c) 2017-present, Jon Schlinkert.
+ * Released under the MIT License.
+ */
+
+/*!
+ * assign-symbols <https://github.com/jonschlinkert/assign-symbols>
+ *
+ * Copyright (c) 2015-present, Jon Schlinkert.
+ * Licensed under the MIT License.
+ */
+
+/*!
+ * vue-carousel v0.18.0-alpha
+ * (c) 2019 todd.beauchamp@ssense.com
+ * https://github.com/ssense/vue-carousel#readme
+ */
+
 /**
   * vue-class-component v7.0.1
   * (c) 2015-present Evan You
