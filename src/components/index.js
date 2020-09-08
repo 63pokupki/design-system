@@ -11,6 +11,9 @@ import RangePrice from "./common/RangePrice/RangePrice.vue";
 import Sidebar from "./common/Sidebar/Sidebar.vue";
 import Switcher from "./common/Switcher/Switcher.vue";
 import Tooltip from "./common/Tooltip/Tooltip.vue";
+import ProgressBar from "./common/ProgressBar/ProgressBar.vue";
+import Radio from "./common/Radio/Radio.vue";
+import SelectList from "./common/SelectList/SelectList.vue";
 /* Specific*/
 import BadgeCategoryTag from "./specific/BadgeCategoryTag/BadgeCategoryTag.vue";
 import CollapseMultipleSelectList from "./specific/CollapseMultipleSelectList/CollapseMultipleSelectList.vue";
@@ -31,4 +34,7 @@ export {
     Tooltip,
     BadgeCategoryTag,
     CollapseMultipleSelectList,
+    ProgressBar,
+    Radio,
+    SelectList
 };
