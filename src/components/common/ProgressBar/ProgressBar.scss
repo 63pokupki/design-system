@@ -1,0 +1,56 @@
+$spui-ProgressBar_font: $font-primary;
+
+.spui-ProgressBar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: rgba(49, 140, 202, 0.5);
+    border-radius: 12px;
+    font-family: $spui-ProgressBar_font;
+    overflow: hidden;
+
+    &__progress {
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #36a6f2;
+        border-radius: inherit;
+        max-width: 100%;
+        min-width: 0%;
+    }
+
+    &__text {
+        font-weight: 600;
+        color: #ffffff;
+        position: relative;
+        z-index: 1;
+        padding: 0 10px;
+    }
+}
+
+.spui-ProgressBar_md {
+    height: 24px;
+
+    .spui-ProgressBar__progress {
+        height: 24px;
+    }
+
+    .spui-ProgressBar__text {
+        font-size: 12px;
+        line-height: 12px;
+    }
+}
+
+.spui-ProgressBar_sm {
+    height: 18px;
+
+    .spui-ProgressBar__progress {
+        height: 18px;
+    }
+
+    .spui-ProgressBar__text {
+        font-size: 10px;
+        line-height: 10px;
+    }
+}

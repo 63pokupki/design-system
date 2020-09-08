@@ -1,6 +1,6 @@
 {
   "name": "@63pokupki/design-system",
-  "version": "1.0.95",
+  "version": "1.0.98",
   "description": "UI component kit and design-system for 63 Pokupki project",
   "author": {
     "name": "63pokupki"
@@ -27,10 +27,12 @@
   "dependencies": {
     "@63pokupki/onboarding-core": "latest",
     "@babel/runtime": "^7.11.2",
+    "assign-deep": "^1.0.1",
     "core-js": "^3.6.5",
     "lodash-es": "^4.17.15",
     "np": "^6.5.0",
     "short-uuid": "^3.1.1",
+    "vue-carousel": "^0.18.0",
     "vue-slider-component": "^3.2.4"
   },
   "devDependencies": {
