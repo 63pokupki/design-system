@@ -1,5 +1,4 @@
 import Button from "./Button.vue";
-import { action } from "@storybook/addon-actions";
 
 export default {
     title: "Общие/Button",
@@ -9,7 +8,9 @@ export default {
 export const empty = () => ({
     components: { Button },
     methods: {
-        onClick: action("click")
+        onClick() {
+            console.log("click");
+        }
     },
     template: "<Button></Button>"
 });
@@ -18,22 +19,28 @@ export const primary = () => ({
     template: "<Button type='primary'>Кнопка стандартная</Button>",
     components: { Button },
     methods: {
-        onClick: action("click")
+        onClick() {
+            console.log("click");
+        }
     }
 });
 
 export const outlined = () => ({
     components: { Button },
     methods: {
-        onClick: action("click")
+        onClick() {
+            console.log("click");
+        }
     },
-    template: "<Button>Кнопка outline</Button>"
+    template: "<Button type='outlined'>Кнопка outline</Button>"
 });
 
 export const loading = () => ({
     components: { Button },
     methods: {
-        onClick: action("click")
+        onClick() {
+            console.log("click");
+        }
     },
     template: "<Button :is-loading='true'>Кнопка в состоянии ожидания</Button>"
 });
@@ -41,7 +48,9 @@ export const loading = () => ({
 export const disabled = () => ({
     components: { Button },
     methods: {
-        onClick: action("click")
+        onClick() {
+            console.log("click");
+        }
     },
     template: "<Button :is-disabled='true'>Кнопка в неактивном состоянии</Button>"
 });
@@ -49,7 +58,9 @@ export const disabled = () => ({
 export const block = () => ({
     components: { Button },
     methods: {
-        onClick: action("click")
+        onClick() {
+            console.log("click");
+        }
     },
     template: "<Button :block='true'>Кнопка занимает всю доступную ширину</Button>"
 });
@@ -57,7 +68,9 @@ export const block = () => ({
 export const withIcon = () => ({
     components: { Button },
     methods: {
-        onClick: action("click")
+        onClick() {
+            console.log("click");
+        }
     },
     render: (h) => <Button icon={{name: 'icon-cart', pos: 'right'}}>Кнопка с иконкой</Button>
 });

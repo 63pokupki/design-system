@@ -5,8 +5,8 @@ $spui-Switcher_colorInactive: #bab9b9;
 //
 $spui-Switcher_borderWidth: 1px;
 $spui-Switcher_borderRadius: 8px;
-$spui-Switcher_width: 30px - $spui-Switcher_borderWidth * 2;
-$spui-Switcher_height: 16px - $spui-Switcher_borderWidth * 2;
+$spui-Switcher_width: 30px;
+$spui-Switcher_height: 16px;
 $spui-Switcher_widthBtn: 11px;
 $spui-Switcher_heightBtn: 11px;
 
@@ -71,7 +71,7 @@ $spui-Switcher_font: $font-primary;
 .spui-Switcher_checked {
 
     .spui-Switcher__btn {
-        left: $spui-Switcher_width - $spui-Switcher_widthBtn - 2px;
+        left: $spui-Switcher_width - $spui-Switcher_widthBtn - 4px;
     }
 }
 
