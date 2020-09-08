@@ -1,4 +1,4 @@
-
+$colorGreyKopek: $color-text-light-grey;
 .price {
     // Скрытая входящая цена
     &__input-integer {
@@ -7,6 +7,6 @@
     }
     &__kopek {
         font-size: 12px;
-        color: $color-text-light-grey;
+        color: $colorGreyKopek;
     }
 }
