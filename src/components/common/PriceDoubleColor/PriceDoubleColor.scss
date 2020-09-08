@@ -1,0 +1,12 @@
+
+.price {
+    // Скрытая входящая цена
+    &__input-integer {
+        font-size: 0;
+        color: transparent;
+    }
+    &__kopek {
+        font-size: 12px;
+        color: $color-text-light-grey;
+    }
+}
