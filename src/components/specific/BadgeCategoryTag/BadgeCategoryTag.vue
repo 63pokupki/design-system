@@ -4,6 +4,8 @@
         :style="props.styleObj"
         class="spui-BadgeCategoryTag"
         :class="[
+            data.class,
+            data.staticClass,
             `spui-BadgeCategoryTag_${props.size}`,
             { [`spui-BadgeCategoryTag_active`]: props.active },
         ]"

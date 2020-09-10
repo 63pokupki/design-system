@@ -43,3 +43,16 @@ export const active = () => ({
     #распродажа
     </BadgeCategoryTag>`,
 });
+
+export const withCustomClass = () => ({
+    components: { BadgeCategoryTag },
+    methods: {
+        onClickHandler() {
+            console.log("Click");
+        },
+    },
+    template: `
+    <BadgeCategoryTag class="custom-class" @click="onClickHandler">
+    #распродажа
+    </BadgeCategoryTag>`,
+});
