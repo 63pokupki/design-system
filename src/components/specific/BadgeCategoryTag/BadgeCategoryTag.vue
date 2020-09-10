@@ -3,7 +3,10 @@
         v-on="listeners"
         :style="props.styleObj"
         class="spui-BadgeCategoryTag"
-        :class="[`spui-BadgeCategoryTag_${props.size}`]"
+        :class="[
+            `spui-BadgeCategoryTag_${props.size}`,
+            { [`spui-BadgeCategoryTag_active`]: props.active },
+        ]"
     >
         <slot></slot>
     </div>
@@ -23,6 +26,10 @@ export default {
         styleObj: {
             type: Object,
             default: () => {},
+        },
+        active: {
+            type: Boolean,
+            default: false,
         },
     },
 };

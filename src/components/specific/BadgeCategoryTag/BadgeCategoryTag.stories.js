@@ -30,3 +30,16 @@ export const lg = () => ({
     #распродажа
     </BadgeCategoryTag>`,
 });
+
+export const active = () => ({
+    components: { BadgeCategoryTag },
+    methods: {
+        onClickHandler() {
+            console.log("Click");
+        },
+    },
+    template: `
+    <BadgeCategoryTag :active="true" @click="onClickHandler">
+    #распродажа
+    </BadgeCategoryTag>`,
+});
