@@ -66,8 +66,11 @@ export default {
     data() {
         return {
             base: "spui-SelectList",
-            uuid: uuid.generate(),
+            uuid: null,
         };
+    },
+    beforeMount() {
+        this.uuid = uuid.generate();
     },
     computed: {
         selected: {
