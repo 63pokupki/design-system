@@ -11,7 +11,7 @@ const elements = [
     { label: "Синий" },
     { label: "Большая неразрывная строка на несколько слов" },
     { label: "Бра" },
-]
+];
 
 export default {
     title: "Общие/SelectList",
@@ -24,7 +24,7 @@ export const one = () => ({
         return {
             value: { label: 1 },
             elements,
-            label: (value) => value.label
+            label: (value) => value.label,
         };
     },
     template: "<SelectList :values='elements' :label='label' v-model='value'></SelectList>",
@@ -36,9 +36,24 @@ export const many = () => ({
         return {
             value: [{ label: 1 }],
             elements,
-            label: (value) => value.label
+            label: (value) => value.label,
         };
     },
     template:
         "<SelectList :values='elements' :label='label' v-model='value' :one='false'></SelectList>",
+});
+
+export const customFnCompare = () => ({
+    components: { SelectList },
+    data() {
+        return {
+            value: [{ label: 1 }],
+            elements,
+            label: (value) => value.label,
+            fnCompare: (value, selected) => value.label == selected.label,
+        };
+    },
+    template: `<div>
+    <SelectList :fnCompare='fnCompare' :values='elements' :label='label' v-model='value' :one='false'></SelectList>
+    </div>`,
 });

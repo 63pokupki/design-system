@@ -25,6 +25,7 @@
                 :label="label"
                 :values="_visibleElements"
                 :one="false"
+                :fnCompare="fnCompare"
             ></SelectList>
             <template v-if="_displayMoreButton" slot="afterbody">
                 <div @click="onChangeExpand" class="spui-CollapseMultipleSelectList__more">
@@ -86,6 +87,9 @@ export default {
         value: {
             required: true
         },
+        fnCompare: {
+            type: Function
+        }
     },
     computed: {
         _isSlotBeforeExist() {

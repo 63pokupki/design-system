@@ -3,7 +3,7 @@
         <div class="spui-SelectList__one" v-if="one">
             <label
                 class="spui-SelectList__label"
-                :class="{ 'is-selected': isEqual(selected, element) }"
+                :class="{ 'is-selected': fnCompareIsSelected(element, selected) }"
                 v-for="(element, index) in values"
                 :key="index"
                 :for="index + uuid"
@@ -21,7 +21,7 @@
         <div class="spui-SelectList__many" v-if="!one">
             <label
                 class="spui-SelectList__label"
-                :class="{ 'is-selected': isContain(element, selected) }"
+                :class="{ 'is-selected': fnCompareIsSelected(element, selected) }"
                 v-for="(element, index) in values"
                 :key="index"
                 :for="index + uuid"
@@ -57,10 +57,13 @@ export default {
         },
         label: {
             type: Function,
-            required: true
+            required: true,
+        },
+        fnCompare: {
+            type: Function,
         },
         value: {
-            required: true
+            required: true,
         },
     },
     data() {
@@ -83,17 +86,38 @@ export default {
         },
     },
     methods: {
-        isEqual,
-        isContain(elm, values) {
-            if (!values) return;
-            const finded = values.find((el) => isEqual(el, elm));
-            return finded ? true : false;
+        fnCompareIsSelected(value, values) {
+            const fnCompare = this.fnCompare;
+            const fnCompareExist = fnCompare && typeof fnCompare == "function";
+
+            if (this.one) {
+                if (fnCompareExist) {
+                    return fnCompare(value, values);
+                } else {
+                    return isEqual(value, values);
+                }
+            }
+            if (!this.one) {
+                if (fnCompareExist) {
+                    const finded = values.find((v) => fnCompare(value, v));
+                    return finded ? true : false;
+                } else {
+                    const finded = values.find((v) => isEqual(value, v));
+                    return finded ? true : false;
+                }
+            }
         },
+        // isEqual,
+        // isContain(elm, values) {
+        //     if (!values) return;
+        //     const finded = values.find((el) => isEqual(el, elm));
+        //     return finded ? true : false;
+        // },
         getLabel(value) {
             if (value && this.label && typeof this.label === "function") {
-                return this.label(value)
+                return this.label(value);
             }
-        }
+        },
     },
 };
 </script>
