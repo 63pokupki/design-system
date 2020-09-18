@@ -31,7 +31,7 @@
                         :style="styleImgObj"
                         @click="() => onImgClick(image)"
                         class="spui-ImageSwitch__image"
-                        v-lazy="{ src: getImgSrc(image), loading: loading }"
+                        v-lazy="{ src: getImgSrc(image), loading: loaderImgSrc }"
                     />
                 </Slide>
             </Carousel>
@@ -109,10 +109,13 @@ export default {
             type: Boolean,
             default: true,
         },
+        loaderImgSrc: {
+            required: true
+        }
     },
     data() {
         return {
-            loading: require("@/directives/lazy/image-loader.svg"),
+            // loading: require("@/directives/lazy/image-loader.svg"),
         };
     },
     methods: {
