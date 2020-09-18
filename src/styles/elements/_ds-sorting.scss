@@ -227,3 +227,10 @@
     transition: all .5s ease;
     opacity: 1;
 }
+
+// fix for vgt-table => viVendors
+.sortable {
+    &.sorting {
+        display: table-cell;
+    }
+}
