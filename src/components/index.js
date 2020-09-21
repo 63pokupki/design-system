@@ -18,6 +18,9 @@ import SelectList from "./common/SelectList/SelectList.vue";
 import BadgeCategoryTag from "./specific/BadgeCategoryTag/BadgeCategoryTag.vue";
 import CollapseMultipleSelectList from "./specific/CollapseMultipleSelectList/CollapseMultipleSelectList.vue";
 
+/** Helpers */
+import { pluralize, capitalize } from "../helpers";
+
 export {
     BtnFavorite,
     Button,
@@ -36,5 +39,8 @@ export {
     CollapseMultipleSelectList,
     ProgressBar,
     Radio,
-    SelectList
+    SelectList,
+    /** Helpers */
+    pluralize,
+    capitalize
 };
