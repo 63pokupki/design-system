@@ -14,6 +14,7 @@ import Tooltip from "./common/Tooltip/Tooltip.vue";
 import ProgressBar from "./common/ProgressBar/ProgressBar.vue";
 import Radio from "./common/Radio/Radio.vue";
 import SelectList from "./common/SelectList/SelectList.vue";
+import CounterQuantity from "./common/CounterQuantity/CounterQuantity.vue";
 /* Specific*/
 import BadgeCategoryTag from "./specific/BadgeCategoryTag/BadgeCategoryTag.vue";
 import CollapseMultipleSelectList from "./specific/CollapseMultipleSelectList/CollapseMultipleSelectList.vue";
@@ -40,6 +41,7 @@ export {
     ProgressBar,
     Radio,
     SelectList,
+    CounterQuantity,
     /** Helpers */
     pluralize,
     capitalize
