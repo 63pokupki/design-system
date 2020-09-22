@@ -1,0 +1,80 @@
+$spui-CounterQuantity_font: $font-primary;
+
+.spui-CounterQuantity {
+    display: inline-flex;
+    align-items: center;
+
+    &:hover {
+        .spui-CounterQuantity__input {
+            border-bottom: 1px solid #36a6f2;
+        }
+    }
+
+    &__input {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid transparent;
+        font-weight: normal;
+        font-size: 16px;
+        text-align: center;
+        color: #1d1e1f;
+        width: 32px;
+        margin: 0 3px;
+    }
+
+    &__minus,
+    &__plus {
+        @extend %reset-button;
+        border-radius: 50%;
+        background-color: #c4c4c4;
+        position: relative;
+        width: 20px;
+        height: 20px;
+        color: white;
+
+        &:hover {
+            background-color: #36a6f2;
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
+    }
+
+    &__minus {
+        &:before {
+            content: "";
+            position: absolute;
+            width: 6px;
+            height: 2px;
+            background-color: white;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__plus {
+        &:before {
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 2px;
+            background-color: white;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 2px;
+            background-color: white;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-90deg);
+        }
+    }
+}
