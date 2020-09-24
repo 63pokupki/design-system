@@ -117,9 +117,14 @@ export const exampleStockBanner = () => ({
             },
         };
     },
+    methods: {
+        onClick() {
+            console.log("click");
+        }
+    },
     template: `
     <div>
-       <ImageSwitch :loaderImgSrc="loading" :styleContainerObj="styleContainerObj" :styleImgObj="styleImgObj" v-model="current" :fnImgSrc="fnImgSrc" :images="images"></ImageSwitch>
+       <ImageSwitch @click="onClick" :loaderImgSrc="loading" :styleContainerObj="styleContainerObj" :styleImgObj="styleImgObj" v-model="current" :fnImgSrc="fnImgSrc" :images="images"></ImageSwitch>
     </div>
     `,
 });

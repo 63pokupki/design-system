@@ -10,21 +10,20 @@
                 v-cloak
                 v-if="_images"
                 v-model="_currentSlideIndex"
-                :minSwipeDistance="20"
-                :perPage="1"
-                :centerMode="centered"
-                :scrollPerPage="true"
-                :navigationEnabled="false"
-                :paginationEnabled="false"
+                :min-swipe-distance="20"
+                :per-page="1"
+                :center-mode="centered"
+                :scroll-per-page="true"
+                :pagination-enabled="false"
                 :loop="false"
-                :touchDrag="_isSlideModeOn"
-                :mouseDrag="_isSlideModeOn"
+                :touch-drag="true"
+                :mouse-drag="true"
             >
                 <Slide
                     :data-index="i"
                     :data-name="image"
                     v-for="(image, i) in _images"
-                    @slide-click="onImgClick"
+                    @slideclick="onImgClick"
                     :key="i"
                 >
                     <img
@@ -39,7 +38,7 @@
 
         <button
             @click="onPrevBtnClick"
-            v-if="_isArrowNavigationOn && !_isFirstSlide"
+            v-if="isArrowNavigationOn && !_isFirstSlide"
             class="spui-ImageSwitch__prev"
         >
             <div class="spui-ImageSwitch__btn-wrapper">
@@ -48,7 +47,7 @@
         </button>
         <button
             @click="onNextBtnClick"
-            v-if="_isArrowNavigationOn && !_isLastSlide"
+            v-if="isArrowNavigationOn && !_isLastSlide"
             class="spui-ImageSwitch__next"
         >
             <div class="spui-ImageSwitch__btn-wrapper">
@@ -146,21 +145,9 @@ export default {
 
             return images;
         },
-        /** Длина массива изображений */
-        _length() {
-            return this._images.length;
-        },
-        /** Режим пролистывания */
-        _isSlideModeOn() {
-            return this._length > 1 && !this.one ? true : false;
-        },
-        /** Показывать стрелки или нет */
-        _isArrowNavigationOn() {
-            return this._isSlideModeOn && this.isArrowNavigationOn;
-        },
         /** Флаг нахождения на последнем изображении */
         _isLastSlide() {
-            return this._currentSlideIndex == this._length - 1;
+            return this._currentSlideIndex == this._images.length - 1;
         },
         /** Флаг нахождения на первом изображении */
         _isFirstSlide() {
