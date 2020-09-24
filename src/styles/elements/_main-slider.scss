@@ -299,14 +299,17 @@
 }
 
 @media (min-width: 1184px) {
+
 	.main-slider {
 		padding: 16px 12px;
 		overflow: hidden;
 		max-width: 791px;
 
+		
 		&__title {
 			display: flex;
 			align-items: center;
+			margin-top: 28px;
 
 			&_hot {
 				font-size: 14px;

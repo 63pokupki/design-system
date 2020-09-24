@@ -10,7 +10,7 @@
                 v-cloak
                 v-if="_images"
                 v-model="_currentSlideIndex"
-                :minSwipeDistance="15"
+                :minSwipeDistance="20"
                 :perPage="1"
                 :centerMode="centered"
                 :scrollPerPage="true"
@@ -21,15 +21,14 @@
                 :mouseDrag="_isSlideModeOn"
             >
                 <Slide
-                    v-cloak
                     :data-index="i"
                     :data-name="image"
                     v-for="(image, i) in _images"
+                    @slide-click="onImgClick"
                     :key="i"
                 >
                     <img
                         :style="styleImgObj"
-                        @click="() => onImgClick(image)"
                         class="spui-ImageSwitch__image"
                         v-lazy="{ src: getImgSrc(image), loading: loaderImgSrc }"
                     />
@@ -110,13 +109,8 @@ export default {
             default: true,
         },
         loaderImgSrc: {
-            required: true
-        }
-    },
-    data() {
-        return {
-            // loading: require("@/directives/lazy/image-loader.svg"),
-        };
+            required: true,
+        },
     },
     methods: {
         onPrevBtnClick() {
@@ -196,10 +190,4 @@ export default {
 
 <style lang="scss" scoped>
 @import "./ImageSwitch.scss";
-</style>
-
-<style lang="scss">
-[v-cloak] {
-    display: none;
-}
 </style>
