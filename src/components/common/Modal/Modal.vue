@@ -5,9 +5,13 @@
                 <div class="spui-Modal__slot-head">
                     <slot v-if="_isSlotHeadExist" name="head"></slot>
                 </div>
-                <button @click="onClose" class="spui-Modal__close"><i class="ds-icon icon-closing"></i></button>
+                <button @click="onClose" class="spui-Modal__close">
+                    <i class="ds-icon icon-closing"></i>
+                </button>
             </div>
+            <slot v-if="$slots['before-body']" name="before-body"></slot>
             <div class="spui-Modal__body"><slot></slot></div>
+            <slot v-if="$slots['after-body']" name="after-body"></slot>
         </div>
         <div @click="onClose" class="spui-Modal__bg"></div>
     </div>
@@ -19,27 +23,27 @@ export default {
     props: {
         open: {
             type: Boolean,
-            default: false
+            default: false,
         },
         width: {
-            type: String
+            type: String,
         },
         maxWidth: {
-            type: String
+            type: String,
         },
         maxHeight: {
-            type: String
+            type: String,
         },
         minWidth: {
-            type: String
+            type: String,
         },
         minHeight: {
-            type: String
+            type: String,
         },
         sticky: {
             type: Boolean,
-            default: true
-        }
+            default: true,
+        },
     },
     data() {
         return {
@@ -49,12 +53,12 @@ export default {
     computed: {
         _styleWindow() {
             return {
-                'max-width': this.maxWidth,
-                'max-height': this.maxHeight,
-                'min-height': this.minHeight,
-                'min-width': this.minWidth,
-                "width": this.width
-            }
+                "max-width": this.maxWidth,
+                "max-height": this.maxHeight,
+                "min-height": this.minHeight,
+                "min-width": this.minWidth,
+                width: this.width,
+            };
         },
         _sticky() {
             return this.sticky ? `${this.base}_sticky` : null;
@@ -67,7 +71,7 @@ export default {
         onClose() {
             this.$emit("close");
             console.log("close");
-        }
+        },
     },
 };
 </script>

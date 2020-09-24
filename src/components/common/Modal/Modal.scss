@@ -34,10 +34,6 @@ $spui-Modal-z-4: $spui-Modal-z-3 + 1;
         background-color: #ffffff;
     }
 
-    &__slot-head {
-        
-    }
-
     &__close {
         @extend %reset-button;
         display: flex;
@@ -46,7 +42,7 @@ $spui-Modal-z-4: $spui-Modal-z-3 + 1;
         height: 36px;
         width: 36px;
         font-size: 16px;
-        color: #1D1E1F;
+        color: #1d1e1f;
 
         &:active {
             .icon-closing {
@@ -61,12 +57,17 @@ $spui-Modal-z-4: $spui-Modal-z-3 + 1;
         z-index: $spui-Modal-z-3;
         max-height: 98%;
         max-width: 98%;
-        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
     }
 
     &__body {
         padding: 0 12px 12px;
         font-size: 12px;
+        overflow-x: visible;
+        overflow-y: auto;
     }
 
     &__bg {
@@ -78,6 +79,6 @@ $spui-Modal-z-4: $spui-Modal-z-3 + 1;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0,0,0,.6);
+        background-color: rgba(0, 0, 0, 0.6);
     }
 }
