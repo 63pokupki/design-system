@@ -7,6 +7,10 @@
 		font-weight: bold;
 		font-size: 14px;
 		margin: 15px 0 15px 10px;
+
+		@media (max-width: 767px) {
+			margin-top: 0;
+		}
 	}
 
 	&__wrapper {
