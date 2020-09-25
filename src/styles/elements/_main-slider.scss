@@ -15,6 +15,10 @@
 		font-weight: normal;
 		margin: 12px 0;
 
+		@media (max-width: 767px) {
+			margin-top: 0;
+		}
+
 		&_subtitle {
 			font-size: 12px;
 			line-height: 20px;
@@ -253,6 +257,22 @@
 
 		.main-slider__list {
 			width: max-content;
+		}
+	}
+
+	&#slider-1 {
+		.main-slider__title {
+			@media (max-width: 767px) {
+				margin-top: 6px;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1183px) {
+	.main-slider {
+		&__title {
+			margin-top: 0;
 		}
 	}
 }

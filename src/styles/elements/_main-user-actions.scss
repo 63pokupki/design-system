@@ -3,6 +3,10 @@
 	flex-direction: column;
 	margin-top: 10px;
 
+	@media (max-width: 767px) {
+		margin-top: 14px;
+	}
+
 	&__link {
 		height: 117px;
 		width: 100%;
