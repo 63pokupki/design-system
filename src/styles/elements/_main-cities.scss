@@ -23,7 +23,12 @@
 		text-decoration: none;
 		transition: color .2s ease;
 
-		@media (max-width: 767px) {
+		@media (min-width: 768px) and (max-width: 1183px) {
+			line-height: 43px;
+		}
+
+
+		@media (max-width: 1183px) {
 			font-size: 14px;
 		}
 
