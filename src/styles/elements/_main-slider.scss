@@ -364,8 +364,9 @@
 		&__button {
 			width: 15px;
 			height: 22px;
-			top: 50%;
-			transform: translateY(-50%);
+			// top: 50%;
+			top: calc(50%-11px);
+			// transform: translateY(-50%);
 			position: absolute;
 
 			&::after {
@@ -391,7 +392,8 @@
 			}
 
 			&_left {
-				transform: translateX(-14px);
+				// transform: translateX(-14px);
+				left: -14px;
 
 				&::after {
 					transform: translateY(-5px) rotate(-45deg);
