@@ -186,6 +186,7 @@
 
 }
 
+
 @media (min-width: 768px) {
 	.main-page {
 		padding-top: 20px;
@@ -284,10 +285,6 @@
 				width: 48%;
 				overflow: hidden;
 				margin-top: -15px;
-
-				.main-page__title {
-					margin-bottom: 33px;
-				}
 			}
 
 			section:nth-of-type(3) {
@@ -335,6 +332,21 @@
 	}
 }
 
+@media (min-width: 768px) and (max-width: 1183px) {
+	.main-page {
+		.main-wrapper-second {
+			section:nth-of-type(2) {
+
+				.main-page__title {
+					margin-bottom: 33px;
+				}
+			}
+
+		}
+	}
+}
+
+
 @media (min-width: 1184px) {
 	.main-page {
 		padding: 25px 0;
@@ -345,7 +357,7 @@
 			font-weight: 700;
 			font-size: 20px;
 			line-height: 1;
-			margin: 17px 0 35px;
+			margin: 11px 0 35px;
 
 			.main-slider__footer-name {
 				font-size: 14px;
@@ -381,7 +393,7 @@
 				order: 3;
 				display: block;
 				width: 70%;
-				margin-top: -140px;
+				margin-top: -202px;
 
 				.main-slider {
 					margin-top: 0;
@@ -391,7 +403,7 @@
 			section:nth-of-type(4) {
 				order: 5;
 				width: 70%;
-				margin-top: -253px;
+				margin-top: -352px;
 
 				.main-slider {
 					margin-top: 19px;
@@ -400,13 +412,13 @@
 
 			section:nth-of-type(5) {
 				order: 3;
-				margin-top: 16px;
+				margin-top: 21px;
 			}
 		}
 
 		.main-wrapper-second {
 			padding: 0;
-			margin-top: 36px;
+			margin-top: 8px;
 
 			section:nth-of-type(1) {
 				order: 2;
@@ -421,7 +433,12 @@
 
 			section:nth-of-type(2) {
 				order: 1;
-				width: 45%
+				width: 45%;
+
+				.main-page__title {
+					margin-bottom: 42px;
+				}
+
 			}
 
 			section:nth-of-type(3) {
@@ -435,6 +452,7 @@
 				.main-slider__title {
 					margin-top: 13px;
 					margin-bottom: 33px;
+					margin-left: -11px;
 				}
 			}
 
@@ -472,7 +490,7 @@
 				order: 9;
 				display: block;
 				width: 70%;
-				margin-top: -135px;
+				margin-top: -118px;
 
 				.main-slider {
 					margin-left: 27px;
@@ -480,6 +498,7 @@
 
 				.main-slider__title {
 					margin-bottom: 33px;
+					margin-bottom: 11px;
 				}
 			}
 
@@ -488,15 +507,16 @@
 				display: block;
 				width: 70%;
 				margin-left: 355px;
-				margin-top: -250px;
+				margin-top: -231px;
 
 				.main-slider {
 					margin-left: 27px;
-					margin-bottom: 11px;
+					margin-bottom: 0px;
 				}
 
 				.main-slider__title {
 					margin-bottom: 33px;
+					margin-left: -11px;
 				}
 			}
 
