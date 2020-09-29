@@ -45,14 +45,13 @@
 		overflow-y: hidden;
 
 		&::-webkit-scrollbar {
-			height: 2px;
-			background-color: rgba(54, 165, 242, 0.15);;
+			height: 10px;
+			background: linear-gradient(to top, transparent 0, transparent 2px, #36a5f226 2px, #36a5f226 4px, transparent 4px);
 		}
-
 		&::-webkit-scrollbar-thumb {
-			background-color: #36A5F2;
+			background: linear-gradient(to top, transparent 0, transparent 2px, #36a5f2 2px, #36a5f2 4px, transparent 4px);
 		}
-
+	
 		&_top {
 			padding: 0;
 			overflow: visible;
