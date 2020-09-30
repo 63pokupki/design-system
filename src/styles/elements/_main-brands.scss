@@ -12,6 +12,9 @@
 	}
 
 	&__item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		width: 80px;
 		height: 80px;
 		margin-bottom: 8px;
@@ -35,8 +38,17 @@
 	}
 
 	&__img {
-		width: 100%;
+		// width: 100%;
 		height: auto;
+	}
+}
+
+@media (max-width: 767px) {
+	.main-brands {
+		&__item {
+			width: 195px;
+			height: 150px;
+		}
 	}
 }
 
@@ -49,8 +61,10 @@
 		}
 
 		&__item {
-			width: 90px;
-			height: 90px;
+			// width: 90px;
+			// height: 90px;
+			width: 220px;
+			height: 150px;
 		}
 
 		.main-slider__footer {
@@ -69,7 +83,7 @@
 		}
 
 		&__item {
-			width: 160px;
+			width: 170px;
 			height: 160px;
 			margin-right: 2%;
 		}
