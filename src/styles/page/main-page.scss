@@ -170,6 +170,11 @@
 				width: 45%;
 			}
 		}
+		.main-wrapper-second {
+			section:nth-of-type(7) {
+				margin-top: -238px;
+			}
+		}
 	}
 }
 @media (min-width: 992px) and (max-width: 1023px) {
@@ -218,9 +223,14 @@
 		section:nth-of-type(3),
 		section:nth-of-type(4) {
 			width: 65%;
-		}
-		
+		}		
 	}
+	.main-wrapper-second {
+		section:nth-of-type(7) {
+			margin-top: -211px;
+		}
+	}
+
 }
 
 }	
