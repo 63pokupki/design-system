@@ -40,14 +40,17 @@
 	&__img {
 		// width: 100%;
 		height: auto;
+		@media (max-width: 767px) {
+			width: 100%;
+		}
 	}
 }
 
 @media (max-width: 767px) {
 	.main-brands {
 		&__item {
-			width: 195px;
-			height: 150px;
+			width: 80px;
+			height: 80px;
 		}
 	}
 }
