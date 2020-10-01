@@ -477,6 +477,10 @@
 				display: block;
 				width: auto;
 				max-width: 70%;
+
+				.main-slider__title {
+					margin-top: 12px;
+				}
 			}
 
 			section:nth-of-type(2) {

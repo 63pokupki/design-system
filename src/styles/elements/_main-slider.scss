@@ -4,6 +4,18 @@
 	width: fit-content;
 	position: relative;
 
+	@media (max-width: 767px) {
+		&#slider-2,
+		&#slider-5 {
+			padding-top: 0;
+		}
+		&#slider-4 {
+			.main-slider__footer {
+				margin-top: 0;
+			}
+		}
+	}
+
 	&_without-buttons {
 		.main-slider__button-wrapper {
 			display: none;
