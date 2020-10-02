@@ -1,27 +1,7 @@
-<template>
-    <button
-        @click="onClick"
-        :disabled="isDisabled"
-        class="spui-Button"
-        :class="[_type, _block, _iconpos, { 'is-loading': isLoading, 'is-disabled': isDisabled }]"
-    >
-        <i
-            v-if="icon.name && icon.pos == 'left'"
-            class="ds-icon spui-Button__icon"
-            :class="icon.name"
-        ></i>
-        <slot>Кнопка</slot>
-        <i
-            v-if="icon.name && icon.pos == 'right'"
-            class="ds-icon spui-Button__icon"
-            :class="icon.name"
-        ></i>
-    </button>
-</template>
-
 <script>
 export default {
     name: "Button",
+    functional: true,
     props: {
         type: {
             type: String,
@@ -50,23 +30,44 @@ export default {
             default: false,
         },
     },
-    computed: {
-        _type() {
-            return `spui-Button_${this.type}`;
-        },
-        _block() {
-            return this.block ? `spui-Button_block` : "";
-        },
-        _iconpos() {
-            return this.icon.pos ? `spui-Button_icon-${this.icon.pos}` : "";
-        },
-    },
-    methods: {
-        onClick() {
-            if (!this.isLoading) {
-                this.$emit("click");
+    render: (h, { data, props, listeners, slots }) => {
+        const { type, icon, block, isDisabled, isLoading } = props;
+
+        const _type = `spui-Button_${type}`;
+        const _block = block ? `spui-Button_block` : "";
+        const _iconpos = icon.pos ? `spui-Button_icon-${icon.pos}` : "";
+
+        const onClick = () => {
+            if (!isLoading && listeners.click) {
+                listeners.click();
             }
-        },
+        };
+
+        const slot = slots().default || "Кнопка";
+
+        const iconElement = (
+            <i class={["ds-icon spui-Button__icon", icon.name]}></i>
+        );
+
+        return (
+            <button
+                onClick={onClick}
+                disabled={isDisabled}
+                class={[
+                    "spui-Button",
+                    _type,
+                    _block,
+                    _iconpos,
+                    { "is-loading": isLoading, "is-disabled": isDisabled },
+                    data.class,
+                    data.staticClass,
+                ]}
+            >
+                {icon.name && icon.pos == "left" ? iconElement : null}
+                {slot}
+                {icon.name && icon.pos == "right" ? iconElement : null}
+            </button>
+        );
     },
 };
 </script>

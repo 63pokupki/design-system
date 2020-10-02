@@ -1,30 +1,38 @@
-<template>
-  <span class="ItemBadge" :class="[_color, _pos]">
-    <slot></slot>
-  </span>
-</template>
-
 <script>
 export default {
-  name: "ItemBadge",
-  props: {
-    'color': {
-      type: String,
-      default: 'primary'
+    name: "ItemBadge",
+    functional: true,
+    props: {
+        color: {
+            type: String,
+            default: "primary",
+        },
+        pos: {
+            type: String,
+            default: "left-top",
+        },
     },
-    "pos": {
-      type: String,
-      default: "left-top"
-    }
-  },
-  computed: {
-    _color() {
-      return 'ItemBadge_' + this.color;
+    render: (h, { props, data, slots }) => {
+        const { color, pos } = props;
+        const _color = `ItemBadge_${color}`;
+        const _pos = `ItemBadge_${pos}`;
+
+        const slot = slots().default;
+
+        return (
+            <span
+                class={[
+                    "ItemBadge",
+                    _color,
+                    _pos,
+                    data.class,
+                    data.staticClass,
+                ]}
+            >
+                {slot}
+            </span>
+        );
     },
-    _pos() {
-      return 'ItemBadge_' + this.pos;
-    }
-  }
 };
 </script>
 
