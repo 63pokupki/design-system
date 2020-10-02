@@ -171,9 +171,18 @@
 			}
 		}
 		.main-wrapper-second {
-			section:nth-of-type(7) {
-				margin-top: -238px;
+			section:nth-of-type(2) {
+				margin-top: 5px;
 			}
+
+			section:nth-of-type(6) {
+				margin-top: -32px;
+			}
+			section:nth-of-type(7) {
+				margin-top: -274px;
+			}
+	
+
 		}
 	}
 }
@@ -186,6 +195,13 @@
 				width: 58%;
 			}
 		}
+		.main-wrapper-second {
+			section:nth-of-type(7) {
+				margin-top: -227px;
+			}
+
+		}
+
 	}
 
 }	
