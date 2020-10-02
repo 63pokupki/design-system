@@ -12,9 +12,15 @@
             </button>
         </div>
         <!-- блок выпадающей категории поиска -->
-        <div @click="onCategoryClick" class="spui-InputSearchWithHints__category">
+        <div
+            @click="onCategoryClick"
+            class="spui-InputSearchWithHints__category"
+        >
             <!-- добавить .dropdown-fixed-list_expanded для раскрытия меню категорий -->
-            <div class="spui-dropdown-fixed-list" :class="{ 'is-expanded': isCategoryOpen }">
+            <div
+                class="spui-dropdown-fixed-list"
+                :class="{ 'is-expanded': isCategoryOpen }"
+            >
                 <!-- текущее значение -->
                 <span class="spui-dropdown-fixed-list__current">{{
                     categories[categories.current]
@@ -46,8 +52,13 @@
                 v-for="(hint, i) in hints"
                 :key="i"
             >
-                <span v-html="highlight(hint)" class="spui-InputSearchWithHints__text"></span>
-                <span class="spui-InputSearchWithHints__count">{{ getHintCount(hint) }}</span>
+                <span
+                    v-html="highlight(hint)"
+                    class="spui-InputSearchWithHints__text"
+                ></span>
+                <span class="spui-InputSearchWithHints__count">{{
+                    getHintCount(hint)
+                }}</span>
             </div>
         </div>
     </div>
@@ -93,9 +104,17 @@ export default {
         "click-outside": clickOutside,
     },
     methods: {
+        /**Событие смены состояния показа выбора категорий поиска - товары/форум */
+        emitCategoryOpenState(value) {
+            this.$emit("category-open-change", value);
+        },
+        /**Событие смены состояния показа подсказок*/
+        emitHintsOpenState(value) {
+            this.$emit("hints-open-change", value);
+        },
         onCategorySelect(category_id) {
             this.categories.current = category_id;
-            this.$emit("category-open-change", false);
+            this.emitCategoryOpenState(false);
         },
         highlight(hint) {
             const raw = this.getHintLabel(hint).toLowerCase();
@@ -110,7 +129,11 @@ export default {
         },
         /**Функция получающая label для подсказки */
         getHintLabel(hint) {
-            if (hint && this.fnHintLabel && typeof this.fnHintLabel === "function") {
+            if (
+                hint &&
+                this.fnHintLabel &&
+                typeof this.fnHintLabel === "function"
+            ) {
                 return this.fnHintLabel(hint);
             } else {
                 return hint.label;
@@ -118,7 +141,11 @@ export default {
         },
         /**Функция получающая count для подсказки */
         getHintCount(hint) {
-            if (hint && this.fnHintCount && typeof this.fnHintCount === "function") {
+            if (
+                hint &&
+                this.fnHintCount &&
+                typeof this.fnHintCount === "function"
+            ) {
                 return this.fnHintCount(hint);
             } else {
                 return hint.count;
@@ -126,17 +153,20 @@ export default {
         },
         onHintClick(hint) {
             this.$emit("hint-click", hint);
-            this.$emit("hints-open-change", false);
+            this.emitHintsOpenState(false);
         },
         onCategoryClick() {
-            this.$emit("category-open-change", true);
+            this.emitCategoryOpenState(true);
         },
         onClickOutside() {
-            this.$emit("hints-open-change", false);
-            this.$emit("category-open-change", false);
+            this.emitHintsOpenState(false);
+            this.emitCategoryOpenState(false)
         },
         onSearch() {
-            this.$emit("search", { value: this._model, byItems: Boolean(this.categories.current) });
+            this.$emit("search", {
+                value: this._model,
+                byItems: Boolean(this.categories.current),
+            });
         },
     },
     computed: {
@@ -146,7 +176,7 @@ export default {
             },
             set(value) {
                 this.$emit("input", value);
-                this.$emit("hints-open-change", true);
+                this.emitHintsOpenState(true);
 
                 if (this.categories.current) {
                     this.$emit("input-by-items");
