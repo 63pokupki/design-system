@@ -19,6 +19,7 @@ import CollapseFade from "./common/CollapseFade/CollapseFade.vue";
 /* Specific*/
 import BadgeCategoryTag from "./specific/BadgeCategoryTag/BadgeCategoryTag.vue";
 import CollapseMultipleSelectList from "./specific/CollapseMultipleSelectList/CollapseMultipleSelectList.vue";
+import InputSearchWithHints from "./specific/InputSearchWithHints/InputSearchWithHints.vue";
 
 /** Helpers */
 import { pluralize, capitalize } from "../helpers";
@@ -44,6 +45,7 @@ export {
     SelectList,
     CounterQuantity,
     CollapseFade,
+    InputSearchWithHints,
     /** Helpers */
     pluralize,
     capitalize
