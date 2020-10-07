@@ -1,5 +1,4 @@
 const path = require("path");
-const svgToMiniDataURI = require("mini-svg-data-uri");
 
 const vueSrc = "./src";
 module.exports = {
@@ -19,21 +18,19 @@ module.exports = {
             .tap((options) => {
                 return {
                     limit: true,
-                    name: 'img/[name].[hash:8].[ext]',
+                    name: "img/[name].[hash:8].[ext]",
                 };
             });
 
         config.module
             .rule("svg")
             .use("file-loader")
-            .loader("url-loader")
-            .tap((options) => {
-                return {
-                    limit: 10240,
-                    name: 'img/[name].[hash:8].[ext]',
-                    generator: (content) => svgToMiniDataURI(content.toString()),
-                };
-            });
+            .loader("svg-url-loader")
+            .tap(() => ({
+                limit: 10240,
+                encoding: "base64",
+                name: "img/[name].[hash:8].[ext]",
+            }));
     },
     configureWebpack: {
         resolve: {
