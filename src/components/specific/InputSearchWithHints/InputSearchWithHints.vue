@@ -2,6 +2,7 @@
     <div v-click-outside="onClickOutside" class="spui-InputSearchWithHints">
         <div class="spui-InputSearchWithHints__input-wrapper">
             <input
+                @keyup.enter="onSearch"
                 v-model="_model"
                 class="spui-InputSearchWithHints__input"
                 type="text"
@@ -12,15 +13,9 @@
             </button>
         </div>
         <!-- блок выпадающей категории поиска -->
-        <div
-            @click="onCategoryClick"
-            class="spui-InputSearchWithHints__category"
-        >
+        <div @click="onCategoryClick" class="spui-InputSearchWithHints__category">
             <!-- добавить .dropdown-fixed-list_expanded для раскрытия меню категорий -->
-            <div
-                class="spui-dropdown-fixed-list"
-                :class="{ 'is-expanded': isCategoryOpen }"
-            >
+            <div class="spui-dropdown-fixed-list" :class="{ 'is-expanded': isCategoryOpen }">
                 <!-- текущее значение -->
                 <span class="spui-dropdown-fixed-list__current">{{
                     categories[categories.current]
@@ -52,13 +47,8 @@
                 v-for="(hint, i) in hints"
                 :key="i"
             >
-                <span
-                    v-html="highlight(hint)"
-                    class="spui-InputSearchWithHints__text"
-                ></span>
-                <span class="spui-InputSearchWithHints__count">{{
-                    getHintCount(hint)
-                }}</span>
+                <span v-html="highlight(hint)" class="spui-InputSearchWithHints__text"></span>
+                <span class="spui-InputSearchWithHints__count">{{ getHintCount(hint) }}</span>
             </div>
         </div>
     </div>
@@ -129,11 +119,7 @@ export default {
         },
         /**Функция получающая label для подсказки */
         getHintLabel(hint) {
-            if (
-                hint &&
-                this.fnHintLabel &&
-                typeof this.fnHintLabel === "function"
-            ) {
+            if (hint && this.fnHintLabel && typeof this.fnHintLabel === "function") {
                 return this.fnHintLabel(hint);
             } else {
                 return hint.label;
@@ -141,11 +127,7 @@ export default {
         },
         /**Функция получающая count для подсказки */
         getHintCount(hint) {
-            if (
-                hint &&
-                this.fnHintCount &&
-                typeof this.fnHintCount === "function"
-            ) {
+            if (hint && this.fnHintCount && typeof this.fnHintCount === "function") {
                 return this.fnHintCount(hint);
             } else {
                 return hint.count;
@@ -160,7 +142,7 @@ export default {
         },
         onClickOutside() {
             this.emitHintsOpenState(false);
-            this.emitCategoryOpenState(false)
+            this.emitCategoryOpenState(false);
         },
         onSearch() {
             this.$emit("search", {
