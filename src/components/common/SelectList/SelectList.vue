@@ -1,5 +1,5 @@
 <template>
-    <div class="spui-SelectList">
+    <div class="spui-SelectList" :class="{ 'spui-SelectList_error': isError }">
         <div class="spui-SelectList__one" v-if="one">
             <label
                 class="spui-SelectList__label"
@@ -36,6 +36,17 @@
                 {{ getLabel(element) || "Label не указан" }}
             </label>
         </div>
+        <Tooltip
+            class="spui-SelectList__tooltip"
+            type="error"
+            v-if="isError"
+            forced
+            :position="errorTooltipPosition"
+        >
+            <slot name="error-msg"
+                >Чтобы добавить товар в корзину, <br> выберите необходимый параметр</slot
+            >
+        </Tooltip>
     </div>
 </template>
 
@@ -43,8 +54,13 @@
 import uuid from "short-uuid";
 import isEqual from "lodash-es/isEqual";
 
+import Tooltip from "../Tooltip/Tooltip.vue";
+
 export default {
     name: "SelectList",
+    components: {
+        Tooltip,
+    },
     props: {
         one: {
             type: Boolean,
@@ -64,6 +80,14 @@ export default {
         },
         value: {
             required: true,
+        },
+        isError: {
+            type: Boolean,
+            default: false,
+        },
+        errorTooltipPosition: {
+            type: String,
+            default: "bottom",
         },
     },
     data() {
@@ -107,12 +131,6 @@ export default {
                 }
             }
         },
-        // isEqual,
-        // isContain(elm, values) {
-        //     if (!values) return;
-        //     const finded = values.find((el) => isEqual(el, elm));
-        //     return finded ? true : false;
-        // },
         getLabel(value) {
             if (value && this.label && typeof this.label === "function") {
                 return this.label(value);

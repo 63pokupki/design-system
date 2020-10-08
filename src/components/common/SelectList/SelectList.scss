@@ -1,6 +1,12 @@
 .spui-SelectList {
+    padding-top: 3px;
+
     &__input {
         display: none;
+    }
+
+    &__tooltip {
+        font-size: 10px !important;
     }
 
     &__label {
@@ -15,19 +21,23 @@
         min-width: 23px;
         display: inline-flex;
         align-items: center;
-        color: #1D1E1F;
+        color: #1d1e1f;
         justify-content: center;
         font-family: $font-primary;
 
         &:hover {
-            color: #36A6F2;
+            color: #36a6f2;
         }
 
         &.is-selected {
             color: white;
-            background-color: #36A6F2;
+            background-color: #36a6f2;
             transition: background-color 0.25s ease, color 0.25s ease;
         }
-
     }
+}
+
+.spui-SelectList_error {
+    position: relative;
+    outline: 1px solid #ffafaf;
 }

@@ -43,6 +43,19 @@ export const many = () => ({
         "<SelectList :values='elements' :label='label' v-model='value' :one='false'></SelectList>",
 });
 
+export const error = () => ({
+    components: { SelectList },
+    data() {
+        return {
+            value: { label: 1 },
+            elements,
+            label: (value) => value.label,
+            isError: true
+        };
+    },
+    template: "<SelectList :is-error='isError' :values='elements' :label='label' v-model='value'></SelectList>",
+});
+
 export const customFnCompare = () => ({
     components: { SelectList },
     data() {
