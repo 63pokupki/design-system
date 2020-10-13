@@ -24,6 +24,9 @@ import InputSearchWithHints from "./specific/InputSearchWithHints/InputSearchWit
 /** Helpers */
 import { pluralize, capitalize } from "../helpers";
 
+/** Directives */
+import { clickOutside } from "../directives";
+
 export {
     BtnFavorite,
     Button,
@@ -48,5 +51,7 @@ export {
     InputSearchWithHints,
     /** Helpers */
     pluralize,
-    capitalize
+    capitalize,
+    /** Directives */
+    clickOutside
 };
