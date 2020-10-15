@@ -64,7 +64,7 @@
 		&::-webkit-scrollbar-thumb {
 			background: linear-gradient(to top, transparent 0, transparent 2px, #36a5f2 2px, #36a5f2 4px, transparent 4px);
 		}
-	
+
 		&_top {
 			padding: 0;
 			overflow: visible;
@@ -338,7 +338,7 @@
 		overflow: hidden;
 		max-width: 791px;
 
-		
+
 		&__title {
 			display: flex;
 			align-items: center;
@@ -515,12 +515,21 @@
 
 			.main-slider__list {
 				height: 730px;
-				overflow: hidden;
+				overflow-y: auto;
 				padding: 0;
 				width: 100%;
 				display: flex;
 				flex-direction: column;
 				flex-flow: wrap;
+
+				&::-webkit-scrollbar {
+					height: auto;
+					background-color: rgba(54, 165, 242, 0.15);
+				}
+
+				&::-webkit-scrollbar-thumb {
+					background: #36a5f2;
+				}
 			}
 
 			.main-slider__item {
