@@ -14,9 +14,18 @@ import Tooltip from "./common/Tooltip/Tooltip.vue";
 import ProgressBar from "./common/ProgressBar/ProgressBar.vue";
 import Radio from "./common/Radio/Radio.vue";
 import SelectList from "./common/SelectList/SelectList.vue";
+import CounterQuantity from "./common/CounterQuantity/CounterQuantity.vue";
+import CollapseFade from "./common/CollapseFade/CollapseFade.vue";
 /* Specific*/
 import BadgeCategoryTag from "./specific/BadgeCategoryTag/BadgeCategoryTag.vue";
 import CollapseMultipleSelectList from "./specific/CollapseMultipleSelectList/CollapseMultipleSelectList.vue";
+import InputSearchWithHints from "./specific/InputSearchWithHints/InputSearchWithHints.vue";
+
+/** Helpers */
+import { pluralize, capitalize } from "../helpers";
+
+/** Directives */
+import { clickOutside } from "../directives";
 
 export {
     BtnFavorite,
@@ -36,5 +45,13 @@ export {
     CollapseMultipleSelectList,
     ProgressBar,
     Radio,
-    SelectList
+    SelectList,
+    CounterQuantity,
+    CollapseFade,
+    InputSearchWithHints,
+    /** Helpers */
+    pluralize,
+    capitalize,
+    /** Directives */
+    clickOutside
 };

@@ -122,6 +122,10 @@
         text-align: center;
         font-weight: bold;
         padding: 10px 0;
+
+        @media (min-width: 1184px) {
+            padding: 45px 0 10px 0;
+        }
     }
 
     &__tabs {
@@ -334,6 +338,10 @@
         flex-direction: column;
         align-items: center;
         padding: 20px 25px 40px;
+
+        @media (max-width: 767px) {
+            padding: 0 25px 40px;
+        }
 
         .org-profile {
             margin: 0 0 2px 0;

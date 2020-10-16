@@ -1,36 +1,48 @@
-<template>
-  <button
-    @click="onClick"
-    class="BtnFavorite"
-    :class="{'is-active':isActive, 'is-loading': isLoading}"
-  >
-    <i
-      class="BtnFavorite__icon ds-icon"
-      :class="{'icon-heart-bold': !isActive, 'icon-heart-filled': isActive}"
-    ></i>
-  </button>
-</template>
-
 <script>
 export default {
-  name: "BtnFavorite",
-  props: {
-    isActive: {
-      type: Boolean,
-      default: false,
+    name: "BtnFavorite",
+    functional: true,
+    props: {
+        isActive: {
+            type: Boolean,
+            default: false,
+        },
+        isLoading: {
+            type: Boolean,
+            default: false,
+        },
     },
-    isLoading: {
-      type: Boolean,
-      default: false,
+    render: (h, { props, data, listeners }) => {
+        const { isActive, isLoading } = props;
+
+        const onClick = () => {
+            if (!isLoading) {
+                listeners.click();
+            }
+        };
+
+        return (
+            <button
+                onClick={onClick}
+                class={[
+                    "BtnFavorite",
+                    { "is-active": isActive, "is-loading": isLoading },
+                    data.class,
+                    data.staticClass,
+                ]}
+            >
+                <i
+                    class={[
+                        "BtnFavorite__icon ds-icon",
+                        {
+                            "icon-heart-bold": !isActive,
+                            "icon-heart-filled": isActive,
+                        },
+                    ]}
+                ></i>
+            </button>
+        );
     },
-  },
-  methods: {
-    onClick() {
-      if (!this.isLoading) {
-        this.$emit("click");
-      }
-    },
-  },
 };
 </script>
 

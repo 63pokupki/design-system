@@ -1,4 +1,10 @@
 .main-cities {
+	margin-top: 15px;
+
+	@media (min-width: 768px) and (max-width: 1183px) {
+		margin-top: 4px;
+	}
+
 	.main-slider__footer-link {
 		display: none;
 	}
@@ -11,11 +17,20 @@
 	}
 
 	&__link {
-		font-size: 14px;
-		line-height: 40px;
+		font-size: 18px;
+		line-height: 48px;
 		color: #606266;
 		text-decoration: none;
 		transition: color .2s ease;
+
+		@media (min-width: 768px) and (max-width: 1183px) {
+			line-height: 43px;
+		}
+
+
+		@media (max-width: 1183px) {
+			font-size: 14px;
+		}
 
 		&:hover {
 			color: #36a6f2;
