@@ -10,7 +10,7 @@
                             >Выбрать все</span
                         >
                         <span
-                            v-if="_displayClearButton"
+                            v-show="_displayClearButton"
                             @click="onClear"
                             class="spui-CollapseMultipleSelectList__clear"
                             >Очистить</span
@@ -27,7 +27,7 @@
                 :one="false"
                 :fnCompare="fnCompare"
             ></SelectList>
-            <template v-if="_displayMoreButton" slot="afterbody">
+            <template v-show="_displayMoreButton" slot="afterbody">
                 <div @click="onChangeExpand" class="spui-CollapseMultipleSelectList__more">
                     {{ listOpen ? "Свернуть" : "Показать все" }}
                 </div>
