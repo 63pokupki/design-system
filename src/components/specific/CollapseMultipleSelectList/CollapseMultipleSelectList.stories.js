@@ -51,7 +51,7 @@ export const exampleSize = () => ({
         },
         tooltipStateChangeHandler(e) {
             this.showTooltip = e;
-        }
+        },
     },
     template: `<div>
             <CollapseMultipleSelectList
@@ -108,7 +108,7 @@ export const exampleColor = () => ({
         },
         tooltipStateChangeHandler(e) {
             this.showTooltip = e;
-        }
+        },
     },
     template: `<div>
             <CollapseMultipleSelectList
@@ -119,6 +119,75 @@ export const exampleColor = () => ({
                 :listOpen="listOpen"
                 :values="values"
                 :tooltip="showTooltip"
+                @tooltipStateChange="tooltipStateChangeHandler"
+                @collapse="collapseHandler"
+                @changeListOpen="changeExpandHandler"
+                @tooltipClick="tooltipClickHandler"
+            />
+    </div>`,
+});
+
+export const withSearchInput = () => ({
+    components: { CollapseMultipleSelectList },
+    data() {
+        return {
+            open: true,
+            listOpen: false,
+            showTooltip: false,
+            label: (value) => value.label,
+            values: [
+                { label: "красный", value: 0 },
+                { label: "синий", value: 0 },
+                { label: "серобурмалиновый", value: 0 },
+                { label: "желтый", value: 0 },
+                { label: "лиловый", value: 0 },
+                { label: "серый", value: 0 },
+                { label: "бежевый (снежинка)", value: 0 },
+                { label: "*", value: 0 },
+                { label: "волна", value: 0 },
+                { label: "голубой", value: 0 },
+                { label: "черный/клетка", value: 0 },
+                { label: "черный/линейка/мелкая линейка", value: 0 },
+            ],
+            value: [{ label: "красный", value: 0 }],
+            displaySearchInput: true,
+            inputSearchValue: "",
+        };
+    },
+    methods: {
+        collapseHandler(e) {
+            this.open = e;
+        },
+        changeExpandHandler(e) {
+            this.listOpen = e;
+        },
+        tooltipClickHandler() {
+            this.showTooltip = false;
+            console.log("Tooltip click!");
+        },
+        tooltipStateChangeHandler(e) {
+            this.showTooltip = e;
+        },
+        onInputSearchValue(value) {
+            this.inputSearchValue = value;
+        },
+        onSearch(value) {
+            alert("Search: " + value);
+        },
+    },
+    template: `<div>
+            <CollapseMultipleSelectList
+                v-model="value"
+                :heading="'Цвет'"
+                :open="open"
+                :label="label"
+                :listOpen="listOpen"
+                :values="values"
+                :tooltip="showTooltip"
+                :displaySearchInput="displaySearchInput"
+                :inputSearchValue="inputSearchValue"
+                @inputSearchValue="onInputSearchValue"
+                @onSearch="onSearch"
                 @tooltipStateChange="tooltipStateChangeHandler"
                 @collapse="collapseHandler"
                 @changeListOpen="changeExpandHandler"

@@ -5,18 +5,23 @@ export default {
     props: {
         value: {
             type: String,
+            required: true,
         },
         placeholder: {
             type: String,
+            required: false,
         },
         inputStyle: {
             type: Object,
+            required: false,
         },
         buttonStyle: {
             type: Object,
+            required: false,
         },
         size: {
             type: String,
+            required: false,
         },
     },
     render: (h, { data, props, listeners, slots }) => {
@@ -40,13 +45,21 @@ export default {
         };
 
         return (
-            <div style={data.staticStyle} class={["spui-InputSearch", `spui-InputSearch_${size}`]}>
+            <div
+                style={data.staticStyle}
+                class={[
+                    "spui-InputSearch",
+                    `spui-InputSearch_${size}`,
+                    data.class,
+                    data.staticClass,
+                ]}
+            >
                 <input
                     style={inputStyle}
                     onKeyup={onKeyUpSearch}
                     value={value}
                     onInput={onInput}
-                    class={["spui-InputSearch__input", data.class, data.staticClass]}
+                    class="spui-InputSearch__input"
                     type="text"
                     placeholder={placeholder}
                 />
