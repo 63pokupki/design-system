@@ -16,6 +16,7 @@ import Radio from "./common/Radio/Radio.vue";
 import SelectList from "./common/SelectList/SelectList.vue";
 import CounterQuantity from "./common/CounterQuantity/CounterQuantity.vue";
 import CollapseFade from "./common/CollapseFade/CollapseFade.vue";
+import InputSearch from "./common/InputSearch/InputSearch.vue";
 /* Specific*/
 import BadgeCategoryTag from "./specific/BadgeCategoryTag/BadgeCategoryTag.vue";
 import CollapseMultipleSelectList from "./specific/CollapseMultipleSelectList/CollapseMultipleSelectList.vue";
@@ -49,6 +50,7 @@ export {
     CounterQuantity,
     CollapseFade,
     InputSearchWithHints,
+    InputSearch,
     /** Helpers */
     pluralize,
     capitalize,
