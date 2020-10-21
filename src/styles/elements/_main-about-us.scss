@@ -102,7 +102,6 @@
 	.main-about-us {
 		&__wrapper {
 			display: flex;
-			// justify-content: space-between;
 			justify-content: flex-start;
 			flex-wrap: wrap;
 		}
@@ -117,6 +116,7 @@
 			width: 40%;
 			margin: 0;
 			text-align: left;
+			padding-top: 50px;
 
 			&:nth-of-type(1) {
 				margin-right: 87px;
@@ -148,6 +148,10 @@
 					font-size: 13px;
 					line-height: 1.5;
 				}
+			}
+
+			h2 {
+				margin-top: -35px;
 			}
 
 			&-title {
