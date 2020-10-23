@@ -22,7 +22,7 @@ export default {
             type: String,
         },
     },
-    render: function (h, { props, scopedSlots: slots }) {
+    render: function (h, { data, props, scopedSlots: slots }) {
         /** Процент заполнения */
         const percent = (props.current / props.target) * 100;
         /** Параметры передающиеся в scoped slot*/
@@ -50,7 +50,11 @@ export default {
         return (
             <div
                 style={`max-width: ${props.maxWidth};`}
-                class={`spui-ProgressBar spui-ProgressBar_${props.size}`}
+                class={[
+                    `spui-ProgressBar spui-ProgressBar_${props.size}`,
+                    data.class,
+                    data.staticClass
+                ]}
             >
                 <div style={`width: ${percent}%;`} class="spui-ProgressBar__progress"></div>
                 <div class="spui-ProgressBar__text">{text}</div>
