@@ -1,5 +1,5 @@
 .cart {
-    
+
     p {
         margin: 0;
     }
@@ -7,11 +7,16 @@
     &__txt {
         font-size: 14px;
         color: $color-text-heading;
+        line-height: 24px;
     }
     &__txt_small {
         font-size: 11px;
     }
     &__txt_middle {
+        font-size: 12px;
+    }
+    &__txt_large {
+        font-weight: bold;
         font-size: 12px;
     }
 
@@ -23,6 +28,7 @@
         display: flex;
         justify-content: space-between;
         margin: 15px 0 0 0;
+        max-width: 175px;
     }
 
 }

@@ -25,7 +25,7 @@
         margin: 0 10px 0 0;
     }
     &__item-image {
-        margin: 0 25px 0 0;        
+        margin: 0 25px 0 0;
         img {
             max-height: 80px;
         }
@@ -92,11 +92,15 @@
     // Ряды
     .stock-rows {
         align-items: center;
+        &::after {
+            display: none;
+        }
     }
     .stock-rows-wrap {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        margin-left: 115px;
+        width: fit-content;
     }
     .stock-rows__numeration {
         display: flex;
@@ -125,7 +129,7 @@
             left: 0;
             width: 16px;
             height: 16px;
-            border-radius: 50%;            
+            border-radius: 50%;
         }
     }
     .cart__item-status-new {
@@ -141,13 +145,13 @@
     .icon-close {
         width: 12px;
         height: 12px;
-        margin: 10px 0 10px 0;        
+        margin: 10px 0 10px 0;
         &:after,
         &:before {
             background-color: $color-inactive;
         }
     }
-    
+
     .icon-order-history {
         text-decoration: none;
     }

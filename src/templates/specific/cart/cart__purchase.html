@@ -21,7 +21,7 @@
                     <div class="collapse-block-css__header" for="toggle-chx">
                         <div class="collapse-block-css__header-content">
                             <!-- Левый блок -->
-                            <div class="cart__purchase-header-content-l">
+                            <div class="cart__purchase-header-content-item">
                                 <div class="cart__header-status-purchase">
                                     <!-- Контейнер статусов -->
                                     <div class="ds-purchase-status-container">
@@ -127,7 +127,7 @@
                                                 <span class="ds-purchase-status__date ds-purchase-status__edit-date">13.02.2020</span>
                                             </div>
                                         </div>
-    
+
                                     </div>
                                     <!-- Рейтинг -->
                                     <div class="rating-star-org">
@@ -135,14 +135,9 @@
                                         <div class="rating-star-org__value">4.9</div>
                                     </div>
                                     <!-- Избранное -->
-                                    <div class="favorite favorite__cart stock-brief__favorite">
+                                    <button class="favorite favorite__cart stock-brief__favorite favorite__action">
                                         <i class="like__icon ds-icon icon-heart"></i>
-                                        <div class="favorite__text">
-                                            <button class="link favorite__action">В избранное</button>
-                                            <span class="favorite__already">960 уже добавили
-                                            </span>
-                                        </div>
-                                    </div>
+                                    </button>
                                 </div>
                                 <!-- Ограничиваем 83мя символами -->
                                 <div class="cart__purhase-heading">
@@ -150,17 +145,13 @@
                                 </div>
                             </div>
                             <!-- Правый блок -->
-                            <div class="collapse-block-css__header-content-r">
+                            <div class="collapse-block-css__header-content-item">
                                 <!-- Организатор -->
                                 <div class="org-profile stock-brief__org">
                                     <div class="org-profile__image-wrapper">
                                         <a href="/forum/phpBB3/memberlist.php?mode=viewprofile&amp;u=362663">
                                             <img class="org-profile__image" src="https://63pokupki.ru/forum/phpBB3/download/file.php?avatar=362663_1544302862.png" alt="Августина">
                                         </a>
-                                        <i class="ds-icon icon-star rating-star org-profile__rating has-tooltip">
-                                            <span class="rating-star__num">5.0</span>
-                                            <span class="tooltip tooltip_top  tooltip_ta-c">Рейтинг орг-а</span>
-                                        </i>
                                     </div>
                                     <div class="org-profile__text">
                                         <a href="/forum/phpBB3/memberlist.php?mode=viewprofile&amp;u=362663" class="link org-profile__name">
@@ -178,17 +169,141 @@
                                     <a class="cart__purchase-heading-comments" href="#" target="_blank" rel="noopener noreferrer">Отзывы</a>
                                 </div>
                             </div>
+                            <div class="collapse-block-css__header-content-item">
+                                <p class="cart__txt cart__txt_large">Самовывоз из офиса:</p>
+                                <a class="cart__pickup-address cart__txt_middle link link_hover" href="#">
+                                    <span>г. Самара, ул. Вилоновская, 38А</span>
+                                    <i class="ds-icon icon-rectangle"></i>
+                                </a>
+                                <p class="cart__txt cart__txt_large">Срок доставки: 16 дней</p>
+                            </div>
                         </div>
                     </div>
                     <div class="collapse-block-css__content">
                         <div class="cart__purchase-content-header">
-                            <div class="cart__purchase-col-50">
-                                Товар
-                            </div>
+                            <div class="cart__purchase-col-50 first">Товар</div>
                             <div class="cart__purchase-col-16">Количество</div>
                             <div class="cart__purchase-col-16">Цена</div>
+                            <div class="cart__purchase-col-16">Доставка</div>
+                            <div class="cart__purchase-col-16">Орг. сбор</div>
                             <div class="cart__purchase-col-16">Сумма</div>
-                        </div>                        
+                        </div>
+
+                        <div class="cart">
+                            <div class="cart__item-card">
+                                <!-- Обёртка вверхней части -->
+                                <div class="cart__item-card-top">
+                                    <div class="cart__purchase-col-50">
+                                        <div class="cart__item-card-icons">
+                                            <!-- Избранное -->
+                                            <div class="favorite favorite__cart stock-brief__favorite">
+                                                <i class="like__icon ds-icon icon-heart"></i>
+                                            </div>
+                                            <!-- Крестик -->
+                                            <i class="ds-icon icon-close"></i>
+                                            <!-- История закупки -->
+                                            <a class="ds-icon icon-order-history has-tooltip" href="#" target="_blank" rel="noopener noreferrer">
+                                                <span class="tooltip tooltip_right">История заказа</span>
+                                            </a>
+                                        </div>
+                                        <!-- Изображение позиции -->
+                                        <div class="cart__item-image">
+                                            <div class="img-container_resp">
+                                                <img src="https://63pokupki.fra1.cdn.digitaloceanspaces.com/item/x512/57754b8dc4e4ab437293c33d1ef2866a14ix12whk03q0go2.jpg" alt="f-15">
+                                            </div>
+                                        </div>
+                                        <div class="cart__item-card-description">
+                                            <div class="cart__item-status">
+                                                <div class="cart__item-status-new is-active">Новый заказ</div>
+                                                <div class="cart__item-status-give-out">Товар выдан</div>
+                                            </div>
+                                            <div class="cart__item-title">Куртка м Н-7036 ветровка. Однажды в студёную зимнюю пору, я из лесу вышел; был сильный мороз.</div>
+                                            <div class="cart__item-params">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cart__item-card-quantity cart__purchase-col-16">
+                                        <div class="btn-sum">
+                                            <button class="btn-sum__minus"></button>
+                                            <input value="128" class="btn-sum__sum-num">
+                                            <button class="btn-sum__plus"></button>
+                                        </div>
+                                    </div>
+                                    <div class="cart__item-card-price cart__purchase-col-16">
+                                        <p>1 444 ₽</p>
+                                    </div>
+                                    <div class="cart__item-card-price cart__purchase-col-16">
+                                        <p>250 ₽</p>
+                                    </div>
+                                    <div class="cart__item-card-price cart__purchase-col-16">
+                                        <p>
+                                            173
+                                            <strong class="price__kopek">,28</strong>
+                                            ₽ (12%)
+                                        </p>
+                                    </div>
+                                    <div class="cart__item-card-sum cart__purchase-col-16">
+                                        <span class="price">
+                                            <!-- price__input-integer - сюда должна приходить цена с бэка -->
+                                            <strong class="price__input-integer">2 444,79</strong>
+                                            <strong class="price__rub"></strong>
+                                            <strong class="price__kopek"></strong>
+                                            <strong class="price__rub-symbol"> ₽</strong>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="cart__item-card-bottom">
+                                    <div class="stock-rows-wrap">
+                                        <div class="stock-rows">
+                                            <div class="stock-rows__numeration">
+                                                <div class="stock-rows__numeration-label">№</div>
+                                                <div class="stock-rows__num">01</div>
+                                            </div>
+                                            <div class="stock-rows__values">
+                                                <div class="stock-rows__row">
+                                                    <div class="stock-rows-cell is-busy">37</div>
+                                                    <div class="stock-rows-cell is-busy">38</div>
+                                                    <div class="stock-rows-cell is-busy">39</div>
+                                                    <div class="stock-rows-cell is-free">40</div>
+                                                    <div class="stock-rows-cell is-free">41</div>
+                                                    <div class="stock-rows-cell is-free">42</div>
+                                                    <div class="stock-rows-cell is-your">43</div>
+                                                    <div class="stock-rows-cell is-your">44</div>
+                                                    <div class="stock-rows-cell is-your">45</div>
+                                                    <div class="stock-rows-cell is-fixed">46</div>
+                                                    <div class="stock-rows-cell is-fixed">47</div>
+                                                    <div class="stock-rows-cell is-fixed">48</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="stock-rows-legend">
+                                            <div class="stock-rows-legend__item">
+                                                <div class="stock-rows-cell is-row"></div>
+                                                <span class="stock-rows-legend__text">Ряд</span>
+                                            </div>
+                                            <div class="stock-rows-legend__item">
+                                                <div class="stock-rows-cell is-free"></div>
+                                                <span class="stock-rows-legend__text">Свободно</span>
+                                            </div>
+                                            <div class="stock-rows-legend__item">
+                                                <div class="stock-rows-cell is-fixed">44</div>
+                                                <span class="stock-rows-legend__text">Фикс</span>
+                                            </div>
+                                            <div class="stock-rows-legend__item">
+                                                <div class="stock-rows-cell is-busy"></div>
+                                                <span class="stock-rows-legend__text">Занято</span>
+                                            </div>
+                                            <div class="stock-rows-legend__item">
+                                                <div class="stock-rows-cell is-your"></div>
+                                                <span class="stock-rows-legend__text">Ваша</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
