@@ -1,5 +1,21 @@
 
 .cart {
+    &__banner {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__tabs {
+        &-tab {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+            color: #8e8e8f;
+            margin-right: 25px;
+            margin-bottom: 20px;
+        }
+    }
+
     &__purchase {
         padding: 22px;
         position: relative;
@@ -108,6 +124,31 @@
         justify-content: center;
         align-items: center;
         width: 16.5%;
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: flex-end;
+
+        .cart__btn-place-order {
+            margin: 15px 40px 15px 0;
+        }
+
+        &-price-wrapper {
+            width: 400px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-right: 25px;
+        }
+
+        &-link-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-right: 100px;
+            width: 300px;
+        }
     }
 
 }

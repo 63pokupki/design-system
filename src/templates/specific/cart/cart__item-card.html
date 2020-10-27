@@ -74,50 +74,93 @@
                         </span>
                     </div>
                 </div>
+
+                <div class="cart__item-card-bottom cart__item-card-bottom--filter">
+                    <!-- cart__filter--expanded -->
+                    <div class="cart__filter">
+                        <span class="cart__filter-active">размер: Большой</span>
+                        <ul class="cart__filter-list">
+                            <li class="cart__filter-list-item checkbox_no-chx">
+                                <input type="radio" id="chx-s-01" name="sort-radio" class="checkbox__input">
+                                <label for="chx-s-01" class="checkbox__label">Большой</label>
+                            </li>
+                            <li class="cart__filter-list-item checkbox_no-chx">
+                                <input type="radio" id="chx-s-02" name="sort-radio" class="checkbox__input">
+                                <label for="chx-s-02" class="checkbox__label">Не большой</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- cart__filter--expanded -->
+                    <div class="cart__filter">
+                        <span class="cart__filter-active">размер: Большой</span>
+                        <ul class="cart__filter-list">
+                            <li class="cart__filter-list-item checkbox_no-chx">
+                                <input type="radio" id="chx-q-01" name="sort-radio" class="checkbox__input">
+                                <label for="chx-q-01" class="checkbox__label">Большой</label>
+                            </li>
+                            <li class="cart__filter-list-item checkbox_no-chx">
+                                <input type="radio" id="chx-q-02" name="sort-radio" class="checkbox__input">
+                                <label for="chx-q-02" class="checkbox__label">Не большой</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
                 <div class="cart__item-card-bottom">
-                    <div class="stock-rows-wrap">
-                        <div class="stock-rows">
-                            <div class="stock-rows__numeration">
-                                <div class="stock-rows__numeration-label">№</div>
-                                <div class="stock-rows__num">01</div>
-                            </div>
-                            <div class="stock-rows__values">
-                                <div class="stock-rows__row">
-                                    <div class="stock-rows-cell is-busy">37</div>
-                                    <div class="stock-rows-cell is-busy">38</div>
-                                    <div class="stock-rows-cell is-busy">39</div>
-                                    <div class="stock-rows-cell is-free">40</div>
-                                    <div class="stock-rows-cell is-free">41</div>
-                                    <div class="stock-rows-cell is-free">42</div>
-                                    <div class="stock-rows-cell is-your">43</div>
-                                    <div class="stock-rows-cell is-your">44</div>
-                                    <div class="stock-rows-cell is-your">45</div>
-                                    <div class="stock-rows-cell is-fixed">46</div>
-                                    <div class="stock-rows-cell is-fixed">47</div>
-                                    <div class="stock-rows-cell is-fixed">48</div>
+                    <div class="collapse-block-css collapse-rows">
+                        <input class="toggle-chx" type="checkbox" name="" id="toggle-chx" checked>
+
+                        <label class="collapse-rows-label" for="toggle-chx">Показать ряды</label>
+                        <label class="collapse-block-css__toggle-btn collapse-rows-btn" for="toggle-chx">
+                            <i class="ds-icon icon-arrow-down"></i>
+                        </label>
+
+                        <div class="collapse-block-css__content">
+                            <div class="stock-rows-wrap">
+                                <div class="stock-rows">
+                                    <div class="stock-rows__numeration">
+                                        <div class="stock-rows__numeration-label">№</div>
+                                        <div class="stock-rows__num">01</div>
+                                    </div>
+                                    <div class="stock-rows__values">
+                                        <div class="stock-rows__row">
+                                            <div class="stock-rows-cell is-busy">37</div>
+                                            <div class="stock-rows-cell is-busy">38</div>
+                                            <div class="stock-rows-cell is-busy">39</div>
+                                            <div class="stock-rows-cell is-free">40</div>
+                                            <div class="stock-rows-cell is-free">41</div>
+                                            <div class="stock-rows-cell is-free">42</div>
+                                            <div class="stock-rows-cell is-your">43</div>
+                                            <div class="stock-rows-cell is-your">44</div>
+                                            <div class="stock-rows-cell is-your">45</div>
+                                            <div class="stock-rows-cell is-fixed">46</div>
+                                            <div class="stock-rows-cell is-fixed">47</div>
+                                            <div class="stock-rows-cell is-fixed">48</div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="stock-rows-legend">
-                            <div class="stock-rows-legend__item">
-                                <div class="stock-rows-cell is-row"></div>
-                                <span class="stock-rows-legend__text">Ряд</span>
-                            </div>
-                            <div class="stock-rows-legend__item">
-                                <div class="stock-rows-cell is-free"></div>
-                                <span class="stock-rows-legend__text">Свободно</span>
-                            </div>
-                            <div class="stock-rows-legend__item">
-                                <div class="stock-rows-cell is-fixed">44</div>
-                                <span class="stock-rows-legend__text">Фикс</span>
-                            </div>
-                            <div class="stock-rows-legend__item">
-                                <div class="stock-rows-cell is-busy"></div>
-                                <span class="stock-rows-legend__text">Занято</span>
-                            </div>
-                            <div class="stock-rows-legend__item">
-                                <div class="stock-rows-cell is-your"></div>
-                                <span class="stock-rows-legend__text">Ваша</span>
+                                <div class="stock-rows-legend">
+                                    <div class="stock-rows-legend__item">
+                                        <div class="stock-rows-cell is-row"></div>
+                                        <span class="stock-rows-legend__text">Ряд</span>
+                                    </div>
+                                    <div class="stock-rows-legend__item">
+                                        <div class="stock-rows-cell is-free"></div>
+                                        <span class="stock-rows-legend__text">Свободно</span>
+                                    </div>
+                                    <div class="stock-rows-legend__item">
+                                        <div class="stock-rows-cell is-fixed">44</div>
+                                        <span class="stock-rows-legend__text">Фикс</span>
+                                    </div>
+                                    <div class="stock-rows-legend__item">
+                                        <div class="stock-rows-cell is-busy"></div>
+                                        <span class="stock-rows-legend__text">Занято</span>
+                                    </div>
+                                    <div class="stock-rows-legend__item">
+                                        <div class="stock-rows-cell is-your"></div>
+                                        <span class="stock-rows-legend__text">Ваша</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -192,50 +235,93 @@
                             </span>
                         </div>
                     </div>
+
+                    <div class="cart__item-card-bottom cart__item-card-bottom--filter">
+                        <!-- cart__filter--expanded -->
+                        <div class="cart__filter">
+                            <span class="cart__filter-active">размер: Большой</span>
+                            <ul class="cart__filter-list">
+                                <li class="cart__filter-list-item checkbox_no-chx">
+                                    <input type="radio" id="chx-s-01" name="sort-radio" class="checkbox__input">
+                                    <label for="chx-s-01" class="checkbox__label">Большой</label>
+                                </li>
+                                <li class="cart__filter-list-item checkbox_no-chx">
+                                    <input type="radio" id="chx-s-02" name="sort-radio" class="checkbox__input">
+                                    <label for="chx-s-02" class="checkbox__label">Не большой</label>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- cart__filter--expanded -->
+                        <div class="cart__filter">
+                            <span class="cart__filter-active">размер: Большой</span>
+                            <ul class="cart__filter-list">
+                                <li class="cart__filter-list-item checkbox_no-chx">
+                                    <input type="radio" id="chx-q-01" name="sort-radio" class="checkbox__input">
+                                    <label for="chx-q-01" class="checkbox__label">Большой</label>
+                                </li>
+                                <li class="cart__filter-list-item checkbox_no-chx">
+                                    <input type="radio" id="chx-q-02" name="sort-radio" class="checkbox__input">
+                                    <label for="chx-q-02" class="checkbox__label">Не большой</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
                     <div class="cart__item-card-bottom">
-                        <div class="stock-rows-wrap">
-                            <div class="stock-rows">
-                                <div class="stock-rows__numeration">
-                                    <div class="stock-rows__numeration-label">№</div>
-                                    <div class="stock-rows__num">01</div>
-                                </div>
-                                <div class="stock-rows__values">
-                                    <div class="stock-rows__row">
-                                        <div class="stock-rows-cell is-busy">37</div>
-                                        <div class="stock-rows-cell is-busy">38</div>
-                                        <div class="stock-rows-cell is-busy">39</div>
-                                        <div class="stock-rows-cell is-free">40</div>
-                                        <div class="stock-rows-cell is-free">41</div>
-                                        <div class="stock-rows-cell is-free">42</div>
-                                        <div class="stock-rows-cell is-your">43</div>
-                                        <div class="stock-rows-cell is-your">44</div>
-                                        <div class="stock-rows-cell is-your">45</div>
-                                        <div class="stock-rows-cell is-fixed">46</div>
-                                        <div class="stock-rows-cell is-fixed">47</div>
-                                        <div class="stock-rows-cell is-fixed">48</div>
+                        <div class="collapse-block-css collapse-rows">
+                            <input class="toggle-chx" type="checkbox" name="" id="toggle-chx" checked>
+
+                            <label class="collapse-rows-label" for="toggle-chx">Показать ряды</label>
+                            <label class="collapse-block-css__toggle-btn collapse-rows-btn" for="toggle-chx">
+                                <i class="ds-icon icon-arrow-down"></i>
+                            </label>
+
+                            <div class="collapse-block-css__content">
+                                <div class="stock-rows-wrap">
+                                    <div class="stock-rows">
+                                        <div class="stock-rows__numeration">
+                                            <div class="stock-rows__numeration-label">№</div>
+                                            <div class="stock-rows__num">01</div>
+                                        </div>
+                                        <div class="stock-rows__values">
+                                            <div class="stock-rows__row">
+                                                <div class="stock-rows-cell is-busy">37</div>
+                                                <div class="stock-rows-cell is-busy">38</div>
+                                                <div class="stock-rows-cell is-busy">39</div>
+                                                <div class="stock-rows-cell is-free">40</div>
+                                                <div class="stock-rows-cell is-free">41</div>
+                                                <div class="stock-rows-cell is-free">42</div>
+                                                <div class="stock-rows-cell is-your">43</div>
+                                                <div class="stock-rows-cell is-your">44</div>
+                                                <div class="stock-rows-cell is-your">45</div>
+                                                <div class="stock-rows-cell is-fixed">46</div>
+                                                <div class="stock-rows-cell is-fixed">47</div>
+                                                <div class="stock-rows-cell is-fixed">48</div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="stock-rows-legend">
-                                <div class="stock-rows-legend__item">
-                                    <div class="stock-rows-cell is-row"></div>
-                                    <span class="stock-rows-legend__text">Ряд</span>
-                                </div>
-                                <div class="stock-rows-legend__item">
-                                    <div class="stock-rows-cell is-free"></div>
-                                    <span class="stock-rows-legend__text">Свободно</span>
-                                </div>
-                                <div class="stock-rows-legend__item">
-                                    <div class="stock-rows-cell is-fixed">44</div>
-                                    <span class="stock-rows-legend__text">Фикс</span>
-                                </div>
-                                <div class="stock-rows-legend__item">
-                                    <div class="stock-rows-cell is-busy"></div>
-                                    <span class="stock-rows-legend__text">Занято</span>
-                                </div>
-                                <div class="stock-rows-legend__item">
-                                    <div class="stock-rows-cell is-your"></div>
-                                    <span class="stock-rows-legend__text">Ваша</span>
+                                    <div class="stock-rows-legend">
+                                        <div class="stock-rows-legend__item">
+                                            <div class="stock-rows-cell is-row"></div>
+                                            <span class="stock-rows-legend__text">Ряд</span>
+                                        </div>
+                                        <div class="stock-rows-legend__item">
+                                            <div class="stock-rows-cell is-free"></div>
+                                            <span class="stock-rows-legend__text">Свободно</span>
+                                        </div>
+                                        <div class="stock-rows-legend__item">
+                                            <div class="stock-rows-cell is-fixed">44</div>
+                                            <span class="stock-rows-legend__text">Фикс</span>
+                                        </div>
+                                        <div class="stock-rows-legend__item">
+                                            <div class="stock-rows-cell is-busy"></div>
+                                            <span class="stock-rows-legend__text">Занято</span>
+                                        </div>
+                                        <div class="stock-rows-legend__item">
+                                            <div class="stock-rows-cell is-your"></div>
+                                            <span class="stock-rows-legend__text">Ваша</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
