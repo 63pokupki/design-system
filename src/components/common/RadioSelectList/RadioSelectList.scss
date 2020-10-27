@@ -1,0 +1,58 @@
+$spui-RadioSelectList_font: $font-primary;
+
+.spui-RadioSelectList {
+    display: inline-flex;
+    align-items: center;
+    font-family: $font-primary;
+    font-size: 12px;
+    line-height: 17px;
+    color: $color-text-base;
+
+    &__values {
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__before {
+        margin-right: 8px;
+    }
+
+    &__after {
+        margin-left: 8px;
+    }
+
+    &__value {
+        @extend %reset-button;
+        color: $color-inactive;
+        margin-right: 4px;
+        font-size: 14px;
+        font-weight: 400;
+
+        &:hover {
+            color: $color-primary;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:active {
+            @include deep-click(0.9);
+        }
+    }
+
+    &__selected {
+        position: relative;
+        color: $color-text-base;
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0px;
+            height: 1px;
+            width: 100%;
+            background: $color-primary;
+        }
+    }
+}
