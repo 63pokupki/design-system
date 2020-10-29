@@ -1,65 +1,71 @@
 <template>
     <div
         :style="styleContainerObj"
-        :class="['spui-ImageSwitch', _displayArrowsOnHoverOnlyС, `spui-ImageSwitch_${position}`]"
+        class="spui-ImageSwitch"
+        :class="[_displayArrowsOnHoverOnlyС, _centeredС]"
     >
         <div class="spui-ImageSwitch__images">
             <slot v-if="$slots['before-images']" name="before-images"></slot>
             <Carousel
-                @after-change="update"
-                :dots="false"
-                :infinite="false"
-                :navButtons="false"
-                :speed="200"
-                :fade="true"
-                ref="carousel"
+                v-cloak
+                v-if="_images"
+                v-model="_currentSlideIndex"
+                :min-swipe-distance="20"
+                :per-page="1"
+                :center-mode="centered"
+                :scroll-per-page="true"
+                :pagination-enabled="false"
+                :loop="false"
+                :touch-drag="true"
+                :mouse-drag="true"
             >
-                <div
+                <Slide
+                    :data-index="i"
+                    :data-name="image"
                     v-for="(image, i) in _images"
-                    @click="() => onImgClick(image)"
+                    @slideclick="onImgClick"
                     :key="i"
-                    :class="['spui-ImageSwitch__slide', { 'is-visible': _currentSlideIndex == i }]"
                 >
                     <img
                         :style="styleImgObj"
                         class="spui-ImageSwitch__image"
                         v-lazy="{ src: getImgSrc(image), loading: loaderImgSrc }"
                     />
-                </div>
+                </Slide>
             </Carousel>
-
-            <button
-                @click="onPrevBtnClick"
-                v-show="isArrowNavigationOn && !_isFirstSlide"
-                class="spui-ImageSwitch__prev"
-            >
-                <div class="spui-ImageSwitch__btn-wrapper">
-                    <i class="ds-icon icon-arrow-left"></i>
-                </div>
-            </button>
-            <button
-                @click="onNextBtnClick"
-                v-show="isArrowNavigationOn && !_isLastSlide"
-                class="spui-ImageSwitch__next"
-            >
-                <div class="spui-ImageSwitch__btn-wrapper">
-                    <i class="ds-icon icon-arrow-right"></i>
-                </div>
-            </button>
-
             <slot v-if="$slots['after-images']" name="after-images"></slot>
         </div>
+
+        <button
+            @click="onPrevBtnClick"
+            v-if="isArrowNavigationOn && !_isFirstSlide"
+            class="spui-ImageSwitch__prev"
+        >
+            <div class="spui-ImageSwitch__btn-wrapper">
+                <i class="ds-icon icon-arrow-left"></i>
+            </div>
+        </button>
+        <button
+            @click="onNextBtnClick"
+            v-if="isArrowNavigationOn && !_isLastSlide"
+            class="spui-ImageSwitch__next"
+        >
+            <div class="spui-ImageSwitch__btn-wrapper">
+                <i class="ds-icon icon-arrow-right"></i>
+            </div>
+        </button>
     </div>
 </template>
 
 <script>
-import VueAgile from "../../lib/Carousel/Agile";
+import { Carousel, Slide } from "vue-carousel";
 import { lazyimg } from "@/directives/lazy";
 
 export default {
     name: "ImageSwitch",
     components: {
-        Carousel: VueAgile,
+        Carousel,
+        Slide,
     },
     directives: {
         lazy: lazyimg,
@@ -95,37 +101,28 @@ export default {
         },
         displayArrowsOnHoverOnly: {
             type: Boolean,
+            default: false,
+        },
+        centered: {
+            type: Boolean,
             default: true,
         },
-        /** вертикальная позиция изображения в контейнере */
-        position: {
-            type: String,
-            default: "center",
-            validator: (value) => ["top", "center", "bottom"].includes(value),
+        loaderImgSrc: {
+            required: true,
         },
-    },
-    data() {
-        return {
-            loaderImgSrc: require("@/directives/lazy/image-loader.svg"),
-        };
     },
     methods: {
-        update(event) {
-            this._currentSlideIndex = event.currentSlide;
-        },
         onPrevBtnClick() {
             if (this._isFirstSlide) {
                 return;
             }
             this._currentSlideIndex -= 1;
-            this.$refs.carousel.goToPrev();
         },
         onNextBtnClick() {
             if (this._isLastSlide) {
                 return;
             }
             this._currentSlideIndex += 1;
-            this.$refs.carousel.goToNext();
         },
         onImgClick(img) {
             this.$emit("click", img);
@@ -139,10 +136,13 @@ export default {
         /** Массив изображений */
         _images() {
             const images = this.images;
+
             if (!images) return [];
+
             if (this.one) {
                 return [images[0]];
             }
+
             return images;
         },
         /** Флаг нахождения на последнем изображении */

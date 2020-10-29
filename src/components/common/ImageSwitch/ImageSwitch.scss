@@ -11,18 +11,6 @@
         max-height: 100%;
     }
 
-    &__slide {
-        visibility: hidden;
-        opacity: 0;
-        transition: opacity 0.2s ease;
-
-        &.is-visible {
-            visibility: visible;
-            opacity: 1;
-            transition: opacity 0.2s ease;
-        }
-    }
-
     &__image {
         display: block;
         margin: 0 auto;
@@ -82,18 +70,9 @@
     }
 }
 
-.spui-ImageSwitch_top {
-    ::v-deep .agile__slides {
-        align-items: flex-start;
-    }
-}
-.spui-ImageSwitch_center {
-    ::v-deep .agile__slides {
+.spui-ImageSwitch_centered {
+    .VueCarousel-slide {
+        display: flex;
         align-items: center;
-    }
-}
-.spui-ImageSwitch_bottom {
-    ::v-deep .agile__slides {
-        align-items: flex-end;
     }
 }
