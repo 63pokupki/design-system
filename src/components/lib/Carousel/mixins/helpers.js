@@ -13,6 +13,11 @@ const mixin = {
 
 			this.widthWindow = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
 			this.widthContainer = this.$refs.list.clientWidth
+
+			console.log("this", this);
+			console.log("refs", this.$refs);
+			console.log("widthWindow", this.widthWindow);
+			console.log("widthContainer", this.widthContainer);
 		},
 
 		/**
