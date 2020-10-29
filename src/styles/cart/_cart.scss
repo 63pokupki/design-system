@@ -4,6 +4,30 @@
         margin: 0;
     }
 
+    &__title {
+        display: flex;
+
+        &-link {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 26px;
+            width: auto;
+            margin-right: auto;
+
+            a {
+                align-items: center;
+            }
+        }
+
+        &-text {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 20px;
+            white-space: nowrap;
+            margin-right: auto;
+        }
+    }
+
     &__txt {
         font-size: 14px;
         color: $color-text-heading;
