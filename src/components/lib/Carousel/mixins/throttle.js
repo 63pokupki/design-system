@@ -2,7 +2,7 @@
  * Throttle methods by lodash
  */
 
-import throttle from 'lodash.throttle'
+import throttle from 'lodash-es/throttle';
 
 const mixin = {
 	created () {

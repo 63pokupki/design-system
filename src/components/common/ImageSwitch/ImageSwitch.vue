@@ -49,7 +49,6 @@
 
             <slot v-if="$slots['after-images']" name="after-images"></slot>
         </div>
-        {{ _currentSlideIndex }}
     </div>
 </template>
 
@@ -92,7 +91,7 @@ export default {
         },
         isArrowNavigationOn: {
             type: Boolean,
-            default: false,
+            default: true,
         },
         displayArrowsOnHoverOnly: {
             type: Boolean,
