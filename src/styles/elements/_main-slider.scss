@@ -58,7 +58,7 @@
 		overflow-y: hidden;
 
 		&::-webkit-scrollbar {
-			height: 10px;
+			width: 11px;
 			background: linear-gradient(to top, transparent 0, transparent 2px, #36a5f226 2px, #36a5f226 4px, transparent 4px);
 		}
 		&::-webkit-scrollbar-thumb {
