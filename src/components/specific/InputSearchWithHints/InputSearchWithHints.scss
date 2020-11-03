@@ -69,6 +69,10 @@ $spui-InputSearchWithHints_font: $font-primary;
         line-height: 24px;
         color: #a2a3a5;
 
+        &.focus {
+            background: rgba(0, 142, 237, 0.15);
+        }
+
         &:hover {
             background: rgba(0, 142, 237, 0.15);
         }

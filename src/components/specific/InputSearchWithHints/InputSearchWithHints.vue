@@ -3,6 +3,8 @@
         <div class="spui-InputSearchWithHints__input-wrapper">
             <input
                 @keyup.enter="onSearch"
+                @keyup.up="onFocusIndexUp"
+                @keyup.down="onFocusIndexDown"
                 v-model="_model"
                 class="spui-InputSearchWithHints__input"
                 type="text"
@@ -44,6 +46,7 @@
             <div
                 @click="() => onHintClick(hint)"
                 class="spui-InputSearchWithHints__hint"
+                :class="{ focus: focusIndex == i }"
                 v-for="(hint, i) in hints"
                 :key="i"
             >
@@ -88,6 +91,7 @@ export default {
                 0: "По форуму",
                 current: 1,
             },
+            focusIndex: -1,
         };
     },
     directives: {
@@ -145,13 +149,33 @@ export default {
             this.emitCategoryOpenState(false);
         },
         onSearch() {
+            if (this.focusIndex >= 0 && this.focusElement) {
+                this._model = this.getHintLabel(this.focusElement);
+            }
             this.$emit("search", {
                 value: this._model,
                 byItems: Boolean(this.categories.current),
             });
         },
+        onFocusIndexUp() {
+            if (this.hints.length > 0 && this.isHintsOpen && this.focusIndex > 0) {
+                this.focusIndex -= 1;
+            }
+        },
+        onFocusIndexDown() {
+            if (
+                this.hints.length > 0 &&
+                this.isHintsOpen &&
+                this.focusIndex < this.hints.length - 1
+            ) {
+                this.focusIndex += 1;
+            }
+        },
     },
     computed: {
+        focusElement() {
+            return this.hints[this.focusIndex];
+        },
         _model: {
             get() {
                 return this.value;
