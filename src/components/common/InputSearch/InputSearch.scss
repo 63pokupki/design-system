@@ -1,0 +1,63 @@
+$spui-InputSearch_font: $font-primary;
+
+.spui-InputSearch {
+    position: relative;
+    font-family: $spui-InputSearch_font;
+
+    &__input {
+        background: #fff;
+        border: 1.5px solid #36a6f2;
+        border-radius: 48px;
+        width: 100%;
+
+        &:focus {
+            outline: unset;
+        }
+
+        &::placeholder {
+            color: $color-text-light-grey;
+            font-size: 12px;
+        }
+
+        &::-ms-clear {
+            display: none;
+        }
+    }
+
+    &__btn {
+        @extend %reset-button;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        border-radius: 50%;
+        transform: translateY(-50%);
+        &:active {
+            transform: translateY(-50%) scale(0.95);
+        }
+    }
+
+    &__img {
+        display: block;
+        width: auto;
+        height: 100%;
+    }
+}
+
+.spui-InputSearch {
+    $parent: &;
+    &_sm {
+        #{$parent}__input {
+            padding-left: 15px;
+            padding-right: 45px;
+            height: 25px;
+        }
+
+        #{$parent}__btn {
+            right: 15px;
+            width: 22px;
+            height: 22px;
+        }
+    }
+}

@@ -82,7 +82,7 @@
 @import '~styles/elements/_stock-org-panel';
 @import '~styles/elements/_go-back-btn';
 @import '~styles/elements/_org-warning-btn';
-// 
+//
 
 @import '~styles/elements/_catalog-list';
 @import '~styles/elements/_item-params-list';
@@ -240,7 +240,7 @@
 @import "~styles/elements/btn-container-upDown.scss";
 
 // Страница "Краткие правила участия в закупках"
-@import "~styles/elements/short-rules.scss"; 
+@import "~styles/elements/short-rules.scss";
 
 // Контейнер с личными сообщениями и уведомлениями
 @import "~styles/elements/notification-container.scss";
@@ -248,7 +248,7 @@
 //Как вставить фотографию
 @import "~styles/insert-photo/insert-foto.scss";
 
-// Корзина 
+// Корзина
 @import "~styles/cart/cart.scss";
 // Корзина фильтрация
 @import "~styles/cart/_cart__filtering.scss";
@@ -258,6 +258,8 @@
 @import "~styles/cart/cart__purchase.scss";
 //Корзина - карточка закупки
 @import "~styles/cart/cart__item-card.scss";
+//Корзина - способ получения заказа
+@import "~styles/cart/_cart__delivery.scss";
 
 // цена с серыми копейками
 @import "~styles/elements/price.scss";

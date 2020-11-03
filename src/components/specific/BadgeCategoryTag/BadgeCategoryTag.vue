@@ -7,7 +7,10 @@
             data.class,
             data.staticClass,
             `spui-BadgeCategoryTag_${props.size}`,
-            { [`spui-BadgeCategoryTag_active`]: props.active },
+            {
+                'spui-BadgeCategoryTag_active': props.active,
+                'spui-BadgeCategoryTag_block': props.block,
+            },
         ]"
     >
         <slot></slot>
@@ -30,6 +33,10 @@ export default {
             default: () => {},
         },
         active: {
+            type: Boolean,
+            default: false,
+        },
+        block: {
             type: Boolean,
             default: false,
         },

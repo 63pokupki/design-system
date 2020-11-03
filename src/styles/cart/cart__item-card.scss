@@ -4,6 +4,8 @@
         flex-direction: column;
         padding: 10px;
         border-top: 1px solid #b9e0fa;
+        border-bottom: 1px solid #b9e0fa;
+
         &:hover {
             background: #ebf6fe;
             .btn-sum__sum-num {
@@ -25,7 +27,7 @@
         margin: 0 10px 0 0;
     }
     &__item-image {
-        margin: 0 25px 0 0;        
+        margin: 0 25px 0 0;
         img {
             max-height: 80px;
         }
@@ -75,6 +77,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
         p {
             font-size: 12px;
             color: $color-text-heading;
@@ -89,14 +92,57 @@
         justify-content: flex-start;
     }
 
+    .cart__item-card-bottom {
+        &--filter {
+            display: flex;
+            margin-left: 115px;
+            margin-top: 18px;
+            margin-bottom: 15px;
+        }
+    }
+
     // Ряды
+    .collapse-rows {
+        box-shadow: none;
+        margin-left: 115px;
+        width: fit-content;
+        padding: 0;
+
+        &-label {
+            position: relative;
+            padding-left: 20px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                width: 14px;
+                height: 14px;
+                background-image: url('~images/important_images/blue-squares.png');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
+        }
+
+        &-btn {
+            top: -1px;
+            left: 125px;
+        }
+    }
+
     .stock-rows {
         align-items: center;
+        &::after {
+            display: none;
+        }
     }
     .stock-rows-wrap {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        width: fit-content;
     }
     .stock-rows__numeration {
         display: flex;
@@ -108,6 +154,65 @@
     .stock-rows__numeration-label,
     .stock-rows__num {
         margin-bottom: 0;
+    }
+
+    .cart__filter {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        width: fit-content;
+        margin-right: 5px;
+
+        &-active {
+            color: #1D1E1F;
+            opacity: 0.5;
+            font-size: 11px;
+            line-height: 20px;
+            position: relative;
+            padding-right: 15px;
+            cursor: pointer;
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: 0;
+                height: 0;
+                right: 4px;
+                top: calc(50% + 3px);
+                transform: translateY(-50%);
+                display: block;
+                border: 4px solid transparent;
+                border-top-color: #36A6F2;
+                z-index: 2;
+            }
+        }
+
+        &-list {
+            position: absolute;
+            top: 100%;
+            padding: 15px;
+            margin: 0;
+            background-color: rgb(224, 238, 247);
+            list-style: none;
+            z-index: 999;
+            border-radius: 5px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity .2s ease;
+
+            &-item {
+                color: #606266;
+                font-size: 12px;
+                white-space: nowrap;
+            }
+        }
+
+        &--expanded {
+            .cart__filter-list {
+                pointer-events: auto;
+                opacity: 1;
+            }
+        }
     }
 
     .cart__item-status-new,
@@ -125,7 +230,7 @@
             left: 0;
             width: 16px;
             height: 16px;
-            border-radius: 50%;            
+            border-radius: 50%;
         }
     }
     .cart__item-status-new {
@@ -141,13 +246,13 @@
     .icon-close {
         width: 12px;
         height: 12px;
-        margin: 10px 0 10px 0;        
+        margin: 10px 0 10px 0;
         &:after,
         &:before {
             background-color: $color-inactive;
         }
     }
-    
+
     .icon-order-history {
         text-decoration: none;
     }

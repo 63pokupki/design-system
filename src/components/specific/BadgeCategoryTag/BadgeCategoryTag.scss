@@ -30,6 +30,11 @@
         padding: 4px 18px;
         font-size: 12px;
     }
+
+    &_block {
+        display: flex;
+        width: 100%;
+    }
 }
 
 .spui-BadgeCategoryTag_active {

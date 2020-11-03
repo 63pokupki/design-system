@@ -3,19 +3,19 @@
 .cart__filtering {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1120px;
     padding: 10px 30px;
     height: 56px;
-    box-shadow: 0px 2px 16px rgba(105, 153, 247, 0.18);
+    box-shadow: 0 2px 16px rgba(105, 153, 247, 0.18);
+    margin-bottom: 32px;
 
     // Чекбоксы
     .checkbox {
         margin: 0 25px 0 0;
     }
-    
+
     .checkbox__label {
         font-size: 14px;
         font-weight: 600;

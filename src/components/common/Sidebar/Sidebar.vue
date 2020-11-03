@@ -38,17 +38,13 @@ export default {
             type: String,
         },
     },
-    mounted() {
-        const body = document.querySelector("body");
-        if (body) {
-            body.classList.add("disable-page-scroll");
-        }
-    },
-    beforeDestroy() {
-        const body = document.querySelector("body");
-        if (body) {
-            body.classList.remove("disable-page-scroll");
-        }
+    watch: {
+        open: {
+            handler: function (value) {
+                value ? this.addDisableScroll() : this.removeDisableScroll();
+            },
+            immediate: true,
+        },
     },
     computed: {
         _style() {
@@ -59,6 +55,20 @@ export default {
         },
     },
     methods: {
+        /** отключить прокрутку страницы */
+        addDisableScroll() {
+            const body = document.querySelector("body");
+            if (body) {
+                body.classList.add("disable-page-scroll");
+            }
+        },
+        /** включить прокрутку страницы */
+        removeDisableScroll() {
+            const body = document.querySelector("body");
+            if (body) {
+                body.classList.remove("disable-page-scroll");
+            }
+        },
         onClose() {
             this.$emit("close");
         },

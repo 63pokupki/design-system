@@ -44,6 +44,19 @@ export const active = () => ({
     </BadgeCategoryTag>`,
 });
 
+export const block = () => ({
+    components: { BadgeCategoryTag },
+    methods: {
+        onClickHandler() {
+            console.log("Click");
+        },
+    },
+    template: `
+    <BadgeCategoryTag block @click="onClickHandler">
+    #тег на всю ширину
+    </BadgeCategoryTag>`,
+});
+
 export const withCustomClass = () => ({
     components: { BadgeCategoryTag },
     methods: {
