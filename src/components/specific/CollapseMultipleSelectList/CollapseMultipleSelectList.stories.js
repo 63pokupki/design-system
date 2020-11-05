@@ -174,10 +174,13 @@ export const withSearchInput = () => ({
         onSearch(value) {
             alert("Search: " + value);
         },
+        onSelectAll() {
+            this.value = this.values;
+        }
     },
     template: `<div>
             <CollapseMultipleSelectList
-            style="max-width: 286px"
+                style="max-width: 286px"
                 v-model="value"
                 :heading="'Цвет'"
                 :open="open"
@@ -193,6 +196,7 @@ export const withSearchInput = () => ({
                 @collapse="collapseHandler"
                 @changeListOpen="changeExpandHandler"
                 @tooltipClick="tooltipClickHandler"
+                @onSelectAll="onSelectAll"
             />
     </div>`,
 });

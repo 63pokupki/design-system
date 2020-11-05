@@ -240,9 +240,10 @@ export default {
             this.$emit("tooltipStateChange", true);
         },
         onSelectAll() {
-            this.$emit("input", this.values);
+            this.$emit("onSelectAll")
             this.$emit("changeListOpen", true);
             this.$emit("tooltipStateChange", true);
+            this.yCord = 30;
         },
         onChangeExpand() {
             this.$emit("changeListOpen", !this.listOpen);

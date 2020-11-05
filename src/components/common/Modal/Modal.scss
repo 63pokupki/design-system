@@ -32,6 +32,7 @@ $spui-Modal-z-4: $spui-Modal-z-3 + 1;
         justify-content: space-between;
         padding-left: 12px;
         background-color: #ffffff;
+        min-height: 36px;
     }
 
     &__close {

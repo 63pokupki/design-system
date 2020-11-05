@@ -9,7 +9,7 @@ $RangePrice_color: $color-text-base;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 2px;
+        margin-bottom: 6px;
     }
 
     &__wrapper {
@@ -27,8 +27,11 @@ $RangePrice_color: $color-text-base;
         border: unset;
         background-color: transparent;
         border-bottom: 1px solid #9AD2F8;
-        min-width: 12px;
-        height: 18px;
+        min-width: 25px;
+        padding: 2px 4px;
+        height: 20px;
+        text-align: center;
+        border-radius: 0;
 
         &:focus {
             outline: 0;

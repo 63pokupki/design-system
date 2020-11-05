@@ -1,5 +1,5 @@
 <template>
-    <div v-if="open" class="spui-Modal" :class="[_sticky]">
+    <div v-if="open" class="spui-Modal">
         <div :style="_styleWindow" class="spui-Modal__window">
             <div class="spui-Modal__head">
                 <div class="spui-Modal__slot-head">
@@ -39,11 +39,7 @@ export default {
         },
         minHeight: {
             type: String,
-        },
-        sticky: {
-            type: Boolean,
-            default: true,
-        },
+        }
     },
     data() {
         return {
@@ -60,9 +56,6 @@ export default {
                 width: this.width,
             };
         },
-        _sticky() {
-            return this.sticky ? `${this.base}_sticky` : null;
-        },
         _isSlotHeadExist() {
             return Boolean(this.$slots["head"]);
         },
@@ -70,7 +63,6 @@ export default {
     methods: {
         onClose() {
             this.$emit("close");
-            console.log("close");
         },
     },
 };
