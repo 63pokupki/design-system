@@ -177,6 +177,7 @@ export const withSearchInput = () => ({
     },
     template: `<div>
             <CollapseMultipleSelectList
+            style="max-width: 286px"
                 v-model="value"
                 :heading="'Цвет'"
                 :open="open"

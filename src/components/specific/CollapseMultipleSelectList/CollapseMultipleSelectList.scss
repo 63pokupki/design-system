@@ -34,9 +34,11 @@
         text-decoration: underline;
     }
 
-    &__tooltip {
+    ::v-deep &__tooltip {
         user-select: none;
         border-radius: 15px;
+        transform: translate(100%, 0) !important;
+        bottom: auto !important;
         &:active {
             background-color: #0080F6;
         }

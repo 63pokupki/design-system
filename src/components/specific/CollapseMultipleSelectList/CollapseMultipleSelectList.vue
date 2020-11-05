@@ -26,6 +26,7 @@
                 ></InputSearch>
             </template>
             <SelectList
+                @click.native="onClick"
                 slot="default"
                 class="spui-CollapseMultipleSelectList__list"
                 v-model="_value"
@@ -41,9 +42,10 @@
             </template>
         </Collapse>
         <Tooltip
-            v-if="_tooltip"
+            v-show="_tooltip"
             @click.native="onTooltipClick"
             class="spui-CollapseMultipleSelectList__tooltip"
+            :style="{ top: `${yCord}px` }"
             type="accent"
             position="right"
             centered
@@ -68,6 +70,11 @@ export default {
         SelectList,
         Tooltip,
         InputSearch,
+    },
+    data() {
+        return {
+            yCord: 0,
+        };
     },
     props: {
         heading: {
@@ -245,6 +252,13 @@ export default {
         },
         onSearch(value) {
             this.$emit("onSearch", value);
+        },
+        onClick(e) {
+            const t = e.target;
+            if (t.classList.contains("spui-SelectList__label")) {
+                console.log(t.offsetTop, t.offsetHeight);
+                this.yCord = t.offsetTop - 5;
+            }
         },
     },
 };
