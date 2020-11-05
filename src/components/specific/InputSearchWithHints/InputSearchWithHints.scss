@@ -60,6 +60,12 @@ $spui-InputSearchWithHints_font: $font-primary;
         transform: translateY(100%);
     }
 
+    &__text {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
     &__hint {
         display: flex;
         align-items: center;
