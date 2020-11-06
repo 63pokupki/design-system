@@ -241,8 +241,6 @@ export default {
         },
         onSelectAll() {
             this.$emit("onSelectAll")
-            this.$emit("changeListOpen", true);
-            this.$emit("tooltipStateChange", true);
             this.yCord = 30;
         },
         onChangeExpand() {
