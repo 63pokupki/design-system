@@ -1,12 +1,16 @@
 $spui-InputSearchWithHints_font: $font-primary;
 
+$spui-InputSearchWithHints_z1: 15;
+$spui-InputSearchWithHints_z2: $spui-InputSearchWithHints_z1 + 1;
+$spui-InputSearchWithHints_z3: $spui-InputSearchWithHints_z2 + 1;
+
 .spui-InputSearchWithHints {
     position: relative;
     font-family: $spui-InputSearchWithHints_font;
 
     &__input-wrapper {
         position: relative;
-        z-index: 2;
+        z-index: $spui-InputSearchWithHints_z2;
     }
 
     &__input {
@@ -50,7 +54,7 @@ $spui-InputSearchWithHints_font: $font-primary;
     &__hints {
         position: absolute;
         cursor: pointer;
-        z-index: 1;
+        z-index: $spui-InputSearchWithHints_z1;
         background-color: white;
         box-shadow: 0px 2px 16px rgba(0, 44, 128, 0.18);
         padding: 32px 0 12px;
@@ -64,6 +68,7 @@ $spui-InputSearchWithHints_font: $font-primary;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        max-width: 85%;
     }
 
     &__hint {
@@ -85,7 +90,7 @@ $spui-InputSearchWithHints_font: $font-primary;
     }
 
     &__category {
-        z-index: 3;
+        z-index: $spui-InputSearchWithHints_z3;
         top: 50%;
         right: 60px;
         transform: translateY(-50%);
