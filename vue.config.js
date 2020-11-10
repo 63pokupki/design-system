@@ -6,7 +6,7 @@ module.exports = {
         loaderOptions: {
             sass: {
                 additionalData:
-                    '@import "@/styles/utils/_variables.scss";@import "@/styles/utils/_mixins.scss";@import "@/styles/utils/_extends.scss";@import "@/fonts/icomoon/icomoon-font.scss";@import "@/fonts/opensans/opensans-font.scss";@import "@/components/index.scss";',
+                    '@import "@/styles/utils/_variables.scss";@import "@/styles/utils/_mixins.scss";@import "@/styles/utils/_extends.scss";@import "@/fonts/icomoon/icomoon-font.scss";@import "@/fonts/common/common.scss";@import "@/components/index.scss";',
             },
         },
     },
