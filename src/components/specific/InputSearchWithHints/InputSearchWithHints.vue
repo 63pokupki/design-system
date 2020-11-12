@@ -15,7 +15,7 @@
             </label>
 
             <button @click="onSearch" aria-label="Поиск" class="spui-InputSearchWithHints__btn">
-                <img src="~images/important_images/search.svg" />
+                <img alt="Поиск" src="~images/important_images/search.svg" />
             </button>
         </div>
         <!-- блок выпадающей категории поиска -->

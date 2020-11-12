@@ -69,8 +69,9 @@ export default {
                         id={uniqUuid}
                     />
                 </label>
-                <button style={buttonStyle} onClick={onSearch} class="spui-InputSearch__btn">
+                <button aria-label="Поиск" style={buttonStyle} onClick={onSearch} class="spui-InputSearch__btn">
                     <img
+                        alt="Поиск"
                         class="spui-InputSearch__img"
                         src={require("@/images/important_images/search.svg")}
                     />
