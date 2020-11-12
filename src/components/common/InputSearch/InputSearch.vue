@@ -1,4 +1,6 @@
 <script>
+import uuid from "short-uuid";
+
 export default {
     name: "InputSearch",
     functional: true,
@@ -30,6 +32,7 @@ export default {
         const inputStyle = props.inputStyle || {};
         const buttonStyle = props.buttonStyle || {};
         const size = props.buttonStyle || "sm";
+        const uniqUuid = uuid.generate();
 
         const onSearch = (event) => {
             listeners.onSearch ? listeners.onSearch(value) : () => {};
@@ -54,15 +57,18 @@ export default {
                     data.staticClass,
                 ]}
             >
-                <input
-                    style={inputStyle}
-                    onKeyup={onKeyUpSearch}
-                    value={value}
-                    onInput={onInput}
-                    class="spui-InputSearch__input"
-                    type="text"
-                    placeholder={placeholder}
-                />
+                <label for={uniqUuid}>
+                    <input
+                        style={inputStyle}
+                        onKeyup={onKeyUpSearch}
+                        value={value}
+                        onInput={onInput}
+                        class="spui-InputSearch__input"
+                        type="text"
+                        placeholder={placeholder}
+                        id={uniqUuid}
+                    />
+                </label>
                 <button style={buttonStyle} onClick={onSearch} class="spui-InputSearch__btn">
                     <img
                         class="spui-InputSearch__img"

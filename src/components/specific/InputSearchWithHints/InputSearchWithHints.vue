@@ -1,16 +1,20 @@
 <template>
     <div v-click-outside="onClickOutside" class="spui-InputSearchWithHints">
         <div class="spui-InputSearchWithHints__input-wrapper">
-            <input
-                @keyup.enter="onSearch"
-                @keyup.up="onFocusIndexUp"
-                @keyup.down="onFocusIndexDown"
-                v-model="_model"
-                class="spui-InputSearchWithHints__input"
-                type="text"
-                placeholder="Поиск"
-            />
-            <button @click="onSearch" class="spui-InputSearchWithHints__btn">
+            <label :for="uuid">
+                <input
+                    @keyup.enter="onSearch"
+                    @keyup.up="onFocusIndexUp"
+                    @keyup.down="onFocusIndexDown"
+                    v-model="_model"
+                    class="spui-InputSearchWithHints__input"
+                    type="text"
+                    placeholder="Поиск"
+                    :id="uuid"
+                />
+            </label>
+
+            <button @click="onSearch" aria-label="Поиск" class="spui-InputSearchWithHints__btn">
                 <img src="~images/important_images/search.svg" />
             </button>
         </div>
@@ -59,6 +63,7 @@
 
 <script>
 import { clickOutside } from "@/directives";
+import uuid from "short-uuid";
 
 export default {
     name: "InputSearchWithHints",
@@ -92,7 +97,11 @@ export default {
                 current: 1,
             },
             focusIndex: -1,
+            uuid: null,
         };
+    },
+    mounted() {
+        this.uuid = uuid.generate();
     },
     directives: {
         "click-outside": clickOutside,

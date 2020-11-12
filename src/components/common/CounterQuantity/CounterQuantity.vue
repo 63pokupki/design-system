@@ -1,4 +1,6 @@
 <script>
+import uuid from "short-uuid";
+
 export default {
     name: "CounterQuantity",
     functional: true,
@@ -18,6 +20,8 @@ export default {
         },
     },
     render: function (h, { data, props, listeners }) {
+        const uniqUuid = uuid.generate();
+
         const { value, min, max } = props;
         /**Установка изначального значения */
         const initial = (value) => {
@@ -57,14 +61,25 @@ export default {
 
         return (
             <div class={["spui-CounterQuantity", data.class, data.staticClass]}>
-                <button onClick={onMinus} class="spui-CounterQuantity__minus"></button>
-                <input
-                    value={props.value}
-                    onInput={(event) => onInput(event)}
-                    class="spui-CounterQuantity__input"
-                    type="text"
-                />
-                <button onClick={onPlus} class="spui-CounterQuantity__plus"></button>
+                <button
+                    aria-label="Уменьшить количество"
+                    onClick={onMinus}
+                    class="spui-CounterQuantity__minus"
+                ></button>
+                <label for={uniqUuid}>
+                    <input
+                        value={props.value}
+                        onInput={(event) => onInput(event)}
+                        class="spui-CounterQuantity__input"
+                        type="text"
+                        id={uniqUuid}
+                    />
+                </label>
+                <button
+                    aria-label="Увеличить количество"
+                    onClick={onPlus}
+                    class="spui-CounterQuantity__plus"
+                ></button>
             </div>
         );
     },

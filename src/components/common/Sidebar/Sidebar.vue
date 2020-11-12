@@ -10,7 +10,7 @@
         <!-- Затемняющий фон -->
         <div @click="onClose" class="spui-Sidebar__background"></div>
         <!-- Кнопка закрытия -->
-        <button @click="onClose" class="spui-Sidebar__close">
+        <button aria-label="Закрыть боковое меню" @click="onClose" class="spui-Sidebar__close">
             <i class="ds-icon icon-closing"></i>
         </button>
     </aside>

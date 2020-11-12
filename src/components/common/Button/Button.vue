@@ -29,6 +29,10 @@ export default {
             type: Boolean,
             default: false,
         },
+        ariaLabel: {
+            type: String,
+            default: "Кнопка",
+        },
     },
     render: (h, { data, props, listeners, slots }) => {
         const { type, icon, block, isDisabled, isLoading } = props;
@@ -45,12 +49,11 @@ export default {
 
         const slot = slots().default || "Кнопка";
 
-        const iconElement = (
-            <i class={["ds-icon spui-Button__icon", icon.name]}></i>
-        );
+        const iconElement = <i class={["ds-icon spui-Button__icon", icon.name]}></i>;
 
         return (
             <button
+                aria-label={props.ariaLabel}
                 onClick={onClick}
                 disabled={isDisabled}
                 class={[

@@ -24,6 +24,7 @@ export default {
         return (
             <button
                 onClick={onClick}
+                aria-label="Добавить в избранное"
                 class={[
                     "BtnFavorite",
                     { "is-active": isActive, "is-loading": isLoading },

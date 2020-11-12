@@ -27,6 +27,7 @@
                     :key="i"
                 >
                     <img
+                        :alt="getImgAlt(image)"
                         :style="styleImgObj"
                         class="spui-ImageSwitch__image"
                         v-lazy="{ src: getImgSrc(image), loading: loaderImgSrc }"
@@ -37,6 +38,7 @@
         </div>
 
         <button
+            aria-label="Предыдущее изображение"
             @click="onPrevBtnClick"
             v-if="isArrowNavigationOn && !_isFirstSlide"
             class="spui-ImageSwitch__prev"
@@ -46,6 +48,7 @@
             </div>
         </button>
         <button
+            aria-label="Следующее изображение"
             @click="onNextBtnClick"
             v-if="isArrowNavigationOn && !_isLastSlide"
             class="spui-ImageSwitch__next"
@@ -87,6 +90,9 @@ export default {
             type: Function,
             required: true,
         },
+        fnImgAlt: {
+            type: Function,
+        },
         value: {
             type: Number,
             default: 0,
@@ -108,7 +114,7 @@ export default {
             default: true,
         },
         loaderImgSrc: {
-            required: true,
+            default: () => require("@/directives/lazy/image-loader.svg"),
         },
     },
     methods: {
@@ -130,6 +136,11 @@ export default {
         getImgSrc(value) {
             if (!value || !this.fnImgSrc || typeof this.fnImgSrc !== "function") return;
             return this.fnImgSrc(value);
+        },
+        getImgAlt(value) {
+            if (!value || !this.fnImgAlt || typeof this.fnImgAlt !== "function")
+                return "Изображение";
+            return this.fnImgAlt(value);
         },
     },
     computed: {

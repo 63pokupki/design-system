@@ -10,7 +10,6 @@ export const exampleItemSlider = () => ({
     data() {
         return {
             current: 0,
-            loading: require("@/directives/lazy/image-loader.svg"),
             images: [
                 {
                     src:
@@ -46,7 +45,7 @@ export const exampleItemSlider = () => ({
     },
     template: `
     <div>
-       <ImageSwitch @click="onClick" :loaderImgSrc="loading" :styleContainerObj="styleContainerObj" :styleImgObj="styleImgObj" v-model="current" :fnImgSrc="fnImgSrc" :images="images"></ImageSwitch>
+       <ImageSwitch @click="onClick" :styleContainerObj="styleContainerObj" :styleImgObj="styleImgObj" v-model="current" :fnImgSrc="fnImgSrc" :images="images"></ImageSwitch>
     </div>
     `,
 });
@@ -56,7 +55,6 @@ export const exampleItemWithSlots = () => ({
     data() {
         return {
             current: 0,
-            loading: require("@/directives/lazy/image-loader.svg"),
             images: [
                 {
                     src:
@@ -87,7 +85,7 @@ export const exampleItemWithSlots = () => ({
     },
     template: `
     <div>
-       <ImageSwitch :loaderImgSrc="loading" :styleContainerObj="styleContainerObj" :styleImgObj="styleImgObj" v-model="current" :fnImgSrc="fnImgSrc" :images="images">
+       <ImageSwitch :styleContainerObj="styleContainerObj" :styleImgObj="styleImgObj" v-model="current" :fnImgSrc="fnImgSrc" :images="images">
            <template #before-images>Слот перед картинками</template>
            <template #after-images>Слот после картинок</template>
        </ImageSwitch>
@@ -100,7 +98,6 @@ export const exampleStockBanner = () => ({
     data() {
         return {
             current: 0,
-            loading: require("@/directives/lazy/image-loader.svg"),
             images: [
                 {
                     src:
@@ -124,7 +121,7 @@ export const exampleStockBanner = () => ({
     },
     template: `
     <div>
-       <ImageSwitch @click="onClick" :loaderImgSrc="loading" :styleContainerObj="styleContainerObj" :styleImgObj="styleImgObj" v-model="current" :fnImgSrc="fnImgSrc" :images="images"></ImageSwitch>
+       <ImageSwitch @click="onClick" :styleContainerObj="styleContainerObj" :styleImgObj="styleImgObj" v-model="current" :fnImgSrc="fnImgSrc" :images="images"></ImageSwitch>
     </div>
     `,
 });

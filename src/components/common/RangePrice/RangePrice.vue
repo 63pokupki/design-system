@@ -2,28 +2,34 @@
     <div class="spui-RangePrice">
         <div class="spui-RangePrice__inputs">
             <span @click.self="focusOnInput" class="spui-RangePrice__wrapper">
-                <input
-                    :style="`width: ${minWidthPx}`"
-                    :value="rangeMin"
-                    @change="onChangeMin"
-                    @input="calcWidth"
-                    @click="($event) => setSelection($event.target)"
-                    class="spui-RangePrice__input"
-                    type="text"
-                />
-                ₽
+                <label :for="uuid1">
+                    <input
+                        :style="`width: ${minWidthPx}`"
+                        :value="rangeMin"
+                        @change="onChangeMin"
+                        @input="calcWidth"
+                        @click="($event) => setSelection($event.target)"
+                        class="spui-RangePrice__input"
+                        type="text"
+                        :id="uuid1"
+                    />
+                    ₽
+                </label>
             </span>
             <span @click.self="focusOnInput" class="spui-RangePrice__wrapper">
-                <input
-                    :style="`width: ${maxWidthPx}`"
-                    :value="rangeMax"
-                    @change="onChangeMax"
-                    @input="calcWidth"
-                    @click="($event) => setSelection($event.target)"
-                    class="spui-RangePrice__input"
-                    type="text"
-                />
-                ₽
+                <label :for="uuid2">
+                    <input
+                        :style="`width: ${maxWidthPx}`"
+                        :value="rangeMax"
+                        @change="onChangeMax"
+                        @input="calcWidth"
+                        @click="($event) => setSelection($event.target)"
+                        class="spui-RangePrice__input"
+                        type="text"
+                        :id="uuid2"
+                    />
+                    ₽
+                </label>
             </span>
         </div>
         <div class="spui-RangePrice__range">
@@ -45,6 +51,7 @@
 </template>
 
 <script>
+import uuid from "short-uuid";
 import VueSlider from "vue-slider-component";
 
 export default {
@@ -69,6 +76,16 @@ export default {
     },
     components: {
         VueSlider,
+    },
+    data() {
+        return {
+            uuid1: null,
+            uuid2: null,
+        };
+    },
+    mounted() {
+        this.uuid1 = uuid.generate();
+        this.uuid2 = uuid.generate();
     },
     computed: {
         _value: {

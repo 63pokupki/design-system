@@ -5,7 +5,7 @@
                 <div class="spui-Modal__slot-head">
                     <slot v-if="_isSlotHeadExist" name="head"></slot>
                 </div>
-                <button @click="onClose" class="spui-Modal__close">
+                <button aria-label="Закрыть модальное окно" @click="onClose" class="spui-Modal__close">
                     <i class="ds-icon icon-closing"></i>
                 </button>
             </div>
