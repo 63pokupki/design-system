@@ -129,11 +129,22 @@ module.exports = {
         ],
       },
       {
-        test: /images\/.*\.(jpg|png|gif|svg)$/,
+        test: /images\/.*\.(jpg|png|gif)$/,
         use: {
           loader: 'file',
           options: {
             limit: 2048,
+            name: 'images/[name].[ext]?[hash]',
+            esModule: false,
+          },
+        },
+      },
+      {
+        test: /images\/.*\.svg$/,
+        use: {
+          loader: 'url',
+          options: {
+            limit: 8192,
             name: 'images/[name].[ext]?[hash]',
             esModule: false,
           },
@@ -146,7 +157,7 @@ module.exports = {
           query: {
             publicPath: '../',
             limit: 2048,
-            name: 'fonts/[name].[ext]?[hash]',
+            name: 'fonts/[name].[ext]',
             esModule: false,
           },
         },
