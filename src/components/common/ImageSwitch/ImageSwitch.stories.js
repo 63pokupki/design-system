@@ -1,3 +1,5 @@
+import "@/components/resources";
+
 import ImageSwitch from "./ImageSwitch.vue";
 
 export default {

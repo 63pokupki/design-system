@@ -1,5 +1,6 @@
+import "@/components/resources";
+
 import SelectList from "./SelectList.vue";
-import { action } from "@storybook/addon-actions";
 
 const elements = [
     { label: 1 },

@@ -1,3 +1,5 @@
+import "@/components/resources";
+
 import CounterQuantity from "./CounterQuantity.vue";
 
 export default {

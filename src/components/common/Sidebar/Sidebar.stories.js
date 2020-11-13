@@ -1,3 +1,5 @@
+import "@/components/resources";
+
 import Sidebar from "./Sidebar.vue";
 
 export default {

@@ -1,3 +1,5 @@
+import "@/components/resources";
+
 import InputSearchWithHints from "./InputSearchWithHints.vue";
 
 export default {

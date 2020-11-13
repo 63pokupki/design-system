@@ -1,3 +1,5 @@
+import "@/components/resources";
+
 import CollapseMultipleSelectList from "./CollapseMultipleSelectList.vue";
 
 export default {

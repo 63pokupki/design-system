@@ -1,3 +1,5 @@
+import "@/components/resources";
+
 import PriceDoubleColor from "./PriceDoubleColor.vue";
 
 export default {

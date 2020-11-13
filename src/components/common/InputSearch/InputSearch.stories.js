@@ -1,3 +1,5 @@
+import "@/components/resources";
+
 import InputSearch from "./InputSearch.vue";
 
 export default {

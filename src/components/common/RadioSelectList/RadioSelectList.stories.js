@@ -1,3 +1,5 @@
+import "@/components/resources";
+
 import RadioSelectList from "./RadioSelectList.vue";
 
 export default {

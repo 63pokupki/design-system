@@ -1,3 +1,5 @@
+import "@/components/resources";
+
 import AExample from "./AExample.vue";
 
 export default {

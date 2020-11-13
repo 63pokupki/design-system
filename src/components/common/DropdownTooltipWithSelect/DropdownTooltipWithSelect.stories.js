@@ -1,3 +1,5 @@
+import "@/components/resources";
+
 import DropdownTooltipWithSelect from "./DropdownTooltipWithSelect.vue";
 
 export default {

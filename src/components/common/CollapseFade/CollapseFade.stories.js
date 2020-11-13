@@ -1,3 +1,5 @@
+import "@/components/resources";
+
 import CollapseFade from "./CollapseFade.vue";
 
 export default {

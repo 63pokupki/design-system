@@ -1,3 +1,5 @@
+import "@/components/resources";
+
 import BtnFavorite from "./BtnFavorite.vue";
 import { action } from "@storybook/addon-actions";
 

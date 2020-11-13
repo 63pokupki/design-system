@@ -1,3 +1,5 @@
+import "@/components/resources";
+
 import RangePrice from "./RangePrice.vue";
 
 export default {

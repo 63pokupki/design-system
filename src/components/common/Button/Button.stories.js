@@ -1,3 +1,5 @@
+import "@/components/resources";
+
 import Button from "./Button.vue";
 
 export default {

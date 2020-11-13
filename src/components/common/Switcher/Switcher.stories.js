@@ -1,3 +1,5 @@
+import "@/components/resources";
+
 import Switcher from "./Switcher.vue";
 
 export default {

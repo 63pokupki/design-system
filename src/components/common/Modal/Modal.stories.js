@@ -1,3 +1,5 @@
+import "@/components/resources";
+
 import Modal from "./Modal.vue";
 import Checkbox from "../Checkbox/Checkbox.vue";
 import Button from "../Button/Button.vue";

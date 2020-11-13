@@ -1,3 +1,5 @@
+import "@/components/resources";
+
 import Radio from "./Radio.vue";
 
 export default {

@@ -1,3 +1,5 @@
+import "@/components/resources";
+
 import BadgeCategoryTag from "./BadgeCategoryTag.vue";
 
 export default {

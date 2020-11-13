@@ -1,3 +1,5 @@
+import "@/components/resources";
+
 import ScrollIntoElementButtons from "./ScrollIntoElementButtons.vue";
 
 export default {

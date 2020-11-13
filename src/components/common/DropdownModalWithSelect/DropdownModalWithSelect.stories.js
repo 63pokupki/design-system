@@ -1,3 +1,5 @@
+import "@/components/resources";
+
 import DropdownModalWithSelect from "./DropdownModalWithSelect.vue";
 import Tooltip from "../Tooltip/Tooltip.vue";
 

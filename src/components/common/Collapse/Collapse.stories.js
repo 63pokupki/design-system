@@ -1,3 +1,5 @@
+import "@/components/resources";
+
 import Collapse from "./Collapse.vue";
 import RangePrice from "../RangePrice/RangePrice.vue";
 import Checkbox from "../Checkbox/Checkbox.vue";

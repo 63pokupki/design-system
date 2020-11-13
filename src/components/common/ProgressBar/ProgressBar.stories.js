@@ -1,3 +1,5 @@
+import "@/components/resources";
+
 import ProgressBar from "./ProgressBar.vue";
 
 export default {

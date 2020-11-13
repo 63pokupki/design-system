@@ -1,3 +1,5 @@
+import "@/components/resources";
+
 import ItemBadge from "./ItemBadge.vue";
 
 export default {
