@@ -3,6 +3,7 @@ export default {
     name: "Button",
     functional: true,
     props: {
+        /** Тип кнопки */
         type: {
             type: String,
             default: "primary",
