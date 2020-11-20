@@ -74,5 +74,6 @@ export const withIcon = () => ({
             console.log("click");
         },
     },
-    render: (h) => h(<Button icon={{ name: "icon-cart", pos: "right" }}>Кнопка с иконкой</Button>),
+    // eslint-disable-next-line no-unused-vars
+    render: (h) => <Button icon={{ name: "icon-cart", pos: "right" }}>Кнопка с иконкой</Button>,
 });

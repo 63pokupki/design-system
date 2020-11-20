@@ -31,6 +31,8 @@ module.exports = {
             files: ["**/*.stories.[jt]s?(x)"],
             rules: {
                 "max-len": "off",
+                "no-multiple-empty-lines": "off",
+                indent: "off",
             },
         },
     ],

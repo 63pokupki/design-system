@@ -30,12 +30,6 @@ export const standart = () => ({
             :values="values"
             :label="label"
             heading="cортировка по:">
-                <template #radio="{val}">
-                    {{ label(val) }}
-                    <Tooltip style="white-space: nowrap" :forced="true" v-if="val.key.label == 'заполненности рядов'">
-                        Доступно для каталогов, <br> которые собираются рядами
-                    </Tooltip>
-                </template>
             </DropdownModalWithSelect>`,
 });
 

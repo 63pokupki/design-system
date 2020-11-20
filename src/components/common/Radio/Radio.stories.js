@@ -102,9 +102,9 @@ export const outlined = () => ({
     template: `
     <div>
         <p>Значение: {{checked}}</p>
-        <Radio val="Значение 1" type="outlined" v-model='checked'>Значение 1</Radio>
-        <Radio val="Значение 2" type="outlined" v-model='checked'>Значение 2</Radio>
-        <Radio val="Значение 3" type="outlined" v-model='checked'>Значение 3</Radio>
+        <Radio val="Значение 1" type="outline" v-model='checked'>Значение 1</Radio>
+        <Radio val="Значение 2" type="outline" v-model='checked'>Значение 2</Radio>
+        <Radio val="Значение 3" type="outline" v-model='checked'>Значение 3</Radio>
     </div>
     `,
 });

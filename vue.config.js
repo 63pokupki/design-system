@@ -3,6 +3,7 @@ const path = require("path");
 
 const vueSrc = "./src";
 module.exports = {
+    lintOnSave: false,
     css: {
         loaderOptions: {
             sass: {

@@ -63,7 +63,7 @@ export default {
             type: String,
             default: "primary",
             validator(value) {
-                return ["outline", "primary"].indexOf(value) !== -1;
+                return ["outline", "primary"].includes(value);
             },
         },
         rounded: {
