@@ -234,7 +234,7 @@ const mixin = {
                             ? option.breakpoint < this.widthWindow
                             : option.breakpoint > this.widthWindow
                     ) {
-                        for (let key in option.settings) {
+                        for (const key in option.settings) {
                             if (Object.prototype.hasOwnProperty.call(options.settings, key)) {
                                 settings[key] = option.settings[key];
                             }

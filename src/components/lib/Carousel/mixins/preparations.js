@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /**
  * Carousel preparation methods
  */
@@ -19,7 +20,7 @@ const mixin = {
                 );
             }
 
-            for (let slide of this.slidesAll) {
+            for (const slide of this.slidesAll) {
                 slide.classList.add("agile__slide");
             }
         },

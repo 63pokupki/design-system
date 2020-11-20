@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-expressions */
+/* eslint-disable no-unused-vars */
+/* eslint-disable max-len */
 import {
     inBrowser,
     CustomEvent,
@@ -75,7 +78,7 @@ export default function (Vue) {
      * @return {Array}
      */
         performance() {
-            let list = [];
+            const list = [];
 
             this.ListenerQueue.map((item) => {
                 list.push(item.performance());
@@ -341,7 +344,7 @@ export default function (Vue) {
      */
         _lazyLoadHandler() {
             const freeList = [];
-            this.ListenerQueue.forEach((listener, index) => {
+            this.ListenerQueue.forEach((listener) => {
                 if (!listener.el || !listener.el.parentNode) {
                     freeList.push(listener);
                 }
@@ -374,7 +377,7 @@ export default function (Vue) {
     * init IntersectionObserver
     * @return
     */
-        _observerHandler(entries, observer) {
+        _observerHandler(entries) {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     this.ListenerQueue.forEach((listener) => {

@@ -64,7 +64,7 @@ export default {
             if (this.fade) {
                 this.visible = false;
 
-                const handler = (e) => {
+                const handler = () => {
                     this.visible = true;
                     if (this.timer) {
                         clearTimeout(this.timer);

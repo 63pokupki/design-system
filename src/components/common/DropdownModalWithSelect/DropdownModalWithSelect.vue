@@ -90,6 +90,8 @@ export default {
                 if (this.heading) {
                     return capitalize(this.heading);
                 }
+
+                return null;
             },
         },
         _value: {

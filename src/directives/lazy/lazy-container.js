@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import {
     find,
     remove,
@@ -25,7 +26,7 @@ export default class LazyContainerMananger {
         container.update({ el, binding, vnode });
     }
 
-    unbind(el, binding, vnode) {
+    unbind(el) {
         const container = find(this._queue, (item) => item.el === el);
         if (!container) return;
         container.clear();

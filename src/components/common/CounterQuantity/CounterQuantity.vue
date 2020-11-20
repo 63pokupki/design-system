@@ -22,7 +22,7 @@ export default {
     render(h, { data, props, listeners }) {
         const uniqUuid = uuid.generate();
 
-        const { value, min, max } = props;
+        const { min, max } = props;
         /** Установка изначального значения */
         const initial = (value, event) => {
             listeners.input(value);

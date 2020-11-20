@@ -29,7 +29,7 @@ export default {
         },
     },
     render: (h, {
-        data, props, listeners, slots,
+        data, props, listeners,
     }) => {
         const value = props.value || "";
         const placeholder = props.placeholder || "Поиск";
@@ -38,16 +38,22 @@ export default {
         const size = props.buttonStyle || "sm";
         const uniqUuid = uuid.generate();
 
-        const onSearch = (event) => {
-            listeners.onSearch ? listeners.onSearch(value) : () => {};
+        const onSearch = () => {
+            if (listeners.onSearch) {
+                listeners.onSearch(value);
+            }
         };
 
         const onKeyUpSearch = (event) => {
-            if (event.code == 13 || event.keyCode == 13 || event.key == "Enter") listeners.onSearch ? listeners.onSearch(value) : () => {};
+            if ((event.code == 13 || event.keyCode == 13 || event.key == "Enter") && listeners.onSearch) {
+                listeners.onSearch(value);
+            }
         };
 
         const onInput = (event) => {
-            listeners.input ? listeners.input(event.target.value) : () => {};
+            if (listeners.input) {
+                listeners.input(event.target.value);
+            }
         };
 
         return (

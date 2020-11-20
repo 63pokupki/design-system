@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-expressions */
+/* eslint-disable max-len */
 import {
     loadImageAsync,
     ObjectKeys,
@@ -125,7 +127,7 @@ export default class ReactiveListener {
         this.state.loading = true;
         loadImageAsync({
             src: this.loading,
-        }, (data) => {
+        }, () => {
             this.render("loading", false);
             this.state.loading = false;
             cb();

@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /**
  * Handlers methods for mouse/touch events
  */
@@ -27,8 +28,8 @@ const mixin = {
                 positionX = e.clientX;
                 positionY = e.clientY;
             }
-            let dragDistanceX = Math.abs(positionX - this.dragStartX);
-            let dragDistanceY = Math.abs(positionY - this.dragStartY);
+            const dragDistanceX = Math.abs(positionX - this.dragStartX);
+            const dragDistanceY = Math.abs(positionY - this.dragStartY);
             if (dragDistanceX > 3 * dragDistanceY) {
                 this.disableScroll();
                 this.dragDistance = positionX - this.dragStartX;

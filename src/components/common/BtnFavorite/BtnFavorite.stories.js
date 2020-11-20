@@ -1,6 +1,5 @@
 import "@/components/resources";
 
-import { action } from "@storybook/addon-actions";
 import BtnFavorite from "./BtnFavorite.vue";
 
 export default {
@@ -11,7 +10,7 @@ export default {
 export const normal = () => ({
     components: { BtnFavorite },
     methods: {
-        onClick: action("click"),
+        onClick() {},
     },
     template: "<BtnFavorite @click='onClick'/>",
 });
@@ -19,7 +18,7 @@ export const normal = () => ({
 export const isLoading = () => ({
     components: { BtnFavorite },
     methods: {
-        onClick: action("click"),
+        onClick() {},
     },
     template: "<BtnFavorite @click='onClick' :is-loading='true'/>",
 });
@@ -27,7 +26,7 @@ export const isLoading = () => ({
 export const isActive = () => ({
     components: { BtnFavorite },
     methods: {
-        onClick: action("click"),
+        onClick() {},
     },
     template: "<BtnFavorite @click='onClick' :is-active='true'/>",
 });

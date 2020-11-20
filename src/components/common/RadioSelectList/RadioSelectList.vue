@@ -20,14 +20,16 @@ export default {
         },
     },
     render: (h, {
-        data, props, slots, listeners,
+        data, props, listeners,
     }) => {
         const {
             value, values, text, position,
         } = props;
 
         const onClick = (value) => {
-            listeners.input ? listeners.input(value) : () => {};
+            if (listeners.input) {
+                listeners.input(value);
+            }
         };
 
         return (

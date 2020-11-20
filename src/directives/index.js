@@ -1,6 +1,7 @@
+/* eslint-disable import/prefer-default-export */
 /** Выполнение действия при клике вне элемента */
 export const clickOutside = {
-    bind(el, binding, vnode) {
+    bind(el, binding) {
         el.clickOutsideEvent = function (event) {
             const target = event.target;
 

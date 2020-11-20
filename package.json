@@ -33,7 +33,8 @@
     "lodash-es": "^4.17.15",
     "short-uuid": "^3.1.1",
     "vue-carousel": "git+https://github.com/nullilac/vue-carousel.git",
-    "vue-slider-component": "^3.2.4"
+    "vue-slider-component": "^3.2.4",
+    "vue": "^2.6.12"
   },
   "devDependencies": {
     "@babel/core": "^7.11.1",
@@ -93,7 +94,6 @@
     "svg-sprite-loader": "^5.0.0",
     "svg-url-loader": "^6.0.0",
     "url-loader": "^4.1.0",
-    "vue": "^2.6.12",
     "vue-cli-plugin-storybook": "~1.3.0",
     "vue-jest": "^3.0.7",
     "vue-loader": "^15.9.3",

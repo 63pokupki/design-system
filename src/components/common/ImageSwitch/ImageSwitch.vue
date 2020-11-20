@@ -68,7 +68,7 @@
 
 <script>
 import { Carousel, Slide } from "vue-carousel";
-import { lazyimg } from "@/directives/lazy";
+import lazyimg from "@/directives/lazy";
 
 const loaderImgSrc = require("@/directives/lazy/image-loader.svg");
 

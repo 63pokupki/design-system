@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /**
  * All not public methods doesn't classified elsewhere
  */
@@ -14,7 +15,7 @@ const mixin = {
         },
 
         disableScroll() {
-            document.ontouchmove = (e) => {};
+            document.ontouchmove = () => {};
         },
 
         enableScroll() {
@@ -27,7 +28,7 @@ const mixin = {
         },
 
         toggleAutoPlay() {
-            let enabled = (!this.settings.unagile && this.settings.autoplay);
+            const enabled = (!this.settings.unagile && this.settings.autoplay);
 
             if (!this.autoplayInterval && enabled) {
                 this.autoplayInterval = setInterval(() => {
@@ -45,7 +46,7 @@ const mixin = {
         },
 
         toggleFade() {
-            let enabled = (!this.settings.unagile && this.settings.fade);
+            const enabled = (!this.settings.unagile && this.settings.fade);
 
             for (let i = 0; i < this.countSlides; i++) {
                 this.slides[i].style.transition = (enabled) ? `opacity ${this.settings.timing} ${this.settings.speed}ms` : "none";

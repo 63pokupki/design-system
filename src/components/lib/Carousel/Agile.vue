@@ -175,7 +175,7 @@ export default {
         },
 
         currentBreakpoint() {
-            let breakpoints = this.breakpoints.map((item) => item).reverse();
+            const breakpoints = this.breakpoints.map((item) => item).reverse();
             return this.initialSettings.mobileFirst
                 ? breakpoints.find((item) => item < this.widthWindow) || 0
                 : breakpoints.find((item) => item > this.widthWindow) || null;
@@ -307,7 +307,7 @@ export default {
                 }
             }
 
-            let translateX = !this.settings.fade
+            const translateX = !this.settings.fade
                 ? n * this.widthSlide * this.settings.slidesToScroll
                 : 0;
             this.transitionDelay = transition ? this.speed : 0;

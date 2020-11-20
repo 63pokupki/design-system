@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // только иконки для категорий закупок
 import svgCatAccessoriesAdult from "./svg-cat-accessories-adult.svg";
 import svgCatAccessoriesBags from "./svg-cat-accessories-bags.svg";

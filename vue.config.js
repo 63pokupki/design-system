@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 const path = require("path");
 
 const vueSrc = "./src";
@@ -15,7 +16,7 @@ module.exports = {
             .rule("images")
             .use("url-loader")
             .loader("url-loader")
-            .tap((options) => ({
+            .tap(() => ({
                 limit: true,
                 name: "img/[name].[hash:8].[ext]",
             }));

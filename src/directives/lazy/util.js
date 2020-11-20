@@ -34,7 +34,7 @@ const CustomEvent = (function () {
     if (typeof window.CustomEvent === "function") return window.CustomEvent;
     function CustomEvent(event, params) {
         params = params || { bubbles: false, cancelable: false, detail: undefined };
-        let evt = document.createEvent("CustomEvent");
+        const evt = document.createEvent("CustomEvent");
         evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
         return evt;
     }
@@ -142,7 +142,7 @@ function supportWebp() {
     const d = document;
 
     try {
-        let el = d.createElement("object");
+        const el = d.createElement("object");
         el.type = "image/webp";
         el.style.visibility = "hidden";
         el.innerHTML = "!";
@@ -163,10 +163,10 @@ function throttle(action, delay) {
         if (timeout) {
             return;
         }
-        let elapsed = Date.now() - lastRun;
-        let context = this;
-        let args = arguments;
-        let runCallback = function () {
+        const elapsed = Date.now() - lastRun;
+        const context = this;
+        const args = arguments;
+        const runCallback = function () {
             lastRun = Date.now();
             timeout = false;
             action.apply(context, args);
@@ -183,7 +183,7 @@ function testSupportsPassive() {
     if (!inBrowser) return;
     let support = false;
     try {
-        let opts = Object.defineProperty({}, "passive", {
+        const opts = Object.defineProperty({}, "passive", {
             get() {
                 support = true;
             },
@@ -212,7 +212,7 @@ const _ = {
 };
 
 const loadImageAsync = (item, resolve, reject) => {
-    let image = new Image();
+    const image = new Image();
     if (!item || !item.src) {
         const err = new Error("image src is required");
         return reject(err);
@@ -275,8 +275,8 @@ function ObjectKeys(obj) {
     if (Object.keys) {
         return Object.keys(obj);
     }
-    let keys = [];
-    for (let key in obj) {
+    const keys = [];
+    for (const key in obj) {
         if (obj.hasOwnProperty(key)) {
             keys.push(key);
         }
@@ -285,7 +285,7 @@ function ObjectKeys(obj) {
 }
 
 function ArrayFrom(arrLike) {
-    let len = arrLike.length;
+    const len = arrLike.length;
     const list = [];
     for (let i = 0; i < len; i++) {
         list.push(arrLike[i]);

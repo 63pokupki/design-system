@@ -153,7 +153,9 @@ export default {
                 return true;
             },
         },
-        /** Показывать кнопку "Показать больше/свернуть", если задано ограничение на количество отображаемых элементов и оно меньше чем полный лист */
+        /** Показывать кнопку "Показать больше/свернуть",
+         * если задано ограничение на количество отображаемых
+         * элементов и оно меньше чем полный лист */
         _displayMoreButton: {
             get() {
                 if (this.maxVisibleElements != 0 && this.maxVisibleElements < this.values.length) {
@@ -173,11 +175,9 @@ export default {
                 switch (selected) {
                 case 0:
                     return "Выберите параметр";
-                    break;
 
                 case all:
                     return "Выбрано все";
-                    break;
 
                 default:
                     return `${selected} ${pluralize(selected, [
@@ -185,7 +185,6 @@ export default {
                         "позиции",
                         "позиций",
                     ])}`;
-                    break;
                 }
             },
         },
@@ -216,6 +215,8 @@ export default {
                     const sliced = str.slice(0, str.length - 2);
                     return sliced;
                 }
+
+                return false;
             },
         },
         /** Количество видимых элементов в секции */

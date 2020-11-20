@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import {
     inBrowser,
     loadImageAsync,
@@ -84,7 +85,7 @@ export default (lazyManager) => ({
             loadImageAsync({ src }, ({ src }) => {
                 this.renderSrc = src;
                 this.state.loaded = true;
-            }, (e) => {
+            }, () => {
                 this.state.attempt++;
                 this.renderSrc = this.options.error;
                 this.state.error = true;

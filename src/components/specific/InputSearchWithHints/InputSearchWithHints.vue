@@ -152,8 +152,8 @@ export default {
         emitHintsOpenState(value) {
             this.$emit("hints-open-change", value);
         },
-        onCategorySelect(category_id) {
-            this.categories.current = category_id;
+        onCategorySelect(categoryId) {
+            this.categories.current = categoryId;
             this.emitCategoryOpenState(false);
         },
         highlight(hint) {

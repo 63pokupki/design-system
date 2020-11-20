@@ -8,7 +8,7 @@ const lazy = new LazyC({
     throttleWait: 500,
 });
 
-export const lazyimg = {
+export default {
     bind: lazy.add.bind(lazy),
     update: lazy.update.bind(lazy),
     componentUpdated: lazy.lazyLoadHandler.bind(lazy),

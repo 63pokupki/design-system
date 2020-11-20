@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 module.exports = {
     // подсветка синтаксиса разметки - не включается в конечную сборку
     "highlight-syntax": [

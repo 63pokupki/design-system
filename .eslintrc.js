@@ -8,16 +8,7 @@ module.exports = {
         parser: "babel-eslint",
     },
     rules: {
-        "no-unreachable": "off",
-        "vue/return-in-computed-property": "off",
-        camelcase: "off",
-        "import/no-extraneous-dependencies": "off",
-        "import/prefer-default-export": "off",
-        "max-classes-per-file": "off",
-        "prefer-const": "off",
-        "max-len": "off",
-        "no-unused-vars": "off",
-        "no-unused-expressions": "off",
+        "no-unused-expressions": ["error", { allowShortCircuit: true, allowTernary: true }],
         "no-use-before-define": "off",
         "no-shadow": "off",
         "array-callback-return": "off",
@@ -39,12 +30,21 @@ module.exports = {
         "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
         "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
         indent: ["error", 4],
+        "max-classes-per-file": "off",
+        "prefer-const": "off",
+        "max-len": ["error", 120],
     },
     overrides: [
         {
             files: ["**/*.spec.[jt]s?(x)"],
             env: {
                 jest: true,
+            },
+        },
+        {
+            files: ["**/*.stories.[jt]s?(x)"],
+            rules: {
+                "max-len": "off",
             },
         },
     ],

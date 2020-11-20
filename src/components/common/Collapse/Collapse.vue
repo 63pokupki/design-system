@@ -75,11 +75,15 @@ export default {
             if (this.heading) {
                 return capitalize(this.heading);
             }
+
+            return null;
         },
         _metainfo() {
             if (this.metainfo) {
                 return capitalize(this.metainfo);
             }
+
+            return null;
         },
         _isSlotDefaultExist() {
             return Boolean(this.$slots.default);
