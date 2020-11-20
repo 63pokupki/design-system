@@ -1,19 +1,19 @@
-import assign from 'assign-deep'
+import assign from "assign-deep"
 
-const inBrowser = typeof window !== 'undefined'
+const inBrowser = typeof window !== "undefined"
 export const hasIntersectionObserver = checkIntersectionObserver()
 
 function checkIntersectionObserver () {
   if (inBrowser &&
-    'IntersectionObserver' in window &&
-    'IntersectionObserverEntry' in window &&
-    'intersectionRatio' in window.IntersectionObserverEntry.prototype) {
+    "IntersectionObserver" in window &&
+    "IntersectionObserverEntry" in window &&
+    "intersectionRatio" in window.IntersectionObserverEntry.prototype) {
   // Minimal polyfill for Edge 15's lack of `isIntersecting`
   // See: https://github.com/w3c/IntersectionObserver/issues/211
-    if (!('isIntersecting' in window.IntersectionObserverEntry.prototype)) {
+    if (!("isIntersecting" in window.IntersectionObserverEntry.prototype)) {
       Object.defineProperty(window.IntersectionObserverEntry.prototype,
-        'isIntersecting', {
-          get: function () {
+        "isIntersecting", {
+          get () {
             return this.intersectionRatio > 0
           }
         })
@@ -24,17 +24,17 @@ function checkIntersectionObserver () {
 }
 
 export const modeType = {
-  event: 'event',
-  observer: 'observer'
+  event: "event",
+  observer: "observer"
 }
 
 // CustomEvent polyfill
 const CustomEvent = (function () {
   if (!inBrowser) return
-  if (typeof window.CustomEvent === 'function') return window.CustomEvent
+  if (typeof window.CustomEvent === "function") return window.CustomEvent
   function CustomEvent (event, params) {
     params = params || { bubbles: false, cancelable: false, detail: undefined }
-    var evt = document.createEvent('CustomEvent')
+    let evt = document.createEvent("CustomEvent")
     evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail)
     return evt
   }
@@ -60,9 +60,9 @@ function some (arr, fn) {
 }
 
 function getBestSelectionFromSrcset (el, scale) {
-  if (el.tagName !== 'IMG' || !el.getAttribute('data-srcset')) return
+  if (el.tagName !== "IMG" || !el.getAttribute("data-srcset")) return
 
-  let options = el.getAttribute('data-srcset')
+  let options = el.getAttribute("data-srcset")
   const result = []
   const container = el.parentNode
   const containerWidth = container.offsetWidth * scale
@@ -71,11 +71,11 @@ function getBestSelectionFromSrcset (el, scale) {
   let tmpSrc
   let tmpWidth
 
-  options = options.trim().split(',')
+  options = options.trim().split(",")
 
   options.map(item => {
     item = item.trim()
-    spaceIndex = item.lastIndexOf(' ')
+    spaceIndex = item.lastIndexOf(" ")
     if (spaceIndex === -1) {
       tmpSrc = item
       tmpWidth = 999998
@@ -94,16 +94,16 @@ function getBestSelectionFromSrcset (el, scale) {
       return -1
     }
     if (a[0] === b[0]) {
-      if (b[1].indexOf('.webp', b[1].length - 5) !== -1) {
+      if (b[1].indexOf(".webp", b[1].length - 5) !== -1) {
         return 1
       }
-      if (a[1].indexOf('.webp', a[1].length - 5) !== -1) {
+      if (a[1].indexOf(".webp", a[1].length - 5) !== -1) {
         return -1
       }
     }
     return 0
   })
-  let bestSelectedSrc = ''
+  let bestSelectedSrc = ""
   let tmpOption
 
   for (let i = 0; i < result.length; i++) {
@@ -142,10 +142,10 @@ function supportWebp () {
   const d = document
 
   try {
-    let el = d.createElement('object')
-    el.type = 'image/webp'
-    el.style.visibility = 'hidden'
-    el.innerHTML = '!'
+    let el = d.createElement("object")
+    el.type = "image/webp"
+    el.style.visibility = "hidden"
+    el.innerHTML = "!"
     d.body.appendChild(el)
     support = !el.offsetWidth
     d.body.removeChild(el)
@@ -183,12 +183,12 @@ function testSupportsPassive () {
   if (!inBrowser) return
   let support = false
   try {
-    let opts = Object.defineProperty({}, 'passive', {
-      get: function () {
+    let opts = Object.defineProperty({}, "passive", {
+      get () {
         support = true
       }
     })
-    window.addEventListener('test', null, opts)
+    window.addEventListener("test", null, opts)
   } catch (e) {}
   return support
 }
@@ -199,7 +199,7 @@ const _ = {
   on (el, type, func, capture = false) {
     if (supportsPassive) {
       el.addEventListener(type, func, {
-        capture: capture,
+        capture,
         passive: true
       })
     } else {
@@ -214,7 +214,7 @@ const _ = {
 const loadImageAsync = (item, resolve, reject) => {
   let image = new Image()
   if (!item || !item.src) {
-    const err = new Error('image src is required')
+    const err = new Error("image src is required")
     return reject(err)
   }
 
@@ -234,13 +234,13 @@ const loadImageAsync = (item, resolve, reject) => {
 }
 
 const style = (el, prop) => {
-  return typeof getComputedStyle !== 'undefined'
+  return typeof getComputedStyle !== "undefined"
     ? getComputedStyle(el, null).getPropertyValue(prop)
     : el.style[prop]
 }
 
 const overflow = (el) => {
-  return style(el, 'overflow') + style(el, 'overflow-y') + style(el, 'overflow-x')
+  return style(el, "overflow") + style(el, "overflow-y") + style(el, "overflow-x")
 }
 
 const scrollParent = (el) => {
@@ -271,14 +271,14 @@ const scrollParent = (el) => {
 }
 
 function isObject (obj) {
-  return obj !== null && typeof obj === 'object'
+  return obj !== null && typeof obj === "object"
 }
 
 function ObjectKeys (obj) {
   if (!(obj instanceof Object)) return []
   if (Object.keys) {
     return Object.keys(obj)
-  } else {
+  } 
     let keys = []
     for (let key in obj) {
       if (obj.hasOwnProperty(key)) {
@@ -286,7 +286,7 @@ function ObjectKeys (obj) {
       }
     }
     return keys
-  }
+  
 }
 
 function ArrayFrom (arrLike) {

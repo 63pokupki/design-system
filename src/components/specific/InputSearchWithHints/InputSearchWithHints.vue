@@ -107,11 +107,11 @@ export default {
         "click-outside": clickOutside,
     },
     methods: {
-        /**Событие смены состояния показа выбора категорий поиска - товары/форум */
+        /** Событие смены состояния показа выбора категорий поиска - товары/форум */
         emitCategoryOpenState(value) {
             this.$emit("category-open-change", value);
         },
-        /**Событие смены состояния показа подсказок*/
+        /** Событие смены состояния показа подсказок */
         emitHintsOpenState(value) {
             this.$emit("hints-open-change", value);
         },
@@ -125,26 +125,26 @@ export default {
 
             const hl = raw.replace(
                 search,
-                `<span style='font-weight: bold; color: #36a6f2;'>$&</span>`
+                "<span style='font-weight: bold; color: #36a6f2;'>$&</span>"
             );
 
             return hl;
         },
-        /**Функция получающая label для подсказки */
+        /** Функция получающая label для подсказки */
         getHintLabel(hint) {
             if (hint && this.fnHintLabel && typeof this.fnHintLabel === "function") {
                 return this.fnHintLabel(hint);
-            } else {
+            } 
                 return hint.label;
-            }
+            
         },
-        /**Функция получающая count для подсказки */
+        /** Функция получающая count для подсказки */
         getHintCount(hint) {
             if (hint && this.fnHintCount && typeof this.fnHintCount === "function") {
                 return this.fnHintCount(hint);
-            } else {
+            } 
                 return hint.count;
-            }
+            
         },
         onHintClick(hint) {
             this.$emit("hint-click", hint);

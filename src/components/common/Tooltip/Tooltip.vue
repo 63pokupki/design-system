@@ -51,7 +51,7 @@ export default {
         },
     },
     methods: {
-        addTooltipClassToParent: function () {
+        addTooltipClassToParent () {
             this.$parent.$el.classList.add(this._forced);
         },
     },

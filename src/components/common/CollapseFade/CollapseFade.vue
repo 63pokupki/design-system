@@ -26,7 +26,7 @@ export default {
             type: Object,
         },
     },
-    render: function (h, { data, props, listeners, slots }) {
+    render (h, { data, props, listeners, slots }) {
         const slot = slots().default;
 
         const onChangeOpen = () => {

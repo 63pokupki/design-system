@@ -74,5 +74,5 @@ export const withIcon = () => ({
             console.log("click");
         }
     },
-    render: (h) => <Button icon={{name: 'icon-cart', pos: 'right'}}>Кнопка с иконкой</Button>
+    render: (h) => <Button icon={{name: "icon-cart", pos: "right"}}>Кнопка с иконкой</Button>
 });

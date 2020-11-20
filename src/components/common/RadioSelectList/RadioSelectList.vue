@@ -29,7 +29,7 @@ export default {
         return (
             <div
                 style={data.staticStyle}
-                class={[`spui-RadioSelectList`, data.class, data.staticClass]}
+                class={["spui-RadioSelectList", data.class, data.staticClass]}
             >
                 {text && position == "left" && (
                     <span class="spui-RadioSelectList__before">{text}</span>

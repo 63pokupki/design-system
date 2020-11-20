@@ -53,5 +53,5 @@ export const standart = () => ({
             console.log("Отправка запроса");
         }
     },
-    template: `<InputSearchWithHints v-model="text" :hints="hints" :is-hints-open="isHintsOpen" :is-category-open="isCategoryOpen" @hint-click="onClickHint" @hints-open-change="onHintsOpenChange" @category-open-change="onCategoryOpenChange" @input-by-items="onInputByItems" @search="onSearch"></InputSearchWithHints>`,
+    template: "<InputSearchWithHints v-model=\"text\" :hints=\"hints\" :is-hints-open=\"isHintsOpen\" :is-category-open=\"isCategoryOpen\" @hint-click=\"onClickHint\" @hints-open-change=\"onHintsOpenChange\" @category-open-change=\"onCategoryOpenChange\" @input-by-items=\"onInputByItems\" @search=\"onSearch\"></InputSearchWithHints>",
 });

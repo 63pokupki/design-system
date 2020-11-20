@@ -122,12 +122,12 @@ export default {
         },
         minWidthPx() {
             const length = this.rangeMin.toString().split("").length;
-            const width = Math.ceil(length * 10) + "px";
+            const width = `${Math.ceil(length * 10)  }px`;
             return width;
         },
         maxWidthPx() {
             const length = this.rangeMax.toString().split("").length;
-            const width = Math.ceil(length * 10) + "px";
+            const width = `${Math.ceil(length * 10)  }px`;
             return width;
         },
     },
@@ -136,7 +136,7 @@ export default {
             const el = e.target;
             const value = el.value;
             const length = value.toString().split("").length;
-            const width = Math.ceil(length * 10) + "px";
+            const width = `${Math.ceil(length * 10)  }px`;
             el.style.width = width;
         },
         setSelection(el) {

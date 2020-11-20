@@ -174,7 +174,7 @@ export const withSearchInput = () => ({
             this.inputSearchValue = value;
         },
         onSearch(value) {
-            alert("Search: " + value);
+            alert(`Search: ${  value}`);
         },
         onSelectAll() {
             this.value = this.values;

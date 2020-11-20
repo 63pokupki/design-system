@@ -19,7 +19,7 @@ import CollapseFade from "./common/CollapseFade/CollapseFade.vue";
 import InputSearch from "./common/InputSearch/InputSearch.vue";
 import RadioSelectList from "./common/RadioSelectList/RadioSelectList.vue";
 import ScrollIntoElementButtons from "./common/ScrollIntoElementButtons/ScrollIntoElementButtons.vue";
-/* Specific*/
+/* Specific */
 import BadgeCategoryTag from "./specific/BadgeCategoryTag/BadgeCategoryTag.vue";
 import CollapseMultipleSelectList from "./specific/CollapseMultipleSelectList/CollapseMultipleSelectList.vue";
 import InputSearchWithHints from "./specific/InputSearchWithHints/InputSearchWithHints.vue";

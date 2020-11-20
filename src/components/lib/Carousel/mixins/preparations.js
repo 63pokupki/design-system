@@ -16,7 +16,7 @@ const mixin = {
 			}
 
 			for (let slide of this.slidesAll) {
-				slide.classList.add('agile__slide')
+				slide.classList.add("agile__slide")
 			}
 		},
 
@@ -30,12 +30,12 @@ const mixin = {
 
 			// Remove active & current classes
 			for (let i = 0; i < this.countSlides; i++) {
-				this.slides[i].classList.remove('agile__slide--active')
-				this.slides[i].classList.remove('agile__slide--current')
+				this.slides[i].classList.remove("agile__slide--active")
+				this.slides[i].classList.remove("agile__slide--current")
 			}
 
 			// Add active & current class for current slide
-			setTimeout(() => this.slides[this.currentSlide].classList.add('agile__slide--active'), this.changeDelay)
+			setTimeout(() => this.slides[this.currentSlide].classList.add("agile__slide--active"), this.changeDelay)
 
 			let start = (this.slidesCloned) ? this.countSlides + this.currentSlide : this.currentSlide
 
@@ -45,7 +45,7 @@ const mixin = {
 
 			// To account for the combination of infinite = false and centerMode = true, ensure we don't overrun the bounds of the slide count.
 			for (let i = Math.max(start, 0); i < Math.min(start + this.settings.slidesToShow, this.countSlides); i++) {
-				this.slidesAll[i].classList.add('agile__slide--current')
+				this.slidesAll[i].classList.add("agile__slide--current")
 			}
 		},
 

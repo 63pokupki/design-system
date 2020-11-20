@@ -134,38 +134,38 @@ export default {
     },
 
     computed: {
-        breakpoints: function () {
+        breakpoints () {
             return !this.initialSettings.responsive
                 ? []
                 : this.initialSettings.responsive.map((item) => item.breakpoint);
         },
 
-        canGoToPrev: function () {
+        canGoToPrev () {
             return this.settings.infinite || this.currentSlide > 0;
         },
 
-        canGoToNext: function () {
+        canGoToNext () {
             return this.settings.infinite || this.currentSlide < this.countSlides - 1;
         },
 
-        countSlides: function () {
+        countSlides () {
             return this.isSSR
                 ? this.htmlCollectionToArray(this.$slots.default).length
                 : this.slides.length;
         },
 
-        countSlidesAll: function () {
+        countSlidesAll () {
             return this.slidesAll.length;
         },
 
-        currentBreakpoint: function () {
+        currentBreakpoint () {
             let breakpoints = this.breakpoints.map((item) => item).reverse();
             return this.initialSettings.mobileFirst
                 ? breakpoints.find((item) => item < this.widthWindow) || 0
                 : breakpoints.find((item) => item > this.widthWindow) || null;
         },
 
-        marginX: function () {
+        marginX () {
             if (this.settings.unagile) {
                 return 0;
             }
@@ -183,17 +183,17 @@ export default {
             return this.settings.rtl ? marginX : -1 * marginX;
         },
 
-        slidesCloned: function () {
+        slidesCloned () {
             return !this.settings.unagile && !this.settings.fade && this.settings.infinite;
         },
 
-        slidesAll: function () {
+        slidesAll () {
             return this.slidesCloned
                 ? [...this.slidesClonedBefore, ...this.slides, ...this.slidesClonedAfter]
                 : this.slides;
         },
 
-        widthSlide: function () {
+        widthSlide () {
             return !this.settings.unagile
                 ? this.widthContainer / this.settings.slidesToShow
                 : "auto";

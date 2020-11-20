@@ -3,7 +3,7 @@ import {
   remove,
   assign,
   ArrayFrom
-} from './util'
+} from "./util"
 
 export default class LazyContainerMananger {
   constructor ({ lazy }) {
@@ -32,7 +32,7 @@ export default class LazyContainerMananger {
 }
 
 const defaultOptions = {
-  selector: 'img'
+  selector: "img"
 }
 
 class LazyContainer {
@@ -55,9 +55,9 @@ class LazyContainer {
     imgs.forEach(el => {
       this.lazy.add(el, assign({}, this.binding, {
         value: {
-          src: 'dataset' in el ? el.dataset.src : el.getAttribute('data-src'),
-          error: ('dataset' in el ? el.dataset.error : el.getAttribute('data-error')) || this.options.error,
-          loading: ('dataset' in el ? el.dataset.loading : el.getAttribute('data-loading')) || this.options.loading
+          src: "dataset" in el ? el.dataset.src : el.getAttribute("data-src"),
+          error: ("dataset" in el ? el.dataset.error : el.getAttribute("data-error")) || this.options.error,
+          loading: ("dataset" in el ? el.dataset.loading : el.getAttribute("data-loading")) || this.options.loading
         }
       }), this.vnode)
     })

@@ -22,9 +22,9 @@
 </template>
 
 <script>
-import Tooltip from "../Tooltip/Tooltip.vue";
 import { clickOutside } from "@/directives";
 import { capitalize } from "@/helpers";
+import Tooltip from "../Tooltip/Tooltip.vue";
 
 export default {
     name: "DropdownTooltipWithSelect",

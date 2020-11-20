@@ -134,15 +134,15 @@ export default {
             },
         },
         _isSlotBeforeExist() {
-            return Boolean(this.$slots["before"]);
+            return Boolean(this.$slots.before);
         },
         _isSlotAfterExist() {
-            return Boolean(this.$slots["after"]);
+            return Boolean(this.$slots.after);
         },
         /** Показывать tooltip или нет */
         _tooltip: {
             get() {
-                return this._open && this.tooltip ? true : false;
+                return !!(this._open && this.tooltip);
             },
         },
         /** Показывать кнопку "Очистить", если хоть один параметр выбран */
@@ -212,7 +212,7 @@ export default {
             get() {
                 if (this._value && this._value.length) {
                     const str = this._value.reduce((acc, el) => {
-                        return acc + this.label(el) + ", ";
+                        return `${acc + this.label(el)  }, `;
                     }, "");
                     const sliced = str.slice(0, str.length - 2);
                     return sliced;

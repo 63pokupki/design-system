@@ -96,7 +96,7 @@ export const withCheckboxes = () => ({
             checked: true,
         };
     },
-    template: `<Collapse v-model="opened" heading="С чекбоксом"><Checkbox v-model='checked'>Текст</Checkbox></Collapse>`,
+    template: "<Collapse v-model=\"opened\" heading=\"С чекбоксом\"><Checkbox v-model='checked'>Текст</Checkbox></Collapse>",
 });
 
 export const withSlots = () => ({

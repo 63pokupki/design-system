@@ -39,10 +39,10 @@
 </template>
 
 <script>
+import { capitalize } from "@/helpers";
 import Modal from "../Modal/Modal.vue";
 import Tooltip from "../Tooltip/Tooltip.vue";
 import Radio from "../Radio/Radio.vue";
-import { capitalize } from "@/helpers";
 
 export default {
     name: "DropdownModalWithSelect",

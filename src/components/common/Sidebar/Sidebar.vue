@@ -27,7 +27,7 @@ export default {
         position: {
             type: String,
             default: "left",
-            validator: function (value) {
+            validator (value) {
                 return ["left", "right"].indexOf(value) != -1;
             },
         },
@@ -40,7 +40,7 @@ export default {
     },
     watch: {
         open: {
-            handler: function (value) {
+            handler (value) {
                 value ? this.addDisableScroll() : this.removeDisableScroll();
             },
             immediate: true,

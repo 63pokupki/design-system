@@ -50,7 +50,7 @@ export default {
         type: {
             type: String,
             default: "outline",
-            validator: function (value) {
+            validator (value) {
                 return ["outline", "primary"].indexOf(value) !== -1;
             },
         },
@@ -61,7 +61,7 @@ export default {
         position: {
             type: String,
             default: "left",
-            validator: function (value) {
+            validator (value) {
                 return ["left", "right"].indexOf(value) !== -1;
             },
         },
@@ -98,9 +98,9 @@ export default {
 
             if (Array.isArray(model)) {
                 return model.indexOf(value) !== -1;
-            } else {
+            } 
                 return model;
-            }
+            
         },
         _checkedClass() {
             return this._checked ? `${this.base}_checked` : null;

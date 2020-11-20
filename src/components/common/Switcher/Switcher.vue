@@ -15,6 +15,7 @@
 
 <script>
 import uuid from "short-uuid";
+
 export default {
     name: "Switcher",
     props: {

@@ -117,18 +117,18 @@ export default {
             if (this.one) {
                 if (fnCompareExist) {
                     return fnCompare(value, values);
-                } else {
+                } 
                     return isEqual(value, values);
-                }
+                
             }
             if (!this.one) {
                 if (fnCompareExist) {
                     const finded = values.find((v) => fnCompare(value, v));
-                    return finded ? true : false;
-                } else {
+                    return !!finded;
+                } 
                     const finded = values.find((v) => isEqual(value, v));
-                    return finded ? true : false;
-                }
+                    return !!finded;
+                
             }
         },
         getLabel(value) {

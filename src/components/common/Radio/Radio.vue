@@ -26,6 +26,7 @@
 <script>
 import uuid from "short-uuid";
 import isEqual from "lodash-es/isEqual";
+
 export default {
     name: "Radio",
     props: {
@@ -52,7 +53,7 @@ export default {
         type: {
             type: String,
             default: "primary",
-            validator: function (value) {
+            validator (value) {
                 return ["outline", "primary"].indexOf(value) !== -1;
             },
         },
@@ -63,7 +64,7 @@ export default {
         position: {
             type: String,
             default: "left",
-            validator: function (value) {
+            validator (value) {
                 return ["left", "right"].indexOf(value) !== -1;
             },
         },

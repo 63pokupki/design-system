@@ -23,6 +23,7 @@
 
 <script>
 import {capitalize} from "@/helpers";
+
 export default {
     name: "Collapse",
     props: {
@@ -67,13 +68,13 @@ export default {
             }
         },
         _isSlotDefaultExist() {
-            return Boolean(this.$slots["default"]);
+            return Boolean(this.$slots.default);
         },
         _isSlotBeforeBodyExist() {
-            return Boolean(this.$slots["beforebody"]);
+            return Boolean(this.$slots.beforebody);
         },
         _isSlotAfterBodyExist() {
-            return Boolean(this.$slots["afterbody"]);
+            return Boolean(this.$slots.afterbody);
         },
     },
     methods: {},

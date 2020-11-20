@@ -15,27 +15,27 @@ import {
   hasIntersectionObserver,
   modeType,
   ImageCache
-} from './util'
+} from "./util"
 
-import ReactiveListener from './listener'
+import ReactiveListener from "./listener"
 
-const DEFAULT_URL = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'
-const DEFAULT_EVENTS = ['scroll', 'wheel', 'mousewheel', 'resize', 'animationend', 'transitionend', 'touchmove']
+const DEFAULT_URL = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+const DEFAULT_EVENTS = ["scroll", "wheel", "mousewheel", "resize", "animationend", "transitionend", "touchmove"]
 const DEFAULT_OBSERVER_OPTIONS = {
-  rootMargin: '0px',
+  rootMargin: "0px",
   threshold: 0
 }
 
 export default function (Vue) {
   return class Lazy {
     constructor ({ preLoad, error, throttleWait, preLoadTop, dispatchEvent, loading, attempt, silent = true, scale, listenEvents, hasbind, filter, adapter, observer, observerOptions }) {
-      this.version = '__VUE_LAZYLOAD_VERSION__'
+      this.version = "__VUE_LAZYLOAD_VERSION__"
       this.mode = modeType.event
       this.ListenerQueue = []
       this.TargetIndex = 0
       this.TargetQueue = []
       this.options = {
-        silent: silent,
+        silent,
         dispatchEvent: !!dispatchEvent,
         throttleWait: throttleWait || 200,
         preLoad: preLoad || 1.3,
@@ -254,7 +254,7 @@ export default function (Vue) {
       let target = find(this.TargetQueue, target => target.el === el)
       if (!target) {
         target = {
-          el: el,
+          el,
           id: ++this.TargetIndex,
           childrenCount: 1,
           listened: true
@@ -292,7 +292,7 @@ export default function (Vue) {
      * @return
      */
     _initListen (el, start) {
-      this.options.ListenEvents.forEach((evt) => _[start ? 'on' : 'off'](el, evt, this.lazyLoadHandler))
+      this.options.ListenEvents.forEach((evt) => _[start ? "on" : "off"](el, evt, this.lazyLoadHandler))
     }
 
     _initEvent () {
@@ -352,6 +352,7 @@ export default function (Vue) {
         item.$destroy()
       })
     }
+
     /**
     * init IntersectionObserver
     * set mode to observer
@@ -397,10 +398,10 @@ export default function (Vue) {
 
       let src
       switch (state) {
-        case 'loading':
+        case "loading":
           src = listener.loading
           break
-        case 'error':
+        case "error":
           src = listener.error
           break
         default:
@@ -409,12 +410,12 @@ export default function (Vue) {
       }
 
       if (bindType) {
-        el.style[bindType] = 'url("' + src + '")'
-      } else if (el.getAttribute('src') !== src) {
-        el.setAttribute('src', src)
+        el.style[bindType] = `url("${  src  }")`
+      } else if (el.getAttribute("src") !== src) {
+        el.setAttribute("src", src)
       }
 
-      el.setAttribute('lazy', state)
+      el.setAttribute("lazy", state)
 
       this.$emit(state, listener, cache)
       this.options.adapter[state] && this.options.adapter[state](listener, this.options)
@@ -439,7 +440,7 @@ export default function (Vue) {
 
       // value is object
       if (isObject(value)) {
-        if (!value.src && !this.options.silent) console.error('Vue Lazyload warning: miss src with ' + value)
+        if (!value.src && !this.options.silent) console.error(`Vue Lazyload warning: miss src with ${  value}`)
         src = value.src
         loading = value.loading || this.options.loading
         error = value.error || this.options.error

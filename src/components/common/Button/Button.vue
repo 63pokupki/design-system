@@ -15,7 +15,7 @@ export default {
             type: Object,
             default: () => ({
                 name: "",
-                pos: "", //left/right
+                pos: "", // left/right
             }),
         },
         block: {
@@ -39,7 +39,7 @@ export default {
         const { type, icon, block, isDisabled, isLoading } = props;
 
         const _type = `spui-Button_${type}`;
-        const _block = block ? `spui-Button_block` : "";
+        const _block = block ? "spui-Button_block" : "";
         const _iconpos = icon.pos ? `spui-Button_icon-${icon.pos}` : "";
 
         const onClick = () => {

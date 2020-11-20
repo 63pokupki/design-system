@@ -24,7 +24,7 @@ export default {
         size: {
             type: String,
             default: "sm",
-            validator: function (value) {
+            validator (value) {
                 return ["sm", "lg"].indexOf(value) != -1;
             },
         },

@@ -57,7 +57,7 @@ export default {
             };
         },
         _isSlotHeadExist() {
-            return Boolean(this.$slots["head"]);
+            return Boolean(this.$slots.head);
         },
     },
     methods: {

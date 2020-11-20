@@ -14,7 +14,7 @@ export default {
         size: {
             type: String,
             default: "md",
-            validator: function (value) {
+            validator (value) {
                 return ["sm", "md"].indexOf(value) != -1;
             },
         },
@@ -22,29 +22,29 @@ export default {
             type: String,
         },
     },
-    render: function (h, { data, props, scopedSlots: slots }) {
+    render (h, { data, props, scopedSlots: slots }) {
         /** Процент заполнения */
         const percent = (props.current / props.target) * 100;
-        /** Параметры передающиеся в scoped slot*/
+        /** Параметры передающиеся в scoped slot */
         const params = {
             current: props.current,
             target: props.target,
-            percent: percent,
+            percent,
         };
-        /** Получаем передаваемые в компонент слоты*/
+        /** Получаем передаваемые в компонент слоты */
         const { complete, inprocess } = slots;
 
-        /** Текст при достижении максимума или больше*/
+        /** Текст при достижении максимума или больше */
         const completeText = complete
             ? complete({ params })
             : `Собрано более ${params.target} руб.`;
 
-        /** Текст при недостижении максимума*/
+        /** Текст при недостижении максимума */
         const inprocessText = inprocess
             ? inprocess({ params })
             : `Собрано ${params.current} из ${params.target} руб.`;
 
-        /**Итоговый текст */
+        /** Итоговый текст */
         const text = percent >= 100 ? completeText : inprocessText;
 
         return (

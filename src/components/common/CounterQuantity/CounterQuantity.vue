@@ -19,11 +19,11 @@ export default {
             default: 999,
         },
     },
-    render: function (h, { data, props, listeners }) {
+    render (h, { data, props, listeners }) {
         const uniqUuid = uuid.generate();
 
         const { value, min, max } = props;
-        /**Установка изначального значения */
+        /** Установка изначального значения */
         const initial = (value) => {
             listeners.input(value);
             event.target.value = value;

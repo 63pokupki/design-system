@@ -1,11 +1,11 @@
-import { inBrowser } from './util'
+import { inBrowser } from "./util"
 
 export default (lazy) => {
   return {
     props: {
       tag: {
         type: String,
-        default: 'div'
+        default: "div"
       }
     },
     render (h) {
@@ -45,7 +45,7 @@ export default (lazy) => {
       load () {
         this.show = true
         this.state.loaded = true
-        this.$emit('show', this)
+        this.$emit("show", this)
       },
       destroy () {
         return this.$destroy

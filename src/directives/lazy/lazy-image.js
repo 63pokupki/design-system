@@ -2,7 +2,7 @@ import {
   inBrowser,
   loadImageAsync,
   noop
-} from './util'
+} from "./util"
 
 export default (lazyManager) => {
   return {
@@ -10,7 +10,7 @@ export default (lazyManager) => {
       src: [String, Object],
       tag: {
         type: String,
-        default: 'img'
+        default: "img"
       }
     },
     render (h) {
@@ -24,9 +24,9 @@ export default (lazyManager) => {
       return {
         el: null,
         options: {
-          src: '',
-          error: '',
-          loading: '',
+          src: "",
+          error: "",
+          loading: "",
           attempt: lazyManager.options.attempt
         },
         state: {
@@ -35,7 +35,7 @@ export default (lazyManager) => {
           attempt: 0
         },
         rect: {},
-        renderSrc: ''
+        renderSrc: ""
       }
     },
     watch: {

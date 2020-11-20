@@ -6,7 +6,7 @@ module.exports = {
         loaderOptions: {
             sass: {
                 additionalData:
-                    '@import "@/styles/utils/_variables.scss";@import "@/styles/utils/_mixins.scss";@import "@/styles/utils/_extends.scss";@import "@/components/index.scss";',
+                    "@import \"@/styles/utils/_variables.scss\";@import \"@/styles/utils/_mixins.scss\";@import \"@/styles/utils/_extends.scss\";@import \"@/components/index.scss\";",
             },
         },
     },

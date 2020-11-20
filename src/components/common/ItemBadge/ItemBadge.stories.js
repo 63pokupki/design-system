@@ -19,19 +19,19 @@ export const accent = () => ({
 
 export const positionLeftTop = () => ({
     components: { ItemBadge },
-    template: `<ItemBadge pos='left-top'>любой текст</ItemBadge>`
+    template: "<ItemBadge pos='left-top'>любой текст</ItemBadge>"
 });
 
 export const positionLeftBottom = () => ({
     components: { ItemBadge },
-    template: `<ItemBadge pos='left-bottom'>любой текст</ItemBadge>`
+    template: "<ItemBadge pos='left-bottom'>любой текст</ItemBadge>"
 });
 
 export const positionRightBottom = () => ({
     components: { ItemBadge },
-    template: `<ItemBadge pos='right-bottom'>любой текст</ItemBadge>`
+    template: "<ItemBadge pos='right-bottom'>любой текст</ItemBadge>"
 });
 export const positionRightTop = () => ({
     components: { ItemBadge },
-    template: `<ItemBadge pos='right-top'>любой текст</ItemBadge>`
+    template: "<ItemBadge pos='right-top'>любой текст</ItemBadge>"
 });

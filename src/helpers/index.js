@@ -1,4 +1,4 @@
-/**Выбирает слово для числа в правильной форме */
+/** Выбирает слово для числа в правильной форме */
 export const pluralize = (number, words) => {
     return words[
         number % 10 == 1 && number % 100 != 11
@@ -15,11 +15,11 @@ export const capitalize = (str) => {
     return str[0].toUpperCase() + str.slice(1);
 };
 
-/**Функция задержки исполнения целевой функции */
+/** Функция задержки исполнения целевой функции */
 export function throttle(func, ms) {
-    let isThrottled = false,
-        savedArgs,
-        savedThis;
+    let isThrottled = false;
+        let savedArgs;
+        let savedThis;
 
     function wrapper() {
         if (isThrottled) {
