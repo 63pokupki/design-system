@@ -26,9 +26,9 @@ export default {
             value, values, text, position,
         } = props;
 
-        const onClick = (value) => {
+        const onClick = (val) => {
             if (listeners.input) {
-                listeners.input(value);
+                listeners.input(val);
             }
         };
 
@@ -37,7 +37,7 @@ export default {
                 style={data.staticStyle}
                 class={["spui-RadioSelectList", data.class, data.staticClass]}
             >
-                {text && position == "left" && (
+                {text && position === "left" && (
                     <span class="spui-RadioSelectList__before">{text}</span>
                 )}
                 <div class="spui-RadioSelectList__values">
@@ -47,14 +47,14 @@ export default {
                                 onClick={() => onClick(val)}
                                 class={[
                                     "spui-RadioSelectList__value",
-                                    { "spui-RadioSelectList__selected": val == value },
+                                    { "spui-RadioSelectList__selected": val === value },
                                 ]}
                             >
                                 {val}
                             </button>
                         ))}
                 </div>
-                {text && position == "right" && (
+                {text && position === "right" && (
                     <span class="spui-RadioSelectList__after">{text}</span>
                 )}
             </div>

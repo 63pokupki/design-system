@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { inBrowser } from "./util";
 
 export default (lazy) => ({

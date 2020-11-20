@@ -128,7 +128,7 @@ export default {
     computed: {
         /** Массив изображений */
         _images() {
-            const images = this.images;
+            const { images } = this;
 
             if (!images) return [];
 
@@ -140,11 +140,11 @@ export default {
         },
         /** Флаг нахождения на последнем изображении */
         _isLastSlide() {
-            return this._currentSlideIndex == this._images.length - 1;
+            return this._currentSlideIndex === this._images.length - 1;
         },
         /** Флаг нахождения на первом изображении */
         _isFirstSlide() {
-            return this._currentSlideIndex == 0;
+            return this._currentSlideIndex === 0;
         },
         /** Индекс текущего слайда */
         _currentSlideIndex: {
@@ -182,7 +182,7 @@ export default {
             this.$emit("click", img);
         },
         getImgSrc(value) {
-            if (!value || !this.fnImgSrc || typeof this.fnImgSrc !== "function") return;
+            if (!value || !this.fnImgSrc || typeof this.fnImgSrc !== "function") return null;
             return this.fnImgSrc(value);
         },
         getImgAlt(value) {

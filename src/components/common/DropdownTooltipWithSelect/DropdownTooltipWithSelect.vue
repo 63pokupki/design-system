@@ -99,7 +99,7 @@ export default {
             this.open = false;
         },
         getLabel(value) {
-            if (!value || !this.label || typeof this.label !== "function") return;
+            if (!value || !this.label || typeof this.label !== "function") return null;
 
             return this.label(value);
         },

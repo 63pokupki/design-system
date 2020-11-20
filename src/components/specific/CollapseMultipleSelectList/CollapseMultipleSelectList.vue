@@ -149,7 +149,7 @@ export default {
         /** Показывать кнопку "Очистить", если хоть один параметр выбран */
         _displayClearButton: {
             get() {
-                if (!this._value || this._value.length == 0) return false;
+                if (!this._value || this._value.length === 0) return false;
                 return true;
             },
         },
@@ -158,7 +158,7 @@ export default {
          * элементов и оно меньше чем полный лист */
         _displayMoreButton: {
             get() {
-                if (this.maxVisibleElements != 0 && this.maxVisibleElements < this.values.length) {
+                if (this.maxVisibleElements !== 0 && this.maxVisibleElements < this.values.length) {
                     return true;
                 }
 
@@ -168,7 +168,7 @@ export default {
         /** Текст - количество выбранных позиций */
         _selectedPositionsNumber: {
             get() {
-                if (!this._value) return;
+                if (!this._value) return null;
                 const selected = this._value.length;
                 const all = this.values.length;
 

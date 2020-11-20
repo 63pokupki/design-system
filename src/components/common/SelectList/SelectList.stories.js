@@ -64,7 +64,7 @@ export const customFnCompare = () => ({
             value: [{ label: 1 }],
             elements,
             label: (value) => value.label,
-            fnCompare: (value, selected) => value.label == selected.label,
+            fnCompare: (value, selected) => value.label === selected.label,
         };
     },
     template: `<div>

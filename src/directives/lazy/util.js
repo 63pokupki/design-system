@@ -1,7 +1,7 @@
+/* eslint-disable */
 import assign from "assign-deep";
 
 const inBrowser = typeof window !== "undefined";
-export const hasIntersectionObserver = checkIntersectionObserver();
 
 function checkIntersectionObserver() {
     if (inBrowser
@@ -22,6 +22,8 @@ function checkIntersectionObserver() {
     }
     return false;
 }
+
+export const hasIntersectionObserver = checkIntersectionObserver();
 
 export const modeType = {
     event: "event",

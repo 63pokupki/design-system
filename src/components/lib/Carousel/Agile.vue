@@ -113,6 +113,7 @@
 </template>
 
 <script>
+/* eslint-disable */
 import handlers from "./mixins/handlers";
 import helpers from "./mixins/helpers";
 import methods from "./mixins/methods";

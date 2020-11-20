@@ -7,7 +7,7 @@ export default {
         type: {
             type: String,
             default: "primary",
-            validator: (value) => ["outlined", "primary"].indexOf(value) != -1,
+            validator: (value) => ["outlined", "primary"].indexOf(value) !== -1,
         },
         icon: {
             type: Object,
@@ -69,9 +69,9 @@ export default {
                     data.staticClass,
                 ]}
             >
-                {icon.name && icon.pos == "left" ? iconElement : null}
+                {icon.name && icon.pos === "left" ? iconElement : null}
                 {slot}
-                {icon.name && icon.pos == "right" ? iconElement : null}
+                {icon.name && icon.pos === "right" ? iconElement : null}
             </button>
         );
     },

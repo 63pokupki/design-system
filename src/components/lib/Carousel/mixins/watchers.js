@@ -53,15 +53,15 @@ const mixin = {
             }
         },
 
-        "settings.autoplay": function () {
+        "settings.autoplay": function autoplay() {
             this.toggleAutoPlay();
         },
 
-        "settings.fade": function () {
+        "settings.fade": function fade() {
             this.toggleFade();
         },
 
-        "settings.unagile": function () {
+        "settings.unagile": function unagile() {
             // this.prepareSlides()
             // this.prepareCarousel()
         },

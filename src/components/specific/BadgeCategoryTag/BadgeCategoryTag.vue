@@ -25,7 +25,7 @@ export default {
             type: String,
             default: "sm",
             validator(value) {
-                return ["sm", "lg"].indexOf(value) != -1;
+                return ["sm", "lg"].indexOf(value) !== -1;
             },
         },
         styleObj: {

@@ -45,7 +45,7 @@ export default {
         };
 
         const onKeyUpSearch = (event) => {
-            if ((event.code == 13 || event.keyCode == 13 || event.key == "Enter") && listeners.onSearch) {
+            if ((event.code === 13 || event.keyCode === 13 || event.key === "Enter") && listeners.onSearch) {
                 listeners.onSearch(value);
             }
         };

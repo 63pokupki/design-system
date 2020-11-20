@@ -1,4 +1,6 @@
 <script>
+/* eslint-disable no-param-reassign */
+/* eslint-disable eqeqeq */
 import uuid from "short-uuid";
 
 export default {

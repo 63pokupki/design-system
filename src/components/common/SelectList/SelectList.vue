@@ -122,8 +122,8 @@ export default {
     },
     methods: {
         fnCompareIsSelected(value, values) {
-            const fnCompare = this.fnCompare;
-            const fnCompareExist = fnCompare && typeof fnCompare == "function";
+            const { fnCompare } = this;
+            const fnCompareExist = fnCompare && typeof fnCompare === "function";
 
             if (this.one) {
                 if (fnCompareExist) {
@@ -139,11 +139,14 @@ export default {
                 const finded = values.find((v) => isEqual(value, v));
                 return !!finded;
             }
+
+            return false;
         },
         getLabel(value) {
             if (value && this.label && typeof this.label === "function") {
                 return this.label(value);
             }
+            return "";
         },
     },
 };
