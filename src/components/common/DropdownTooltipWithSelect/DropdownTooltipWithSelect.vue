@@ -1,24 +1,36 @@
 <template>
-    <span v-click-outside="() => setStateopen(false)" class="spui-DropdownTooltipWithSelect">
-        <span class="spui-DropdownTooltipWithSelect__wrapper" @click="() => setStateopen(!open)">
-            <span class="spui-DropdownTooltipWithSelect__heading">{{ _heading }}:</span>
-            <span v-if="_value" class="spui-DropdownTooltipWithSelect__value">{{
-                getLabel(_value)
-            }}</span>
-            <i class="spui-DropdownTooltipWithSelect__arrow ds-icon icon-rectangle"></i>
-        </span>
-
-        <Tooltip v-if="open" :forced="true">
-            <div
-                @click="() => onSelectValue(val)"
-                class="spui-DropdownTooltipWithSelect__val"
-                v-for="(val, i) in values"
-                :key="i"
-            >
-                {{ getLabel(val) }}
-            </div>
-        </Tooltip>
+  <span
+    v-click-outside="() => setStateopen(false)"
+    class="spui-DropdownTooltipWithSelect"
+  >
+    <span
+      class="spui-DropdownTooltipWithSelect__wrapper"
+      @click="() => setStateopen(!open)"
+    >
+      <span class="spui-DropdownTooltipWithSelect__heading">{{ _heading }}:</span>
+      <span
+        v-if="_value"
+        class="spui-DropdownTooltipWithSelect__value"
+      >{{
+        getLabel(_value)
+      }}</span>
+      <i class="spui-DropdownTooltipWithSelect__arrow ds-icon icon-rectangle" />
     </span>
+
+    <Tooltip
+      v-if="open"
+      :forced="true"
+    >
+      <div
+        v-for="(val, i) in values"
+        :key="i"
+        class="spui-DropdownTooltipWithSelect__val"
+        @click="() => onSelectValue(val)"
+      >
+        {{ getLabel(val) }}
+      </div>
+    </Tooltip>
+  </span>
 </template>
 
 <script>

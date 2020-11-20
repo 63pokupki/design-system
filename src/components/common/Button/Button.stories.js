@@ -4,7 +4,7 @@ import Button from "./Button.vue";
 
 export default {
     title: "Общие/Button",
-    component: Button
+    component: Button,
 };
 
 export const empty = () => ({
@@ -12,9 +12,9 @@ export const empty = () => ({
     methods: {
         onClick() {
             console.log("click");
-        }
+        },
     },
-    template: "<Button></Button>"
+    template: "<Button></Button>",
 });
 
 export const primary = () => ({
@@ -23,8 +23,8 @@ export const primary = () => ({
     methods: {
         onClick() {
             console.log("click");
-        }
-    }
+        },
+    },
 });
 
 export const outlined = () => ({
@@ -32,9 +32,9 @@ export const outlined = () => ({
     methods: {
         onClick() {
             console.log("click");
-        }
+        },
     },
-    template: "<Button type='outlined'>Кнопка outline</Button>"
+    template: "<Button type='outlined'>Кнопка outline</Button>",
 });
 
 export const loading = () => ({
@@ -42,9 +42,9 @@ export const loading = () => ({
     methods: {
         onClick() {
             console.log("click");
-        }
+        },
     },
-    template: "<Button :is-loading='true'>Кнопка в состоянии ожидания</Button>"
+    template: "<Button :is-loading='true'>Кнопка в состоянии ожидания</Button>",
 });
 
 export const disabled = () => ({
@@ -52,9 +52,9 @@ export const disabled = () => ({
     methods: {
         onClick() {
             console.log("click");
-        }
+        },
     },
-    template: "<Button :is-disabled='true'>Кнопка в неактивном состоянии</Button>"
+    template: "<Button :is-disabled='true'>Кнопка в неактивном состоянии</Button>",
 });
 
 export const block = () => ({
@@ -62,9 +62,9 @@ export const block = () => ({
     methods: {
         onClick() {
             console.log("click");
-        }
+        },
     },
-    template: "<Button :block='true'>Кнопка занимает всю доступную ширину</Button>"
+    template: "<Button :block='true'>Кнопка занимает всю доступную ширину</Button>",
 });
 
 export const withIcon = () => ({
@@ -72,7 +72,7 @@ export const withIcon = () => ({
     methods: {
         onClick() {
             console.log("click");
-        }
+        },
     },
-    render: (h) => <Button icon={{name: "icon-cart", pos: "right"}}>Кнопка с иконкой</Button>
+    render: (h) => <Button icon={{ name: "icon-cart", pos: "right" }}>Кнопка с иконкой</Button>,
 });

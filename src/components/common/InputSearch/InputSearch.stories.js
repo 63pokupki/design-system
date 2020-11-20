@@ -16,6 +16,7 @@ export const standart = () => ({
         };
     },
     methods: {
+        /* eslint no-alert: "off" */
         onSearch(value) {
             alert(value);
         },

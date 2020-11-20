@@ -1,19 +1,29 @@
 <template>
-    <aside
-        class="spui-Sidebar"
-        :class="{ 'spui-Sidebar_is-active': open, [`spui-Sidebar_${position}`]: true }"
+  <aside
+    class="spui-Sidebar"
+    :class="{ 'spui-Sidebar_is-active': open, [`spui-Sidebar_${position}`]: true }"
+  >
+    <!-- Содержимое бокового меню -->
+    <div
+      :style="_style"
+      class="spui-Sidebar__body"
     >
-        <!-- Содержимое бокового меню -->
-        <div :style="_style" class="spui-Sidebar__body">
-            <slot></slot>
-        </div>
-        <!-- Затемняющий фон -->
-        <div @click="onClose" class="spui-Sidebar__background"></div>
-        <!-- Кнопка закрытия -->
-        <button aria-label="Закрыть боковое меню" @click="onClose" class="spui-Sidebar__close">
-            <i class="ds-icon icon-closing"></i>
-        </button>
-    </aside>
+      <slot />
+    </div>
+    <!-- Затемняющий фон -->
+    <div
+      class="spui-Sidebar__background"
+      @click="onClose"
+    />
+    <!-- Кнопка закрытия -->
+    <button
+      aria-label="Закрыть боковое меню"
+      class="spui-Sidebar__close"
+      @click="onClose"
+    >
+      <i class="ds-icon icon-closing" />
+    </button>
+  </aside>
 </template>
 
 <script>
@@ -27,7 +37,7 @@ export default {
         position: {
             type: String,
             default: "left",
-            validator (value) {
+            validator(value) {
                 return ["left", "right"].indexOf(value) != -1;
             },
         },
@@ -38,20 +48,20 @@ export default {
             type: String,
         },
     },
-    watch: {
-        open: {
-            handler (value) {
-                value ? this.addDisableScroll() : this.removeDisableScroll();
-            },
-            immediate: true,
-        },
-    },
     computed: {
         _style() {
             return {
                 "min-width": this.minWidth,
                 "max-width": this.maxWidth,
             };
+        },
+    },
+    watch: {
+        open: {
+            handler(value) {
+                value ? this.addDisableScroll() : this.removeDisableScroll();
+            },
+            immediate: true,
         },
     },
     methods: {

@@ -173,12 +173,13 @@ export const withSearchInput = () => ({
         onInputSearchValue(value) {
             this.inputSearchValue = value;
         },
+        /* eslint no-alert: "off" */
         onSearch(value) {
-            alert(`Search: ${  value}`);
+            alert(`Search: ${value}`);
         },
         onSelectAll() {
             this.value = this.values;
-        }
+        },
     },
     template: `<div>
             <CollapseMultipleSelectList

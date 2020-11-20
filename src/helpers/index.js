@@ -1,13 +1,11 @@
 /** Выбирает слово для числа в правильной форме */
-export const pluralize = (number, words) => {
-    return words[
-        number % 10 == 1 && number % 100 != 11
-            ? 0
-            : number % 10 >= 2 && number % 10 <= 4 && (number % 100 < 10 || number % 100 >= 20)
+export const pluralize = (number, words) => words[
+    number % 10 == 1 && number % 100 != 11
+        ? 0
+        : number % 10 >= 2 && number % 10 <= 4 && (number % 100 < 10 || number % 100 >= 20)
             ? 1
             : 2
-    ];
-};
+];
 
 /** Возвращает строку с заглавной буквой */
 export const capitalize = (str) => {
@@ -18,8 +16,8 @@ export const capitalize = (str) => {
 /** Функция задержки исполнения целевой функции */
 export function throttle(func, ms) {
     let isThrottled = false;
-        let savedArgs;
-        let savedThis;
+    let savedArgs;
+    let savedThis;
 
     function wrapper() {
         if (isThrottled) {
@@ -32,7 +30,7 @@ export function throttle(func, ms) {
 
         isThrottled = true;
 
-        setTimeout(function () {
+        setTimeout(() => {
             isThrottled = false;
             if (savedArgs) {
                 wrapper.apply(savedThis, savedArgs);

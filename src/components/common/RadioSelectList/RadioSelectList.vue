@@ -11,7 +11,7 @@ export default {
             required: true,
         },
         text: {
-            type: String
+            type: String,
         },
         position: {
             type: String,
@@ -19,8 +19,12 @@ export default {
             validator: (value) => ["left", "right"].includes(value),
         },
     },
-    render: (h, { data, props, slots, listeners }) => {
-        const { value, values, text, position } = props;
+    render: (h, {
+        data, props, slots, listeners,
+    }) => {
+        const {
+            value, values, text, position,
+        } = props;
 
         const onClick = (value) => {
             listeners.input ? listeners.input(value) : () => {};
@@ -35,8 +39,8 @@ export default {
                     <span class="spui-RadioSelectList__before">{text}</span>
                 )}
                 <div class="spui-RadioSelectList__values">
-                    {values &&
-                        values.map((val) => (
+                    {values
+                        && values.map((val) => (
                             <button
                                 onClick={() => onClick(val)}
                                 class={[

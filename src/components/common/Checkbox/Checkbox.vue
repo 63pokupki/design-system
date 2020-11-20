@@ -1,26 +1,35 @@
 <template>
-    <label
-        :for="uniqid"
-        class="spui-Checkbox"
-        :class="[_position, _checkedClass, _waiting, _disabled, _rounded, _type, _onlyText, _align]"
+  <label
+    :for="uniqid"
+    class="spui-Checkbox"
+    :class="[_position, _checkedClass, _waiting, _disabled, _rounded, _type, _onlyText, _align]"
+  >
+    <input
+      :id="uniqid"
+      v-model="_model"
+      :value="val"
+      class="spui-Checkbox__input"
+      type="checkbox"
     >
-        <input
-            v-model="_model"
-            :value="val"
-            class="spui-Checkbox__input"
-            type="checkbox"
-            :id="uniqid"
-        />
-        <span v-if="position == 'right' && $slots.default" class="spui-Checkbox__text">
-            <slot name="default"></slot>
-        </span>
-        <div class="spui-Checkbox__fake">
-            <i v-if="_checked" class="spui-Checkbox__icon ds-icon icon-check-in-checkbox"></i>
-        </div>
-        <span v-if="position == 'left' && $slots.default" class="spui-Checkbox__text">
-            <slot name="default"></slot>
-        </span>
-    </label>
+    <span
+      v-if="position == 'right' && $slots.default"
+      class="spui-Checkbox__text"
+    >
+      <slot name="default" />
+    </span>
+    <div class="spui-Checkbox__fake">
+      <i
+        v-if="_checked"
+        class="spui-Checkbox__icon ds-icon icon-check-in-checkbox"
+      />
+    </div>
+    <span
+      v-if="position == 'left' && $slots.default"
+      class="spui-Checkbox__text"
+    >
+      <slot name="default" />
+    </span>
+  </label>
 </template>
 
 <script>
@@ -50,7 +59,7 @@ export default {
         type: {
             type: String,
             default: "outline",
-            validator (value) {
+            validator(value) {
                 return ["outline", "primary"].indexOf(value) !== -1;
             },
         },
@@ -61,7 +70,7 @@ export default {
         position: {
             type: String,
             default: "left",
-            validator (value) {
+            validator(value) {
                 return ["left", "right"].indexOf(value) !== -1;
             },
         },
@@ -71,9 +80,6 @@ export default {
             base: "spui-Checkbox",
             uniqid: null,
         };
-    },
-    beforeMount() {
-        this.uniqid = uuid.generate();
     },
     computed: {
         _model: {
@@ -98,9 +104,8 @@ export default {
 
             if (Array.isArray(model)) {
                 return model.indexOf(value) !== -1;
-            } 
-                return model;
-            
+            }
+            return model;
         },
         _checkedClass() {
             return this._checked ? `${this.base}_checked` : null;
@@ -122,6 +127,9 @@ export default {
         _type() {
             return `${this.base}_${this.type}`;
         },
+    },
+    beforeMount() {
+        this.uniqid = uuid.generate();
     },
 };
 </script>

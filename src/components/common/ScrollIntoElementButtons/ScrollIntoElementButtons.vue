@@ -1,20 +1,23 @@
 <template>
-    <div class="spui-ScrollIntoElementButtons" :class="{ 'is-visible': visible }">
-        <button
-            @click="onTargetUpClick"
-            aria-label="Подняться наверх"
-            class="spui-ScrollIntoElementButtons__up spui-ScrollIntoElementButtons__btn"
-        >
-            <i class="ds-icon icon-arrow-up"></i>
-        </button>
-        <button
-            @click="onTargetDownClick"
-            aria-label="Опуститься вниз"
-            class="spui-ScrollIntoElementButtons__down spui-ScrollIntoElementButtons__btn"
-        >
-            <i class="ds-icon icon-arrow-down"></i>
-        </button>
-    </div>
+  <div
+    class="spui-ScrollIntoElementButtons"
+    :class="{ 'is-visible': visible }"
+  >
+    <button
+      aria-label="Подняться наверх"
+      class="spui-ScrollIntoElementButtons__up spui-ScrollIntoElementButtons__btn"
+      @click="onTargetUpClick"
+    >
+      <i class="ds-icon icon-arrow-up" />
+    </button>
+    <button
+      aria-label="Опуститься вниз"
+      class="spui-ScrollIntoElementButtons__down spui-ScrollIntoElementButtons__btn"
+      @click="onTargetDownClick"
+    >
+      <i class="ds-icon icon-arrow-down" />
+    </button>
+  </div>
 </template>
 
 <script>
@@ -38,6 +41,16 @@ export default {
             default: 3000,
         },
     },
+    data() {
+        return {
+            targetUpEl: null,
+            targetDownEl: null,
+            timer: null,
+            handler: null,
+            visible: true,
+        };
+    },
+    computed: {},
     mounted() {
         this.$nextTick(() => {
             const targetUpEl = document.getElementById(this.targetUpId);
@@ -73,15 +86,6 @@ export default {
             document.removeEventListener("scroll", this.handler, { passive: true });
         }
     },
-    data() {
-        return {
-            targetUpEl: null,
-            targetDownEl: null,
-            timer: null,
-            handler: null,
-            visible: true,
-        };
-    },
     methods: {
         onTargetUpClick() {
             if (this.targetUpEl) {
@@ -100,7 +104,6 @@ export default {
             }
         },
     },
-    computed: {},
 };
 </script>
 

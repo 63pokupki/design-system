@@ -14,7 +14,7 @@ export const empty = () => ({
     data() {
         return {
             opened: false,
-        }
+        };
     },
     template: `
     <Collapse v-model="opened"></Collapse>`,
@@ -25,7 +25,7 @@ export const withText = () => ({
     data() {
         return {
             opened: false,
-        }
+        };
     },
     template: `
     <Collapse v-model="opened" heading="Секция с текстом">
@@ -38,7 +38,7 @@ export const withMetaInfo = () => ({
     data() {
         return {
             opened: false,
-        }
+        };
     },
     template: `
     <Collapse metainfo="Текст метаинформации очень и очень длинный по своему размеру" v-model="opened" heading="Секция с мета информацией">
@@ -51,7 +51,7 @@ export const openOnStart = () => ({
     data() {
         return {
             opened: true,
-        }
+        };
     },
     template: `
     <Collapse v-model="opened" heading="Изначально открытая секция">
@@ -64,7 +64,7 @@ export const withLongText = () => ({
     data() {
         return {
             opened: false,
-        }
+        };
     },
     template: `
     <Collapse v-model="opened" heading="Очень и очень длинное название данной секции которое не помещается в экран">

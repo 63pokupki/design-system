@@ -1,58 +1,59 @@
 <template>
     <div class="spui-CollapseMultipleSelectList">
-        <slot v-if="_isSlotBeforeExist" name="before"></slot>
+        <slot v-if="_isSlotBeforeExist" name="before" />
         <Collapse v-model="_open" :heading="heading" :metainfo="_metainfo">
             <template slot="beforebody">
                 <div class="spui-CollapseMultipleSelectList__controls">
                     <span>{{ _selectedPositionsNumber }}</span>
                     <span
-                        ><span @click="onSelectAll" class="spui-CollapseMultipleSelectList__all"
+                        ><span class="spui-CollapseMultipleSelectList__all" @click="onSelectAll"
                             >Выбрать все</span
                         >
                         <span
                             v-show="_displayClearButton"
-                            @click="onClear"
                             class="spui-CollapseMultipleSelectList__clear"
+                            @click="onClear"
                             >Очистить</span
                         ></span
                     >
                 </div>
                 <InputSearch
+                    v-if="displaySearchInput"
+                    v-model="_inputValue"
                     placeholder="Поиск по параметрам"
                     class="spui-CollapseMultipleSelectList__search"
-                    v-model="_inputValue"
-                    v-if="displaySearchInput"
                     @onSearch="onSearch"
-                ></InputSearch>
+                />
             </template>
             <SelectList
-                @click.native="onClick"
                 slot="default"
-                class="spui-CollapseMultipleSelectList__list"
                 v-model="_value"
+                class="spui-CollapseMultipleSelectList__list"
                 :label="label"
                 :values="_visibleElements"
                 :one="false"
-                :fnCompare="fnCompare"
-            ></SelectList>
+                :fn-compare="fnCompare"
+                @click.native="onClick"
+            />
             <template v-show="_displayMoreButton" slot="afterbody">
-                <div @click="onChangeExpand" class="spui-CollapseMultipleSelectList__more">
+                <div class="spui-CollapseMultipleSelectList__more" @click="onChangeExpand">
                     {{ listOpen ? "Свернуть" : "Показать все" }}
                 </div>
             </template>
         </Collapse>
         <Tooltip
             v-show="_tooltip"
-            @click.native="onTooltipClick"
             class="spui-CollapseMultipleSelectList__tooltip"
             :style="{ top: `${yCord}px` }"
             type="accent"
             position="right"
             centered
             forced
-            >Применить</Tooltip
+            @click.native="onTooltipClick"
         >
-        <slot v-if="_isSlotAfterExist" name="after"></slot>
+            Применить
+        </Tooltip>
+        <slot v-if="_isSlotAfterExist" name="after" />
     </div>
 </template>
 
@@ -64,17 +65,12 @@ import Tooltip from "../../common/Tooltip/Tooltip.vue";
 import InputSearch from "../../common/InputSearch/InputSearch.vue";
 
 export default {
-    name: "spui-CollapseMultipleSelectList",
+    name: "SpuiCollapseMultipleSelectList",
     components: {
         Collapse,
         SelectList,
         Tooltip,
         InputSearch,
-    },
-    data() {
-        return {
-            yCord: 0,
-        };
     },
     props: {
         heading: {
@@ -124,6 +120,11 @@ export default {
             default: false,
         },
     },
+    data() {
+        return {
+            yCord: 0,
+        };
+    },
     computed: {
         _inputValue: {
             get() {
@@ -170,21 +171,21 @@ export default {
                 const all = this.values.length;
 
                 switch (selected) {
-                    case 0:
-                        return "Выберите параметр";
-                        break;
+                case 0:
+                    return "Выберите параметр";
+                    break;
 
-                    case all:
-                        return "Выбрано все";
-                        break;
+                case all:
+                    return "Выбрано все";
+                    break;
 
-                    default:
-                        return `${selected} ${pluralize(selected, [
-                            "позиция",
-                            "позиции",
-                            "позиций",
-                        ])}`;
-                        break;
+                default:
+                    return `${selected} ${pluralize(selected, [
+                        "позиция",
+                        "позиции",
+                        "позиций",
+                    ])}`;
+                    break;
                 }
             },
         },
@@ -211,9 +212,7 @@ export default {
         _metainfo: {
             get() {
                 if (this._value && this._value.length) {
-                    const str = this._value.reduce((acc, el) => {
-                        return `${acc + this.label(el)  }, `;
-                    }, "");
+                    const str = this._value.reduce((acc, el) => `${acc + this.label(el)}, `, "");
                     const sliced = str.slice(0, str.length - 2);
                     return sliced;
                 }
@@ -240,7 +239,7 @@ export default {
             this.$emit("tooltipStateChange", true);
         },
         onSelectAll() {
-            this.$emit("onSelectAll")
+            this.$emit("onSelectAll");
             this.yCord = 30;
         },
         onChangeExpand() {

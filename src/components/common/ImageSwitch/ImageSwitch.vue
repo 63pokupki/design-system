@@ -1,68 +1,76 @@
 <template>
-    <div
-        :style="styleContainerObj"
-        class="spui-ImageSwitch"
-        :class="[_displayArrowsOnHoverOnlyС, _centeredС]"
-    >
-        <div class="spui-ImageSwitch__images">
-            <slot v-if="$slots['before-images']" name="before-images"></slot>
-            <Carousel
-                v-cloak
-                v-if="_images"
-                v-model="_currentSlideIndex"
-                :min-swipe-distance="20"
-                :per-page="1"
-                :center-mode="centered"
-                :scroll-per-page="true"
-                :pagination-enabled="false"
-                :loop="false"
-                :touch-drag="true"
-                :mouse-drag="true"
-            >
-                <Slide
-                    :data-index="i"
-                    :data-name="image"
-                    v-for="(image, i) in _images"
-                    @slideclick="onImgClick"
-                    :key="i"
-                >
-                    <img
-                        :alt="getImgAlt(image)"
-                        :style="styleImgObj"
-                        class="spui-ImageSwitch__image"
-                        v-lazy="{ src: getImgSrc(image), loading: loaderImgSrc }"
-                    />
-                </Slide>
-            </Carousel>
-            <slot v-if="$slots['after-images']" name="after-images"></slot>
-        </div>
-
-        <button
-            aria-label="Предыдущее изображение"
-            @click="onPrevBtnClick"
-            v-if="isArrowNavigationOn && !_isFirstSlide"
-            class="spui-ImageSwitch__prev"
+  <div
+    :style="styleContainerObj"
+    class="spui-ImageSwitch"
+    :class="[_displayArrowsOnHoverOnlyС, _centeredС]"
+  >
+    <div class="spui-ImageSwitch__images">
+      <slot
+        v-if="$slots['before-images']"
+        name="before-images"
+      />
+      <Carousel
+        v-cloak
+        v-if="_images"
+        v-model="_currentSlideIndex"
+        :min-swipe-distance="20"
+        :per-page="1"
+        :center-mode="centered"
+        :scroll-per-page="true"
+        :pagination-enabled="false"
+        :loop="false"
+        :touch-drag="true"
+        :mouse-drag="true"
+      >
+        <Slide
+          v-for="(image, i) in _images"
+          :key="i"
+          :data-index="i"
+          :data-name="image"
+          @slideclick="onImgClick"
         >
-            <div class="spui-ImageSwitch__btn-wrapper">
-                <i class="ds-icon icon-arrow-left"></i>
-            </div>
-        </button>
-        <button
-            aria-label="Следующее изображение"
-            @click="onNextBtnClick"
-            v-if="isArrowNavigationOn && !_isLastSlide"
-            class="spui-ImageSwitch__next"
-        >
-            <div class="spui-ImageSwitch__btn-wrapper">
-                <i class="ds-icon icon-arrow-right"></i>
-            </div>
-        </button>
+          <img
+            v-lazy="{ src: getImgSrc(image), loading: loaderImgSrc }"
+            :alt="getImgAlt(image)"
+            :style="styleImgObj"
+            class="spui-ImageSwitch__image"
+          >
+        </Slide>
+      </Carousel>
+      <slot
+        v-if="$slots['after-images']"
+        name="after-images"
+      />
     </div>
+
+    <button
+      v-if="isArrowNavigationOn && !_isFirstSlide"
+      aria-label="Предыдущее изображение"
+      class="spui-ImageSwitch__prev"
+      @click="onPrevBtnClick"
+    >
+      <div class="spui-ImageSwitch__btn-wrapper">
+        <i class="ds-icon icon-arrow-left" />
+      </div>
+    </button>
+    <button
+      v-if="isArrowNavigationOn && !_isLastSlide"
+      aria-label="Следующее изображение"
+      class="spui-ImageSwitch__next"
+      @click="onNextBtnClick"
+    >
+      <div class="spui-ImageSwitch__btn-wrapper">
+        <i class="ds-icon icon-arrow-right" />
+      </div>
+    </button>
+  </div>
 </template>
 
 <script>
 import { Carousel, Slide } from "vue-carousel";
 import { lazyimg } from "@/directives/lazy";
+
+const loaderImgSrc = require("@/directives/lazy/image-loader.svg");
 
 export default {
     name: "ImageSwitch",
@@ -114,33 +122,7 @@ export default {
             default: true,
         },
         loaderImgSrc: {
-            default: () => require("@/directives/lazy/image-loader.svg"),
-        },
-    },
-    methods: {
-        onPrevBtnClick() {
-            if (this._isFirstSlide) {
-                return;
-            }
-            this._currentSlideIndex -= 1;
-        },
-        onNextBtnClick() {
-            if (this._isLastSlide) {
-                return;
-            }
-            this._currentSlideIndex += 1;
-        },
-        onImgClick(img) {
-            this.$emit("click", img);
-        },
-        getImgSrc(value) {
-            if (!value || !this.fnImgSrc || typeof this.fnImgSrc !== "function") return;
-            return this.fnImgSrc(value);
-        },
-        getImgAlt(value) {
-            if (!value || !this.fnImgAlt || typeof this.fnImgAlt !== "function")
-                return "Изображение";
-            return this.fnImgAlt(value);
+            default: loaderImgSrc,
         },
     },
     computed: {
@@ -181,6 +163,31 @@ export default {
         },
         _centeredС() {
             return this.centered ? "spui-ImageSwitch_centered" : null;
+        },
+    },
+    methods: {
+        onPrevBtnClick() {
+            if (this._isFirstSlide) {
+                return;
+            }
+            this._currentSlideIndex -= 1;
+        },
+        onNextBtnClick() {
+            if (this._isLastSlide) {
+                return;
+            }
+            this._currentSlideIndex += 1;
+        },
+        onImgClick(img) {
+            this.$emit("click", img);
+        },
+        getImgSrc(value) {
+            if (!value || !this.fnImgSrc || typeof this.fnImgSrc !== "function") return;
+            return this.fnImgSrc(value);
+        },
+        getImgAlt(value) {
+            if (!value || !this.fnImgAlt || typeof this.fnImgAlt !== "function") return "Изображение";
+            return this.fnImgAlt(value);
         },
     },
 };

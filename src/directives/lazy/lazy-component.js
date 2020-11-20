@@ -1,55 +1,53 @@
-import { inBrowser } from "./util"
+import { inBrowser } from "./util";
 
-export default (lazy) => {
-  return {
+export default (lazy) => ({
     props: {
-      tag: {
-        type: String,
-        default: "div"
-      }
-    },
-    render (h) {
-      if (this.show === false) {
-        return h(this.tag)
-      }
-      return h(this.tag, null, this.$slots.default)
-    },
-    data () {
-      return {
-        el: null,
-        state: {
-          loaded: false
+        tag: {
+            type: String,
+            default: "div",
         },
-        rect: {},
-        show: false
-      }
     },
-    mounted () {
-      this.el = this.$el
-      lazy.addLazyBox(this)
-      lazy.lazyLoadHandler()
+    render(h) {
+        if (this.show === false) {
+            return h(this.tag);
+        }
+        return h(this.tag, null, this.$slots.default);
     },
-    beforeDestroy () {
-      lazy.removeComponent(this)
+    data() {
+        return {
+            el: null,
+            state: {
+                loaded: false,
+            },
+            rect: {},
+            show: false,
+        };
+    },
+    mounted() {
+        this.el = this.$el;
+        lazy.addLazyBox(this);
+        lazy.lazyLoadHandler();
+    },
+    beforeDestroy() {
+        lazy.removeComponent(this);
     },
     methods: {
-      getRect () {
-        this.rect = this.$el.getBoundingClientRect()
-      },
-      checkInView () {
-        this.getRect()
-        return inBrowser &&
-                    (this.rect.top < window.innerHeight * lazy.options.preLoad && this.rect.bottom > 0) &&
-                    (this.rect.left < window.innerWidth * lazy.options.preLoad && this.rect.right > 0)
-      },
-      load () {
-        this.show = true
-        this.state.loaded = true
-        this.$emit("show", this)
-      },
-      destroy () {
-        return this.$destroy
-      }
-    }
-  }
-}
+        getRect() {
+            this.rect = this.$el.getBoundingClientRect();
+        },
+        checkInView() {
+            this.getRect();
+            return inBrowser
+                    && (this.rect.top < window.innerHeight * lazy.options.preLoad && this.rect.bottom > 0)
+                    && (this.rect.left < window.innerWidth * lazy.options.preLoad && this.rect.right > 0);
+        },
+        load() {
+            this.show = true;
+            this.state.loaded = true;
+            this.$emit("show", this);
+        },
+        destroy() {
+            return this.$destroy;
+        },
+    },
+});

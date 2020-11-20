@@ -1,6 +1,8 @@
 <script>
 import uuid from "short-uuid";
 
+const searchImg = require("@/images/important_images/search.svg");
+
 export default {
     name: "InputSearch",
     functional: true,
@@ -26,7 +28,9 @@ export default {
             required: false,
         },
     },
-    render: (h, { data, props, listeners, slots }) => {
+    render: (h, {
+        data, props, listeners, slots,
+    }) => {
         const value = props.value || "";
         const placeholder = props.placeholder || "Поиск";
         const inputStyle = props.inputStyle || {};
@@ -39,8 +43,7 @@ export default {
         };
 
         const onKeyUpSearch = (event) => {
-            if (event.code == 13 || event.keyCode == 13 || event.key == "Enter")
-                listeners.onSearch ? listeners.onSearch(value) : () => {};
+            if (event.code == 13 || event.keyCode == 13 || event.key == "Enter") listeners.onSearch ? listeners.onSearch(value) : () => {};
         };
 
         const onInput = (event) => {
@@ -73,7 +76,7 @@ export default {
                     <img
                         alt="Поиск"
                         class="spui-InputSearch__img"
-                        src={require("@/images/important_images/search.svg")}
+                        src={searchImg}
                     />
                 </button>
             </div>

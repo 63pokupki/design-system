@@ -1,20 +1,44 @@
 <template>
-    <div v-if="open" class="spui-Modal">
-        <div :style="_styleWindow" class="spui-Modal__window">
-            <div class="spui-Modal__head">
-                <div class="spui-Modal__slot-head">
-                    <slot v-if="_isSlotHeadExist" name="head"></slot>
-                </div>
-                <button aria-label="Закрыть модальное окно" @click="onClose" class="spui-Modal__close">
-                    <i class="ds-icon icon-closing"></i>
-                </button>
-            </div>
-            <slot v-if="$slots['before-body']" name="before-body"></slot>
-            <div class="spui-Modal__body"><slot></slot></div>
-            <slot v-if="$slots['after-body']" name="after-body"></slot>
+  <div
+    v-if="open"
+    class="spui-Modal"
+  >
+    <div
+      :style="_styleWindow"
+      class="spui-Modal__window"
+    >
+      <div class="spui-Modal__head">
+        <div class="spui-Modal__slot-head">
+          <slot
+            v-if="_isSlotHeadExist"
+            name="head"
+          />
         </div>
-        <div @click="onClose" class="spui-Modal__bg"></div>
+        <button
+          aria-label="Закрыть модальное окно"
+          class="spui-Modal__close"
+          @click="onClose"
+        >
+          <i class="ds-icon icon-closing" />
+        </button>
+      </div>
+      <slot
+        v-if="$slots['before-body']"
+        name="before-body"
+      />
+      <div class="spui-Modal__body">
+        <slot />
+      </div>
+      <slot
+        v-if="$slots['after-body']"
+        name="after-body"
+      />
     </div>
+    <div
+      class="spui-Modal__bg"
+      @click="onClose"
+    />
+  </div>
 </template>
 
 <script>
@@ -39,7 +63,7 @@ export default {
         },
         minHeight: {
             type: String,
-        }
+        },
     },
     data() {
         return {

@@ -1,6 +1,6 @@
 /** Выполнение действия при клике вне элемента */
 export const clickOutside = {
-    bind (el, binding, vnode) {
+    bind(el, binding, vnode) {
         el.clickOutsideEvent = function (event) {
             const target = event.target;
 
@@ -10,7 +10,7 @@ export const clickOutside = {
         };
         document.addEventListener("click", el.clickOutsideEvent);
     },
-    unbind (el) {
+    unbind(el) {
         document.removeEventListener("click", el.clickOutsideEvent);
     },
 };

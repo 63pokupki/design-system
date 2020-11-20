@@ -51,7 +51,7 @@ export const error = () => ({
             value: { label: 1 },
             elements,
             label: (value) => value.label,
-            isError: true
+            isError: true,
         };
     },
     template: "<SelectList :is-error='isError' :values='elements' :label='label' v-model='value'></SelectList>",

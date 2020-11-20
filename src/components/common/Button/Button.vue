@@ -7,9 +7,7 @@ export default {
         type: {
             type: String,
             default: "primary",
-            validator: (value) => {
-                return ["outlined", "primary"].indexOf(value) != -1;
-            },
+            validator: (value) => ["outlined", "primary"].indexOf(value) != -1,
         },
         icon: {
             type: Object,
@@ -35,8 +33,12 @@ export default {
             default: "Кнопка",
         },
     },
-    render: (h, { data, props, listeners, slots }) => {
-        const { type, icon, block, isDisabled, isLoading } = props;
+    render: (h, {
+        data, props, listeners, slots,
+    }) => {
+        const {
+            type, icon, block, isDisabled, isLoading,
+        } = props;
 
         const _type = `spui-Button_${type}`;
         const _block = block ? "spui-Button_block" : "";

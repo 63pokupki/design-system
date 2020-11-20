@@ -15,12 +15,10 @@ module.exports = {
             .rule("images")
             .use("url-loader")
             .loader("url-loader")
-            .tap((options) => {
-                return {
-                    limit: true,
-                    name: "img/[name].[hash:8].[ext]",
-                };
-            });
+            .tap((options) => ({
+                limit: true,
+                name: "img/[name].[hash:8].[ext]",
+            }));
 
         config.module
             .rule("svg")

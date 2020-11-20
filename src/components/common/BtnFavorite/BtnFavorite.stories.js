@@ -5,29 +5,29 @@ import BtnFavorite from "./BtnFavorite.vue";
 
 export default {
     title: "Общие/BtnFavorite",
-    component: BtnFavorite
+    component: BtnFavorite,
 };
 
 export const normal = () => ({
     components: { BtnFavorite },
     methods: {
-        onClick: action("click")
+        onClick: action("click"),
     },
-    template: "<BtnFavorite @click='onClick'/>"
+    template: "<BtnFavorite @click='onClick'/>",
 });
 
 export const isLoading = () => ({
     components: { BtnFavorite },
     methods: {
-        onClick: action("click")
+        onClick: action("click"),
     },
-    template: "<BtnFavorite @click='onClick' :is-loading='true'/>"
+    template: "<BtnFavorite @click='onClick' :is-loading='true'/>",
 });
 
 export const isActive = () => ({
     components: { BtnFavorite },
     methods: {
-        onClick: action("click")
+        onClick: action("click"),
     },
-    template: "<BtnFavorite @click='onClick' :is-active='true'/>"
+    template: "<BtnFavorite @click='onClick' :is-active='true'/>",
 });

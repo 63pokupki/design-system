@@ -1,20 +1,20 @@
 <template functional>
-    <div
-        v-on="listeners"
-        :style="props.styleObj"
-        class="spui-BadgeCategoryTag"
-        :class="[
-            data.class,
-            data.staticClass,
-            `spui-BadgeCategoryTag_${props.size}`,
-            {
-                'spui-BadgeCategoryTag_active': props.active,
-                'spui-BadgeCategoryTag_block': props.block,
-            },
-        ]"
-    >
-        <slot></slot>
-    </div>
+  <div
+    :style="props.styleObj"
+    class="spui-BadgeCategoryTag"
+    :class="[
+      data.class,
+      data.staticClass,
+      `spui-BadgeCategoryTag_${props.size}`,
+      {
+        'spui-BadgeCategoryTag_active': props.active,
+        'spui-BadgeCategoryTag_block': props.block,
+      },
+    ]"
+    v-on="listeners"
+  >
+    <slot />
+  </div>
 </template>
 
 <script>
@@ -24,7 +24,7 @@ export default {
         size: {
             type: String,
             default: "sm",
-            validator (value) {
+            validator(value) {
                 return ["sm", "lg"].indexOf(value) != -1;
             },
         },

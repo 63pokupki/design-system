@@ -19,12 +19,12 @@ export default {
             default: 999,
         },
     },
-    render (h, { data, props, listeners }) {
+    render(h, { data, props, listeners }) {
         const uniqUuid = uuid.generate();
 
         const { value, min, max } = props;
         /** Установка изначального значения */
-        const initial = (value) => {
+        const initial = (value, event) => {
             listeners.input(value);
             event.target.value = value;
         };
@@ -33,19 +33,19 @@ export default {
             try {
                 const value = Number(event.target.value);
 
-                if (!value || isNaN(value) || value < min) {
-                    initial(min);
+                if (!value || Number.isNaN(value) || value < min) {
+                    initial(min, event);
                     return;
                 }
 
                 if (value > max) {
-                    initial(max);
+                    initial(max, event);
                     return;
                 }
 
                 listeners.input(value);
             } catch (e) {
-                initial(min);
+                initial(min, event);
             }
         };
 

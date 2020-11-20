@@ -1,64 +1,83 @@
 <template>
-    <div v-click-outside="onClickOutside" class="spui-InputSearchWithHints">
-        <div class="spui-InputSearchWithHints__input-wrapper">
-            <label :for="uuid">
-                <input
-                    @keyup.enter="onSearch"
-                    @keyup.up="onFocusIndexUp"
-                    @keyup.down="onFocusIndexDown"
-                    v-model="_model"
-                    class="spui-InputSearchWithHints__input"
-                    type="text"
-                    placeholder="Поиск"
-                    :id="uuid"
-                />
-            </label>
-
-            <button @click="onSearch" aria-label="Поиск" class="spui-InputSearchWithHints__btn">
-                <img alt="Поиск" src="~images/important_images/search.svg" />
-            </button>
-        </div>
-        <!-- блок выпадающей категории поиска -->
-        <div @click="onCategoryClick" class="spui-InputSearchWithHints__category">
-            <!-- добавить .dropdown-fixed-list_expanded для раскрытия меню категорий -->
-            <div class="spui-dropdown-fixed-list" :class="{ 'is-expanded': isCategoryOpen }">
-                <!-- текущее значение -->
-                <span class="spui-dropdown-fixed-list__current">{{
-                    categories[categories.current]
-                }}</span>
-                <!-- лист всех значений -->
-                <ul class="spui-dropdown-fixed-list__list">
-                    <li
-                        @click.stop="() => onCategorySelect(1)"
-                        class="spui-dropdown-fixed-list__list-item"
-                    >
-                        {{ categories[1] }}
-                    </li>
-                    <li
-                        @click.stop="() => onCategorySelect(0)"
-                        class="spui-dropdown-fixed-list__list-item"
-                    >
-                        {{ categories[0] }}
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div
-            v-if="hints && isHintsOpen && categories.current"
-            class="spui-InputSearchWithHints__hints"
+  <div
+    v-click-outside="onClickOutside"
+    class="spui-InputSearchWithHints"
+  >
+    <div class="spui-InputSearchWithHints__input-wrapper">
+      <label :for="uuid">
+        <input
+          :id="uuid"
+          v-model="_model"
+          class="spui-InputSearchWithHints__input"
+          type="text"
+          placeholder="Поиск"
+          @keyup.enter="onSearch"
+          @keyup.up="onFocusIndexUp"
+          @keyup.down="onFocusIndexDown"
         >
-            <div
-                @click="() => onHintClick(hint)"
-                class="spui-InputSearchWithHints__hint"
-                :class="{ focus: focusIndex == i }"
-                v-for="(hint, i) in hints"
-                :key="i"
-            >
-                <span v-html="highlight(hint)" class="spui-InputSearchWithHints__text"></span>
-                <span class="spui-InputSearchWithHints__count">{{ getHintCount(hint) }}</span>
-            </div>
-        </div>
+      </label>
+
+      <button
+        aria-label="Поиск"
+        class="spui-InputSearchWithHints__btn"
+        @click="onSearch"
+      >
+        <img
+          alt="Поиск"
+          src="~images/important_images/search.svg"
+        >
+      </button>
     </div>
+    <!-- блок выпадающей категории поиска -->
+    <div
+      class="spui-InputSearchWithHints__category"
+      @click="onCategoryClick"
+    >
+      <!-- добавить .dropdown-fixed-list_expanded для раскрытия меню категорий -->
+      <div
+        class="spui-dropdown-fixed-list"
+        :class="{ 'is-expanded': isCategoryOpen }"
+      >
+        <!-- текущее значение -->
+        <span class="spui-dropdown-fixed-list__current">{{
+          categories[categories.current]
+        }}</span>
+        <!-- лист всех значений -->
+        <ul class="spui-dropdown-fixed-list__list">
+          <li
+            class="spui-dropdown-fixed-list__list-item"
+            @click.stop="() => onCategorySelect(1)"
+          >
+            {{ categories[1] }}
+          </li>
+          <li
+            class="spui-dropdown-fixed-list__list-item"
+            @click.stop="() => onCategorySelect(0)"
+          >
+            {{ categories[0] }}
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      v-if="hints && isHintsOpen && categories.current"
+      class="spui-InputSearchWithHints__hints"
+    >
+      <div
+        v-for="(hint, i) in hints"
+        :key="i"
+        class="spui-InputSearchWithHints__hint"
+        :class="{ focus: focusIndex == i }"
+        @click="() => onHintClick(hint)"
+      >
+        <span
+          class="spui-InputSearchWithHints__text"
+          v-html="highlight(hint)"
+        />
+        <span class="spui-InputSearchWithHints__count">{{ getHintCount(hint) }}</span>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -67,6 +86,9 @@ import uuid from "short-uuid";
 
 export default {
     name: "InputSearchWithHints",
+    directives: {
+        "click-outside": clickOutside,
+    },
     props: {
         value: {
             type: String,
@@ -100,11 +122,26 @@ export default {
             uuid: null,
         };
     },
+    computed: {
+        focusElement() {
+            return this.hints[this.focusIndex];
+        },
+        _model: {
+            get() {
+                return this.value;
+            },
+            set(value) {
+                this.$emit("input", value);
+                this.emitHintsOpenState(true);
+
+                if (this.categories.current) {
+                    this.$emit("input-by-items");
+                }
+            },
+        },
+    },
     mounted() {
         this.uuid = uuid.generate();
-    },
-    directives: {
-        "click-outside": clickOutside,
     },
     methods: {
         /** Событие смены состояния показа выбора категорий поиска - товары/форум */
@@ -125,7 +162,7 @@ export default {
 
             const hl = raw.replace(
                 search,
-                "<span style='font-weight: bold; color: #36a6f2;'>$&</span>"
+                "<span style='font-weight: bold; color: #36a6f2;'>$&</span>",
             );
 
             return hl;
@@ -134,17 +171,15 @@ export default {
         getHintLabel(hint) {
             if (hint && this.fnHintLabel && typeof this.fnHintLabel === "function") {
                 return this.fnHintLabel(hint);
-            } 
-                return hint.label;
-            
+            }
+            return hint.label;
         },
         /** Функция получающая count для подсказки */
         getHintCount(hint) {
             if (hint && this.fnHintCount && typeof this.fnHintCount === "function") {
                 return this.fnHintCount(hint);
-            } 
-                return hint.count;
-            
+            }
+            return hint.count;
         },
         onHintClick(hint) {
             this.$emit("hint-click", hint);
@@ -173,30 +208,12 @@ export default {
         },
         onFocusIndexDown() {
             if (
-                this.hints.length > 0 &&
-                this.isHintsOpen &&
-                this.focusIndex < this.hints.length - 1
+                this.hints.length > 0
+          && this.isHintsOpen
+          && this.focusIndex < this.hints.length - 1
             ) {
                 this.focusIndex += 1;
             }
-        },
-    },
-    computed: {
-        focusElement() {
-            return this.hints[this.focusIndex];
-        },
-        _model: {
-            get() {
-                return this.value;
-            },
-            set(value) {
-                this.$emit("input", value);
-                this.emitHintsOpenState(true);
-
-                if (this.categories.current) {
-                    this.$emit("input-by-items");
-                }
-            },
         },
     },
 };

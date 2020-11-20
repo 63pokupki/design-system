@@ -14,7 +14,7 @@ export default {
         size: {
             type: String,
             default: "md",
-            validator (value) {
+            validator(value) {
                 return ["sm", "md"].indexOf(value) != -1;
             },
         },
@@ -22,7 +22,7 @@ export default {
             type: String,
         },
     },
-    render (h, { data, props, scopedSlots: slots }) {
+    render(h, { data, props, scopedSlots: slots }) {
         /** Процент заполнения */
         const percent = (props.current / props.target) * 100;
         /** Параметры передающиеся в scoped slot */
@@ -53,7 +53,7 @@ export default {
                 class={[
                     `spui-ProgressBar spui-ProgressBar_${props.size}`,
                     data.class,
-                    data.staticClass
+                    data.staticClass,
                 ]}
             >
                 <div style={`width: ${percent}%;`} class="spui-ProgressBar__progress"></div>

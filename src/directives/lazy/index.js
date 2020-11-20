@@ -5,7 +5,7 @@ const LazyC = Lazy(Vue);
 
 const lazy = new LazyC({
     preLoad: 1,
-    throttleWait: 500
+    throttleWait: 500,
 });
 
 export const lazyimg = {

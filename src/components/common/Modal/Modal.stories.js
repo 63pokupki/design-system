@@ -38,7 +38,7 @@ export const withText = () => ({
 });
 
 export const withSlotHead = () => ({
-    components: { Modal},
+    components: { Modal },
     data() {
         return {
             open: false,

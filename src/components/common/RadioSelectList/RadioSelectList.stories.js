@@ -32,7 +32,7 @@ export const noText = () => ({
     data() {
         return {
             value: 30,
-            values: [30, 60]
+            values: [30, 60],
         };
     },
     methods: {

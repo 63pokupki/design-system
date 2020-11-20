@@ -1,53 +1,59 @@
 <template>
-    <div class="spui-RangePrice">
-        <div class="spui-RangePrice__inputs">
-            <span @click.self="focusOnInput" class="spui-RangePrice__wrapper">
-                <label :for="uuid1">
-                    <input
-                        :style="`width: ${minWidthPx}`"
-                        :value="rangeMin"
-                        @change="onChangeMin"
-                        @input="calcWidth"
-                        @click="($event) => setSelection($event.target)"
-                        class="spui-RangePrice__input"
-                        type="text"
-                        :id="uuid1"
-                    />
-                    ₽
-                </label>
-            </span>
-            <span @click.self="focusOnInput" class="spui-RangePrice__wrapper">
-                <label :for="uuid2">
-                    <input
-                        :style="`width: ${maxWidthPx}`"
-                        :value="rangeMax"
-                        @change="onChangeMax"
-                        @input="calcWidth"
-                        @click="($event) => setSelection($event.target)"
-                        class="spui-RangePrice__input"
-                        type="text"
-                        :id="uuid2"
-                    />
-                    ₽
-                </label>
-            </span>
-        </div>
-        <div class="spui-RangePrice__range">
-            <vue-slider
-                :min="min"
-                :max="max"
-                :dragOnClick="true"
-                v-model="_value"
-                :lazy="lazy"
-                tooltip="none"
-                :dotSize="16"
-                :order="true"
-                :duration="0.3"
-                :enableCross="true"
-                :height="'2px'"
-            ></vue-slider>
-        </div>
+  <div class="spui-RangePrice">
+    <div class="spui-RangePrice__inputs">
+      <span
+        class="spui-RangePrice__wrapper"
+        @click.self="focusOnInput"
+      >
+        <label :for="uuid1">
+          <input
+            :id="uuid1"
+            :style="`width: ${minWidthPx}`"
+            :value="rangeMin"
+            class="spui-RangePrice__input"
+            type="text"
+            @change="onChangeMin"
+            @input="calcWidth"
+            @click="($event) => setSelection($event.target)"
+          >
+          ₽
+        </label>
+      </span>
+      <span
+        class="spui-RangePrice__wrapper"
+        @click.self="focusOnInput"
+      >
+        <label :for="uuid2">
+          <input
+            :id="uuid2"
+            :style="`width: ${maxWidthPx}`"
+            :value="rangeMax"
+            class="spui-RangePrice__input"
+            type="text"
+            @change="onChangeMax"
+            @input="calcWidth"
+            @click="($event) => setSelection($event.target)"
+          >
+          ₽
+        </label>
+      </span>
     </div>
+    <div class="spui-RangePrice__range">
+      <vue-slider
+        v-model="_value"
+        :min="min"
+        :max="max"
+        :drag-on-click="true"
+        :lazy="lazy"
+        tooltip="none"
+        :dot-size="16"
+        :order="true"
+        :duration="0.3"
+        :enable-cross="true"
+        :height="'2px'"
+      />
+    </div>
+  </div>
 </template>
 
 <script>
@@ -56,6 +62,9 @@ import VueSlider from "vue-slider-component";
 
 export default {
     name: "RangePrice",
+    components: {
+        VueSlider,
+    },
     props: {
         min: {
             type: Number,
@@ -74,23 +83,16 @@ export default {
             default: false,
         },
     },
-    components: {
-        VueSlider,
-    },
     data() {
         return {
             uuid1: null,
             uuid2: null,
         };
     },
-    mounted() {
-        this.uuid1 = uuid.generate();
-        this.uuid2 = uuid.generate();
-    },
     computed: {
         _value: {
             get() {
-                return this.value.sort((a, b) => a - b);
+                return [...this.value].sort((a, b) => a - b);
             },
             set(value) {
                 this.$emit("input", value);
@@ -122,21 +124,25 @@ export default {
         },
         minWidthPx() {
             const length = this.rangeMin.toString().split("").length;
-            const width = `${Math.ceil(length * 10)  }px`;
+            const width = `${Math.ceil(length * 10)}px`;
             return width;
         },
         maxWidthPx() {
             const length = this.rangeMax.toString().split("").length;
-            const width = `${Math.ceil(length * 10)  }px`;
+            const width = `${Math.ceil(length * 10)}px`;
             return width;
         },
+    },
+    mounted() {
+        this.uuid1 = uuid.generate();
+        this.uuid2 = uuid.generate();
     },
     methods: {
         calcWidth(e) {
             const el = e.target;
             const value = el.value;
             const length = value.toString().split("").length;
-            const width = `${Math.ceil(length * 10)  }px`;
+            const width = `${Math.ceil(length * 10)}px`;
             el.style.width = width;
         },
         setSelection(el) {

@@ -12,7 +12,7 @@ export const standart = () => ({
     data() {
         return {
             open: false,
-            heading: "Описание товара"
+            heading: "Описание товара",
         };
     },
     template: `

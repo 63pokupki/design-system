@@ -1,99 +1,115 @@
 <template>
+  <div
+    class="agile"
+    :class="{
+      'agile--ssr': isSSR,
+      'agile--auto-play': settings.autoplay,
+      'agile--disabled': settings.unagile,
+      'agile--fade': settings.fade && !settings.unagile,
+      'agile--rtl': settings.rtl,
+      'agile--no-nav-buttons': !settings.navButtons,
+    }"
+    @touchstart="() => {}"
+  >
     <div
-        class="agile"
-        :class="{
-            'agile--ssr': isSSR,
-            'agile--auto-play': settings.autoplay,
-            'agile--disabled': settings.unagile,
-            'agile--fade': settings.fade && !settings.unagile,
-            'agile--rtl': settings.rtl,
-            'agile--no-nav-buttons': !settings.navButtons,
-        }"
-        @touchstart="() => {}"
+      ref="list"
+      class="agile__list"
     >
-        <div ref="list" class="agile__list">
-            <div
-                ref="track"
-                class="agile__track"
-                :style="{
-                    transform: `translate(${translateX + marginX}px)`,
-                    transition: `transform ${settings.timing} ${transitionDelay}ms`,
-                }"
-                @mouseover="handleMouseOver('track')"
-                @mouseout="handleMouseOut('track')"
-            >
-                <div
-                    v-show="slidesCloned"
-                    ref="slidesClonedBefore"
-                    class="agile__slides agile__slides--cloned"
-                >
-                    <slot />
-                </div>
-
-                <div ref="slides" class="agile__slides agile__slides--regular">
-                    <slot />
-                </div>
-
-                <div
-                    v-show="slidesCloned"
-                    ref="slidesClonedAfter"
-                    class="agile__slides agile__slides--cloned"
-                >
-                    <slot />
-                </div>
-            </div>
-        </div>
-
-        <div v-if="$slots.caption" class="agile__caption">
-            <slot name="caption" />
+      <div
+        ref="track"
+        class="agile__track"
+        :style="{
+          transform: `translate(${translateX + marginX}px)`,
+          transition: `transform ${settings.timing} ${transitionDelay}ms`,
+        }"
+        @mouseover="handleMouseOver('track')"
+        @mouseout="handleMouseOut('track')"
+      >
+        <div
+          v-show="slidesCloned"
+          ref="slidesClonedBefore"
+          class="agile__slides agile__slides--cloned"
+        >
+          <slot />
         </div>
 
         <div
-            v-if="!settings.unagile && (settings.navButtons || settings.dots)"
-            class="agile__actions"
+          ref="slides"
+          class="agile__slides agile__slides--regular"
         >
-            <button
-                v-if="settings.navButtons && !settings.unagile"
-                ref="prevButton"
-                class="agile__nav-button agile__nav-button--prev"
-                :disabled="!canGoToPrev"
-                type="button"
-                @click="goToPrev(), restartAutoPlay()"
-            >
-                <slot name="prevButton">
-                    ←
-                </slot>
-            </button>
-
-            <ul v-if="settings.dots && !settings.unagile" ref="dots" class="agile__dots">
-                <li
-                    v-for="n in countSlides"
-                    :key="n"
-                    class="agile__dot"
-                    :class="{ 'agile__dot--current': n - 1 === currentSlide }"
-                    @mouseover="handleMouseOver('dot')"
-                    @mouseout="handleMouseOut('dot')"
-                >
-                    <button type="button" @click="goTo(n - 1), restartAutoPlay()">
-                        {{ n }}
-                    </button>
-                </li>
-            </ul>
-
-            <button
-                v-if="settings.navButtons && !settings.unagile"
-                ref="nextButton"
-                class="agile__nav-button agile__nav-button--next"
-                :disabled="!canGoToNext"
-                type="button"
-                @click="goToNext(), restartAutoPlay()"
-            >
-                <slot name="nextButton">
-                    →
-                </slot>
-            </button>
+          <slot />
         </div>
+
+        <div
+          v-show="slidesCloned"
+          ref="slidesClonedAfter"
+          class="agile__slides agile__slides--cloned"
+        >
+          <slot />
+        </div>
+      </div>
     </div>
+
+    <div
+      v-if="$slots.caption"
+      class="agile__caption"
+    >
+      <slot name="caption" />
+    </div>
+
+    <div
+      v-if="!settings.unagile && (settings.navButtons || settings.dots)"
+      class="agile__actions"
+    >
+      <button
+        v-if="settings.navButtons && !settings.unagile"
+        ref="prevButton"
+        class="agile__nav-button agile__nav-button--prev"
+        :disabled="!canGoToPrev"
+        type="button"
+        @click="goToPrev(), restartAutoPlay()"
+      >
+        <slot name="prevButton">
+          ←
+        </slot>
+      </button>
+
+      <ul
+        v-if="settings.dots && !settings.unagile"
+        ref="dots"
+        class="agile__dots"
+      >
+        <li
+          v-for="n in countSlides"
+          :key="n"
+          class="agile__dot"
+          :class="{ 'agile__dot--current': n - 1 === currentSlide }"
+          @mouseover="handleMouseOver('dot')"
+          @mouseout="handleMouseOut('dot')"
+        >
+          <button
+            type="button"
+            @click="goTo(n - 1), restartAutoPlay()"
+          >
+            {{ n }}
+          </button>
+        </li>
+      </ul>
+
+      <button
+        v-if="settings.navButtons && !settings.unagile"
+        ref="nextButton"
+        class="agile__nav-button agile__nav-button--next"
+        :disabled="!canGoToNext"
+        type="button"
+        @click="goToNext(), restartAutoPlay()"
+      >
+        <slot name="nextButton">
+          →
+        </slot>
+      </button>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -134,38 +150,38 @@ export default {
     },
 
     computed: {
-        breakpoints () {
+        breakpoints() {
             return !this.initialSettings.responsive
                 ? []
                 : this.initialSettings.responsive.map((item) => item.breakpoint);
         },
 
-        canGoToPrev () {
+        canGoToPrev() {
             return this.settings.infinite || this.currentSlide > 0;
         },
 
-        canGoToNext () {
+        canGoToNext() {
             return this.settings.infinite || this.currentSlide < this.countSlides - 1;
         },
 
-        countSlides () {
+        countSlides() {
             return this.isSSR
                 ? this.htmlCollectionToArray(this.$slots.default).length
                 : this.slides.length;
         },
 
-        countSlidesAll () {
+        countSlidesAll() {
             return this.slidesAll.length;
         },
 
-        currentBreakpoint () {
+        currentBreakpoint() {
             let breakpoints = this.breakpoints.map((item) => item).reverse();
             return this.initialSettings.mobileFirst
                 ? breakpoints.find((item) => item < this.widthWindow) || 0
                 : breakpoints.find((item) => item > this.widthWindow) || null;
         },
 
-        marginX () {
+        marginX() {
             if (this.settings.unagile) {
                 return 0;
             }
@@ -174,26 +190,26 @@ export default {
 
             // Center mode margin
             if (this.settings.centerMode) {
-                marginX -=
-                    (Math.floor(this.settings.slidesToShow / 2) -
-                        +(this.settings.slidesToShow % 2 === 0)) *
-                    this.widthSlide;
+                marginX
+            -= (Math.floor(this.settings.slidesToShow / 2)
+              - +(this.settings.slidesToShow % 2 === 0))
+              * this.widthSlide;
             }
 
             return this.settings.rtl ? marginX : -1 * marginX;
         },
 
-        slidesCloned () {
+        slidesCloned() {
             return !this.settings.unagile && !this.settings.fade && this.settings.infinite;
         },
 
-        slidesAll () {
+        slidesAll() {
             return this.slidesCloned
                 ? [...this.slidesClonedBefore, ...this.slides, ...this.slidesClonedAfter]
                 : this.slides;
         },
 
-        widthSlide () {
+        widthSlide() {
             return !this.settings.unagile
                 ? this.widthContainer / this.settings.slidesToShow
                 : "auto";
@@ -255,7 +271,7 @@ export default {
 
         // Go to slide
         goTo(n, transition = true, asNav = false) {
-            // Break goTo() if unagile is active
+        // Break goTo() if unagile is active
             if (this.settings.unagile) {
                 return false;
             }

@@ -1,26 +1,35 @@
 <template>
-    <label
-        :for="uniqid"
-        class="spui-Radio"
-        :class="[_position, _checkedClass, _waiting, _disabled, _rounded, _type, _onlyText, _align]"
+  <label
+    :for="uniqid"
+    class="spui-Radio"
+    :class="[_position, _checkedClass, _waiting, _disabled, _rounded, _type, _onlyText, _align]"
+  >
+    <input
+      :id="uniqid"
+      v-model="_model"
+      :value="val"
+      class="spui-Radio__input"
+      type="radio"
     >
-        <input
-            v-model="_model"
-            :value="val"
-            class="spui-Radio__input"
-            type="radio"
-            :id="uniqid"
-        />
-        <span v-if="position == 'right' && $slots.default" class="spui-Radio__text">
-            <slot name="default"></slot>
-        </span>
-        <div class="spui-Radio__fake">
-            <i v-if="_checked" class="spui-Radio__icon ds-icon icon-check-in-checkbox"></i>
-        </div>
-        <span v-if="position == 'left' && $slots.default" class="spui-Radio__text">
-            <slot name="default"></slot>
-        </span>
-    </label>
+    <span
+      v-if="position == 'right' && $slots.default"
+      class="spui-Radio__text"
+    >
+      <slot name="default" />
+    </span>
+    <div class="spui-Radio__fake">
+      <i
+        v-if="_checked"
+        class="spui-Radio__icon ds-icon icon-check-in-checkbox"
+      />
+    </div>
+    <span
+      v-if="position == 'left' && $slots.default"
+      class="spui-Radio__text"
+    >
+      <slot name="default" />
+    </span>
+  </label>
 </template>
 
 <script>
@@ -32,7 +41,7 @@ export default {
     props: {
         value: {},
         val: {
-            required: true
+            required: true,
         },
         name: {
             type: String,
@@ -53,7 +62,7 @@ export default {
         type: {
             type: String,
             default: "primary",
-            validator (value) {
+            validator(value) {
                 return ["outline", "primary"].indexOf(value) !== -1;
             },
         },
@@ -64,7 +73,7 @@ export default {
         position: {
             type: String,
             default: "left",
-            validator (value) {
+            validator(value) {
                 return ["left", "right"].indexOf(value) !== -1;
             },
         },
@@ -74,9 +83,6 @@ export default {
             base: "spui-Radio",
             uniqid: null,
         };
-    },
-    beforeMount() {
-        this.uniqid = uuid.generate();
     },
     computed: {
         _model: {
@@ -121,6 +127,9 @@ export default {
         _type() {
             return `${this.base}_${this.type}`;
         },
+    },
+    beforeMount() {
+        this.uniqid = uuid.generate();
     },
 };
 </script>

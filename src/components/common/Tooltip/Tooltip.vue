@@ -1,5 +1,5 @@
 <template>
-    <span :class="[base, _type, _position, _centered]"><slot></slot></span>
+  <span :class="[base, _type, _position, _centered]"><slot /></span>
 </template>
 
 <script>
@@ -28,14 +28,6 @@ export default {
             base: "spui-Tooltip",
         };
     },
-    mounted() {
-        this.addTooltipClassToParent();
-        this.$parent.$on("hook:updated", this.addTooltipClassToParent);
-    },
-    beforeDestroy() {
-        this.$parent.$el.classList.remove(this._forced);
-        this.$parent.$off("hook:updated", this.addTooltipClassToParent);
-    },
     computed: {
         _type() {
             return this.type ? `${this.base}_${this.type}` : null;
@@ -50,8 +42,16 @@ export default {
             return this.forced ? "has-tooltip-force" : "has-tooltip";
         },
     },
+    mounted() {
+        this.addTooltipClassToParent();
+        this.$parent.$on("hook:updated", this.addTooltipClassToParent);
+    },
+    beforeDestroy() {
+        this.$parent.$el.classList.remove(this._forced);
+        this.$parent.$off("hook:updated", this.addTooltipClassToParent);
+    },
     methods: {
-        addTooltipClassToParent () {
+        addTooltipClassToParent() {
             this.$parent.$el.classList.add(this._forced);
         },
     },

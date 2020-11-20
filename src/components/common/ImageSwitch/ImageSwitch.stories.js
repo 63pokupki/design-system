@@ -43,7 +43,7 @@ export const exampleItemSlider = () => ({
     methods: {
         onClick() {
             console.log("click");
-        }
+        },
     },
     template: `
     <div>
@@ -119,7 +119,7 @@ export const exampleStockBanner = () => ({
     methods: {
         onClick() {
             console.log("click");
-        }
+        },
     },
     template: `
     <div>
