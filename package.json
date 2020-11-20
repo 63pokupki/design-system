@@ -137,7 +137,7 @@
     "doc": "docs"
   },
   "gitHooks": {
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged && npm run unit"
   },
   "homepage": "https://github.com/63pokupki/design-system",
   "keywords": [
