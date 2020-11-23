@@ -8,7 +8,7 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
     "lint": "vue-cli-service lint --no-fix",
-    "lintwrite": "vue-cli-service lint",
+    "lint:write": "vue-cli-service lint",
     "detect": "node detective.js",
     "dist": "cross-env NODE_ENV=production webpack --config webpack.config.dist.js",
     "libgen": "vue-cli-service build --target lib --name components src/components/index.js --dest libdist",

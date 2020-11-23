@@ -1,7 +1,10 @@
 <template>
     <div class="spui-RangePrice">
         <div class="spui-RangePrice__inputs">
-            <span class="spui-RangePrice__wrapper" @click.self="focusOnInput">
+            <span
+                class="spui-RangePrice__wrapper"
+                @click.self="focusOnInput"
+            >
                 <label :for="uuid1">
                     <input
                         :id="uuid1"
@@ -12,11 +15,14 @@
                         @change="onChangeMin"
                         @input="calcWidth"
                         @click="($event) => setSelection($event.target)"
-                    />
+                    >
                     ₽
                 </label>
             </span>
-            <span class="spui-RangePrice__wrapper" @click.self="focusOnInput">
+            <span
+                class="spui-RangePrice__wrapper"
+                @click.self="focusOnInput"
+            >
                 <label :for="uuid2">
                     <input
                         :id="uuid2"
@@ -27,7 +33,7 @@
                         @change="onChangeMax"
                         @input="calcWidth"
                         @click="($event) => setSelection($event.target)"
-                    />
+                    >
                     ₽
                 </label>
             </span>

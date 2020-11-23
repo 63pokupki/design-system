@@ -5,7 +5,10 @@
         :class="[_displayArrowsOnHoverOnlyС, _centeredС]"
     >
         <div class="spui-ImageSwitch__images">
-            <slot v-if="$slots['before-images']" name="before-images" />
+            <slot
+                v-if="$slots['before-images']"
+                name="before-images"
+            />
             <Carousel
                 v-cloak
                 v-if="_images"
@@ -31,10 +34,13 @@
                         :alt="getImgAlt(image)"
                         :style="styleImgObj"
                         class="spui-ImageSwitch__image"
-                    />
+                    >
                 </Slide>
             </Carousel>
-            <slot v-if="$slots['after-images']" name="after-images" />
+            <slot
+                v-if="$slots['after-images']"
+                name="after-images"
+            />
         </div>
 
         <button
@@ -94,6 +100,7 @@ export default {
         },
         fnImgAlt: {
             type: Function,
+            default: () => "Изображение",
         },
         value: {
             type: Number,
@@ -115,6 +122,7 @@ export default {
             type: Boolean,
             default: true,
         },
+        // eslint-disable-next-line vue/require-prop-types
         loaderImgSrc: {
             default: loaderImgSrc,
         },

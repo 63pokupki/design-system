@@ -1,21 +1,26 @@
 <template>
     <div class="spui-CollapseMultipleSelectList">
-        <slot v-if="_isSlotBeforeExist" name="before" />
-        <Collapse v-model="_open" :heading="heading" :metainfo="_metainfo">
+        <slot
+            v-if="_isSlotBeforeExist"
+            name="before"
+        />
+        <Collapse
+            v-model="_open"
+            :heading="heading"
+            :metainfo="_metainfo"
+        >
             <template slot="beforebody">
                 <div class="spui-CollapseMultipleSelectList__controls">
                     <span>{{ _selectedPositionsNumber }}</span>
-                    <span
-                        ><span class="spui-CollapseMultipleSelectList__all" @click="onSelectAll"
-                            >Выбрать все</span
-                        >
+                    <span><span
+                              class="spui-CollapseMultipleSelectList__all"
+                              @click="onSelectAll"
+                          >Выбрать все</span>
                         <span
                             v-show="_displayClearButton"
                             class="spui-CollapseMultipleSelectList__clear"
                             @click="onClear"
-                            >Очистить</span
-                        ></span
-                    >
+                        >Очистить</span></span>
                 </div>
                 <InputSearch
                     v-if="displaySearchInput"
@@ -35,8 +40,14 @@
                 :fn-compare="fnCompare"
                 @click.native="onClick"
             />
-            <template v-show="_displayMoreButton" slot="afterbody">
-                <div class="spui-CollapseMultipleSelectList__more" @click="onChangeExpand">
+            <template
+                v-show="_displayMoreButton"
+                slot="afterbody"
+            >
+                <div
+                    class="spui-CollapseMultipleSelectList__more"
+                    @click="onChangeExpand"
+                >
                     {{ listOpen ? "Свернуть" : "Показать все" }}
                 </div>
             </template>
@@ -53,7 +64,10 @@
         >
             Применить
         </Tooltip>
-        <slot v-if="_isSlotAfterExist" name="after" />
+        <slot
+            v-if="_isSlotAfterExist"
+            name="after"
+        />
     </div>
 </template>
 
@@ -106,10 +120,12 @@ export default {
             required: true,
         },
         value: {
+            type: [Array],
             required: true,
         },
         fnCompare: {
             type: Function,
+            required: true,
         },
         inputSearchValue: {
             type: String,

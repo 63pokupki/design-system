@@ -14,18 +14,22 @@ export default {
         placeholder: {
             type: String,
             required: false,
+            default: "Поиск",
         },
         inputStyle: {
             type: Object,
             required: false,
+            default: () => {},
         },
         buttonStyle: {
             type: Object,
             required: false,
+            default: () => {},
         },
         size: {
             type: String,
             required: false,
+            default: "sm",
         },
     },
     render: (h, { data, props, listeners }) => {

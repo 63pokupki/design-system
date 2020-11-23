@@ -4,13 +4,23 @@
         :class="{ 'spui-Sidebar_is-active': open, [`spui-Sidebar_${position}`]: true }"
     >
         <!-- Содержимое бокового меню -->
-        <div :style="_style" class="spui-Sidebar__body">
+        <div
+            :style="_style"
+            class="spui-Sidebar__body"
+        >
             <slot />
         </div>
         <!-- Затемняющий фон -->
-        <div class="spui-Sidebar__background" @click="onClose" />
+        <div
+            class="spui-Sidebar__background"
+            @click="onClose"
+        />
         <!-- Кнопка закрытия -->
-        <button aria-label="Закрыть боковое меню" class="spui-Sidebar__close" @click="onClose">
+        <button
+            aria-label="Закрыть боковое меню"
+            class="spui-Sidebar__close"
+            @click="onClose"
+        >
             <i class="ds-icon icon-closing" />
         </button>
     </aside>
@@ -33,9 +43,11 @@ export default {
         },
         minWidth: {
             type: String,
+            default: "280px",
         },
         maxWidth: {
             type: String,
+            default: "calc(100% - 35px)",
         },
     },
     computed: {

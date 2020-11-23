@@ -1,6 +1,12 @@
 <template>
-    <div class="spui-SelectList" :class="{ 'spui-SelectList_error': isError }">
-        <div v-if="one" class="spui-SelectList__one">
+    <div
+        class="spui-SelectList"
+        :class="{ 'spui-SelectList_error': isError }"
+    >
+        <div
+            v-if="one"
+            class="spui-SelectList__one"
+        >
             <label
                 v-for="(element, index) in values"
                 :key="index"
@@ -14,11 +20,14 @@
                     class="spui-SelectList__input"
                     :value="element"
                     type="radio"
-                />
+                >
                 {{ getLabel(element) || "Label не указан" }}
             </label>
         </div>
-        <div v-if="!one" class="spui-SelectList__many">
+        <div
+            v-if="!one"
+            class="spui-SelectList__many"
+        >
             <label
                 v-for="(element, index) in values"
                 :key="index"
@@ -32,7 +41,7 @@
                     class="spui-SelectList__input"
                     :value="element"
                     type="checkbox"
-                />
+                >
                 {{ getLabel(element) || "Label не указан" }}
             </label>
         </div>
@@ -44,7 +53,7 @@
             :position="errorTooltipPosition"
         >
             <slot name="error-msg">
-                Чтобы добавить товар в корзину, <br />
+                Чтобы добавить товар в корзину, <br>
                 выберите необходимый параметр
             </slot>
         </Tooltip>
@@ -78,8 +87,10 @@ export default {
         },
         fnCompare: {
             type: Function,
+            default: isEqual,
         },
         value: {
+            type: [Array, Object, String, Number],
             required: true,
         },
         isError: {

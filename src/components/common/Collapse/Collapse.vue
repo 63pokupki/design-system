@@ -1,21 +1,35 @@
 <template>
-    <div :class="[_isOpenedClass]" class="spui-Collapse">
-        <div class="spui-Collapse__head" @click="_model = !_model">
+    <div
+        :class="[_isOpenedClass]"
+        class="spui-Collapse"
+    >
+        <div
+            class="spui-Collapse__head"
+            @click="_model = !_model"
+        >
             <div class="spui-Collapse__heading">
-                <span>{{ _heading }}</span
-                ><i class="spui-Collapse__arrow ds-icon icon-arrow-down" />
+                <span>{{ _heading }}</span><i class="spui-Collapse__arrow ds-icon icon-arrow-down" />
             </div>
             <div class="spui-Collapse__metainfo">
                 {{ _metainfo }}
             </div>
         </div>
-        <div v-if="_isSlotBeforeBodyExist && _model" class="spui-Collapse__slot-beforebody">
+        <div
+            v-if="_isSlotBeforeBodyExist && _model"
+            class="spui-Collapse__slot-beforebody"
+        >
             <slot name="beforebody" />
         </div>
-        <div v-if="_isSlotDefaultExist && _model" class="spui-Collapse__body">
+        <div
+            v-if="_isSlotDefaultExist && _model"
+            class="spui-Collapse__body"
+        >
             <slot />
         </div>
-        <div v-if="_isSlotAfterBodyExist && _model" class="spui-Collapse__slot-afterbody">
+        <div
+            v-if="_isSlotAfterBodyExist && _model"
+            class="spui-Collapse__slot-afterbody"
+        >
             <slot name="afterbody" />
         </div>
     </div>

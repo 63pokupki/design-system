@@ -1,15 +1,26 @@
 <template>
-    <label :for="uniqid" class="spui-Switcher" :class="[_position, _checked, _disabled, _type]">
-        <input :id="uniqid" v-model="_model" class="spui-Switcher__input" type="checkbox" />
-        <span v-if="$slots.default && position == 'right'" class="spui-Switcher__text"
-            ><slot
-        /></span>
+    <label
+        :for="uniqid"
+        class="spui-Switcher"
+        :class="[_position, _checked, _disabled, _type]"
+    >
+        <input
+            :id="uniqid"
+            v-model="_model"
+            class="spui-Switcher__input"
+            type="checkbox"
+        >
+        <span
+            v-if="$slots.default && position == 'right'"
+            class="spui-Switcher__text"
+        ><slot /></span>
         <span class="spui-Switcher__fake">
             <span class="spui-Switcher__btn" />
         </span>
-        <span v-if="$slots.default && position == 'left'" class="spui-Switcher__text"
-            ><slot
-        /></span>
+        <span
+            v-if="$slots.default && position == 'left'"
+            class="spui-Switcher__text"
+        ><slot /></span>
     </label>
 </template>
 

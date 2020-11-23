@@ -4,6 +4,7 @@ export default {
     functional: true,
     props: {
         value: {
+            type: [String, Number],
             required: true,
         },
         values: {
@@ -12,6 +13,7 @@ export default {
         },
         text: {
             type: String,
+            default: "",
         },
         position: {
             type: String,

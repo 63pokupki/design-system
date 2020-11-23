@@ -1,5 +1,8 @@
 <template>
-    <div class="spui-ScrollIntoElementButtons" :class="{ 'is-visible': visible }">
+    <div
+        class="spui-ScrollIntoElementButtons"
+        :class="{ 'is-visible': visible }"
+    >
         <button
             aria-label="Подняться наверх"
             class="spui-ScrollIntoElementButtons__up spui-ScrollIntoElementButtons__btn"
@@ -21,11 +24,11 @@
 export default {
     name: "ScrollIntoElementButtons",
     props: {
-        "target-up-id": {
+        targetUpId: {
             type: String,
             required: true,
         },
-        "target-down-id": {
+        targetDownId: {
             type: String,
             required: true,
         },
@@ -33,7 +36,7 @@ export default {
             type: Boolean,
             default: true,
         },
-        "fade-time-ms": {
+        fadeTimeMs: {
             type: Number,
             default: 3000,
         },

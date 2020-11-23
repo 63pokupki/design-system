@@ -1,115 +1,115 @@
 <template>
-  <div
-    class="agile"
-    :class="{
-      'agile--ssr': isSSR,
-      'agile--auto-play': settings.autoplay,
-      'agile--disabled': settings.unagile,
-      'agile--fade': settings.fade && !settings.unagile,
-      'agile--rtl': settings.rtl,
-      'agile--no-nav-buttons': !settings.navButtons,
-    }"
-    @touchstart="() => {}"
-  >
     <div
-      ref="list"
-      class="agile__list"
-    >
-      <div
-        ref="track"
-        class="agile__track"
-        :style="{
-          transform: `translate(${translateX + marginX}px)`,
-          transition: `transform ${settings.timing} ${transitionDelay}ms`,
+        class="agile"
+        :class="{
+            'agile--ssr': isSSR,
+            'agile--auto-play': settings.autoplay,
+            'agile--disabled': settings.unagile,
+            'agile--fade': settings.fade && !settings.unagile,
+            'agile--rtl': settings.rtl,
+            'agile--no-nav-buttons': !settings.navButtons,
         }"
-        @mouseover="handleMouseOver('track')"
-        @mouseout="handleMouseOut('track')"
-      >
-        <div
-          v-show="slidesCloned"
-          ref="slidesClonedBefore"
-          class="agile__slides agile__slides--cloned"
-        >
-          <slot />
-        </div>
-
-        <div
-          ref="slides"
-          class="agile__slides agile__slides--regular"
-        >
-          <slot />
-        </div>
-
-        <div
-          v-show="slidesCloned"
-          ref="slidesClonedAfter"
-          class="agile__slides agile__slides--cloned"
-        >
-          <slot />
-        </div>
-      </div>
-    </div>
-
-    <div
-      v-if="$slots.caption"
-      class="agile__caption"
+        @touchstart="() => {}"
     >
-      <slot name="caption" />
-    </div>
-
-    <div
-      v-if="!settings.unagile && (settings.navButtons || settings.dots)"
-      class="agile__actions"
-    >
-      <button
-        v-if="settings.navButtons && !settings.unagile"
-        ref="prevButton"
-        class="agile__nav-button agile__nav-button--prev"
-        :disabled="!canGoToPrev"
-        type="button"
-        @click="goToPrev(), restartAutoPlay()"
-      >
-        <slot name="prevButton">
-          ←
-        </slot>
-      </button>
-
-      <ul
-        v-if="settings.dots && !settings.unagile"
-        ref="dots"
-        class="agile__dots"
-      >
-        <li
-          v-for="n in countSlides"
-          :key="n"
-          class="agile__dot"
-          :class="{ 'agile__dot--current': n - 1 === currentSlide }"
-          @mouseover="handleMouseOver('dot')"
-          @mouseout="handleMouseOut('dot')"
+        <div
+            ref="list"
+            class="agile__list"
         >
-          <button
-            type="button"
-            @click="goTo(n - 1), restartAutoPlay()"
-          >
-            {{ n }}
-          </button>
-        </li>
-      </ul>
+            <div
+                ref="track"
+                class="agile__track"
+                :style="{
+                    transform: `translate(${translateX + marginX}px)`,
+                    transition: `transform ${settings.timing} ${transitionDelay}ms`,
+                }"
+                @mouseover="handleMouseOver('track')"
+                @mouseout="handleMouseOut('track')"
+            >
+                <div
+                    v-show="slidesCloned"
+                    ref="slidesClonedBefore"
+                    class="agile__slides agile__slides--cloned"
+                >
+                    <slot />
+                </div>
 
-      <button
-        v-if="settings.navButtons && !settings.unagile"
-        ref="nextButton"
-        class="agile__nav-button agile__nav-button--next"
-        :disabled="!canGoToNext"
-        type="button"
-        @click="goToNext(), restartAutoPlay()"
-      >
-        <slot name="nextButton">
-          →
-        </slot>
-      </button>
+                <div
+                    ref="slides"
+                    class="agile__slides agile__slides--regular"
+                >
+                    <slot />
+                </div>
+
+                <div
+                    v-show="slidesCloned"
+                    ref="slidesClonedAfter"
+                    class="agile__slides agile__slides--cloned"
+                >
+                    <slot />
+                </div>
+            </div>
+        </div>
+
+        <div
+            v-if="$slots.caption"
+            class="agile__caption"
+        >
+            <slot name="caption" />
+        </div>
+
+        <div
+            v-if="!settings.unagile && (settings.navButtons || settings.dots)"
+            class="agile__actions"
+        >
+            <button
+                v-if="settings.navButtons && !settings.unagile"
+                ref="prevButton"
+                class="agile__nav-button agile__nav-button--prev"
+                :disabled="!canGoToPrev"
+                type="button"
+                @click="goToPrev(), restartAutoPlay()"
+            >
+                <slot name="prevButton">
+                    ←
+                </slot>
+            </button>
+
+            <ul
+                v-if="settings.dots && !settings.unagile"
+                ref="dots"
+                class="agile__dots"
+            >
+                <li
+                    v-for="n in countSlides"
+                    :key="n"
+                    class="agile__dot"
+                    :class="{ 'agile__dot--current': n - 1 === currentSlide }"
+                    @mouseover="handleMouseOver('dot')"
+                    @mouseout="handleMouseOut('dot')"
+                >
+                    <button
+                        type="button"
+                        @click="goTo(n - 1), restartAutoPlay()"
+                    >
+                        {{ n }}
+                    </button>
+                </li>
+            </ul>
+
+            <button
+                v-if="settings.navButtons && !settings.unagile"
+                ref="nextButton"
+                class="agile__nav-button agile__nav-button--next"
+                :disabled="!canGoToNext"
+                type="button"
+                @click="goToNext(), restartAutoPlay()"
+            >
+                <slot name="nextButton">
+                    →
+                </slot>
+            </button>
+        </div>
     </div>
-  </div>
 </template>
 
 <script>

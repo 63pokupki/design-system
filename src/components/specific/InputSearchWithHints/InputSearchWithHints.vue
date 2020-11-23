@@ -1,83 +1,84 @@
 <template>
-  <div
-    v-click-outside="onClickOutside"
-    class="spui-InputSearchWithHints"
-  >
-    <div class="spui-InputSearchWithHints__input-wrapper">
-      <label :for="uuid">
-        <input
-          :id="uuid"
-          v-model="_model"
-          class="spui-InputSearchWithHints__input"
-          type="text"
-          placeholder="Поиск"
-          @keyup.enter="onSearch"
-          @keyup.up="onFocusIndexUp"
-          @keyup.down="onFocusIndexDown"
-        >
-      </label>
+    <div
+        v-click-outside="onClickOutside"
+        class="spui-InputSearchWithHints"
+    >
+        <div class="spui-InputSearchWithHints__input-wrapper">
+            <label :for="uuid">
+                <input
+                    :id="uuid"
+                    v-model="_model"
+                    class="spui-InputSearchWithHints__input"
+                    type="text"
+                    placeholder="Поиск"
+                    @keyup.enter="onSearch"
+                    @keyup.up="onFocusIndexUp"
+                    @keyup.down="onFocusIndexDown"
+                >
+            </label>
 
-      <button
-        aria-label="Поиск"
-        class="spui-InputSearchWithHints__btn"
-        @click="onSearch"
-      >
-        <img
-          alt="Поиск"
-          src="~images/important_images/search.svg"
+            <button
+                aria-label="Поиск"
+                class="spui-InputSearchWithHints__btn"
+                @click="onSearch"
+            >
+                <img
+                    alt="Поиск"
+                    src="~images/important_images/search.svg"
+                >
+            </button>
+        </div>
+        <!-- блок выпадающей категории поиска -->
+        <div
+            class="spui-InputSearchWithHints__category"
+            @click="onCategoryClick"
         >
-      </button>
+            <!-- добавить .dropdown-fixed-list_expanded для раскрытия меню категорий -->
+            <div
+                class="spui-dropdown-fixed-list"
+                :class="{ 'is-expanded': isCategoryOpen }"
+            >
+                <!-- текущее значение -->
+                <span class="spui-dropdown-fixed-list__current">{{
+                    categories[categories.current]
+                }}</span>
+                <!-- лист всех значений -->
+                <ul class="spui-dropdown-fixed-list__list">
+                    <li
+                        class="spui-dropdown-fixed-list__list-item"
+                        @click.stop="() => onCategorySelect(1)"
+                    >
+                        {{ categories[1] }}
+                    </li>
+                    <li
+                        class="spui-dropdown-fixed-list__list-item"
+                        @click.stop="() => onCategorySelect(0)"
+                    >
+                        {{ categories[0] }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div
+            v-if="hints && isHintsOpen && categories.current"
+            class="spui-InputSearchWithHints__hints"
+        >
+            <div
+                v-for="(hint, i) in hints"
+                :key="i"
+                class="spui-InputSearchWithHints__hint"
+                :class="{ focus: focusIndex == i }"
+                @click="() => onHintClick(hint)"
+            >
+                <!-- eslint-disable vue/no-v-html -->
+                <span
+                    class="spui-InputSearchWithHints__text"
+                    v-html="highlight(hint)"
+                />
+                <span class="spui-InputSearchWithHints__count">{{ getHintCount(hint) }}</span>
+            </div>
+        </div>
     </div>
-    <!-- блок выпадающей категории поиска -->
-    <div
-      class="spui-InputSearchWithHints__category"
-      @click="onCategoryClick"
-    >
-      <!-- добавить .dropdown-fixed-list_expanded для раскрытия меню категорий -->
-      <div
-        class="spui-dropdown-fixed-list"
-        :class="{ 'is-expanded': isCategoryOpen }"
-      >
-        <!-- текущее значение -->
-        <span class="spui-dropdown-fixed-list__current">{{
-          categories[categories.current]
-        }}</span>
-        <!-- лист всех значений -->
-        <ul class="spui-dropdown-fixed-list__list">
-          <li
-            class="spui-dropdown-fixed-list__list-item"
-            @click.stop="() => onCategorySelect(1)"
-          >
-            {{ categories[1] }}
-          </li>
-          <li
-            class="spui-dropdown-fixed-list__list-item"
-            @click.stop="() => onCategorySelect(0)"
-          >
-            {{ categories[0] }}
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div
-      v-if="hints && isHintsOpen && categories.current"
-      class="spui-InputSearchWithHints__hints"
-    >
-      <div
-        v-for="(hint, i) in hints"
-        :key="i"
-        class="spui-InputSearchWithHints__hint"
-        :class="{ focus: focusIndex == i }"
-        @click="() => onHintClick(hint)"
-      >
-        <span
-          class="spui-InputSearchWithHints__text"
-          v-html="highlight(hint)"
-        />
-        <span class="spui-InputSearchWithHints__count">{{ getHintCount(hint) }}</span>
-      </div>
-    </div>
-  </div>
 </template>
 
 <script>
@@ -92,6 +93,7 @@ export default {
     props: {
         value: {
             type: String,
+            default: "",
         },
         isHintsOpen: {
             type: Boolean,
@@ -103,12 +105,15 @@ export default {
         },
         hints: {
             type: Array,
+            default: () => [],
         },
         fnHintLabel: {
             type: Function,
+            default: (hint) => hint.label,
         },
         fnHintCount: {
             type: Function,
+            default: (hint) => hint.count,
         },
     },
     data() {
@@ -208,9 +213,9 @@ export default {
         },
         onFocusIndexDown() {
             if (
-                this.hints.length > 0
-          && this.isHintsOpen
-          && this.focusIndex < this.hints.length - 1
+                this.hints.length > 0 &&
+                this.isHintsOpen &&
+                this.focusIndex < this.hints.length - 1
             ) {
                 this.focusIndex += 1;
             }

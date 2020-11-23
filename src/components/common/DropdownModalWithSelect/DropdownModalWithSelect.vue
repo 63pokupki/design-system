@@ -1,6 +1,9 @@
 <template>
     <div class="spui-DropdownModalWithSelect">
-        <div class="spui-DropdownModalWithSelect__wrapper" @click="() => setStateopen(!open)">
+        <div
+            class="spui-DropdownModalWithSelect__wrapper"
+            @click="() => setStateopen(!open)"
+        >
             <span class="spui-DropdownModalWithSelect__heading">{{ _heading }}</span>
             <i class="spui-DropdownModalWithSelect__arrow ds-icon icon-rectangle" />
         </div>
@@ -32,7 +35,10 @@
                         type="primary"
                         :val="val"
                     >
-                        <slot name="radio" :val="val">
+                        <slot
+                            name="radio"
+                            :val="val"
+                        >
                             {{ getLabel(val) }}
                         </slot>
                     </Radio>
@@ -60,6 +66,7 @@ export default {
             default: "Название не передано",
         },
         value: {
+            type: Object,
             required: true,
         },
         label: {

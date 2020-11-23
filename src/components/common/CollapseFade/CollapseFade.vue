@@ -18,12 +18,15 @@ export default {
         },
         headingStyleObject: {
             type: Object,
+            default: () => {},
         },
         bodyStyleObject: {
             type: Object,
+            default: () => {},
         },
         arrowStyleObject: {
             type: Object,
+            default: () => {},
         },
     },
     render(h, { data, props, listeners, slots }) {

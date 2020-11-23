@@ -4,14 +4,29 @@
         class="spui-Radio"
         :class="[_position, _checkedClass, _waiting, _disabled, _rounded, _type, _onlyText, _align]"
     >
-        <input :id="uniqid" v-model="_model" :value="val" class="spui-Radio__input" type="radio" />
-        <span v-if="position == 'right' && $slots.default" class="spui-Radio__text">
+        <input
+            :id="uniqid"
+            v-model="_model"
+            :value="val"
+            class="spui-Radio__input"
+            type="radio"
+        >
+        <span
+            v-if="position == 'right' && $slots.default"
+            class="spui-Radio__text"
+        >
             <slot name="default" />
         </span>
         <div class="spui-Radio__fake">
-            <i v-if="_checked" class="spui-Radio__icon ds-icon icon-check-in-checkbox" />
+            <i
+                v-if="_checked"
+                class="spui-Radio__icon ds-icon icon-check-in-checkbox"
+            />
         </div>
-        <span v-if="position == 'left' && $slots.default" class="spui-Radio__text">
+        <span
+            v-if="position == 'left' && $slots.default"
+            class="spui-Radio__text"
+        >
             <slot name="default" />
         </span>
     </label>
@@ -24,8 +39,12 @@ import isEqual from "lodash-es/isEqual";
 export default {
     name: "Radio",
     props: {
-        value: {},
+        value: {
+            type: [String, Number],
+            required: true,
+        },
         val: {
+            type: [String, Number],
             required: true,
         },
         name: {

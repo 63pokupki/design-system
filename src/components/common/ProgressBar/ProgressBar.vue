@@ -15,11 +15,12 @@ export default {
             type: String,
             default: "md",
             validator(value) {
-                return ["sm", "md"].indexOf(value) !== -1;
+                return ["sm", "md"].includes(value);
             },
         },
         maxWidth: {
             type: String,
+            default: "100%",
         },
     },
     render(h, { data, props, scopedSlots: slots }) {

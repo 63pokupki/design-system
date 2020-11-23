@@ -3,7 +3,7 @@ module.exports = {
     env: {
         node: true,
     },
-    extends: ["plugin:vue/essential", "@vue/airbnb"],
+    extends: ["plugin:vue/recommended", "@vue/airbnb"],
     parserOptions: {
         parser: "babel-eslint",
     },
@@ -19,10 +19,24 @@ module.exports = {
         "no-restricted-syntax": ["error", "WithStatement"],
         "no-plusplus": "off",
         "no-underscore-dangle": "off",
-        "object-curly-newline": ["error", {
-            ExportDeclaration: { multiline: true, minProperties: 5 },
-        }],
+        "object-curly-newline": [
+            "error",
+            {
+                ExportDeclaration: { multiline: true, minProperties: 5 },
+            },
+        ],
         "operator-linebreak": "off",
+        "vue/html-indent": [
+            "error",
+            4,
+            {
+                attribute: 1,
+                baseIndent: 1,
+                closeBracket: 0,
+                alignAttributesVertically: true,
+                ignores: [],
+            },
+        ],
     },
     overrides: [
         {

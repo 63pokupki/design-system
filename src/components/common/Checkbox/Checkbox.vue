@@ -10,14 +10,23 @@
             :value="val"
             class="spui-Checkbox__input"
             type="checkbox"
-        />
-        <span v-if="position == 'right' && $slots.default" class="spui-Checkbox__text">
+        >
+        <span
+            v-if="position == 'right' && $slots.default"
+            class="spui-Checkbox__text"
+        >
             <slot name="default" />
         </span>
         <div class="spui-Checkbox__fake">
-            <i v-if="_checked" class="spui-Checkbox__icon ds-icon icon-check-in-checkbox" />
+            <i
+                v-if="_checked"
+                class="spui-Checkbox__icon ds-icon icon-check-in-checkbox"
+            />
         </div>
-        <span v-if="position == 'left' && $slots.default" class="spui-Checkbox__text">
+        <span
+            v-if="position == 'left' && $slots.default"
+            class="spui-Checkbox__text"
+        >
             <slot name="default" />
         </span>
     </label>
@@ -29,8 +38,14 @@ import uuid from "short-uuid";
 export default {
     name: "Checkbox",
     props: {
-        value: {},
-        val: {},
+        value: {
+            type: [Array, Boolean],
+            default: false,
+        },
+        val: {
+            type: [Array, Object, String, Boolean, Number],
+            default: "Значение не передано",
+        },
         name: {
             type: String,
             default: "",
@@ -51,7 +66,7 @@ export default {
             type: String,
             default: "outline",
             validator(value) {
-                return ["outline", "primary"].indexOf(value) !== -1;
+                return ["outline", "primary"].includes(value);
             },
         },
         rounded: {
@@ -62,7 +77,7 @@ export default {
             type: String,
             default: "left",
             validator(value) {
-                return ["left", "right"].indexOf(value) !== -1;
+                return ["left", "right"].includes(value);
             },
         },
     },
