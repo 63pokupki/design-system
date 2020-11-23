@@ -14,8 +14,4 @@ pages:
 	npm run prettier:write \
 	&& npm run lint:write \
 	&& npm run unit \
-	&& npm run storybook:build \
-	&& npm run build \ 
-	&& mv storybook-static/index.html storybook-static/storybook.html \ 
-	&& rsync -a storybook-static/ build/ \ 
-	&& rm -r storybook-static
+	&& npm run storybook:build && npm run build && mv storybook-static/index.html storybook-static/storybook.html && rsync -a storybook-static/ build/ && rm -r storybook-static
