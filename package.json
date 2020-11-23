@@ -93,7 +93,6 @@
     "sass-loader": "^10.0.1",
     "style-loader": "^1.2.1",
     "stylelint": "^13.8.0",
-    "stylelint-config-recommended-scss": "^4.2.0",
     "stylelint-config-standard": "^20.0.0",
     "svg-sprite-loader": "^5.0.0",
     "svg-url-loader": "^6.0.0",
@@ -154,6 +153,10 @@
     "*.{js,jsx,vue}": [
       "npm run prettier:write",
       "vue-cli-service lint",
+      "git add"
+    ],
+    "*.{css,scss}": [
+      "npm run stylelint",
       "git add"
     ]
   },
