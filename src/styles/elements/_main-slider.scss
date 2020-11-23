@@ -60,11 +60,25 @@
 
         &::-webkit-scrollbar {
             width: 11px;
-            background: linear-gradient(to top, transparent 0, transparent 2px, #36a5f226 2px, #36a5f226 4px, transparent 4px);
+            background: linear-gradient(
+                to top,
+                transparent 0,
+                transparent 2px,
+                #36a5f226 2px,
+                #36a5f226 4px,
+                transparent 4px
+            );
         }
 
         &::-webkit-scrollbar-thumb {
-            background: linear-gradient(to top, transparent 0, transparent 2px, #36a5f2 2px, #36a5f2 4px, transparent 4px);
+            background: linear-gradient(
+                to top,
+                transparent 0,
+                transparent 2px,
+                #36a5f2 2px,
+                #36a5f2 4px,
+                transparent 4px
+            );
         }
 
         &_top {
@@ -383,7 +397,7 @@
             position: absolute;
 
             &::after {
-                content: '';
+                content: "";
                 display: block;
                 position: absolute;
                 left: 0;
@@ -394,7 +408,7 @@
             }
 
             &::before {
-                content: '';
+                content: "";
                 display: block;
                 position: absolute;
                 left: 0;
@@ -493,7 +507,7 @@
             opacity: 0.3;
 
             &::after {
-                content: '';
+                content: "";
                 position: absolute;
                 display: block;
                 height: 2px;
