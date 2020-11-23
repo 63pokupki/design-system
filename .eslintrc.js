@@ -19,6 +19,10 @@ module.exports = {
         "no-restricted-syntax": ["error", "WithStatement"],
         "no-plusplus": "off",
         "no-underscore-dangle": "off",
+        "object-curly-newline": ["error", {
+            ExportDeclaration: { multiline: true, minProperties: 5 },
+        }],
+        "operator-linebreak": "off",
     },
     overrides: [
         {

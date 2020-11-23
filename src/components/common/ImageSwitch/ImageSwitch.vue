@@ -1,69 +1,63 @@
 <template>
-  <div
-    :style="styleContainerObj"
-    class="spui-ImageSwitch"
-    :class="[_displayArrowsOnHoverOnlyС, _centeredС]"
-  >
-    <div class="spui-ImageSwitch__images">
-      <slot
-        v-if="$slots['before-images']"
-        name="before-images"
-      />
-      <Carousel
-        v-cloak
-        v-if="_images"
-        v-model="_currentSlideIndex"
-        :min-swipe-distance="20"
-        :per-page="1"
-        :center-mode="centered"
-        :scroll-per-page="true"
-        :pagination-enabled="false"
-        :loop="false"
-        :touch-drag="true"
-        :mouse-drag="true"
-      >
-        <Slide
-          v-for="(image, i) in _images"
-          :key="i"
-          :data-index="i"
-          :data-name="image"
-          @slideclick="onImgClick"
-        >
-          <img
-            v-lazy="{ src: getImgSrc(image), loading: loaderImgSrc }"
-            :alt="getImgAlt(image)"
-            :style="styleImgObj"
-            class="spui-ImageSwitch__image"
-          >
-        </Slide>
-      </Carousel>
-      <slot
-        v-if="$slots['after-images']"
-        name="after-images"
-      />
-    </div>
+    <div
+        :style="styleContainerObj"
+        class="spui-ImageSwitch"
+        :class="[_displayArrowsOnHoverOnlyС, _centeredС]"
+    >
+        <div class="spui-ImageSwitch__images">
+            <slot v-if="$slots['before-images']" name="before-images" />
+            <Carousel
+                v-cloak
+                v-if="_images"
+                v-model="_currentSlideIndex"
+                :min-swipe-distance="20"
+                :per-page="1"
+                :center-mode="centered"
+                :scroll-per-page="true"
+                :pagination-enabled="false"
+                :loop="false"
+                :touch-drag="true"
+                :mouse-drag="true"
+            >
+                <Slide
+                    v-for="(image, i) in _images"
+                    :key="i"
+                    :data-index="i"
+                    :data-name="image"
+                    @slideclick="onImgClick"
+                >
+                    <img
+                        v-lazy="{ src: getImgSrc(image), loading: loaderImgSrc }"
+                        :alt="getImgAlt(image)"
+                        :style="styleImgObj"
+                        class="spui-ImageSwitch__image"
+                    />
+                </Slide>
+            </Carousel>
+            <slot v-if="$slots['after-images']" name="after-images" />
+        </div>
 
-    <button
-      v-if="isArrowNavigationOn && !_isFirstSlide"
-      aria-label="Предыдущее изображение"
-      class="spui-ImageSwitch__prev"
-      @click="onPrevBtnClick"
-    >
-      <div class="spui-ImageSwitch__btn-wrapper">
-        <i class="ds-icon icon-arrow-left" />
-      </div>
-    </button>
-    <button
-      v-if="isArrowNavigationOn && !_isLastSlide"
-      aria-label="Следующее изображение"
-      class="spui-ImageSwitch__next"
-      @click="onNextBtnClick"
-    >
-      <div class="spui-ImageSwitch__btn-wrapper">
-        <i class="ds-icon icon-arrow-right" />
-      </div>
-    </button>
-  </div>
+        <button
+            v-if="isArrowNavigationOn && !_isFirstSlide"
+            aria-label="Предыдущее изображение"
+            class="spui-ImageSwitch__prev"
+            @click="onPrevBtnClick"
+        >
+            <div class="spui-ImageSwitch__btn-wrapper">
+                <i class="ds-icon icon-arrow-left" />
+            </div>
+        </button>
+        <button
+            v-if="isArrowNavigationOn && !_isLastSlide"
+            aria-label="Следующее изображение"
+            class="spui-ImageSwitch__next"
+            @click="onNextBtnClick"
+        >
+            <div class="spui-ImageSwitch__btn-wrapper">
+                <i class="ds-icon icon-arrow-right" />
+            </div>
+        </button>
+    </div>
 </template>
 
 <script>
@@ -186,7 +180,9 @@ export default {
             return this.fnImgSrc(value);
         },
         getImgAlt(value) {
-            if (!value || !this.fnImgAlt || typeof this.fnImgAlt !== "function") return "Изображение";
+            if (!value || !this.fnImgAlt || typeof this.fnImgAlt !== "function") {
+                return "Изображение";
+            }
             return this.fnImgAlt(value);
         },
     },

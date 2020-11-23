@@ -1,23 +1,20 @@
 <template>
-  <div
-    class="spui-ScrollIntoElementButtons"
-    :class="{ 'is-visible': visible }"
-  >
-    <button
-      aria-label="Подняться наверх"
-      class="spui-ScrollIntoElementButtons__up spui-ScrollIntoElementButtons__btn"
-      @click="onTargetUpClick"
-    >
-      <i class="ds-icon icon-arrow-up" />
-    </button>
-    <button
-      aria-label="Опуститься вниз"
-      class="spui-ScrollIntoElementButtons__down spui-ScrollIntoElementButtons__btn"
-      @click="onTargetDownClick"
-    >
-      <i class="ds-icon icon-arrow-down" />
-    </button>
-  </div>
+    <div class="spui-ScrollIntoElementButtons" :class="{ 'is-visible': visible }">
+        <button
+            aria-label="Подняться наверх"
+            class="spui-ScrollIntoElementButtons__up spui-ScrollIntoElementButtons__btn"
+            @click="onTargetUpClick"
+        >
+            <i class="ds-icon icon-arrow-up" />
+        </button>
+        <button
+            aria-label="Опуститься вниз"
+            class="spui-ScrollIntoElementButtons__down spui-ScrollIntoElementButtons__btn"
+            @click="onTargetDownClick"
+        >
+            <i class="ds-icon icon-arrow-down" />
+        </button>
+    </div>
 </template>
 
 <script>

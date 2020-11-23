@@ -1,51 +1,45 @@
 <template>
-  <div class="spui-DropdownModalWithSelect">
-    <div
-      class="spui-DropdownModalWithSelect__wrapper"
-      @click="() => setStateopen(!open)"
-    >
-      <span class="spui-DropdownModalWithSelect__heading">{{ _heading }}</span>
-      <i class="spui-DropdownModalWithSelect__arrow ds-icon icon-rectangle" />
-    </div>
-    <div
-      v-if="_value"
-      class="spui-DropdownModalWithSelect__value"
-      @click="() => setStateopen(!open)"
-    >
-      {{ getLabel(_value) }}
-    </div>
-
-    <Modal
-      min-width="272px"
-      class="spui-DropdownModalWithSelect__modal"
-      :open="open"
-      @close="open = !open"
-    >
-      <div class="spui-DropdownModalWithSelect__body">
-        <div class="spui-DropdownModalWithSelect__modal-heading">
-          {{ _heading }}
+    <div class="spui-DropdownModalWithSelect">
+        <div class="spui-DropdownModalWithSelect__wrapper" @click="() => setStateopen(!open)">
+            <span class="spui-DropdownModalWithSelect__heading">{{ _heading }}</span>
+            <i class="spui-DropdownModalWithSelect__arrow ds-icon icon-rectangle" />
+        </div>
+        <div
+            v-if="_value"
+            class="spui-DropdownModalWithSelect__value"
+            @click="() => setStateopen(!open)"
+        >
+            {{ getLabel(_value) }}
         </div>
 
-        <div class="spui-DropdownModalWithSelect__radios">
-          <Radio
-            v-for="(val, i) in values"
-            :key="i"
-            v-model="_value"
-            class="spui-DropdownModalWithSelect__radio"
-            type="primary"
-            :val="val"
-          >
-            <slot
-              name="radio"
-              :val="val"
-            >
-              {{ getLabel(val) }}
-            </slot>
-          </Radio>
-        </div>
-      </div>
-    </Modal>
-  </div>
+        <Modal
+            min-width="272px"
+            class="spui-DropdownModalWithSelect__modal"
+            :open="open"
+            @close="open = !open"
+        >
+            <div class="spui-DropdownModalWithSelect__body">
+                <div class="spui-DropdownModalWithSelect__modal-heading">
+                    {{ _heading }}
+                </div>
+
+                <div class="spui-DropdownModalWithSelect__radios">
+                    <Radio
+                        v-for="(val, i) in values"
+                        :key="i"
+                        v-model="_value"
+                        class="spui-DropdownModalWithSelect__radio"
+                        type="primary"
+                        :val="val"
+                    >
+                        <slot name="radio" :val="val">
+                            {{ getLabel(val) }}
+                        </slot>
+                    </Radio>
+                </div>
+            </div>
+        </Modal>
+    </div>
 </template>
 
 <script>

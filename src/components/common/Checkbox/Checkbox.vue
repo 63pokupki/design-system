@@ -1,35 +1,26 @@
 <template>
-  <label
-    :for="uniqid"
-    class="spui-Checkbox"
-    :class="[_position, _checkedClass, _waiting, _disabled, _rounded, _type, _onlyText, _align]"
-  >
-    <input
-      :id="uniqid"
-      v-model="_model"
-      :value="val"
-      class="spui-Checkbox__input"
-      type="checkbox"
+    <label
+        :for="uniqid"
+        class="spui-Checkbox"
+        :class="[_position, _checkedClass, _waiting, _disabled, _rounded, _type, _onlyText, _align]"
     >
-    <span
-      v-if="position == 'right' && $slots.default"
-      class="spui-Checkbox__text"
-    >
-      <slot name="default" />
-    </span>
-    <div class="spui-Checkbox__fake">
-      <i
-        v-if="_checked"
-        class="spui-Checkbox__icon ds-icon icon-check-in-checkbox"
-      />
-    </div>
-    <span
-      v-if="position == 'left' && $slots.default"
-      class="spui-Checkbox__text"
-    >
-      <slot name="default" />
-    </span>
-  </label>
+        <input
+            :id="uniqid"
+            v-model="_model"
+            :value="val"
+            class="spui-Checkbox__input"
+            type="checkbox"
+        />
+        <span v-if="position == 'right' && $slots.default" class="spui-Checkbox__text">
+            <slot name="default" />
+        </span>
+        <div class="spui-Checkbox__fake">
+            <i v-if="_checked" class="spui-Checkbox__icon ds-icon icon-check-in-checkbox" />
+        </div>
+        <span v-if="position == 'left' && $slots.default" class="spui-Checkbox__text">
+            <slot name="default" />
+        </span>
+    </label>
 </template>
 
 <script>
@@ -114,9 +105,7 @@ export default {
             return this.alignCenter ? `${this.base}_align-center` : null;
         },
         _waiting() {
-            return !this._checked && !this.disabled
-                ? `${this.base}_waiting`
-                : null;
+            return !this._checked && !this.disabled ? `${this.base}_waiting` : null;
         },
         _disabled() {
             return this.disabled ? `${this.base}_disabled` : null;

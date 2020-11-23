@@ -1,44 +1,26 @@
 <template>
-  <div
-    v-if="open"
-    class="spui-Modal"
-  >
-    <div
-      :style="_styleWindow"
-      class="spui-Modal__window"
-    >
-      <div class="spui-Modal__head">
-        <div class="spui-Modal__slot-head">
-          <slot
-            v-if="_isSlotHeadExist"
-            name="head"
-          />
+    <div v-if="open" class="spui-Modal">
+        <div :style="_styleWindow" class="spui-Modal__window">
+            <div class="spui-Modal__head">
+                <div class="spui-Modal__slot-head">
+                    <slot v-if="_isSlotHeadExist" name="head" />
+                </div>
+                <button
+                    aria-label="Закрыть модальное окно"
+                    class="spui-Modal__close"
+                    @click="onClose"
+                >
+                    <i class="ds-icon icon-closing" />
+                </button>
+            </div>
+            <slot v-if="$slots['before-body']" name="before-body" />
+            <div class="spui-Modal__body">
+                <slot />
+            </div>
+            <slot v-if="$slots['after-body']" name="after-body" />
         </div>
-        <button
-          aria-label="Закрыть модальное окно"
-          class="spui-Modal__close"
-          @click="onClose"
-        >
-          <i class="ds-icon icon-closing" />
-        </button>
-      </div>
-      <slot
-        v-if="$slots['before-body']"
-        name="before-body"
-      />
-      <div class="spui-Modal__body">
-        <slot />
-      </div>
-      <slot
-        v-if="$slots['after-body']"
-        name="after-body"
-      />
+        <div class="spui-Modal__bg" @click="onClose" />
     </div>
-    <div
-      class="spui-Modal__bg"
-      @click="onClose"
-    />
-  </div>
 </template>
 
 <script>

@@ -1,64 +1,54 @@
 <template>
-  <div
-    class="spui-SelectList"
-    :class="{ 'spui-SelectList_error': isError }"
-  >
-    <div
-      v-if="one"
-      class="spui-SelectList__one"
-    >
-      <label
-        v-for="(element, index) in values"
-        :key="index"
-        class="spui-SelectList__label"
-        :class="{ 'is-selected': fnCompareIsSelected(element, selected) }"
-        :for="index + uuid"
-      >
-        <input
-          :id="index + uuid"
-          v-model="selected"
-          class="spui-SelectList__input"
-          :value="element"
-          type="radio"
+    <div class="spui-SelectList" :class="{ 'spui-SelectList_error': isError }">
+        <div v-if="one" class="spui-SelectList__one">
+            <label
+                v-for="(element, index) in values"
+                :key="index"
+                class="spui-SelectList__label"
+                :class="{ 'is-selected': fnCompareIsSelected(element, selected) }"
+                :for="index + uuid"
+            >
+                <input
+                    :id="index + uuid"
+                    v-model="selected"
+                    class="spui-SelectList__input"
+                    :value="element"
+                    type="radio"
+                />
+                {{ getLabel(element) || "Label не указан" }}
+            </label>
+        </div>
+        <div v-if="!one" class="spui-SelectList__many">
+            <label
+                v-for="(element, index) in values"
+                :key="index"
+                class="spui-SelectList__label"
+                :class="{ 'is-selected': fnCompareIsSelected(element, selected) }"
+                :for="index + uuid"
+            >
+                <input
+                    :id="index + uuid"
+                    v-model="selected"
+                    class="spui-SelectList__input"
+                    :value="element"
+                    type="checkbox"
+                />
+                {{ getLabel(element) || "Label не указан" }}
+            </label>
+        </div>
+        <Tooltip
+            v-if="isError"
+            class="spui-SelectList__tooltip"
+            type="error"
+            forced
+            :position="errorTooltipPosition"
         >
-        {{ getLabel(element) || "Label не указан" }}
-      </label>
+            <slot name="error-msg">
+                Чтобы добавить товар в корзину, <br />
+                выберите необходимый параметр
+            </slot>
+        </Tooltip>
     </div>
-    <div
-      v-if="!one"
-      class="spui-SelectList__many"
-    >
-      <label
-        v-for="(element, index) in values"
-        :key="index"
-        class="spui-SelectList__label"
-        :class="{ 'is-selected': fnCompareIsSelected(element, selected) }"
-        :for="index + uuid"
-      >
-        <input
-          :id="index + uuid"
-          v-model="selected"
-          class="spui-SelectList__input"
-          :value="element"
-          type="checkbox"
-        >
-        {{ getLabel(element) || "Label не указан" }}
-      </label>
-    </div>
-    <Tooltip
-      v-if="isError"
-      class="spui-SelectList__tooltip"
-      type="error"
-      forced
-      :position="errorTooltipPosition"
-    >
-      <slot
-        name="error-msg"
-      >
-        Чтобы добавить товар в корзину, <br> выберите необходимый параметр
-      </slot>
-    </Tooltip>
-  </div>
 </template>
 
 <script>

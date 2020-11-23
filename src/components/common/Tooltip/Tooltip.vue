@@ -1,5 +1,5 @@
 <template>
-  <span :class="[base, _type, _position, _centered]"><slot /></span>
+    <span :class="[base, _type, _position, _centered]"><slot /></span>
 </template>
 
 <script>

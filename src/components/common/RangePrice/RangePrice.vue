@@ -1,59 +1,53 @@
 <template>
-  <div class="spui-RangePrice">
-    <div class="spui-RangePrice__inputs">
-      <span
-        class="spui-RangePrice__wrapper"
-        @click.self="focusOnInput"
-      >
-        <label :for="uuid1">
-          <input
-            :id="uuid1"
-            :style="`width: ${minWidthPx}`"
-            :value="rangeMin"
-            class="spui-RangePrice__input"
-            type="text"
-            @change="onChangeMin"
-            @input="calcWidth"
-            @click="($event) => setSelection($event.target)"
-          >
-          ₽
-        </label>
-      </span>
-      <span
-        class="spui-RangePrice__wrapper"
-        @click.self="focusOnInput"
-      >
-        <label :for="uuid2">
-          <input
-            :id="uuid2"
-            :style="`width: ${maxWidthPx}`"
-            :value="rangeMax"
-            class="spui-RangePrice__input"
-            type="text"
-            @change="onChangeMax"
-            @input="calcWidth"
-            @click="($event) => setSelection($event.target)"
-          >
-          ₽
-        </label>
-      </span>
+    <div class="spui-RangePrice">
+        <div class="spui-RangePrice__inputs">
+            <span class="spui-RangePrice__wrapper" @click.self="focusOnInput">
+                <label :for="uuid1">
+                    <input
+                        :id="uuid1"
+                        :style="`width: ${minWidthPx}`"
+                        :value="rangeMin"
+                        class="spui-RangePrice__input"
+                        type="text"
+                        @change="onChangeMin"
+                        @input="calcWidth"
+                        @click="($event) => setSelection($event.target)"
+                    />
+                    ₽
+                </label>
+            </span>
+            <span class="spui-RangePrice__wrapper" @click.self="focusOnInput">
+                <label :for="uuid2">
+                    <input
+                        :id="uuid2"
+                        :style="`width: ${maxWidthPx}`"
+                        :value="rangeMax"
+                        class="spui-RangePrice__input"
+                        type="text"
+                        @change="onChangeMax"
+                        @input="calcWidth"
+                        @click="($event) => setSelection($event.target)"
+                    />
+                    ₽
+                </label>
+            </span>
+        </div>
+        <div class="spui-RangePrice__range">
+            <vue-slider
+                v-model="_value"
+                :min="min"
+                :max="max"
+                :drag-on-click="true"
+                :lazy="lazy"
+                tooltip="none"
+                :dot-size="16"
+                :order="true"
+                :duration="0.3"
+                :enable-cross="true"
+                :height="'2px'"
+            />
+        </div>
     </div>
-    <div class="spui-RangePrice__range">
-      <vue-slider
-        v-model="_value"
-        :min="min"
-        :max="max"
-        :drag-on-click="true"
-        :lazy="lazy"
-        tooltip="none"
-        :dot-size="16"
-        :order="true"
-        :duration="0.3"
-        :enable-cross="true"
-        :height="'2px'"
-      />
-    </div>
-  </div>
 </template>
 
 <script>

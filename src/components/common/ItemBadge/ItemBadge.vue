@@ -20,17 +20,7 @@ export default {
         const slot = slots().default;
 
         return (
-            <span
-                class={[
-                    "ItemBadge",
-                    _color,
-                    _pos,
-                    data.class,
-                    data.staticClass,
-                ]}
-            >
-                {slot}
-            </span>
+            <span class={["ItemBadge", _color, _pos, data.class, data.staticClass]}>{slot}</span>
         );
     },
 };

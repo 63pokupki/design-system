@@ -28,9 +28,7 @@ export default {
             required: false,
         },
     },
-    render: (h, {
-        data, props, listeners,
-    }) => {
+    render: (h, { data, props, listeners }) => {
         const value = props.value || "";
         const placeholder = props.placeholder || "Поиск";
         const inputStyle = props.inputStyle || {};
@@ -45,7 +43,10 @@ export default {
         };
 
         const onKeyUpSearch = (event) => {
-            if ((event.code === 13 || event.keyCode === 13 || event.key === "Enter") && listeners.onSearch) {
+            if (
+                (event.code === 13 || event.keyCode === 13 || event.key === "Enter") &&
+                listeners.onSearch
+            ) {
                 listeners.onSearch(value);
             }
         };
@@ -78,12 +79,13 @@ export default {
                         id={uniqUuid}
                     />
                 </label>
-                <button aria-label="Поиск" style={buttonStyle} onClick={onSearch} class="spui-InputSearch__btn">
-                    <img
-                        alt="Поиск"
-                        class="spui-InputSearch__img"
-                        src={searchImg}
-                    />
+                <button
+                    aria-label="Поиск"
+                    style={buttonStyle}
+                    onClick={onSearch}
+                    class="spui-InputSearch__btn"
+                >
+                    <img alt="Поиск" class="spui-InputSearch__img" src={searchImg} />
                 </button>
             </div>
         );
