@@ -149,6 +149,7 @@
   "license": "BSD-3-Clause",
   "lint-staged": {
     "*.{js,jsx,vue}": [
+      "npm run prettier:write",
       "vue-cli-service lint",
       "git add"
     ]
