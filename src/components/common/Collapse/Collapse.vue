@@ -83,7 +83,7 @@ export default {
                 return capitalize(this.metainfo);
             }
 
-            return null;
+            return "";
         },
         _isSlotDefaultExist() {
             return Boolean(this.$slots.default);

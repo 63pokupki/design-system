@@ -54,6 +54,9 @@ export const exampleSize = () => ({
         tooltipStateChangeHandler(e) {
             this.showTooltip = e;
         },
+        onSelectAll() {
+            this.value = this.values;
+        },
     },
     template: `<div>
             <CollapseMultipleSelectList
@@ -68,6 +71,7 @@ export const exampleSize = () => ({
                 @changeListOpen="changeExpandHandler"
                 @tooltipStateChange="tooltipStateChangeHandler"
                 @tooltipClick="tooltipClickHandler"
+                @onSelectAll="onSelectAll"
             />
     </div>`,
 });
@@ -111,6 +115,9 @@ export const exampleColor = () => ({
         tooltipStateChangeHandler(e) {
             this.showTooltip = e;
         },
+        onSelectAll() {
+            this.value = this.values;
+        },
     },
     template: `<div>
             <CollapseMultipleSelectList
@@ -125,6 +132,7 @@ export const exampleColor = () => ({
                 @collapse="collapseHandler"
                 @changeListOpen="changeExpandHandler"
                 @tooltipClick="tooltipClickHandler"
+                @onSelectAll="onSelectAll"
             />
     </div>`,
 });

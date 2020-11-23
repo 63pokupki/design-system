@@ -40,11 +40,11 @@ export default {
     name: "Radio",
     props: {
         value: {
-            type: [String, Number],
+            type: [String, Number, Object],
             required: true,
         },
         val: {
-            type: [String, Number],
+            type: [String, Number, Object],
             required: true,
         },
         name: {

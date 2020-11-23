@@ -123,9 +123,9 @@ export default {
             type: [Array],
             required: true,
         },
+        // eslint-disable-next-line vue/require-default-prop
         fnCompare: {
             type: Function,
-            required: true,
         },
         inputSearchValue: {
             type: String,
@@ -232,7 +232,7 @@ export default {
                     return sliced;
                 }
 
-                return false;
+                return "";
             },
         },
         /** Количество видимых элементов в секции */
@@ -271,7 +271,6 @@ export default {
         onClick(e) {
             const t = e.target;
             if (t.classList.contains("spui-SelectList__label")) {
-                console.log(t.offsetTop, t.offsetHeight);
                 this.yCord = t.offsetTop - 5;
             }
         },
