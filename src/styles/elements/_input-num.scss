@@ -4,7 +4,7 @@
     align-items: center;
 
     &__minus {
-        &:before {
+        &::before {
             content: "";
             position: absolute;
             width: 6px;
@@ -14,7 +14,7 @@
     }
 
     &__plus {
-        &:before {
+        &::before {
             content: "";
             width: 8px;
             height: 2px;
@@ -22,7 +22,7 @@
             background-color: white;
         }
 
-        &:after {
+        &::after {
             content: "";
             width: 2px;
             height: 8px;
@@ -48,6 +48,7 @@
 
         &:active {
             @include deep-click(0.925);
+
             background: $color-primary;
         }
     }
@@ -59,7 +60,7 @@
         text-align: center;
         width: 30px;
         font-size: 16px;
-        color: #000000;
+        color: #000;
         border-bottom: 1px solid $color-primary;
     }
 }

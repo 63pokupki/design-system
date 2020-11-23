@@ -16,9 +16,11 @@
                 width: 32.18%;
                 flex-shrink: 0;
             }
+
             &:nth-child(2) {
                 width: 35.246842%;
             }
+
             &:nth-child(3) {
                 width: 32.6062%;
             }
@@ -35,14 +37,15 @@
         z-index: 5;
         bottom: -12px;
         left: 50%;
-        transform: translate(-50%,100%);
+        transform: translate(-50%, 100%);
         display: none;
         min-width: 190px;
         padding: 19px 27px;
-        box-shadow: 0px 0px 16px rgba(105, 153, 247, 0.2);
+        box-shadow: 0 0 16px rgba(105, 153, 247, 0.2);
 
         .link {
             color: $dark-grey-color;
+
             &:hover {
                 color: $color-primary;
             }
@@ -56,7 +59,7 @@
             margin-bottom: 0;
         }
 
-        &:after {
+        &::after {
             content: "";
             position: absolute;
             top: 2px;
@@ -66,7 +69,7 @@
             height: 0;
             border-style: solid;
             border-width: 0 10px 10px 10px;
-            border-color: transparent transparent #ffffff transparent;
+            border-color: transparent transparent #fff transparent;
         }
 
         &.is-active {
@@ -110,6 +113,7 @@
             &:nth-child(1) {
                 margin-right: 27px;
             }
+
             &:nth-child(2) {
                 margin-right: 44px;
             }
@@ -134,9 +138,9 @@
 
     &__icon {
         margin-right: 15px;
-        text-decoration: none;
         position: relative;
         text-decoration: none;
+
         &:hover {
             text-decoration: none;
         }
@@ -170,7 +174,8 @@
 
     .caption-icon:hover .icon-heart-filled {
         display: block;
-        &:before {
+
+        &::before {
             color: #ff4e4e;
         }
     }

@@ -29,6 +29,7 @@
         i {
             color: white;
             font-size: 16px;
+
             &:hover {
                 color: white;
             }
@@ -59,7 +60,7 @@
     &_fading-right {
         position: relative;
 
-        &:after {
+        &::after {
             content: "";
             display: block;
             position: absolute;
@@ -74,7 +75,7 @@
     &_fading-left {
         position: relative;
 
-        &:before {
+        &::before {
             content: "";
             display: block;
             position: absolute;
@@ -87,5 +88,4 @@
             z-index: 10;
         }
     }
-
 }

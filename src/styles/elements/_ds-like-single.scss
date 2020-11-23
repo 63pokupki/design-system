@@ -4,27 +4,30 @@
     align-items: center;
     font-size: 10px;
     line-height: 12px;
-	color: #979797;
+    color: #979797;
+
     &-text {
         width: 68px;
         margin-left: 10px;
     }
+
     &-icon {
         cursor: pointer;
     }
+
     &.is-active {
         .like-icon path {
             fill: $color-primary;
         }
     }
+
     &:hover {
         .like-icon path {
             fill: $color-primary;
         }
     }
+
     &:visited {
         fill: $color-primary;
     }
 }
-
-

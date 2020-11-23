@@ -3,10 +3,11 @@
 .ds-breadcrumb {
     margin: 10px 0;
     background-color: transparent;
+
     @media (max-width: 767px) {
         display: none;
     }
-    
+
     &__list {
         padding-left: unset;
         display: flex;
@@ -23,13 +24,14 @@
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-        
+
         &_active {
             color: #1e2023;
+
             a {
                 color: inherit;
             }
-        }        
+        }
     }
 }
 
@@ -42,7 +44,7 @@
     }
 }
 
-.ds-breadcrumb__item + .ds-breadcrumb__item:before {
+.ds-breadcrumb__item + .ds-breadcrumb__item::before {
     display: inline-block;
     padding-right: 4px;
     color: #858585;

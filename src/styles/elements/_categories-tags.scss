@@ -32,7 +32,7 @@
         overflow: hidden;
         position: relative;
 
-        &:before {
+        &::before {
             position: absolute;
             content: "";
             width: 100%;
@@ -44,7 +44,7 @@
             transition: opacity $transition-primary;
         }
 
-        &:hover:before {
+        &:hover::before {
             opacity: 0.15;
             z-index: 1;
             transition: opacity $transition-primary;

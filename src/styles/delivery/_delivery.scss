@@ -10,19 +10,16 @@
         width: 100%;
         height: 1px;
         background: $color-inactive;
-        opacity: .5;
+        opacity: 0.5;
         // border: 1px;
-
     }
 
     .vertical-margin {
         display: block;
         min-height: 19px;
     }
+
     .delivery {
-
-
-
         &__content-wrap {
             display: flex;
             width: 100%;
@@ -38,7 +35,7 @@
             text-decoration: none;
             border-bottom: 1px dashed $color-primary;
 
-            &:before {
+            &::before {
                 content: "";
                 position: absolute;
                 top: 4px;
@@ -55,7 +52,7 @@
             display: block;
             width: 100%;
             padding: 5px;
-            background: #ffffff;
+            background: #fff;
         }
 
         &__sidebar {
@@ -68,20 +65,21 @@
         &__breadcrumbs {
             display: flex;
             align-items: center;
-            background: #ffffff;
+            background: #fff;
             padding: 30px 30px 15px 30px;
+
             .breadcrumb__item {
                 .link {
                     font-weight: 400;
                     color: $light-gray-color;
                 }
-                &_active .link{
+
+                &_active .link {
                     color: $dark-brown-color;
                     text-decoration: none;
                 }
             }
         }
-
 
         //Вертикальное меню слева
         &__vertical-menu {
@@ -90,6 +88,7 @@
 
             &-item {
                 margin-bottom: 20px;
+
                 &.is-active {
                     color: $color-primary;
                     font-weight: 600;
@@ -97,7 +96,7 @@
                     .link_text {
                         position: relative;
 
-                        &:before {
+                        &::before {
                             content: "";
                             position: absolute;
                             bottom: -3px;
@@ -144,10 +143,9 @@
             color: $color-text-base;
         }
 
-
         //Текст
         &__txt {
-            margin: 0px 0;
+            margin: 0 0;
             padding: 0;
             font-size: 14px;
             line-height: 1.5em;
@@ -160,12 +158,12 @@
             &-pvz-popover {
                 display: inline-flex;
                 align-items: center;
+
                 .icon-info {
                     margin-left: 10px;
                     font-size: 17px;
                     color: $color-primary;
                 }
-
             }
 
             //
@@ -190,7 +188,6 @@
                 font-weight: 600;
                 text-transform: uppercase;
                 color: $important-color;
-
             }
         }
 
@@ -220,6 +217,7 @@
         &__card-search {
             max-width: 284px;
             margin: 20px 0;
+
             .search__bar {
                 color: $color-text-base;
             }
@@ -235,6 +233,7 @@
                 flex-direction: column;
                 justify-content: flex-start;
                 flex-wrap: wrap;
+
                 &-right {
                     min-width: 60%;
                 }
@@ -300,7 +299,6 @@
         &__block-important {
             display: flex;
             flex-direction: column;
-
         }
 
         // Если нет ПВЗ
@@ -343,12 +341,14 @@
                 font-size: 18px;
                 font-weight: 600;
             }
+
             .ds-btn__text {
                 font-size: 14px;
                 font-weight: 600;
             }
         }
     }
+
     @media (max-width: 1024px) {
         .delivery__breadcrumbs {
             margin-top: 60px;
@@ -362,39 +362,38 @@
             display: block;
         }
     }
+
     @media (max-width: 769px) {
         .delivery__desktop {
             display: none;
         }
     }
+
     @media (min-width: 769px) {
         .delivery__mobile {
             display: none;
         }
     }
+
     @media (max-width: 769px) {
         .delivery__mobile {
             display: block;
         }
     }
-
-
 }
-
-
 
 //Вертикальное меню слева
 .delivery__vertical-menu {
-    
     .link_text {
         font-size: 14px;
         color: $color-text-base;
+
         &.is-active {
             position: relative;
             font-weight: 600;
             color: $color-primary;
 
-            &:before {
+            &::before {
                 content: "";
                 position: absolute;
                 bottom: -3px;
@@ -404,16 +403,10 @@
                 width: calc(100% + 8px);
                 background: $color-primary;
             }
-
         }
+
         &:hover {
             color: $color-primary;
         }
-        
     }
-
 }
-
-
-
-

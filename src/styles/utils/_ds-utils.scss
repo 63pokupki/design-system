@@ -1,5 +1,5 @@
 /* Внутренние стили дизайн системы - они не должны включаться в конечную сборку! */
-$color-primary: #36A6F2;
+$color-primary: #36a6f2;
 
 body {
     background: #eef2f4;
@@ -36,7 +36,7 @@ body {
     align-items: center;
     z-index: 1000;
 
-    &:after {
+    &::after {
         content: "";
         width: 30px;
         height: 30px;
@@ -76,7 +76,7 @@ body {
 .ds-i {
     position: relative;
 
-    &:before {
+    &::before {
         content: "Интерактивный элемент";
         display: block;
         position: absolute;
@@ -89,7 +89,7 @@ body {
         font-weight: 600;
         font-style: normal;
         min-width: 120px;
-        box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
         bottom: 50%;
         right: -15px;
         left: auto;
@@ -97,7 +97,7 @@ body {
         text-align: center;
     }
 
-    &:after {
+    &::after {
         content: "";
         display: block;
         background: #ffe869;
@@ -170,6 +170,7 @@ pre[class*="language-"] {
     background: #171717 !important;
     border-radius: 10px !important;
     max-height: 500px !important;
+
     &::-webkit-scrollbar {
         width: 5px;
         height: 5px;

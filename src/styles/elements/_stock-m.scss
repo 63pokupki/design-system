@@ -90,7 +90,7 @@
                 color: $color-text-base;
                 font-weight: 600;
 
-                &:after {
+                &::after {
                     display: none;
                 }
 
@@ -105,7 +105,7 @@
                 display: inline;
                 position: relative;
 
-                &:after {
+                &::after {
                     content: "";
                     position: absolute;
                     display: flex;
@@ -128,7 +128,6 @@
         .checkbox__label {
             margin: 0 0 0 10px;
         }
-
     }
 }
 
@@ -145,9 +144,7 @@
                 margin-bottom: 10px;
                 margin-top: 10px;
             }
-
         }
-
     }
 
     .stock-card-vertical-wrapper:hover .stock-card-vertical {
@@ -193,12 +190,12 @@
             min-height: 23px;
 
             &__label {
-                &:before {
+                &::before {
                     width: 23px;
                     height: 22px;
                 }
 
-                &:after {
+                &::after {
                     left: 1px;
                     top: 6px;
                     width: 13px;
@@ -248,7 +245,6 @@
             }
 
             .collapse-section {
-
                 &__heading {
                     font-size: 14px;
                 }
@@ -317,7 +313,6 @@
                     height: auto;
                     margin-bottom: 0;
                 }
-
             }
 
             &__price-wrapper {

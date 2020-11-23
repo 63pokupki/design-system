@@ -6,6 +6,7 @@
     @media (max-width: 992px) {
         max-width: 748px;
     }
+
     @media (max-width: 767px) {
         width: 100%;
         max-width: 90vw;
@@ -27,19 +28,19 @@
         font-size: 12px;
         color: $color-text-base;
         margin: 20px 0 30px 0;
+
         &-footnote {
             max-width: 349px;
             margin: 13px 0 0 0;
             padding: 0;
             font-size: 11px;
             line-height: 15px;
-
         }
-    } 
+    }
 
     .ds-inputs-form__txt-info {
         font-weight: normal;
-    } 
+    }
 
     .ds-inputs-form__txt-error {
         font-weight: normal;
@@ -49,11 +50,12 @@
         .auth-form__form-sign-up {
             display: flex;
         }
+
         .auth-form__form-sign-in {
             display: none;
-        }    
+        }
     }
-    
+
     &__tab-container {
         display: flex;
         justify-content: center;
@@ -72,7 +74,8 @@
         color: #1d1e1f;
     }
     // лейблы-табы
-    &__right-tab, &__left-tab {
+    &__right-tab,
+    &__left-tab {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -83,7 +86,7 @@
         border-radius: 10px;
         // background: #ffffff;
         font-size: 15px;
-        user-select: none;        
+        user-select: none;
         cursor: pointer;
         color: #1d1e1f;
 
@@ -96,22 +99,23 @@
             font-size: 13px;
             max-width: none;
         }
-
     }
+
     &__right-tab {
         &.is-active {
-            background: #ffffff;
+            background: #fff;
             position: relative;
-            border-bottom-left-radius: 0px;
-            border-bottom-right-radius: 0px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
             font-weight: 600;
             color: $click-load-color;
-            box-shadow: 0px 0px 15px rgba(49, 140, 202, 0.2);
-            &:before {
+            box-shadow: 0 0 15px rgba(49, 140, 202, 0.2);
+
+            &::before {
                 content: "";
                 position: absolute;
                 top: 39px;
-                left: calc(50%-124px);
+                left: calc(50% - 124px);
                 display: flex;
                 width: 11px;
                 height: 11px;
@@ -119,81 +123,80 @@
                 transform: rotateY(180deg);
             }
 
-            &:after {
+            &::after {
                 content: "";
                 position: absolute;
                 top: 39px;
-                right: calc(50%-124px);
+                right: calc(50% - 124px);
                 display: flex;
                 width: 11px;
                 height: 11px;
                 background: url("~images/important_images/auth-form/rectangle-tab-aith.svg");
-
             }
+
             @media (max-width: 767px) {
-                &:before {
+                &::before {
                     left: calc(50% - 86px);
                 }
             }
         }
-    
     }
+
     &__left-tab {
         &.is-active {
-            background: #ffffff;
+            background: #fff;
             position: relative;
-            border-bottom-left-radius: 0px;
-            border-bottom-right-radius: 0px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
             font-weight: 600;
             color: $click-load-color;
-            box-shadow: 0px 0px 15px rgba(49, 140, 202, 0.2);
-            &:before {
+            box-shadow: 0 0 15px rgba(49, 140, 202, 0.2);
+
+            &::before {
                 display: none;
             }
-            &:after {
+
+            &::after {
                 content: "";
                 position: absolute;
                 top: 39px;
-                right: calc(50%-124px); 
+                right: calc(50% - 124px);
                 display: flex;
                 width: 11px;
                 height: 11px;
                 background: url("~images/important_images/auth-form/rectangle-tab-aith.svg");
             }
+
             @media (max-width: 767px) {
-                &:after {
+                &::after {
                     right: calc(0% - 9px);
                 }
             }
+
             @media (min-width: 768px) and (max-width: 991) {
-                &:after {
-                    right: calc(50%-115px); 
+                &::after {
+                    right: calc(50% - 115px);
                 }
-
             }
-
         }
-
     }
-    // 
 
     &__form-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         min-height: 20px;
-        background: #ffffff;
+        background: #fff;
         border-radius: 10px;
         position: relative;
-        box-shadow: 0px 7px 15px rgba(49, 140, 202, 0.2);
-
+        box-shadow: 0 7px 15px rgba(49, 140, 202, 0.2);
     }
 
     // Форма
     &__form {
         display: flex;
         width: 100%;
-        background: #ffffff;
+        background: #fff;
         position: relative;
         padding: 20px 0;
         border-radius: 10px;
@@ -203,39 +206,46 @@
             @media (min-width: 768px) {
                 min-width: 455px;
             }
+
             &.is-error {
                 >.ds-inputs-form {
-                    background: #FFF1F1;
+                    background: #fff1f1;
                     border-color: $color-input-border-error;
+
                     >input {
-                        background: #FFF1F1;
+                        background: #fff1f1;
                     }
-                    &:before {
+
+                    &::before {
                         color: $color-input-border-error;
                     }
                 }
+
                 .auth-form__error-message {
                     visibility: visible;
                 }
+
                 .ds-inputs-form__label {
-                    &:before {
-                        color: $color-input-border-error!important;
+                    &::before {
+                        color: $color-input-border-error !important;
                     }
                 }
+
                 input {
                     background: $color-input-bg-error;
                     border-color: $color-input-border-error;
                 }
-        
             }
-        .ds-inputs-form__txt-error-login {
-            display: none;
-        }
+
+            .ds-inputs-form__txt-error-login {
+                display: none;
+            }
         }
         // Форма регистрации
         &-sign-up {
             // display: none;
             flex-direction: column;
+
             &.is-enter-code {
                 .auth-form__phone-container,
                 .auth-form__login-pass-container,
@@ -244,38 +254,46 @@
                 .auth-form__btn-container {
                     display: none;
                 }
+
                 .auth-form__enter-code {
                     display: flex;
+
                     .auth-form__heading,
                     .auth-form__btn-container {
                         display: flex;
                     }
                 }
             }
+
             .ds-inputs-form__txt-error-password-repeat {
                 @media (max-width: 767px) {
                     white-space: nowrap;
                 }
             }
+
             .auth-form__login-pass-container,
             .auth-form__phone-container {
-                @media (min-width:993px) {
+                @media (min-width: 993px) {
                     .ds-inputs-form__input {
                         min-width: 350px;
                     }
                 }
             }
+
             @media (max-width: 767px) {
                 .auth-form__heading {
                     margin: 0;
                     font-size: 18px;
                 }
+
                 .auth-form__txt {
                     margin: 20px 0 0;
                 }
+
                 .auth-form__content-container {
                     padding: 5px 15px 28px;
                 }
+
                 .ds-inputs-component {
                     min-height: 85px;
                 }
@@ -288,18 +306,21 @@
             max-width: 455px;
             flex-direction: column;
             justify-content: flex-start;
+
             @media (max-width: 767px) {
                 max-width: none;
+
                 .auth-form__content-container {
                     padding: 0 13px;
                 }
             }
         }
-    
+
         // Поле логина
         .input-login {
             margin-bottom: 10px;
         }
+
         .input-password {
             margin-top: 13px;
         }
@@ -312,7 +333,7 @@
         max-width: 245px;
         margin: 0 auto 20px;
         text-align: center;
-        color: #000000;
+        color: #000;
     }
 
     &__checkbox {
@@ -321,6 +342,7 @@
         font-weight: normal;
         color: $color-text-base;
     }
+
     &__checkbox-remember {
         margin-top: 0;
     }
@@ -369,61 +391,70 @@
         color: $color-text-heading;
     }
 
-// РЕГИСТРАЦИЯ
-    
+    // РЕГИСТРАЦИЯ
+
     &__login-pass-container {
         display: flex;
     }
-    &__login-container, &__pass-container {
+
+    &__login-container,
+    &__pass-container {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
         width: 100%;
         max-width: 350px;
+
         @media (max-width: 767px) {
             max-width: none;
         }
     }
+
     &__login-container {
         margin-right: 65px;
     }
+
     &__btn-container {
         display: flex;
         justify-content: center;
         margin: 10px 0;
     }
+
     &__btn-register {
         width: 220px;
         height: 45px;
         font-size: 16px;
         font-weight: 600;
     }
+
     &__phone-container {
         display: flex;
         width: 100%;
         justify-content: space-between;
     }
+
     &__phone {
         display: flex;
         width: 100%;
         max-width: 350px;
         margin: 0 42px 0 0;
+
         @media (max-width: 767px) {
             max-width: none;
-        } 
-
+        }
     }
+
     &__phone-txt {
         display: flex;
         justify-content: space-between;
         width: 100%;
         max-width: 350px;
         margin: 0;
+
         @media (max-width: 767px) {
             max-width: none;
-        } 
-
+        }
     }
 
     .auth-form__txt-footnote {
@@ -446,10 +477,12 @@
         font-weight: 600;
         color: $color-input-border-error;
         visibility: hidden;
+
         &.is-visible {
             visibility: visible;
         }
     }
+
     &__btn-recovery {
         width: 220px;
         height: 45px;
@@ -464,47 +497,57 @@
         width: 100%;
         margin: 0 auto;
         text-align: center;
+
         @media (min-width: 768px) {
             min-width: 444px;
         }
+
         &.is-error {
             .auth-form__txt-error {
                 visibility: visible;
             }
+
             .ds-inputs-form__input {
                 background: $color-input-bg-error;
                 border-color: $color-input-border-error;
+
                 &:focus {
                     ~.ds-inputs-form__label {
-                        &:before {
+                        &::before {
                             color: $color-input-border-error;
                         }
                     }
-        
                 }
             }
+
             .ds-inputs-form__label {
-                &:before {
+                &::before {
                     color: $color-input-border-error;
                 }
             }
         }
+
         .ds-inputs-component {
             min-height: 45px;
+
             @media (min-width: 768px) {
                 max-width: 175px;
             }
         }
+
         .ds-inputs-form {
             min-width: 100%;
             margin: 23px 0 0 0;
         }
-        .ds-inputs-form__input {            
+
+        .ds-inputs-form__input {
             font-size: 18px;
+
             @media (min-width: 768px) {
                 max-width: 176px;
             }
         }
+
         .auth-form__txt-error {
             margin: 0;
             background: transparent;
@@ -512,43 +555,48 @@
             font-weight: 600;
         }
     }
+
     &__btn-confirm {
         width: 220px;
         height: 45px;
         font-size: 16px;
         font-weight: 600;
     }
+
     &__send-repeated {
         font-size: 12px;
         color: $color-text-base;
         text-decoration: underline;
     }
-    
-
 
     @media (min-width: 768px) {
         .auth-form__heading {
             font-size: 22px;
         }
+
         .auth-form__form-password-recovery {
             .auth-form__txt {
                 margin: 20px 0 30px;
             }
         }
+
         .auth-form__login-container {
-            margin-right: 42px;            
+            margin-right: 42px;
         }
     }
+
     @media (max-width: 992px) and (min-width: 768px) {
-        
+
         // Вход на сайт
         .auth-form__form-sign-in {
             .ds-inputs-component {
                 min-width: 350px;
             }
+
             .auth-form__content-container {
                 padding: 0 52px;
             }
+
             .auth-form__heading {
                 margin: 0 0 10px 0;
             }
@@ -566,6 +614,7 @@
         .auth-form__heading {
             margin: 0;
         }
+
         .auth-form__txt {
             margin: 10px 0 15px;
         }
@@ -573,23 +622,28 @@
         .auth-form__content-container {
             padding: 0 23px;
         }
+
         .ds-inputs-form__icon-info {
             top: 2px;
-        }  
+        }
+
         .ds-inputs-component {
             min-width: 330px;
         }
+
         .auth-form__enter-code {
             .ds-inputs-component {
                 min-width: 175px;
-            }    
+            }
         }
     }
+
     &__phone-container {
         display: flex;
         width: 100%;
         justify-content: space-between;
     }
+
     @media (max-width: 992px) {
         .ds-inputs-form__info-block-phone {
             flex-direction: column-reverse;
@@ -600,6 +654,7 @@
                 width: 100%;
                 max-width: 100%;
             }
+
             .ds-inputs-form__txt-error {
                 display: none;
             }
@@ -612,47 +667,50 @@
                 }
             }
         }
-
     }
 
     @media (max-width: 767px) {
         .auth-form {
             max-width: 455px;
+
             &__login-pass-container,
             &__phone-container {
                 display: block;
                 justify-content: center;
                 flex-wrap: wrap;
             }
-
         }
     }
 
     @media (max-width: 767px) {
-
         .auth-form__phone-container {
             .auth-form__txt-footnote {
                 margin: 0;
             }
         }
+
         .ds-inputs-form {
             &__txt-error-login {
                 max-width: 140px;
             }
+
             &__info-block-phone {
                 .ds-inputs-form__txt-error {
-                    margin: 0 0 10px 0;    
+                    margin: 0 0 10px 0;
                 }
+
                 .ds-inputs-form__txt-info {
                     width: 100%;
                     max-width: 205px;
                     padding: 0 0 0 30px;
                 }
+
                 .ds-inputs-form__icon-info {
                     top: 5px;
                     font-size: 20px;
                 }
             }
+
             &__info-block-mail {
                 .ds-inputs-form__txt-info {
                     flex-wrap: wrap;
@@ -662,51 +720,63 @@
                     font-size: 12px;
                     font-weight: normal;
                     line-height: 12px;
+
                     >span {
                         white-space: nowrap;
                         line-height: 0px;
                     }
                 }
             }
+
             &__txt-info-pass {
                 white-space: nowrap;
             }
+
             &__txt-error-email {
                 width: auto;
                 line-height: 12px;
             }
+
             &__txt-error-phone {
                 max-width: 133px;
             }
         }
+
         .auth-form {
             &__login-pass-container,
             &__phone-container {
                 justify-content: center;
             }
+
             &__login-container {
-                margin-right: 0!important;
+                margin-right: 0 !important;
             }
+
             &__txt-footnote {
                 padding: 0;
             }
             //Регистрируясь на сайте
             &__phone-txt {
                 margin: 13px 0;
-            }            
+            }
+
             &__form-sign-up {
                 max-width: none;
             }
+
             &__right-tab {
-                &:after {
+                &::after {
                     right: calc(50% - 10px);
                 }
             }
+
             &__form-password-recovery {
                 max-width: 305px;
+
                 @media (max-width: 767px) {
                     max-width: none;
                 }
+
                 .auth-form__txt {
                     padding: 0 50px;
                 }
@@ -714,26 +784,26 @@
                 //     margin: -10px 0 15px 0;
                 // }
             }
-    
+
             &__txt-error {
                 font-size: 12px;
-            }    
-        }        
+            }
+        }
     }
 
-// Восстановление пароля
+    // Восстановление пароля
     &__form-password-recovery {
         display: block;
         width: 100%;
         max-width: 455px;
         padding: 20px 0 28px 0;
+
         @media (min-width: 768px) {
             min-width: 455px;
 
             .auth-form__content-container {
                 padding: 0 39px;
             }
-    
         }
 
         // Если сообщение отправлено
@@ -745,13 +815,16 @@
             .auth-form__txt-error {
                 display: none;
             }
+
             .auth-form__form-password-recovery-txt {
                 display: block;
                 padding: 50px 39px;
             }
+
             .link_colored {
                 display: block;
             }
+
             @media (max-width: 767px) {
                 .auth-form__form-password-recovery-txt {
                     padding: 30px 20px;
@@ -766,32 +839,37 @@
         .ds-inputs-component {
             min-height: auto;
         }
+
         .ds-inputs-form {
             margin-bottom: 5px;
         }
+
         &.is-error {
             .auth-form__txt-error {
                 visibility: visible;
             }
         }
+
         &.is-hidden {
             display: none;
         }
+
         .auth-form__heading {
             font-size: 18px;
         }
+
         .link_colored {
             display: none;
             font-size: 16px;
             font-weight: 500;
-        } 
+        }
     }
 
     &__form-password-recovery-txt {
         display: none;
         justify-content: center;
         align-items: center;
-        text-align: center;        
+        text-align: center;
         font-size: 16px;
         font-weight: 600;
         color: $color-text-base;
@@ -812,5 +890,3 @@
         color: $color-text-light-grey;
     }
 }
-
-

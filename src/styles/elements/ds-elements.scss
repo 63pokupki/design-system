@@ -3,94 +3,90 @@
 
 // отдельные компоненты дизайн системы
 
-@import '~styles/elements/_ds-btn';
-@import '~styles/elements/_comparison-list-link';
-@import '~styles/elements/_stock-card-modal';
-@import '~styles/elements/_skeleton';
-@import '~styles/elements/_categories-tags';
-@import '~styles/elements/_caption-icon';
-@import '~styles/elements/_categories-bar';
-@import '~styles/elements/_multi-level-menu';
-@import '~styles/elements/_vertical-menu';
-@import '~styles/elements/_user-profile-menu';
-@import '~styles/elements/_header-desctop';
-@import '~styles/elements/_header-touch';
-@import '~styles/elements/_header';
-@import '~styles/elements/_icon-burger';
-@import '~styles/elements/_icon-close';
-@import '~styles/elements/_icon-calendar';
-@import '~styles/elements/_link';
-@import '~styles/elements/_logo';
-@import '~styles/elements/_outlined-links';
-@import '~styles/elements/_search';
-@import '~styles/elements/_sidebar-menu-touch';
-@import '~styles/elements/_sidebar';
-@import '~styles/elements/_support-info';
-@import '~styles/elements/_svg-category-icons';
-@import '~styles/elements/_tooltip';
-@import '~styles/elements/_dropdown-fixed-list';
-@import '~styles/elements/_rating-badge';
-@import '~styles/elements/_breadcrumb';
-@import '~styles/elements/_category-card';
-@import '~styles/elements/_category-card-list';
-@import '~styles/elements/_slider';
-@import '~styles/elements/_stock';
-@import '~styles/elements/_stock-status';
-@import '~styles/elements/_stock-brief';
-@import '~styles/elements/_rating-star';
-@import '~styles/elements/_org-profile';
-@import '~styles/elements/_favorite';
-@import '~styles/elements/_num-of-discussions';
-@import '~styles/elements/_checkbox';
-@import '~styles/elements/_no-active-message-bar';
-@import '~styles/elements/_stock-full';
-@import '~styles/elements/_stock-reviews';
-@import '~styles/elements/_stock-sizes-grid';
-@import '~styles/elements/_stock-img-wrapper';
-@import '~styles/elements/_stock-cond';
-@import '~styles/elements/_show-by';
-@import '~styles/elements/_double_range';
+@import "~styles/elements/_ds-btn";
+@import "~styles/elements/_comparison-list-link";
+@import "~styles/elements/_stock-card-modal";
+@import "~styles/elements/_skeleton";
+@import "~styles/elements/_categories-tags";
+@import "~styles/elements/_caption-icon";
+@import "~styles/elements/_categories-bar";
+@import "~styles/elements/_multi-level-menu";
+@import "~styles/elements/_vertical-menu";
+@import "~styles/elements/_user-profile-menu";
+@import "~styles/elements/_header-desctop";
+@import "~styles/elements/_header-touch";
+@import "~styles/elements/_header";
+@import "~styles/elements/_icon-burger";
+@import "~styles/elements/_icon-close";
+@import "~styles/elements/_icon-calendar";
+@import "~styles/elements/_link";
+@import "~styles/elements/_logo";
+@import "~styles/elements/_search";
+@import "~styles/elements/_sidebar-menu-touch";
+@import "~styles/elements/_sidebar";
+@import "~styles/elements/_support-info";
+@import "~styles/elements/_svg-category-icons";
+@import "~styles/elements/_tooltip";
+@import "~styles/elements/_dropdown-fixed-list";
+@import "~styles/elements/_rating-badge";
+@import "~styles/elements/_breadcrumb";
+@import "~styles/elements/_category-card";
+@import "~styles/elements/_category-card-list";
+@import "~styles/elements/_slider";
+@import "~styles/elements/_stock-status";
+@import "~styles/elements/_stock-brief";
+@import "~styles/elements/_rating-star";
+@import "~styles/elements/_org-profile";
+@import "~styles/elements/_favorite";
+@import "~styles/elements/_num-of-discussions";
+@import "~styles/elements/_checkbox";
+@import "~styles/elements/_no-active-message-bar";
+@import "~styles/elements/_stock-full";
+@import "~styles/elements/_stock-reviews";
+@import "~styles/elements/_stock-sizes-grid";
+@import "~styles/elements/_stock-img-wrapper";
+@import "~styles/elements/_stock-cond";
+@import "~styles/elements/_show-by";
+@import "~styles/elements/_double_range";
 
 // Ползунок
-@import '~styles/elements/_stock-items-filter';
-
+@import "~styles/elements/_stock-items-filter";
 
 //Кнопка назад
-@import '~styles/elements/_ds-btn-back.scss';
-
+@import "~styles/elements/_ds-btn-back.scss";
 
 // stock
-@import '~styles/elements/_stock-card-container';
-@import '~styles/elements/_product-detail-button';
-@import '~styles/elements/_stock-card-vertical-wrapper';
-@import '~styles/elements/_stock-card-vertical';
-@import '~styles/elements/_org-get-position-btn';
-@import '~styles/elements/_org-edit-position-btn';
-@import '~styles/elements/_org-edit-catalog-btn';
-@import '~styles/elements/_stock-badge';
-@import '~styles/elements/_add-to-favorite-circle';
-@import '~styles/elements/_stock-rows';
-@import '~styles/elements/_stock-rows-help';
-@import '~styles/elements/_collapse-section';
-@import '~styles/elements/_input-num';
-@import '~styles/elements/_stock-card-horizontal';
-@import '~styles/elements/_stock-d';
-@import '~styles/elements/_stock-m';
-@import '~styles/elements/_stock-m-control';
-@import '~styles/elements/_stock-m-info';
-@import '~styles/elements/_tags-lined';
-@import '~styles/elements/_stock-org-panel';
-@import '~styles/elements/_go-back-btn';
-@import '~styles/elements/_org-warning-btn';
+@import "~styles/elements/_stock-card-container";
+@import "~styles/elements/_product-detail-button";
+@import "~styles/elements/_stock-card-vertical-wrapper";
+@import "~styles/elements/_stock-card-vertical";
+@import "~styles/elements/_org-get-position-btn";
+@import "~styles/elements/_org-edit-position-btn";
+@import "~styles/elements/_org-edit-catalog-btn";
+@import "~styles/elements/_stock-badge";
+@import "~styles/elements/_add-to-favorite-circle";
+@import "~styles/elements/_stock-rows";
+@import "~styles/elements/_stock-rows-help";
+@import "~styles/elements/_collapse-section";
+@import "~styles/elements/_input-num";
+@import "~styles/elements/_stock-card-horizontal";
+@import "~styles/elements/_stock-d";
+@import "~styles/elements/_stock-m";
+@import "~styles/elements/_stock-m-control";
+@import "~styles/elements/_stock-m-info";
+@import "~styles/elements/_tags-lined";
+@import "~styles/elements/_stock-org-panel";
+@import "~styles/elements/_go-back-btn";
+@import "~styles/elements/_org-warning-btn";
 //
 
-@import '~styles/elements/_catalog-list';
-@import '~styles/elements/_item-params-list';
-@import '~styles/elements/_range-double';
-@import '~styles/elements/_stock-aside';
-@import '~styles/elements/_stock-dropdown-filter';
-@import '~styles/elements/_sp-offer';
-@import '~styles/elements/_sp-offer-slider';
+@import "~styles/elements/_catalog-list";
+@import "~styles/elements/_item-params-list";
+@import "~styles/elements/_range-double";
+@import "~styles/elements/_stock-aside";
+@import "~styles/elements/_stock-dropdown-filter";
+@import "~styles/elements/_sp-offer";
+@import "~styles/elements/_sp-offer-slider";
 
 //Активные закупки
 @import "~styles/elements/_active-custom-card-desk.scss";
@@ -98,9 +94,6 @@
 @import "~styles/elements/_active-custom-card-mobile.scss";
 @import "~styles/elements/_acc-modal-sort.scss";
 @import "~styles/elements/_purchase-status.scss";
-
-
-
 @import "~styles/elements/_ds-popover.scss";
 @import "~styles/elements/_ds-btn-apply.scss";
 @import "~styles/elements/_ds-sorting.scss";
@@ -115,9 +108,7 @@
 @import "~styles/elements/_ds-like-single.scss";
 @import "~styles/elements/_ds-rating-star-org.scss";
 @import "~styles/elements/_organizer-block.scss";
-
 @import "~styles/utils/_variables.scss";
-
 @import "~styles/elements/img-container.scss";
 @import "~styles/elements/header-wrap-active-cards.scss";
 @import "~styles/elements/page-active-custom.scss";
@@ -155,7 +146,6 @@
 @import "~styles/elements/_nav-bc-bar";
 @import "~styles/elements/_social-link";
 
-
 // Modal
 @import "~styles/elements/_modal-message-for-org.scss";
 @import "~styles/elements/_modal-short-img.scss";
@@ -176,9 +166,6 @@
 @import "~styles/elements/modal-payment-error.scss";
 @import "~styles/elements/_modal-filter-tags.scss";
 @import "~styles/elements/_modal-sorting.scss";
-
-
-
 
 //delivery
 @import "~styles/delivery/delivery.scss";
@@ -263,8 +250,3 @@
 
 // цена с серыми копейками
 @import "~styles/elements/price.scss";
-
-
-
-
-

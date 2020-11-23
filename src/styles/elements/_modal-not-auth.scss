@@ -6,31 +6,35 @@
             line-height: 28px;
             text-align: center;
         }
+
         &__wrap {
             padding: 30px;
         }
+
         &__header {
             margin-top: 0;
             font-weight: $font-weight-primary;
         }
     }
+
     &__btn-container {
         display: flex;
         justify-content: space-between;
         width: 100%;
         margin: 20px 0 0 0;
-        padding: 0px 12px;
+        padding: 0 12px;
     }
+
     .ds-btn {
         width: 168px;
         height: 36px;
+
         &__text {
             font-size: 14px;
         }
     }
 
     @media screen and (max-width: 640px) {
-
         .modal__wrap {
             padding: 25px 20px;
         }
@@ -50,7 +54,7 @@
             align-items: center;
             width: 100%;
             margin: 20px 0 0 0;
-            padding: 0px 12px;
+            padding: 0 12px;
         }
 
         &__register {
@@ -61,10 +65,10 @@
             max-width: 262px;
             width: 100%;
             height: 36px;
+
             &__text {
                 font-size: 14px;
             }
         }
     }
 }
-

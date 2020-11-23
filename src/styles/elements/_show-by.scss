@@ -1,6 +1,7 @@
 .show-by {
     display: flex;
     align-items: flex-end;
+
     &__text {
         font-size: 12px;
         line-height: 17px;
@@ -29,7 +30,8 @@
         &.is-selected {
             position: relative;
             color: $color-text-base;
-            &:after {
+
+            &::after {
                 content: "";
                 position: absolute;
                 bottom: -2px;

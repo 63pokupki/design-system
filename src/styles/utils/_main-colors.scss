@@ -2,27 +2,29 @@
 
 // Небесный
 .txt-primary-color {
-    color: $color-primary!important;
+    color: $color-primary !important;
 }
 // Основной
 .txt-color-text-base {
-    color: $color-text-base!important;
+    color: $color-text-base !important;
 }
 // Светло-серый
 .txt-color-text-light-grey {
-    color: $color-text-light-grey!important;
+    color: $color-text-light-grey !important;
 }
 // Для заголовка
 .txt-color-text-heading {
-    color: $color-text-heading!important;
+    color: $color-text-heading !important;
 }
 // Неактивное состояние
 .txt-color-inactive {
-    color: $color-inactive!important;
+    color: $color-inactive !important;
 }
+
 .txt-color-white {
-    color: #FFFFFF;
+    color: #fff;
 }
+
 .txt-color-error {
     color: $error-red;
 }
@@ -31,45 +33,49 @@
 
 // Небесный
 .bg-primary-color {
-    background-color: $color-primary!important;
+    background-color: $color-primary !important;
 }
 // Основной
 .bg-color-text-base {
-    background-color: $color-text-base!important;
+    background-color: $color-text-base !important;
 }
 // Светло-серый
 .bg-color-text-light-grey {
-    background-color: $color-text-light-grey!important;
+    background-color: $color-text-light-grey !important;
 }
 // Для заголовка
 .bg-color-text-heading {
-    background-color: $color-text-heading!important;
+    background-color: $color-text-heading !important;
 }
 // Неактивное состояние
 .bg-color-inactive {
-    background-color: $color-inactive!important;
+    background-color: $color-inactive !important;
 }
+
 .bg-color-color-primary {
     background-color: #fff;
 }
+
 .bg-color-error {
     background-color: $error-red;
 }
 
-
 // html
 .ds-title {
-    background-color: rgba(255,255,255, 0.7);
+    background-color: rgba(255, 255, 255, 0.7);
 }
+
 .ds-wrapper {
-    background-color: rgba(255,255,255, 0.9);
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
 }
+
 .color-container {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
 }
+
 .color-block {
     display: flex;
     width: 100%;
@@ -77,9 +83,8 @@
     padding: 5px 10px;
     border-radius: 15px;
     border: 1px solid $color-primary;
+
     &__txt {
         font-weight: 600;
     }
 }
-
-

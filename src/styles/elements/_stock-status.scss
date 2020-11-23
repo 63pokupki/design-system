@@ -1,13 +1,13 @@
-$stock-status-color-open: #00CA34;
-$stock-status-color-fix: #00CA34;
-$stock-status-color-soon-stop: #E39700;
-$stock-status-color-sorting: #EDB900;
-$stock-status-color-close: #F32E2E;
-$stock-status-color-pay: #F32E2E;
+$stock-status-color-open: #00ca34;
+$stock-status-color-fix: #00ca34;
+$stock-status-color-soon-stop: #e39700;
+$stock-status-color-sorting: #edb900;
+$stock-status-color-close: #f32e2e;
+$stock-status-color-pay: #f32e2e;
 $stock-status-color-delivery: $color-primary;
-$stock-status-color-waiting-cargo: #12D1AF;
-$stock-status-color-waiting-invoice: #CC6BF9;
-$stock-status-color-ready: #30B4FF;
+$stock-status-color-waiting-cargo: #12d1af;
+$stock-status-color-waiting-invoice: #cc6bf9;
+$stock-status-color-ready: #30b4ff;
 
 // статус закупки
 .stock-status {
@@ -20,7 +20,7 @@ $stock-status-color-ready: #30B4FF;
         text-align: center;
         min-width: 50px;
 
-        &:before {
+        &::before {
             cursor: default;
         }
     }
@@ -34,8 +34,9 @@ $stock-status-color-ready: #30B4FF;
     // статусы
     &.is-open {
         color: $stock-status-color-open;
+
         .stock-status__icon {
-            &:before {
+            &::before {
                 content: $icon-box;
             }
         }
@@ -43,8 +44,9 @@ $stock-status-color-ready: #30B4FF;
 
     &.is-fix {
         color: $stock-status-color-open;
+
         .stock-status__icon {
-            &:before {
+            &::before {
                 content: $icon-box;
             }
         }
@@ -52,8 +54,9 @@ $stock-status-color-ready: #30B4FF;
 
     &.is-soon-stop {
         color: $stock-status-color-soon-stop;
+
         .stock-status__icon {
-            &:before {
+            &::before {
                 content: $icon-box;
             }
         }
@@ -61,9 +64,11 @@ $stock-status-color-ready: #30B4FF;
 
     &.is-sorting {
         color: $stock-status-color-sorting;
+
         .stock-status__icon {
             font-size: 30px;
-            &:before {
+
+            &::before {
                 content: $icon-sort;
             }
         }
@@ -71,8 +76,9 @@ $stock-status-color-ready: #30B4FF;
 
     &.is-close {
         color: $stock-status-color-close;
+
         .stock-status__icon {
-            &:before {
+            &::before {
                 content: $icon-stop;
             }
         }
@@ -80,8 +86,9 @@ $stock-status-color-ready: #30B4FF;
 
     &.is-delivery {
         color: $stock-status-color-delivery;
+
         .stock-status__icon {
-            &:before {
+            &::before {
                 content: $icon-boxes;
             }
         }
@@ -89,9 +96,11 @@ $stock-status-color-ready: #30B4FF;
 
     &.is-waiting-cargo {
         color: $stock-status-color-waiting-cargo;
+
         .stock-status__icon {
             font-size: 30px;
-            &:before {
+
+            &::before {
                 content: $icon-car;
             }
         }
@@ -99,8 +108,9 @@ $stock-status-color-ready: #30B4FF;
 
     &.is-waiting-invoice {
         color: $stock-status-color-waiting-invoice;
+
         .stock-status__icon {
-            &:before {
+            &::before {
                 content: $icon-sandglass;
             }
         }
@@ -108,8 +118,9 @@ $stock-status-color-ready: #30B4FF;
 
     &.is-pay {
         color: $stock-status-color-pay;
+
         .stock-status__icon {
-            &:before {
+            &::before {
                 content: $icon-ruble;
             }
         }
@@ -117,9 +128,11 @@ $stock-status-color-ready: #30B4FF;
 
     &.is-ready {
         color: $stock-status-color-ready;
+
         .stock-status__icon {
             font-size: 38px;
-            &:before {
+
+            &::before {
                 content: $icon-map-mark;
             }
         }

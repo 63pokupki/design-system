@@ -1,6 +1,5 @@
 .modal-copy-position {
     .modal {
-
         &__wrap {
             padding: 30px;
             width: 550px;
@@ -8,7 +7,9 @@
 
         &__btn-close {
             margin: 6px 5px 0 0;
-            &:after, &:before {
+
+            &::after,
+            &::before {
                 display: none;
             }
         }
@@ -16,7 +17,6 @@
         &__header {
             font-size: 20px;
             font-weight: 600;
-
         }
 
         &__position-name {
@@ -60,19 +60,21 @@
             height: 48px;
             margin: 0 0 20px 0;
             position: relative;
+
             .ds-triangle {
                 position: absolute;
                 right: 0;
                 top: 0;
                 z-index: 14;
                 margin: 17px 10px 0 0;
-                &:after {
+
+                &::after {
                     width: 10px;
                     height: 10px;
                 }
             }
-    
         }
+
         &__select-position {
             width: 100%;
             padding: 15px 0 15px 15px;
@@ -85,19 +87,21 @@
             cursor: pointer;
             position: absolute;
             z-index: 12;
+
             &:focus {
                 ~.modal__select {
                     border-color: $click-load-color;
-                    &-purchase:after {
+
+                    &-purchase::after {
                         color: $color-primary;
                     }
-            
-                    &-catalog:after {
+
+                    &-catalog::after {
                         color: $color-primary;
                     }
-        
-                }                
+                }
             }
+
             >option {
                 background: $background-color-primary;
                 cursor: pointer;
@@ -121,7 +125,8 @@
             border-radius: 3px;
             cursor: pointer;
             z-index: 10;
-            &:after {
+
+            &::after {
                 content: "";
                 position: absolute;
                 left: 13px;
@@ -133,25 +138,23 @@
                 font-size: 14px;
                 font-weight: 600;
                 color: $color-inactive;
-            }            
-    
-            &-purchase:after {
+            }
+
+            &-purchase::after {
                 content: "Закупка";
             }
-    
-            &-catalog:after {
+
+            &-catalog::after {
                 content: "Каталог";
             }
-    
-        }  
+        }
 
         &__selected-position {
             font-size: 16px;
             color: $color-text-base;
 
-            &:after {
+            &::after {
                 content: "";
-
             }
         }
 
@@ -160,37 +163,30 @@
             width: calc(100% + 4px);
             height: auto;
             max-height: 0;
-
             position: absolute;
-            bottom: -4px;            
+            bottom: -4px;
             left: -2px;
-
             transform: translateY(100%);
-
             padding: 0;
             margin: 0;
-
             background: #fff;
             border: 2px solid $click-load-color;
             border-radius: 3px;
             color: $color-text-base;
-
             list-style: none;
             opacity: 0;
             z-index: 10;
             overflow-y: auto;
 
             li {
-                padding: 5px 0px 5px 15px;
+                padding: 5px 0 5px 15px;
 
                 &:hover {
                     background: $modal-copy-selected-color;
                 }
             }
         }
-        
     }
-   
 }
 
 @media (max-width: 1024px) {
@@ -203,4 +199,3 @@
         }
     }
 }
-

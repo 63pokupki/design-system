@@ -6,7 +6,6 @@
     }
 }
 
-
 @media (max-width: 767px) {
     .footer__container {
         .footer__tab {
@@ -22,7 +21,6 @@
         }
     }
 }
-
 
 @media (min-width: 768px) {
     .footer__container {
@@ -76,7 +74,6 @@
         width: 100%;
     }
 
-
     &__col {
         display: flex;
         flex-direction: column;
@@ -109,7 +106,7 @@
         color: $color-primary;
         text-decoration: none;
 
-        &:before {
+        &::before {
             content: "";
             position: absolute;
             left: 0;
@@ -122,13 +119,12 @@
             background-repeat: no-repeat;
             background-position: center;
         }
-
     }
 
     &__buy-together {
         padding-left: 50px;
 
-        &:before {
+        &::before {
             background: url("~images/important_images/footer/hands-together.svg");
             background-size: contain;
             background-position: center;
@@ -139,21 +135,20 @@
     &__cheaper-than-retail {
         padding-left: 55px;
 
-        &:before {
+        &::before {
             background: url("~images/important_images/footer/discount.svg");
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center;
             width: 50px;
             height: 50px;
-
         }
     }
 
     &__defend-buyer {
         padding-left: 50px;
 
-        &:before {
+        &::before {
             background: url("~images/important_images/footer/defend.svg");
             background-position: center;
             background-size: 60%;
@@ -164,7 +159,7 @@
     &__points-near {
         padding-left: 65px;
 
-        &:before {
+        &::before {
             width: 56px;
             height: 30px;
             background: url("~images/important_images/footer/PVZ.svg");
@@ -177,7 +172,7 @@
     &__real-comments {
         padding-left: 80px;
 
-        &:before {
+        &::before {
             width: 76px;
             height: 43px;
             background: url("~images/important_images/footer/stars-comments.svg");
@@ -206,7 +201,6 @@
             justify-content: space-between;
             width: 100%;
             padding: 0 60px;
-
         }
 
         &-a {
@@ -233,6 +227,7 @@
         h5 {
             margin-bottom: 0;
         }
+
         &-icons {
             display: flex;
 
@@ -245,14 +240,14 @@
             width: 30px;
         }
 
-        .attach:after {
+        .attach::after {
             content: "ПРИСТРОЙ";
             position: absolute;
             bottom: -15px;
             left: 0;
             font-family: 'Roboto', sans-serif;
             font-size: 10px;
-            color: #3EAAE0;
+            color: #3eaae0;
             font-weight: 600;
         }
 
@@ -278,25 +273,25 @@
         padding: 10px 60px;
         position: relative;
         // border-top: 3px solid $pale-blue-color;
-        &:before {
+        &::before {
             content: "";
             position: absolute;
             top: 0;
             right: 60px;
-            width: calc(100% -120px);
+            width: calc(100% - 120px);
             height: 3px;
             background: $color-graphics-elements;
         }
 
         &-links {
             display: flex;
-            justify-content: space-between;            
+            justify-content: space-between;
         }
 
         &-a {
             margin-right: 25px;
             font-size: 12px;
-            color: $dark-grey-color;                         
+            color: $dark-grey-color;
             text-decoration: none;
             white-space: nowrap;
 
@@ -331,19 +326,16 @@
             margin: 13px 0;
         }
     }
-
 }
 
 //footer tab
 .footer__tab {
-
     .social-icon {
         width: 22px;
         height: 22px;
     }
 
     .footer {
-
         &__advantage {
             padding: 20px 15px;
         }
@@ -356,19 +348,18 @@
             font-size: 12px;
             white-space: nowrap;
 
-            &:before {
+            &::before {
                 width: 40px;
                 height: 40px;
             }
-
         }
 
         &__buy-together {
-            padding-left: 46px; 
+            padding-left: 46px;
         }
 
         &__cheaper-than-retail {
-            &:before {
+            &::before {
                 width: 44px;
                 height: 44px;
             }
@@ -376,14 +367,16 @@
 
         &__points-near {
             padding-left: 55px;
-            &:before {
+
+            &::before {
                 width: 49px;
             }
         }
 
         &__real-comments {
             padding-left: 67px;
-            &:before {
+
+            &::before {
                 width: 64px;
                 // height: 45px;
             }
@@ -418,13 +411,13 @@
             a {
                 margin-right: 25px;
             }
-
         }
 
         &__links {
             &-site {
                 padding: 0 30px;
             }
+
             &-a {
                 font-size: 12px;
             }
@@ -439,15 +432,15 @@
             padding: 10px 30px;
             background: $pale-blue-color;
             border: none;
-            border-radius: 0px;
-            &:before {
+            border-radius: 0;
+
+            &::before {
                 display: none;
             }
 
             &-contacts {
                 max-width: 50%;
                 line-height: 25px;
-
             }
 
             &-links {
@@ -470,14 +463,12 @@
 
 // footer mobile
 .footer__mobile {
-
     .social-icon {
         width: 25px;
         height: 25px;
     }
 
     .footer {
-
         &__col {
             width: 50%;
             margin-bottom: 10px;
@@ -486,17 +477,17 @@
         &__advantage {
             flex-direction: row;
             justify-content: space-around;
-            align-items: center;            
+            align-items: center;
             padding: 0 10px;
+
             &-row {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-around;
                 flex-wrap: nowrap;
-                width: 100%;;
+                width: 100%;
             }
         }
-
 
         &__buy-together,
         &__cheaper-than-retail,
@@ -507,14 +498,15 @@
             margin: 15px 0;
             padding: 0 0 0 50px;
 
-            &:before {
+            &::before {
                 width: 35px;
             }
         }
 
         &__buy-together {
             padding: 0 0 0 49px;
-            &:before {
+
+            &::before {
                 width: 32px;
             }
         }
@@ -524,13 +516,12 @@
         }
 
         &__cheaper-than-retail {
-            &:before {
+            &::before {
                 width: 37px;
             }
         }
 
         &__links {
-
             &-a {
                 font-size: 12px;
             }
@@ -567,7 +558,7 @@
         &__social {
             img {
                 width: 25px;
-            }  
+            }
 
             &-icons {
                 display: flex;
@@ -578,7 +569,6 @@
                     margin-bottom: 10px;
                 }
             }
-
         }
 
         &__support {
@@ -587,7 +577,8 @@
             padding: 20px;
             border-radius: 0;
             border: none;
-            &:before {
+
+            &::before {
                 display: none;
             }
 
@@ -618,7 +609,6 @@
 
             &-time {
                 margin: 0 0 3px 0;
-
             }
         }
 
@@ -627,4 +617,3 @@
         }
     }
 }
-

@@ -15,9 +15,8 @@
         height: 7px;
         background: $color-graphics-elements;
         border-radius: 15px;
-        
     }
-    
+
     &_vertical {
         display: inline-flex;
         width: 8px;
@@ -25,11 +24,10 @@
         height: 100%;
         background: $color-graphics-elements;
         border-radius: 15px;
+
         .ds-scroll__slider {
             min-width: 8px;
             height: 10px;
         }
-
     }
 }
-

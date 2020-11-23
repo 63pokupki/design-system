@@ -18,7 +18,8 @@
     "storybook:serve": "vue-cli-service storybook:serve -p 6006 -c config/storybook",
     "unit": "vue-cli-service test:unit",
     "prettier:write": "prettier --write src/**/*.js",
-    "prettier": "prettier src/**/*.js"
+    "prettier": "prettier src/**/*.js",
+    "stylelint": "stylelint"
   },
   "main": "libdist/components.umd.min.js",
   "files": [
@@ -32,9 +33,10 @@
     "core-js": "^3.6.5",
     "lodash-es": "^4.17.15",
     "short-uuid": "^3.1.1",
+    "stylelint-scss": "^3.18.0",
+    "vue": "^2.6.12",
     "vue-carousel": "git+https://github.com/nullilac/vue-carousel.git",
-    "vue-slider-component": "^3.2.4",
-    "vue": "^2.6.12"
+    "vue-slider-component": "^3.2.4"
   },
   "devDependencies": {
     "@babel/core": "^7.11.1",
@@ -87,11 +89,12 @@
     "postcss-loader": "^3.0.0",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.1.2",
-    "prettier-eslint": "^11.0.0",
     "prismjs": "^1.21.0",
     "sass-loader": "^10.0.1",
     "style-loader": "^1.2.1",
-    "stylelint": "^13.6.1",
+    "stylelint": "^13.8.0",
+    "stylelint-config-recommended-scss": "^4.2.0",
+    "stylelint-config-standard": "^20.0.0",
     "svg-sprite-loader": "^5.0.0",
     "svg-url-loader": "^6.0.0",
     "url-loader": "^4.1.0",
