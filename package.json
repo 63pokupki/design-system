@@ -152,7 +152,7 @@
   "lint-staged": {
     "*.{js,jsx,vue}": [
       "npm run prettier:write",
-      "vue-cli-service lint",
+      "npm run lint:write",
       "git add"
     ],
     "*.{css,scss}": [
