@@ -42,5 +42,6 @@ npm i @63pokupki/design-system
 1. [Как пользоваться дизайн-системой](./docs/how.md)
 1. [Как пользоваться шрифтовыми иконками](./docs/fonts-icons.md)
 1. [Работа с svg-спрайтом](./docs/svg-sprite.md)
-1. [Блок "Актуальное". Замена контента.](./docs/relevant-block.md)
-1. [Замена баннеров во всплывающем меню.](./docs/menu-banners.md)
+1. [Блок "Актуальное". Замена контента](./docs/relevant-block.md)
+1. [Замена баннеров во всплывающем меню](./docs/menu-banners.md)
+1. [Написание функциональных тестов](./docs/how-write-unit-test.md)

@@ -4,8 +4,12 @@
             class="spui-DropdownModalWithSelect__wrapper"
             @click="() => setStateopen(!open)"
         >
-            <span class="spui-DropdownModalWithSelect__heading">{{ _heading }}</span>
-            <i class="spui-DropdownModalWithSelect__arrow ds-icon icon-rectangle" />
+            <span class="spui-DropdownModalWithSelect__heading">{{
+                _heading
+            }}</span>
+            <i
+                class="spui-DropdownModalWithSelect__arrow ds-icon icon-rectangle"
+            />
         </div>
         <div
             v-if="_value"
@@ -49,12 +53,12 @@
 </template>
 
 <script>
-import { capitalize } from "@/helpers";
-import Modal from "../Modal/Modal.vue";
-import Radio from "../Radio/Radio.vue";
+import { capitalize } from '@/helpers';
+import Modal from '../Modal/Modal.vue';
+import Radio from '../Radio/Radio.vue';
 
 export default {
-    name: "DropdownModalWithSelect",
+    name: 'DropdownModalWithSelect',
     components: {
         Modal,
         Radio,
@@ -63,7 +67,7 @@ export default {
         heading: {
             type: String,
             required: true,
-            default: "Название не передано",
+            default: 'Название не передано',
         },
         value: {
             type: Object,
@@ -81,7 +85,7 @@ export default {
     },
     data() {
         return {
-            base: "spui-DropdownModalWithSelect",
+            base: 'spui-DropdownModalWithSelect',
             open: false,
         };
     },
@@ -100,7 +104,7 @@ export default {
                 return this.value;
             },
             set(value) {
-                this.$emit("input", value);
+                this.$emit('input', value);
                 this.open = false;
             },
         },
@@ -114,7 +118,7 @@ export default {
             this.open = false;
         },
         getLabel(value) {
-            if (!value || !this.label || typeof this.label !== "function") return null;
+            if (!value || !this.label || typeof this.label !== 'function') return null;
 
             return this.label(value);
         },
@@ -123,7 +127,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./DropdownModalWithSelect.scss";
+@import './DropdownModalWithSelect.scss';
 
 .spui-DropdownModalWithSelect /deep/ .spui-Modal__window {
     overflow-y: initial;

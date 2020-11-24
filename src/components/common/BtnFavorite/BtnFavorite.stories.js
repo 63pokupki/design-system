@@ -1,9 +1,9 @@
-import "@/components/resources";
+import '@/components/resources';
 
-import BtnFavorite from "./BtnFavorite.vue";
+import BtnFavorite from './BtnFavorite.vue';
 
 export default {
-    title: "Общие/BtnFavorite",
+    title: 'Общие/BtnFavorite',
     component: BtnFavorite,
 };
 

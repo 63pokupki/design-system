@@ -28,7 +28,7 @@ const mixin = {
         },
 
         toggleAutoPlay() {
-            const enabled = (!this.settings.unagile && this.settings.autoplay);
+            const enabled = !this.settings.unagile && this.settings.autoplay;
 
             if (!this.autoplayInterval && enabled) {
                 this.autoplayInterval = setInterval(() => {
@@ -46,11 +46,15 @@ const mixin = {
         },
 
         toggleFade() {
-            const enabled = (!this.settings.unagile && this.settings.fade);
+            const enabled = !this.settings.unagile && this.settings.fade;
 
             for (let i = 0; i < this.countSlides; i++) {
-                this.slides[i].style.transition = (enabled) ? `opacity ${this.settings.timing} ${this.settings.speed}ms` : "none";
-                this.slides[i].style.transform = (enabled) ? `translate(-${i * this.widthSlide}px)` : "none";
+                this.slides[i].style.transition = enabled
+                    ? `opacity ${this.settings.timing} ${this.settings.speed}ms`
+                    : 'none';
+                this.slides[i].style.transform = enabled
+                    ? `translate(-${i * this.widthSlide}px)`
+                    : 'none';
             }
         },
     },

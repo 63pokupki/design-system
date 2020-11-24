@@ -1,7 +1,10 @@
 <template>
     <aside
         class="spui-Sidebar"
-        :class="{ 'spui-Sidebar_is-active': open, [`spui-Sidebar_${position}`]: true }"
+        :class="{
+            'spui-Sidebar_is-active': open,
+            [`spui-Sidebar_${position}`]: true,
+        }"
     >
         <!-- Содержимое бокового меню -->
         <div
@@ -28,7 +31,7 @@
 
 <script>
 export default {
-    name: "Sidebar",
+    name: 'Sidebar',
     props: {
         open: {
             type: Boolean,
@@ -36,25 +39,25 @@ export default {
         },
         position: {
             type: String,
-            default: "left",
+            default: 'left',
             validator(value) {
-                return ["left", "right"].indexOf(value) !== -1;
+                return ['left', 'right'].indexOf(value) !== -1;
             },
         },
         minWidth: {
             type: String,
-            default: "280px",
+            default: '280px',
         },
         maxWidth: {
             type: String,
-            default: "calc(100% - 35px)",
+            default: 'calc(100% - 35px)',
         },
     },
     computed: {
         _style() {
             return {
-                "min-width": this.minWidth,
-                "max-width": this.maxWidth,
+                'min-width': this.minWidth,
+                'max-width': this.maxWidth,
             };
         },
     },
@@ -69,27 +72,27 @@ export default {
     methods: {
         /** отключить прокрутку страницы */
         addDisableScroll() {
-            const body = document.querySelector("body");
+            const body = document.querySelector('body');
             if (body) {
-                body.classList.add("disable-page-scroll");
+                body.classList.add('disable-page-scroll');
             }
         },
         /** включить прокрутку страницы */
         removeDisableScroll() {
-            const body = document.querySelector("body");
+            const body = document.querySelector('body');
             if (body) {
-                body.classList.remove("disable-page-scroll");
+                body.classList.remove('disable-page-scroll');
             }
         },
         onClose() {
-            this.$emit("close");
+            this.$emit('close');
         },
     },
 };
 </script>
 
 <style lang="scss" scoped>
-@import "./Sidebar.scss";
+@import './Sidebar.scss';
 </style>
 
 <style lang="scss">

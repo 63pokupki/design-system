@@ -1,15 +1,15 @@
 <script>
 export default {
-    name: "ItemBadge",
+    name: 'ItemBadge',
     functional: true,
     props: {
         color: {
             type: String,
-            default: "primary",
+            default: 'primary',
         },
         pos: {
             type: String,
-            default: "left-top",
+            default: 'left-top',
         },
     },
     render: (h, { props, data, slots }) => {
@@ -20,12 +20,22 @@ export default {
         const slot = slots().default;
 
         return (
-            <span class={["ItemBadge", _color, _pos, data.class, data.staticClass]}>{slot}</span>
+            <span
+                class={[
+                    'ItemBadge',
+                    _color,
+                    _pos,
+                    data.class,
+                    data.staticClass,
+                ]}
+            >
+                {slot}
+            </span>
         );
     },
 };
 </script>
 
 <style lang="scss" scoped>
-@import "./ItemBadge.scss";
+@import './ItemBadge.scss';
 </style>

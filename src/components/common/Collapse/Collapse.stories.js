@@ -1,11 +1,11 @@
-import "@/components/resources";
+import '@/components/resources';
 
-import Collapse from "./Collapse.vue";
-import RangePrice from "../RangePrice/RangePrice.vue";
-import Checkbox from "../Checkbox/Checkbox.vue";
+import Collapse from './Collapse.vue';
+import RangePrice from '../RangePrice/RangePrice.vue';
+import Checkbox from '../Checkbox/Checkbox.vue';
 
 export default {
-    title: "Общие/Collapse",
+    title: 'Общие/Collapse',
     component: Collapse,
 };
 
@@ -96,7 +96,8 @@ export const withCheckboxes = () => ({
             checked: true,
         };
     },
-    template: "<Collapse v-model=\"opened\" heading=\"С чекбоксом\"><Checkbox v-model='checked'>Текст</Checkbox></Collapse>",
+    template:
+        '<Collapse v-model="opened" heading="С чекбоксом"><Checkbox v-model=\'checked\'>Текст</Checkbox></Collapse>',
 });
 
 export const withSlots = () => ({
@@ -109,7 +110,10 @@ export const withSlots = () => ({
     },
     render() {
         return (
-            <Collapse v-model={this.opened} heading="Со слотами - задаются только отступы и базовый размер текста">
+            <Collapse
+                v-model={this.opened}
+                heading="Со слотами - задаются только отступы и базовый размер текста"
+            >
                 <template slot="beforebody">Слот перед телом секции</template>
                 Текст секции
                 <template slot="afterbody">Слот после тела секции</template>

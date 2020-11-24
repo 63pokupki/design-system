@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: "CollapseFade",
+    name: 'CollapseFade',
     functional: true,
     props: {
         heading: {
@@ -14,7 +14,7 @@ export default {
         },
         minHeightOnHide: {
             type: String,
-            default: "50px",
+            default: '50px',
         },
         headingStyleObject: {
             type: Object,
@@ -36,14 +36,14 @@ export default {
             listeners.onChange();
         };
 
-        const maxHeight = props.open ? "initial" : props.minHeightOnHide;
+        const maxHeight = props.open ? 'initial' : props.minHeightOnHide;
 
         return (
             <div
                 class="spui-CollapseFade"
                 class={[
-                    "spui-CollapseFade",
-                    { "spui-CollapseFade_expanded": props.open },
+                    'spui-CollapseFade',
+                    { 'spui-CollapseFade_expanded': props.open },
                     data.class,
                     data.staticClass,
                 ]}
@@ -60,7 +60,10 @@ export default {
                     ></i>
                 </div>
                 <div
-                    style={{ ...props.bodyStyleObject, "max-height": maxHeight }}
+                    style={{
+                        ...props.bodyStyleObject,
+                        'max-height': maxHeight,
+                    }}
                     class="spui-CollapseFade__body"
                 >
                     {slot}
@@ -72,5 +75,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./CollapseFade.scss";
+@import './CollapseFade.scss';
 </style>

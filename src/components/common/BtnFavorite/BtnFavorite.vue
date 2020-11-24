@@ -1,12 +1,14 @@
 <script>
 export default {
-    name: "BtnFavorite",
+    name: 'BtnFavorite',
     functional: true,
     props: {
+        /** Активное, нажатое состояние */
         isActive: {
             type: Boolean,
             default: false,
         },
+        /** Состояние загрузки */
         isLoading: {
             type: Boolean,
             default: false,
@@ -16,7 +18,7 @@ export default {
         const { isActive, isLoading } = props;
 
         const onClick = () => {
-            if (!isLoading) {
+            if (!isLoading && listeners.click) {
                 listeners.click();
             }
         };
@@ -26,18 +28,18 @@ export default {
                 onClick={onClick}
                 aria-label="Добавить в избранное"
                 class={[
-                    "BtnFavorite",
-                    { "is-active": isActive, "is-loading": isLoading },
+                    'BtnFavorite',
+                    { 'is-active': isActive, 'is-loading': isLoading },
                     data.class,
                     data.staticClass,
                 ]}
             >
                 <i
                     class={[
-                        "BtnFavorite__icon ds-icon",
+                        'BtnFavorite__icon ds-icon',
                         {
-                            "icon-heart-bold": !isActive,
-                            "icon-heart-filled": isActive,
+                            'icon-heart-bold': !isActive,
+                            'icon-heart-filled': isActive,
                         },
                     ]}
                 ></i>
@@ -48,5 +50,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./BtnFavorite.scss";
+@import './BtnFavorite.scss';
 </style>

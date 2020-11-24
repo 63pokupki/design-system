@@ -2,7 +2,16 @@
     <label
         :for="uniqid"
         class="spui-Checkbox"
-        :class="[_position, _checkedClass, _waiting, _disabled, _rounded, _type, _onlyText, _align]"
+        :class="[
+            _position,
+            _checkedClass,
+            _waiting,
+            _disabled,
+            _rounded,
+            _type,
+            _onlyText,
+            _align,
+        ]"
     >
         <input
             :id="uniqid"
@@ -33,111 +42,136 @@
 </template>
 
 <script>
-import uuid from "short-uuid";
+import uuid from 'short-uuid';
 
 export default {
-    name: "Checkbox",
+    name: 'Checkbox',
     props: {
+        /** Модель */
         value: {
             type: [Array, Boolean],
             default: false,
         },
+        /** Значение */
         val: {
             type: [Array, Object, String, Boolean, Number],
-            default: "Значение не передано",
+            default: 'Значение не передано',
         },
-        name: {
+        /** Уникальный id элемента в пределах страницы,
+         * при отсутствии генерируется */
+        id: {
             type: String,
-            default: "",
+            default: '',
         },
+        /** Отображать только текст без галочки */
         onlyText: {
             type: Boolean,
             default: false,
         },
+        /** Вертикальное центрирование галочки и текста */
         alignCenter: {
             type: Boolean,
             default: true,
         },
+        /** Неактивное состояние */
         disabled: {
             type: Boolean,
             default: false,
         },
+        /** Внешний вид */
         type: {
             type: String,
-            default: "outline",
+            default: 'outline',
             validator(value) {
-                return ["outline", "primary"].includes(value);
+                return ['outline', 'primary'].includes(value);
             },
         },
+        /** Круглый вид */
         rounded: {
             type: Boolean,
             default: false,
         },
+        /** Позиция галочки относительно текста */
         position: {
             type: String,
-            default: "left",
+            default: 'left',
             validator(value) {
-                return ["left", "right"].includes(value);
+                return ['left', 'right'].includes(value);
             },
         },
     },
     data() {
         return {
-            base: "spui-Checkbox",
+            base: 'spui-Checkbox',
             uniqid: null,
         };
     },
     computed: {
+        /** Модель */
         _model: {
             get() {
                 return this.value;
             },
             set(value) {
                 if (!this.disabled) {
-                    this.$emit("input", value);
+                    this.$emit('input', value);
                 }
             },
         },
+        /** Стилевой класс показа только текста */
         _onlyText() {
-            return this.onlyText ? `${this.base}_only-text` : null;
+            return this.onlyText && `${this.base}_only-text`;
         },
+        /** Стилевой класс позиции текста относительно галочки */
         _position() {
             return `${this.base}_${this.position}`;
         },
+        /** Состояние - выбран или нет */
         _checked() {
             const model = this._model;
             const value = this.val;
 
             if (Array.isArray(model)) {
-                return model.indexOf(value) !== -1;
+                return model.includes(value);
             }
             return model;
         },
+        /** Стилевой класс состояния - выбран или нет */
         _checkedClass() {
-            return this._checked ? `${this.base}_checked` : null;
+            return this._checked && `${this.base}_checked`;
         },
+        /** Стилевой класс вертикального центрирования галочки и текста */
         _align() {
-            return this.alignCenter ? `${this.base}_align-center` : null;
+            return this.alignCenter && `${this.base}_align-center`;
         },
+        /** Стилевой класс состояния - не выбран, не отключен */
         _waiting() {
-            return !this._checked && !this.disabled ? `${this.base}_waiting` : null;
+            return !this._checked && !this.disabled && `${this.base}_waiting`;
         },
+        /** Стилевой класс состояния отключен */
         _disabled() {
-            return this.disabled ? `${this.base}_disabled` : null;
+            return this.disabled && `${this.base}_disabled`;
         },
+        /** Стилевой класс круглого вида */
         _rounded() {
-            return this.rounded ? `${this.base}_rounded` : null;
+            return this.rounded && `${this.base}_rounded`;
         },
+        /** Стилевой класс вида */
         _type() {
             return `${this.base}_${this.type}`;
         },
     },
+    /** Генерация uuid */
     beforeMount() {
-        this.uniqid = uuid.generate();
+        if (this.id) {
+            this.uniqid = this.id;
+        } else {
+            this.uniqid = uuid.generate();
+        }
     },
 };
 </script>
 
 <style lang="scss" scoped>
-@import "./Checkbox.scss";
+@import './Checkbox.scss';
 </style>

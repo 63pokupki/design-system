@@ -1,9 +1,9 @@
-import "@/components/resources";
+import '@/components/resources';
 
-import InputSearch from "./InputSearch.vue";
+import InputSearch from './InputSearch.vue';
 
 export default {
-    title: "Общие/InputSearch",
+    title: 'Общие/InputSearch',
     component: InputSearch,
 };
 
@@ -11,8 +11,8 @@ export const standart = () => ({
     components: { InputSearch },
     data() {
         return {
-            value: "",
-            placeholder: "Поиск по параметрам",
+            value: '',
+            placeholder: 'Поиск по параметрам',
         };
     },
     methods: {

@@ -1,9 +1,9 @@
-import "@/components/resources";
+import '@/components/resources';
 
-import Switcher from "./Switcher.vue";
+import Switcher from './Switcher.vue';
 
 export default {
-    title: "Общие/Switcher",
+    title: 'Общие/Switcher',
     component: Switcher,
 };
 
@@ -54,7 +54,8 @@ export const left = () => ({
             checked: false,
         };
     },
-    template: "<Switcher v-model='checked' position='left'>Switcher слева</Switcher>",
+    template:
+        "<Switcher v-model='checked' position='left'>Switcher слева</Switcher>",
 });
 
 export const right = () => ({
@@ -64,5 +65,6 @@ export const right = () => ({
             checked: false,
         };
     },
-    template: "<Switcher v-model='checked' position='right'>Switcher справа</Switcher>",
+    template:
+        "<Switcher v-model='checked' position='right'>Switcher справа</Switcher>",
 });

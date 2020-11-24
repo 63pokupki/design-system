@@ -19,13 +19,13 @@
 
 <script>
 export default {
-    name: "BadgeCategoryTag",
+    name: 'BadgeCategoryTag',
     props: {
         size: {
             type: String,
-            default: "sm",
+            default: 'sm',
             validator(value) {
-                return ["sm", "lg"].indexOf(value) !== -1;
+                return ['sm', 'lg'].indexOf(value) !== -1;
             },
         },
         styleObj: {
@@ -45,5 +45,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./BadgeCategoryTag.scss";
+@import './BadgeCategoryTag.scss';
 </style>

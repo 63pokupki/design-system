@@ -1,10 +1,10 @@
 <script>
-import uuid from "short-uuid";
+import uuid from 'short-uuid';
 
-const searchImg = require("@/images/important_images/search.svg");
+const searchImg = require('@/images/important_images/search.svg');
 
 export default {
-    name: "InputSearch",
+    name: 'InputSearch',
     functional: true,
     props: {
         value: {
@@ -14,7 +14,7 @@ export default {
         placeholder: {
             type: String,
             required: false,
-            default: "Поиск",
+            default: 'Поиск',
         },
         inputStyle: {
             type: Object,
@@ -29,15 +29,15 @@ export default {
         size: {
             type: String,
             required: false,
-            default: "sm",
+            default: 'sm',
         },
     },
     render: (h, { data, props, listeners }) => {
-        const value = props.value || "";
-        const placeholder = props.placeholder || "Поиск";
+        const value = props.value || '';
+        const placeholder = props.placeholder || 'Поиск';
         const inputStyle = props.inputStyle || {};
         const buttonStyle = props.buttonStyle || {};
-        const size = props.buttonStyle || "sm";
+        const size = props.buttonStyle || 'sm';
         const uniqUuid = uuid.generate();
 
         const onSearch = () => {
@@ -48,7 +48,9 @@ export default {
 
         const onKeyUpSearch = (event) => {
             if (
-                (event.code === 13 || event.keyCode === 13 || event.key === "Enter") &&
+                (event.code === 13 ||
+                    event.keyCode === 13 ||
+                    event.key === 'Enter') &&
                 listeners.onSearch
             ) {
                 listeners.onSearch(value);
@@ -65,7 +67,7 @@ export default {
             <div
                 style={data.staticStyle}
                 class={[
-                    "spui-InputSearch",
+                    'spui-InputSearch',
                     `spui-InputSearch_${size}`,
                     data.class,
                     data.staticClass,
@@ -89,7 +91,11 @@ export default {
                     onClick={onSearch}
                     class="spui-InputSearch__btn"
                 >
-                    <img alt="Поиск" class="spui-InputSearch__img" src={searchImg} />
+                    <img
+                        alt="Поиск"
+                        class="spui-InputSearch__img"
+                        src={searchImg}
+                    />
                 </button>
             </div>
         );
@@ -98,5 +104,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./InputSearch.scss";
+@import './InputSearch.scss';
 </style>

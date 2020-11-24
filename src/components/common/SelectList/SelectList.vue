@@ -11,7 +11,9 @@
                 v-for="(element, index) in values"
                 :key="index"
                 class="spui-SelectList__label"
-                :class="{ 'is-selected': fnCompareIsSelected(element, selected) }"
+                :class="{
+                    'is-selected': fnCompareIsSelected(element, selected),
+                }"
                 :for="index + uuid"
             >
                 <input
@@ -21,7 +23,7 @@
                     :value="element"
                     type="radio"
                 >
-                {{ getLabel(element) || "Label не указан" }}
+                {{ getLabel(element) || 'Label не указан' }}
             </label>
         </div>
         <div
@@ -32,7 +34,9 @@
                 v-for="(element, index) in values"
                 :key="index"
                 class="spui-SelectList__label"
-                :class="{ 'is-selected': fnCompareIsSelected(element, selected) }"
+                :class="{
+                    'is-selected': fnCompareIsSelected(element, selected),
+                }"
                 :for="index + uuid"
             >
                 <input
@@ -42,7 +46,7 @@
                     :value="element"
                     type="checkbox"
                 >
-                {{ getLabel(element) || "Label не указан" }}
+                {{ getLabel(element) || 'Label не указан' }}
             </label>
         </div>
         <Tooltip
@@ -61,13 +65,13 @@
 </template>
 
 <script>
-import uuid from "short-uuid";
-import isEqual from "lodash-es/isEqual";
+import uuid from 'short-uuid';
+import isEqual from 'lodash-es/isEqual';
 
-import Tooltip from "../Tooltip/Tooltip.vue";
+import Tooltip from '../Tooltip/Tooltip.vue';
 
 export default {
-    name: "SelectList",
+    name: 'SelectList',
     components: {
         Tooltip,
     },
@@ -99,12 +103,12 @@ export default {
         },
         errorTooltipPosition: {
             type: String,
-            default: "bottom",
+            default: 'bottom',
         },
     },
     data() {
         return {
-            base: "spui-SelectList",
+            base: 'spui-SelectList',
             uuid: null,
         };
     },
@@ -114,7 +118,7 @@ export default {
                 return this.value;
             },
             set(value) {
-                this.$emit("input", value);
+                this.$emit('input', value);
             },
         },
     },
@@ -124,7 +128,7 @@ export default {
     methods: {
         fnCompareIsSelected(value, values) {
             const { fnCompare } = this;
-            const fnCompareExist = fnCompare && typeof fnCompare === "function";
+            const fnCompareExist = fnCompare && typeof fnCompare === 'function';
 
             if (this.one) {
                 if (fnCompareExist) {
@@ -144,15 +148,15 @@ export default {
             return false;
         },
         getLabel(value) {
-            if (value && this.label && typeof this.label === "function") {
+            if (value && this.label && typeof this.label === 'function') {
                 return this.label(value);
             }
-            return "";
+            return '';
         },
     },
 };
 </script>
 
 <style lang="scss" scoped>
-@import "./SelectList.scss";
+@import './SelectList.scss';
 </style>

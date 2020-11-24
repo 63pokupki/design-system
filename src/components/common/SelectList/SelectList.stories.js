@@ -1,21 +1,21 @@
-import "@/components/resources";
+import '@/components/resources';
 
-import SelectList from "./SelectList.vue";
+import SelectList from './SelectList.vue';
 
 const elements = [
     { label: 1 },
     { label: 27 },
     { label: 184 },
     { label: 3200 },
-    { label: "Фиолетовый" },
-    { label: "Серобурмалиновый" },
-    { label: "Синий" },
-    { label: "Большая неразрывная строка на несколько слов" },
-    { label: "Бра" },
+    { label: 'Фиолетовый' },
+    { label: 'Серобурмалиновый' },
+    { label: 'Синий' },
+    { label: 'Большая неразрывная строка на несколько слов' },
+    { label: 'Бра' },
 ];
 
 export default {
-    title: "Общие/SelectList",
+    title: 'Общие/SelectList',
     component: SelectList,
 };
 
@@ -28,7 +28,8 @@ export const one = () => ({
             label: (value) => value.label,
         };
     },
-    template: "<SelectList :values='elements' :label='label' v-model='value'></SelectList>",
+    template:
+        "<SelectList :values='elements' :label='label' v-model='value'></SelectList>",
 });
 
 export const many = () => ({
@@ -54,7 +55,8 @@ export const error = () => ({
             isError: true,
         };
     },
-    template: "<SelectList :is-error='isError' :values='elements' :label='label' v-model='value'></SelectList>",
+    template:
+        "<SelectList :is-error='isError' :values='elements' :label='label' v-model='value'></SelectList>",
 });
 
 export const customFnCompare = () => ({

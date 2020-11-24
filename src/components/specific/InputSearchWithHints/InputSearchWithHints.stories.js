@@ -1,9 +1,9 @@
-import "@/components/resources";
+import '@/components/resources';
 
-import InputSearchWithHints from "./InputSearchWithHints.vue";
+import InputSearchWithHints from './InputSearchWithHints.vue';
 
 export default {
-    title: "Специфичные/InputSearchWithHints",
+    title: 'Специфичные/InputSearchWithHints',
     component: InputSearchWithHints,
 };
 
@@ -11,24 +11,25 @@ export const standart = () => ({
     components: { InputSearchWithHints },
     data() {
         return {
-            text: "платье",
+            text: 'платье',
             isHintsOpen: false,
             isCategoryOpen: false,
             hints: [
                 {
-                    label: "Красное платье",
+                    label: 'Красное платье',
                     count: 2345,
                 },
                 {
-                    label: "Вечернее платье на выпускной и очень длинное название подсказки",
+                    label:
+                        'Вечернее платье на выпускной и очень длинное название подсказки',
                     count: 345830,
                 },
                 {
-                    label: "Свадебное платье",
+                    label: 'Свадебное платье',
                     count: 7462089674,
                 },
                 {
-                    label: "Летнее платье",
+                    label: 'Летнее платье',
                     count: 3,
                 },
             ],
@@ -47,11 +48,12 @@ export const standart = () => ({
             this.isCategoryOpen = value;
         },
         onInputByItems() {
-            console.log("Запрос к подсказкам для автодополнения");
+            console.log('Запрос к подсказкам для автодополнения');
         },
         onSearch() {
-            console.log("Отправка запроса");
+            console.log('Отправка запроса');
         },
     },
-    template: "<InputSearchWithHints v-model=\"text\" :hints=\"hints\" :is-hints-open=\"isHintsOpen\" :is-category-open=\"isCategoryOpen\" @hint-click=\"onClickHint\" @hints-open-change=\"onHintsOpenChange\" @category-open-change=\"onCategoryOpenChange\" @input-by-items=\"onInputByItems\" @search=\"onSearch\"></InputSearchWithHints>",
+    template:
+        '<InputSearchWithHints v-model="text" :hints="hints" :is-hints-open="isHintsOpen" :is-category-open="isCategoryOpen" @hint-click="onClickHint" @hints-open-change="onHintsOpenChange" @category-open-change="onCategoryOpenChange" @input-by-items="onInputByItems" @search="onSearch"></InputSearchWithHints>',
 });

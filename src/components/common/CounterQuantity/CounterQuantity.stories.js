@@ -1,9 +1,9 @@
-import "@/components/resources";
+import '@/components/resources';
 
-import CounterQuantity from "./CounterQuantity.vue";
+import CounterQuantity from './CounterQuantity.vue';
 
 export default {
-    title: "Общие/CounterQuantity",
+    title: 'Общие/CounterQuantity',
     component: CounterQuantity,
 };
 

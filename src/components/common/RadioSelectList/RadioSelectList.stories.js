@@ -1,9 +1,9 @@
-import "@/components/resources";
+import '@/components/resources';
 
-import RadioSelectList from "./RadioSelectList.vue";
+import RadioSelectList from './RadioSelectList.vue';
 
 export default {
-    title: "Общие/RadioSelectList",
+    title: 'Общие/RadioSelectList',
     component: RadioSelectList,
 };
 
@@ -53,8 +53,8 @@ export const custom = () => ({
         return {
             value: 30,
             values: [30, 60, 90, 120],
-            text: "Другой текст",
-            position: "right",
+            text: 'Другой текст',
+            position: 'right',
         };
     },
     methods: {

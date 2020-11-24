@@ -57,11 +57,11 @@
 </template>
 
 <script>
-import uuid from "short-uuid";
-import VueSlider from "vue-slider-component";
+import uuid from 'short-uuid';
+import VueSlider from 'vue-slider-component';
 
 export default {
-    name: "RangePrice",
+    name: 'RangePrice',
     components: {
         VueSlider,
     },
@@ -95,7 +95,7 @@ export default {
                 return [...this.value].sort((a, b) => a - b);
             },
             set(value) {
-                this.$emit("input", value);
+                this.$emit('input', value);
             },
         },
         rangeMin: {
@@ -123,12 +123,12 @@ export default {
             },
         },
         minWidthPx() {
-            const { length } = this.rangeMin.toString().split("");
+            const { length } = this.rangeMin.toString().split('');
             const width = `${Math.ceil(length * 10)}px`;
             return width;
         },
         maxWidthPx() {
-            const { length } = this.rangeMax.toString().split("");
+            const { length } = this.rangeMax.toString().split('');
             const width = `${Math.ceil(length * 10)}px`;
             return width;
         },
@@ -141,7 +141,7 @@ export default {
         calcWidth(e) {
             const el = e.target;
             const { value } = el;
-            const { length } = value.toString().split("");
+            const { length } = value.toString().split('');
             const width = `${Math.ceil(length * 10)}px`;
             el.style.width = width;
         },
@@ -149,7 +149,7 @@ export default {
             el.setSelectionRange(0, el.value.length);
         },
         focusOnInput(e) {
-            const input = e.target.querySelector("input");
+            const input = e.target.querySelector('input');
             if (input) {
                 input.focus();
                 this.setSelection(input);
@@ -162,7 +162,7 @@ export default {
                 min = this.max;
             }
 
-            this.$emit("input", [min, this.rangeMax]);
+            this.$emit('input', [min, this.rangeMax]);
         },
         onChangeMax(e) {
             let max = +e.target.value;
@@ -171,12 +171,12 @@ export default {
                 max = this.min;
             }
 
-            this.$emit("input", [this.rangeMin, max]);
+            this.$emit('input', [this.rangeMin, max]);
         },
     },
 };
 </script>
 
 <style lang="scss">
-@import "./RangePrice.scss";
+@import './RangePrice.scss';
 </style>

@@ -36,18 +36,18 @@
 </template>
 
 <script>
-import { capitalize } from "@/helpers";
+import { capitalize } from '@/helpers';
 
 export default {
-    name: "Collapse",
+    name: 'Collapse',
     props: {
         heading: {
             type: String,
-            default: "Имя секции не передано",
+            default: 'Имя секции не передано',
         },
         metainfo: {
             type: String,
-            default: "",
+            default: '',
         },
         value: {
             type: Boolean,
@@ -56,7 +56,7 @@ export default {
     },
     data() {
         return {
-            base: "spui-Collapse",
+            base: 'spui-Collapse',
         };
     },
     computed: {
@@ -65,11 +65,13 @@ export default {
                 return this.value;
             },
             set(value) {
-                this.$emit("input", value);
+                this.$emit('input', value);
             },
         },
         _isOpenedClass() {
-            return this._model ? `${this.base}_opened` : `${this.base}_collapsed`;
+            return this._model
+                ? `${this.base}_opened`
+                : `${this.base}_collapsed`;
         },
         _heading() {
             if (this.heading) {
@@ -83,7 +85,7 @@ export default {
                 return capitalize(this.metainfo);
             }
 
-            return "";
+            return '';
         },
         _isSlotDefaultExist() {
             return Boolean(this.$slots.default);
@@ -100,5 +102,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./Collapse.scss";
+@import './Collapse.scss';
 </style>

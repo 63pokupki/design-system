@@ -1,9 +1,9 @@
-import "@/components/resources";
+import '@/components/resources';
 
-import Button from "./Button.vue";
+import Button from './Button.vue';
 
 export default {
-    title: "Общие/Button",
+    title: 'Общие/Button',
     component: Button,
 };
 
@@ -11,10 +11,10 @@ export const empty = () => ({
     components: { Button },
     methods: {
         onClick() {
-            console.log("click");
+            console.log('click');
         },
     },
-    template: "<Button></Button>",
+    template: '<Button></Button>',
 });
 
 export const primary = () => ({
@@ -22,7 +22,7 @@ export const primary = () => ({
     components: { Button },
     methods: {
         onClick() {
-            console.log("click");
+            console.log('click');
         },
     },
 });
@@ -31,7 +31,7 @@ export const outlined = () => ({
     components: { Button },
     methods: {
         onClick() {
-            console.log("click");
+            console.log('click');
         },
     },
     template: "<Button type='outlined'>Кнопка outline</Button>",
@@ -41,7 +41,7 @@ export const loading = () => ({
     components: { Button },
     methods: {
         onClick() {
-            console.log("click");
+            console.log('click');
         },
     },
     template: "<Button :is-loading='true'>Кнопка в состоянии ожидания</Button>",
@@ -51,29 +51,35 @@ export const disabled = () => ({
     components: { Button },
     methods: {
         onClick() {
-            console.log("click");
+            console.log('click');
         },
     },
-    template: "<Button :is-disabled='true'>Кнопка в неактивном состоянии</Button>",
+    template:
+        "<Button :is-disabled='true'>Кнопка в неактивном состоянии</Button>",
 });
 
 export const block = () => ({
     components: { Button },
     methods: {
         onClick() {
-            console.log("click");
+            console.log('click');
         },
     },
-    template: "<Button :block='true'>Кнопка занимает всю доступную ширину</Button>",
+    template:
+        "<Button :block='true'>Кнопка занимает всю доступную ширину</Button>",
 });
 
 export const withIcon = () => ({
     components: { Button },
     methods: {
         onClick() {
-            console.log("click");
+            console.log('click');
         },
     },
     // eslint-disable-next-line no-unused-vars
-    render: (h) => <Button icon={{ name: "icon-cart", pos: "right" }}>Кнопка с иконкой</Button>,
+    render: (h) => (
+        <Button iconName="icon-cart" iconPosition="right">
+            Кнопка с иконкой
+        </Button>
+    ),
 });

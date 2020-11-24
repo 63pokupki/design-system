@@ -1,9 +1,9 @@
-import "@/components/resources";
+import '@/components/resources';
 
-import CollapseFade from "./CollapseFade.vue";
+import CollapseFade from './CollapseFade.vue';
 
 export default {
-    title: "Общие/CollapseFade",
+    title: 'Общие/CollapseFade',
     component: CollapseFade,
 };
 
@@ -12,7 +12,7 @@ export const standart = () => ({
     data() {
         return {
             open: false,
-            heading: "Описание товара",
+            heading: 'Описание товара',
         };
     },
     template: `

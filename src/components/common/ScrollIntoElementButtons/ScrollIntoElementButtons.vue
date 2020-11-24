@@ -22,7 +22,7 @@
 
 <script>
 export default {
-    name: "ScrollIntoElementButtons",
+    name: 'ScrollIntoElementButtons',
     props: {
         targetUpId: {
             type: String,
@@ -77,29 +77,33 @@ export default {
 
                 this.handler = handler;
 
-                document.addEventListener("scroll", this.handler, { passive: true });
+                document.addEventListener('scroll', this.handler, {
+                    passive: true,
+                });
             }
         });
     },
     beforeDestroy() {
         if (this.fade && this.handler) {
-            document.removeEventListener("scroll", this.handler, { passive: true });
+            document.removeEventListener('scroll', this.handler, {
+                passive: true,
+            });
         }
     },
     methods: {
         onTargetUpClick() {
             if (this.targetUpEl) {
                 this.targetUpEl.scrollIntoView({
-                    block: "start",
-                    behavior: "smooth",
+                    block: 'start',
+                    behavior: 'smooth',
                 });
             }
         },
         onTargetDownClick() {
             if (this.targetDownEl) {
                 this.targetDownEl.scrollIntoView({
-                    block: "start",
-                    behavior: "smooth",
+                    block: 'start',
+                    behavior: 'smooth',
                 });
             }
         },
@@ -108,5 +112,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./ScrollIntoElementButtons.scss";
+@import './ScrollIntoElementButtons.scss';
 </style>

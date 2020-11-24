@@ -1,9 +1,9 @@
-import "@/components/resources";
+import '@/components/resources';
 
-import BadgeCategoryTag from "./BadgeCategoryTag.vue";
+import BadgeCategoryTag from './BadgeCategoryTag.vue';
 
 export default {
-    title: "Специфичные/BadgeCategoryTag",
+    title: 'Специфичные/BadgeCategoryTag',
     component: BadgeCategoryTag,
 };
 
@@ -11,7 +11,7 @@ export const sm = () => ({
     components: { BadgeCategoryTag },
     methods: {
         onClickHandler() {
-            console.log("Click");
+            console.log('Click');
         },
     },
     template: `
@@ -24,7 +24,7 @@ export const lg = () => ({
     components: { BadgeCategoryTag },
     methods: {
         onClickHandler() {
-            console.log("Click");
+            console.log('Click');
         },
     },
     template: `
@@ -37,7 +37,7 @@ export const active = () => ({
     components: { BadgeCategoryTag },
     methods: {
         onClickHandler() {
-            console.log("Click");
+            console.log('Click');
         },
     },
     template: `
@@ -50,7 +50,7 @@ export const block = () => ({
     components: { BadgeCategoryTag },
     methods: {
         onClickHandler() {
-            console.log("Click");
+            console.log('Click');
         },
     },
     template: `
@@ -63,7 +63,7 @@ export const withCustomClass = () => ({
     components: { BadgeCategoryTag },
     methods: {
         onClickHandler() {
-            console.log("Click");
+            console.log('Click');
         },
     },
     template: `

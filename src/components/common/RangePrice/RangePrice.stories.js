@@ -1,9 +1,9 @@
-import "@/components/resources";
+import '@/components/resources';
 
-import RangePrice from "./RangePrice.vue";
+import RangePrice from './RangePrice.vue';
 
 export default {
-    title: "Общие/RangePrice",
+    title: 'Общие/RangePrice',
     component: RangePrice,
 };
 

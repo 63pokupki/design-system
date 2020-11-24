@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: "RadioSelectList",
+    name: 'RadioSelectList',
     functional: true,
     props: {
         value: {
@@ -13,12 +13,12 @@ export default {
         },
         text: {
             type: String,
-            default: "",
+            default: '',
         },
         position: {
             type: String,
-            default: "left",
-            validator: (value) => ["left", "right"].includes(value),
+            default: 'left',
+            validator: (value) => ['left', 'right'].includes(value),
         },
     },
     render: (h, { data, props, listeners }) => {
@@ -33,9 +33,9 @@ export default {
         return (
             <div
                 style={data.staticStyle}
-                class={["spui-RadioSelectList", data.class, data.staticClass]}
+                class={['spui-RadioSelectList', data.class, data.staticClass]}
             >
-                {text && position === "left" && (
+                {text && position === 'left' && (
                     <span class="spui-RadioSelectList__before">{text}</span>
                 )}
                 <div class="spui-RadioSelectList__values">
@@ -44,15 +44,18 @@ export default {
                             <button
                                 onClick={() => onClick(val)}
                                 class={[
-                                    "spui-RadioSelectList__value",
-                                    { "spui-RadioSelectList__selected": val === value },
+                                    'spui-RadioSelectList__value',
+                                    {
+                                        'spui-RadioSelectList__selected':
+                                            val === value,
+                                    },
                                 ]}
                             >
                                 {val}
                             </button>
                         ))}
                 </div>
-                {text && position === "right" && (
+                {text && position === 'right' && (
                     <span class="spui-RadioSelectList__after">{text}</span>
                 )}
             </div>
@@ -62,5 +65,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./RadioSelectList.scss";
+@import './RadioSelectList.scss';
 </style>

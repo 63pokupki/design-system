@@ -30,7 +30,10 @@
                     @slideclick="onImgClick"
                 >
                     <img
-                        v-lazy="{ src: getImgSrc(image), loading: loaderImgSrc }"
+                        v-lazy="{
+                            src: getImgSrc(image),
+                            loading: loaderImgSrc,
+                        }"
                         :alt="getImgAlt(image)"
                         :style="styleImgObj"
                         class="spui-ImageSwitch__image"
@@ -67,13 +70,13 @@
 </template>
 
 <script>
-import { Carousel, Slide } from "vue-carousel";
-import lazyimg from "@/directives/lazy";
+import { Carousel, Slide } from 'vue-carousel';
+import lazyimg from '@/directives/lazy';
 
-const loaderImgSrc = require("@/directives/lazy/image-loader.svg");
+const loaderImgSrc = require('@/directives/lazy/image-loader.svg');
 
 export default {
-    name: "ImageSwitch",
+    name: 'ImageSwitch',
     components: {
         Carousel,
         Slide,
@@ -100,7 +103,7 @@ export default {
         },
         fnImgAlt: {
             type: Function,
-            default: () => "Изображение",
+            default: () => 'Изображение',
         },
         value: {
             type: Number,
@@ -154,17 +157,17 @@ export default {
                 return this.value;
             },
             set(value) {
-                this.$emit("input", value);
+                this.$emit('input', value);
             },
         },
         /* Стилевые классы */
         _displayArrowsOnHoverOnlyС() {
             return this.displayArrowsOnHoverOnly
-                ? "spui-ImageSwitch_display-arrows-on-hover"
+                ? 'spui-ImageSwitch_display-arrows-on-hover'
                 : null;
         },
         _centeredС() {
-            return this.centered ? "spui-ImageSwitch_centered" : null;
+            return this.centered ? 'spui-ImageSwitch_centered' : null;
         },
     },
     methods: {
@@ -181,15 +184,19 @@ export default {
             this._currentSlideIndex += 1;
         },
         onImgClick(img) {
-            this.$emit("click", img);
+            this.$emit('click', img);
         },
         getImgSrc(value) {
-            if (!value || !this.fnImgSrc || typeof this.fnImgSrc !== "function") return null;
+            if (!value || !this.fnImgSrc || typeof this.fnImgSrc !== 'function') return null;
             return this.fnImgSrc(value);
         },
         getImgAlt(value) {
-            if (!value || !this.fnImgAlt || typeof this.fnImgAlt !== "function") {
-                return "Изображение";
+            if (
+                !value ||
+                !this.fnImgAlt ||
+                typeof this.fnImgAlt !== 'function'
+            ) {
+                return 'Изображение';
             }
             return this.fnImgAlt(value);
         },
@@ -198,5 +205,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./ImageSwitch.scss";
+@import './ImageSwitch.scss';
 </style>

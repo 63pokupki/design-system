@@ -10,9 +10,9 @@ export const clickOutside = {
                 binding.value();
             }
         };
-        document.addEventListener("click", el.clickOutsideEvent);
+        document.addEventListener('click', el.clickOutsideEvent);
     },
     unbind(el) {
-        document.removeEventListener("click", el.clickOutsideEvent);
+        document.removeEventListener('click', el.clickOutsideEvent);
     },
 };
