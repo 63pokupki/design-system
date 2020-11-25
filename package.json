@@ -18,7 +18,7 @@
     "storybook:serve": "vue-cli-service storybook:serve -p 6006 -c config/storybook",
     "unit": "vue-cli-service test:unit",
     "prettier:write": "prettier --write src/**/*.js",
-    "prettier": "prettier src/**/*.js",
+    "prettier": "prettier --check src/**/*.js",
     "stylelint": "stylelint"
   },
   "main": "libdist/components.umd.min.js",
@@ -33,7 +33,6 @@
     "core-js": "^3.6.5",
     "lodash-es": "^4.17.15",
     "short-uuid": "^3.1.1",
-    "stylelint-scss": "^3.18.0",
     "vue": "^2.6.12",
     "vue-carousel": "git+https://github.com/nullilac/vue-carousel.git",
     "vue-slider-component": "^3.2.4"
@@ -76,10 +75,11 @@
     "gonzales-pe": "^4.3.0",
     "html-loader": "^1.3.0",
     "html-webpack-plugin": "^4.4.1",
+    "husky": "^4.3.0",
     "imports-loader": "^1.1.0",
     "jest": "^26.6.3",
     "jest-serializer-vue": "^2.0.2",
-    "lint-staged": "^9.5.0",
+    "lint-staged": "^10.5.2",
     "match-all": "^1.2.6",
     "mini-css-extract-plugin": "^0.11.0",
     "node-sass": "^4.14.1",
@@ -88,12 +88,13 @@
     "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
     "postcss-preset-env": "^6.7.0",
-    "prettier": "^2.1.2",
+    "prettier": "^2.2.0",
     "prismjs": "^1.21.0",
     "sass-loader": "^10.0.1",
     "style-loader": "^1.2.1",
     "stylelint": "^13.8.0",
     "stylelint-config-standard": "^20.0.0",
+    "stylelint-scss": "^3.18.0",
     "svg-sprite-loader": "^5.0.0",
     "svg-url-loader": "^6.0.0",
     "url-loader": "^4.1.0",
@@ -150,5 +151,14 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/63pokupki/design-system.git"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": ["eslint --cache --fix", "prettier --write"],
+    "*.scss": "stylelint --fix"
   }
 }
