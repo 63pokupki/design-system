@@ -41,6 +41,7 @@
     "@babel/core": "^7.11.1",
     "@babel/plugin-transform-runtime": "^7.11.0",
     "@babel/preset-env": "^7.11.0",
+    "@storybook/addon-a11y": "^6.1.6",
     "@storybook/addon-actions": "6.0.28",
     "@storybook/addon-backgrounds": "6.0.28",
     "@storybook/addon-docs": "6.0.28",
@@ -158,8 +159,14 @@
     }
   },
   "lint-staged": {
-    "*.js": ["eslint --fix", "prettier --write"],
-    "*.vue": ["eslint --fix", "prettier --write"],
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.vue": [
+      "eslint --fix",
+      "prettier --write"
+    ],
     "*.scss": "stylelint --fix"
   }
 }
