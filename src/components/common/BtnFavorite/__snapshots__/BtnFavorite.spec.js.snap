@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BtnFavorite.vue Проверка изменения входных параметров и вида компонента 1`] = `<button aria-label="Добавить в избранное" class="BtnFavorite is-active is-loading"><i class="BtnFavorite__icon ds-icon icon-heart-filled"></i></button>`;
+exports[`BtnFavorite.vue Проверка состояния активности 1`] = `<button aria-label="Добавить в избранное" class="BtnFavorite is-active"><i class="BtnFavorite__icon ds-icon icon-heart-filled"></i></button>`;
 
-exports[`BtnFavorite.vue Снимок без состояния 1`] = `<button aria-label="Добавить в избранное" class="BtnFavorite"><i class="BtnFavorite__icon ds-icon icon-heart-bold"></i></button>`;
+exports[`BtnFavorite.vue Проверка состояния загрузки 1`] = `<button aria-label="Добавить в избранное" class="BtnFavorite is-loading"><i class="BtnFavorite__icon ds-icon icon-heart-bold"></i></button>`;
+
+exports[`BtnFavorite.vue Снимок стандартного состояния 1`] = `<button aria-label="Добавить в избранное" class="BtnFavorite"><i class="BtnFavorite__icon ds-icon icon-heart-bold"></i></button>`;

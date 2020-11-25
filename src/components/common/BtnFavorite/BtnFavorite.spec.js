@@ -17,17 +17,28 @@ describe('BtnFavorite.vue', () => {
         expect(wrapper.exists()).toBeTruthy();
     });
 
-    it('Снимок без состояния', () => {
+    it('Снимок стандартного состояния', () => {
         const wrapper = mountComponent();
 
         expect(wrapper.html()).toMatchSnapshot();
     });
 
-    it('Проверка изменения входных параметров и вида компонента', () => {
+    it('Проверка состояния активности', () => {
         const wrapper = mountComponent({
-            propsData: { isActive: true, isLoading: true },
+            propsData: { isActive: true },
         });
 
+        expect(wrapper.classes('is-active')).toBe(true);
+        expect(wrapper.find('i').classes('icon-heart-filled')).toBe(true);
+        expect(wrapper.html()).toMatchSnapshot();
+    });
+
+    it('Проверка состояния загрузки', () => {
+        const wrapper = mountComponent({
+            propsData: { isLoading: true },
+        });
+
+        expect(wrapper.classes('is-loading')).toBe(true);
         expect(wrapper.html()).toMatchSnapshot();
     });
 
