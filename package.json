@@ -154,11 +154,12 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged && npm run unit"
     }
   },
   "lint-staged": {
-    "*.js": ["eslint --cache --fix", "prettier --write"],
+    "*.js": ["eslint --fix", "prettier --write"],
+    "*.vue": ["eslint --fix", "prettier --write"],
     "*.scss": "stylelint --fix"
   }
 }
