@@ -139,9 +139,6 @@
   "directories": {
     "doc": "docs"
   },
-  "gitHooks": {
-    "pre-commit": "lint-staged && npm run unit"
-  },
   "homepage": "https://github.com/63pokupki/design-system",
   "keywords": [
     "ui-kit",
@@ -149,17 +146,6 @@
     "components-kit"
   ],
   "license": "BSD-3-Clause",
-  "lint-staged": {
-    "*.{js,jsx,vue}": [
-      "npm run prettier:write",
-      "npm run lint:write",
-      "git add"
-    ],
-    "*.{css,scss}": [
-      "npm run stylelint",
-      "git add"
-    ]
-  },
   "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
