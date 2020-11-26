@@ -16,35 +16,19 @@ describe('Checkbox.vue', () => {
         expect(wrapper.exists()).toBeTruthy();
     });
 
-    it('Проверка стандартных входных параметров', () => {
-        const wrapper = mountComponent();
-
-        expect(wrapper.props()).toEqual({
-            value: false,
-            val: 'Значение не передано',
-            id: '',
-            onlyText: false,
-            alignCenter: true,
-            disabled: false,
-            type: 'outline',
-            rounded: false,
-            position: 'left',
+    it('Проверка стандартного состояния', () => {
+        const wrapper = mountComponent({
+            propsData: {
+                id: 'id',
+            },
         });
 
         expect(wrapper.find('input[type=checkbox]').element.checked).toBe(
-            false,
+            false
         );
-
-        expect(wrapper.vm.$data.uniqid).not.toBeNull();
-
+        expect(wrapper.vm.$data.uniqid).toBe('id');
         expect(wrapper.find('.spui-Checkbox__text').element).toBeUndefined();
 
-        expect(wrapper.classes('spui-Checkbox_disabled')).toBe(false);
-
-        expect(wrapper.classes('spui-Checkbox_outline')).toBe(true);
-
-        expect(wrapper.classes('spui-Checkbox_rounded')).toBe(false);
-
-        expect(wrapper.classes('spui-Checkbox_left')).toBe(true);
+        expect(wrapper.html()).toMatchSnapshot();
     });
 });
