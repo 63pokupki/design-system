@@ -19,8 +19,7 @@
     "unit": "vue-cli-service test:unit",
     "unit:watch": "vue-cli-service test:unit --watch",
     "prettier:write": "prettier --write src/**/*.js",
-    "prettier": "prettier --check src/**/*.js",
-    "stylelint": "stylelint"
+    "prettier": "prettier src/**/*.js"
   },
   "main": "libdist/components.umd.min.js",
   "files": [
@@ -167,7 +166,6 @@
     "src/**/*.vue": [
       "eslint --fix",
       "prettier --write"
-    ],
-    "src/**/*.scss": "stylelint --fix"
+    ]
   }
 }

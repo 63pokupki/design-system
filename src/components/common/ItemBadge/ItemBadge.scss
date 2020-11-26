@@ -1,12 +1,13 @@
-$ItemBadgeColor: #fff;
+$ItemBadgeColor: #ffffff;
 $ItemBadgeFontSize: 10px;
 $ItemBadgeLineHeight: 16px;
 $ItemBadgeFontWeight: 600;
-$ItemBadgeBgColorAccent: #ff999f;
-$ItemBadgeBgColorAccentFlag: #aa797c;
-$ItemBadgeBgColorPrimary: #36a6f2;
+$ItemBadgeBgColorAccent: #FF999F;
+$ItemBadgeBgColorAccentFlag: #AA797C;
+$ItemBadgeBgColorPrimary: #36A6F2;
 $ItemBadgeBgColorPrimaryFlag: #2c6aa4;
 $ItemBadgeFontFamily: $font-primary;
+
 
 .ItemBadge {
     font-weight: $ItemBadgeFontWeight;
@@ -18,7 +19,7 @@ $ItemBadgeFontFamily: $font-primary;
     user-select: none;
     font-family: $ItemBadgeFontFamily;
 
-    &::before {
+    &:before {
         content: "";
         position: absolute;
         width: 0;
@@ -28,7 +29,8 @@ $ItemBadgeFontFamily: $font-primary;
 }
 
 .ItemBadge_left-top {
-    &::before {
+
+    &:before {
         top: -7px;
         left: 3px;
         width: 0;
@@ -39,7 +41,8 @@ $ItemBadgeFontFamily: $font-primary;
 }
 
 .ItemBadge_left-bottom {
-    &::before {
+
+    &:before {
         bottom: -7px;
         left: 3px;
         width: 0;
@@ -50,7 +53,8 @@ $ItemBadgeFontFamily: $font-primary;
 }
 
 .ItemBadge_right-bottom {
-    &::before {
+
+    &:before {
         bottom: -7px;
         right: 3px;
         width: 0;
@@ -61,7 +65,8 @@ $ItemBadgeFontFamily: $font-primary;
 }
 
 .ItemBadge_right-top {
-    &::before {
+
+    &:before {
         top: -7px;
         right: 3px;
         width: 0;
@@ -75,7 +80,7 @@ $ItemBadgeFontFamily: $font-primary;
 .ItemBadge_accent {
     background-color: $ItemBadgeBgColorAccent;
 
-    &::before {
+    &:before {
         border-top: 7px solid $ItemBadgeBgColorAccentFlag;
     }
 }
@@ -84,7 +89,7 @@ $ItemBadgeFontFamily: $font-primary;
 .ItemBadge_primary {
     background-color: $ItemBadgeBgColorPrimary;
 
-    &::before {
+    &:before {
         border-top: 7px solid $ItemBadgeBgColorPrimaryFlag;
     }
 }

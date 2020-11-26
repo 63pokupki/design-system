@@ -1,5 +1,6 @@
 // блок шапки, содержит touch и desctop блоки
 .header {
+
     .header-touch {
         width: 100%;
         position: fixed;
@@ -18,6 +19,7 @@
     }
 
     @media screen and (min-width: 1024px) {
+
         .header-desctop {
             display: block;
         }

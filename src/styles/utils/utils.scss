@@ -14,8 +14,8 @@ body.ds {
 }
 
 *,
-*::after,
-*::before {
+*:after,
+*:before {
     box-sizing: border-box;
 }
 
@@ -79,7 +79,6 @@ body.ds {
 
 .disable-transition {
     transition: unset !important;
-
     * {
         transition: unset !important;
     }

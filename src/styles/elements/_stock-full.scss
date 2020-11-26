@@ -12,7 +12,7 @@
         overflow-y: hidden;
         padding-bottom: 30px;
 
-        &::after {
+        &:after {
             content: "";
             width: 100%;
             height: 50px;
@@ -20,14 +20,14 @@
             bottom: 0;
             left: 0;
             z-index: 2;
-            background: linear-gradient(0deg, #fff 0%, rgba(255, 255, 255, 0) 105%);
+            background: linear-gradient(0deg, #ffffff 0%, rgba(255, 255, 255, 0) 105%);
         }
     }
 
     &__wrapper.is-expanded {
         height: auto;
 
-        &::after {
+        &:after {
             display: none;
         }
     }
@@ -50,7 +50,6 @@
         position: relative;
         z-index: 3;
         font-weight: 600;
-
         &:active {
             @include deep-click(0.95);
         }
@@ -81,15 +80,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
     span {
         text-align: center;
-
         &.nowrap {
             white-space: nowrap;
         }
     }
-
     &.is-hidden {
         display: none;
     }
@@ -99,7 +95,7 @@
     position: relative;
     border-bottom: none;
 
-    &::before {
+    &:before {
         content: "";
         position: absolute;
         top: 0;
@@ -115,7 +111,6 @@
         &__label {
             color: grey;
         }
-
         &__labels {
             position: relative;
             z-index: 3;
@@ -131,7 +126,7 @@
             &__label {
                 color: $dark-brown-color;
             }
-
+            
             &__labels {
                 position: static;
                 z-index: initial;
@@ -151,16 +146,13 @@
         font-size: 14px;
         font-weight: 600;
         z-index: 5;
-
         span {
             text-align: center;
         }
-
         &.is-hidden {
             display: none;
         }
     }
-
     .stock-full__status-link {
         margin: 0 0 0 5px;
     }

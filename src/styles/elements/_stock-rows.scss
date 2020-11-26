@@ -4,14 +4,14 @@
     line-height: initial;
     position: relative;
 
-    &::after {
+    &:after {
         content: "";
         position: absolute;
         top: 0;
         bottom: 0;
         right: 0;
         width: 20px;
-        background: linear-gradient(266deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.7371323529411764) 35%, rgba(255, 255, 255, 0) 100%);
+        background: linear-gradient(266deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.7371323529411764) 35%, rgba(255,255,255,0) 100%);
     }
 
     // блок нумерации
@@ -59,7 +59,7 @@
         font-weight: 600;
         font-size: 11px;
         color: $color-text-base;
-        padding: 0 2px;
+        padding: 0px 2px;
         user-select: none;
         border: 1px solid transparent;
         margin-bottom: 4px;
@@ -85,7 +85,7 @@
         cursor: pointer;
         position: relative;
 
-        &::before {
+        &:before {
             content: "";
             display: block;
             position: absolute;
@@ -99,7 +99,7 @@
             height: 18px;
         }
 
-        &::after {
+        &:after {
             content: "";
             display: none;
             position: absolute;
@@ -113,12 +113,11 @@
     }
 
     &__input:checked + &__label {
-        &::before {
+        &:before {
             border: 1px solid $error-primary;
             background: white;
         }
-
-        &::after {
+        &:after {
             display: block;
         }
     }
@@ -154,7 +153,7 @@
     font-size: 11px;
     color: $color-text-base;
     border-radius: 2px;
-    padding: 0 2px;
+    padding: 0px 2px;
     margin-right: 4px;
     user-select: none;
     border: 1px solid transparent;

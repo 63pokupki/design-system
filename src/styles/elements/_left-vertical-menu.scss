@@ -3,7 +3,8 @@
 .left-vertical-menu {
     display: inline-block;
     background: $background-color-primary;
-    min-width: 190px;
+    min-width: 190px;  
+
 
     &__section {
         border-bottom: 1px solid rgba(49, 140, 202, 0.25);
@@ -25,17 +26,15 @@
     &__item:last-child {
         margin-bottom: unset;
     }
-
     .link_text {
         font-size: 14px;
         color: $color-text-base;
-
         &.is-active {
             position: relative;
             font-weight: 600;
             color: $color-primary;
 
-            &::before {
+            &:before {
                 content: "";
                 position: absolute;
                 bottom: -3px;
@@ -45,16 +44,18 @@
                 width: calc(100% + 8px);
                 background: $color-primary;
             }
-        }
 
+        }
         &:hover {
             color: $color-primary;
-        }
-    }
-
+        }        
+    }    
     @media (max-width: 1024px) {
         & {
             display: none;
         }
     }
 }
+
+
+

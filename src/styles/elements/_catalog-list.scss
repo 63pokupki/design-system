@@ -9,11 +9,11 @@
         font-weight: bold;
         font-size: 13px;
         color: $color-primary;
-        border-radius: 0 0 2px 2px;
+        border-radius: 0px 0px 2px 2px;
     }
 
     &__subcategory {
-        padding: 12px 10px 0;
+        padding: 12px 10px 0px;
         margin: unset;
         font-size: 12px;
         font-weight: 600;
@@ -28,11 +28,11 @@
         margin: 12px 0 0 0;
         font-size: 12px;
         color: $color-text-heading;
-
         .catalog-list__item {
             font-weight: normal;
             font-size: 12px;
             color: $color-text-heading;
+
         }
     }
 
@@ -67,13 +67,12 @@
     }
 
     &__item {
-        padding: 0 5px 12px 0;
+        padding: 0px 5px 12px 0;
         font-size: 11px;
         color: $color-text-base;
         overflow: hidden;
         position: relative;
         text-shadow: none;
-
         &:last-child {
             padding-bottom: 15px;
         }

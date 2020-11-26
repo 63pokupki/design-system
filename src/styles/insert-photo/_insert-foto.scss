@@ -2,7 +2,6 @@
     &-component {
         padding: 0 10px;
     }
-
     &__main-heading {
         margin: 0 0 40px;
         color: $color-text-heading;
@@ -10,7 +9,6 @@
         font-weight: 600;
         text-align: center;
     }
-
     &__txt {
         margin: 0;
         padding: 0;
@@ -18,7 +16,6 @@
         line-height: 1.5em;
         color: $color-text-base;
     }
-
     &__txt_bold {
         font-weight: 600;
     }
@@ -29,55 +26,47 @@
 
         img {
             margin: 0 auto;
-            box-shadow: 0 0 15px 1px rgba(69, 66, 69, 0.6);
+            box-shadow: 0px 0px 15px 1px rgba(69,66,69,0.6);
         }
     }
-
     .mw-50 {
         max-width: 50%;
     }
-
     &__attention {
         color: $important-color;
     }
-
     ul {
         margin: 0 0 0 20px;
     }
-
     a {
         color: $color-primary;
     }
-
     .ds-btn {
         padding: 10px 18px;
     }
-
     .ds-btn__text {
         font-size: 14px;
         color: $background-color-primary;
     }
-
     .btn-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         margin: 20px 0;
-
         .insert-photo__txt {
             text-align: center;
             font-size: 18px;
             font-weight: 600;
-
             @media (max-width: 768px) {
                 font-size: 12px;
             }
         }
     }
-
     .ds-btn_hover {
         min-width: 285px;
         margin: 10px;
     }
 }
+
+

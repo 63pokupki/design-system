@@ -2,24 +2,20 @@ $spui-Collapse-font: $font-primary;
 $spui-Collapse-border-top: 1px solid #e3e3e3;
 $spui-Collapse-border-bottom: 1px solid #e3e3e3;
 $spui-Collapse-padding: 0 5px;
-
 /* Head */
 $spui-Collapse-head-padding: 11px 0;
 $spui-Collapse-head-font-weight: 600;
 $spui-Collapse-head-font-size: 12px;
 $spui-Collapse-head-line-height: 18px;
 $spui-Collapse-head-color: #1d1e1f;
-
 /* Arrow */
 $spui-Collapse-arrow-size: 7px;
 $spui-Collapse-arrow-rotate-speed: 0.2s;
 $spui-Collapse-arrow-color: #606266;
-
 /* Metainfo */
 $spui-Collapse-metainfo-font-size: 10px;
 $spui-Collapse-metainfo-line-height: 14px;
 $spui-Collapse-metainfo-color: #a2a3a5;
-
 /* Body */
 $spui-Collapse-body-font-size: 12px;
 $spui-Collapse-body-offset: 13px;
@@ -46,7 +42,6 @@ $spui-Collapse-body-color: #1d1e1f;
         display: flex;
         align-items: center;
         justify-content: space-between;
-
         span {
             margin-right: 10px;
             white-space: nowrap;
@@ -103,12 +98,10 @@ $spui-Collapse-body-color: #1d1e1f;
         line-height: $spui-Collapse-metainfo-line-height;
         color: $spui-Collapse-metainfo-color;
     }
-
     .spui-Collapse__bar {
         display: none;
         margin: 0;
     }
-
     .spui-Collapse__arrow {
         transition: transform $spui-Collapse-arrow-rotate-speed ease;
         transform: none;

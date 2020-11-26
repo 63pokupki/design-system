@@ -38,7 +38,6 @@ $spui-InputSearchWithHints_z3: $spui-InputSearchWithHints_z2 + 1;
 
     &__btn {
         @extend %reset-button;
-
         display: flex;
         align-items: center;
         justify-content: center;
@@ -47,7 +46,6 @@ $spui-InputSearchWithHints_z3: $spui-InputSearchWithHints_z2 + 1;
         right: 20px;
         border-radius: 50%;
         transform: translateY(-50%);
-
         &:active {
             transform: translateY(-50%) scale(0.95);
         }
@@ -58,7 +56,7 @@ $spui-InputSearchWithHints_z3: $spui-InputSearchWithHints_z2 + 1;
         cursor: pointer;
         z-index: $spui-InputSearchWithHints_z1;
         background-color: white;
-        box-shadow: 0 2px 16px rgba(0, 44, 128, 0.18);
+        box-shadow: 0px 2px 16px rgba(0, 44, 128, 0.18);
         padding: 32px 0 12px;
         width: 100%;
         bottom: 50%;
@@ -110,7 +108,7 @@ $spui-InputSearchWithHints_z3: $spui-InputSearchWithHints_z2 + 1;
         &__list {
             display: none;
             background-color: $background-color-primary;
-            box-shadow: 0 0 16px rgba(105, 153, 247, 0.35);
+            box-shadow: 0px 0px 16px rgba(105, 153, 247, 0.35);
             border-radius: 8px;
             cursor: initial;
             list-style: none;
@@ -136,7 +134,7 @@ $spui-InputSearchWithHints_z3: $spui-InputSearchWithHints_z2 + 1;
             }
         }
 
-        &::before {
+        &:before {
             position: absolute;
             content: "";
             width: 0;
@@ -167,7 +165,7 @@ $spui-InputSearchWithHints_z3: $spui-InputSearchWithHints_z2 + 1;
             transform: translateY(50%);
         }
 
-        &::before {
+        &:before {
             left: 17px;
         }
     }

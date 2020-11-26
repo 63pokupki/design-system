@@ -17,7 +17,7 @@ $spui-Switcher_font: $font-primary;
     align-items: center;
     display: inline-flex;
     user-select: none;
-    transition: all 0.3s ease;
+    transition: all .3s ease;
 
     &__input {
         display: none;
@@ -37,9 +37,8 @@ $spui-Switcher_font: $font-primary;
         border-width: $spui-Switcher_borderWidth;
         border-style: solid;
         border-radius: $spui-Switcher_borderRadius;
-        transition: all 0.3s ease;
+        transition: all .3s ease;
     }
-
     &__btn {
         display: block;
         border-radius: 50%;
@@ -49,7 +48,7 @@ $spui-Switcher_font: $font-primary;
         top: 50%;
         left: 2px;
         transform: translate(0%, -50%);
-        transition: all 0.3s ease;
+        transition: all .3s ease;
     }
 }
 
@@ -70,6 +69,7 @@ $spui-Switcher_font: $font-primary;
 }
 
 .spui-Switcher_checked {
+
     .spui-Switcher__btn {
         left: $spui-Switcher_width - $spui-Switcher_widthBtn - 4px;
     }
@@ -79,7 +79,6 @@ $spui-Switcher_font: $font-primary;
     .spui-Switcher__fake {
         border-color: $spui-Switcher_colorInactive;
     }
-
     .spui-Switcher__btn {
         background-color: $spui-Switcher_colorInactive;
     }
@@ -88,7 +87,6 @@ $spui-Switcher_font: $font-primary;
         .spui-Switcher__fake {
             border-color: $spui-Switcher_colorHover;
         }
-
         .spui-Switcher__btn {
             background-color: $spui-Switcher_colorHover;
         }
@@ -98,7 +96,6 @@ $spui-Switcher_font: $font-primary;
         .spui-Switcher__fake {
             border-color: $spui-Switcher_colorActive;
         }
-
         .spui-Switcher__btn {
             background-color: $spui-Switcher_colorActive;
         }
@@ -108,7 +105,6 @@ $spui-Switcher_font: $font-primary;
         .spui-Switcher__fake {
             border-color: $spui-Switcher_colorDisabled;
         }
-
         .spui-Switcher__btn {
             background-color: $spui-Switcher_colorDisabled;
         }
@@ -120,7 +116,6 @@ $spui-Switcher_font: $font-primary;
         border-color: $spui-Switcher_colorInactive;
         background-color: $spui-Switcher_colorInactive;
     }
-
     .spui-Switcher__btn {
         background-color: white;
     }
@@ -137,6 +132,7 @@ $spui-Switcher_font: $font-primary;
             border-color: $spui-Switcher_colorActive;
             background-color: $spui-Switcher_colorActive;
         }
+       
     }
 
     &.spui-Switcher_disabled {
@@ -144,5 +140,8 @@ $spui-Switcher_font: $font-primary;
             border-color: $spui-Switcher_colorDisabled;
             background-color: $spui-Switcher_colorDisabled;
         }
+       
     }
 }
+
+

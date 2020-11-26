@@ -4,19 +4,17 @@
     justify-content: flex-start;
     width: 100%;
     background-color: white;
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: 'Roboto',Arial,sans-serif;
 
     &__row {
         display: flex;
         width: 100%;
         flex-direction: row;
     }
-
     &__col {
         display: flex;
         flex-direction: column;
     }
-
     &__container-f {
         display: flex;
         width: 100%;
@@ -33,23 +31,22 @@
         background-origin: content-box;
         background-attachment: fixed;
         position: relative;
-
-        &::before {
+        &:before {
             content: "";
             position: absolute;
             top: 0;
             right: 0;
             bottom: 0;
             left: 0;
-            background-color: rgba(0, 0, 0, 0.4);
+            background-color: rgba(0,0,0, 0.4);
             z-index: 0;
         }
     }
 
-    &__logo,
+    &__logo, 
     &__slogan-h,
-    &__btn,
-    &__btn-container,
+    &__btn, 
+    &__btn-container, 
     &__btn-arrow-down {
         z-index: 10;
     }
@@ -68,15 +65,15 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-    }
 
+    }
     &__slogan-h {
         margin: 42px 0;
         font-size: 45px;
         color: white;
         font-weight: 700;
-    }
 
+    }
     &__btn {
         display: flex;
         justify-content: center;
@@ -87,7 +84,7 @@
         background-color: #1cbee6;
         border-radius: 50px;
         color: white;
-        font-family: 'Roboto', Arial, sans-serif;
+        font-family: 'Roboto',Arial,sans-serif;;
         font-size: 16px;
         font-weight: 700;
         cursor: pointer;
@@ -96,40 +93,33 @@
         text-transform: uppercase;
         text-decoration: none;
     }
-
     &__btn-container {
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 45px 0;
     }
-
     &__btn-arrow-down {
         cursor: pointer;
     }
 
     &__about-us {
         padding: 150px 0;
-
         .neosoft-page__col {
             max-width: 960px;
             margin: 0 20px;
         }
-
         h2 {
             font-size: 64px;
         }
-
         p {
             font-size: 24px;
             font-weight: 400;
         }
     }
-
     &__photo-block {
-        flex-wrap: nowrap;
+        flex-wrap: nowrap;        
     }
-
     &__photo {
         width: 100%;
         max-width: 600px;
@@ -137,14 +127,12 @@
         margin: 10px;
         background-size: contain;
         background-repeat: no-repeat;
-        background-position: center;
-
+        background-position: center; 
         div {
             position: relative;
-            width: 100%;
-        }
+            width: 100%;       
+        }     
     }
-
     &__photo-img {
         width: 100%;
     }
@@ -159,59 +147,55 @@
         width: 100%;
         max-width: 560px;
         padding: 25px;
-
         h3 {
-            font-size: 24px;
+            font-size: 24px;            
         }
-
         p {
             font-size: 16px;
             line-height: 1.55;
         }
+        
     }
-
     &__values {
         padding: 150px 0;
-
         h2 {
             padding: 0 0 0 25px;
-            font-size: 42px;
+            font-size: 42px;            
         }
-
         >.neosoft-page__row {
             flex-wrap: wrap;
         }
     }
-
     &__advantages {
         .neosoft-page__txt-block {
             display: flex;
+            
         }
-
         .neosoft-page__txt-block-container {
             justify-content: space-between;
         }
-
         h2 {
             padding: 0 0 0 25px;
             font-size: 42px;
         }
-
         p {
             padding: 0 0 0 20px;
             font-size: 22px;
         }
-
         .neosoft-page__txt-block {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
         }
     }
-
     &__txt-block-icon {
         display: flex;
         width: 100px;
         height: 100px;
     }
 }
+
+
+
+
+

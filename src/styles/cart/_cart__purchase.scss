@@ -31,25 +31,22 @@
         .rating-star-org__value {
             font-size: 14px;
             font-weight: 600;
-            color: #000;
+            color: #000000;
         }
 
         .ds-purchase-status__txt {
             font-size: 14px;
         }
-
         .collapse-block-css__header {
             z-index: 1;
         }
-
         .collapse-block-css__header-content {
             display: flex;
             width: 100%;
         }
-
         .collapse-block-css__header-content-item {
             &:nth-of-type(1) {
-                width: 35%;
+                width: 35%
             }
 
             &:nth-of-type(2) {
@@ -73,6 +70,7 @@
             margin-bottom: 0;
         }
 
+
         &-heading-terms,
         &-heading-comments {
             font-size: 12px;
@@ -80,7 +78,6 @@
             color: $color-text-heading;
             text-decoration: underline;
         }
-
         .tooltip {
             top: -3px;
         }
@@ -91,7 +88,6 @@
         align-items: center;
         margin: 0 0 15px 0;
     }
-
     &__purhase-heading {
         max-width: 360px;
         margin: 0 0 0 50px;
@@ -99,7 +95,6 @@
         font-size: 14px;
         line-height: 22px;
     }
-
     &__purchase-heading-terms {
         margin: 0 20px 0 0;
     }
@@ -118,14 +113,12 @@
             margin-right: -125px;
         }
     }
-
     &__purchase-col-50 {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 50%;
     }
-
     &__purchase-col-16 {
         display: flex;
         justify-content: center;
@@ -157,4 +150,6 @@
             width: 300px;
         }
     }
+
 }
+

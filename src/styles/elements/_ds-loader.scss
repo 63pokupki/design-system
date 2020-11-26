@@ -3,7 +3,7 @@
     height: 45px;
     margin: 0 auto;
 
-    &::after {
+    &:after {
         content: "";
         display: block;
         width: 100%;
@@ -18,9 +18,8 @@
         top: 50%;
         transform: translateY(-50%);
     }
-
     &_bg {
-        &::before {
+        &:before {
             content: "";
             position: absolute;
             top: 0;
@@ -28,15 +27,13 @@
             bottom: 0;
             left: 0;
             background: $background-color-primary;
-            opacity: 0.8;
+            opacity: .8;
         }
     }
-
     &_large {
         width: 100px;
         height: 100px;
     }
-
     &_small {
         width: 25px;
         height: 25px;
@@ -58,17 +55,17 @@
     bottom: 0;
     left: 0;
     display: flex;
-    justify-content: center;
+    justify-content: center;    
     z-index: 99;
     background-color: white;
     opacity: 0.8;
-
+    
     &_bottom {
         align-items: flex-end;
     }
     // Задний фон нужен для совместного использования с ds-loader_sticky
     &_bg {
-        &::before {
+        &:before {
             content: "";
             position: absolute;
             top: 0;
@@ -76,16 +73,18 @@
             bottom: 0;
             left: 0;
             background: $background-color-primary;
-            opacity: 0.8;
+            opacity: .8;
         }
+
     }
+
 }
+
 
 @keyframes rotate {
     from {
         transform: rotate(0deg);
     }
-
     to {
         transform: rotate(360deg);
     }
@@ -95,8 +94,10 @@
     .ds-loader-container {
         position: fixed;
     }
-
     .ds-loader_bg {
-        margin: auto;
+        margin: auto;        
     }
 }
+
+
+

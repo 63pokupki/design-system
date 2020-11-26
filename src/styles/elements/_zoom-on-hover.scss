@@ -6,7 +6,6 @@
 
 .zoom-on-hover .normal {
     /* width: 100% !important; */
-
     /* max-height: 100%; Саня, так надо */
     max-height: 400px;
 }
@@ -19,6 +18,7 @@
     object-fit: inherit !important;
 }
 
+
 .zoom-on-hover.zoomed .zoom {
     opacity: 1;
 }
@@ -26,7 +26,13 @@
 .zoom-on-hover.zoomed .normal {
     opacity: 0;
 }
-
 .modal__img-container {
     overflow: hidden;
 }
+
+
+
+
+
+
+

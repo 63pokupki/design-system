@@ -1,34 +1,33 @@
 .modal-short-img {
+
     .item-page-d__params {
         max-width: none;
     }
 
     .modal {
+
         h5 {
             font-size: 12px;
         }
-
+        
         &__wrap {
             max-width: 768px;
             min-width: 768px;
-
+            
             //Кнопки влево/вправо
             .arrow {
                 position: absolute;
-                top: calc(50% - 22px);
+                top: calc(50%-22px);
                 background: #fff;
                 z-index: 10;
-
                 &-right {
                     right: -65px;
                 }
-
                 &-left {
                     left: -65px;
                 }
-            }
+            }  
         }
-
         &__content {
             display: flex;
             flex-direction: row;
@@ -44,21 +43,20 @@
             &::-webkit-scrollbar {
                 height: 3px;
                 width: 7px;
-            }
 
+            }
             &::-webkit-scrollbar-thumb {
                 border-radius: 3px;
                 background: $color-primary;
                 width: 30px;
             }
-
             &::-webkit-scrollbar-track {
                 background: #e0eef7;
                 border-radius: 3px;
                 height: 3px;
             }
-        }
 
+        }
         &__col {
             display: flex;
             flex-direction: column;
@@ -68,16 +66,15 @@
             &:nth-child(2) {
                 margin-left: 30px;
                 padding: 0 15px 0 0;
-            }
+            } 
         }
-        //Tooltip
+        //Tooltip 
         &__tooltip {
             position: absolute;
             top: calc(50% - 22px);
             width: 44px;
             height: 44px;
             z-index: 999;
-
             &-left {
                 left: 95px;
             }
@@ -85,8 +82,7 @@
 
         //Кнопка закрыть(крестик)
         &__btn-close {
-            &::after,
-            &::before {
+            &:after, &:before {
                 display: none;
             }
         }
@@ -98,13 +94,14 @@
             justify-content: center;
             align-items: flex-start;
             width: 355px;
+            // max-height: 475px;
+            // min-height: 475px;
             cursor: pointer;
-
             .arrow {
                 display: none;
                 position: absolute;
-                top: calc(50% - 22px);
-                background: rgba(255, 255, 255, 0.7);
+                top: calc(50%-22px);
+                background: rgba(255, 255, 255, .7);
                 z-index: 10;
                 width: 32px;
                 height: 32px;
@@ -117,18 +114,16 @@
                 &-right {
                     right: 10px;
                 }
-
                 &-left {
                     left: 10px;
                 }
-            }
+            }  
 
             &:hover {
                 .arrow {
                     display: flex;
                 }
             }
-
             .normal {
                 max-width: 100%;
             }
@@ -149,6 +144,7 @@
                 height: 200px;
                 background: transparent;
             }
+
         }
 
         &__slider {
@@ -156,6 +152,7 @@
             width: 100%;
             margin: 12px 0 0 0;
             position: relative;
+            
 
             .img-container_small {
                 display: inline-flex;
@@ -177,7 +174,6 @@
                     width: auto;
                     height: auto;
                 }
-
                 &.is-active {
                     border: 2px solid $color-primary;
                 }
@@ -185,14 +181,12 @@
 
             .slider {
                 background: none;
-
                 &-wrap {
                     margin-bottom: 0;
                     position: absolute;
-                    left: 0;
+                    left: 0px;
                     top: 0;
                 }
-
                 &-viewing {
                     min-height: 100px;
                     overflow-x: auto;
@@ -201,17 +195,16 @@
                     &::-webkit-scrollbar {
                         height: 7px;
                     }
-
                     &::-webkit-scrollbar-thumb {
                         border-radius: 3px;
                         background: $color-primary;
                         width: 30px;
                     }
-
                     &::-webkit-scrollbar-track {
                         background: #e0eef7;
                         border-radius: 3px;
                     }
+
                 }
 
                 &-fade {
@@ -222,7 +215,7 @@
                     height: 80px;
                     background: transparent;
 
-                    &::after {
+                    &:after {
                         content: "";
                         position: absolute;
                         right: 0;
@@ -230,12 +223,7 @@
                         min-height: 100%;
                         width: 30px;
                         z-index: 1;
-                        background: linear-gradient(
-                            90deg,
-                            rgba(253, 253, 255, 0),
-                            #fff 100%,
-                            #fff
-                        );
+                        background: linear-gradient(90deg,rgba(253,253,255,0),#fff 100%,#fff)
                     }
                 }
 
@@ -249,9 +237,9 @@
                         z-index: 2;
                     }
                 }
-            }
-        }
+            }           
 
+        }
         &__scroll {
             display: flex;
             margin: 15px 0 0 0;
@@ -267,27 +255,24 @@
             &::first-letter {
                 text-transform: uppercase;
             }
+            
         }
-
+        
         &__price {
             margin-bottom: 5px;
-
             p {
                 font-size: 20px;
                 font-weight: 700;
                 margin: 0 0 5px 0;
             }
-
             span {
                 font-size: 16px;
                 color: $color-text-base;
-
                 &:nth-child(2) {
                     font-size: 16px;
                 }
             }
         }
-
         &__goods-param {
             display: flex;
             flex-direction: column;
@@ -295,36 +280,30 @@
             .item-params-list {
                 left: -5px;
                 // max-height: 26px;
-                transition: all 0.3s;
-
+                transition: all .3s;
                 &.is-expanded {
                     max-height: 300px;
-                    transition: all 0.9s;
+                    transition: all .9s;
                 }
             }
-        }
 
+        }
         &__btn-link {
             color: $color-text-light-grey;
             font-size: 11px;
             visibility: hidden;
-
             &.is-visible {
                 visibility: visible;
             }
         }
-
         &__content {
-            &-color,
-            &-size {
+            &-color, &-size {
                 position: relative;
-
                 &.is-warning {
                     .item-params-list {
                         border: 1px solid $error-light;
                         border-radius: 3px;
                     }
-
                     .ds-popover {
                         bottom: -25px;
                         visibility: visible;
@@ -332,12 +311,10 @@
                         opacity: 1;
                     }
                 }
-
                 h5 {
                     &::first-letter {
                         text-transform: capitalize;
                     }
-
                     margin: 20px 0 5px 0;
                 }
                 // Для фронта
@@ -346,47 +323,39 @@
                         bottom: -47px;
                     }
                 }
+            
             }
-
             &-size {
                 margin-bottom: 15px;
             }
         }
-
         &__btn-container {
             display: flex;
             justify-content: flex-start;
             align-items: center;
-
             .btn-sum {
                 margin-right: 20px;
             }
-
             .btn-add-to-card {
                 max-height: 32px;
                 min-width: 160px;
                 margin-right: 15px;
-
                 .icon-cart {
                     margin-left: 5px;
                 }
             }
-
             .favorite {
                 min-width: 23px;
-
                 &__icon {
                     font-size: 22px;
                 }
-            }
+            }    
         }
-
         &__sum {
             display: flex;
             flex-direction: row;
             width: 80px;
             align-items: center;
-
             &-num {
                 width: 35px;
                 margin: 0 5px;
@@ -396,22 +365,18 @@
                 text-align: center;
             }
         }
-
         &__plus {
-            &::before {
+            &:before {
                 width: 8px;
                 transform: rotate(90deg);
             }
-
-            &::after {
+            &:after {
                 width: 8px;
             }
         }
-
         &__goods-info {
             position: relative;
             margin: 15px 0 0 0;
-
             &.is-toggle {
                 & {
                     p {
@@ -421,35 +386,30 @@
                     }
                 }
             }
-
             &.is-no-blur {
-                &::after {
+                &:after {
                     visibility: hidden;
                 }
             }
-
             h5 {
                 margin: 20px 0 0 0;
             }
-
             p {
                 font-size: 12px;
                 color: $color-text-base;
                 // max-height: 50px;
                 overflow: hidden;
-                transition: all 0.5s;
-            }
+                transition: all .5s;
 
+            }
             a {
                 font-size: 12px;
                 color: $color-primary;
-
                 &:visited {
                     color: $color-primary;
                 }
             }
-
-            &::after {
+            &:after {
                 content: "";
                 width: 100%;
                 height: 50px;
@@ -457,24 +417,19 @@
                 bottom: 0;
                 left: 0;
                 z-index: 2;
-                background: linear-gradient(
-                    0deg,
-                    #fff,
-                    hsla(0, 0%, 100%, 0) 105%
-                );
+                background: linear-gradient(0deg,#fff,hsla(0,0%,100%,0) 105%)
             }
         }
-
         &__btn-about-goods {
             font-size: 12px;
             color: $color-primary;
             margin: 30px 0 20px 0;
             text-align: center;
-
             .icon-eye {
                 margin-right: 12px;
             }
         }
+
     }
     // Ширина рядов
     .stock-rows {
@@ -488,7 +443,6 @@
     .collapse-section {
         overflow: visible;
     }
-
     .collapse-section__body {
         overflow: hidden;
         max-height: 0;
@@ -505,3 +459,4 @@
         color: $color-text-heading;
     }
 }
+
