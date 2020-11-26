@@ -18,7 +18,6 @@
         font-weight: 600;
         color: $color-primary;
     }
-
     .checkbox__label-all {
         color: $color-text-heading;
     }
@@ -26,25 +25,20 @@
     .search {
         max-width: 168px;
         margin: 0 0 0 20px;
-
         input {
             height: 24px;
         }
     }
-
     .search__button {
         right: 10px;
-
         img {
             max-width: 20px;
         }
     }
-
     .search__bar {
         padding-left: 15px;
         padding-right: 40px;
     }
-
     .tooltip {
         min-width: 240px;
     }

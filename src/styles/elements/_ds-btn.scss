@@ -39,18 +39,16 @@ $button-border-radius: 24px;
     text-decoration: none;
     line-height: 135%;
     transition: background $transition-ultra-fast, color $transition-ultra-fast;
-
+    
     &.is-loader {
         & {
             min-width: 160px;
             min-height: 32px;
             padding: 0 18px;
         }
-
         .ds-btn__text {
             display: none;
         }
-
         .ds-loader {
             display: inline-flex;
         }
@@ -71,13 +69,12 @@ $button-border-radius: 24px;
         color: white;
         background: $color-primary;
     }
-
     &_disabled {
         color: $color-primary;
         background: white;
-        opacity: 0.6;
+        opacity: .6;
         user-select: none;
-        pointer-events: none;
+        pointer-events: none; 
     }
 
     &_flex {
@@ -88,13 +85,11 @@ $button-border-radius: 24px;
     &_inverse {
         background: $color-primary;
         color: white;
-
         &:hover {
             color: $color-primary;
             background: white;
         }
     }
-
     .ds-loader {
         display: none;
     }

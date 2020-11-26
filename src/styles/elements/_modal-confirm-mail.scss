@@ -5,24 +5,19 @@
             color: #fff;
             cursor: pointer;
             pointer-events: visible;
-
-            &:active,
-            :focus {
+            &:active, :focus {
                 transform: scale(0.95);
-            }
+            }  
         }
-
         .modal-confirm-mail__input {
-            border-color: $color-primary;
+            border-color: $color-primary;            
         }
-
         .modal-confirm-mail__form {
-            &::before {
+            &:before {
                 color: $color-primary;
             }
         }
     }
-
     .modal__btn-close {
         top: 5px;
         right: 5px;
@@ -32,13 +27,12 @@
         max-width: 500px;
         border-radius: 10px;
     }
-
     .modal__header {
         margin: 0 0 35px 0;
         text-align: center;
         color: $dark-grey-color;
     }
-
+    
     .modal__content {
         flex-direction: column;
     }
@@ -51,7 +45,6 @@
         background-size: contain;
         background-position: center;
     }
-
     &__description {
         display: flex;
         max-width: 430px;
@@ -62,7 +55,6 @@
         line-height: 18px;
         color: $dark-grey-color;
     }
-
     &__form {
         display: flex;
         flex-direction: column;
@@ -81,46 +73,41 @@
         //     padding: 0 10px;
         //     font-size: 15px;
         //     color: $color-inactive;
-        // }
+        // } 
+ 
     }
-
     &__input-container {
         position: relative;
         display: block;
         width: 100%;
         max-height: 350px;
     }
-
     &__input {
-        width: 100%;
-        height: 48px;
-        margin: 13px;
-        padding: 0 20px;
-        border: 1px solid $color-inactive;
-        border-radius: 2px;
-        font-size: 14px;
-        font-weight: 600;
-        color: $dark-grey-color;
-        outline: none;
-
-        &::placeholder {
-            font-weight: 500;
-            color: $color-text-light-grey;
-        }
-
-        &:focus {
+       width: 100%;
+       height: 48px;
+       margin: 13px;
+       padding: 0 20px;
+       border: 1px solid $color-inactive;
+       border-radius: 2px;
+       font-size: 14px;
+       font-weight: 600;
+       color: $dark-grey-color;
+       outline: none;
+       &::placeholder {
+           font-weight: 500;
+           color: $color-text-light-grey;
+       }
+       &:focus {
             border-color: $color-primary;
-
             ~.modal-confirm-mail__label {
-                &::before {
+                &:before {
                     color: $color-primary;
                 }
             }
-        }
+       }
     }
-
     &__label {
-        &::before {
+        &:before {
             content: "Email";
             display: inline-flex;
             height: 15px;
@@ -131,9 +118,9 @@
             padding: 0 10px;
             font-size: 15px;
             color: $color-inactive;
-        }
-    }
+        } 
 
+    }
     &__btn {
         width: 222px;
         height: 44px;
@@ -143,35 +130,28 @@
         font-weight: 500;
         border-color: rgba(54, 166, 242, 0.5);
         pointer-events: none;
-
         &:hover {
             cursor: not-allowed;
             background: none;
-            color: rgba(54, 166, 242, 0.5);
+            color: rgba(54, 166, 242, 0.5); 
         }
-
-        &:active,
-        :focus {
+        &:active, :focus {
             transform: scale(1);
         }
-
         .ds-btn__text {
             white-space: nowrap;
-        }
+        }        
     }
-
     &__info {
         margin: 0 0 10px 0;
         padding: 0 5px;
         font-size: 11px;
         text-align: center;
         color: $color-text-heading;
-
         &.mobile {
             display: none;
         }
     }
-
     &__footer {
         margin: 15px 0 10px 0;
         text-align: center;
@@ -179,63 +159,56 @@
         font-weight: 600;
         color: $color-text-base;
     }
-
+            
     @media (max-width: 415px) {
-        // Mobile
+            // Mobile
         .modal__wrap {
             max-width: 300px;
             padding: 15px 15px 4px 15px;
         }
-
         .modal__header {
             font-size: 15px;
             margin: 0 0 25px;
         }
-
         .modal-confirm-mail__description {
             margin: 15px 0 10px;
             padding: 0;
             font-size: 12px;
         }
-
         .modal-confirm-mail__img {
             min-height: 49px;
         }
-
         .modal-confirm-mail__info {
             display: none;
-
             &.mobile {
                 display: flex;
                 padding: 0;
             }
         }
-
         .modal-confirm-mail__form {
             padding: 0;
             margin: 10px 0 0 0;
-
-            &::before {
+            &:before {
                 left: 5px;
             }
         }
-
         .modal-confirm-mail__input {
             margin: 13px 0;
         }
-
         .modal-confirm-mail__footer {
             margin: 0 0 10px;
             font-size: 11px;
         }
-
         .modal-confirm-mail__info {
             font-size: 8px;
         }
 
-        .modal-confirm-mail__label::before {
+        .modal-confirm-mail__label:before {
             left: 8px;
         }
+
+    
+
     }
     // // Mobile
     // &.mobile {
@@ -281,3 +254,8 @@
     //     }
     // }
 }
+
+
+
+
+

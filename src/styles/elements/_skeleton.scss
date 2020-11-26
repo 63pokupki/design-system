@@ -11,7 +11,6 @@ $skeleton-margin-small: $skeleton-margin-standart / 2;
     from {
         transform: translateX(-100%);
     }
-
     to {
         transform: translateX(100%);
     }
@@ -21,7 +20,7 @@ $skeleton-margin-small: $skeleton-margin-standart / 2;
     position: relative;
     overflow: hidden;
 
-    &::after {
+    &:after {
         animation: loading 1.5s infinite;
         content: "";
         height: 100%;
@@ -42,7 +41,7 @@ $skeleton-margin-small: $skeleton-margin-standart / 2;
     height: 100%;
     border-radius: $skeleton-border-radius;
     box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.15);
-    background-color: #fff;
+    background-color: #ffffff;
     cursor: progress;
     user-select: none;
 }
@@ -119,7 +118,7 @@ $skeleton-margin-small: $skeleton-margin-standart / 2;
     .ml {
         margin-left: $skeleton-margin-standart;
     }
-
+   
     .mbs {
         margin-bottom: $skeleton-margin-small;
     }

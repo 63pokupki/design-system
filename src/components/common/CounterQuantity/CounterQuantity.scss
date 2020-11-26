@@ -26,7 +26,6 @@ $spui-CounterQuantity_font: $font-primary;
     &__minus,
     &__plus {
         @extend %reset-button;
-
         border-radius: 50%;
         background-color: #c4c4c4;
         position: relative;
@@ -44,7 +43,7 @@ $spui-CounterQuantity_font: $font-primary;
     }
 
     &__minus {
-        &::before {
+        &:before {
             content: "";
             position: absolute;
             width: 6px;
@@ -57,7 +56,7 @@ $spui-CounterQuantity_font: $font-primary;
     }
 
     &__plus {
-        &::before {
+        &:before {
             content: "";
             position: absolute;
             width: 8px;
@@ -68,7 +67,7 @@ $spui-CounterQuantity_font: $font-primary;
             transform: translate(-50%, -50%);
         }
 
-        &::after {
+        &:after {
             content: "";
             position: absolute;
             width: 8px;

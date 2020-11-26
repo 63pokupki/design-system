@@ -13,17 +13,15 @@
         display: flex;
         align-items: flex-start;
         margin-bottom: 10px;
-
         @media (max-width: 500px) {
             flex-wrap: wrap;
-        }
+        }        
     }
 
     &__info {
         flex-shrink: 0;
         margin-right: 15px;
         min-width: 120px;
-
         @media (max-width: 500px) {
             margin-bottom: 15px;
         }
@@ -42,18 +40,18 @@
         color: $color-text-light-grey;
     }
 
-    &__text {
+    &__text {        
         font-weight: 400;
         font-size: 12px;
         line-height: 20px;
-        color: #666;
+        color: #666666;
     }
 
     &__leave-feedback {
         display: flex;
         width: 100%;
         max-width: 185px;
-        margin: 30px auto 0;
+        margin: 30px auto 0px;
     }
 
     &__more-w {

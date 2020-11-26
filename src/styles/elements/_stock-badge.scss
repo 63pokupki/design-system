@@ -2,12 +2,12 @@
 .stock-badge {
     font-weight: 600;
     font-size: 11px;
-    color: #fff;
+    color: #ffffff;
     padding: 1px 7px;
     position: relative;
     user-select: none;
 
-    &::before {
+    &:before {
         content: "";
         position: absolute;
         top: -7px;
@@ -21,10 +21,10 @@
 
 // значок рядов
 .stock-badge_rows {
-    background: #ff999f;
+    background: #FF999F;
 
-    &::before {
-        border-top: 7px solid #aa797c;
+    &:before {
+        border-top: 7px solid #AA797C;
     }
 }
 
@@ -32,7 +32,7 @@
 .stock-badge_already {
     background: $color-primary;
 
-    &::before {
+    &:before {
         border-top: 7px solid #2c6aa4;
     }
 }

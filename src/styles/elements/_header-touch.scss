@@ -16,7 +16,7 @@
         .tooltip {
             transform: translate(-20%, 100%);
 
-            &::before {
+            &:before {
                 left: calc(20% - 3px);
             }
         }
@@ -43,7 +43,7 @@
         position: relative;
         color: $color-primary;
 
-        &::after {
+        &:after {
             position: absolute;
             content: "";
             bottom: -16px;
@@ -53,7 +53,7 @@
             height: 0;
             border-style: solid;
             border-width: 7px 7px 0 7px;
-            border-color: #cbe2f2 transparent transparent transparent;
+            border-color: #CBE2F2 transparent transparent transparent;
             z-index: 5;
         }
     }
@@ -63,14 +63,12 @@
         justify-content: space-between;
         align-items: center;
     }
-
     &__logo {
         width: 95px;
     }
 
     &__caption-icon-w {
         text-decoration: none;
-
         &:hover {
             text-decoration: none;
         }

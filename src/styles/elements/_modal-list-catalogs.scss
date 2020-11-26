@@ -1,30 +1,27 @@
 .modal-list-catalogs {
     display: flex;
-    align-items: flex-end !important;
+    align-items: flex-end!important;
     position: fixed;
     width: 100%;
     padding: 1% 10% 1%;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 9999;
+    z-index: 9999; 
     visibility: hidden;
-
     &.demo {
         position: relative;
     }
-
     &.is-visible {
         visibility: visible;
-    }
+    }   
 
     .modal-container {
         display: flex;
-
         &__wrap {
             width: 100%;
             padding: 0;
-            box-shadow: 0 0 20px rgba(97, 97, 97, 0.2);
+            box-shadow: 0px 0px 20px rgba(97, 97, 97, 0.2);
             background: $background-color-primary;
 
             &.is-toggle {
@@ -32,26 +29,23 @@
                     max-height: 65vh;
                     width: 100%;
                     padding: 15px;
-                    transition: all 0.3s;
-                    overflow-x: auto;
+                    transition: all .3s;
+                    overflow-x: auto;    
                 }
-
                 .icon-arrow-down {
                     transform: rotate(0deg);
-                    transition: all 0.3s;
+                    transition: all .3s;
                 }
-
                 .modal-container__footer {
                     border-top: 1px solid $color-primary;
                 }
+
             }
         }
-
         &__btn-close {
             width: 100%;
             height: 20px;
             position: relative;
-
             .icon-close {
                 width: 20px;
                 height: 20px;
@@ -59,7 +53,6 @@
                 right: 0;
             }
         }
-
         &__content {
             display: flex;
             flex-direction: column;
@@ -68,10 +61,11 @@
             max-height: 0;
             height: auto;
             overflow-x: hidden;
-            transition: all 0.1s;
+            transition: all .1s;
 
             h3 {
                 font-size: 14px;
+                margin-top: 0;
                 margin: 0 0 15px 25px;
                 position: relative;
             }
@@ -81,7 +75,7 @@
                 max-height: 120px;
                 overflow-y: auto;
                 overflow-x: hidden;
-                transition: all 0.8s;
+                transition: all .8s;
 
                 .checkbox {
                     // flex-basis: 33.33%;
@@ -89,14 +83,13 @@
                     margin-bottom: 5px;
 
                     &__label {
-                        p {
+                        p { 
                             margin: 0;
                             white-space: nowrap;
                             width: 260px;
                             text-overflow: ellipsis;
                             overflow: hidden;
                             color: $dark-grey-color;
-
                             &:hover {
                                 color: $color-primary;
                             }
@@ -110,11 +103,9 @@
                 margin: 15px 0 25px 25px;
             }
         }
-
         &__btn-position,
         &__btn-catalogs {
             cursor: default;
-
             i {
                 visibility: hidden;
             }
@@ -124,26 +115,26 @@
             &.is-toggle {
                 max-height: 0;
                 min-height: 0;
-                transition: all 0.3s;
+                transition: all .3s;
                 overflow: hidden;
             }
+
         }
         // Сворачивание позиций
         &__positions {
             &.is-toggle {
                 max-height: 0;
                 min-height: 0;
-                transition: all 0.3s;
+                transition: all .3s;
                 overflow: hidden;
-
-                ~.modal-container__btn-position {
+                ~.modal-container__btn-position{                        
                     padding-top: 0;
-
                     .icon-arrow-down {
                         transform: rotate(180deg);
                     }
                 }
             }
+
         }
 
         &__btn-catalogs,
@@ -151,19 +142,18 @@
             pointer-events: none;
             padding: 10px;
             color: $color-primary;
-            transition: all 0.3s;
+            transition: all .3s;
             font-size: 10px;
-
             &:hover {
                 color: $color-text-base;
             }
-        }
 
+        }
         &__footer {
             display: flex;
             flex-direction: column;
             width: 100%;
-            padding: 0 40px 10px;
+            padding: 0px 40px 10px;
             position: relative;
 
             &-row {
@@ -179,11 +169,9 @@
                     justify-content: center;
                     cursor: pointer;
                 }
-
                 &:nth-child(2) {
                     flex-wrap: wrap;
                 }
-
                 &:nth-child(3) {
                     justify-content: space-between;
                 }
@@ -192,9 +180,8 @@
                     padding: 10px 200px;
                     color: $color-primary;
                     transform: rotate(180deg);
-                    transition: all 0.3s;
+                    transition: all .3s;
                     font-size: 10px;
-
                     &:hover {
                         color: $color-text-base;
                     }
@@ -206,73 +193,61 @@
                     white-space: nowrap;
                 }
             }
-
             .ds-btn_hover {
                 display: flex;
                 min-width: 160px;
                 height: 32px;
-            }
-
+            }            
             span {
                 white-space: nowrap;
             }
         }
-
         &__selected-catalog_not-selected {
             font-size: 14px;
             color: #a2a3a5;
         }
-
         &__span-wrap {
             display: flex;
             flex-wrap: nowrap;
         }
-
         &__btn-container {
             display: flex;
             justify-content: space-between;
             width: 310px;
             flex-shrink: 0;
-
             .row {
                 display: flex;
                 justify-content: center;
                 align-items: center;
             }
-
             .link_hover {
                 margin: 0;
             }
         }
-
         &__selected-catalog-wrap {
             &.is-selected {
                 .modal-container__selected-catalog_selected {
                     display: inline;
                     color: $color-text-heading;
-                    font-weight: 600;
+                    font-weight: 600;        
                 }
-
                 .modal-container__selected-catalog_not-selected {
                     display: none;
                 }
-
                 .modal-container__btn-container {
                     .ds-btn_hover {
                         display: flex;
-                    }
+                    } 
                 }
             }
         }
-
-        &__selected-catalog {
+        &__selected-catalog {            
             width: 415px;
             margin: 0 12px 0 0;
             overflow: hidden;
             font-weight: 600;
             text-overflow: ellipsis;
             color: $dark-brown-color;
-
             span {
                 font-weight: normal;
             }
@@ -281,6 +256,7 @@
         &__selected-catalog_selected {
             display: none;
         }
+
     }
 }
 
@@ -292,89 +268,75 @@
 
 @media (max-width: 768px) {
     .modal-list-catalogs {
-        box-shadow: 0 5px 6px 2px $color-primary;
+        box-shadow: 0px 5px 6px 2px $color-primary;    
     }
-
     .modal-list-catalogs .modal-container__content-row .checkbox {
         flex-basis: 100%;
     }
-
     .modal-list-catalogs {
         padding: 0;
-
         .modal-container {
+           
             &__footer-row {
                 &:nth-child(3) {
                     flex-wrap: wrap;
                 }
             }
-
             &__btn-container {
                 margin: 15px 0 0 0;
             }
-
             &__selected-catalog {
                 width: 100%;
             }
+            
         }
-
         .modal-container__selected-catalog {
             margin: 15px 0 0 0;
         }
     }
 }
-
 @media (max-width: 500px) {
     .modal-list-catalogs {
         .modal-container__wrap {
             max-height: 100vh;
             overflow-x: hidden;
             overflow-y: auto;
-
             &.is-toggle {
                 .modal-container__content {
                     padding-bottom: 0;
                 }
-
                 .modal-container__footer {
                     border-top: none;
-                }
+                }    
             }
         }
-
         .modal-container {
             &__btn-container {
                 width: 100%;
                 flex-wrap: wrap;
-
                 .row {
                     width: 100%;
-
                     &:nth-child(1) {
                         justify-content: flex-start;
-
                         .link_hover {
                             margin: 0 0 25px;
                         }
+
                     }
                 }
-
                 .link_hover {
                     margin: 0 0 20px 0;
                 }
-
                 .ds-btn_hover {
                     min-width: 300px;
                     font-size: 14px;
                     padding: 4px 18px;
-                }
+                }    
             }
-
             &__btn-catalogs,
             &__btn-position {
                 position: relative;
-
-                &::after {
+                &:after {
                     content: "";
                     width: 100%;
                     height: 2px;
@@ -384,12 +346,12 @@
                     left: 0;
                     opacity: 0.3;
                 }
+
             }
         }
-
-        .modal-container__content {
+        .modal-container__content { 
             h3 {
-                margin: 0 0 15px 0;
+                margin: 0 0 15px 0; 
             }
 
             .link_hover {
@@ -397,8 +359,10 @@
             }
         }
     }
-}
 
+}
+@media (min-width: 501px) {
+}
 @media (max-width: 430px) {
     .modal-list-catalogs {
         .modal-container__footer-row {
@@ -406,26 +370,26 @@
             &:nth-child(2) {
                 justify-content: space-between;
                 align-items: baseline;
-
                 span {
                     margin: 0 90px 15px 0;
                 }
-            }
+            }            
         }
     }
-}
 
+}
 @media (max-width: 355px) {
     .modal-list-catalogs {
         .modal-container__footer-row {
             // Для переноса выбрано
             &:nth-child(2) {
                 justify-content: space-between;
-            }
+            }            
         }
-
         .modal-container__selected-catalog {
             margin: 15px 0 0 0;
         }
     }
 }
+  
+

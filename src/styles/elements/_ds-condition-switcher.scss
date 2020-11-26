@@ -1,18 +1,16 @@
 .switcher {
     display: inline-flex;
-
+    
     &__checkbox {
         display: none;
     }
-
-    &__checkbox:checked ~ .switcher__label::after {
+    &__checkbox:checked ~ .switcher__label:after {
         transform: translateX(12px);
-        transition: transform 0.3s;
+        transition: transform .3s;
     }
-
     &__checkbox:checked ~ .switcher__label {
         background: $color-primary;
-        transition: background-color 0.3s;
+        transition: background-color .3s;
     }
     //Обёртка кнопки
     &__label {
@@ -22,13 +20,13 @@
         min-width: 28px;
         height: 16px;
         padding: 2px;
-        background-color: #bab9b9;
+        background-color: #BAB9B9;
         border-radius: 50px;
         cursor: pointer;
-        transition: all 0.3s;
+        transition: all .3s;
     }
     //Кнопка
-    &__label::after {
+    &__label:after {
         content: "";
         display: inline-flex;
         width: 12px;
@@ -37,7 +35,7 @@
         background: #fff;
         border: 1px solid transparent;
         cursor: pointer;
-        transform: translateX(0);
-        transition: transform 0.3s;
+        transform: translateX(0px);
+        transition: transform .3s;
     }
 }

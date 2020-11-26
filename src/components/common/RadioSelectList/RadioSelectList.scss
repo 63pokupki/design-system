@@ -24,7 +24,6 @@ $spui-RadioSelectList_font: $font-primary;
 
     &__value {
         @extend %reset-button;
-
         color: $color-inactive;
         margin-right: 4px;
         font-size: 14px;
@@ -46,12 +45,11 @@ $spui-RadioSelectList_font: $font-primary;
     &__selected {
         position: relative;
         color: $color-text-base;
-
-        &::after {
+        &:after {
             content: "";
             position: absolute;
             bottom: -2px;
-            left: 0;
+            left: 0px;
             height: 1px;
             width: 100%;
             background: $color-primary;

@@ -18,26 +18,21 @@
         background: $card-color-bg;
         font-size: 13px;
         color: $color-text-heading;
-
         &.mob {
             padding: 0 30px;
-
             @media (min-width: 1025px) {
                 display: none;
             }
-
             @media (max-width: 992px) {
                 padding: 0 20px;
             }
         }
-
         &.desk {
             @media (max-width: 1024px) {
                 display: none;
             }
         }
     }
-
     &__tab {
         display: flex;
         justify-content: flex-start;
@@ -48,11 +43,9 @@
         cursor: pointer;
         position: relative;
         white-space: nowrap;
-
-        &.is-selected {
+        &.is-selected {            
             font-weight: 600;
-
-            &::after {
+            &:after {
                 content: "";
                 display: block;
                 width: calc(100% + 6px);
@@ -61,33 +54,28 @@
                 left: -3px;
                 bottom: 10px;
                 background-color: $color-primary;
-
                 @media (max-width: 1024px) {
                     bottom: 15px;
                 }
+        
             }
         }
-
         &:hover {
             @media (min-width: 1025px) {
                 color: $color-primary;
             }
         }
-
         @media (max-width: 1024px) {
-            height: 55px;
+            height: 55px;            
         }
-
         @media (max-width: 500px) {
             margin-right: 50px;
             font-size: 12px;
-
             &.header-wrap-card__tab_unseen {
                 margin: 0;
             }
         }
     }
-
     &__sort {
         display: flex;
         flex-direction: row;
@@ -96,34 +84,30 @@
         position: relative;
         width: 100%;
         background: #fff;
-        padding: 5px 0;
+        padding: 5px 0px;
         border-top: 1px solid $color-border-header-active-pur;
         border-bottom: 1px solid $color-border-header-active-pur;
 
         &-container {
             display: flex;
             flex-direction: row;
-            align-items: center;
+            align-items: center;            
             width: 70%;
         }
-
         .filter-name {
             display: flex;
             white-space: nowrap;
             margin-right: 5px;
         }
     }
-
     &__container-sorting {
         display: flex;
         margin-top: 2px;
         justify-content: space-between;
         width: 700px;
-
         @media (max-width: 1024px) {
             max-width: 350px;
         }
-
         @media (max-width: 350px) {
             max-width: 310px;
         }
@@ -132,7 +116,7 @@
             @media (max-width: 600px) {
                 display: none;
             }
-        }
+        }        
     }
 
     // ОБёртка сортировки и фильтра
@@ -149,39 +133,32 @@
         padding: 0 20px;
         background: $bg-wrapper-card-color;
     }
-
     &__sorting {
         margin-right: 100px;
         margin-top: 15px;
         margin-bottom: 15px;
         font-size: 12px;
         color: $color-text-base;
-
         &:nth-child(2) {
             margin-right: 0;
         }
     }
-
     .filter {
         margin-right: 20px;
-
         @media (max-width: 400px) {
             margin-right: 5px;
         }
     }
-
     &__switcher {
         &-name {
             margin-left: 10px;
             font-size: 11px;
             color: $light-gray-color;
         }
-
         input:checked ~ .wrapper-card__switcher-name {
             color: $color-primary;
         }
     }
-
     &__alert-info {
         display: none;
         justify-content: center;
@@ -190,44 +167,38 @@
         width: 100%;
         margin-top: 20px;
         background: $bg-wrapper-card-color;
-
         &.is-visible {
             display: flex;
         }
     }
-
     @media (max-width: 1025px) {
         & {
             padding: 0;
             margin: 0;
             border-top: 1px solid $color-border-header-active-pur;
         }
-
         .header-wrap-card {
             &__sort {
                 flex-wrap: wrap;
                 border-bottom: 0;
             }
-
             &__switcher-desktop {
                 display: none;
             }
-
             &__container-switcher {
                 display: flex;
                 width: 100%;
             }
         }
     }
-
     @media (max-width: 1025px) and (min-width: 371px) {
         .header-wrap-card {
             &__sort {
                 padding: 0 0 0 20px;
             }
         }
-    }
 
+    }
     @media (max-width: 370px) {
         .header-wrap-card {
             &__sort {
@@ -235,4 +206,11 @@
             }
         }
     }
+
 }
+
+
+
+
+
+

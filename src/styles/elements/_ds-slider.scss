@@ -12,7 +12,6 @@
         .slider {
             padding: 10px;
         }
-
         .btn-l,
         .btn-r {
             display: none;
@@ -23,7 +22,6 @@
     &.no-l-btn {
         .btn-l {
             pointer-events: none;
-
             img {
                 visibility: hidden;
             }
@@ -34,12 +32,12 @@
     &.no-r-btn {
         .btn-r {
             pointer-events: none;
-
             img {
                 visibility: hidden;
             }
         }
     }
+    
 
     .btn-l,
     .btn-r {
@@ -96,8 +94,8 @@
             white-space: nowrap;
             // Для активных закупок
             &:nth-of-type(3n) {
-                margin-right: 0 !important;
-            }
+                margin-right: 0px !important
+            }            
 
             a {
                 font-size: 12px;
@@ -116,42 +114,37 @@
 // Слайдер с баннерами
 // v2
 .slider-banners {
-    max-width: 800px;
+	max-width: 800px;
     position: relative;
     overflow: hidden;
     margin: 10px auto 20px auto;
     background: transparent;
-
     .ds-icon {
         z-index: 2;
     }
 
     .icon-arrow-left {
         position: absolute;
-        left: 0;
-        top: calc(50% - 25px);
+        left: 0px;
+        top: calc(50%-25px);
         padding: 10px;
         color: $color-primary;
-        font-size: 30px;
-
+        font-size: 30px;       
         &:hover {
             color: $color-text-base;
-        }
+        } 
     }
-
     .icon-arrow-right {
         position: absolute;
-        right: 0;
-        top: calc(50% - 25px);
+        right: 0px; 
+        top: calc(50%-25px);
         padding: 10px;
         color: $color-primary;
-        font-size: 30px;
-
+        font-size: 30px; 
         &:hover {
             color: $color-text-base;
         }
     }
-
     &__wrap {
         display: flex;
         width: 100%;
@@ -159,17 +152,17 @@
         overflow: hidden;
         max-height: 100px;
     }
-
     &__container {
         display: flex;
-        transition: transform 0.7s ease;
+        transition: transform 0.7s ease
     }
-
+    
     @media (max-width: 600px) {
-        .icon-arrow-right,
+        .icon-arrow-right, 
         .icon-arrow-left {
             font-size: 20px;
-            top: calc(50% - 20px);
+            top: calc(50%-20px);
+
         }
     }
 }
@@ -178,3 +171,5 @@
     flex: 0 0 100%;
     max-width: 100%;
 }
+
+

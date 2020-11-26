@@ -5,27 +5,29 @@
             margin-top: 0;
             visibility: visible;
             opacity: 1;
-            transition: all 0.8s;
-        }
+            transition: all .8s;
 
+        }
         .card-active-custom__header {
             .icon-arrow-down {
                 transform: rotate(-180deg);
                 transition: all $transition-slow;
             }
-        }
+        }            
     }
 }
-
 .icon-arrow-down {
     transition: all $transition-slow;
 }
 
+
 .card-active-custom__wrap.mobile {
+
     display: flex;
     flex-direction: column;
     min-width: 320px;
     max-width: 768px;
+    margin: 0;
     padding: 0;
     margin: 0 0 10px 0;
 
@@ -39,7 +41,7 @@
         position: relative;
         flex-direction: row;
         align-items: center;
-        margin: 0 0 12px 0;
+        margin: 0px 0 12px 0;
 
         p {
             margin: 11px 0 11px 5px;
@@ -57,7 +59,6 @@
     .icon-arrow-down {
         font-size: 6px;
     }
-
     .card-active-custom__heading {
         position: relative;
         display: flex;
@@ -70,6 +71,7 @@
             color: $dark-brown-color;
             text-decoration: none;
         }
+
 
         h3 {
             margin: 0;
@@ -86,7 +88,6 @@
 
     .card-active-custom__purchaseStatus {
         font-size: 12px;
-
         .stock-status__text {
             font-size: 12px;
         }
@@ -101,18 +102,15 @@
         .statusbar {
             width: 100%;
             margin-right: 25px;
-
             &__line {
                 font-size: 12px;
             }
         }
     }
-
     .card-active-custom__like-single {
         display: inline-flex;
         justify-content: center;
         align-items: center;
-
         .icon-heart {
             font-size: 22px;
             color: $color-primary;
@@ -131,38 +129,36 @@
             p {
                 margin-right: 5px;
             }
-
             &__name-wrap {
                 margin: 0;
+                
             }
-
             &__name {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 width: auto;
-
+    
                 div {
                     color: #000;
                     margin-right: 10px;
                 }
-
+    
                 p {
                     font-size: 11px;
                     margin-top: 1px;
                 }
+    
             }
+    
         }
-
         .rating-star-org {
             align-items: baseline;
             height: 17px;
-
             &__icon {
                 font-size: 11px;
             }
         }
-
         .card-active-custom__like-single {
             position: absolute;
             right: 0;
@@ -172,10 +168,10 @@
 
     .card-active-custom__toggle-block {
         height: auto;
-        max-height: 0;
+        max-height: 0px;
         visibility: hidden;
         opacity: 0;
-        transition: all 0.5s;
+        transition: all .5s;
         flex-direction: column;
         overflow: hidden;
     }
@@ -203,7 +199,8 @@
             // max-width: 320px;
             max-width: max-content;
             min-height: 100%;
-            transform: translateX(0);
+            transform: translateX(0px);
+
         }
 
         .slider-viewing {
@@ -211,14 +208,11 @@
             max-height: 320px;
             height: 100%;
         }
-
         .arrow {
-            &::after,
-            &::before {
+            &:after, &:before {
                 background: $color-primary;
             }
         }
-
         .btn-l,
         .btn-r {
             position: absolute;
@@ -231,10 +225,9 @@
             .arrow {
                 background: none;
             }
-
             &:active {
                 width: 42px;
-                height: 42px;
+                height: 42px;      
             }
         }
 
@@ -270,13 +263,14 @@
         max-height: 100%;
         // margin-right: 20px;
 
+
         img {
             width: 100%;
             margin: 0;
             object-fit: contain;
         }
-    }
 
+    }
     .hover-translucend {
         display: flex;
         flex-direction: row;
@@ -289,7 +283,7 @@
         height: 45px;
         padding: 0 8px;
         background: rgba(255, 255, 255, 0.8);
-        transition: 0.4s;
+        transition: .4s;
         cursor: pointer;
         z-index: 10;
 
@@ -301,6 +295,7 @@
             line-height: 14px;
             text-align: center;
             color: $dark-grey-color;
+
         }
 
         p:nth-child(1) {
@@ -314,6 +309,7 @@
         }
     }
 
+
     .card-active-custom__hashtags {
         display: inline-flex;
         position: relative;
@@ -325,14 +321,13 @@
             text-decoration: none;
             pointer-events: none;
         }
-
         span {
             color: $color-primary;
             font-weight: 700;
         }
 
-        &::before,
-        &::after {
+        &:before,
+        &:after {
             content: "";
             position: absolute;
             width: 50px;
@@ -341,11 +336,11 @@
             background: $color-primary;
         }
 
-        &::after {
+        &:after {
             right: -15px;
         }
 
-        &::before {
+        &:before {
             left: -15px;
         }
     }
@@ -355,6 +350,7 @@
         flex-direction: column;
         width: 100%;
         max-width: 100%;
+        padding-right: 30px;
         margin: 10px 0 0 0;
         padding: 0 15px 15px 15px;
     }
@@ -365,8 +361,7 @@
         overflow: hidden;
         margin: 15px 0 0 0;
 
-        a,
-        p {
+        a, p {
             padding-right: 0;
             font-size: 12px;
             color: $dark-brown-color;
@@ -380,13 +375,13 @@
             white-space: normal;
         }
     }
-
     .card-active-custom__delivery-date,
     .card-active-custom__payment-method {
         span {
-            color: #4b4b4b;
+            color: #4B4B4B;
         }
     }
+
 
     .card-active-custom__delivery-date,
     .card-active-custom__payment-method,
@@ -399,7 +394,7 @@
         justify-content: space-between;
         margin-top: 0;
     }
-
+    
     .card-active-custom__delivery-date,
     .card-active-custom__access-lvl,
     .card-active-custom__payment-method,
@@ -421,13 +416,11 @@
 
         a {
             color: $color-primary;
-
             span {
                 color: $color-primary;
             }
         }
     }
-
     .card-active-custom__delivery-date,
     .card-active-custom__access-lvl,
     .card-active-custom__payment-method {
@@ -440,17 +433,23 @@
         p {
             margin-bottom: -2px;
         }
-
         span {
             font-weight: normal;
         }
     }
+
+
+
 }
+
 
 //Кнопка "галка" в хедере
 .arrow-wrap {
     position: absolute;
     bottom: 0;
     right: 0;
-    transition: all 0.8s;
+    transition: all .8s
 }
+
+
+

@@ -81,11 +81,9 @@ $spui-DropdownModalWithSelect-arrow-size: 8px;
         display: inline-flex;
         margin-bottom: 1px;
     }
-
     &__val {
         white-space: nowrap;
         margin: $spui-DropdownModalWithSelect-values-spacing;
-
         &:hover {
             color: $spui-DropdownModalWithSelect-colorOnActive;
         }

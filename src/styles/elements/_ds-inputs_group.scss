@@ -8,7 +8,7 @@
     &_no-ttl {
         .inputs-group__label-title {
             display: none;
-        }
+        }        
     }
     //Скрывает чексбоксы
     &_no-chx {
@@ -22,18 +22,14 @@
             border-radius: 50px;
         }
     }
-
     input {
-        display: none;
+        display: none;        
     }
-
     input:checked + label {
-        &::after,
-        &::before {
+        &:after, &:before {
             visibility: visible;
         }
     }
-
     &__label-checkbox {
         position: relative;
         display: flex;
@@ -44,11 +40,9 @@
         border-radius: 2px;
         border: 1px solid $color-primary;
         background: #fff;
-        margin: 0 15px 0 0;
+        margin: 0px 15px 0 0;
         cursor: pointer;
-
-        &::after,
-        &::before {
+        &:after, &:before {
             content: "";
             visibility: hidden;
             position: absolute;
@@ -58,32 +52,30 @@
             border-radius: 5px;
             top: 40%;
         }
-
-        &::after {
+        &:after {
             transform: rotate(45deg);
             left: 1px;
             width: 4px;
-            top: 45%;
+            top: 45%
         }
-
-        &::before {
+        &:before {
             transform: rotate(-45deg);
             left: 3px;
             width: 8px;
         }
-
         p {
             white-space: nowrap;
         }
     }
-
     &__label-title {
         height: auto;
         font-size: 10px;
         cursor: pointer;
-
         &:hover {
             color: $color-primary;
         }
     }
+
 }
+
+

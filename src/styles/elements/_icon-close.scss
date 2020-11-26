@@ -8,8 +8,7 @@
     align-items: center;
     position: relative;
 
-    &::before,
-    &::after {
+    &:before, &:after {
         content: "";
         background-color: $color-text-heading;
         width: 100%;
@@ -18,7 +17,7 @@
         transform: rotate(45deg);
     }
 
-    &::after {
+    &:after {
         transform: rotate(-45deg);
     }
 

@@ -14,7 +14,7 @@
         cursor: pointer;
         position: relative;
 
-        &::before {
+        &:before {
             content: "";
             display: block;
             position: absolute;
@@ -28,7 +28,7 @@
             height: 18px;
         }
 
-        &::after {
+        &:after {
             content: "";
             display: none;
             position: absolute;
@@ -44,7 +44,7 @@
 }
 
 .checkbox__input:checked + .checkbox__label {
-    &::after {
+    &:after {
         display: block;
     }
 }
@@ -53,17 +53,16 @@
     padding-left: unset;
 
     .checkbox__label {
-        &::before {
+        &:before {
             display: none;
         }
     }
 
     .checkbox__input:checked + .checkbox__label {
-        &::after {
+        &:after {
             display: none;
         }
     }
-
     .checkbox__input:checked {
         ~ .checkbox__label {
             color: $color-primary;
@@ -73,7 +72,7 @@
 
 .checkbox_circle {
     .checkbox__label {
-        &::before {
+        &:before {
             border-radius: 50%;
         }
     }
@@ -81,12 +80,11 @@
 
 .checkbox_inverted {
     .checkbox__label {
-        &::before {
+        &:before {
             background: $color-primary;
             border: 1px solid $color-primary;
         }
-
-        &::after {
+        &:after {
             border-bottom: 2px solid white;
             border-left: 2px solid white;
         }
@@ -95,12 +93,12 @@
 
 .checkbox_accent {
     .checkbox__input:checked + .checkbox__label {
-        &::before {
+        &:before {
             background: $color-primary;
             border: 1px solid $color-primary;
         }
 
-        &::after {
+        &:after {
             border-bottom: 2px solid white;
             border-left: 2px solid white;
         }
@@ -109,7 +107,7 @@
 
 .checkbox_dot {
     .checkbox__label {
-        &::after {
+        &:after {
             width: 12px;
             height: 12px;
             background-color: $color-primary;

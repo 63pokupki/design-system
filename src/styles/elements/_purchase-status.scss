@@ -1,11 +1,9 @@
 .ds-purchase-status {
     display: none;
     width: 100%;
-
     &.is-active {
         display: flex;
-    }
-
+    } 
     .ds-icon {
         margin: 0 12px 0 0;
         font-size: 24px;
@@ -30,7 +28,7 @@
     &__assembling-txt,
     &__assembling-date {
         color: $green-collection-color;
-    }
+    } 
 
     // Скоро стоп
     &__stop-icon,
@@ -42,7 +40,7 @@
     // Фиксирую
     &__fix-icon,
     &__fix-txt,
-    &__fix-date {
+    &__fix-date {        
         color: $yellow-sorting-purchase-status;
     }
 
@@ -50,7 +48,7 @@
     &__sorting-icon,
     &__sorting-txt,
     &__sorting-date {
-        color: $green-collection-color;
+        color: $green-collection-color;        
     }
 
     //Не состоялась
@@ -115,4 +113,13 @@
     &__announ-date {
         color: $carrot-announ-purchase-status;
     }
+
+    
 }
+
+
+
+
+
+
+

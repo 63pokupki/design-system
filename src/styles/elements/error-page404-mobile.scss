@@ -12,7 +12,6 @@
     border-radius: 40px;
     border-left: 15px solid black;
     background: #000;
-
     &::after {
         content: "";
         width: 100px;
@@ -23,7 +22,6 @@
         bottom: 10px;
         left: 157px;
     }
-
     &::before {
         content: "";
         width: 100px;
@@ -41,7 +39,6 @@
         height: 685px;
         width: 100%;
         border: 1px solid black;
-
         &::after {
             content: "";
             height: 800px;
@@ -52,18 +49,17 @@
             top: 10px;
         }
     }
-
     .error-pages {
         padding: 0 15px;
     }
-
     .header-touch {
         position: sticky;
     }
-
     .footer {
         &__advantage {
             flex-wrap: wrap;
         }
     }
 }
+
+

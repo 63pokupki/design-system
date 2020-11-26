@@ -5,8 +5,7 @@
 @font-face {
     font-family: "icomoon-ds";
     src: url("~fonts/icomoon/fonts/icomoon-ds.woff");
-    src:
-        url("~fonts/icomoon/fonts/icomoon-ds.woff") format("woff"),
+    src: url("~fonts/icomoon/fonts/icomoon-ds.woff") format("woff"),
         url("~fonts/icomoon/fonts/icomoon-ds.ttf") format("truetype"),
         url("~fonts/icomoon/fonts/icomoon-ds.svg") format("svg");
     font-weight: normal;
@@ -15,9 +14,9 @@
 }
 
 .ds-icon,
-.ds-icon::before {
+.ds-icon:before {
     /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: "icomoon-ds", sans-serif !important;
+    font-family: "icomoon-ds" !important;
     cursor: pointer;
     speak: none;
     font-style: normal;

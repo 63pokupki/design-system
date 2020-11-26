@@ -41,17 +41,14 @@ $spui-DropdownTooltipWithSelect-arrow-size: 8px;
         border-bottom: 1px solid $spui-DropdownTooltipWithSelect-colorOnActive;
         margin-right: $spui-DropdownTooltipWithSelect-row-spacing;
     }
-
     &__arrow {
         font-size: $spui-DropdownTooltipWithSelect-arrow-size;
         display: inline-flex;
         margin-bottom: 1px;
     }
-
     &__val {
         white-space: nowrap;
         margin: $spui-DropdownTooltipWithSelect-values-spacing;
-
         &:hover {
             color: $spui-DropdownTooltipWithSelect-colorOnActive;
         }

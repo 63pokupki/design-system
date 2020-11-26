@@ -15,21 +15,18 @@
             padding-right: unset;
             display: block;
         }
-
         .multi-level-menu__heading-wrapper {
-            padding: 8px 0 8px 15px;
+            padding: 8px 0px 8px 15px;
             border-bottom: 1px solid rgba(49, 140, 202, 0.25);
         }
-
         .multi-level-menu__item {
             margin-bottom: 15px;
         }
-
         .multi-level-menu__icon {
             font-size: 22px;
         }
 
-        &::before {
+        &:before {
             display: none;
         }
     }
@@ -37,7 +34,6 @@
     &__section {
         padding: 15px 0;
         border-bottom: 1px solid rgba(49, 140, 202, 0.25);
-
         &:last-child {
             border-bottom: unset;
         }
@@ -57,12 +53,10 @@
         flex-wrap: wrap;
         justify-content: space-between;
         margin-bottom: 10px;
-
         &:last-child {
             margin-bottom: unset;
         }
     }
-
     &__link {
         display: inline-block;
         border: 1px solid $color-primary;

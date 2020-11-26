@@ -2,8 +2,7 @@
 .ds-popover_sorting {
     display: inline-flex;
     padding: 10px 15px;
-
-    &::after {
+    &:after {
         content: "";
         width: 100%;
         height: 20px;
@@ -19,25 +18,24 @@
         &__label {
             color: $color-text-base;
             font-size: 12px;
-
-            &::after {
+            &:after {
                 transform: translate(-24px, -75%) rotate(-45deg);
             }
-
-            &::before {
+            &:before {
                 width: 12px;
-                height: 12px;
+                height: 12px;                
             }
-
             white-space: nowrap;
-
             &:hover {
                 color: $color-primary;
             }
-
             &:active {
                 color: $click-load-color;
             }
+
         }
     }
+    
 }
+
+

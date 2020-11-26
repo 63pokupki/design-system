@@ -8,7 +8,7 @@
         position: relative;
         padding: 8px 28px 8px 5px;
 
-        &::after {
+        &:after {
             content: "";
             position: absolute;
             right: 10px;
@@ -103,7 +103,7 @@
         padding: 7px 10px;
         border: 2px solid white;
 
-        &::before {
+        &:before {
             background: $color-primary;
         }
     }
@@ -121,14 +121,12 @@
             font-size: 0;
         }
     }
-
     .stock-dropdown-filter__head {
-        &::after {
+        &:after {
             transition: transform $transition-fast;
             transform: rotate(135deg);
         }
     }
-
     .stock-dropdown-filter__bar {
         padding: 0 5px;
         margin-bottom: 10px;

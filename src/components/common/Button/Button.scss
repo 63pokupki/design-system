@@ -2,7 +2,7 @@ $ButtonFontSize: 12px;
 $ButtonFontSizeIcon: 14px;
 $ButtonFontWeight: 600;
 $ButtonBorderRadius: 24px;
-$ButtonPadding: 0 12px 1px 12px;
+$ButtonPadding: 0px 12px 1px 12px;
 $ButtonHeight: 32px;
 $ButtonMinWidth: 128px;
 $ButtonColorPrimary: #36a6f2;
@@ -14,7 +14,6 @@ $ButtonFontFamily: $font-primary;
     from {
         transform: translateX(-100%);
     }
-
     to {
         transform: translateX(100%);
     }
@@ -24,7 +23,7 @@ $ButtonFontFamily: $font-primary;
     position: relative;
     overflow: hidden;
 
-    &::after {
+    &:after {
         animation: ButtonIsLoading 1s infinite;
         content: "";
         height: 100%;
@@ -42,7 +41,7 @@ $ButtonFontFamily: $font-primary;
 %spui-Button_primary {
     border: 1px solid $ButtonColorPrimary;
     background-color: $ButtonColorPrimary;
-    color: #fff;
+    color: #ffffff;
 }
 
 %spui-Button_outline {
@@ -54,23 +53,22 @@ $ButtonFontFamily: $font-primary;
 %spui-Button_active {
     border: 1px solid $ButtonColorClick;
     background-color: $ButtonColorClick;
-    color: #fff;
+    color: #ffffff;
 }
 
 %spui-Button_loading {
     @extend %ButtonIsLoadingAnimation;
-
     cursor: unset;
 }
 
 %spui-Button_disabled {
     background-color: transparentize($ButtonColorPrimary, 0.5);
-    color: #fff;
+    color: #ffffff;
     border: 1px solid transparent;
     cursor: unset;
 }
 
-/** Базовые стили */
+/**Базовые стили */
 .spui-Button {
     @extend %reset-button;
 

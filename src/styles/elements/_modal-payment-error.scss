@@ -3,40 +3,35 @@
         font-size: 24px;
         line-height: 16px;
     }
-
     &__body {
         max-width: 365px;
         text-align: center;
     }
-
     &__txt {
         margin: 0;
         font-size: 14px;
         line-height: 28px;
     }
-
     .modal__content {
         padding: 0 15px;
     }
-
     .btn-container {
         display: flex;
         justify-content: center;
         width: 100%;
         margin: 25px auto 10px;
     }
-
     .ds-btn {
         width: 100%;
         max-width: 262px;
         height: 36px;
     }
-
     .ds-btn__text {
         font-size: 14px;
     }
-
     .btn-continue {
         margin: 0 23px 0 0;
     }
 }
+
+

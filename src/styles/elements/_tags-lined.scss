@@ -3,8 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-    &::before {
+    &:before {
         position: absolute;
         content: "";
         width: 100%;

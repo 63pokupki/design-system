@@ -1,7 +1,6 @@
 // двойной ползунок выбора цены
 .range-double {
     padding-bottom: 20px;
-
     &__values {
         display: flex;
         justify-content: space-between;
@@ -33,7 +32,7 @@
         height: 16px;
         width: 16px;
         background: $color-primary;
-        border: 1px solid #fff;
+        border: 1px solid #ffffff;
         border-radius: 50%;
         top: 50%;
         z-index: 2;
