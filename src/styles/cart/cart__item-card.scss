@@ -8,16 +8,19 @@
 
         &:hover {
             background: #ebf6fe;
+
             .btn-sum__sum-num {
                 background: #ebf6fe;
             }
         }
     }
+
     &__item-card-top {
         display: flex;
         justify-content: flex-start;
         width: 100%;
     }
+
     &__item-card-icons {
         display: flex;
         flex-direction: column;
@@ -26,12 +29,15 @@
         width: 20px;
         margin: 0 10px 0 0;
     }
+
     &__item-image {
         margin: 0 25px 0 0;
+
         img {
             max-height: 80px;
         }
     }
+
     &__item-status {
         display: flex;
         flex-direction: column;
@@ -39,21 +45,25 @@
         color: $color-text-heading;
         margin: 0 0 10px 0;
     }
+
     &__item-title {
         max-width: 190px;
         font-size: 12px;
         line-height: 16px;
         color: $color-text-heading;
     }
+
     &__item-card-quantity {
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
     .btn-sum__sum-num {
         padding: 1px 0 0 0;
         font-size: 14px;
     }
+
     .btn-sum__plus,
     .btn-sum__minus {
         width: 16px;
@@ -61,18 +71,21 @@
         min-width: 16px;
         background: #fff;
         border: 1px solid #90c5e8;
-        &:before,
-        &:after {
+
+        &::before,
+        &::after {
             width: 8px;
             background: #90c5e8;
         }
     }
+
     .btn-sum__minus {
-        &:before,
-        &:after {
+        &::before,
+        &::after {
             width: 5px;
         }
     }
+
     &__item-card-price {
         display: flex;
         flex-direction: column;
@@ -82,6 +95,7 @@
             font-size: 12px;
             color: $color-text-heading;
         }
+
         span {
             font-size: 11px;
             color: $color-text-light-grey;
@@ -135,15 +149,18 @@
 
     .stock-rows {
         align-items: center;
+
         &::after {
             display: none;
         }
     }
+
     .stock-rows-wrap {
         display: flex;
         flex-direction: column;
         width: fit-content;
     }
+
     .stock-rows__numeration {
         display: flex;
         flex-direction: row;
@@ -151,6 +168,7 @@
         align-items: baseline;
         padding: 0 3px 0 5px;
     }
+
     .stock-rows__numeration-label,
     .stock-rows__num {
         margin-bottom: 0;
@@ -164,7 +182,7 @@
         margin-right: 5px;
 
         &-active {
-            color: #1D1E1F;
+            color: #1d1e1f;
             opacity: 0.5;
             font-size: 11px;
             line-height: 20px;
@@ -182,7 +200,7 @@
                 transform: translateY(-50%);
                 display: block;
                 border: 4px solid transparent;
-                border-top-color: #36A6F2;
+                border-top-color: #36a6f2;
                 z-index: 2;
             }
         }
@@ -198,7 +216,7 @@
             border-radius: 5px;
             pointer-events: none;
             opacity: 0;
-            transition: opacity .2s ease;
+            transition: opacity 0.2s ease;
 
             &-item {
                 color: #606266;
@@ -220,10 +238,12 @@
         display: none;
         position: relative;
         padding: 0 0 0 20px;
+
         &.is-active {
             display: flex;
         }
-        &:after {
+
+        &::after {
             content: "";
             position: absolute;
             top: 0;
@@ -233,22 +253,26 @@
             border-radius: 50%;
         }
     }
+
     .cart__item-status-new {
-        &:after {
-            background: #00C533;
+        &::after {
+            background: #00c533;
         }
     }
+
     .cart__item-status-give-out {
-        &:after {
-            background: #CC6BF9;
+        &::after {
+            background: #cc6bf9;
         }
     }
+
     .icon-close {
         width: 12px;
         height: 12px;
         margin: 10px 0 10px 0;
-        &:after,
-        &:before {
+
+        &::after,
+        &::before {
             background-color: $color-inactive;
         }
     }
@@ -256,7 +280,4 @@
     .icon-order-history {
         text-decoration: none;
     }
-
 }
-
-

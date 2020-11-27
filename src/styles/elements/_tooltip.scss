@@ -8,8 +8,8 @@ $tooltip-triangle-size: 6px;
 .has-tooltip {
     cursor: pointer;
     position: relative;
-    &:hover > .tooltip
-    {
+
+    &:hover > .tooltip {
         visibility: visible;
         opacity: 1;
         z-index: 100;
@@ -21,6 +21,7 @@ $tooltip-triangle-size: 6px;
 .has-tooltip-force {
     cursor: pointer;
     position: relative;
+
     .tooltip {
         visibility: visible;
         opacity: 1;
@@ -39,7 +40,6 @@ $tooltip-triangle-size: 6px;
     position: absolute;
     background-color: $tooltip-background-color;
     padding: 8px 10px;
-    line-height: 15px;
     color: $color-text-base;
     border-radius: 6px;
     font-size: 12px;
@@ -51,16 +51,16 @@ $tooltip-triangle-size: 6px;
     min-width: 120px;
     transform: translate(-50%, 100%);
     transition: opacity $transition-primary, visibility $transition-primary;
-    box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
 
     // треугольник-указатель к всплывающей подсказке
-    &:before {
+    &::before {
         content: "";
         display: block;
         width: $tooltip-triangle-size;
         height: $tooltip-triangle-size;
         position: absolute;
-        left: calc(50% - #{$tooltip-triangle-size}/ 2);
+        left: calc(50% - #{$tooltip-triangle-size} / 2);
         top: -3px;
         background-color: $tooltip-background-color;
         transform: rotate(45deg);
@@ -80,8 +80,9 @@ $tooltip-triangle-size: 6px;
         bottom: auto;
         top: -10px;
         transform: translate(-50%, -100%);
-        &:before {
-            left: calc(50% - #{$tooltip-triangle-size}/ 2);
+
+        &::before {
+            left: calc(50% - #{$tooltip-triangle-size} / 2);
             right: auto;
             top: auto;
             bottom: -3px;
@@ -94,10 +95,11 @@ $tooltip-triangle-size: 6px;
         right: -10px;
         left: auto;
         transform: translate(100%, 50%);
-        &:before {
+
+        &::before {
             right: auto;
             left: -3px;
-            top: calc(50% - #{$tooltip-triangle-size}/ 2);
+            top: calc(50% - #{$tooltip-triangle-size} / 2);
             bottom: auto;
         }
     }
@@ -108,10 +110,11 @@ $tooltip-triangle-size: 6px;
         right: auto;
         left: -10px;
         transform: translate(-100%, 50%);
-        &:before {
+
+        &::before {
             left: auto;
             right: -3px;
-            top: calc(50% - #{$tooltip-triangle-size}/ 2);
+            top: calc(50% - #{$tooltip-triangle-size} / 2);
             bottom: auto;
         }
     }
@@ -127,7 +130,7 @@ $tooltip-triangle-size: 6px;
         color: white;
         font-weight: 600;
 
-        &:before {
+        &::before {
             background-color: $tooltip-background-color-accent;
         }
     }
@@ -138,7 +141,7 @@ $tooltip-triangle-size: 6px;
         color: $color-text-base;
         font-weight: 400;
 
-        &:before {
+        &::before {
             background-color: $error-light;
         }
     }
@@ -147,8 +150,9 @@ $tooltip-triangle-size: 6px;
         font-size: 11px;
         min-width: 120px;
         background-color: $background-color-primary;
-        transform: translate(-25%,95%);
+        transform: translate(-25%, 95%);
         border: 1px solid $color-primary;
+
         &::before {
             top: -4px;
             background-color: $background-color-primary;
@@ -156,8 +160,8 @@ $tooltip-triangle-size: 6px;
             border-left: 1px solid $color-primary;
             left: calc(10% - 3px);
         }
-
     }
+
     &.tooltip_mw-265 {
         min-width: 265px;
     }
@@ -169,24 +173,28 @@ $tooltip-triangle-size: 6px;
             white-space: nowrap;
         }
     }
+
     &__pagination-form {
         display: flex;
         flex-wrap: nowrap;
         margin: 5px 0 0 0;
     }
+
     &__pagination-input {
         max-width: 55px;
         margin: 0 5px 0 0;
         border: none;
     }
+
     &__pagination-btn {
         padding: 5px 10px;
         background-color: $color-primary;
         border-radius: 10px;
         font-size: 11px;
-        color: #ffffff;
+        color: #fff;
+
         &:active {
-            transform: scale(.95);
+            transform: scale(0.95);
         }
     }
 }

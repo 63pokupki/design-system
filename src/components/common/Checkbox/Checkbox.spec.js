@@ -24,7 +24,7 @@ describe('Checkbox.vue', () => {
         });
 
         expect(wrapper.find('input[type=checkbox]').element.checked).toBe(
-            false
+            false,
         );
         expect(wrapper.vm.$data.uniqid).toBe('id');
         expect(wrapper.find('.spui-Checkbox__text').element).toBeUndefined();

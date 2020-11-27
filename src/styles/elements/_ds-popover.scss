@@ -7,13 +7,14 @@
     max-height: 0;
     background-color: $color-graphics-elements;
     border-radius: 5px;
-    box-shadow: 0 0 5px 1px rgba(0,0,0,.15);
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.15);
     padding: 15px;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
     visibility: hidden;
     opacity: 0;
     z-index: 20;
-    &:before {
+
+    &::before {
         content: "";
         position: absolute;
         display: flex;
@@ -22,15 +23,16 @@
         background: url('~images/important_images/active_custom_card/triangle-modal.svg') center / cover;
         top: -6px;
         right: 15px;
-
     }
+
     &.is-visible {
         max-height: 1000px;
         visibility: visible;
-        transition: all .5s ease;
+        transition: all 0.5s ease;
         opacity: 1;
-        z-index: 20;        
-    }   
+        z-index: 20;
+    }
+
     &_warning {
         position: absolute;
         bottom: -20px;
@@ -40,16 +42,11 @@
         font-size: 11px;
         background: $error-light;
         color: #606266;
-        &:before {
+
+        &::before {
             left: 20px;
             background: #ffd7d7;
-            transform: rotate(45deg) translateX(3px);    
+            transform: rotate(45deg) translateX(3px);
         }
-    
-    }   
+    }
 }
-
-
-
-
-

@@ -3,28 +3,33 @@
     flex-direction: column;
     background: $background-color-primary;
     padding: 0 20px;
+
     &__header-mobile {
         display: none;
         justify-content: flex-start;
         width: 100%;
     }
+
     &__container {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
+
     &__left-col {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         padding: 20px 0 45px 0;
         margin: 0;
+
         h1 {
             margin: 22px 0 5px 0;
             font-size: 32px;
             color: $color-text-heading;
             font-weight: normal;
         }
+
         h3 {
             margin: 20px 0 12px 0;
             font-weight: normal;
@@ -32,24 +37,29 @@
             color: $color-text-heading;
         }
     }
+
     &__right-col {
         display: flex;
-
     }
+
     &__img {
         max-width: 465px;
     }
+
     &__txt {
         font-size: 16px;
         font-style: normal;
         line-height: 28px;
         color: $color-text-heading;
+
         &-contacts {
             font-size: 14px;
         }
     }
+
     &__link {
         color: $color-primary;
+
         &_bold {
             font-weight: 600;
         }
@@ -57,16 +67,18 @@
     // Разделительная линия
     .vm {
         display: block;
+
         &-40 {
-            min-height: 40px; 
+            min-height: 40px;
         }
+
         &-15 {
             min-height: 15px;
         }
     }
 
     // @media (max-width: 1124px) {
-    //     padding: 56px 20px 0;        
+    //     padding: 56px 20px 0;
     // }
 
     // @media (max-width: 769px) {
@@ -110,45 +122,53 @@
     //     }
     // }
     &.mob {
-            .error-pages__header-mobile {
-                display: flex;
-                .error-pages__row {
-                    max-width: 510px;
-                }
-            }
-            .error-pages__header-desktop {
-                display: none;
-            }
-            .error-pages__container {
-                justify-content: center;
-                flex-wrap: wrap-reverse;
-            }
-            .error-pages__right-col {
-                text-align: center;
-            }
-            .error-pages {
-                padding: 56px 15px 0;
-            }
-            .error-pages__header-mobile {
-                .error-pages__txt {
-                    font-size: 12px;
-                }
-            }
-    
-            .error-pages__txt {
-                font-size: 14px;
-            }
+        .error-pages__header-mobile {
+            display: flex;
+
             .error-pages__row {
-                h1 {
-                    font-size: 18px;
-                }
-                h3 {
-                    font-size: 16px;
-                }
+                max-width: 510px;
             }
-        
+        }
+
+        .error-pages__header-desktop {
+            display: none;
+        }
+
+        .error-pages__container {
+            justify-content: center;
+            flex-wrap: wrap-reverse;
+        }
+
+        .error-pages__right-col {
+            text-align: center;
+        }
+
+        .error-pages {
+            padding: 56px 15px 0;
+        }
+
+        .error-pages__header-mobile {
+            .error-pages__txt {
+                font-size: 12px;
+            }
+        }
+
+        .error-pages__txt {
+            font-size: 14px;
+        }
+
+        .error-pages__row {
+            h1 {
+                font-size: 18px;
+            }
+
+            h3 {
+                font-size: 16px;
+            }
+        }
     }
 }
+
 @media (max-width: 1124px) {
     .error-pages {
         padding: 56px 20px 0;
@@ -158,25 +178,31 @@
 @media (max-width: 769px) {
     .error-pages__header-mobile {
         display: flex;
+
         .error-pages__row {
             max-width: 510px;
         }
     }
+
     .error-pages__header-desktop {
         display: none;
     }
+
     .error-pages__container {
         justify-content: center;
         flex-wrap: wrap-reverse;
     }
+
     .error-pages__right-col {
         text-align: center;
     }
 }
+
 @media (max-width: 500px) {
     .error-pages {
         padding: 56px 15px 0;
     }
+
     .error-pages__header-mobile {
         .error-pages__txt {
             font-size: 12px;
@@ -186,15 +212,14 @@
     .error-pages__txt {
         font-size: 14px;
     }
+
     .error-pages__row {
         h1 {
             font-size: 18px;
         }
+
         h3 {
             font-size: 16px;
         }
     }
 }
-
-
-

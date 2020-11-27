@@ -20,6 +20,7 @@ $spui-Radio_fontSize: 12px;
     &__input {
         display: none;
     }
+
     &__fake {
         position: relative;
         width: $spui-Radio_width;
@@ -29,6 +30,7 @@ $spui-Radio_fontSize: 12px;
         border-radius: $spui-Radio_borderRadius;
         border: $spui-Radio_borderWidth solid $spui-Radio_colorActive;
     }
+
     &__text {
         font-family: $spui-Radio_font;
     }
@@ -50,7 +52,7 @@ $spui-Radio_fontSize: 12px;
     }
 
     .spui-Radio__icon {
-        color: #ffffff;
+        color: #fff;
     }
 }
 
@@ -72,8 +74,9 @@ $spui-Radio_fontSize: 12px;
     cursor: default;
 
     &.spui-Radio_primary .spui-Radio__fake {
-        background-color: #ffffff;
+        background-color: #fff;
     }
+
     .spui-Radio__fake {
         border: $spui-Radio_borderWidth solid $spui-Radio_colorDisabled;
     }
@@ -103,6 +106,7 @@ $spui-Radio_fontSize: 12px;
     .spui-Radio__fake {
         display: none;
     }
+
     .spui-Radio__text {
         padding: 0;
     }

@@ -31,6 +31,7 @@
         margin: 0;
         line-height: 28px;
     }
+
     .stock-brief__data {
         display: inline-block;
         width: 100%;
@@ -39,11 +40,12 @@
         font-size: 14px;
         color: $color-text-heading;
     }
+
     &__old-design {
         display: flex;
         justify-content: center;
         width: 100%;
-        margin: 0 auto 20px;        
+        margin: 0 auto 20px;
         font-size: 12px;
         position: relative;
         z-index: 10;
@@ -57,11 +59,12 @@
         max-height: 278px;
         overflow: hidden;
     }
+
     &__img {
         max-width: 100%;
         max-height: 100%;
         height: auto;
-        width: auto;    
+        width: auto;
     }
 
     &__cond {
@@ -109,12 +112,12 @@
                 }
             }
         }
+
         @media screen and (max-width: 767px) {
             .favorite__text {
                 display: none;
             }
         }
-        
     }
 
     &__tabs-expand {
@@ -140,7 +143,7 @@
             overflow: hidden;
             position: relative;
 
-            &:after {
+            &::after {
                 content: "";
                 width: 100%;
                 height: 80px;
@@ -161,7 +164,7 @@
         .stock-tabs__sections {
             max-height: unset;
 
-            &:after {
+            &::after {
                 display: none;
             }
         }
@@ -182,7 +185,7 @@
                 font-weight: normal;
                 padding: 12px 40px 12px 20px;
 
-                &:after {
+                &::after {
                     right: 20px;
                     width: 9px;
                     height: 9px;
@@ -246,12 +249,15 @@
             justify-content: center;
             align-items: center;
             margin: 15px 0;
+
             span {
                 text-align: center;
+
                 &.nowrap {
                     white-space: nowrap;
                 }
             }
+
             &.is-hidden {
                 display: none;
             }
@@ -345,10 +351,12 @@
 
         .org-profile {
             margin: 0 0 2px 0;
+
             &__image-wrapper {
                 width: 48px;
                 height: 48px;
             }
+
             &__image {
                 border-radius: 50%;
                 max-width: 48px;
@@ -362,6 +370,7 @@
                 }
             }
         }
+
         .stock-m-info__meta-text {
             margin-top: 10px;
             margin-bottom: 18px;
@@ -400,13 +409,16 @@
     position: relative;
 
     // убираем засветление
-    .stock-m-info__org-profile, .stock-m-info__go-catalog, .stock-m-info__status {
+    .stock-m-info__org-profile,
+    .stock-m-info__go-catalog,
+    .stock-m-info__status {
         position: relative;
         z-index: 6;
     }
 
     .stock-m-info__status {
         max-width: 280px;
+
         &.is-hidden {
             display: none;
         }
@@ -427,7 +439,7 @@
         color: grey;
     }
 
-    &:after {
+    &::after {
         content: "";
         position: absolute;
         top: 0;

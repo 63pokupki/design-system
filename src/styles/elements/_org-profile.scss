@@ -45,6 +45,7 @@
         font-weight: 600;
         margin-bottom: 3px;
         color: $color-text-heading;
+
         &::first-letter {
             text-transform: capitalize;
         }
@@ -52,6 +53,7 @@
 
     &__status {
         font-size: 11px;
+
         &::first-letter {
             text-transform: capitalize;
         }

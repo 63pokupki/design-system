@@ -1,46 +1,52 @@
 .arrow {
-	position: relative;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	width: 44px;
-	height: 44px;
-	// border-radius: 0;
-	background: #d7d7d7;
-	cursor: pointer;
-	&:active {
-		transform: scale(.95);
-	}
-	&_default {
-		color: $color-primary;
-		&:hover {
-			color: $light-gray-color;
-		}
-	}
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    // border-radius: 0;
+    background: #d7d7d7;
+    cursor: pointer;
 
-	//Меняет цвет стрелки
-	&_inverse {
-		color: #fff;
-		&:hover {
-			color: $color-primary;
-		}
-	}
-	&_circle {
-		font-size: 10px;
-		border-radius: 50%;
-	}
-	&_transp {
-		font-size: 10px;
-		background: transparent;
-		color: $light-gray-color;
-	}
+    &:active {
+        transform: scale(0.95);
+    }
 
-	// Синий фон
-	&_blue {
-		background: $color-primary;
-		.ds-icon {
-			color: #ffffff;
-		}
-	}
+    &_default {
+        color: $color-primary;
 
+        &:hover {
+            color: $light-gray-color;
+        }
+    }
+
+    //Меняет цвет стрелки
+    &_inverse {
+        color: #fff;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
+    &_circle {
+        font-size: 10px;
+        border-radius: 50%;
+    }
+
+    &_transp {
+        font-size: 10px;
+        background: transparent;
+        color: $light-gray-color;
+    }
+
+    // Синий фон
+    &_blue {
+        background: $color-primary;
+
+        .ds-icon {
+            color: #fff;
+        }
+    }
 }

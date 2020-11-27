@@ -6,34 +6,36 @@
 
     &__active {
         position: absolute;
-		height: 2px;
-		min-width: 0;
-		max-width: 100%;
-		margin: 0;
-		background-color: $color-primary;
-		z-index: 4;
+        height: 2px;
+        min-width: 0;
+        max-width: 100%;
+        margin: 0;
+        background-color: $color-primary;
+        z-index: 4;
     }
 }
+
 input[type="range"].input-range__right {
     position: absolute;
     top: 0;
-	left: 0;
-	margin: 0;
+    left: 0;
+    margin: 0;
 }
 
 input[type="range"].input-range__left {
     position: absolute;
     top: 0;
-	left: 0;
-	margin: 0;
+    left: 0;
+    margin: 0;
 }
+
 input[type="range"] {
     width: 100%;
     -webkit-appearance: none;
     background: #9ad2f8;
     height: 2px;
-	border: none;
-	margin: 0;
+    border: none;
+    margin: 0;
     border-style: none;
     outline: none;
     outline-offset: 0;
@@ -41,6 +43,7 @@ input[type="range"] {
     &::-moz-focus-inner {
         border-style: none;
     }
+
     &::-moz-focus-outer {
         border-style: none;
     }
@@ -50,11 +53,10 @@ input[type="range"] {
 input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     background: $color-primary;
-    border: 1px solid #ffffff !important;
+    border: 1px solid #fff !important;
     width: 16px;
     height: 16px;
     border-radius: 10px;
-    border: none;
     cursor: pointer;
     pointer-events: all; // Позволяет взаимодействовать с нижележащими элементами(Ползунками)
     z-index: 2;
@@ -68,12 +70,11 @@ input[type="range"]::-webkit-slider-thumb {
 // Ползунок в FireFox
 input[type="range"]::-moz-range-thumb {
     background: $color-primary;
-    border: 1px solid #ffffff !important;
+    border: 1px solid #fff !important;
     width: 16px;
     height: 16px;
     z-index: 2;
     border-radius: 10px;
-    border: none;
     cursor: pointer;
     appearance: none;
     position: relative;

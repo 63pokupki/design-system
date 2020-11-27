@@ -7,6 +7,7 @@
 
     &__row {
         margin-bottom: 9px;
+
         &:last-child {
             margin-bottom: unset;
         }
@@ -33,6 +34,7 @@
     &__bar {
         .statusbar {
             height: 24px;
+
             &__txt {
                 font-size: 12px;
             }

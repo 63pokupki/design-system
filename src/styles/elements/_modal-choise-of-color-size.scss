@@ -1,23 +1,30 @@
 
 .modal-choise-of-color-size {
     overflow: hidden;
+
     .modal {
         &__wrap {
             max-height: 80vh;
             position: fixed;
+
             .icon-cart {
                 margin: 2px 0 0 3px;
                 font-size: 15px;
                 font-weight: 600;
             }
-            max-width: 310px;            
+
+            max-width: 310px;
         }
+
         &__btn-close {
             margin: 6px 5px 0 0;
-            &:before, &:after {
+
+            &::before,
+            &::after {
                 display: none;
             }
         }
+
         &__content {
             display: flex;
             flex-direction: column;
@@ -44,16 +51,15 @@
                 padding: 0;
                 font-size: 11px;
                 color: $color-text-light-grey;
-            }    
+            }
 
             .item-params-list {
-            
                 &__item {
                     list-style: none;
                     color: #858585;
                     margin-bottom: 5px;
                 }
-            
+
                 &__item.is-selected {
                     transition: background-color $transition-fast, color $transition-fast;
                     background-color: $color-primary;
@@ -78,6 +84,7 @@
                 flex-direction: column;
                 margin: 0 0 20px 0;
                 position: relative;
+
                 .item-params-list__item {
                     padding: 3px 5px;
                 }
@@ -90,19 +97,23 @@
             bottom: 0;
             left: 0;
             background: $background-color-primary;
+
             .btn-add-to-card {
                 max-height: 32px;
-                min-width: 160px;    
+                min-width: 160px;
             }
+
             .ds-loader {
                 display: none;
                 justify-content: center;
                 min-width: 160px;
             }
+
             &.is-load {
                 .btn-add-to-card {
                     display: none;
                 }
+
                 .ds-loader {
                     display: inline-flex;
                 }
@@ -116,6 +127,7 @@
             margin-right: 32px;
             margin: 0 30px 0 5px;
             align-items: center;
+
             &-num {
                 width: 35px;
                 margin: 0 5px;
@@ -125,41 +137,47 @@
                 text-align: center;
             }
         }
-        &__minus, &__plus {
+
+        &__minus,
+        &__plus {
             position: relative;
             width: 20px;
             height: 20px;
             min-width: 20px;
             border-radius: 50%;
             background: $color-inactive;
-            color: #ffffff;
+            color: #fff;
+
             &:active {
-                transform: scale(.95);
+                transform: scale(0.95);
             }
-            &:after, &:before {
+
+            &::after,
+            &::before {
                 content: "";
                 position: absolute;
                 width: 5px;
                 height: 2px;
-                background: #ffffff;
+                background: #fff;
             }
+
             &:hover {
                 background: $color-primary;
             }
-
         }
+
         &__plus {
-            &:before {
+            &::before {
                 width: 8px;
                 transform: rotate(90deg);
             }
-            &:after {
+
+            &::after {
                 width: 8px;
             }
         }
-
     }
-    
+
     // Для Сани
     .item-page-d__params.params {
         .ds-popover {
@@ -167,4 +185,3 @@
         }
     }
 }
-

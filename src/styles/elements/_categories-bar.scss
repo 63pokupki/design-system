@@ -27,11 +27,13 @@
         overflow: hidden;
         justify-content: space-between;
     }
+
     &__item {
         margin-right: 30px;
         margin-bottom: 5px;
+
         &.is-promotional {
-            color: #FF7182;
+            color: #ff7182;
 
             a {
                 color: inherit;
@@ -55,7 +57,7 @@
         z-index: 21;
         min-width: 650px;
         transform: translateY(100%);
-        box-shadow: 0px 1px 16px rgba(105, 153, 247, 0.35);
+        box-shadow: 0 1px 16px rgba(105, 153, 247, 0.35);
         transition: opacity $transition-slow, visibility $transition-slow;
 
         .multi-level-menu__column {

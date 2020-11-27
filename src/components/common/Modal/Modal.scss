@@ -1,4 +1,5 @@
 $spui-Modal-font: $font-primary;
+
 /* Z-index */
 $spui-Modal-z-1: 5000;
 $spui-Modal-z-2: $spui-Modal-z-1 + 1;
@@ -12,6 +13,7 @@ $spui-Modal-z-4: $spui-Modal-z-3 + 1;
         z-index: $spui-Modal-z-4;
     }
 }
+
 .spui-Modal {
     font-family: $spui-Modal-font;
     position: fixed;
@@ -31,12 +33,13 @@ $spui-Modal-z-4: $spui-Modal-z-3 + 1;
         align-items: center;
         justify-content: space-between;
         padding-left: 12px;
-        background-color: #ffffff;
+        background-color: #fff;
         min-height: 36px;
     }
 
     &__close {
         @extend %reset-button;
+
         display: flex;
         align-items: center;
         justify-content: center;
@@ -53,7 +56,7 @@ $spui-Modal-z-4: $spui-Modal-z-3 + 1;
     }
 
     &__window {
-        background-color: #ffffff;
+        background-color: #fff;
         position: relative;
         z-index: $spui-Modal-z-3;
         max-height: 98%;

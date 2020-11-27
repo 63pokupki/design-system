@@ -26,6 +26,7 @@ $spui-InputSearch_font: $font-primary;
 
     &__btn {
         @extend %reset-button;
+
         display: flex;
         align-items: center;
         justify-content: center;
@@ -33,6 +34,7 @@ $spui-InputSearch_font: $font-primary;
         top: 50%;
         border-radius: 50%;
         transform: translateY(-50%);
+
         &:active {
             transform: translateY(-50%) scale(0.95);
         }
@@ -47,6 +49,7 @@ $spui-InputSearch_font: $font-primary;
 
 .spui-InputSearch {
     $parent: &;
+
     &_sm {
         #{$parent}__input {
             padding-left: 15px;

@@ -4,7 +4,6 @@
     }
 
     .modal {
-        
         &__header {
             font-size: 20px;
             font-weight: 700;
@@ -29,9 +28,8 @@
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            margin-top: 0px;
+            margin-top: 0;
             margin-bottom: 15px;
-
 
             .ds-btn {
                 width: 174px;
@@ -39,9 +37,11 @@
                 font-size: 14px;
                 white-space: nowrap;
             }
+
             .ds-btn__text {
                 font-size: 12px;
             }
+
             .btn-in-card {
                 margin-right: 15px;
             }
@@ -74,5 +74,4 @@
             }
         }
     }
-
 }

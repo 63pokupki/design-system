@@ -1,11 +1,11 @@
 
 .ds-popover_filter {
     display: inline-flex;
-    width: 155px;    
+    width: 155px;
     padding: 10px 15px;
     position: relative;
 
-    &:after {
+    &::after {
         content: "";
         width: 100%;
         height: 20px;
@@ -22,19 +22,24 @@
             color: $color-text-base;
             font-size: 11px;
             text-transform: lowercase;
-            &:after {
+
+            &::after {
                 transform: translate(-24px, -75%) rotate(-45deg);
                 top: 8px;
             }
-            &:before {
+
+            &::before {
                 width: 12px;
                 height: 12px;
-                top: 2px;               
+                top: 2px;
             }
+
             white-space: nowrap;
+
             &:hover {
                 color: $color-primary;
             }
+
             &:active {
                 color: $click-load-color;
             }
@@ -49,21 +54,23 @@
         border: none;
         border-radius: 15px;
         font-size: 11px;
+
         &_selected {
             background: $color-primary;
-            color:#fff;
+            color: #fff;
+
             &:active {
                 @include deep-click(0.95);
             }
         }
+
         &_disabled {
             cursor: not-allowed;
             color: $color-primary;
             background: #fff;
-
         }
         // Синяя полоска
-        &:after {
+        &::after {
             content: "";
             width: 100%;
             height: 1px;
@@ -71,10 +78,7 @@
             position: absolute;
             bottom: 55px;
             left: 0;
-            opacity: .2;
-        }    
+            opacity: 0.2;
+        }
     }
-
 }
-
-
