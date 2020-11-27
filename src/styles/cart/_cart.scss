@@ -1,12 +1,37 @@
 .cart {
-    
+
     p {
         margin: 0;
+    }
+
+    &__title {
+        display: flex;
+
+        &-link {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 26px;
+            width: auto;
+            margin-right: auto;
+
+            a {
+                align-items: center;
+            }
+        }
+
+        &-text {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 20px;
+            white-space: nowrap;
+            margin-right: auto;
+        }
     }
 
     &__txt {
         font-size: 14px;
         color: $color-text-heading;
+        line-height: 24px;
     }
     &__txt_small {
         font-size: 11px;
@@ -14,8 +39,16 @@
     &__txt_middle {
         font-size: 12px;
     }
+    &__txt_large {
+        font-weight: bold;
+        font-size: 12px;
+    }
 
     &__txt_grey {
+        color: $color-text-light-grey;
+    }
+
+    &__link {
         color: $color-text-light-grey;
     }
 
@@ -23,6 +56,7 @@
         display: flex;
         justify-content: space-between;
         margin: 15px 0 0 0;
+        max-width: 175px;
     }
 
 }

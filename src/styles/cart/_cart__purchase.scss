@@ -1,5 +1,21 @@
 
 .cart {
+    &__banner {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__tabs {
+        &-tab {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+            color: #8e8e8f;
+            margin-right: 25px;
+            margin-bottom: 20px;
+        }
+    }
+
     &__purchase {
         padding: 22px;
         position: relative;
@@ -7,7 +23,7 @@
         .rating-star-org {
             margin: 0 15px 0 10px;
         }
-        
+
         .stock-brief__org {
             margin: 0;
         }
@@ -26,18 +42,22 @@
         }
         .collapse-block-css__header-content {
             display: flex;
-            justify-content: space-between;
             width: 100%;
         }
-        .collapse-block-css__header-content-l {
-            width: 75%;
-        }
-        .collapse-block-css__header-content-r {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            align-items: flex-end;
-            width: 35%;
+        .collapse-block-css__header-content-item {
+            &:nth-of-type(1) {
+                width: 35%
+            }
+
+            &:nth-of-type(2) {
+                width: 28%;
+            }
+
+            .cart__pickup-address {
+                margin-top: 10px;
+                margin-bottom: 5px;
+                display: block;
+            }
         }
 
         .collapse-block-css__toggle-btn {
@@ -49,7 +69,7 @@
         .org-profile__name {
             margin-bottom: 0;
         }
-    
+
 
         &-heading-terms,
         &-heading-comments {
@@ -84,11 +104,14 @@
         justify-content: flex-start;
         align-items: center;
         height: 40px;
-        margin-left: -22px;
-        margin-right: -22px;
         font-size: 11px;
         color: $color-text-heading;
         border-top: 1px solid #b9e0fa;
+
+        .first {
+            margin-left: 125px;
+            margin-right: -125px;
+        }
     }
     &__purchase-col-50 {
         display: flex;
@@ -101,6 +124,31 @@
         justify-content: center;
         align-items: center;
         width: 16.5%;
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: flex-end;
+
+        .cart__btn-place-order {
+            margin: 15px 40px 15px 0;
+        }
+
+        &-price-wrapper {
+            width: 400px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-right: 25px;
+        }
+
+        &-link-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-right: 100px;
+            width: 300px;
+        }
     }
 
 }

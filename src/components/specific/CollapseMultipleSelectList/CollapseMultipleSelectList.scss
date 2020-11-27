@@ -4,6 +4,7 @@
         align-items: center;
         justify-content: space-between;
         font-size: 10px;
+        line-height: 10px;
         color: $color-text-base;
         user-select: none;
     }
@@ -39,5 +40,13 @@
         &:active {
             background-color: #0080F6;
         }
+    }
+
+    ::v-deep &__search {
+        margin-top: 14px;
+    }
+
+    ::v-deep .spui-Collapse__slot-beforebody {
+        margin-bottom: 10px;
     }
 }

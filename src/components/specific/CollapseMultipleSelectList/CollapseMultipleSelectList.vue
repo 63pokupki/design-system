@@ -10,13 +10,20 @@
                             >Выбрать все</span
                         >
                         <span
-                            v-if="_displayClearButton"
+                            v-show="_displayClearButton"
                             @click="onClear"
                             class="spui-CollapseMultipleSelectList__clear"
                             >Очистить</span
                         ></span
                     >
                 </div>
+                <InputSearch
+                    placeholder="Поиск по параметрам"
+                    class="spui-CollapseMultipleSelectList__search"
+                    v-model="_inputValue"
+                    v-if="displaySearchInput"
+                    @onSearch="onSearch"
+                ></InputSearch>
             </template>
             <SelectList
                 slot="default"
@@ -27,13 +34,22 @@
                 :one="false"
                 :fnCompare="fnCompare"
             ></SelectList>
-            <template v-if="_displayMoreButton" slot="afterbody">
+            <template v-show="_displayMoreButton" slot="afterbody">
                 <div @click="onChangeExpand" class="spui-CollapseMultipleSelectList__more">
                     {{ listOpen ? "Свернуть" : "Показать все" }}
                 </div>
             </template>
         </Collapse>
-        <Tooltip v-if="_tooltip" @click.native="onTooltipClick" class="spui-CollapseMultipleSelectList__tooltip" type="accent" position="right" centered forced>Применить</Tooltip>
+        <Tooltip
+            v-if="_tooltip"
+            @click.native="onTooltipClick"
+            class="spui-CollapseMultipleSelectList__tooltip"
+            type="accent"
+            position="right"
+            centered
+            forced
+            >Применить</Tooltip
+        >
         <slot v-if="_isSlotAfterExist" name="after"></slot>
     </div>
 </template>
@@ -43,6 +59,7 @@ import { pluralize } from "@/helpers";
 import Collapse from "../../common/Collapse/Collapse.vue";
 import SelectList from "../../common/SelectList/SelectList.vue";
 import Tooltip from "../../common/Tooltip/Tooltip.vue";
+import InputSearch from "../../common/InputSearch/InputSearch.vue";
 
 export default {
     name: "spui-CollapseMultipleSelectList",
@@ -50,6 +67,7 @@ export default {
         Collapse,
         SelectList,
         Tooltip,
+        InputSearch,
     },
     props: {
         heading: {
@@ -60,12 +78,12 @@ export default {
         open: {
             type: Boolean,
             default: false,
-            required: true
+            required: true,
         },
         listOpen: {
             type: Boolean,
             default: false,
-            required: true
+            required: true,
         },
         maxVisibleElements: {
             type: Number,
@@ -73,7 +91,7 @@ export default {
         },
         tooltip: {
             type: Boolean,
-            default: false
+            default: false,
         },
         values: {
             type: Array,
@@ -82,16 +100,32 @@ export default {
         },
         label: {
             type: Function,
-            required: true
+            required: true,
         },
         value: {
-            required: true
+            required: true,
         },
         fnCompare: {
-            type: Function
-        }
+            type: Function,
+        },
+        inputSearchValue: {
+            type: String,
+            default: "",
+        },
+        displaySearchInput: {
+            type: Boolean,
+            default: false,
+        },
     },
     computed: {
+        _inputValue: {
+            get() {
+                return this.inputSearchValue;
+            },
+            set(value) {
+                this.$emit("inputSearchValue", value);
+            },
+        },
         _isSlotBeforeExist() {
             return Boolean(this.$slots["before"]);
         },
@@ -102,7 +136,7 @@ export default {
         _tooltip: {
             get() {
                 return this._open && this.tooltip ? true : false;
-            }
+            },
         },
         /** Показывать кнопку "Очистить", если хоть один параметр выбран */
         _displayClearButton: {
@@ -207,8 +241,11 @@ export default {
             this.$emit("changeListOpen", !this.listOpen);
         },
         onTooltipClick() {
-            this.$emit("tooltipClick")
-        }
+            this.$emit("tooltipClick");
+        },
+        onSearch(value) {
+            this.$emit("onSearch", value);
+        },
     },
 };
 </script>

@@ -65,7 +65,7 @@ export default {
             required: true,
         },
         values: {
-            type: Array,
+            type: [Array, Object],
             required: true,
             default: () => [],
         },
