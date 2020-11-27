@@ -20,6 +20,7 @@ $main-padding-modal: 15px;
         opacity: 1;
         visibility: visible;
         transition: all 0.5s;
+
         .modal__bg {
             opacity: 1;
             visibility: visible;
@@ -28,9 +29,7 @@ $main-padding-modal: 15px;
         }
     }
 
-
     &__bg {
-
         position: fixed;
         top: 0;
         // bottom: 0;
@@ -44,15 +43,15 @@ $main-padding-modal: 15px;
         transition: all 0.5s;
         opacity: 0;
         visibility: hidden;
+
         &.is-visible {
             opacity: 1;
             visibility: visible;
             transition: all 0.5s;
             background-color: rgba(0, 0, 0, 0.6);
         }
+    }
 
-    }    
-    
     &__wrap {
         position: relative;
         display: flex;
@@ -64,7 +63,7 @@ $main-padding-modal: 15px;
         background: #fff;
         padding: $main-padding-modal;
         z-index: 1001;
-        
+
         .modal__btn-close {
             position: absolute;
             display: flex;
@@ -79,40 +78,45 @@ $main-padding-modal: 15px;
 
             &:hover {
                 .icon-close {
-                    &:after,
-                    &:before {
+                    &::after,
+                    &::before {
                         background-color: $color-primary;
                     }
                 }
             }
+
             &:active {
-                &:before {
+                &::before {
                     width: 15px;
                 }
-                &:after {
+
+                &::after {
                     width: 15px;
                     left: 10px;
                 }
             }
-            &:after,
-            &:before {
+
+            &::after,
+            &::before {
                 content: "";
                 position: absolute;
-                display: flex;
                 width: 19px;
                 height: 3px;
                 background-color: #000;
                 display: none;
             }
-            &:after {
+
+            &::after {
                 transform: rotate(45deg);
                 left: 8px;
             }
-            &:before {
+
+            &::before {
                 transform: rotate(-45deg);
             }
         }
     }
+
     &__header {
         margin: 15px 0 20px 0;
     }

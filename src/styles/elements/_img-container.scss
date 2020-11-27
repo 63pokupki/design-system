@@ -11,6 +11,7 @@
         width: 100%;
         height: 100%;
         max-height: inherit;
+
         img {
             min-width: 100%;
             max-height: inherit;
@@ -45,15 +46,19 @@
         max-height: 50px;
         min-height: 25px;
     }
-    &_extra-large, &_large, &_middle, &_small, &_resp {
+
+    &_extra-large,
+    &_large,
+    &_middle,
+    &_small,
+    &_resp {
         img {
             max-width: 100%;
             height: auto;
         }
     }
+
     img {
         display: none;
     }
 }
-
-

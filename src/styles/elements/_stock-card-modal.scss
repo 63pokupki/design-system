@@ -4,12 +4,14 @@
         align-items: center;
         justify-content: center;
     }
+
     .modal {
         &__content {
             overflow-x: hidden;
             overflow-y: auto;
             width: 100%;
         }
+
         &__wrap {
             padding: 15px 0;
         }
@@ -20,17 +22,21 @@
             }
         }
     }
+
     .stock-card-vertical .stock-card-vertical__compare-w {
         right: 0;
         left: auto;
     }
+
     .stock-card-vertical .stock-card-vertical__compare {
         left: auto;
         right: 8px;
     }
+
     .item-page-m .stock-card-vertical .stock-badge_already {
         top: -10px;
     }
+
     &__go-back {
         display: flex;
         justify-content: space-between;

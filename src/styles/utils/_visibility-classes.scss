@@ -3,11 +3,13 @@
     display: flex;
     flex-direction: column;
     border: 1px solid $bg-wrapper-card-color;
+
     &__row {
         display: flex;
         flex-direction: row;
         border: 1px solid $bg-wrapper-card-color;
     }
+
     &__col {
         display: flex;
         flex-direction: column;
@@ -17,53 +19,52 @@
         border: 1px solid $bg-wrapper-card-color;
         text-align: center;
     }
+
     &__header {
         background-color: $carrot-announ-purchase-status;
         font-weight: 600;
     }
 }
 
-
-
 // Прячем на десктопе
 .v-hidden-d {
     @media (min-width: 993px) {
-        visibility: hidden!important;
+        visibility: hidden !important;
     }
 }
 
 // Прячем на планшете
 .v-hidden-t {
     @media (min-width: 768px) and (max-width: 991px) {
-        visibility: hidden!important;
+        visibility: hidden !important;
     }
 }
 
 // Прячем на мобиле
 .v-hidden-m {
     @media (max-width: 768px) {
-        visibility: hidden!important;        
+        visibility: hidden !important;
     }
 }
 
 // Удаляем из документа на десктопе
 .d-none-d {
     @media (min-width: 993px) {
-        display: none!important;
+        display: none !important;
     }
 }
 
 // Удаляем из документа на планшете
 .d-none-t {
     @media (min-width: 768px) and (max-width: 991px) {
-        display: none!important;
+        display: none !important;
     }
 }
 
 // Удаляем из документа на мобиле
 .d-none-m {
     @media (max-width: 768px) {
-        display: none!important;        
+        display: none !important;
     }
 }
 
@@ -73,7 +74,3 @@
     align-items: center;
     justify-content: space-between;
 }
-
-
-
-

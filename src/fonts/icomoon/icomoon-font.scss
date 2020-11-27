@@ -14,7 +14,7 @@
 }
 
 .ds-icon,
-.ds-icon:before {
+.ds-icon::before {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: "icomoon-ds" !important;
     cursor: pointer;

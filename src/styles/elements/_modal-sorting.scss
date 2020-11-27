@@ -1,25 +1,22 @@
 .modal-sorting {
-
     .modal__wrap {
         padding: 15px 15px 15px 25px;
         border-radius: 0;
     }
+
     .checkbox {
         padding-left: 30px;
     }
+
     .checkbox__label {
         text-transform: lowercase;
-        &:before {
-            transform: translateX(-30px); 
+
+        &::before {
+            transform: translateX(-30px);
         }
-        &:after {
+
+        &::after {
             transform: translateX(-25px) rotate(-45deg);
-        } 
+        }
     }
 }
-
-
-
-
-
-

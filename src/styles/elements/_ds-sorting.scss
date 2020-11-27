@@ -27,11 +27,10 @@
             .sorting__btn {
                 &::after {
                     @media (max-width: 1024px) {
-                        right: 0px;
+                        right: 0;
                     }
                 }
             }
-
         }
     }
 
@@ -41,7 +40,6 @@
     }
 
     &_col {
-
         .sorting__btn {
             flex-direction: column;
         }
@@ -75,11 +73,10 @@
         &:hover {
             max-height: 1000px;
             visibility: visible;
-            transition: all .5s ease;
+            transition: all 0.5s ease;
             opacity: 1;
         }
     }
-
 
     &__btn {
         display: flex;
@@ -94,14 +91,13 @@
             .ds-popover {
                 max-height: 1000px;
                 visibility: visible;
-                transition: all .5s ease;
+                transition: all 0.5s ease;
                 opacity: 1;
             }
-
         }
 
         //Галочка слева, при выбранной позиции
-        &:before {
+        &::before {
             content: "";
             display: none;
             width: 10px;
@@ -113,7 +109,7 @@
         }
 
         //Треугольник справа
-        &:after {
+        &::after {
             content: "";
             position: absolute;
             display: flex;
@@ -143,7 +139,6 @@
         margin-right: 5px;
         // padding: 0 15px 0 0;
         font-weight: 600;
-
     }
 
     //Выбранная позиция(span)
@@ -170,7 +165,7 @@
             flex-direction: column;
             max-width: 120px;
 
-            &:after {
+            &::after {
                 display: none;
             }
         }
@@ -184,7 +179,7 @@
             max-width: 65px;
 
             //Треугольник справа
-            &:after {
+            &::after {
                 content: "";
                 position: absolute;
                 display: flex;
@@ -200,31 +195,30 @@
         }
 
         .sorting__name-filter {
-            &:after {
+            &::after {
                 left: 75px;
             }
         }
 
         .sorting__name-sorting {
-            &:after {
+            &::after {
                 left: 100px;
             }
         }
-
     }
 }
 
-.sorting-block .sorting__btn:focus+.ds-popover_sorting {
+.sorting-block .sorting__btn:focus + .ds-popover_sorting {
     max-height: 1000px;
     visibility: visible;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
     opacity: 1;
 }
 
 .sorting-block .ds-popover_sorting:hover {
     max-height: 1000px;
     visibility: visible;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
     opacity: 1;
 }
 

@@ -6,7 +6,9 @@
     justify-content: center;
     width: 30px;
     height: 30px;
-    &:before, &:after {
+
+    &::before,
+    &::after {
         position: absolute;
         content: '';
         height: 1px;
@@ -15,33 +17,39 @@
         background: #858585;
         left: 12px;
     }
+
     &:hover {
-        &:before, &:after {
+        &::before,
+        &::after {
             background: $color-primary;
         }
+
         cursor: pointer;
     }
-    &:before {
+
+    &::before {
         transform: rotate(45deg) translateY(-3.7px);
     }
 
-    &:after {
+    &::after {
         transform: rotate(-45deg) translateY(3.5px);
     }
     //Направления кнопки
-	// Для выбора нужного направления, присвоить соответствующий класс блоку arrow
-	// например arrow arrow_up 
-	&_right {
-		transform: rotate(0deg);
-	}
-	&_down {
-		transform: rotate(90deg);
-	}
-	&_left {
-		transform: rotate(180deg);
-	}
-	&_up {
-		transform: rotate(270deg);
+    // Для выбора нужного направления, присвоить соответствующий класс блоку arrow
+    // например arrow arrow_up
+    &_right {
+        transform: rotate(0deg);
+    }
 
-	}        
+    &_down {
+        transform: rotate(90deg);
+    }
+
+    &_left {
+        transform: rotate(180deg);
+    }
+
+    &_up {
+        transform: rotate(270deg);
+    }
 }

@@ -23,6 +23,7 @@
     &__prev,
     &__next {
         @extend %reset-button;
+
         font-size: 14px;
         color: #36a6f2;
         display: flex;
@@ -36,7 +37,7 @@
 
     &__btn-wrapper {
         border-radius: 50%;
-        background-color: #ffffff;
+        background-color: #fff;
         opacity: 0.7;
         display: flex;
         align-items: center;
@@ -48,6 +49,7 @@
     &__prev {
         left: 0;
     }
+
     &__next {
         right: 0;
     }
@@ -62,6 +64,7 @@
     .spui-ImageSwitch__next {
         display: none;
     }
+
     &:hover {
         .spui-ImageSwitch__prev,
         .spui-ImageSwitch__next {

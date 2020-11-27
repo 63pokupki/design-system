@@ -1,165 +1,166 @@
 .main-about-us {
-	// border-top: 1px solid rgba(54, 165, 242, 0.15);
-	// border-bottom: 1px solid rgba(54, 165, 242, 0.15);
-	padding: 0 0 21px 0;
+    // border-top: 1px solid rgba(54, 165, 242, 0.15);
+    // border-bottom: 1px solid rgba(54, 165, 242, 0.15);
+    padding: 0 0 21px 0;
 
-	.main-page__title {
-		font-weight: bold;
-		font-size: 14px;
-		margin: 15px 0 15px 10px;
+    .main-page__title {
+        font-weight: bold;
+        font-size: 14px;
+        margin: 15px 0 15px 10px;
 
-		@media (max-width: 767px) {
-			margin-top: 0;
-		}
-	}
+        @media (max-width: 767px) {
+            margin-top: 0;
+        }
+    }
 
-	&__wrapper {
-		padding: 0 10px;
-	}
+    &__wrapper {
+        padding: 0 10px;
+    }
 
-	&__text {
-		position: relative;
-		overflow: hidden;
-		height: 65px;
-		font-weight: 400;
-		font-size: 12px;
-		line-height: 20px;
+    &__text {
+        position: relative;
+        overflow: hidden;
+        height: 65px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
 
-		&::after {
-			content: "";
-			width: 100%;
-			height: 80px;
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			z-index: 2;
-			background: linear-gradient(0deg,#fff,hsla(0,0%,100%,0) 105.88%);
-		}
+        &::after {
+            content: "";
+            width: 100%;
+            height: 80px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+            background: linear-gradient(0deg, #fff, hsla(0, 0%, 100%, 0) 105.88%);
+        }
 
-		&:nth-of-type(2) {
-			display: none;
-			p {
-				text-indent: 15px;
-				font-weight: normal;
-			}
+        &:nth-of-type(2) {
+            display: none;
 
-			.main-about-us__text-title {
-				font-weight: bold;
-				font-size: 14px;
-				display: block;
-				margin: 15px 0;
-			}
-		}
-	}
+            p {
+                text-indent: 15px;
+                font-weight: normal;
+            }
 
-	&_show {
-		.main-about-us__text {
-			height: auto;
+            .main-about-us__text-title {
+                font-weight: bold;
+                font-size: 14px;
+                display: block;
+                margin: 15px 0;
+            }
+        }
+    }
 
-			&:nth-of-type(2) {
-				display: block;
-				width: 47%;
+    &_show {
+        .main-about-us__text {
+            height: auto;
 
-				@media (max-width: 767px) {
-					width: 100%;
-				}
-			}
+            &:nth-of-type(2) {
+                display: block;
+                width: 47%;
 
-			@media (min-width: 768px) and (max-width: 1183px) {
-				width: 82vw;
+                @media (max-width: 767px) {
+                    width: 100%;
+                }
+            }
 
-				&:nth-of-type(2) {
-					width: 82vw;
-				}
-			}
+            @media (min-width: 768px) and (max-width: 1183px) {
+                width: 82vw;
 
-			&::after {
-				display: none;
-			}
-		}
+                &:nth-of-type(2) {
+                    width: 82vw;
+                }
+            }
 
-		.main-about-us__button {
-			background: none;
-		}
-	}
+            &::after {
+                display: none;
+            }
+        }
+
+        .main-about-us__button {
+            background: none;
+        }
+    }
 }
 
 @media (min-width: 768px) {
-	.main-about-us {
-		.main-page__title {
-			justify-content: center;
-		}
+    .main-about-us {
+        .main-page__title {
+            justify-content: center;
+        }
 
-		&__text {
-			text-align: center;
-			width: 455px;
-			margin: 0 auto;
-		}
-	}
+        &__text {
+            text-align: center;
+            width: 455px;
+            margin: 0 auto;
+        }
+    }
 }
 
 @media (min-width: 1184px) {
-	.main-about-us {
-		&__wrapper {
-			display: flex;
-			justify-content: flex-start;
-			flex-wrap: wrap;
-		}
+    .main-about-us {
+        &__wrapper {
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
 
-		.main-page__title {
-			justify-content: flex-start;
-			margin-bottom: 25px;
-			font-size: 16px;
-		}
+        .main-page__title {
+            justify-content: flex-start;
+            margin-bottom: 25px;
+            font-size: 16px;
+        }
 
-		&__text {
-			width: 40%;
-			margin: 0;
-			text-align: left;
-			padding-top: 50px;
+        &__text {
+            width: 40%;
+            margin: 0;
+            text-align: left;
+            padding-top: 50px;
 
-			&:nth-of-type(1) {
-				margin-right: 87px;
-			}
+            &:nth-of-type(1) {
+                margin-right: 87px;
+            }
 
-			p:first-of-type {
-				margin-top: 0;
-			}
+            p:first-of-type {
+                margin-top: 0;
+            }
 
-			&:first-of-type {
-				.main-about-us__text-title {
-					font-size: 12px;
-					line-height: 1.5;
-					font-weight: 400;
-					display: inline;
-				}
-			}
+            &:first-of-type {
+                .main-about-us__text-title {
+                    font-size: 12px;
+                    line-height: 1.5;
+                    font-weight: 400;
+                    display: inline;
+                }
+            }
 
-			&:nth-of-type(2) {
-				display: block;
+            &:nth-of-type(2) {
+                display: block;
 
-				p {
-					text-indent: 0;
-					margin-left: 15px;
-				}
+                p {
+                    text-indent: 0;
+                    margin-left: 15px;
+                }
 
-				.main-about-us__text-title {
-					margin-top: 0;
-					font-size: 13px;
-					line-height: 1.5;
-				}
-			}
+                .main-about-us__text-title {
+                    margin-top: 0;
+                    font-size: 13px;
+                    line-height: 1.5;
+                }
+            }
 
-			h2 {
-				margin-top: -35px;
-			}
+            h2 {
+                margin-top: -35px;
+            }
 
-			&-title {
-				font-size: 13px;
-				line-height: 22px;
-				font-weight: bold;
-				display: block;
-			}
-		}
-	}
+            &-title {
+                font-size: 13px;
+                line-height: 22px;
+                font-weight: bold;
+                display: block;
+            }
+        }
+    }
 }

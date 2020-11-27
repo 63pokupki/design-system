@@ -11,6 +11,7 @@
 
     &:active {
         color: #ff3868;
+
         i {
             @include deep-click(0.9);
         }

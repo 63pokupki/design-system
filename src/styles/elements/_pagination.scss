@@ -32,7 +32,7 @@
             }
 
             .ds-icon {
-                color: #fff;                
+                color: #fff;
             }
         }
 
@@ -43,8 +43,10 @@
                 color: #fff;
             }
         }
+
         &.is-disabled {
             pointer-events: none;
+
             .ds-icon {
                 color: #e2e3e5;
             }
@@ -58,8 +60,7 @@
 
     .icon-arrow-back {
         transform: scaleX(-1);
-        color: #ffffff;
-
+        color: #fff;
     }
 
     .ds-icon {
@@ -68,16 +69,16 @@
 
     // Стрелки на первую/последнюю страницу
     .icon-arrow {
-
         &-left,
         &-right {
             color: $color-text-base;
         }
     }
+
     &__first-page,
     &__last-page {
         display: none;
-        color: $color-text-base;                
+        color: $color-text-base;
     }
 
     @media (max-width: 767px) {
@@ -90,7 +91,7 @@
     }
 }
 
-@media (-moz-touch-enabled: 1), (pointer:coarse) {
+@media (-moz-touch-enabled: 1), (pointer: coarse) {
     .pagination {
         &__item:hover {
             background: $pagination-color;
@@ -113,5 +114,3 @@
         }
     }
 }
-
-

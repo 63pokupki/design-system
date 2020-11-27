@@ -21,7 +21,6 @@
 @import '~styles/elements/_icon-calendar';
 @import '~styles/elements/_link';
 @import '~styles/elements/_logo';
-@import '~styles/elements/_outlined-links';
 @import '~styles/elements/_search';
 @import '~styles/elements/_sidebar-menu-touch';
 @import '~styles/elements/_sidebar';
@@ -34,7 +33,6 @@
 @import '~styles/elements/_category-card';
 @import '~styles/elements/_category-card-list';
 @import '~styles/elements/_slider';
-@import '~styles/elements/_stock';
 @import '~styles/elements/_stock-status';
 @import '~styles/elements/_stock-brief';
 @import '~styles/elements/_rating-star';
@@ -54,10 +52,8 @@
 // Ползунок
 @import '~styles/elements/_stock-items-filter';
 
-
 //Кнопка назад
 @import '~styles/elements/_ds-btn-back.scss';
-
 
 // stock
 @import '~styles/elements/_stock-card-container';
@@ -98,9 +94,6 @@
 @import "~styles/elements/_active-custom-card-mobile.scss";
 @import "~styles/elements/_acc-modal-sort.scss";
 @import "~styles/elements/_purchase-status.scss";
-
-
-
 @import "~styles/elements/_ds-popover.scss";
 @import "~styles/elements/_ds-btn-apply.scss";
 @import "~styles/elements/_ds-sorting.scss";
@@ -115,9 +108,7 @@
 @import "~styles/elements/_ds-like-single.scss";
 @import "~styles/elements/_ds-rating-star-org.scss";
 @import "~styles/elements/_organizer-block.scss";
-
 @import "~styles/utils/_variables.scss";
-
 @import "~styles/elements/img-container.scss";
 @import "~styles/elements/header-wrap-active-cards.scss";
 @import "~styles/elements/page-active-custom.scss";
@@ -155,7 +146,6 @@
 @import "~styles/elements/_nav-bc-bar";
 @import "~styles/elements/_social-link";
 
-
 // Modal
 @import "~styles/elements/_modal-message-for-org.scss";
 @import "~styles/elements/_modal-short-img.scss";
@@ -176,9 +166,6 @@
 @import "~styles/elements/modal-payment-error.scss";
 @import "~styles/elements/_modal-filter-tags.scss";
 @import "~styles/elements/_modal-sorting.scss";
-
-
-
 
 //delivery
 @import "~styles/delivery/delivery.scss";
@@ -263,8 +250,3 @@
 
 // цена с серыми копейками
 @import "~styles/elements/price.scss";
-
-
-
-
-

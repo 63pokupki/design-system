@@ -17,7 +17,6 @@
         @media screen and (max-width: 1024px) {
             display: none;
         }
-
     }
 
     &__sku {
@@ -68,7 +67,6 @@
         @media (max-width: 1024px) {
             margin-bottom: 0;
         }
-
     }
 
     .collapse-section {
@@ -92,7 +90,6 @@
     .collapse-section__rows-heading {
         margin: 0 0 10px 0;
     }
-
 
     &__share {
         text-align: center;
@@ -202,7 +199,7 @@
         background: $pink-popover-color;
         color: $color-text-base;
 
-        &:before {
+        &::before {
             left: 20px;
             background: $pink-popover-color;
             transform: rotate(45deg) translateX(3px);
@@ -330,14 +327,14 @@
             font-weight: 600;
             font-size: 12px;
             line-height: 17px;
-            color: #ffffff;
+            color: #fff;
             // width: 140px;
             // padding: 3px 7px;
             max-width: 200px;
             padding: 1px 7px;
             white-space: nowrap;
 
-            &:before {
+            &::before {
                 border: 5px solid transparent;
                 top: auto;
                 bottom: -5px;
@@ -411,7 +408,7 @@
         width: 100%;
 
         .item-page-d__params {
-            margin-bottom: 0px; //for front
+            margin-bottom: 0; //for front
         }
     }
 
@@ -421,5 +418,4 @@
             bottom: -45px;
         }
     }
-
 }

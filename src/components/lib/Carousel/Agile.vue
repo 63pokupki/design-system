@@ -114,18 +114,26 @@
 
 <script>
 /* eslint-disable */
-import handlers from "./mixins/handlers";
-import helpers from "./mixins/helpers";
-import methods from "./mixins/methods";
-import preparations from "./mixins/preparations";
-import settings from "./mixins/settings";
-import throttle from "./mixins/throttle";
-import watchers from "./mixins/watchers";
+import handlers from './mixins/handlers';
+import helpers from './mixins/helpers';
+import methods from './mixins/methods';
+import preparations from './mixins/preparations';
+import settings from './mixins/settings';
+import throttle from './mixins/throttle';
+import watchers from './mixins/watchers';
 
 export default {
-    name: "Agile",
+    name: 'Agile',
 
-    mixins: [handlers, helpers, methods, preparations, settings, throttle, watchers],
+    mixins: [
+        handlers,
+        helpers,
+        methods,
+        preparations,
+        settings,
+        throttle,
+        watchers,
+    ],
 
     data() {
         return {
@@ -142,7 +150,7 @@ export default {
             slides: [],
             slidesClonedAfter: [],
             slidesClonedBefore: [],
-            isSSR: typeof window === "undefined",
+            isSSR: typeof window === 'undefined',
             transitionDelay: 0,
             translateX: 0,
             widthWindow: 0,
@@ -154,7 +162,9 @@ export default {
         breakpoints() {
             return !this.initialSettings.responsive
                 ? []
-                : this.initialSettings.responsive.map((item) => item.breakpoint);
+                : this.initialSettings.responsive.map(
+                      (item) => item.breakpoint
+                  );
         },
 
         canGoToPrev() {
@@ -162,7 +172,10 @@ export default {
         },
 
         canGoToNext() {
-            return this.settings.infinite || this.currentSlide < this.countSlides - 1;
+            return (
+                this.settings.infinite ||
+                this.currentSlide < this.countSlides - 1
+            );
         },
 
         countSlides() {
@@ -187,48 +200,70 @@ export default {
                 return 0;
             }
 
-            let marginX = this.slidesCloned ? this.countSlides * this.widthSlide : 0;
+            let marginX = this.slidesCloned
+                ? this.countSlides * this.widthSlide
+                : 0;
 
             // Center mode margin
             if (this.settings.centerMode) {
-                marginX
-            -= (Math.floor(this.settings.slidesToShow / 2)
-              - +(this.settings.slidesToShow % 2 === 0))
-              * this.widthSlide;
+                marginX -=
+                    (Math.floor(this.settings.slidesToShow / 2) -
+                        +(this.settings.slidesToShow % 2 === 0)) *
+                    this.widthSlide;
             }
 
             return this.settings.rtl ? marginX : -1 * marginX;
         },
 
         slidesCloned() {
-            return !this.settings.unagile && !this.settings.fade && this.settings.infinite;
+            return (
+                !this.settings.unagile &&
+                !this.settings.fade &&
+                this.settings.infinite
+            );
         },
 
         slidesAll() {
             return this.slidesCloned
-                ? [...this.slidesClonedBefore, ...this.slides, ...this.slidesClonedAfter]
+                ? [
+                      ...this.slidesClonedBefore,
+                      ...this.slides,
+                      ...this.slidesClonedAfter,
+                  ]
                 : this.slides;
         },
 
         widthSlide() {
             return !this.settings.unagile
                 ? this.widthContainer / this.settings.slidesToShow
-                : "auto";
+                : 'auto';
         },
     },
 
     mounted() {
         // Windows resize listener
         this.$nextTick(() => {
-            window.addEventListener("resize", this.getWidth);
+            window.addEventListener('resize', this.getWidth);
 
             // Mouse and touch events
-            this.$refs.track.addEventListener("touchstart", this.handleMouseDown);
-            this.$refs.track.addEventListener("touchend", this.handleMouseUp);
-            this.$refs.track.addEventListener("touchmove", this.handleMouseMove);
-            this.$refs.track.addEventListener("mousedown", this.handleMouseDown);
-            this.$refs.track.addEventListener("mouseup", this.handleMouseUp);
-            this.$refs.track.addEventListener("mousemove", this.handleMouseMove);
+            this.$refs.track.addEventListener(
+                'touchstart',
+                this.handleMouseDown
+            );
+            this.$refs.track.addEventListener('touchend', this.handleMouseUp);
+            this.$refs.track.addEventListener(
+                'touchmove',
+                this.handleMouseMove
+            );
+            this.$refs.track.addEventListener(
+                'mousedown',
+                this.handleMouseDown
+            );
+            this.$refs.track.addEventListener('mouseup', this.handleMouseUp);
+            this.$refs.track.addEventListener(
+                'mousemove',
+                this.handleMouseMove
+            );
 
             // Init
             this.isSSR = false;
@@ -237,14 +272,17 @@ export default {
     },
 
     beforeDestroy() {
-        window.removeEventListener("resize", this.getWidth);
+        window.removeEventListener('resize', this.getWidth);
 
-        this.$refs.track.removeEventListener("touchstart", this.handleMouseDown);
-        this.$refs.track.removeEventListener("touchend", this.handleMouseUp);
-        this.$refs.track.removeEventListener("touchmove", this.handleMouseMove);
-        this.$refs.track.removeEventListener("mousedown", this.handleMouseDown);
-        this.$refs.track.removeEventListener("mouseup", this.handleMouseUp);
-        this.$refs.track.removeEventListener("mousemove", this.handleMouseMove);
+        this.$refs.track.removeEventListener(
+            'touchstart',
+            this.handleMouseDown
+        );
+        this.$refs.track.removeEventListener('touchend', this.handleMouseUp);
+        this.$refs.track.removeEventListener('touchmove', this.handleMouseMove);
+        this.$refs.track.removeEventListener('mousedown', this.handleMouseDown);
+        this.$refs.track.removeEventListener('mouseup', this.handleMouseUp);
+        this.$refs.track.removeEventListener('mousemove', this.handleMouseMove);
 
         this.disableAutoPlay();
     },
@@ -272,7 +310,7 @@ export default {
 
         // Go to slide
         goTo(n, transition = true, asNav = false) {
-        // Break goTo() if unagile is active
+            // Break goTo() if unagile is active
             if (this.settings.unagile) {
                 return false;
             }
@@ -294,7 +332,7 @@ export default {
                     slideNextReal = 0;
                 }
 
-                this.$emit("before-change", {
+                this.$emit('before-change', {
                     currentSlide: this.currentSlide,
                     nextSlide: slideNextReal,
                 });
@@ -313,8 +351,13 @@ export default {
                 : 0;
             this.transitionDelay = transition ? this.speed : 0;
 
-            if (this.infinite || this.currentSlide + this.slidesToShow <= this.countSlides) {
-                this.translateX = this.settings.rtl ? translateX : -1 * translateX;
+            if (
+                this.infinite ||
+                this.currentSlide + this.slidesToShow <= this.countSlides
+            ) {
+                this.translateX = this.settings.rtl
+                    ? translateX
+                    : -1 * translateX;
             }
         },
 

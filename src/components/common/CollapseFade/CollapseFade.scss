@@ -2,6 +2,7 @@ $spui-CollapseFade_font: $font-primary;
 
 .spui-CollapseFade {
     font-family: $spui-CollapseFade_font;
+
     &__heading {
         font-weight: bold;
         font-size: 12px;
@@ -28,11 +29,11 @@ $spui-CollapseFade_font: $font-primary;
         font-size: 12px;
         line-height: 20px;
         color: #606266;
-        max-height: 0px;
+        max-height: 0;
         overflow: hidden;
         position: relative;
 
-        &:after {
+        &::after {
             content: "";
             width: 100%;
             height: 50px;
@@ -50,10 +51,11 @@ $spui-CollapseFade_font: $font-primary;
         transform: rotate(-180deg);
         transition: transform 0.2s ease;
     }
+
     .spui-CollapseFade__body {
         max-height: initial;
 
-        &:after {
+        &::after {
             content: unset;
         }
     }

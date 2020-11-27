@@ -9,8 +9,6 @@ module.exports = {
     entry: {
         'ds-ui-kit': entry['ds-ui-kit'],
         'categories-icons-sprite': entry['categories-icons-sprite'],
-        footer: ['./src/styles/page/footer.scss'],
-        header: ['./src/styles/page/header.scss'],
         'item-page': ['./src/styles/page/item-page.scss'],
         delivery: ['./src/styles/page/delivery.scss'],
         cookies: ['./src/styles/page/cookies.scss'],
@@ -18,7 +16,6 @@ module.exports = {
             './src/styles/page/welcome-box.scss',
             './src/js/welcome-box.js',
         ],
-        stock: ['./src/styles/page/stock.scss'],
         skeleton: ['./src/styles/page/skeleton.scss'],
         onboarding: [
             './node_modules/@63pokupki/onboarding-core/index.css',

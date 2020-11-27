@@ -10,7 +10,7 @@
         top: 15px;
         left: 15px;
 
-        .checkbox__label:before {
+        .checkbox__label::before {
             border: 2px solid $color-primary;
         }
     }
@@ -62,7 +62,7 @@
 
         &:hover {
             .item-params-list {
-                &:after {
+                &::after {
                     border-bottom: 1px solid $click-load-color;
                 }
             }
@@ -133,11 +133,10 @@
 
         @media (max-width: 767px) {
             height: 212px;
-            margin-bottom: 0px;
+            margin-bottom: 0;
         }
 
         &:hover {
-
             .stock-card-vertical__prev,
             .stock-card-vertical__next,
             .stock-card-vertical__favorite,
@@ -188,7 +187,7 @@
         }
 
         i {
-            &:before {
+            &::before {
                 font-weight: 600;
             }
         }
@@ -366,7 +365,6 @@
         line-height: 18px;
         color: rgba(96, 98, 102, 0.75);
     }
-
 
     &__buy {
         width: 100%;

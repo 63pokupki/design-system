@@ -6,47 +6,48 @@
     min-width: 875px;
     padding: 20px;
     background: $card-color-bg;
-    transition: box-shadow .3s;
+    transition: box-shadow 0.3s;
     z-index: 5;
     position: relative;
-
 }
 
-
 .card-active-custom-desktop {
-
     display: flex;
     background: #fff;
     cursor: pointer;
     position: relative;
-    
+
     &.is-toggle {
         margin: 0 0 10px 0;
+
         .card-active-custom-desktop__wrap {
             &:hover {
-                &:after {
+                &::after {
                     box-shadow: none;
                 }
             }
         }
+
         .card-active-custom-desktop__toggle-block {
             max-height: 500px;
             height: auto;
             visibility: visible;
             opacity: 1;
-            transition: all .8s;
+            transition: all 0.8s;
             overflow: visible;
         }
+
         .img-container_resp {
             opacity: 1;
-            transition: all .8s;
+            transition: all 0.8s;
         }
+
         .icon-arrow-down {
             transform: rotate(-180deg);
             transition: all $transition-slow;
         }
-
     }
+
     .icon-arrow-down {
         transition: all $transition-slow;
     }
@@ -59,19 +60,19 @@
         padding: 25px 0;
         z-index: 5;
         cursor: pointer;
+
         &:hover {
-            &:after {
+            &::after {
                 content: "";
                 top: 3px;
                 left: -20px;
                 right: -20px;
                 bottom: 3px;
                 position: absolute;
-                box-shadow: 0px 0px 16px rgba(105, 153, 247, 0.18);
+                box-shadow: 0 0 16px rgba(105, 153, 247, 0.18);
                 z-index: 1;
-            }        
+            }
         }
-    
     }
 
     //Header
@@ -108,6 +109,7 @@
         font-size: 14px;
         font-weight: bold;
         color: $dark-brown-color;
+
         a {
             margin: 0 5px 0 0;
             color: $dark-brown-color;
@@ -148,7 +150,7 @@
     &__statusbar {
         width: 190px;
         // max-width: 200px;
-        text-align: center;        
+        text-align: center;
     }
 
     &__start-date-collection {
@@ -167,6 +169,7 @@
     &__like {
         margin: 5px;
     }
+
     &__like {
         &.txt-hidden {
             .like__text {
@@ -180,13 +183,14 @@
         justify-content: center;
         // width: 70px;
         width: 55px;
+
         .arrow-down {
             transition: all $transition-slow;
         }
+
         .arrow {
             justify-content: flex-end;
         }
-
     }
 
     //Toggle block
@@ -199,7 +203,7 @@
         max-height: 0;
         visibility: hidden;
         opacity: 0;
-        transition: all .5s;
+        transition: all 0.5s;
         overflow: hidden; // Нужен, чтобы плавно сжималось содержимое внутри
     }
 
@@ -217,7 +221,7 @@
     &__img {
         display: flex;
         justify-content: center;
-        align-items: center;        
+        align-items: center;
         max-height: 200px;
         overflow: hidden;
     }
@@ -236,7 +240,8 @@
             font-size: 12px;
             color: $dark-grey-color;
         }
-        > div{
+
+        > div {
             margin: 5px 40px 5px 5px;
         }
     }
@@ -271,11 +276,13 @@
         font-size: 12px;
         color: $dark-grey-color;
         overflow: auto;
+
         a {
             color: $dark-grey-color;
             text-decoration: none;
         }
     }
+
     &__slider {
         margin: 15px 5px;
         transform: translateX(-25px);
@@ -284,13 +291,13 @@
             width: 225px;
             margin-right: 0;
         }
-
     }
 
     &__comments {
         h5 {
             margin-bottom: -2px;
         }
+
         &-link {
             font-size: 12px;
             color: $color-primary;
@@ -301,7 +308,6 @@
     &__access-lvl,
     &__payment-method,
     &__comments {
-
         p {
             font-size: 12px;
             font-weight: normal;
@@ -317,15 +323,15 @@
 
         a {
             color: $color-primary;
+
             span {
                 color: $color-primary;
             }
         }
     }
 
-
     //Подкатегории
-    &__img-subcategory {      
+    &__img-subcategory {
         position: relative;
         max-width: 152px;
         min-width: 152px;
@@ -339,7 +345,8 @@
             border: 1px solid #e3e3e3;
             border-radius: 4px;
             opacity: 0;
-            transition: all .5s;
+            transition: all 0.5s;
+
             img {
                 max-height: 140px;
             }
@@ -358,7 +365,7 @@
             bottom: 0;
             width: 100%;
             background: rgba(255, 255, 255, 0);
-            transition: .4s;
+            transition: 0.4s;
             cursor: pointer;
             text-decoration: none;
 
@@ -371,15 +378,16 @@
                 color: $dark-grey-color;
             }
 
-            p:nth-child(2) {                
+            p:nth-child(2) {
                 font-weight: 700;
                 font-size: 14px;
                 line-height: 14px;
                 color: $dark-grey-color;
+
                 span {
                     color: $dark-grey-color;
                     font-size: 14px;
-                }    
+                }
             }
 
             p {
@@ -396,14 +404,10 @@
                     visibility: visible;
                 }
             }
+
             .img-container_resp {
                 border: 1px solid $color-primary;
-
             }
         }
-
     }
-    
 }
-
-

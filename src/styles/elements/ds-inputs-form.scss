@@ -1,13 +1,8 @@
-input -webkit-autofill {
-   box-shadow: 0 0 0 50px white inset; /* можно изменить на любой вариант цвета */    
-}
-
 // fix for -moz
 input {
     filter: none;
     -webkit-filter: none;
 }
-
 
 .ds-inputs-component {
     display: block;
@@ -17,24 +12,27 @@ input {
     //Ошибка ввода
     &.is-error {
         .ds-inputs-form__label {
-            &:before {
-                color: $color-input-border-error!important;
+            &::before {
+                color: $color-input-border-error !important;
             }
         }
+
         .auth-form__login-label {
-            color: $color-input-border-error!important;
+            color: $color-input-border-error !important;
         }
+
         input {
             background: $color-input-bg-error;
             border-color: $color-input-border-error;
         }
+
         .ds-inputs-form__txt-error {
             visibility: visible;
         }
+
         ~.auth-form__error-message {
             visibility: visible;
         }
-
     }
     //Скрыть снежинку
     &.is-hidden-snowflake {
@@ -45,43 +43,46 @@ input {
     //Скрыть блок с подсказками снизу
     &.is-hidden-info {
         min-height: 0;
+
         .ds-inputs-form__txt-info {
             display: none;
         }
     }
+
     &.is-unavailable {
         .ds-inputs-form {
             border-color: $color-text-light-grey;
-            &:before {
+
+            &::before {
                 color: $color-text-light-grey;
             }
+
             input {
                 display: none;
             }
-
         }
     }
-
 
     @keyframes autofill {
         to {
-          color: inherit;
-          background: transparent;
+            color: inherit;
+            background: transparent;
         }
     }
-      
-    // fix for -webkit 
+
+    // fix for -webkit
     input:-webkit-autofill {
-        -webkit-box-shadow:0 0 0 50px white inset; /* можно изменить на любой вариант цвета */    
+        box-shadow: 0 0 0 50px white inset;
+        -webkit-box-shadow: 0 0 0 50px white inset; /* можно изменить на любой вариант цвета */
     }
-    
+
     // fix for -moz
     input {
         filter: none;
         -webkit-filter: none;
     }
-
 }
+
 .ds-inputs-form {
     display: block;
     min-width: 200px;
@@ -94,8 +95,6 @@ input {
         min-width: 200px;
         height: 100%;
         padding: 0 40px 0 20px;
-        border: none;
-        outline: none;
         font-size: 14px;
         font-weight: 600;
         color: $dark-grey-color;
@@ -103,28 +102,31 @@ input {
         border-radius: 2px;
         outline: none;
         appearance: none;
+
         &:focus {
             border: 1px solid $color-primary;
-            ~.ds-inputs-form__label:before {
+
+            ~.ds-inputs-form__label::before {
                 color: $color-primary;
             }
+
             ~.auth-form__login-label {
                 color: $color-primary;
             }
         }
 
-        // fix for -webkit 
+        // fix for -webkit
         input:-webkit-autofill {
-            -webkit-box-shadow:0 0 0 50px white inset; /* можно изменить на любой вариант цвета */    
+            -webkit-box-shadow: 0 0 0 50px white inset; /* можно изменить на любой вариант цвета */
         }
-    
     }
+
     &__label {
         position: absolute;
         top: 0;
         left: 0;
 
-        &:before {
+        &::before {
             display: inline-flex;
             height: 15px;
             position: absolute;
@@ -139,7 +141,6 @@ input {
             white-space: nowrap;
             background: white;
         }
-
     }
 
     //Info-block
@@ -161,15 +162,18 @@ input {
         color: $color-input-txt-info;
         position: relative;
         user-select: none;
+
         &.phone {
             width: 100%;
             max-width: 163px;
             padding: 0 0 0 22px;
         }
+
         &.email {
             padding: 0;
         }
     }
+
     &__txt-error {
         display: flex;
         justify-content: flex-end;
@@ -180,25 +184,30 @@ input {
         color: $color-input-border-error;
         visibility: hidden;
         user-select: none;
-        &-email, &-phone {
+
+        &-email,
+        &-phone {
             max-width: 152px;
         }
+
         &-login {
             max-width: 143px;
         }
     }
+
     &__icon-info {
         position: absolute;
         top: 10px;
         left: 0;
         user-select: none;
     }
-
 }
+
 .snowflake {
     width: 0;
     height: 0;
-    &:before {
+
+    &::before {
         content: "*";
         position: absolute;
         top: -15px;
@@ -212,11 +221,12 @@ input {
 // Login
 .input-login {
     .ds-inputs-form__label {
-        &:before {
+        &::before {
             content: "Логин";
         }
     }
-    &:after {
+
+    &::after {
         content: "";
         background: url("~images/important_images/auth-form/bg-line-label-input.svg");
         width: 65px;
@@ -226,6 +236,7 @@ input {
         left: 5px;
         z-index: 10;
     }
+
     .auth-form__login-label {
         position: absolute;
         top: -12px;
@@ -235,11 +246,13 @@ input {
         z-index: 20;
         color: $color-text-base;
     }
+
     .snowflake {
-        &:before {
+        &::before {
             left: 65px;
         }
     }
+
     .auth-form__example-login {
         margin: 0 0 0 5px;
         position: absolute;
@@ -250,35 +263,41 @@ input {
         z-index: 20;
         color: rgba(96, 98, 102, 0.5);
     }
+
     &__signIn {
-        &:after {
+        &::after {
             width: 270px;
             top: -1px;
             height: 3px;
-
         }
+
         .snowflake {
-            &:before {
+            &::before {
                 left: 270px;
             }
         }
+
         .ds-inputs-form__label {
-            &:before {
+            &::before {
                 content: "";
             }
         }
+
         @media (max-width: 767px) {
-            &:after {
+            &::after {
                 width: 232px;
             }
+
             .snowflake {
-                &:before {
+                &::before {
                     left: 235px;
                 }
             }
+
             .auth-form__example-login {
                 left: 153px;
             }
+
             .auth-form__example-login,
             .auth-form__login-label {
                 top: -10px;
@@ -291,12 +310,13 @@ input {
 // Password
 .input-password {
     .snowflake {
-        &:before {
+        &::before {
             left: 70px;
         }
     }
+
     .ds-inputs-form__label {
-        &:before {
+        &::before {
             content: "Пароль";
         }
     }
@@ -311,17 +331,18 @@ input {
     //     z-index: 10;
     // }
 
-
     input[type="checkbox"] {
         display: none;
-        &:checked ~.passEye-label:after  {
+
+        &:checked ~ .passEye-label::after {
             display: none;
         }
-        &:checked ~.passEye-label:before  {
+
+        &:checked ~ .passEye-label::before {
             display: inline-block;
         }
-
     }
+
     .passEye-label {
         position: absolute;
         display: inline-block;
@@ -329,7 +350,8 @@ input {
         height: 22px;
         top: 12px;
         right: 12px;
-        &:after {
+
+        &::after {
             content: "";
             display: inline-block;
             width: 25px;
@@ -339,7 +361,8 @@ input {
             background-repeat: no-repeat;
             background-position: center;
         }
-        &:before {
+
+        &::before {
             content: "";
             position: absolute;
             display: none;
@@ -354,19 +377,18 @@ input {
 
         cursor: pointer;
     }
-
 }
 
 //Поле ввода почты
 .input-email {
     .snowflake {
-        &:before {
+        &::before {
             left: 55px;
         }
     }
 
     .ds-inputs-form__label {
-        &:before {
+        &::before {
             content: "Email";
         }
     }
@@ -380,13 +402,12 @@ input {
     //     left: 4px;
     //     z-index: 10;
     // }
-
 }
 
 //Поле ввода телефона
 .input-phone {
     .snowflake {
-        &:before {
+        &::before {
             left: 135px;
         }
     }
@@ -396,7 +417,7 @@ input {
     }
 
     .ds-inputs-form__label {
-        &:before {
+        &::before {
             content: "Номер телефона";
             white-space: nowrap;
         }
@@ -416,26 +437,30 @@ input {
 //Повторный ввод пароля
 .input-password-repeat {
     .snowflake {
-        &:before {
+        &::before {
             left: 148px;
         }
     }
 
     .ds-inputs-form__label {
-        &:before {
+        &::before {
             content: "Повторите пароль";
             white-space: nowrap;
         }
     }
-    &:after {
+
+    &::after {
         width: 160px;
     }
+
     #repeat-passEye {
         display: none;
-        &:checked ~.passEye-label:after  {
+
+        &:checked ~ .passEye-label::after {
             display: none;
         }
-        &:checked ~.passEye-label:before  {
+
+        &:checked ~ .passEye-label::before {
             display: inline-block;
         }
     }
@@ -444,27 +469,28 @@ input {
 // Поле ввода кода из смс
 .input-send-sms {
     .ds-inputs-form__label {
-        &:before {
+        &::before {
             content: "Код";
             white-space: nowrap;
             color: $color-primary;
         }
     }
-    &:after {
+
+    &::after {
         content: "";
         background: url("~images/important_images/auth-form/bg-line-label-input.svg");
         width: 45px;
         height: 5px;
         position: absolute;
-        top: 0px;
+        top: 0;
         left: 5px;
         z-index: 10;
     }
+
     .ds-inputs-form__input {
         min-width: 175px;
         border: 1px solid $color-primary;
     }
-
 }
 
 // Кастомный селект
@@ -543,9 +569,9 @@ input {
         margin-right: 4px;
         pointer-events: none;
         opacity: 0;
-        transition: all .2s ease;
+        transition: all 0.2s ease;
 
-        &::-webkit-scrollbar{
+        &::-webkit-scrollbar {
             background-color: transparent;
             width: 4px;
         }
@@ -587,30 +613,25 @@ input {
 //Модалка сообщение организатору
 .modal-message-for-org {
     .ds-inputs-form__label {
-        &:before {
+        &::before {
             content: "Тема";
             white-space: nowrap;
             color: $color-text-light-grey;
         }
     }
+
     .input-login {
-        &:after {
+        &::after {
             height: 2px;
             width: 55px;
         }
     }
+
     .ds-inputs-form__input {
         border: 2px solid $color-text-light-grey;
+
         &:focus {
             border: 2px solid $color-primary;
         }
     }
-
 }
-
-
-
-
-
-
-
