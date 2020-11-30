@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox.vue Проверка стандартного состояния 1`] = `
+<label for="id" class="spui-Checkbox spui-Checkbox_left spui-Checkbox_waiting spui-Checkbox_outline spui-Checkbox_align-center"><input id="id" type="checkbox" class="spui-Checkbox__input" value="Значение не передано">
+  <!---->
+  <div class="spui-Checkbox__fake">
+    <!---->
+  </div>
+  <!---->
+</label>
+`;

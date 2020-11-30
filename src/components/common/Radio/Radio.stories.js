@@ -1,9 +1,9 @@
-import "@/components/resources";
+import '@/components/resources';
 
-import Radio from "./Radio.vue";
+import Radio from './Radio.vue';
 
 export default {
-    title: "Общие/Radio",
+    title: 'Общие/Radio',
     component: Radio,
 };
 
@@ -11,7 +11,7 @@ export const noText = () => ({
     components: { Radio },
     data() {
         return {
-            checked: "Значение 1",
+            checked: 'Значение 1',
         };
     },
     template: `
@@ -28,7 +28,7 @@ export const standart = () => ({
     components: { Radio },
     data() {
         return {
-            checked: "Значение 1",
+            checked: 'Значение 1',
         };
     },
     template: `
@@ -45,7 +45,7 @@ export const onlyText = () => ({
     components: { Radio },
     data() {
         return {
-            checked: "Значение 1",
+            checked: 'Значение 1',
         };
     },
     template: `
@@ -62,7 +62,7 @@ export const withTextLeft = () => ({
     components: { Radio },
     data() {
         return {
-            checked: "Значение 1",
+            checked: 'Значение 1',
         };
     },
     template: `
@@ -79,7 +79,7 @@ export const withTextRight = () => ({
     components: { Radio },
     data() {
         return {
-            checked: "Значение 1",
+            checked: 'Значение 1',
         };
     },
     template: `
@@ -96,7 +96,7 @@ export const outlined = () => ({
     components: { Radio },
     data() {
         return {
-            checked: "Значение 1",
+            checked: 'Значение 1',
         };
     },
     template: `
@@ -113,7 +113,7 @@ export const noRounded = () => ({
     components: { Radio },
     data() {
         return {
-            checked: "Значение 1",
+            checked: 'Значение 1',
         };
     },
     template: `
@@ -130,7 +130,7 @@ export const disabled = () => ({
     components: { Radio },
     data() {
         return {
-            checked: "Значение 1",
+            checked: 'Значение 1',
         };
     },
     template: `

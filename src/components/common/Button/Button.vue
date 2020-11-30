@@ -1,44 +1,60 @@
 <script>
 export default {
-    name: "Button",
+    name: 'Button',
     functional: true,
     props: {
-        /** Тип кнопки */
+        /** Внешний вид кнопки - стандартная, инвертированная */
         type: {
             type: String,
-            default: "primary",
-            validator: (value) => ["outlined", "primary"].indexOf(value) !== -1,
+            default: 'primary',
+            validator: (value) => ['outlined', 'primary'].includes(value),
         },
-        icon: {
-            type: Object,
-            default: () => ({
-                name: "",
-                pos: "", // left/right
-            }),
+        /** Название иконки */
+        iconName: {
+            type: String,
+            default: '',
         },
+        /** Положение иконки */
+        iconPosition: {
+            type: String,
+            default: 'right',
+            validator: (value) => ['left', 'right'].includes(value),
+        },
+        /** Сделать блочным элементом - занимает всю ширину */
         block: {
             type: Boolean,
             default: false,
         },
+        /** Неактивное состояние - нажатия не обрабатываются */
         isDisabled: {
             type: Boolean,
             default: false,
         },
+        /** Состояние загрузки - нажатия необрабатываются */
         isLoading: {
             type: Boolean,
             default: false,
         },
+        /** Атрибут aria-label для доступности */
         ariaLabel: {
             type: String,
-            default: "Кнопка",
+            default: 'Кнопка',
         },
     },
     render: (h, { data, props, listeners, slots }) => {
-        const { type, icon, block, isDisabled, isLoading } = props;
+        const {
+            type,
+            iconName,
+            iconPosition,
+            block,
+            isDisabled,
+            isLoading,
+        } = props;
 
         const _type = `spui-Button_${type}`;
-        const _block = block ? "spui-Button_block" : "";
-        const _iconpos = icon.pos ? `spui-Button_icon-${icon.pos}` : "";
+        const _block = block && 'spui-Button_block';
+        const _iconPosition =
+            iconPosition && `spui-Button_icon-${iconPosition}`;
 
         const onClick = () => {
             if (!isLoading && listeners.click) {
@@ -46,9 +62,11 @@ export default {
             }
         };
 
-        const slot = slots().default || "Кнопка";
+        const slot = slots().default || 'Кнопка';
 
-        const iconElement = <i class={["ds-icon spui-Button__icon", icon.name]}></i>;
+        const iconElement = (
+            <i class={['ds-icon spui-Button__icon', iconName]}></i>
+        );
 
         return (
             <button
@@ -56,18 +74,18 @@ export default {
                 onClick={onClick}
                 disabled={isDisabled}
                 class={[
-                    "spui-Button",
+                    'spui-Button',
                     _type,
                     _block,
-                    _iconpos,
-                    { "is-loading": isLoading, "is-disabled": isDisabled },
+                    _iconPosition,
+                    { 'is-loading': isLoading, 'is-disabled': isDisabled },
                     data.class,
                     data.staticClass,
                 ]}
             >
-                {icon.name && icon.pos === "left" ? iconElement : null}
+                {iconName && iconPosition === 'left' && iconElement}
                 {slot}
-                {icon.name && icon.pos === "right" ? iconElement : null}
+                {iconName && iconPosition === 'right' && iconElement}
             </button>
         );
     },
@@ -75,5 +93,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./Button.scss";
+@import './Button.scss';
 </style>

@@ -1,9 +1,9 @@
-import "@/components/resources";
+import '@/components/resources';
 
-import ItemBadge from "./ItemBadge.vue";
+import ItemBadge from './ItemBadge.vue';
 
 export default {
-    title: "Общие/ItemBadge",
+    title: 'Общие/ItemBadge',
     component: ItemBadge,
 };
 

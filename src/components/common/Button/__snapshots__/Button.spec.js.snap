@@ -1,3 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button.vue match snapshot 1`] = `<button aria-label="Кнопка" class="spui-Button spui-Button_primary">Кнопка</button>`;
+exports[`Button.vue Проверка блочной модели 1`] = `<button aria-label="Кнопка" class="spui-Button spui-Button_primary spui-Button_block spui-Button_icon-right">Кнопка</button>`;
+
+exports[`Button.vue Проверка изменения типа 1`] = `<button aria-label="Кнопка" class="spui-Button spui-Button_outlined spui-Button_icon-right">Кнопка</button>`;
+
+exports[`Button.vue Проверка иконки 1`] = `<button aria-label="Кнопка" class="spui-Button spui-Button_primary spui-Button_icon-left"><i class="ds-icon spui-Button__icon icon-cart"></i>Кнопка</button>`;
+
+exports[`Button.vue Проверка неактивного состояния 1`] = `<button aria-label="Кнопка" disabled="disabled" class="spui-Button spui-Button_primary spui-Button_icon-right is-disabled">Кнопка</button>`;
+
+exports[`Button.vue Проверка неактивного состояния 2`] = `<button aria-label="Кнопка" class="spui-Button spui-Button_primary spui-Button_icon-right">Кнопка</button>`;
+
+exports[`Button.vue Проверка состояния загрузки 1`] = `<button aria-label="Кнопка" class="spui-Button spui-Button_primary spui-Button_icon-right is-loading">Кнопка</button>`;
+
+exports[`Button.vue Проверка состояния загрузки 2`] = `<button aria-label="Кнопка" class="spui-Button spui-Button_primary spui-Button_icon-right">Кнопка</button>`;
+
+exports[`Button.vue Проверка стандартного слота 1`] = `<button aria-label="Кнопка" class="spui-Button spui-Button_primary spui-Button_icon-right">Другой текст кнопки</button>`;
+
+exports[`Button.vue Снимок без состояния 1`] = `<button aria-label="Кнопка" class="spui-Button spui-Button_primary spui-Button_icon-right">Кнопка</button>`;

@@ -1,168 +1,172 @@
 {
-  "name": "@63pokupki/design-system",
-  "version": "1.1.0",
-  "description": "UI component kit and design-system for 63 Pokupki project",
-  "author": {
-    "name": "63pokupki"
-  },
-  "scripts": {
-    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
-    "lint": "vue-cli-service lint --no-fix",
-    "lint:write": "vue-cli-service lint",
-    "detect": "node detective.js",
-    "dist": "cross-env NODE_ENV=production webpack --config webpack.config.dist.js",
-    "libgen": "vue-cli-service build --target lib --name components src/components/index.js --dest libdist",
-    "live": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js -w",
-    "publish:patch": "npm version patch && git push origin master && npm publish --access public --registry https://registry.npmjs.org",
-    "storybook:build": "vue-cli-service storybook:build -c config/storybook",
-    "storybook:serve": "vue-cli-service storybook:serve -p 6006 -c config/storybook",
-    "unit": "vue-cli-service test:unit",
-    "prettier:write": "prettier --write src/**/*.js",
-    "prettier": "prettier src/**/*.js",
-    "stylelint": "stylelint"
-  },
-  "main": "libdist/components.umd.min.js",
-  "files": [
-    "dist",
-    "libdist"
-  ],
-  "dependencies": {
-    "@63pokupki/onboarding-core": "latest",
-    "@babel/runtime": "^7.11.2",
-    "assign-deep": "^1.0.1",
-    "core-js": "^3.6.5",
-    "lodash-es": "^4.17.15",
-    "short-uuid": "^3.1.1",
-    "stylelint-scss": "^3.18.0",
-    "vue": "^2.6.12",
-    "vue-carousel": "git+https://github.com/nullilac/vue-carousel.git",
-    "vue-slider-component": "^3.2.4"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.11.1",
-    "@babel/plugin-transform-runtime": "^7.11.0",
-    "@babel/preset-env": "^7.11.0",
-    "@storybook/addon-actions": "6.0.28",
-    "@storybook/addon-backgrounds": "6.0.28",
-    "@storybook/addon-docs": "6.0.28",
-    "@storybook/addon-knobs": "6.0.28",
-    "@storybook/addon-links": "6.0.28",
-    "@storybook/vue": "6.0.28",
-    "@vue/cli-plugin-babel": "~4.5.3",
-    "@vue/cli-plugin-eslint": "^4.5.9",
-    "@vue/cli-plugin-unit-jest": "^4.5.9",
-    "@vue/cli-service": "~4.5.3",
-    "@vue/eslint-config-airbnb": "^5.0.2",
-    "@vue/eslint-config-prettier": "^6.0.0",
-    "@vue/test-utils": "^1.1.1",
-    "autoprefixer": "^9.8.6",
-    "babel-eslint": "^10.1.0",
-    "babel-jest": "^26.6.3",
-    "babel-loader": "^8.1.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "browserslist": "^4.14.0",
-    "clipboard": "^2.0.6",
-    "copy-webpack-plugin": "^6.0.4",
-    "cross-env": "^7.0.2",
-    "css-loader": "^4.2.2",
-    "css-mqpacker": "^7.0.0",
-    "cssnano": "^4.1.10",
-    "eslint": "^6.7.2",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-prettier": "^3.1.3",
-    "eslint-plugin-vue": "^6.2.2",
-    "exports-loader": "^1.1.0",
-    "file-loader": "^6.0.0",
-    "gonzales-pe": "^4.3.0",
-    "html-loader": "^1.3.0",
-    "html-webpack-plugin": "^4.4.1",
-    "imports-loader": "^1.1.0",
-    "jest": "^26.6.3",
-    "jest-serializer-vue": "^2.0.2",
-    "lint-staged": "^9.5.0",
-    "match-all": "^1.2.6",
-    "mini-css-extract-plugin": "^0.11.0",
-    "node-sass": "^4.14.1",
-    "postcss": "^7.0.32",
-    "postcss-cli": "^7.1.1",
-    "postcss-import": "^12.0.1",
-    "postcss-loader": "^3.0.0",
-    "postcss-preset-env": "^6.7.0",
-    "prettier": "^2.1.2",
-    "prismjs": "^1.21.0",
-    "sass-loader": "^10.0.1",
-    "style-loader": "^1.2.1",
-    "stylelint": "^13.8.0",
-    "stylelint-config-standard": "^20.0.0",
-    "svg-sprite-loader": "^5.0.0",
-    "svg-url-loader": "^6.0.0",
-    "url-loader": "^4.1.0",
-    "vue-cli-plugin-storybook": "~1.3.0",
-    "vue-jest": "^3.0.7",
-    "vue-loader": "^15.9.3",
-    "vue-style-loader": "^4.1.2",
-    "vue-template-compiler": "^2.6.11",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ],
-  "jest": {
-    "testMatch": [
-      "**/*.spec.[jt]s?(x)"
-    ],
-    "moduleFileExtensions": [
-      "js",
-      "json",
-      "vue"
-    ],
-    "transform": {
-      ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest",
-      "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
+    "name": "@63pokupki/design-system",
+    "version": "1.1.8",
+    "description": "UI component kit and design-system for 63 Pokupki project",
+    "author": {
+        "name": "63pokupki"
     },
-    "moduleNameMapper": {
-      "^@/(.*)$": "<rootDir>/src/$1"
+    "scripts": {
+        "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
+        "dist": "cross-env NODE_ENV=production webpack --config webpack.config.dist.js",
+        "libgen": "vue-cli-service build --target lib --name components src/components/index.js --dest libdist",
+        "live": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js -w",
+        "publish:patch": "npm version patch && git push origin master && npm publish --access public --registry https://registry.npmjs.org",
+        "storybook:build": "vue-cli-service storybook:build -c config/storybook",
+        "storybook:serve": "vue-cli-service storybook:serve -p 6006 -c config/storybook",
+        "unit": "vue-cli-service test:unit",
+        "unit:watch": "vue-cli-service test:unit --watch",
+        "prettier:write": "prettier --write src/**/*.js src/**/*.vue",
+        "prettier": "prettier src/**/*.js src/**/*.vue",
+        "stylelint": "stylelint 'src/**/*.scss'",
+        "stylelint:write": "stylelint 'src/**/*.scss' --fix",
+        "eslint": "vue-cli-service lint --no-fix",
+        "eslint:write": "vue-cli-service lint",
+        "prettify": "npm run prettier:write && npm run eslint:write && npm run stylelint:write"
     },
-    "preset": "@vue/cli-plugin-unit-jest",
-    "snapshotSerializers": [
-      "jest-serializer-vue"
-    ]
-  },
-  "_id": "@63pokupki/design-system@0.0.575",
-  "bugs": {
-    "url": "https://github.com/63pokupki/design-system/issues"
-  },
-  "directories": {
-    "doc": "docs"
-  },
-  "gitHooks": {
-    "pre-commit": "lint-staged && npm run unit"
-  },
-  "homepage": "https://github.com/63pokupki/design-system",
-  "keywords": [
-    "ui-kit",
-    "design-system",
-    "components-kit"
-  ],
-  "license": "BSD-3-Clause",
-  "lint-staged": {
-    "*.{js,jsx,vue}": [
-      "npm run prettier:write",
-      "vue-cli-service lint",
-      "git add"
+    "main": "libdist/components.umd.min.js",
+    "files": [
+        "dist",
+        "libdist"
     ],
-    "*.{css,scss}": [
-      "npm run stylelint",
-      "git add"
-    ]
-  },
-  "readme": "ERROR: No README data found!",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/63pokupki/design-system.git"
-  }
+    "dependencies": {
+        "@63pokupki/onboarding-core": "latest",
+        "@babel/runtime": "^7.11.2",
+        "assign-deep": "^1.0.1",
+        "core-js": "^3.6.5",
+        "lodash-es": "^4.17.15",
+        "short-uuid": "^3.1.1",
+        "vue": "^2.6.12",
+        "vue-carousel": "git+https://github.com/nullilac/vue-carousel.git",
+        "vue-slider-component": "^3.2.4"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.11.1",
+        "@babel/plugin-transform-runtime": "^7.11.0",
+        "@babel/preset-env": "^7.11.0",
+        "@storybook/addon-a11y": "^6.1.6",
+        "@storybook/addon-actions": "6.1.6",
+        "@storybook/addon-backgrounds": "6.1.6",
+        "@storybook/addon-docs": "6.1.6",
+        "@storybook/addon-knobs": "6.1.6",
+        "@storybook/addon-links": "6.1.6",
+        "@storybook/vue": "6.1.6",
+        "@vue/cli-plugin-babel": "~4.5.3",
+        "@vue/cli-plugin-eslint": "^4.5.9",
+        "@vue/cli-plugin-unit-jest": "^4.5.9",
+        "@vue/cli-service": "~4.5.3",
+        "@vue/eslint-config-airbnb": "^5.0.2",
+        "@vue/eslint-config-prettier": "^6.0.0",
+        "@vue/test-utils": "^1.1.1",
+        "autoprefixer": "^9.8.6",
+        "babel-eslint": "^10.1.0",
+        "babel-jest": "^26.6.3",
+        "babel-loader": "^8.1.0",
+        "babel-plugin-transform-object-rest-spread": "^6.26.0",
+        "browserslist": "^4.14.0",
+        "clipboard": "^2.0.6",
+        "copy-webpack-plugin": "^6.0.4",
+        "cross-env": "^7.0.2",
+        "css-loader": "^4.2.2",
+        "css-mqpacker": "^7.0.0",
+        "cssnano": "^4.1.10",
+        "eslint": "^6.7.2",
+        "eslint-plugin-import": "^2.20.2",
+        "eslint-plugin-prettier": "^3.1.3",
+        "eslint-plugin-vue": "^6.2.2",
+        "exports-loader": "^1.1.0",
+        "file-loader": "^6.0.0",
+        "html-loader": "^1.3.0",
+        "html-webpack-plugin": "^4.4.1",
+        "husky": "^4.3.0",
+        "imports-loader": "^1.1.0",
+        "jest": "^26.6.3",
+        "jest-serializer-vue": "^2.0.2",
+        "lint-staged": "^10.5.2",
+        "mini-css-extract-plugin": "^0.11.0",
+        "node-sass": "^4.14.1",
+        "postcss": "^7.0.32",
+        "postcss-cli": "^7.1.1",
+        "postcss-import": "^12.0.1",
+        "postcss-loader": "^3.0.0",
+        "postcss-preset-env": "^6.7.0",
+        "prettier": "^2.2.0",
+        "prismjs": "^1.21.0",
+        "sass-loader": "^10.0.1",
+        "style-loader": "^1.2.1",
+        "stylelint": "^13.8.0",
+        "stylelint-config-standard": "^20.0.0",
+        "stylelint-scss": "^3.18.0",
+        "svg-sprite-loader": "^5.0.0",
+        "svg-url-loader": "^6.0.0",
+        "url-loader": "^4.1.0",
+        "vue-cli-plugin-storybook": "~2.0.0",
+        "vue-jest": "^3.0.7",
+        "vue-loader": "^15.9.3",
+        "vue-style-loader": "^4.1.2",
+        "vue-template-compiler": "^2.6.11",
+        "webpack": "^4.44.1",
+        "webpack-cli": "^3.3.12",
+        "webpack-dev-server": "^3.11.0"
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not dead"
+    ],
+    "jest": {
+        "testMatch": [
+            "**/*.spec.[jt]s?(x)"
+        ],
+        "moduleFileExtensions": [
+            "js",
+            "json",
+            "vue"
+        ],
+        "transform": {
+            ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest",
+            "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
+        },
+        "moduleNameMapper": {
+            "^@/(.*)$": "<rootDir>/src/$1"
+        },
+        "preset": "@vue/cli-plugin-unit-jest",
+        "snapshotSerializers": [
+            "jest-serializer-vue"
+        ]
+    },
+    "_id": "@63pokupki/design-system@0.0.575",
+    "bugs": {
+        "url": "https://github.com/63pokupki/design-system/issues"
+    },
+    "directories": {
+        "doc": "docs"
+    },
+    "homepage": "https://github.com/63pokupki/design-system",
+    "keywords": [
+        "ui-kit",
+        "design-system",
+        "components-kit"
+    ],
+    "license": "BSD-3-Clause",
+    "readme": "ERROR: No README data found!",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/63pokupki/design-system.git"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged && npm run unit"
+        }
+    },
+    "lint-staged": {
+        "src/**/*.js": [
+            "prettier --write",
+            "eslint --fix"
+        ],
+        "src/**/*.vue": [
+            "prettier --write",
+            "eslint --fix"
+        ],
+        "src/**/*.scss": "stylelint --fix"
+    }
 }

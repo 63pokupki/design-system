@@ -10,11 +10,11 @@ function timeRem(et) {
     };
 }
 function initClock(et) {
-    const timer = document.querySelectorAll(".timer-reverse");
+    const timer = document.querySelectorAll('.timer-reverse');
 
     if (timer) {
         timer.forEach((tm) => {
-            const elDays = tm.querySelector("#days");
+            const elDays = tm.querySelector('#days');
 
             function updateClock() {
                 const tr = timeRem(et);
@@ -31,6 +31,6 @@ function initClock(et) {
         });
     }
 }
-const deadline = "February 29 2020 00:00:00 GMT+0400";
+const deadline = 'February 29 2020 00:00:00 GMT+0400';
 
 initClock(deadline);

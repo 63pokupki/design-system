@@ -43,7 +43,7 @@
 
 <script>
 export default {
-    name: "Modal",
+    name: 'Modal',
     props: {
         open: {
             type: Boolean,
@@ -51,37 +51,37 @@ export default {
         },
         width: {
             type: String,
-            default: "auto",
+            default: 'auto',
         },
         maxWidth: {
             type: String,
-            default: "98%",
+            default: '98%',
         },
         maxHeight: {
             type: String,
-            default: "98%",
+            default: '98%',
         },
         minWidth: {
             type: String,
-            default: "0%",
+            default: '0%',
         },
         minHeight: {
             type: String,
-            default: "0%",
+            default: '0%',
         },
     },
     data() {
         return {
-            base: "spui-Modal",
+            base: 'spui-Modal',
         };
     },
     computed: {
         _styleWindow() {
             return {
-                "max-width": this.maxWidth,
-                "max-height": this.maxHeight,
-                "min-height": this.minHeight,
-                "min-width": this.minWidth,
+                'max-width': this.maxWidth,
+                'max-height': this.maxHeight,
+                'min-height': this.minHeight,
+                'min-width': this.minWidth,
                 width: this.width,
             };
         },
@@ -91,12 +91,12 @@ export default {
     },
     methods: {
         onClose() {
-            this.$emit("close");
+            this.$emit('close');
         },
     },
 };
 </script>
 
 <style lang="scss" scoped>
-@import "./Modal.scss";
+@import './Modal.scss';
 </style>

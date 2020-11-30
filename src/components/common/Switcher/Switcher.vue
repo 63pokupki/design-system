@@ -25,10 +25,10 @@
 </template>
 
 <script>
-import uuid from "short-uuid";
+import uuid from 'short-uuid';
 
 export default {
-    name: "Switcher",
+    name: 'Switcher',
     props: {
         value: {
             type: Boolean,
@@ -40,16 +40,16 @@ export default {
         },
         type: {
             type: String,
-            default: "accent",
+            default: 'accent',
         },
         position: {
             type: String,
-            default: "left",
+            default: 'left',
         },
     },
     data() {
         return {
-            base: "spui-Switcher",
+            base: 'spui-Switcher',
             uniqid: null,
         };
     },
@@ -60,7 +60,7 @@ export default {
             },
             set(value) {
                 if (!this.disabled) {
-                    this.$emit("input", value);
+                    this.$emit('input', value);
                 }
             },
         },
@@ -84,5 +84,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./Switcher.scss";
+@import './Switcher.scss';
 </style>

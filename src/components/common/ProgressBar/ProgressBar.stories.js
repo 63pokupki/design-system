@@ -1,9 +1,9 @@
-import "@/components/resources";
+import '@/components/resources';
 
-import ProgressBar from "./ProgressBar.vue";
+import ProgressBar from './ProgressBar.vue';
 
 export default {
-    title: "Общие/ProgressBar",
+    title: 'Общие/ProgressBar',
     component: ProgressBar,
 };
 

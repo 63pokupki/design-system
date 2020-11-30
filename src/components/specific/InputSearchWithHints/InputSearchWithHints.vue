@@ -75,25 +75,27 @@
                     class="spui-InputSearchWithHints__text"
                     v-html="highlight(hint)"
                 />
-                <span class="spui-InputSearchWithHints__count">{{ getHintCount(hint) }}</span>
+                <span class="spui-InputSearchWithHints__count">{{
+                    getHintCount(hint)
+                }}</span>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-import { clickOutside } from "@/directives";
-import uuid from "short-uuid";
+import { clickOutside } from '@/directives';
+import uuid from 'short-uuid';
 
 export default {
-    name: "InputSearchWithHints",
+    name: 'InputSearchWithHints',
     directives: {
-        "click-outside": clickOutside,
+        'click-outside': clickOutside,
     },
     props: {
         value: {
             type: String,
-            default: "",
+            default: '',
         },
         isHintsOpen: {
             type: Boolean,
@@ -119,8 +121,8 @@ export default {
     data() {
         return {
             categories: {
-                1: "По товарам",
-                0: "По форуму",
+                1: 'По товарам',
+                0: 'По форуму',
                 current: 1,
             },
             focusIndex: -1,
@@ -136,11 +138,11 @@ export default {
                 return this.value;
             },
             set(value) {
-                this.$emit("input", value);
+                this.$emit('input', value);
                 this.emitHintsOpenState(true);
 
                 if (this.categories.current) {
-                    this.$emit("input-by-items");
+                    this.$emit('input-by-items');
                 }
             },
         },
@@ -151,11 +153,11 @@ export default {
     methods: {
         /** Событие смены состояния показа выбора категорий поиска - товары/форум */
         emitCategoryOpenState(value) {
-            this.$emit("category-open-change", value);
+            this.$emit('category-open-change', value);
         },
         /** Событие смены состояния показа подсказок */
         emitHintsOpenState(value) {
-            this.$emit("hints-open-change", value);
+            this.$emit('hints-open-change', value);
         },
         onCategorySelect(categoryId) {
             this.categories.current = categoryId;
@@ -174,20 +176,28 @@ export default {
         },
         /** Функция получающая label для подсказки */
         getHintLabel(hint) {
-            if (hint && this.fnHintLabel && typeof this.fnHintLabel === "function") {
+            if (
+                hint &&
+                this.fnHintLabel &&
+                typeof this.fnHintLabel === 'function'
+            ) {
                 return this.fnHintLabel(hint);
             }
             return hint.label;
         },
         /** Функция получающая count для подсказки */
         getHintCount(hint) {
-            if (hint && this.fnHintCount && typeof this.fnHintCount === "function") {
+            if (
+                hint &&
+                this.fnHintCount &&
+                typeof this.fnHintCount === 'function'
+            ) {
                 return this.fnHintCount(hint);
             }
             return hint.count;
         },
         onHintClick(hint) {
-            this.$emit("hint-click", hint);
+            this.$emit('hint-click', hint);
             this.emitHintsOpenState(false);
         },
         onCategoryClick() {
@@ -201,13 +211,17 @@ export default {
             if (this.focusIndex >= 0 && this.focusElement) {
                 this._model = this.getHintLabel(this.focusElement);
             }
-            this.$emit("search", {
+            this.$emit('search', {
                 value: this._model,
                 byItems: Boolean(this.categories.current),
             });
         },
         onFocusIndexUp() {
-            if (this.hints.length > 0 && this.isHintsOpen && this.focusIndex > 0) {
+            if (
+                this.hints.length > 0 &&
+                this.isHintsOpen &&
+                this.focusIndex > 0
+            ) {
                 this.focusIndex -= 1;
             }
         },
@@ -225,5 +239,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./InputSearchWithHints.scss";
+@import './InputSearchWithHints.scss';
 </style>

@@ -2,8 +2,7 @@
 @font-face {
     font-family: 'icomoon-old-site';
     src: url('~fonts/icomoon-old-site/icomoon-old.woff?j5dd0u');
-    src:
-        url('~fonts/icomoon-old-site/icomoon-old.woff?j5dd0u') format('woff'),
+    src:  url('~fonts/icomoon-old-site/icomoon-old.woff?j5dd0u') format('woff'),
         url('~fonts/icomoon-old-site/icomoon-old.ttf?j5dd0u') format('truetype'),
         url('~fonts/icomoon-old-site/icomoon-old.svg?j5dd0u#icomoon') format('svg');
     font-weight: normal;
@@ -16,7 +15,7 @@
 [class*=" icomoon-old"]::before {
     /* use !important to prevent issues with browser extensions that change fonts */
     cursor: pointer;
-    font-family: 'icomoon-old-site', sans-serif !important;
+    font-family: 'icomoon-old-site' !important;
     text-decoration: none;
     speak: none;
     font-style: normal;

@@ -2,7 +2,16 @@
     <label
         :for="uniqid"
         class="spui-Radio"
-        :class="[_position, _checkedClass, _waiting, _disabled, _rounded, _type, _onlyText, _align]"
+        :class="[
+            _position,
+            _checkedClass,
+            _waiting,
+            _disabled,
+            _rounded,
+            _type,
+            _onlyText,
+            _align,
+        ]"
     >
         <input
             :id="uniqid"
@@ -33,11 +42,11 @@
 </template>
 
 <script>
-import uuid from "short-uuid";
-import isEqual from "lodash-es/isEqual";
+import uuid from 'short-uuid';
+import isEqual from 'lodash-es/isEqual';
 
 export default {
-    name: "Radio",
+    name: 'Radio',
     props: {
         value: {
             type: [String, Number, Object],
@@ -49,7 +58,7 @@ export default {
         },
         name: {
             type: String,
-            default: "",
+            default: '',
         },
         onlyText: {
             type: Boolean,
@@ -65,9 +74,9 @@ export default {
         },
         type: {
             type: String,
-            default: "primary",
+            default: 'primary',
             validator(value) {
-                return ["outline", "primary"].includes(value);
+                return ['outline', 'primary'].includes(value);
             },
         },
         rounded: {
@@ -76,15 +85,15 @@ export default {
         },
         position: {
             type: String,
-            default: "left",
+            default: 'left',
             validator(value) {
-                return ["left", "right"].indexOf(value) !== -1;
+                return ['left', 'right'].indexOf(value) !== -1;
             },
         },
     },
     data() {
         return {
-            base: "spui-Radio",
+            base: 'spui-Radio',
             uniqid: null,
         };
     },
@@ -95,7 +104,7 @@ export default {
             },
             set(value) {
                 if (!this.disabled) {
-                    this.$emit("input", value);
+                    this.$emit('input', value);
                 }
             },
         },
@@ -118,7 +127,9 @@ export default {
             return this.alignCenter ? `${this.base}_align-center` : null;
         },
         _waiting() {
-            return !this._checked && !this.disabled ? `${this.base}_waiting` : null;
+            return !this._checked && !this.disabled
+                ? `${this.base}_waiting`
+                : null;
         },
         _disabled() {
             return this.disabled ? `${this.base}_disabled` : null;
@@ -137,5 +148,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./Radio.scss";
+@import './Radio.scss';
 </style>

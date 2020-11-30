@@ -30,7 +30,7 @@ input {
             visibility: visible;
         }
 
-        ~ .auth-form__error-message {
+        ~.auth-form__error-message {
             visibility: visible;
         }
     }
@@ -72,6 +72,7 @@ input {
 
     // fix for -webkit
     input:-webkit-autofill {
+        box-shadow: 0 0 0 50px white inset;
         -webkit-box-shadow: 0 0 0 50px white inset; /* можно изменить на любой вариант цвета */
     }
 
@@ -105,18 +106,18 @@ input {
         &:focus {
             border: 1px solid $color-primary;
 
-            ~ .ds-inputs-form__label::before {
+            ~.ds-inputs-form__label::before {
                 color: $color-primary;
             }
 
-            ~ .auth-form__login-label {
+            ~.auth-form__login-label {
                 color: $color-primary;
             }
         }
 
         // fix for -webkit
         input:-webkit-autofill {
-            --webkit-box-shadow: 0 0 0 50px white inset; /* можно изменить на любой вариант цвета */
+            -webkit-box-shadow: 0 0 0 50px white inset; /* можно изменить на любой вариант цвета */
         }
     }
 
@@ -132,7 +133,7 @@ input {
             top: -12px;
             left: 5px;
             padding: 0 10px;
-            font-family: "Open Sans", sans-serif;
+            font-family: Open Sans;
             font-weight: 600;
             font-size: 14px;
             z-index: 20;
@@ -504,7 +505,7 @@ input {
         top: -12px;
         left: 5px;
         padding: 0 10px;
-        font-family: "Open Sans", sans-serif;
+        font-family: Open Sans;
         font-weight: 600;
         font-size: 14px;
         z-index: 20;
@@ -541,7 +542,7 @@ input {
         }
 
         &::before {
-            content: "";
+            content: '';
             position: absolute;
             right: 0;
             bottom: -3px;

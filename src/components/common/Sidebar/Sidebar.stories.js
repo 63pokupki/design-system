@@ -1,9 +1,9 @@
-import "@/components/resources";
+import '@/components/resources';
 
-import Sidebar from "./Sidebar.vue";
+import Sidebar from './Sidebar.vue';
 
 export default {
-    title: "Общие/Sidebar",
+    title: 'Общие/Sidebar',
     component: Sidebar,
 };
 

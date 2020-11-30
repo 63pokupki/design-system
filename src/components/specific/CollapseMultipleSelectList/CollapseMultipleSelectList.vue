@@ -48,7 +48,7 @@
                     class="spui-CollapseMultipleSelectList__more"
                     @click="onChangeExpand"
                 >
-                    {{ listOpen ? "Свернуть" : "Показать все" }}
+                    {{ listOpen ? 'Свернуть' : 'Показать все' }}
                 </div>
             </template>
         </Collapse>
@@ -72,14 +72,14 @@
 </template>
 
 <script>
-import { pluralize } from "@/helpers";
-import Collapse from "../../common/Collapse/Collapse.vue";
-import SelectList from "../../common/SelectList/SelectList.vue";
-import Tooltip from "../../common/Tooltip/Tooltip.vue";
-import InputSearch from "../../common/InputSearch/InputSearch.vue";
+import { pluralize } from '@/helpers';
+import Collapse from '../../common/Collapse/Collapse.vue';
+import SelectList from '../../common/SelectList/SelectList.vue';
+import Tooltip from '../../common/Tooltip/Tooltip.vue';
+import InputSearch from '../../common/InputSearch/InputSearch.vue';
 
 export default {
-    name: "SpuiCollapseMultipleSelectList",
+    name: 'SpuiCollapseMultipleSelectList',
     components: {
         Collapse,
         SelectList,
@@ -90,7 +90,7 @@ export default {
         heading: {
             type: String,
             required: true,
-            default: "Имя секции не передано",
+            default: 'Имя секции не передано',
         },
         open: {
             type: Boolean,
@@ -129,7 +129,7 @@ export default {
         },
         inputSearchValue: {
             type: String,
-            default: "",
+            default: '',
         },
         displaySearchInput: {
             type: Boolean,
@@ -147,7 +147,7 @@ export default {
                 return this.inputSearchValue;
             },
             set(value) {
-                this.$emit("inputSearchValue", value);
+                this.$emit('inputSearchValue', value);
             },
         },
         _isSlotBeforeExist() {
@@ -174,7 +174,10 @@ export default {
          * элементов и оно меньше чем полный лист */
         _displayMoreButton: {
             get() {
-                if (this.maxVisibleElements !== 0 && this.maxVisibleElements < this.values.length) {
+                if (
+                    this.maxVisibleElements !== 0 &&
+                    this.maxVisibleElements < this.values.length
+                ) {
                     return true;
                 }
 
@@ -190,16 +193,16 @@ export default {
 
                 switch (selected) {
                 case 0:
-                    return "Выберите параметр";
+                    return 'Выберите параметр';
 
                 case all:
-                    return "Выбрано все";
+                    return 'Выбрано все';
 
                 default:
                     return `${selected} ${pluralize(selected, [
-                        "позиция",
-                        "позиции",
-                        "позиций",
+                        'позиция',
+                        'позиции',
+                        'позиций',
                     ])}`;
                 }
             },
@@ -210,7 +213,7 @@ export default {
                 return this.open;
             },
             set(value) {
-                this.$emit("collapse", value);
+                this.$emit('collapse', value);
             },
         },
         /** Выбранное значение параметров - массив выбранных характеристик */
@@ -219,20 +222,23 @@ export default {
                 return this.value;
             },
             set(value) {
-                this.$emit("input", value);
-                this.$emit("tooltipStateChange", true);
+                this.$emit('input', value);
+                this.$emit('tooltipStateChange', true);
             },
         },
         /** Мета информация о выбранных параметрах при сокрытии секции */
         _metainfo: {
             get() {
                 if (this._value && this._value.length) {
-                    const str = this._value.reduce((acc, el) => `${acc + this.label(el)}, `, "");
+                    const str = this._value.reduce(
+                        (acc, el) => `${acc + this.label(el)}, `,
+                        '',
+                    );
                     const sliced = str.slice(0, str.length - 2);
                     return sliced;
                 }
 
-                return "";
+                return '';
             },
         },
         /** Количество видимых элементов в секции */
@@ -252,25 +258,25 @@ export default {
     },
     methods: {
         onClear() {
-            this.$emit("input", []);
-            this.$emit("tooltipStateChange", true);
+            this.$emit('input', []);
+            this.$emit('tooltipStateChange', true);
         },
         onSelectAll() {
-            this.$emit("onSelectAll");
+            this.$emit('onSelectAll');
             this.yCord = 30;
         },
         onChangeExpand() {
-            this.$emit("changeListOpen", !this.listOpen);
+            this.$emit('changeListOpen', !this.listOpen);
         },
         onTooltipClick() {
-            this.$emit("tooltipClick");
+            this.$emit('tooltipClick');
         },
         onSearch(value) {
-            this.$emit("onSearch", value);
+            this.$emit('onSearch', value);
         },
         onClick(e) {
             const t = e.target;
-            if (t.classList.contains("spui-SelectList__label")) {
+            if (t.classList.contains('spui-SelectList__label')) {
                 this.yCord = t.offsetTop - 5;
             }
         },
@@ -279,5 +285,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./CollapseMultipleSelectList.scss";
+@import './CollapseMultipleSelectList.scss';
 </style>

@@ -45,7 +45,9 @@ $spui-InputSearch_font: $font-primary;
         width: auto;
         height: 100%;
     }
+}
 
+.spui-InputSearch {
     $parent: &;
 
     &_sm {

@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: "ProgressBar",
+    name: 'ProgressBar',
     functional: true,
     props: {
         target: {
@@ -13,14 +13,14 @@ export default {
         },
         size: {
             type: String,
-            default: "md",
+            default: 'md',
             validator(value) {
-                return ["sm", "md"].includes(value);
+                return ['sm', 'md'].includes(value);
             },
         },
         maxWidth: {
             type: String,
-            default: "100%",
+            default: '100%',
         },
     },
     render(h, { data, props, scopedSlots: slots }) {
@@ -57,7 +57,10 @@ export default {
                     data.staticClass,
                 ]}
             >
-                <div style={`width: ${percent}%;`} class="spui-ProgressBar__progress"></div>
+                <div
+                    style={`width: ${percent}%;`}
+                    class="spui-ProgressBar__progress"
+                ></div>
                 <div class="spui-ProgressBar__text">{text}</div>
             </div>
         );
@@ -66,5 +69,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./ProgressBar.scss";
+@import './ProgressBar.scss';
 </style>

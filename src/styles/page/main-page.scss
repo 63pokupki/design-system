@@ -134,7 +134,7 @@
             position: relative;
 
             &::after {
-                content: "";
+                content: '';
                 display: block;
                 position: absolute;
                 pointer-events: none;
@@ -142,11 +142,7 @@
                 right: 0;
                 width: 80px;
                 height: 100%;
-                background: linear-gradient(
-                    to left,
-                    #fff 0%,
-                    rgba(255, 255, 255, 0) 100%
-                );
+                background: linear-gradient(to left, #fff 0%, rgba(255, 255, 255, 0) 100%);
                 z-index: 100;
             }
         }
@@ -357,7 +353,7 @@
         .main-wrapper-first {
             display: flex;
             flex-direction: column;
-            flex-wrap: wrap;
+            flex-flow: wrap;
             justify-content: space-between;
             padding: 0 40px;
 
@@ -396,7 +392,7 @@
         .main-wrapper-second {
             display: flex;
             flex-direction: column;
-            flex-wrap: wrap;
+            flex-flow: wrap;
             justify-content: space-between;
             padding: 0 40px;
 
@@ -487,7 +483,7 @@
         .main-wrapper-first {
             display: flex;
             flex-direction: column;
-            flex-wrap: wrap;
+            flex-flow: wrap;
             justify-content: space-between;
             padding: 0;
 

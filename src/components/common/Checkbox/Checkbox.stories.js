@@ -1,9 +1,9 @@
-import "@/components/resources";
+import '@/components/resources';
 
-import Checkbox from "./Checkbox.vue";
+import Checkbox from './Checkbox.vue';
 
 export default {
-    title: "Общие/Checkbox",
+    title: 'Общие/Checkbox',
     component: Checkbox,
 };
 
@@ -63,7 +63,8 @@ export const withTextLeft = () => ({
             checked: true,
         };
     },
-    template: "<Checkbox v-model='checked' position=\"left\">Со значком слева</Checkbox>",
+    template:
+        '<Checkbox v-model=\'checked\' position="left">Со значком слева</Checkbox>',
 });
 
 export const withTextRight = () => ({
@@ -73,7 +74,8 @@ export const withTextRight = () => ({
             checked: true,
         };
     },
-    template: "<Checkbox v-model='checked' position=\"right\">Со значком справа</Checkbox>",
+    template:
+        '<Checkbox v-model=\'checked\' position="right">Со значком справа</Checkbox>',
 });
 
 export const primary = () => ({
@@ -83,7 +85,8 @@ export const primary = () => ({
             checked: true,
         };
     },
-    template: "<Checkbox v-model='checked' type='primary'>Акцентный при нажатии</Checkbox>",
+    template:
+        "<Checkbox v-model='checked' type='primary'>Акцентный при нажатии</Checkbox>",
 });
 
 export const rounded = () => ({
@@ -93,7 +96,8 @@ export const rounded = () => ({
             checked: true,
         };
     },
-    template: "<Checkbox v-model='checked' :rounded=\"true\" type='primary'>Скругленный</Checkbox>",
+    template:
+        "<Checkbox v-model='checked' :rounded=\"true\" type='primary'>Скругленный</Checkbox>",
 });
 
 export const disabled = () => ({
@@ -103,5 +107,6 @@ export const disabled = () => ({
             checked: true,
         };
     },
-    template: "<Checkbox v-model='checked' :disabled=\"true\">Не интерактивный</Checkbox>",
+    template:
+        '<Checkbox v-model=\'checked\' :disabled="true">Не интерактивный</Checkbox>',
 });

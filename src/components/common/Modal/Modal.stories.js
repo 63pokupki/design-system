@@ -1,12 +1,12 @@
-import "@/components/resources";
+import '@/components/resources';
 
-import Modal from "./Modal.vue";
-import Checkbox from "../Checkbox/Checkbox.vue";
-import Button from "../Button/Button.vue";
-import CollapseMultipleSelectList from "../../specific/CollapseMultipleSelectList/CollapseMultipleSelectList.vue";
+import Modal from './Modal.vue';
+import Checkbox from '../Checkbox/Checkbox.vue';
+import Button from '../Button/Button.vue';
+import CollapseMultipleSelectList from '../../specific/CollapseMultipleSelectList/CollapseMultipleSelectList.vue';
 
 export default {
-    title: "Общие/Modal",
+    title: 'Общие/Modal',
     component: Modal,
 };
 
@@ -16,7 +16,7 @@ export const withText = () => ({
         return {
             open: false,
             text:
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita explicabo dignissimos ex quod autem eos, molestiae rem quia aut ipsa dolor placeat? Nemo tenetur libero perspiciatis cumque repellendus! Modi, error?",
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita explicabo dignissimos ex quod autem eos, molestiae rem quia aut ipsa dolor placeat? Nemo tenetur libero perspiciatis cumque repellendus! Modi, error?',
         };
     },
     methods: {
@@ -43,7 +43,7 @@ export const withSlotHead = () => ({
         return {
             open: false,
             text:
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita explicabo dignissimos ex quod autem eos, molestiae rem quia aut ipsa dolor placeat? Nemo tenetur libero perspiciatis cumque repellendus! Modi, error?",
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita explicabo dignissimos ex quod autem eos, molestiae rem quia aut ipsa dolor placeat? Nemo tenetur libero perspiciatis cumque repellendus! Modi, error?',
         };
     },
     methods: {
@@ -73,7 +73,7 @@ export const customWidthAndHeight = () => ({
         return {
             open: false,
             text:
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita explicabo dignissimos ex quod autem eos, molestiae rem quia aut ipsa dolor placeat? Nemo tenetur libero perspiciatis cumque repellendus! Modi, error?",
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita explicabo dignissimos ex quod autem eos, molestiae rem quia aut ipsa dolor placeat? Nemo tenetur libero perspiciatis cumque repellendus! Modi, error?',
         };
     },
     methods: {
@@ -101,7 +101,7 @@ export const noSticky = () => ({
             open: false,
             sticky: false,
             text:
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita explicabo dignissimos ex quod autem eos, molestiae rem quia aut ipsa dolor placeat? Nemo tenetur libero perspiciatis cumque repellendus! Modi, error?",
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita explicabo dignissimos ex quod autem eos, molestiae rem quia aut ipsa dolor placeat? Nemo tenetur libero perspiciatis cumque repellendus! Modi, error?',
         };
     },
     methods: {
@@ -132,20 +132,20 @@ export const customBody = () => ({
             listOpen: false,
             label: (value) => value.label,
             values: [
-                { label: "красный", value: 0 },
-                { label: "синий", value: 0 },
-                { label: "серобурмалиновый", value: 0 },
-                { label: "желтый", value: 0 },
-                { label: "лиловый", value: 0 },
-                { label: "серый", value: 0 },
-                { label: "бежевый (снежинка)", value: 0 },
-                { label: "*", value: 0 },
-                { label: "волна", value: 0 },
-                { label: "голубой", value: 0 },
-                { label: "черный/клетка", value: 0 },
-                { label: "черный/линейка/мелкая линейка", value: 0 },
+                { label: 'красный', value: 0 },
+                { label: 'синий', value: 0 },
+                { label: 'серобурмалиновый', value: 0 },
+                { label: 'желтый', value: 0 },
+                { label: 'лиловый', value: 0 },
+                { label: 'серый', value: 0 },
+                { label: 'бежевый (снежинка)', value: 0 },
+                { label: '*', value: 0 },
+                { label: 'волна', value: 0 },
+                { label: 'голубой', value: 0 },
+                { label: 'черный/клетка', value: 0 },
+                { label: 'черный/линейка/мелкая линейка', value: 0 },
             ],
-            value: [{ label: "красный", value: 0 }],
+            value: [{ label: 'красный', value: 0 }],
         };
     },
     methods: {

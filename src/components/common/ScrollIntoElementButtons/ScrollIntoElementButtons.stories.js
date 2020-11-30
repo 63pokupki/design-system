@@ -1,9 +1,9 @@
-import "@/components/resources";
+import '@/components/resources';
 
-import ScrollIntoElementButtons from "./ScrollIntoElementButtons.vue";
+import ScrollIntoElementButtons from './ScrollIntoElementButtons.vue';
 
 export default {
-    title: "Общие/ScrollIntoElementButtons",
+    title: 'Общие/ScrollIntoElementButtons',
     component: ScrollIntoElementButtons,
 };
 

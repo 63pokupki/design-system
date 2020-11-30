@@ -1,9 +1,9 @@
-import "@/components/resources";
+import '@/components/resources';
 
-import ImageSwitch from "./ImageSwitch.vue";
+import ImageSwitch from './ImageSwitch.vue';
 
 export default {
-    title: "Общие/ImageSwitch",
+    title: 'Общие/ImageSwitch',
     component: ImageSwitch,
 };
 
@@ -15,34 +15,34 @@ export const exampleItemSlider = () => ({
             images: [
                 {
                     src:
-                        "https://63pokupki.fra1.cdn.digitaloceanspaces.com/item/x512/15bbc3317e8b6016100cced062cbec22cpy5kfg1ckdft757j.jpg",
+                        'https://63pokupki.fra1.cdn.digitaloceanspaces.com/item/x512/15bbc3317e8b6016100cced062cbec22cpy5kfg1ckdft757j.jpg',
                 },
                 {
                     src:
-                        "https://63pokupki.fra1.cdn.digitaloceanspaces.com/item/x512/27a1a8927dc9de67fdb9819be30207f1cpy5kfg12kdix5q59.jpg",
+                        'https://63pokupki.fra1.cdn.digitaloceanspaces.com/item/x512/27a1a8927dc9de67fdb9819be30207f1cpy5kfg12kdix5q59.jpg',
                 },
                 {
                     src:
-                        "https://63pokupki.fra1.cdn.digitaloceanspaces.com/item/x512/d05f0024c0dae277dd6ace508603899b14ix11d0vk0f7rot9.jpg",
+                        'https://63pokupki.fra1.cdn.digitaloceanspaces.com/item/x512/d05f0024c0dae277dd6ace508603899b14ix11d0vk0f7rot9.jpg',
                 },
                 {
                     src:
-                        "https://63pokupki.fra1.cdn.digitaloceanspaces.com/item/x512/714ddc9c28d41697e268f12b8ae2b3c114ix1yldk0cflm9n.jpg",
+                        'https://63pokupki.fra1.cdn.digitaloceanspaces.com/item/x512/714ddc9c28d41697e268f12b8ae2b3c114ix1yldk0cflm9n.jpg',
                 },
             ],
             fnImgSrc: (value) => value.src,
             styleContainerObj: {
-                "max-width": "250px",
-                height: "256px",
+                'max-width': '250px',
+                height: '256px',
             },
             styleImgObj: {
-                "max-height": "256px",
+                'max-height': '256px',
             },
         };
     },
     methods: {
         onClick() {
-            console.log("click");
+            console.log('click');
         },
     },
     template: `
@@ -60,28 +60,28 @@ export const exampleItemWithSlots = () => ({
             images: [
                 {
                     src:
-                        "https://63pokupki.fra1.cdn.digitaloceanspaces.com/item/x512/15bbc3317e8b6016100cced062cbec22cpy5kfg1ckdft757j.jpg",
+                        'https://63pokupki.fra1.cdn.digitaloceanspaces.com/item/x512/15bbc3317e8b6016100cced062cbec22cpy5kfg1ckdft757j.jpg',
                 },
                 {
                     src:
-                        "https://63pokupki.fra1.cdn.digitaloceanspaces.com/item/x512/27a1a8927dc9de67fdb9819be30207f1cpy5kfg12kdix5q59.jpg",
+                        'https://63pokupki.fra1.cdn.digitaloceanspaces.com/item/x512/27a1a8927dc9de67fdb9819be30207f1cpy5kfg12kdix5q59.jpg',
                 },
                 {
                     src:
-                        "https://63pokupki.fra1.cdn.digitaloceanspaces.com/item/x512/d05f0024c0dae277dd6ace508603899b14ix11d0vk0f7rot9.jpg",
+                        'https://63pokupki.fra1.cdn.digitaloceanspaces.com/item/x512/d05f0024c0dae277dd6ace508603899b14ix11d0vk0f7rot9.jpg',
                 },
                 {
                     src:
-                        "https://63pokupki.fra1.cdn.digitaloceanspaces.com/item/x512/714ddc9c28d41697e268f12b8ae2b3c114ix1yldk0cflm9n.jpg",
+                        'https://63pokupki.fra1.cdn.digitaloceanspaces.com/item/x512/714ddc9c28d41697e268f12b8ae2b3c114ix1yldk0cflm9n.jpg',
                 },
             ],
             fnImgSrc: (value) => value.src,
             styleContainerObj: {
-                "max-width": "250px",
-                height: "256px",
+                'max-width': '250px',
+                height: '256px',
             },
             styleImgObj: {
-                "max-height": "200px",
+                'max-height': '200px',
             },
         };
     },
@@ -103,22 +103,22 @@ export const exampleStockBanner = () => ({
             images: [
                 {
                     src:
-                        "https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/purchase-baner/x900/3432d3c4610d8d11edda7e2670c18030dyup1kk98sdxb4.jpg",
+                        'https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/purchase-baner/x900/3432d3c4610d8d11edda7e2670c18030dyup1kk98sdxb4.jpg',
                 },
             ],
             fnImgSrc: (value) => value.src,
             styleContainerObj: {
-                "max-width": "832px",
-                "max-height": "200px",
+                'max-width': '832px',
+                'max-height': '200px',
             },
             styleImgObj: {
-                "max-height": "200px",
+                'max-height': '200px',
             },
         };
     },
     methods: {
         onClick() {
-            console.log("click");
+            console.log('click');
         },
     },
     template: `

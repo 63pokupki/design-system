@@ -1,10 +1,10 @@
 <script>
 /* eslint-disable no-param-reassign */
 /* eslint-disable eqeqeq */
-import uuid from "short-uuid";
+import uuid from 'short-uuid';
 
 export default {
-    name: "CounterQuantity",
+    name: 'CounterQuantity',
     functional: true,
     props: {
         value: {
@@ -62,7 +62,7 @@ export default {
         };
 
         return (
-            <div class={["spui-CounterQuantity", data.class, data.staticClass]}>
+            <div class={['spui-CounterQuantity', data.class, data.staticClass]}>
                 <button
                     aria-label="Уменьшить количество"
                     onClick={onMinus}
@@ -89,5 +89,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./CounterQuantity.scss";
+@import './CounterQuantity.scss';
 </style>

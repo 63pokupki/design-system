@@ -98,6 +98,8 @@
             justify-content: center;
             align-items: flex-start;
             width: 355px;
+            // max-height: 475px;
+            // min-height: 475px;
             cursor: pointer;
 
             .arrow {
@@ -230,12 +232,7 @@
                         min-height: 100%;
                         width: 30px;
                         z-index: 1;
-                        background: linear-gradient(
-                            90deg,
-                            rgba(253, 253, 255, 0),
-                            #fff 100%,
-                            #fff
-                        );
+                        background: linear-gradient(90deg, rgba(253, 253, 255, 0), #fff 100%, #fff);
                     }
                 }
 
@@ -457,11 +454,7 @@
                 bottom: 0;
                 left: 0;
                 z-index: 2;
-                background: linear-gradient(
-                    0deg,
-                    #fff,
-                    hsla(0, 0%, 100%, 0) 105%
-                );
+                background: linear-gradient(0deg, #fff, hsla(0, 0%, 100%, 0) 105%);
             }
         }
 

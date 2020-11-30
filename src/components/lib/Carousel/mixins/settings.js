@@ -2,7 +2,7 @@
  * Component settings
  */
 
-import orderBy from "lodash-es/orderBy";
+import orderBy from 'lodash-es/orderBy';
 
 const mixin = {
     props: {
@@ -45,7 +45,7 @@ const mixin = {
          */
         centerPadding: {
             type: String,
-            default: "15%",
+            default: '15%',
         },
 
         /**
@@ -190,8 +190,14 @@ const mixin = {
          */
         timing: {
             type: String,
-            default: "ease",
-            validator: (value) => ["ease", "linear", "ease-in", "ease-out", "ease-in-out"].indexOf(value) !== -1,
+            default: 'ease',
+            validator: (value) => [
+                'ease',
+                'linear',
+                'ease-in',
+                'ease-out',
+                'ease-in-out',
+            ].indexOf(value) !== -1,
         },
 
         /**
@@ -216,7 +222,10 @@ const mixin = {
 
             // Sort breakpoints
             if (initialSettings.responsive) {
-                initialSettings.responsive = orderBy(initialSettings.responsive, "breakpoint");
+                initialSettings.responsive = orderBy(
+                    initialSettings.responsive,
+                    'breakpoint',
+                );
             }
 
             return initialSettings;
@@ -235,7 +244,12 @@ const mixin = {
                             : option.breakpoint > this.widthWindow
                     ) {
                         for (const key in option.settings) {
-                            if (Object.prototype.hasOwnProperty.call(options.settings, key)) {
+                            if (
+                                Object.prototype.hasOwnProperty.call(
+                                    options.settings,
+                                    key,
+                                )
+                            ) {
                                 settings[key] = option.settings[key];
                             }
                         }
