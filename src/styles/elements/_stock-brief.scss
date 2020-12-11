@@ -41,7 +41,20 @@
     }
 
     &__old-design {
+        position: relative;
         font-size: 11px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            width: 200px;
+            height: 40px;
+            transform: translate(-27px, -15px);
+        }
     }
 
     &__favorite {
@@ -150,6 +163,26 @@
     .stock-brief__status-added {
         font-size: 12px;
         font-weight: 700;
+
+        .link_hover {
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                width: 100px;
+                height: 30px;
+                transform: translate(-5px, -5px);
+                -webkit-transform: translate(-5px, -5px);
+                -moz-transform: translate(-5px, -5px);
+                -ms-transform: translate(-5px, -5px);
+                -o-transform: translate(-5px, -5px);
+            }
+        }
 
         &.is-hidden {
             display: none;
