@@ -64,10 +64,6 @@
                 text-decoration: none;
                 color: $color-text-heading;
 
-                &:visited {
-                    color: #906;
-                }
-
                 &.is-disabled {
                     pointer-events: none;
                 }
