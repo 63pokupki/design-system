@@ -19,8 +19,45 @@
             color: $color-primary;
         }
 
+        &:first-child {
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                width: 30px;
+                height: 30px;
+                transform: translate(-10px, -5px);
+                -webkit-transform: translate(-10px, -5px);
+                -moz-transform: translate(-10px, -5px);
+                -ms-transform: translate(-10px, -5px);
+                -o-transform: translate(-10px, -5px);
+            }
+        }
+
         &:last-child {
             margin-right: 0;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                width: 30px;
+                height: 30px;
+                transform: translate(-2px, -5px);
+                -webkit-transform: translate(-2px, -5px);
+                -moz-transform: translate(-2px, -5px);
+                -ms-transform: translate(-2px, -5px);
+                -o-transform: translate(-2px, -5px);
+            }
         }
 
         &:active {

@@ -40,4 +40,24 @@
             }
         }
     }
+
+    .icon-info {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            width: 70px;
+            height: 30px;
+            transform: translate(-30px, -7px);
+            -webkit-transform: translate(-30px, -7px);
+            -moz-transform: translate(-30px, -7px);
+            -ms-transform: translate(-30px, -7px);
+            -o-transform: translate(-30px, -7px);
+        }
+    }
 }
