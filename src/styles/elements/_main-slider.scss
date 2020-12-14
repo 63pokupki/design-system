@@ -71,6 +71,7 @@
         }
 
         &::-webkit-scrollbar-thumb {
+<<<<<<< HEAD
             background: linear-gradient(
                 to top,
                 transparent 0,
@@ -79,6 +80,15 @@
                 #36a5f2 4px,
                 transparent 4px
             );
+=======
+            background: linear-gradient(to top, transparent 0, transparent 2px, #36a5f2 2px, #36a5f2 4px, transparent 4px);
+
+            &::after {
+                content: '';
+                width: 100px;
+                height: 50px;
+            }
+>>>>>>> a9ab377d939af80d0c4e76ad4958177a7fe2aed0
         }
 
         &_top {
