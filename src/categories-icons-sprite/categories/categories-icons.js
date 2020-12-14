@@ -142,3 +142,4 @@ import svgCatWomenHomewear from './svg-cat-women-homewear.svg';
 import svgCatWomenOutwear from './svg-cat-women-outwear.svg';
 import svgCatWomenShoes from './svg-cat-women-shoes.svg';
 import svgCatWomenUnderwear from './svg-cat-women-underwear.svg';
+import svgCatKitchenSet from './svg-cat-kitchen-set.svg';
