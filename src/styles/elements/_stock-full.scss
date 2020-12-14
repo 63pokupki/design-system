@@ -69,6 +69,16 @@
             height: auto;
         }
     }
+
+    a {
+        display: inline-block;
+        width: 300px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        line-height: 13px;
+        color: $color-primary;
+    }
 }
 
 // Инфо-Статусы
