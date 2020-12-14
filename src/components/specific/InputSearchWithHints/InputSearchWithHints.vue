@@ -1,8 +1,5 @@
 <template>
-    <div
-        v-click-outside="onClickOutside"
-        class="spui-InputSearchWithHints"
-    >
+    <div class="spui-InputSearchWithHints">
         <div class="spui-InputSearchWithHints__input-wrapper">
             <label :for="uuid">
                 <input
