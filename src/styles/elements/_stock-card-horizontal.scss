@@ -25,9 +25,25 @@
     &__collapse {
         margin-bottom: 15px;
     }
-    // .collapse-section__heading {
-    //     margin: 0 0 10px 0;
-    // }
+
+    .collapse-section {
+        position: relative;
+    }
+
+    .collapse-section__heading {
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 300px;
+            height: 55px;
+            z-index: 1000;
+            transform: translate(-15px, -15px);
+        }
+    }
 
     &__buttons {
         display: flex;
