@@ -99,6 +99,11 @@ $spui-InputSearchWithHints_z3: $spui-InputSearchWithHints_z2 + 1;
         position: absolute;
     }
 
+    &__label {
+        display: flex;
+        margin: 0;
+    }
+
     // выпадающее меню с фиксированным отображением текущего параметра в поиске
     .spui-dropdown-fixed-list {
         cursor: pointer;

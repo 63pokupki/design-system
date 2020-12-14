@@ -1,7 +1,10 @@
 <template>
     <div class="spui-InputSearchWithHints">
         <div class="spui-InputSearchWithHints__input-wrapper">
-            <label :for="uuid">
+            <label
+                class="spui-InputSearchWithHints__label"
+                :for="uuid"
+            >
                 <input
                     :id="uuid"
                     v-model="_model"
