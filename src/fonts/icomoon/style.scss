@@ -1,5 +1,17 @@
 @import "~fonts/icomoon/variables";
 
+.icon-phone::before {
+    content: "\e93c";
+}
+
+.icon-map::before {
+    content: "\e93b";
+}
+
+.icon-camera::before {
+    content: "\e912";
+}
+
 .icon-check-in-checkbox::before {
     content: "\e93a";
 }
