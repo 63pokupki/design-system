@@ -70,14 +70,15 @@
         }
     }
 
-    a {
+    .link_colored {
         display: inline-block;
         width: 300px;
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
-        line-height: 13px;
+        line-height: 18px;
         color: $color-primary;
+        transform: translateY(5px);
     }
 }
 
