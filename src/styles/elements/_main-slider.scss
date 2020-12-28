@@ -57,6 +57,8 @@
         overflow-x: scroll;
         padding-bottom: 15px;
         overflow-y: hidden;
+        scrollbar-width: thin;
+        scrollbar-color: #36a5f2 #36a5f226;
 
         &::-webkit-scrollbar {
             width: 11px;
