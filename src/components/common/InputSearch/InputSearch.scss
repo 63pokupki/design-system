@@ -52,13 +52,13 @@ $spui-InputSearch_font: $font-primary;
 
     &_sm {
         #{$parent}__input {
-            padding-left: 15px;
-            padding-right: 45px;
+            padding-left: 13px;
+            padding-right: 38px;
             height: 25px;
         }
 
         #{$parent}__btn {
-            right: 15px;
+            right: 10px;
             width: 22px;
             height: 22px;
         }
