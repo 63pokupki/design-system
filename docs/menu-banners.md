@@ -24,9 +24,9 @@
 
 - Переходим в **sp проект**, делаем **git pull** в ветке dev
 - Создаём ветку с таким же названием(от ТЗ) от dev-ветки
-- **ctr+p** ищем **main_overall_header.html****
+- **ctr+p** ищем **new_header.html****
 - **ctr+f** ищем класс **categories-tags**
-- меняем ссылку /forum/phpBB3/app.php/purchases?purchaseOfTheDay=1" class="categories-tags__link", именно в таком же формате /forum/phpBB3/app.php/purchases?purchaseOfTheDay=1
+- меняем ссылку вида <a href="/purchases?tags=19" , на новую
 - **git add .**
 - **git commit -m "Edit links categories-tags"**
 - **git push;**
