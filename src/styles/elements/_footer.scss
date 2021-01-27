@@ -53,6 +53,7 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
+
         &:first-child {
             margin-bottom: 16px;
         }
@@ -284,7 +285,7 @@
         margin-top: 4px;
         font-size: 12px;
         color: $color-text-light-grey;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     &__support {
