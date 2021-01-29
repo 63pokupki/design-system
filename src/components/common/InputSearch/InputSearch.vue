@@ -31,6 +31,10 @@ export default {
             required: false,
             default: 'sm',
         },
+        isSearchBtnVisible: {
+            type: Boolean,
+            default: true,
+        },
     },
     render: (h, { data, props, listeners }) => {
         const value = props.value || '';
@@ -39,6 +43,8 @@ export default {
         const buttonStyle = props.buttonStyle || {};
         const size = props.buttonStyle || 'sm';
         const uniqUuid = uuid.generate();
+        const isSearchBtnVisible = Boolean(props.isSearchBtnVisible);
+        console.log(isSearchBtnVisible);
 
         const onSearch = () => {
             if (listeners.onSearch) {
@@ -85,18 +91,20 @@ export default {
                         id={uniqUuid}
                     />
                 </label>
-                <button
-                    aria-label="Поиск"
-                    style={buttonStyle}
-                    onClick={onSearch}
-                    class="spui-InputSearch__btn"
-                >
-                    <img
-                        alt="Поиск"
-                        class="spui-InputSearch__img"
-                        src={searchImg}
-                    />
-                </button>
+                {isSearchBtnVisible && (
+                    <button
+                        aria-label="Поиск"
+                        style={buttonStyle}
+                        onClick={onSearch}
+                        class="spui-InputSearch__btn"
+                    >
+                        <img
+                            alt="Поиск"
+                            class="spui-InputSearch__img"
+                            src={searchImg}
+                        />
+                    </button>
+                )}
             </div>
         );
     },
