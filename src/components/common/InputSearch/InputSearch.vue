@@ -44,7 +44,6 @@ export default {
         const size = props.buttonStyle || 'sm';
         const uniqUuid = uuid.generate();
         const isSearchBtnVisible = Boolean(props.isSearchBtnVisible);
-        console.log(isSearchBtnVisible);
 
         const onSearch = () => {
             if (listeners.onSearch) {
