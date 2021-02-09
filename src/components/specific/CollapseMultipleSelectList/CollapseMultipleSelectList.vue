@@ -26,6 +26,7 @@
                     v-if="displaySearchInput"
                     v-model="_inputValue"
                     :placeholder="searchPlaceholder"
+                    :is-search-btn-visible="isSearchBtnVisible"
                     class="spui-CollapseMultipleSelectList__search"
                     @onSearch="onSearch"
                 />
@@ -138,6 +139,10 @@ export default {
         searchPlaceholder: {
             type: String,
             default: 'Поиск по параметрам',
+        },
+        isSearchBtnVisible: {
+            type: Boolean,
+            default: true,
         },
     },
     data() {

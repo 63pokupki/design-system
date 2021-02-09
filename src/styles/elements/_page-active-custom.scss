@@ -46,14 +46,16 @@
         background: #fff;
         // Скрываем псевдо заголовок
         h1 {
-            position: absolute;
-            clip: rect(0 0 0 0);
-            width: 1px;
-            height: 1px;
-            margin: -1px;
+            // position: absolute;
+            // clip: rect(0 0 0 0);
+            // width: 1px;
+            // height: 1px;
+            // margin: -1px;
+            height: 20px;
+            font-size: 14px;
         }
 
-        h2 {
+        h1 {
             height: 20px;
             font-size: 14px;
 
@@ -211,8 +213,14 @@ footer {
 
 @media (max-width: 1024px) {
     .pac__all-categories {
-        h2 {
+        h1 {
             display: none;
+        }
+    }
+
+    .ac-menu-filter-categories__checked-position-link {
+        h1 {
+            font-size: 11px;
         }
     }
 }
