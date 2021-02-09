@@ -72,7 +72,7 @@
 
     .link_colored {
         display: inline-block;
-        width: 300px;
+        // width: 300px; ломает раздел "Прочая информация"
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
