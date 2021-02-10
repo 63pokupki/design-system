@@ -11,7 +11,7 @@
             />
             <Carousel
                 v-cloak
-                v-if="_images"
+                v-if="_images && isNoSSR"
                 v-model="_currentSlideIndex"
                 :min-swipe-distance="20"
                 :per-page="1"
@@ -130,6 +130,11 @@ export default {
             default: loaderImgSrc,
         },
     },
+    data() {
+        return {
+            isNoSSR: false,
+        };
+    },
     computed: {
         /** Массив изображений */
         _images() {
@@ -169,6 +174,9 @@ export default {
         _centeredС() {
             return this.centered ? 'spui-ImageSwitch_centered' : null;
         },
+    },
+    mounted() {
+        this.isNoSSR = true;
     },
     methods: {
         onPrevBtnClick() {
