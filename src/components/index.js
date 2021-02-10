@@ -29,6 +29,7 @@ import { pluralize, capitalize } from '../helpers';
 
 /** Directives */
 import { clickOutside } from '../directives';
+import lazy from '../directives/lazy';
 
 export {
     BtnFavorite,
@@ -60,4 +61,5 @@ export {
     capitalize,
     /** Directives */
     clickOutside,
+    lazy,
 };
