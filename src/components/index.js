@@ -7,7 +7,7 @@ import DropdownTooltipWithSelect from './common/DropdownTooltipWithSelect/Dropdo
 // import ImageSwitch from './common/ImageSwitch/ImageSwitch.vue';
 import ItemBadge from './common/ItemBadge/ItemBadge.vue';
 import Modal from './common/Modal/Modal.vue';
-import RangePrice from './common/RangePrice/RangePrice.vue';
+// import RangePrice from './common/RangePrice/RangePrice.vue';
 import Sidebar from './common/Sidebar/Sidebar.vue';
 import Switcher from './common/Switcher/Switcher.vue';
 import Tooltip from './common/Tooltip/Tooltip.vue';
@@ -40,7 +40,7 @@ export {
     // ImageSwitch,
     ItemBadge,
     Modal,
-    RangePrice,
+    // RangePrice,
     Sidebar,
     Switcher,
     Tooltip,
