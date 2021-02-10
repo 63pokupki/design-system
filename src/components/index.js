@@ -4,7 +4,7 @@ import Checkbox from './common/Checkbox/Checkbox.vue';
 import Collapse from './common/Collapse/Collapse.vue';
 import DropdownModalWithSelect from './common/DropdownModalWithSelect/DropdownModalWithSelect.vue';
 import DropdownTooltipWithSelect from './common/DropdownTooltipWithSelect/DropdownTooltipWithSelect.vue';
-import ImageSwitch from './common/ImageSwitch/ImageSwitch.vue';
+// import ImageSwitch from './common/ImageSwitch/ImageSwitch.vue';
 import ItemBadge from './common/ItemBadge/ItemBadge.vue';
 import Modal from './common/Modal/Modal.vue';
 import RangePrice from './common/RangePrice/RangePrice.vue';
@@ -37,7 +37,7 @@ export {
     Collapse,
     DropdownModalWithSelect,
     DropdownTooltipWithSelect,
-    ImageSwitch,
+    // ImageSwitch,
     ItemBadge,
     Modal,
     RangePrice,
