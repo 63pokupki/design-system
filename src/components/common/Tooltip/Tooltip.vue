@@ -43,17 +43,13 @@ export default {
         },
     },
     mounted() {
-        this.addTooltipClassToParent();
-        this.$parent.$on('hook:updated', this.addTooltipClassToParent);
+        this.$parent.$el.classList.add(this._forced);
+    },
+    updated() {
+        this.$parent.$el.classList.add(this._forced);
     },
     beforeDestroy() {
         this.$parent.$el.classList.remove(this._forced);
-        this.$parent.$off('hook:updated', this.addTooltipClassToParent);
-    },
-    methods: {
-        addTooltipClassToParent() {
-            this.$parent.$el.classList.add(this._forced);
-        },
     },
 };
 </script>
