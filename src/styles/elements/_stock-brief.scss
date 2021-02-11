@@ -87,6 +87,10 @@
         &::first-letter {
             text-transform: capitalize;
         }
+
+        @media (max-width: 1023px) {
+            display: none;
+        }
     }
 
     &__status-icon {
