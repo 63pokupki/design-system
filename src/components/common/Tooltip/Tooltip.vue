@@ -43,25 +43,13 @@ export default {
         },
     },
     mounted() {
-        this.$parent.$el.classList.add(this._forced);
-        console.log('mounted');
-        console.log(this.$parent);
-        console.log(this.$parent.$el);
-        console.log(this.$parent.$el.classList);
+        this.$el.parentElement.classList.add(this._forced);
     },
     updated() {
-        this.$parent.$el.classList.add(this._forced);
-        console.log('updated');
-        console.log(this.$parent);
-        console.log(this.$parent.$el);
-        console.log(this.$parent.$el.classList);
+        this.$el.parentElement.classList.add(this._forced);
     },
     beforeDestroy() {
-        this.$parent.$el.classList.remove(this._forced);
-        console.log('beforeDestroy');
-        console.log(this.$parent);
-        console.log(this.$parent.$el);
-        console.log(this.$parent.$el.classList);
+        this.$el.parentElement.classList.remove(this._forced);
     },
 };
 </script>
