@@ -7,6 +7,12 @@
     &__section {
         border-bottom: 1px solid rgba(49, 140, 202, 0.25);
         padding: 15px;
+
+        @media (max-width: 480px) {
+            &:last-child {
+                min-height: 150px;
+            }
+        }
     }
 
     &__section:last-child {
