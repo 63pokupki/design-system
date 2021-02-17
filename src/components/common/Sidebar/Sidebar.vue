@@ -20,6 +20,7 @@
         />
         <!-- Кнопка закрытия -->
         <button
+            type="button"
             aria-label="Закрыть боковое меню"
             class="spui-Sidebar__close"
             @click="onClose"
