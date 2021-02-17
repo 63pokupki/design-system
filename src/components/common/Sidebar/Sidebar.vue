@@ -64,25 +64,21 @@ export default {
     watch: {
         open: {
             handler(value) {
-                value ? this.addDisableScroll() : this.removeDisableScroll();
+                if (window && window.document) {
+                    value ? this.disableScroll() : this.enableScroll();
+                }
             },
             immediate: true,
         },
     },
     methods: {
         /** отключить прокрутку страницы */
-        addDisableScroll() {
-            const body = document.querySelector('body');
-            if (body) {
-                body.classList.add('disable-page-scroll');
-            }
+        disableScroll() {
+            document.body.classList.add('disable-page-scroll');
         },
         /** включить прокрутку страницы */
-        removeDisableScroll() {
-            const body = document.querySelector('body');
-            if (body) {
-                body.classList.remove('disable-page-scroll');
-            }
+        enableScroll() {
+            document.body.classList.remove('disable-page-scroll');
         },
         onClose() {
             this.$emit('close');
