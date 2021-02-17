@@ -20,6 +20,7 @@
         />
         <!-- Кнопка закрытия -->
         <button
+            type="button"
             aria-label="Закрыть боковое меню"
             class="spui-Sidebar__close"
             @click="onClose"
@@ -53,6 +54,11 @@ export default {
             default: 'calc(100% - 35px)',
         },
     },
+    data() {
+        return {
+            watch: { open: null },
+        };
+    },
     computed: {
         _style() {
             return {
@@ -61,28 +67,22 @@ export default {
             };
         },
     },
-    watch: {
-        open: {
-            handler(value) {
-                value ? this.addDisableScroll() : this.removeDisableScroll();
-            },
-            immediate: true,
-        },
+    mounted() {
+        this.watch.open = this.$watch('open', function handler(value) {
+            value ? this.disableScroll() : this.enableScroll();
+        });
+    },
+    beforeDestroy() {
+        this.watch.open && this.watch.open();
     },
     methods: {
         /** отключить прокрутку страницы */
-        addDisableScroll() {
-            const body = document.querySelector('body');
-            if (body) {
-                body.classList.add('disable-page-scroll');
-            }
+        disableScroll() {
+            document.body.classList.add('disable-page-scroll');
         },
         /** включить прокрутку страницы */
-        removeDisableScroll() {
-            const body = document.querySelector('body');
-            if (body) {
-                body.classList.remove('disable-page-scroll');
-            }
+        enableScroll() {
+            document.body.classList.remove('disable-page-scroll');
         },
         onClose() {
             this.$emit('close');
