@@ -64,7 +64,7 @@ export default {
     watch: {
         open: {
             handler(value) {
-                if (window && window.document) {
+                if (window) {
                     value ? this.disableScroll() : this.enableScroll();
                 }
             },
