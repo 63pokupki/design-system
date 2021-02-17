@@ -53,6 +53,11 @@ export default {
             default: 'calc(100% - 35px)',
         },
     },
+    data() {
+        return {
+            watch: { open: null },
+        };
+    },
     computed: {
         _style() {
             return {
@@ -61,15 +66,13 @@ export default {
             };
         },
     },
-    watch: {
-        open: {
-            handler(value) {
-                if (window) {
-                    value ? this.disableScroll() : this.enableScroll();
-                }
-            },
-            immediate: true,
-        },
+    mounted() {
+        this.watch.open = this.$watch('open', function handler(value) {
+            value ? this.disableScroll() : this.enableScroll();
+        });
+    },
+    beforeDestroy() {
+        this.watch.open && this.watch.open();
     },
     methods: {
         /** отключить прокрутку страницы */
