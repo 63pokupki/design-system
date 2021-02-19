@@ -29,7 +29,7 @@
     &__assembling-icon,
     &__assembling-txt,
     &__assembling-date {
-        color: $orange-stop-purchase-status;
+        color: $green-collection-color;
     }
 
     // Скоро стоп
@@ -106,7 +106,8 @@
     &__add-order-icon,
     &__add-order-txt,
     &__add-order-date {
-        color: $orange-add-order-purchase-status;
+        // color: $orange-add-order-purchase-status;
+        color: $orange-stop-purchase-status;
     }
 
     // Анонс
