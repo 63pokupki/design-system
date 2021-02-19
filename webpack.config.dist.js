@@ -21,6 +21,8 @@ module.exports = {
             './node_modules/@63pokupki/onboarding-core/index.css',
             './src/styles/page/onboarding.scss',
         ],
+        header: entry.header,
+        footer: entry.footer,
     }, // объект с точками входа
     output: {
         path: path.join(__dirname, 'dist/'), // общий путь для выходных файлов

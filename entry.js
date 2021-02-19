@@ -28,4 +28,6 @@ module.exports = {
     ],
     // Итоговые стили дизайн системы - включаются в конечную сборку
     'ds-ui-kit': ['./src/styles/ds-all-style.scss'],
+    header: ['./src/styles/page/header.scss'],
+    footer: ['./src/styles/page/footer.scss'],
 };
