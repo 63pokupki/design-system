@@ -18,6 +18,7 @@
             </label>
 
             <button
+                type="button"
                 aria-label="Поиск"
                 class="spui-InputSearchWithHints__btn"
                 @click="onSearch"

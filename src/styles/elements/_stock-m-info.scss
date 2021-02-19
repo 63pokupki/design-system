@@ -30,6 +30,10 @@
         padding: 10px 20px;
         margin: 0;
         line-height: 28px;
+
+        @media (min-width: 1024px) {
+            display: none;
+        }
     }
 
     .stock-brief__data {
