@@ -106,7 +106,8 @@
     &__add-order-icon,
     &__add-order-txt,
     &__add-order-date {
-        color: $orange-add-order-purchase-status;
+        // color: $orange-add-order-purchase-status;
+        color: $orange-stop-purchase-status;
     }
 
     // Анонс
