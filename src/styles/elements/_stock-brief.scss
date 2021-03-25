@@ -25,6 +25,7 @@
     }
 
     &__left {
+        width: 100%;
         margin-right: 25px;
         flex-shrink: 1.2;
 
@@ -43,6 +44,7 @@
     &__old-design {
         position: relative;
         font-size: 11px;
+        margin-left: 10px;
 
         &::after {
             content: "";
