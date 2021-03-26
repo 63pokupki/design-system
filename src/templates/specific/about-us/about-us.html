@@ -4,17 +4,20 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About us</title>
 </head>
+
 <body>
 
     <style>
         body {
-            font-family: Open Sans,Roboto,sans-serif;
+            font-family: Open Sans, Roboto, sans-serif;
         }
+
         /* Slider */
         .slick-slider {
             position: relative;
@@ -30,11 +33,11 @@
             touch-action: pan-y;
             -webkit-tap-highlight-color: transparent;
         }
-    
+
         .show-on-600 {
-        display: none;
+            display: none;
         }
-    
+
         .slick-list {
             position: relative;
             overflow: hidden;
@@ -42,23 +45,23 @@
             margin: 0;
             padding: 0;
         }
-    
+
         .slick-list:focus {
             outline: none;
         }
-    
+
         .slick-list.dragging {
             cursor: pointer;
             cursor: hand;
         }
-    
+
         .slick-slider .slick-track,
         .slick-slider .slick-list {
             -webkit-transform: translate3d(0, 0, 0);
             -ms-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
         }
-    
+
         .slick-track {
             position: relative;
             left: 0;
@@ -67,67 +70,67 @@
             margin-left: auto;
             margin-right: auto;
         }
-    
+
         .slick-track:before,
         .slick-track:after {
             content: "";
             display: table;
         }
-    
+
         .slick-track:after {
             clear: both;
         }
-    
+
         .slick-loading .slick-track {
             visibility: hidden;
         }
-    
+
         .slick-slide {
             float: left;
             height: 100%;
             min-height: 1px;
             display: none;
         }
-    
+
         [dir="rtl"] .slick-slide {
             float: right;
         }
-    
+
         .slick-slide img {
             display: block;
         }
-    
+
         .slick-slide.slick-loading img {
             display: none;
         }
-    
+
         .slick-slide.dragging img {
             pointer-events: none;
         }
-    
+
         .slick-initialized .slick-slide {
             display: block;
         }
-    
+
         .slick-loading .slick-slide {
             visibility: hidden;
         }
-    
+
         .slick-vertical .slick-slide {
             display: block;
             height: auto;
             border: 1px solid transparent;
         }
-    
+
         .slick-arrow.slick-hidden {
             display: none;
         }
-    
+
         /* Slider */
         .slick-loading .slick-list {
             background: #fff url("./ajax-loader.gif") center center no-repeat;
         }
-    
+
         /* Icons */
         @font-face {
             font-family: "slick";
@@ -136,7 +139,7 @@
             font-weight: normal;
             font-style: normal;
         }
-    
+
         /* Arrows */
         .slick-prev,
         .slick-next {
@@ -157,7 +160,7 @@
             border: none;
             outline: none;
         }
-    
+
         .slick-prev:hover,
         .slick-prev:focus,
         .slick-next:hover,
@@ -166,19 +169,19 @@
             background: transparent;
             color: transparent;
         }
-    
+
         .slick-prev:hover:before,
         .slick-prev:focus:before,
         .slick-next:hover:before,
         .slick-next:focus:before {
             opacity: 1;
         }
-    
+
         .slick-prev.slick-disabled:before,
         .slick-next.slick-disabled:before {
             opacity: 0.25;
         }
-    
+
         .slick-prev:before,
         .slick-next:before {
             font-family: "slick";
@@ -189,47 +192,47 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
-    
+
         .slick-prev {
             left: -25px;
         }
-    
+
         [dir="rtl"] .slick-prev {
             left: auto;
             right: -25px;
         }
-    
+
         .slick-prev:before {
             content: "←";
         }
-    
+
         [dir="rtl"] .slick-prev:before {
             content: "→";
         }
-    
+
         .slick-next {
             right: -25px;
         }
-    
+
         [dir="rtl"] .slick-next {
             left: -25px;
             right: auto;
         }
-    
+
         .slick-next:before {
             content: "→";
         }
-    
+
         [dir="rtl"] .slick-next:before {
             content: "←";
         }
-    
+
         /* Dots */
         .slick-dotted.slick-slider {
             margin-bottom: 20px;
             margin-top: 20px;
         }
-    
+
         .slick-dots {
             position: absolute;
             bottom: -25px;
@@ -240,7 +243,7 @@
             margin: 0;
             width: 100%;
         }
-    
+
         .slick-dots li {
             position: relative;
             display: inline-block;
@@ -250,7 +253,7 @@
             padding: 0;
             cursor: pointer;
         }
-    
+
         .slick-dots li button {
             border: 0;
             background: transparent;
@@ -264,17 +267,17 @@
             padding: 5px;
             cursor: pointer;
         }
-    
+
         .slick-dots li button:hover,
         .slick-dots li button:focus {
             outline: none;
         }
-    
+
         .slick-dots li button:hover:before,
         .slick-dots li button:focus:before {
             opacity: 1;
         }
-    
+
         .slick-dots li button:before {
             position: absolute;
             top: 0;
@@ -291,20 +294,20 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
-    
+
         .slick-dots li.slick-active button:before {
             color: black;
             opacity: 0.75;
         }
-    
+
         .about-us {
             margin: 0 auto;
         }
-    
+
         .about-us a {
             color: #318CCA;
         }
-    
+
         .about-us .d-flex {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -315,40 +318,40 @@
             flex-direction: column;
             margin-top: 20px;
         }
-    
+
         .about-us .nika {
             margin-bottom: 10px;
         }
-    
-    
+
+
         .centered-container {
             max-width: 1184px;
             margin: 0 auto;
         }
-    
+
         .about-us article#about-company .heading {
             color: #606266;
         }
-    
+
         .about-us .graphics .text-2 {
             display: none;
         }
-    
+
         .about-us .history {
             margin: 20px 0 20px 0;
             width: 100%;
             display: block;
             text-align: center;
         }
-    
+
         .about-us .ogrn {
             margin-left: 20px;
         }
-    
+
         .about-us .phone-number {
             margin-top: 20px;
         }
-    
+
         .about-us .history .heading {
             text-align: left;
             padding-left: 16px;
@@ -356,59 +359,59 @@
             line-height: 30px;
             color: #1D1E1F;
         }
-    
+
         .about-us .lines-large {
             display: none;
         }
-    
+
         .about-us .job--desctop {
             display: none;
             text-align: center;
         }
-    
+
         .about-us .job--desctop .container {
             padding: 60px 100px;
         }
-    
+
         .about-us .job--desctop span {
             color: #04AAED;
             font-weight: normal;
         }
-    
+
         .about-us .graphics-legend {
             display: none;
         }
-    
+
         .about-us .container {
             padding: 0 16px;
         }
-    
+
         .about-us .hero-image {
             width: 100%;
             height: 542px;
             background: url("https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/about-us__hero-img-tablet.png") no-repeat 50%;
         }
-    
+
         .about-us .hero-image .hero-text {
             text-align: center;
             color: white;
             text-transform: uppercase;
             padding: 26px 0;
         }
-    
+
         .about-us .hero-image .about-us-logo {
             max-width: 185px;
             width: 100%;
             height: auto;
         }
-    
+
         .about-us .hero-image .text-top {
             font-weight: bold;
             font-size: 20.6864px;
             line-height: 31px;
             margin: 16px 0;
         }
-    
+
         .about-us .hero-image .text-bottom {
             font-weight: normal;
             font-size: 14px;
@@ -416,13 +419,13 @@
             text-align: center;
             letter-spacing: 1px;
         }
-    
+
         .graphic-legend-years {
             display: none;
         }
-    
+
         .about-us .statistics {
-            
+
             background: -webkit-gradient(linear, left top, left bottom, color-stop(39.24%, #36A6F2), to(#0087E2));
             background: -webkit-linear-gradient(top, #36A6F2 39.24%, #0087E2 100%);
             background: -o-linear-gradient(top, #36A6F2 39.24%, #0087E2 100%);
@@ -440,20 +443,24 @@
             /* margin: 0 -1px; */
             margin: 0;
         }
+
         .statistics_desk {
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
             flex-direction: row;
         }
+
         .statistics_mobile {
             display: none;
         }
+
         .statistic-block-wrapper {
             display: flex;
             justify-content: center;
             width: 100%;
         }
+
         @media (max-width: 1183px) {
             .statistics_desk {
                 display: none;
@@ -468,6 +475,7 @@
             .statistics_mobile {
                 display: flex;
             }
+
             .statistics_tab {
                 display: none;
             }
@@ -491,7 +499,7 @@
 
         }
 
-    
+
         .about-us .statistics .statistic-block {
             background-color: transparent;
             padding: 12px 0;
@@ -500,59 +508,59 @@
             width: 50%;
         }
 
-    
+
         .about-us .statistics .statistic-block.users {
             -webkit-box-ordinal-group: 2;
             -ms-flex-order: 1;
             order: 1;
         }
-    
+
         .about-us .statistics .statistic-block.visits {
             -webkit-box-ordinal-group: 3;
             -ms-flex-order: 2;
             order: 2;
         }
-    
+
         .about-us .statistics .statistic-block.orders {
             -webkit-box-ordinal-group: 4;
             -ms-flex-order: 3;
             order: 3;
         }
-    
+
         .about-us .statistics .statistic-block.items {
             -webkit-box-ordinal-group: 5;
             -ms-flex-order: 4;
             order: 4;
         }
-    
+
         .about-us .statistics .statistic-block.providers,
         .about-us .statistics .statistic-block.issue-points {
             display: none;
         }
-    
+
         .about-us .statistics .text-bold {
             font-weight: 800;
             font-size: 16px;
             line-height: 24px;
         }
-    
+
         .about-us .statistics .text-normal {
             font-weight: normal;
             font-size: 12px;
             line-height: 24px;
         }
-    
+
         .about-us article {
             margin-top: 24px;
         }
-    
+
         .about-us article .heading {
             font-size: 18px;
             font-weight: normal;
             color: #1D1E1F;
             line-height: 48px;
         }
-    
+
         .about-us article .text {
             font-style: normal;
             font-weight: normal;
@@ -561,13 +569,13 @@
             letter-spacing: -0.01em;
             color: #606266;
         }
-    
+
         .about-us article#about-company {
             max-width: 900px;
             margin-left: auto;
             margin-right: auto;
         }
-    
+
         .about-us article#about-company .planet {
             width: 100%;
             height: auto;
@@ -575,26 +583,26 @@
             margin: 20px auto;
             max-width: 540px;
         }
-    
+
         .about-us .registration {
             clear: both;
             background-color: #e1f2fd;
             padding: 20px 0;
         }
-    
+
         .about-us .registration .heading {
             font-weight: bold;
             font-size: 18px;
             line-height: 26px;
             color: #318CCA;
         }
-    
+
         .about-us .registration .text {
             font-size: 12px;
             line-height: 22px;
             color: #1E2023;
         }
-    
+
         .about-us .registration .buttons {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -609,12 +617,12 @@
             -ms-flex-pack: distribute;
             justify-content: space-around;
         }
-    
+
         .about-us .registration .buttons a {
             width: 100%;
             max-width: 286px;
         }
-    
+
         .about-us .registration .member,
         .about-us .registration .provider {
             cursor: pointer;
@@ -641,193 +649,220 @@
             border-image: unset;
             text-decoration: none;
         }
-    
+
         .about-us .registration .buttons .member {
             margin-top: 16px;
             background-color: #36A6F2;
         }
-    
+
         .about-us .registration .buttons .provider {
             background-color: #318CCA;
         }
 
-        /* VIDEO */  
+        /* VIDEO */
         /* Блок видео */
         .heading-video {
-        font-size: 24px;
-        text-align: center;
-        padding: 0 15px;
-        margin: 60px 0 15px 0;
-        color: #1D1E1F;
+            font-size: 24px;
+            text-align: center;
+            padding: 0 15px;
+            margin: 60px 0 15px 0;
+            color: #1D1E1F;
         }
 
         .about-us__video {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -webkit-justify-content: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -webkit-align-items: center;
-        -ms-flex-align: center;
-        align-items: center;
-        width: 100%;
-        max-width: 1184px;
-        max-height: 712px;
-        margin: 0 auto;
-        padding: 9% 7%;
-        background-color: #FFFFFF;
-        position: relative;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            width: 100%;
+            max-width: 1184px;
+            max-height: 712px;
+            margin: 0 auto;
+            padding: 9% 7%;
+            background-color: #FFFFFF;
+            position: relative;
         }
+
         .about-us__video:after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 100%;
-        max-height: 120px;
-        background-color: #36A6F2;
-        position: absolute;
-        top: calc(50%-60px);
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            max-height: 120px;
+            background-color: #36A6F2;
+            position: absolute;
+            top: calc(50%-60px);
         }
 
         .about-us__video-container {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        max-width: 875px;
-        width: 100%;
-        z-index: 10;
-        position: relative;
-        background: transparent;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            max-width: 875px;
+            width: 100%;
+            z-index: 10;
+            position: relative;
+            background: transparent;
         }
 
         .about-us__video-player-heading {
-        position: absolute;
-        top: -75px;
-        left: 0;
-        text-align: center;
-        font-size: 22px;
-        width: 100%;
+            position: absolute;
+            top: -75px;
+            left: 0;
+            text-align: center;
+            font-size: 22px;
+            width: 100%;
         }
 
         .about-us__video-player {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        width: 65%;
-        height: 0;
-        padding-bottom: 36.35%;
-        z-index: 10;
-        position: relative;
-        background: transparent;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            width: 65%;
+            height: 0;
+            padding-bottom: 36.35%;
+            z-index: 10;
+            position: relative;
+            background: transparent;
         }
-        .about-us__video-player.left-player::after, .about-us__video-player.right-player::after {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        right: 0;
-        bottom: 0px;
-        transform: translate(2%, 2%);
-        z-index: -1;
-        }
-        .about-us__video-player.left-player {
-        margin: 0 50px 0 0;
-        }
-        .about-us__video-player.left-player::after {
-        background: #63C0FF;
-        }
+
+        .about-us__video-player.left-player::after,
         .about-us__video-player.right-player::after {
-        background: #FFC163;
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0;
+            bottom: 0px;
+            transform: translate(2%, 2%);
+            z-index: -1;
+        }
+
+        .about-us__video-player.left-player {
+            margin: 0 50px 0 0;
+        }
+
+        .about-us__video-player.left-player::after {
+            background: #63C0FF;
+        }
+
+        .about-us__video-player.right-player::after {
+            background: #FFC163;
         }
 
         .about-us__video-youtube {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: transparent;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
         }
+
         .about-us__video-youtube.right {
-        border: 3px solid #8C3E25;
+            border: 3px solid #8C3E25;
         }
+
         .about-us__video-youtube.left {
-        border: 3px solid #254F8C;
+            border: 3px solid #254F8C;
         }
 
         .about-us__video-player-heading {
             font-size: 22px;
         }
 
-        .about-us__video-container {
-            flex-wrap: wrap;
-            justify-content: center;
-        }
 
-        .about-us__video-player {
-            width: 100%;
-            padding-bottom: 56.35%;
-        }
-
-        .about-us__video-player.left-player {
+        /* .about-us__video-player.left-player {
             margin: 0 0 135px 0;
-        }
+        } */
 
-        .about-us__video {
+        /* .about-us__video {
             max-height: 100%;
             padding: 16% 0 5% 0;
+        } */
+
+        @media (max-width: 768px) {
+            .about-us__video-player-heading {
+                font-size: 16px;
+            }
+
+            .about-us__video-container {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .about-us__video-player {
+                width: 100%;
+                padding-bottom: 56.35%;
+            }
+
+            .about-us__video-player.left-player {
+                margin: 0 0 135px 0;
+            }
+
+            .about-us__video {
+                max-height: 100%;
+                padding: 15% 0;
+            }
+            .about-us__video::after {
+                display: none;
+            }
+            .about-us .join-us .icon {
+                max-width: 30px;
+            }
+
         }
-        .about-us__video::after {
-            display: none;
-        }
-        .about-us .join-us .icon { 
-            max-width: 30px;
-        }
-        
+
+
         @media (max-width: 568px) {
             .about-us__video-player-heading {
-            margin: 20px 0 30px 0;
-            font-size: 16px;
-        }
-        .about-us__video-player.left-player {
-            margin: 0 0 110px 0;
-        }
+                margin: 20px 0 30px 0;
+                font-size: 16px;
+            }
+
+            .about-us__video-player.left-player {
+                margin: 0 0 110px 0;
+            }
 
         }
 
         @media (max-width: 992px) and (min-width: 769px) {
             .about-us__video {
-            max-height: 100%;
-            padding: 12% 0 5% 0;
-        }
+                max-height: 100%;
+                padding: 12% 0 5% 0;
+            }
 
         }
 
-        /* Окончание блока видео */     
+        /* Окончание блока видео */
 
         .about-us .join-us {
             text-align: center;
             padding: 14px 0 22px 0;
         }
-    
+
         .about-us .join-us .heading {
             font-size: 12px;
             line-height: 22px;
             color: #4B4B4B;
             margin-bottom: 16px;
         }
-    
+
         .about-us .join-us .icon {
             margin: 0px 8px;
         }
-    
+
         .about-us .contacts {
             background-color: #6E7C86;
             color: white;
@@ -840,60 +875,60 @@
             -ms-flex-direction: column;
             flex-direction: column;
         }
-    
+
         .about-us .contacts .container {
             padding: 22px 16px;
         }
-    
+
         .about-us .contacts .heading {
             font-weight: bold;
             font-size: 18px;
             line-height: 28px;
         }
-    
+
         .about-us .contacts .office {
             height: auto;
             width: 100%;
         }
-    
+
         .about-us .contacts a {
             color: white;
         }
-    
+
         .about-us .job {
             background-color: #E1F2FD;
             padding: 22px 0px;
         }
-    
+
         .about-us .job .heading {
             font-weight: 600;
             font-size: 20px;
             line-height: 38px;
             color: #04AAED;
         }
-    
+
         .about-us .job .text {
             font-weight: 300;
             font-size: 12px;
             line-height: 24px;
             color: #4B4B4B;
         }
-    
+
         .about-us .lines-medium .card {
             padding-top: 10px;
         }
-    
+
         .about-us .lines-medium .image {
             width: 272px;
             height: 200px;
             margin: 0 auto;
         }
-    
+
         .about-us .lines-medium .image img {
             width: 272px;
             height: 200px;
         }
-    
+
         .about-us .lines-medium .card .year:after {
             position: absolute;
             height: 2px;
@@ -903,7 +938,7 @@
             top: 10px;
             right: -160px;
         }
-    
+
         .about-us .lines-medium .card .year:before {
             position: absolute;
             height: 2px;
@@ -913,15 +948,15 @@
             top: 10px;
             right: 170px;
         }
-    
+
         .about-us .lines-medium .card:first-child .year:before {
             display: none;
         }
-    
+
         .about-us .lines-medium .card:last-child .year:after {
             display: none;
         }
-    
+
         .about-us .lines-medium .text {
             color: white;
             font-size: 12px;
@@ -933,7 +968,7 @@
             width: 100%;
             text-align: left;
         }
-    
+
         .about-us .lines-medium .text .year {
             font-weight: 600;
             text-align: center;
@@ -941,12 +976,12 @@
             margin-bottom: 8px;
             position: relative;
         }
-    
+
         .about-us .lines-medium .slick-dots li.slick-active button:before {
             background: white;
             opacity: 1;
         }
-    
+
         .about-us .lines-medium .slick-dots li button:before {
             position: absolute;
             top: -35px;
@@ -966,80 +1001,80 @@
             opacity: 1;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-        }        
-    
+        }
+
         @media (min-width: 479px),
         (min-width: 479px) and (orientation: landscape) {
             .about-us .registration {
                 text-align: center;
             }
-    
+
             .about-us article#about-company .planet {
                 width: 90%;
             }
         }
-    
+
         @media (min-width: 568px),
         (min-width: 568px) and (orientation: landscape) {
             .about-us .history {
-                margin: 40px 0 60px 0;
+                margin: 0 0 60px 0;
             }
-    
-    
-    
+
+
+
             .about-us .d-flex {
                 margin-top: 5px;
             }
-    
+
             .about-us .history .heading {
                 text-align: center;
                 font-size: 22px;
                 padding: 10px 0;
             }
-    
+
             .about-us .history .lines-medium .slick-dots li.slick-active button:before {
                 background: #36A6F2;
                 opacity: 1;
             }
-    
+
             .about-us .history .lines-medium .slick-dots li button:before {
                 position: absolute;
                 top: 15px;
                 border: 1px solid #36A6F2;
             }
-    
+
             .about-us article#about-company .planet {
                 width: 80%;
             }
-    
+
             .about-us .contacts {
                 -webkit-box-orient: horizontal;
                 -webkit-box-direction: normal;
                 -ms-flex-direction: row;
                 flex-direction: row;
             }
-    
+
             .about-us .contacts .heading {
                 display: none;
             }
-    
+
             .about-us .contacts .office {
                 width: 306px;
                 height: 215px;
             }
-    
+
             .about-us .contacts .container {
                 width: 50%;
             }
-    
+
             .about-us .statistics .text-bold {
                 font-size: 18px;
             }
-    
+
             .about-us .statistics .text-normal {
                 font-size: 14px;
             }
-        
+
             .about-us .statistics .statistic-block.users,
             .about-us .statistics .statistic-block.providers,
             .about-us .statistics .statistic-block.orders,
@@ -1050,126 +1085,126 @@
                 -ms-flex-order: initial;
                 order: initial;
             }
-    
+
             .about-us .statistics .statistic-block.providers,
             .about-us .statistics .statistic-block.issue-points {
                 display: block;
             }
-    
+
             .about-us article {
                 text-align: center;
             }
-    
+
             .about-us article .heading {
                 font-size: 22px;
             }
-    
+
             .about-us article .text {
                 text-align: left;
             }
-    
+
             .about-us p.text {
                 font-size: 15px;
             }
-    
+
             .about-us .registration .text,
             .about-us .job .text {
                 font-size: 12px;
             }
-    
+
             .slick-dots {
                 bottom: -40px;
             }
         }
-    
-    @media (min-width: 768px),
+
+        @media (min-width: 768px),
         (min-width: 768px) and (orientation: landscape) {
-        .hero-image {
-        display: none;
+            .hero-image {
+                display: none;
+            }
+
+            .show-on-600_mobile {
+                display: none;
+            }
+
+
+            .show-on-600 {
+                display: block;
+            }
         }
 
-        .show-on-600_mobile {
-            display: none;
+        @media (max-width: 767px) {
+            .show-on-600_mobile {
+                display: block;
+            }
+
         }
 
-    
-        .show-on-600 {
-        display: block;
-        }
-    }
-
-    @media (max-width: 767px) {
-        .show-on-600_mobile {
-            display: block;
-        }
-
-    }
-    
         @media (max-width: 768px),
         (max-width: 768px) and (orientation: landscape) {
             .scroll-arrows {
                 left: 0;
             }
-            
+
             .about-us .percents {
                 font-weight: bold;
                 font-size: 12px;
                 line-height: 20px;
                 letter-spacing: -0.01em;
-    
+
                 color: #249BED;
             }
         }
-    
+
         @media (min-width: 768px),
         (min-width: 768px) and (orientation: landscape) {
-    
+
             .about-us .contacts .container {
                 width: 60%;
             }
-    
+
             .about-us .hero-image .about-us-logo {
                 max-width: 280px;
             }
-    
+
             .about-us .hero-image .text-top {
                 font-size: 24px;
                 line-height: 34px;
                 margin: 0 0;
             }
-    
+
             .about-us .hero-image .text-bottom {
                 font-size: 14px;
                 line-height: 34px;
             }
-    
+
             .about-us article#about-company .heading {
                 line-height: 102px;
             }
-    
+
             .about-us article#about-company .planet {
                 width: 63%;
                 float: right;
                 margin: 0 0 50px 15px;
             }
-    
+
             .about-us .registration {
                 clear: both;
                 margin-bottom: 20px;
                 padding: 28px 0 22px 0;
             }
-    
-    
+
+
             .about-us .registration .heading {
                 font-size: 24px;
                 line-height: 50px;
             }
-    
+
             .about-us .registration .container {
                 max-width: 600px;
                 margin: 0 auto;
             }
-    
+
             .about-us .registration .buttons {
                 margin: 22px 17px 20px 17px;
                 -webkit-box-align: center;
@@ -1180,7 +1215,7 @@
                 -ms-flex-direction: row;
                 flex-direction: row;
             }
-    
+
             .about-us .registration .buttons .provider,
             .about-us .registration .buttons .member {
                 height: 42px;
@@ -1188,54 +1223,54 @@
                 border: 1px solid #318CCA;
                 color: #318CCA;
             }
-    
+
             .about-us .registration .buttons .provider:hover,
             .about-us .registration .buttons .member:hover {
                 background-color: #318CCA;
                 color: white;
                 border: unset;
             }
-    
+
             .about-us .registration .buttons .member {
                 margin: 0 0 0 0;
                 max-width: 220px;
             }
-    
+
             .about-us .registration .buttons .provider {
                 margin: 0 0 0 0;
                 max-width: 220px;
             }
-    
+
             .about-us .join-us {
                 margin: 0 0;
                 padding: 14px 0 60px 0;
             }
-    
+
             .about-us .join-us .heading {
                 font-size: 16px;
             }
-    
+
             .about-us .join-us .icon {
                 height: 55px;
                 width: 55px;
                 margin: 0 18px;
             }
-    
-    
-    
+
+
+
             .about-us .job.job--desctop .text {
                 font-size: 15px;
             }
         }
-    
-    
+
+
         @media (min-width: 820px),
         (min-width: 820px) and (orientation: landscape) {
             .about-us .contacts .heading {
                 display: block;
             }
         }
-    
+
         @media (min-width: 968px),
         (min-width: 968px) and (orientation: landscape) {
             .graphic-legend-years {
@@ -1251,29 +1286,29 @@
                 max-width: 993px;
                 margin: 10px auto 20px;
             }
-    
+
             .about-us .phone-number {
                 margin-top: 60px;
             }
-    
+
             .about-us .job--mobile {
                 display: none;
             }
-    
+
             .about-us .job--desctop {
                 display: block;
             }
-    
+
             .about-us article#about-company .planet {
                 margin: 0 0 50px 20px;
             }
-    
+
             .about-us .hero-image .hero-text {
                 position: absolute;
                 left: 100px;
                 top: 100px;
             }
-    
+
             .about-us .graphics {
                 background: url("https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/graphic.svg") no-repeat 100% 100%;
                 height: 420px;
@@ -1282,7 +1317,7 @@
                 margin: 0 auto;
                 position: relative;
             }
-    
+
             .about-us .graphics .text {
                 position: absolute;
                 left: 0;
@@ -1292,7 +1327,7 @@
                 line-height: 28px;
                 margin: 40px 0;
             }
-    
+
             .about-us .graphics .text-2 {
                 position: absolute;
                 right: 0;
@@ -1304,7 +1339,7 @@
                 color: #1D1E1F;
                 display: block;
             }
-    
+
             .about-us .graphics-legend {
                 display: -webkit-box;
                 display: -ms-flexbox;
@@ -1315,7 +1350,7 @@
                 max-width: 993px;
                 margin: 0 auto 60px;
             }
-    
+
             .about-us .graphics-legend .legend-item {
                 display: -webkit-box;
                 display: -ms-flexbox;
@@ -1329,43 +1364,43 @@
                 font-size: 14px;
                 margin-right: 15px;
             }
-    
+
             .about-us .graphics-legend .legend-item:last-child {
                 margin-right: 0px;
             }
-    
+
             .about-us .graphics-legend .legend-icon {
                 width: 31px;
                 height: 31px;
                 margin-right: 13px;
             }
-    
+
             .about-us .graphics-legend .one {
                 background-color: #BFE3FC;
             }
-    
+
             .about-us .graphics-legend .two {
                 background-color: #91CFFA;
             }
-    
+
             .about-us .graphics-legend .three {
                 background-color: #70C1F8;
             }
-    
+
             .about-us .contacts {
                 font-size: 16px;
                 font-weight: 300;
             }
-    
+
             .about-us .contacts b {
                 font-weight: 300;
             }
-    
+
             .about-us .contacts .office {
                 width: 390px;
                 height: 290px;
             }
-    
+
             .about-us .contacts .d-flex {
                 margin-top: 18px;
                 margin-bottom: 18px;
@@ -1374,16 +1409,16 @@
                 -ms-flex-direction: row;
                 flex-direction: row;
             }
-    
+
             .about-us .contacts .d-flex span {
                 margin-right: 10px;
             }
-    
+
             .about-us .contacts .container {
                 padding: 40px 0px 0px 50px;
             }
         }
-    
+
         @media (min-width: 1023px),
         (min-width: 1023px) and (orientation: landscape) {
             .about-us .hero-image .hero-text {
@@ -1391,34 +1426,34 @@
                 left: 85px;
                 top: 40px;
             }
-    
+
             .about-us .hero-image .about-us-logo {
                 max-width: 347px;
             }
-    
+
             .about-us .hero-image .text-top {
                 margin-top: 10px;
                 font-size: 32px;
                 line-height: 45px;
             }
-    
+
             .about-us .hero-image .text-bottom {
                 font-size: 22px;
                 line-height: 82px;
             }
         }
-    
+
         @media (min-width: 1184px),
         (min-width: 1184px) and (orientation: landscape) {
-    
+
             .about-us .history {
-                margin: 60px 0 100px 0;
+                margin: 0 0 100px 0;
             }
-    
+
             .about-us .history .lines-medium {
                 display: none;
             }
-    
+
             .about-us .history .lines-large {
                 margin: 60px 0;
                 position: relative;
@@ -1433,7 +1468,7 @@
                 -ms-flex-pack: center;
                 justify-content: center;
             }
-    
+
             .about-us .history .lines-large:before {
                 content: "";
                 display: block;
@@ -1443,7 +1478,7 @@
                 position: absolute;
                 top: 351px;
             }
-    
+
             .about-us .history .lines-large .top,
             .about-us .history .lines-large .bottom {
                 display: -webkit-box;
@@ -1456,15 +1491,15 @@
                 -ms-flex-align: baseline;
                 align-items: baseline;
             }
-    
+
             .about-us .history .lines-large .top {
                 margin-bottom: 18px;
             }
-    
+
             .about-us .history .lines-large .top .text {
                 position: relative;
             }
-    
+
             .about-us .history .lines-large .top .text:before {
                 content: "";
                 position: absolute;
@@ -1475,7 +1510,7 @@
                 left: -100px;
                 background: url("https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/our-history__psevdo-lines/line-top.svg") no-repeat 100% 100%;
             }
-    
+
             .about-us .history .lines-large .top .text:after {
                 content: "2000 г.";
                 position: absolute;
@@ -1488,19 +1523,19 @@
                 line-height: 24px;
                 color: #4B4B4B;
             }
-    
+
             .about-us .history .lines-large .top .card-1 .text:after {
                 content: "2009 г.";
             }
-    
+
             .about-us .history .lines-large .top .card-2 .text:after {
                 content: "2012 г.";
             }
-    
+
             .about-us .history .lines-large .top .card-3 .text:after {
                 content: "2019 г.";
             }
-    
+
             .about-us .history .lines-large .bottom .text:after {
                 content: "2000 г.";
                 position: absolute;
@@ -1513,11 +1548,11 @@
                 line-height: 24px;
                 color: #4B4B4B;
             }
-    
+
             .about-us .history .lines-large .bottom .card-4 .text:after {
                 content: "2010 г.";
             }
-    
+
             .about-us .history .lines-large .bottom .card-5 .text:after {
                 content: "2016 г.";
             }
@@ -1526,19 +1561,19 @@
                 content: "2020 г.";
             }
 
-    
+
             .about-us .history .lines-large .bottom .card-5 .text {
                 padding-bottom: 25px;
             }
-    
+
             .about-us .history .lines-large .bottom {
                 margin-top: 23px;
             }
-    
+
             .about-us .history .lines-large .bottom .text {
                 position: relative;
             }
-    
+
             .about-us .history .lines-large .bottom .text:before {
                 content: "";
                 position: absolute;
@@ -1549,7 +1584,7 @@
                 left: -90px;
                 background: url("https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/our-history__psevdo-lines/line-bottom.svg") no-repeat 100% 100%;
             }
-    
+
             .about-us .history .lines-large .card {
                 display: -webkit-box;
                 display: -ms-flexbox;
@@ -1559,48 +1594,48 @@
                 -ms-flex-direction: column;
                 flex-direction: column;
             }
-    
+
             .about-us .history .lines-large .card-1 {
                 max-width: 230px;
                 margin-left: 40px;
             }
-    
+
             .about-us .history .lines-large .card-1 .text {
                 max-width: 230px;
             }
-    
+
             .about-us .history .lines-large .card-2 {
                 max-width: 220px;
             }
-    
+
             .about-us .history .lines-large .card-2 .text {
                 max-width: 220px;
             }
-    
+
             .about-us .history .lines-large .card-3 {
                 max-width: 239px;
             }
-    
+
             .about-us .history .lines-large .card-3 .text {
                 max-width: 239px;
             }
-    
+
             .about-us .history .lines-large .card-4 {
                 max-width: 212px;
                 margin-left: 120px;
             }
-    
+
             .about-us .history .lines-large .card-4 .text {
                 max-width: 212px;
             }
-    
+
             .about-us .history .lines-large .card-5 {
                 /* max-width: 300px; */
                 max-width: 240px;
                 /* margin-right: 45px; */
                 margin-left: 95px
             }
-    
+
             .about-us .history .lines-large .card-5 .text {
                 max-width: 300px;
             }
@@ -1611,14 +1646,14 @@
                 margin-left: 60px;
             }
 
-    
+
             .about-us .history .lines-large .image img {
                 width: 100%;
                 height: auto;
                 margin: 0 auto;
                 display: block;
             }
-    
+
             .about-us .history .lines-large .text {
                 color: white;
                 background-color: #36A6F2;
@@ -1629,56 +1664,56 @@
                 text-align: left;
                 padding: 8px 15px;
             }
-    
+
             .about-us .statistics {
                 -ms-flex-wrap: nowrap;
                 flex-wrap: nowrap;
                 height: 200px;
                 margin: 0 0;
             }
-    
+
             .about-us .statistics .statistic-block {
                 border: unset;
                 padding: 60px 10px 0 10px;
                 position: relative;
                 text-align: left;
             }
-    
+
             .about-us .statistics .statistic-block.users .text-bold,
             .about-us .statistics .statistic-block.users .text-normal {
                 margin-left: 17px;
             }
-    
+
             .about-us .statistics .statistic-block.providers .text-bold,
             .about-us .statistics .statistic-block.providers .text-normal {
                 margin-left: 40px;
             }
-    
+
             .about-us .statistics .statistic-block.orders .text-bold,
             .about-us .statistics .statistic-block.orders .text-normal {
                 margin-left: 8px;
             }
-    
+
             .about-us .statistics .statistic-block.visits .text-bold,
             .about-us .statistics .statistic-block.visits .text-normal {
                 margin-left: 16px;
             }
-    
+
             .about-us .statistics .statistic-block.items .text-bold,
             .about-us .statistics .statistic-block.items .text-normal {
                 margin-left: 24px;
             }
-    
+
             .about-us .statistics .statistic-block.issue-points .text-bold,
             .about-us .statistics .statistic-block.issue-points .text-normal {
                 margin-left: 40px;
                 margin-right: 10px;
             }
-    
+
             .about-us .statistics .statistic-block.providers {
                 padding: 60px 10px 0 10px;
             }
-    
+
             .about-us .statistics .statistic-block:after {
                 content: "";
                 position: absolute;
@@ -1691,59 +1726,94 @@
                 right: 0px;
                 top: 40px;
             }
-    
+
             .about-us .statistics .statistic-block:last-child:after {
                 display: none;
             }
-    
+
             .about-us .statistics .text-bold {
                 font-size: 32px;
                 line-height: 32px;
                 margin-bottom: 10px;
             }
-    
+
             .about-us .statistics .text-normal {
                 font-size: 14px;
             }
         }
-    
-    .about-us article .text {
+
+        .about-us article .text {
             font-size: 14px;
         }
-    
+
         .about-us .registration .text {
             font-size: 14px;
         }
-    
+
         .about-us .job .text {
             font-size: 14px;
         }
-    
+
         .about-us .join-us .heading {
             font-size: 14px;
         }
-    
+
         @media (max-width: 1152px) and (min-width: 750px) {
             .main_footer--menu {
                 padding-left: 0;
             }
         }
+
         /*  */
     </style>
-    
+
     <div class="about-us">
-            <div class="centered-container">
-                <!-- <div class="hero-image">
+        <div class="centered-container">
+            <!-- <div class="hero-image">
                 </div> -->
-    <img class="show-on-600" src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/about-us__hero-img-desk.png" style="
+            <img class="show-on-600"
+                src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/about-us__hero-img-desk.png"
+                style="
         width: 100%;
     ">
-        <img class="show-on-600_mobile" src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/about-us__hero-img-tablet.png" style="
+            <img class="show-on-600_mobile"
+                src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/about-us__hero-img-tablet.png"
+                style="
         width: 100%;
     ">
 
-                <!-- statistic desktop -->
-                <div class="statistics statistics_desk">
+            <!-- statistic desktop -->
+            <div class="statistics statistics_desk">
+                <div class="statistic-block users">
+                    <div class="text-bold">257 тыс.</div>
+                    <div class="text-normal">пользователей сайта</div>
+                </div>
+                <div class="statistic-block providers">
+                    <div class="text-bold">7 тыс.</div>
+                    <div class="text-normal">поставщиков</div>
+                </div>
+                <div class="statistic-block orders">
+                    <div class="text-bold">>140 тыс.</div>
+                    <div class="text-normal">заказов в месяц</div>
+                </div>
+                <div class="statistic-block visits">
+                    <div class="text-bold">>2 млн</div>
+                    <div class="text-normal">посещений в месяц</div>
+                </div>
+                <div class="statistic-block items">
+                    <div class="text-bold">2.4 млн</div>
+                    <div class="text-normal">товаров</div>
+                </div>
+                <div class="statistic-block issue-points">
+                    <div class="text-bold">300</div>
+                    <div class="text-normal">пунктов выдачи по всей России</div>
+                </div>
+            </div>
+
+            <!-- statistic tab -->
+
+            <div class="statistics statistics_tab">
+                <div class="statistic-block-wrapper">
                     <div class="statistic-block users">
                         <div class="text-bold">257 тыс.</div>
                         <div class="text-normal">пользователей сайта</div>
@@ -1752,6 +1822,8 @@
                         <div class="text-bold">7 тыс.</div>
                         <div class="text-normal">поставщиков</div>
                     </div>
+                </div>
+                <div class="statistic-block-wrapper">
                     <div class="statistic-block orders">
                         <div class="text-bold">>140 тыс.</div>
                         <div class="text-normal">заказов в месяц</div>
@@ -1760,6 +1832,8 @@
                         <div class="text-bold">>2 млн</div>
                         <div class="text-normal">посещений в месяц</div>
                     </div>
+                </div>
+                <div class="statistic-block-wrapper">
                     <div class="statistic-block items">
                         <div class="text-bold">2.4 млн</div>
                         <div class="text-normal">товаров</div>
@@ -1769,350 +1843,362 @@
                         <div class="text-normal">пунктов выдачи по всей России</div>
                     </div>
                 </div>
-
-                <!-- statistic tab -->
-
-                <div class="statistics statistics_tab">
-                    <div class="statistic-block-wrapper">
-                        <div class="statistic-block users">
-                            <div class="text-bold">257 тыс.</div>
-                            <div class="text-normal">пользователей сайта</div>
-                        </div>
-                        <div class="statistic-block providers">
-                            <div class="text-bold">7 тыс.</div>
-                            <div class="text-normal">поставщиков</div>
-                        </div>
-                    </div>
-                    <div class="statistic-block-wrapper">
-                        <div class="statistic-block orders">
-                            <div class="text-bold">>140 тыс.</div>
-                            <div class="text-normal">заказов в месяц</div>
-                        </div>
-                        <div class="statistic-block visits">
-                            <div class="text-bold">>2 млн</div>
-                            <div class="text-normal">посещений в месяц</div>
-                        </div>
-                    </div>
-                    <div class="statistic-block-wrapper">
-                        <div class="statistic-block items">
-                            <div class="text-bold">2.4 млн</div>
-                            <div class="text-normal">товаров</div>
-                        </div>
-                        <div class="statistic-block issue-points">
-                            <div class="text-bold">300</div>
-                            <div class="text-normal">пунктов выдачи по всей России</div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- mobile statistic -->
-                <div class="statistics statistics_mobile">
-                    <div class="statistic-block-wrapper">
-                        <div class="statistic-block users">
-                            <div class="text-bold">257 тыс.</div>
-                            <div class="text-normal">пользователей сайта</div>
-                        </div>
-                        <div class="statistic-block visits">
-                            <div class="text-bold">>2 млн</div>
-                            <div class="text-normal">посещений в месяц</div>
-                        </div>
-    
-                    </div>
-                    <div class="statistic-block-wrapper">
-                        <div class="statistic-block orders">
-                            <div class="text-bold">>140 тыс.</div>
-                            <div class="text-normal">заказов в месяц</div>
-                        </div>
-                        <div class="statistic-block items">
-                            <div class="text-bold">2.4 млн</div>
-                            <div class="text-normal">товаров</div>
-                        </div>    
-                    </div>
-                </div>
-
             </div>
-            <div class="container">
-                <article id="about-company">
-                    <h1 class="heading">О компании</h1>
-                    <p class="text">
-                        <!-- Главное отличие совместных покупок
+
+
+            <!-- mobile statistic -->
+            <div class="statistics statistics_mobile">
+                <div class="statistic-block-wrapper">
+                    <div class="statistic-block users">
+                        <div class="text-bold">257 тыс.</div>
+                        <div class="text-normal">пользователей сайта</div>
+                    </div>
+                    <div class="statistic-block visits">
+                        <div class="text-bold">>2 млн</div>
+                        <div class="text-normal">посещений в месяц</div>
+                    </div>
+
+                </div>
+                <div class="statistic-block-wrapper">
+                    <div class="statistic-block orders">
+                        <div class="text-bold">>140 тыс.</div>
+                        <div class="text-normal">заказов в месяц</div>
+                    </div>
+                    <div class="statistic-block items">
+                        <div class="text-bold">2.4 млн</div>
+                        <div class="text-normal">товаров</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="container">
+            <article id="about-company">
+                <h1 class="heading">О компании</h1>
+                <p class="text">
+                    <!-- Главное отличие совместных покупок
                         от стандартных интернет-магазинов —
                         мы объединяем покупателей для совершения заказов у производителей по привлекательным оптовым ценам. Заказывая напрямую,
                         мы избавляем покупателя от целого
                         ряда посредников и их наценок на товар (дистрибьюторов, оптовиков, розничных магазинов с целым штатом разных сотрудников). -->
-                        63pokupki.ru — площадка для совершения совместных покупок. Мы гордимся тем, 
-                        что открываем для наших покупателей множество новых производителей качественной и 
-                        интересной одежды, обуви, игрушек и других товаров, которые зачастую плохо представлены в 
-                        современных розничных форматах торговли.
-                        <br><br>
-                        <!-- Мы гордимся тем, что открываем для наших покупателей множество новых производителей качественной и интересной одежды, обуви, игрушек и других товаров, которые зачастую плохо
+                    63pokupki.ru — площадка для совершения совместных покупок. Мы гордимся тем,
+                    что открываем для наших покупателей множество новых производителей качественной и
+                    интересной одежды, обуви, игрушек и других товаров, которые зачастую плохо представлены в
+                    современных розничных форматах торговли.
+                    <br><br>
+                    <!-- Мы гордимся тем, что открываем для наших покупателей множество новых производителей качественной и интересной одежды, обуви, игрушек и других товаров, которые зачастую плохо
                         представлены в современных
                         розничных форматах торговли. -->
-                        <!-- <br><br> -->
-                        Политика ценообразования товаров на сайте 63pokupki.ru очень проста: оптовая отпускная цена + комиссия за организацию закупки
-                        (не более <span class="percents">16%</span> от цены товара).
-                        Такой размер комиссии — один из самых
-                        низких на рынке и является залогом
-                        лояльности наших покупателей.
-                        <br><br>
-                    </p>
-                    <img class="planet" src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/planet.svg" alt="" srcset="">
-                    <p class="text">
-                        Выдача заказов производится по всей России
-                        в специализированных пунктах выдачи 63pokupki.ru. Также доставка осуществляется Почтой России и транспортными компаниями.
-                        <br><br>
-                        А еще сайт 63pokupki.ru - это площадка
-                        не только для совершения покупок,
-                        но и для общения. Здесь покупают
-                        не у безликих менеджеров с планами продаж,
-                        а у живых людей, которые опробовали товар
-                        на себе и сполна оценили его плюсы и минусы.
-                        В целом аудитория сайта - сообщество активных людей, которые пишут отзывы, ставят оценки,
-                        публикуют фото. Ведь это очень важно - покупать товары, в качестве которых можно быть уверенным благодаря реальным отзывам.
-                        <br><br>
-                        Мы необычные. Но эта непохожесть
-                        на шаблонный интернет-магазин стала нашим преимуществом. Наши покупатели
-                        не случайные люди, а единомышленники, которые остаются с нами на долгие годы. Попробуйте и вы, чтобы понять, что покупать
-                        у нас безопасно, приятно и выгодно!
-                        <br><br>
-                    </p>
-                </article>
-            </div>
-            <div class="registration">
-                <div class="container">
-                    <div style="margin-bottom: 15px" class="heading heading--registration">Регистрируйтесь и присоединяйтесь к нам!</div>
-                    <p class="text">
-                        Подробную информацию о том,
-                        как стать участником закупок на сайте 63pokupki.ru, вы сможете найти в нашем
-                        <a style="font-weight: 600;" href="https://63pokupki.ru/forum/phpBB3/app.php/page/about">информационном справочнике.</a>
-                        <br>
-                        Все возникшие вопросы вы также можете задать по телефону: <b><a style="color: black; text-decoration: none;" href="tel:+78007006301">8 (800) 700-63-01</a></b>
-                    </p>
-                    <div class="buttons">
-                        <a class="member" href="https://63pokupki.ru/forum/phpBB3/ucp.php?mode=register&agreed=true">Я участник</a>
-                        <a class="provider" href="https://63pokupki.ru/forum/phpBB3/viewtopic.php?f=124&t=202794">Я поставщик</a>
-                    </div>
+                    <!-- <br><br> -->
+                    Политика ценообразования товаров на сайте 63pokupki.ru очень проста: оптовая отпускная цена +
+                    комиссия за организацию закупки
+                    (не более <span class="percents">16%</span> от цены товара).
+                    Такой размер комиссии — один из самых
+                    низких на рынке и является залогом
+                    лояльности наших покупателей.
+                    <br><br>
+                </p>
+                <img class="planet"
+                    src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/planet.svg" alt=""
+                    srcset="">
+                <p class="text">
+                    Выдача заказов производится по всей России
+                    в специализированных пунктах выдачи 63pokupki.ru. Также доставка осуществляется Почтой России и
+                    транспортными компаниями.
+                    <br><br>
+                    А еще сайт 63pokupki.ru - это площадка
+                    не только для совершения покупок,
+                    но и для общения. Здесь покупают
+                    не у безликих менеджеров с планами продаж,
+                    а у живых людей, которые опробовали товар
+                    на себе и сполна оценили его плюсы и минусы.
+                    В целом аудитория сайта - сообщество активных людей, которые пишут отзывы, ставят оценки,
+                    публикуют фото. Ведь это очень важно - покупать товары, в качестве которых можно быть уверенным
+                    благодаря реальным отзывам.
+                    <br><br>
+                    Мы необычные. Но эта непохожесть
+                    на шаблонный интернет-магазин стала нашим преимуществом. Наши покупатели
+                    не случайные люди, а единомышленники, которые остаются с нами на долгие годы. Попробуйте и вы, чтобы
+                    понять, что покупать
+                    у нас безопасно, приятно и выгодно!
+                    <br><br>
+                </p>
+            </article>
+        </div>
+        <div class="registration">
+            <div class="container">
+                <div style="margin-bottom: 15px" class="heading heading--registration">Регистрируйтесь и присоединяйтесь
+                    к нам!</div>
+                <p class="text">
+                    Подробную информацию о том,
+                    как стать участником закупок на сайте 63pokupki.ru, вы сможете найти в нашем
+                    <a style="font-weight: 600;"
+                        href="https://63pokupki.ru/forum/phpBB3/app.php/page/about">информационном справочнике.</a>
+                    <br>
+                    Все возникшие вопросы вы также можете задать по телефону: <b><a
+                            style="color: black; text-decoration: none;" href="tel:+78007006301">8 (800)
+                            700-63-01</a></b>
+                </p>
+                <div class="buttons">
+                    <a class="member" href="https://63pokupki.ru/forum/phpBB3/ucp.php?mode=register&agreed=true">Я
+                        участник</a>
+                    <a class="provider" href="https://63pokupki.ru/forum/phpBB3/viewtopic.php?f=124&t=202794">Я
+                        поставщик</a>
                 </div>
             </div>
-            <!-- Блок видео -->
-            <div class="about-us__video">
-                <div class="about-us__video-container">
-                    <!-- LEft player -->
-                    <div class="about-us__video-player left-player">
-                        <div class="about-us__video-player-heading">
-                            Как работает сайт 63pokupki.ru?
-                        </div>
-                        <iframe  class="about-us__video-youtube left" width="560" height="315" src="https://www.youtube.com/embed/ChFFM-zXi5c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                    
+        </div>
+        <!-- Блок видео -->
+        <div class="about-us__video">
+            <div class="about-us__video-container">
+                <!-- LEft player -->
+                <div class="about-us__video-player left-player">
+                    <div class="about-us__video-player-heading">
+                        Как работает сайт 63pokupki.ru?
                     </div>
+                    <iframe class="about-us__video-youtube left" width="560" height="315"
+                        src="https://www.youtube.com/embed/ChFFM-zXi5c" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
 
-                    <!-- Right player -->
-                    <div class="about-us__video-player right-player">
-                        <div class="about-us__video-player-heading">
-                            Почему поставщикам стоит работать с 63pokupki.ru?
-                        </div>
-                        <iframe class="about-us__video-youtube right" width="560" height="315"
-                            src="https://www.youtube.com/embed/_VPvNKzHyt0" frameborder="0"
-                            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
-                            title="Почему поставщикам стоит работать с 63pokupki.ru?">
-                        </iframe>
+                <!-- Right player -->
+                <div class="about-us__video-player right-player">
+                    <div class="about-us__video-player-heading">
+                        Почему поставщикам стоит работать с 63pokupki.ru?
+                    </div>
+                    <iframe class="about-us__video-youtube right" width="560" height="315"
+                        src="https://www.youtube.com/embed/_VPvNKzHyt0" frameborder="0"
+                        allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                        title="Почему поставщикам стоит работать с 63pokupki.ru?">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="history">
+            <div class="heading">Наша история</div>
+            <!-- mobile -->
+            <div class="lines-medium">
+                <div class="card card-1">
+                    <div class="image">
+                        <img src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/our-history-2009.jpg"
+                            alt="" srcset="">
+                    </div>
+                    <div class="text">
+                        <div class="year">2009 г.</div>
+                        Основательница проекта - Ольга Пешкичева, будучи в декрете, впервые организовала на своем сайте
+                        совместную закупку товаров напрямую
+                        от производителей по оптовым ценам. Это были, конечно же, детские товары.
+                    </div>
+                </div>
+                <div class="card card-2">
+                    <div class="image">
+                        <img src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/our-history-2010.jpg"
+                            alt="" srcset="">
+                    </div>
+                    <div class="text">
+                        <div class="year">2010 г.</div>
+                        Уже появился первый склад, сформировался пул постоянных партнеров.
+                    </div>
+                </div>
+                <div class="card card-3">
+                    <div class="image">
+                        <img src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/our-history-2012.jpg.jpg"
+                            alt="" srcset="">
+                    </div>
+                    <div class="text">
+                        <div class="year">2012 г.</div>
+                        Открылись первые пункты выдачи заказов сайта
+                        “63pokupki”. Теперь участники могли забрать свою покупку в удобном для них пункте в рамках его
+                        графика работы.
+                    </div>
+                </div>
+                <div class="card card-4">
+                    <div class="image">
+                        <img src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/our-history-2016.svg"
+                            alt="" srcset="">
+                    </div>
+                    <div class="text">
+                        <div class="year">2016 г.</div>
+                        Существенно расширилась сеть пунктов выдачи по всей России.
+                    </div>
+                </div>
+                <div class="card card-5">
+                    <div class="image">
+                        <img src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/our-history-2017.jpg"
+                            alt="" srcset="">
+                    </div>
+                    <div class="text">
+                        <div class="year">2017 г.</div>
+                        Количество зарегистрированных пользователей превысило
+                        200 тыс. человек
                     </div>
                 </div>
             </div>
-            
-            <div class="history">
-                <div class="heading">Наша история</div>
-                <!-- mobile -->
-                <div class="lines-medium">
-                    <div class="card card-1">
+
+            <!-- Desktop -->
+            <div class="lines-large">
+                <div class="top">
+                    <div class="card card-1 top">
                         <div class="image">
-                            <img src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/our-history-2009.jpg" alt="" srcset="">
+                            <img src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/our-history-2009.jpg"
+                                alt="" srcset="">
                         </div>
-                        <div class="text">
-                            <div class="year">2009 г.</div>
-                            Основательница проекта - Ольга Пешкичева, будучи в декрете, впервые организовала на своем сайте совместную закупку товаров напрямую
+                        <div class="text">Основательница проекта - Ольга Пешкичева, будучи в декрете, впервые
+                            организовала на своем сайте совместную закупку товаров напрямую
                             от производителей по оптовым ценам. Это были, конечно же, детские товары.
                         </div>
                     </div>
-                    <div class="card card-2">
+                    <div class="card card-2 top">
                         <div class="image">
-                            <img src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/our-history-2010.jpg" alt="" srcset="">
+                            <img src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/our-history-2012.jpg.jpg"
+                                alt="" srcset="">
                         </div>
-                        <div class="text">
-                            <div class="year">2010 г.</div>
-                            Уже появился первый склад, сформировался пул постоянных партнеров.
+                        <div class="text">Открылись первые пункты выдачи заказов сайта
+                            “63pokupki”. Теперь участники могли забрать свою покупку в удобном для них пункте в рамках
+                            его графика работы.
                         </div>
                     </div>
-                    <div class="card card-3">
+                    <div class="card card-3 top">
                         <div class="image">
-                            <img src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/our-history-2012.jpg.jpg" alt="" srcset="">
+                            <img src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/2019.PNG"
+                                alt="" srcset="">
                         </div>
-                        <div class="text">
-                            <div class="year">2012 г.</div>
-                            Открылись первые пункты выдачи заказов сайта
-                            “63pokupki”. Теперь участники могли забрать свою покупку в удобном для них пункте в рамках его графика работы.
-                        </div>
-                    </div>
-                    <div class="card card-4">
-                        <div class="image">
-                            <img src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/our-history-2016.svg" alt="" srcset="">
-                        </div>
-                        <div class="text">
-                            <div class="year">2016 г.</div>
-                            Существенно расширилась сеть пунктов выдачи по всей России.
-                        </div>
-                    </div>
-                    <div class="card card-5">
-                        <div class="image">
-                            <img src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/our-history-2017.jpg" alt="" srcset="">
-                        </div>
-                        <div class="text">
-                            <div class="year">2017 г.</div>
-                            Количество зарегистрированных пользователей превысило
-                            200 тыс. человек
-                        </div>
+                        <div class="text">Более 5 тыс. выкупов каждый месяц сдаются в доставку.</div>
                     </div>
                 </div>
+                <div class="bottom">
+                    <div class="card card-4 bottom">
+                        <div class="image">
+                            <img src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/our-history-2010.jpg"
+                                alt="" srcset="">
+                            <!-- <img src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/our-history-2017.jpg" alt="" srcset=""> -->
+                        </div>
+                        <div class="text">Уже появился первый склад, сформировался пул постоянных партнеров.</div>
+                    </div>
+                    <div class="card card-5 bottom">
+                        <div class="image">
+                            <img src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/our-history-2016.svg"
+                                alt="" srcset="">
+                        </div>
+                        <div class="text">Существенно расширилась сеть пунктов выдачи по всей России.</div>
+                    </div>
+                    <div class="card card-6 bottom">
+                        <div class="image">
+                            <img src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/our-history-2017.jpg"
+                                alt="" srcset="">
+                        </div>
+                        <div class="text">Количество зарегистрированных пользователей превысило
+                            340 тыс. человек
+                        </div>
+                    </div>
 
-                <!-- Desktop -->
-                <div class="lines-large">
-                    <div class="top">
-                        <div class="card card-1 top">
-                            <div class="image">
-                                <img src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/our-history-2009.jpg" alt="" srcset="">
-                            </div>
-                            <div class="text">Основательница проекта - Ольга Пешкичева, будучи в декрете, впервые организовала на своем сайте совместную закупку товаров напрямую
-                                от производителей по оптовым ценам. Это были, конечно же, детские товары.
-                            </div>
-                        </div>
-                        <div class="card card-2 top">
-                            <div class="image">
-                                <img src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/our-history-2012.jpg.jpg" alt="" srcset="">
-                            </div>
-                            <div class="text">Открылись первые пункты выдачи заказов сайта
-                                “63pokupki”. Теперь участники могли забрать свою покупку в удобном для них пункте в рамках его графика работы.
-                            </div>
-                        </div>
-                        <div class="card card-3 top">
-                            <div class="image">
-                                <img src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/2019.PNG" alt="" srcset="">
-                            </div>
-                            <div class="text">Более 5 тыс. выкупов каждый месяц сдаются в доставку.</div>
-                        </div>
-                    </div>
-                    <div class="bottom">
-                        <div class="card card-4 bottom">
-                            <div class="image">
-                                <img src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/our-history-2010.jpg" alt="" srcset="">
-                                <!-- <img src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/our-history-2017.jpg" alt="" srcset=""> -->
-                            </div>
-                            <div class="text">Уже появился первый склад, сформировался пул постоянных партнеров.</div>
-                        </div>
-                        <div class="card card-5 bottom">
-                            <div class="image">
-                                <img src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/our-history-2016.svg" alt="" srcset="">                                
-                            </div>
-                            <div class="text">Существенно расширилась сеть пунктов выдачи по всей России.</div>
-                        </div>
-                        <div class="card card-6 bottom">
-                            <div class="image">
-                                <img src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/our-history-2017.jpg" alt="" srcset="">
-                            </div>
-                            <div class="text">Количество зарегистрированных пользователей превысило
-                                340 тыс. человек
-                            </div>
-                        </div>
-
-                    </div>
                 </div>
             </div>
-            <div class="growth">
+        </div>
+        <div class="growth">
+            <div class="container">
+                <article id="growth-company">
+                    <div class="heading">Развитие компании</div>
+                    <div class="graphics">
+                        <p class="text">
+                            В настоящее время мы начали самую масштабную, за всю нашу историю,
+                            реорганизацию сайта.
+                            Проект активно растет и требует обновлений, чтобы идти в ногу со временем.
+                            <br><br>
+                            Сейчас у нас подобралась новая супер-команда разработчиков, продавцов и маркетологов,
+                            которые работают над тем, чтобы сделать сайт максимально удобным для покупателей.
+                            В наших планах представить еще больше новых
+                            и известных марок качественных товаров.
+                        </p>
+                        <div class="text-2">График роста</div>
+                    </div>
+                    <div class="graphic-legend-years">
+                        <div>2010</div>
+                        <div>2015</div>
+                        <div>2020</div>
+                    </div>
+                    <div class="graphics-legend">
+                        <div class="legend-item">
+                            <div class="legend-icon one"></div>Объем продаж в денежном выражении
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-icon two"></div>Объем продаж в натуральном выражении
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-icon three"></div>Зарегистрированные пользователи
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div class="join-us">
+            <div class="heading">Присоединяйтесь!</div>
+            <div class="icons">
+                <a href="https://vk.com/63pokupki"><img class="icon icon-vk"
+                        src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/about-us-icon-vk.svg"
+                        alt="" srcset=""></a>
+                <a href="https://www.instagram.com/63pokupki.ru/"><img class="icon icon-inst"
+                        src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/about-us-icon-instagram.svg"
+                        alt="" srcset=""></a>
+                <a href="https://ok.ru/group63pokupki"><img class="icon icon-ok"
+                        src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/about-us-icon-ok.svg"
+                        alt="" srcset=""></a>
+                <a
+                    href="https://invite.viber.com/?g2=AQAFp66898%2Fk%2Bkx32C6tpavFlXMi5KjeI6L5re3LuO2qsCSDH8759aNMAsP%2BkZps"><img
+                        class="icon icon-viber"
+                        src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/social-icon/about-us__viber.svg"
+                        alt="" srcset=""></a>
+                <a href="https://t.me/sp63pokupki"><img class="icon icon-tg"
+                        src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/social-icon/about-us__telegram.svg"
+                        alt="" srcset=""></a>
+            </div>
+        </div>
+        <div style="background-color: rgb(110,124,134);">
+            <div class="contacts centered-container">
+                <img class="office"
+                    src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/about-us-office-large.png">
                 <div class="container">
-                    <article id="growth-company">
-                        <div class="heading">Развитие компании</div>
-                        <div class="graphics">
-                            <p class="text">
-                                В настоящее время мы начали самую масштабную, за всю нашу историю,
-                                реорганизацию сайта.
-                                Проект активно растет и требует обновлений, чтобы идти в ногу со временем.
-                                <br><br>
-                                Сейчас у нас подобралась новая супер-команда разработчиков, продавцов и маркетологов, которые работают над тем, чтобы сделать сайт максимально удобным для покупателей.
-                                В наших планах представить еще больше новых
-                                и известных марок качественных товаров.
-                            </p>
-                            <div class="text-2">График роста</div>
-                        </div>
-                        <div class="graphic-legend-years">
-                            <div>2010</div>
-                            <div>2015</div>
-                            <div>2020</div>
-                        </div>
-                        <div class="graphics-legend">
-                            <div class="legend-item">
-                                <div class="legend-icon one"></div>Объем продаж в денежном выражении
-                            </div>
-                            <div class="legend-item">
-                                <div class="legend-icon two"></div>Объем продаж в натуральном выражении
-                            </div>
-                            <div class="legend-item">
-                                <div class="legend-icon three"></div>Зарегистрированные пользователи
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-            <div class="join-us">
-                <div class="heading">Присоединяйтесь!</div>
-                <div class="icons">
-                    <a href="https://vk.com/63pokupki"><img class="icon icon-vk" src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/about-us-icon-vk.svg" alt="" srcset=""></a>
-                    <a href="https://www.instagram.com/63pokupki.ru/"><img class="icon icon-inst" src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/about-us-icon-instagram.svg" alt="" srcset=""></a>
-                    <a href="https://ok.ru/group63pokupki"><img class="icon icon-ok" src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/about-us-icon-ok.svg" alt="" srcset=""></a>
-                    <a href="https://invite.viber.com/?g2=AQAFp66898%2Fk%2Bkx32C6tpavFlXMi5KjeI6L5re3LuO2qsCSDH8759aNMAsP%2BkZps"><img class="icon icon-viber" src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/social-icon/about-us__viber.svg" alt="" srcset=""></a>
-                    <a href="https://t.me/sp63pokupki"><img class="icon icon-tg" src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/social-icon/about-us__telegram.svg" alt="" srcset=""></a>                    
-                </div>
-            </div>
-            <div style="background-color: rgb(110,124,134);">
-                <div class="contacts centered-container">
-                    <img class="office" src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/about-us-office-large.png">
-                    <div class="container">
-                        <div class="heading">Реквизиты и контактная информация</div>
-                        <p class="d-flex">
-                            <span class="nika"><b>ООО «НИКА»</b></span>
-                            <span><b class="inn">ИНН </b> 6315012106 <b class="ogrn">ОГРН </b> 1166313116903</span>
-                        </p>
-                        <p class="adress">
-                            Юридический адрес: Россия, г. Самара,
-                            ул. Ново-Садовая 44, офис 321
-                        </p>
-                        <p class="phone-number">
-                            Телефон для связи: <span><a href="tel:+78007006301"><b>8 (800) 700 63 01</b></a></span>
-                            (с 08:00-20:00 каждый день)
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="job job--mobile">
-                <div class="container">
-                    <div class="heading">job@63pokupki.ru</div>
-                    <p class="text">Если вы компетентны в области разработки сайтов, маркетинге, бухгалтерском учете, работе
-                        с поставщиками, управлении проектами и хотите работать в нашей компании, то высылайте свое резюме на указанную почту.
-                        <br><br>
-                        Возможно у нас есть вакансия и именно вы
-                        нужны нам. Тогда наш менеджер по персоналу обязательно перезвонит вам.
+                    <div class="heading">Реквизиты и контактная информация</div>
+                    <p class="d-flex">
+                        <span class="nika"><b>ООО «НИКА»</b></span>
+                        <span><b class="inn">ИНН </b> 6315012106 <b class="ogrn">ОГРН </b> 1166313116903</span>
                     </p>
-                </div>
-            </div>
-    
-            <div class="job job--desctop">
-                <div class="centered-container container">
-                    <p class="text">Если вы компетентны в области разработки сайтов, маркетинге, бухгалтерском учете, работе
-                        с поставщиками, управлении проектами и хотите работать в нашей компании, то высылайте свое резюме на <span>job@63pokupki.ru</span>
-                        Возможно у нас есть вакансия и именно вы
-                        нужны нам. Тогда наш менеджер по персоналу обязательно перезвонит вам.
+                    <p class="adress">
+                        Юридический адрес: Россия, г. Самара,
+                        ул. Ново-Садовая 44, офис 321
+                    </p>
+                    <p class="phone-number">
+                        Телефон для связи: <span><a href="tel:+78007006301"><b>8 (800) 700 63 01</b></a></span>
+                        (с 08:00-20:00 каждый день)
                     </p>
                 </div>
             </div>
         </div>
+        <div class="job job--mobile">
+            <div class="container">
+                <div class="heading">job@63pokupki.ru</div>
+                <p class="text">Если вы компетентны в области разработки сайтов, маркетинге, бухгалтерском учете, работе
+                    с поставщиками, управлении проектами и хотите работать в нашей компании, то высылайте свое резюме на
+                    указанную почту.
+                    <br><br>
+                    Возможно у нас есть вакансия и именно вы
+                    нужны нам. Тогда наш менеджер по персоналу обязательно перезвонит вам.
+                </p>
+            </div>
+        </div>
+
+        <div class="job job--desctop">
+            <div class="centered-container container">
+                <p class="text">Если вы компетентны в области разработки сайтов, маркетинге, бухгалтерском учете, работе
+                    с поставщиками, управлении проектами и хотите работать в нашей компании, то высылайте свое резюме на
+                    <span>job@63pokupki.ru</span>
+                    Возможно у нас есть вакансия и именно вы
+                    нужны нам. Тогда наш менеджер по персоналу обязательно перезвонит вам.
+                </p>
+            </div>
+        </div>
+    </div>
     <!-- <script>
         var dropdown = document.querySelector(".topic-list-dropdown");
         dropdown.addEventListener("click", function (e) {
@@ -2139,6 +2225,7 @@
                 }
             });
     </script> -->
-    
+
 </body>
+
 </html>
