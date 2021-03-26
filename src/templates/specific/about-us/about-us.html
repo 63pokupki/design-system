@@ -1,9 +1,5 @@
 <!-- Страница находится в PHP админке. 
-    1. Войти под администратором на десятый сервер
-    2. Перейти по ссылке https://devsrv10.dev.63pokupki.ru/forum/phpBB3/adm/index.php?i=-phpbb-pages-acp-pages_module&mode=manage&action=edit&page_id=35
-    3. Скопировать содержимое страницы в редактор кода
-    4. Внести правки
-    5. Заменить содержимое в админке
+   Макет https://www.figma.com/file/0VrR1011WyY0BVqt3FNFVi/%D0%BE-%D0%BD%D0%B0%D1%81-26.03.21?node-id=230%3A622
 -->
 
 <!DOCTYPE html>
@@ -390,7 +386,7 @@
         .about-us .hero-image {
             width: 100%;
             height: 542px;
-            background: url(/main_frontend/src/spsilver/images/hero-image-tablet.jpg) no-repeat 50%;
+            background: url("https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/about-us__hero-img-tablet.png") no-repeat 50%;
         }
     
         .about-us .hero-image .hero-text {
@@ -426,9 +422,7 @@
         }
     
         .about-us .statistics {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
+            
             background: -webkit-gradient(linear, left top, left bottom, color-stop(39.24%, #36A6F2), to(#0087E2));
             background: -webkit-linear-gradient(top, #36A6F2 39.24%, #0087E2 100%);
             background: -o-linear-gradient(top, #36A6F2 39.24%, #0087E2 100%);
@@ -443,16 +437,69 @@
             align-items: stretch;
             -ms-flex-wrap: wrap;
             flex-wrap: wrap;
-            margin: 0 -1px;
+            /* margin: 0 -1px; */
+            margin: 0;
         }
+        .statistics_desk {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            flex-direction: row;
+        }
+        .statistics_mobile {
+            display: none;
+        }
+        .statistic-block-wrapper {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        @media (max-width: 1183px) {
+            .statistics_desk {
+                display: none;
+            }
+
+            .statistics_tab {
+                display: flex;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .statistics_mobile {
+                display: flex;
+            }
+            .statistics_tab {
+                display: none;
+            }
+
+            .about-us .statistics .statistic-block {
+                width: 100%;
+            }
+
+        }
+
+        @media (min-width: 1184px) {
+            .statistics_tab {
+                display: none;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .about-us .statistics .statistic-block {
+                width: 33.3333333333%;
+            }
+
+        }
+
     
         .about-us .statistics .statistic-block {
             background-color: transparent;
             padding: 12px 0;
-            border: 2px solid #57b4f3;
-            margin: -1px;
+            border: 1px solid #57b4f3;
+            margin: 0px;
             width: 50%;
         }
+
     
         .about-us .statistics .statistic-block.users {
             -webkit-box-ordinal-group: 2;
@@ -568,8 +615,8 @@
             max-width: 286px;
         }
     
-        .about-us .registration .buttons .member,
-        .about-us .registration .buttons .provider {
+        .about-us .registration .member,
+        .about-us .registration .provider {
             cursor: pointer;
             text-align: center;
             max-width: 286px;
@@ -585,13 +632,14 @@
             -ms-flex-align: start;
             align-items: flex-start;
             text-align: center;
-            padding: 2px 6px 3px;
+            padding: 9px 6px 3px;
             border-width: unset;
             border-style: unset;
             border-color: unset;
             -webkit-border-image: unset;
             -o-border-image: unset;
             border-image: unset;
+            text-decoration: none;
         }
     
         .about-us .registration .buttons .member {
@@ -714,7 +762,6 @@
         border: 3px solid #254F8C;
         }
 
-        @media (max-width: 768px) {
         .about-us__video-player-heading {
             font-size: 22px;
         }
@@ -740,7 +787,10 @@
         .about-us__video::after {
             display: none;
         }
+        .about-us .join-us .icon { 
+            max-width: 30px;
         }
+        
         @media (max-width: 568px) {
             .about-us__video-player-heading {
             margin: 20px 0 30px 0;
@@ -989,11 +1039,7 @@
             .about-us .statistics .text-normal {
                 font-size: 14px;
             }
-    
-            .about-us .statistics .statistic-block {
-                width: 33.3333333333%;
-            }
-    
+        
             .about-us .statistics .statistic-block.users,
             .about-us .statistics .statistic-block.providers,
             .about-us .statistics .statistic-block.orders,
@@ -1036,15 +1082,27 @@
             }
         }
     
-    @media (min-width: 568px),
-        (min-width: 568px) and (orientation: landscape) {
-    .hero-image {
-    display: none;
-    }
+    @media (min-width: 768px),
+        (min-width: 768px) and (orientation: landscape) {
+        .hero-image {
+        display: none;
+        }
+
+        .show-on-600_mobile {
+            display: none;
+        }
+
     
-    .show-on-600 {
-    display: block;
+        .show-on-600 {
+        display: block;
+        }
     }
+
+    @media (max-width: 767px) {
+        .show-on-600_mobile {
+            display: block;
+        }
+
     }
     
         @media (max-width: 768px),
@@ -1125,7 +1183,7 @@
     
             .about-us .registration .buttons .provider,
             .about-us .registration .buttons .member {
-                height: 42px;
+                height: 32px;
                 background-color: transparent;
                 border: 1px solid #318CCA;
                 color: #318CCA;
@@ -1675,12 +1733,17 @@
     
     <div class="about-us">
             <div class="centered-container">
-                <div class="hero-image">
-                </div>
-    <img class="show-on-600" src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/hero-image-large1.jpg" style="
+                <!-- <div class="hero-image">
+                </div> -->
+    <img class="show-on-600" src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/about-us__hero-img-desk.png" style="
         width: 100%;
     ">
-                <div class="statistics">
+        <img class="show-on-600_mobile" src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/about-us__hero-img-tablet.png" style="
+        width: 100%;
+    ">
+
+                <!-- statistic desktop -->
+                <div class="statistics statistics_desk">
                     <div class="statistic-block users">
                         <div class="text-bold">257 тыс.</div>
                         <div class="text-normal">пользователей сайта</div>
@@ -1706,6 +1769,68 @@
                         <div class="text-normal">пунктов выдачи по всей России</div>
                     </div>
                 </div>
+
+                <!-- statistic tab -->
+
+                <div class="statistics statistics_tab">
+                    <div class="statistic-block-wrapper">
+                        <div class="statistic-block users">
+                            <div class="text-bold">257 тыс.</div>
+                            <div class="text-normal">пользователей сайта</div>
+                        </div>
+                        <div class="statistic-block providers">
+                            <div class="text-bold">7 тыс.</div>
+                            <div class="text-normal">поставщиков</div>
+                        </div>
+                    </div>
+                    <div class="statistic-block-wrapper">
+                        <div class="statistic-block orders">
+                            <div class="text-bold">>140 тыс.</div>
+                            <div class="text-normal">заказов в месяц</div>
+                        </div>
+                        <div class="statistic-block visits">
+                            <div class="text-bold">>2 млн</div>
+                            <div class="text-normal">посещений в месяц</div>
+                        </div>
+                    </div>
+                    <div class="statistic-block-wrapper">
+                        <div class="statistic-block items">
+                            <div class="text-bold">2.4 млн</div>
+                            <div class="text-normal">товаров</div>
+                        </div>
+                        <div class="statistic-block issue-points">
+                            <div class="text-bold">300</div>
+                            <div class="text-normal">пунктов выдачи по всей России</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- mobile statistic -->
+                <div class="statistics statistics_mobile">
+                    <div class="statistic-block-wrapper">
+                        <div class="statistic-block users">
+                            <div class="text-bold">257 тыс.</div>
+                            <div class="text-normal">пользователей сайта</div>
+                        </div>
+                        <div class="statistic-block visits">
+                            <div class="text-bold">>2 млн</div>
+                            <div class="text-normal">посещений в месяц</div>
+                        </div>
+    
+                    </div>
+                    <div class="statistic-block-wrapper">
+                        <div class="statistic-block orders">
+                            <div class="text-bold">>140 тыс.</div>
+                            <div class="text-normal">заказов в месяц</div>
+                        </div>
+                        <div class="statistic-block items">
+                            <div class="text-bold">2.4 млн</div>
+                            <div class="text-normal">товаров</div>
+                        </div>    
+                    </div>
+                </div>
+
             </div>
             <div class="container">
                 <article id="about-company">
@@ -1765,8 +1890,8 @@
                         Все возникшие вопросы вы также можете задать по телефону: <b><a style="color: black; text-decoration: none;" href="tel:+78007006301">8 (800) 700-63-01</a></b>
                     </p>
                     <div class="buttons">
-                        <a href="https://63pokupki.ru/forum/phpBB3/ucp.php?mode=register&agreed=true"><button class="member">Я участник</button></a>
-                        <a href="https://63pokupki.ru/forum/phpBB3/viewtopic.php?f=124&t=202794"><button class="provider">Я поставщик</button></a>
+                        <a class="member" href="https://63pokupki.ru/forum/phpBB3/ucp.php?mode=register&agreed=true">Я участник</a>
+                        <a class="provider" href="https://63pokupki.ru/forum/phpBB3/viewtopic.php?f=124&t=202794">Я поставщик</a>
                     </div>
                 </div>
             </div>
@@ -1942,6 +2067,8 @@
                     <a href="https://vk.com/63pokupki"><img class="icon icon-vk" src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/about-us-icon-vk.svg" alt="" srcset=""></a>
                     <a href="https://www.instagram.com/63pokupki.ru/"><img class="icon icon-inst" src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/about-us-icon-instagram.svg" alt="" srcset=""></a>
                     <a href="https://ok.ru/group63pokupki"><img class="icon icon-ok" src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/about-us-icon-ok.svg" alt="" srcset=""></a>
+                    <a href="https://invite.viber.com/?g2=AQAFp66898%2Fk%2Bkx32C6tpavFlXMi5KjeI6L5re3LuO2qsCSDH8759aNMAsP%2BkZps"><img class="icon icon-viber" src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/social-icon/about-us__viber.svg" alt="" srcset=""></a>
+                    <a href="https://t.me/sp63pokupki"><img class="icon icon-tg" src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/social-icon/about-us__telegram.svg" alt="" srcset=""></a>                    
                 </div>
             </div>
             <div style="background-color: rgb(110,124,134);">
@@ -1986,7 +2113,7 @@
                 </div>
             </div>
         </div>
-    <script>
+    <!-- <script>
         var dropdown = document.querySelector(".topic-list-dropdown");
         dropdown.addEventListener("click", function (e) {
             dropdown.classList.toggle("expanded");
@@ -2011,7 +2138,7 @@
                     }
                 }
             });
-    </script>
+    </script> -->
     
 </body>
 </html>
