@@ -61,25 +61,49 @@
             </div>
         </div>
         <div
-            v-if="hints && isHintsOpen && categories.current"
+            v-if="isHintsOpen && categories.current"
             class="spui-InputSearchWithHints__hints"
         >
-            <div
-                v-for="(hint, i) in hints"
-                :key="i"
-                class="spui-InputSearchWithHints__hint"
-                :class="{ focus: focusIndex == i }"
-                @click="() => onHintClick(hint)"
-            >
-                <!-- eslint-disable vue/no-v-html -->
-                <span
-                    class="spui-InputSearchWithHints__text"
-                    v-html="highlight(hint)"
-                />
-                <span class="spui-InputSearchWithHints__count">{{
-                    getHintCount(hint)
-                }}</span>
-            </div>
+            <template v-if="hints && hints.length > 0">
+                <div class="spui-InputSearchWithHints__divider">
+                    Товары
+                </div>
+                <div
+                    v-for="(hint, i) in hints"
+                    :key="i"
+                    class="spui-InputSearchWithHints__hint"
+                    :class="{ focus: isEqual(hint, focusElement) }"
+                    @click="() => onHintClick(hint)"
+                >
+                    <!-- eslint-disable vue/no-v-html -->
+                    <span
+                        class="spui-InputSearchWithHints__text"
+                        v-html="highlight(hint)"
+                    />
+                    <span class="spui-InputSearchWithHints__count">{{
+                        getHintCount(hint)
+                    }}</span>
+                </div>
+            </template>
+
+            <template v-if="brands && brands.length > 0">
+                <div class="spui-InputSearchWithHints__divider">
+                    Бренды
+                </div>
+                <div
+                    v-for="brand in brands"
+                    :key="getBrandUniqKey(brand)"
+                    class="spui-InputSearchWithHints__hint"
+                    :class="{ focus: isEqual(brand, focusElement) }"
+                    @click="() => onBrandClick(brand)"
+                >
+                    <!-- eslint-disable vue/no-v-html -->
+                    <span
+                        class="spui-InputSearchWithHints__text"
+                        v-html="highlightBrand(brand)"
+                    />
+                </div>
+            </template>
         </div>
     </div>
 </template>
@@ -87,6 +111,7 @@
 <script>
 import { clickOutside } from '@/directives';
 import uuid from 'short-uuid';
+import isEqual from 'lodash-es/isEqual';
 
 export default {
     name: 'InputSearchWithHints',
@@ -110,6 +135,10 @@ export default {
             type: Array,
             default: () => [],
         },
+        brands: {
+            type: Array,
+            default: () => [],
+        },
         fnHintLabel: {
             type: Function,
             default: (hint) => hint.label,
@@ -118,6 +147,8 @@ export default {
             type: Function,
             default: (hint) => hint.count,
         },
+        fnBrandLabel: { type: Function, default: (brand) => brand.label },
+        fnBrandUniqKey: { type: Function, default: (brand) => brand.id },
     },
     data() {
         return {
@@ -131,8 +162,17 @@ export default {
         };
     },
     computed: {
+        totalElements() {
+            const { hints, brands } = this;
+
+            let total = [];
+            if (hints && hints.length > 0) total = [...total, ...hints];
+            if (brands && brands.length > 0) total = [...total, ...brands];
+
+            return total;
+        },
         focusElement() {
-            return this.hints[this.focusIndex];
+            return this.totalElements[this.focusIndex];
         },
         _model: {
             get() {
@@ -152,6 +192,7 @@ export default {
         this.uuid = uuid.generate();
     },
     methods: {
+        isEqual,
         /** Событие смены состояния показа выбора категорий поиска - товары/форум */
         emitCategoryOpenState(value) {
             this.$emit('category-open-change', value);
@@ -175,30 +216,47 @@ export default {
 
             return hl;
         },
-        /** Функция получающая label для подсказки */
+        highlightBrand(brand) {
+            const raw = this.getBrandLabel(brand).toLowerCase();
+            const search = this._model.toLowerCase();
+
+            const hl = raw.replace(
+                search,
+                "<span style='font-weight: bold; color: #36a6f2;'>$&</span>",
+            );
+
+            return hl;
+        },
         getHintLabel(hint) {
-            if (
-                hint &&
-                this.fnHintLabel &&
-                typeof this.fnHintLabel === 'function'
-            ) {
+            if (hint && this.isFunction(this.fnHintLabel)) {
                 return this.fnHintLabel(hint);
             }
-            return hint.label;
+            return hint.label || '...';
         },
-        /** Функция получающая count для подсказки */
         getHintCount(hint) {
-            if (
-                hint &&
-                this.fnHintCount &&
-                typeof this.fnHintCount === 'function'
-            ) {
+            if (hint && this.isFunction(this.fnHintCount)) {
                 return this.fnHintCount(hint);
             }
-            return hint.count;
+            return hint.count || '...';
+        },
+        getBrandLabel(brand) {
+            if (brand && this.isFunction(this.fnBrandLabel)) {
+                return this.fnBrandLabel(brand);
+            }
+            return brand.label || '...';
+        },
+        getBrandUniqKey(brand) {
+            if (brand && this.isFunction(this.fnBrandUniqKey)) {
+                return this.fnBrandUniqKey(brand);
+            }
+            return brand.id || uuid.generate();
         },
         onHintClick(hint) {
             this.$emit('hint-click', hint);
+            this.emitHintsOpenState(false);
+        },
+        onBrandClick(brand) {
+            this.$emit('brand-click', brand);
             this.emitHintsOpenState(false);
         },
         onCategoryClick() {
@@ -210,7 +268,10 @@ export default {
         },
         onSearch() {
             if (this.focusIndex >= 0 && this.focusElement) {
-                this._model = this.getHintLabel(this.focusElement);
+                const label =
+                    this.getHintLabel(this.focusElement) ||
+                    this.getBrandLabel(this.focusElement);
+                this._model = label;
             }
             this.$emit('search', {
                 value: this._model,
@@ -219,7 +280,7 @@ export default {
         },
         onFocusIndexUp() {
             if (
-                this.hints.length > 0 &&
+                this.totalElements.length > 0 &&
                 this.isHintsOpen &&
                 this.focusIndex > 0
             ) {
@@ -228,12 +289,15 @@ export default {
         },
         onFocusIndexDown() {
             if (
-                this.hints.length > 0 &&
+                this.totalElements.length > 0 &&
                 this.isHintsOpen &&
-                this.focusIndex < this.hints.length - 1
+                this.focusIndex < this.totalElements.length - 1
             ) {
                 this.focusIndex += 1;
             }
+        },
+        isFunction(value) {
+            return Boolean(value && typeof value === 'function');
         },
     },
 };
