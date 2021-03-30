@@ -67,6 +67,14 @@ $spui-InputSearchWithHints_z3: $spui-InputSearchWithHints_z2 + 1;
         transform: translateY(100%);
     }
 
+    &__divider {
+        padding: 0 20px;
+        font-size: 12px;
+        line-height: 24px;
+        font-weight: 600;
+        color: #484848;
+    }
+
     &__text {
         white-space: nowrap;
         overflow: hidden;
@@ -144,7 +152,7 @@ $spui-InputSearchWithHints_z3: $spui-InputSearchWithHints_z2 + 1;
 
         &::before {
             position: absolute;
-            content: "";
+            content: '';
             width: 0;
             height: 0;
             left: -13px;
