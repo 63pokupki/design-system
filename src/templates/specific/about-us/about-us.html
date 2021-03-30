@@ -261,8 +261,8 @@
             height: 20px;
             width: 20px;
             outline: none;
-            line-height: 0px;
-            font-size: 0px;
+            line-height: 0 px;
+            font-size: 0 px;
             color: transparent;
             padding: 5px;
             cursor: pointer;
@@ -699,7 +699,7 @@
             max-height: 120px;
             background-color: #36A6F2;
             position: absolute;
-            top: calc(50%-60px);
+            top: calc(50% - 60px);
         }
 
         .about-us__video-container {
@@ -813,17 +813,17 @@
 
             .about-us__video {
                 max-height: 100%;
-                padding: 15% 0;
+                padding: 15% 12px;
             }
+
             .about-us__video::after {
                 display: none;
             }
+
             .about-us .join-us .icon {
                 max-width: 30px;
             }
-
         }
-
 
         @media (max-width: 568px) {
             .about-us__video-player-heading {
@@ -1003,8 +1003,96 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
-        @media (min-width: 479px),
-        (min-width: 479px) and (orientation: landscape) {
+        /* Slider styles */
+        .slider {
+            height: 100%;
+            min-height: 395px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: flex-end;
+            justify-content: center;
+            background: none;
+        }
+
+        .slider__nav {
+            width: 12px;
+            height: 12px;
+            margin: 1rem 12px;
+            border-radius: 50%;
+            z-index: 10;
+            outline: calc(12px / 2) solid #ccc;
+            outline-offset: calc(12px / -2);
+            box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(#333, 0);
+            cursor: pointer;
+            appearance: none;
+            backface-visibility: hidden; 
+        }
+
+        .slider__nav:checked {
+            animation: check 0.5s linear forwards; 
+        }
+
+        .slider__inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            /* width: calc(100% * 5); */
+            height: 100%;
+            transition: all 1s ease-out;
+            display: flex;
+            flex-flow: row nowrap;
+	    }
+	
+        .slider__contents {
+            height: 100%;
+            padding: 2rem;
+            text-align: center;
+            display: none;
+            flex: 1;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slider__contents.visible {
+            display: flex;
+        }
+	
+        .slider__image {
+            font-size: 2.7rem;
+        }
+
+        .slider__caption {
+            font-weight: 700;
+            margin: 2rem 0 1rem;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+            text-transform: uppercase;
+        }
+
+        .slider__txt {
+            color: #999;
+            margin-bottom: 3rem;
+            max-width: 300px;
+        }
+
+        @keyframes check {
+            50% {
+                outline-color: #333;
+                box-shadow: 0 0 0 12px #333, 0 0 0 12px * 3 rgba(#333, 0.2);
+            }
+
+            100% {
+                outline-color: #333;
+                box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(#333, 0);
+            }
+        }
+
+        /* end slider styles */
+
+        @media (min-width: 479px), (min-width: 479px) and (orientation: landscape) {
             .about-us .registration {
                 text-align: center;
             }
@@ -1979,61 +2067,86 @@
             <div class="heading">Наша история</div>
             <!-- mobile -->
             <div class="lines-medium">
-                <div class="card card-1">
-                    <div class="image">
-                        <img src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/our-history-2009.jpg"
-                            alt="" srcset="">
+
+                <div class="slider">
+                    <input class="slider__nav" type="radio" name="slider" title="slide1" checked="checked"/>
+                    <input class="slider__nav" type="radio" name="slider" title="slide2"/>
+                    <input class="slider__nav" type="radio" name="slider" title="slide3"/>
+                    <input class="slider__nav" type="radio" name="slider" title="slide4"/>
+                    <input class="slider__nav" type="radio" name="slider" title="slide5"/>
+                    <div class="slider__inner">
+                        <!-- Slide-1 -->
+                      <div class="slider__contents visible"  >
+                        <div class="card card-1">
+                            <div class="image">
+                                <img src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/our-history-2009.jpg"
+                                    alt="" srcset="">
+                            </div>
+                            <div class="text">
+                                <div class="year">2009 г.</div>
+                                Основательница проекта - Ольга Пешкичева, будучи в декрете, впервые организовала на своем сайте
+                                совместную закупку товаров напрямую
+                                от производителей по оптовым ценам. Это были, конечно же, детские товары.
+                            </div>
+                        </div>        
+                      </div>
+                      <!-- Slide-2 -->
+                      <div class="slider__contents">
+                        <div class="card card-2">
+                            <div class="image">
+                                <img src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/our-history-2010.jpg"
+                                    alt="" srcset="">
+                            </div>
+                            <div class="text">
+                                <div class="year">2010 г.</div>
+                                Уже появился первый склад, сформировался пул постоянных партнеров.
+                            </div>
+                        </div>        
+                      </div>
+                      <!-- Slider-3 -->
+                      <div class="slider__contents">
+                        <div class="card card-3">
+                            <div class="image">
+                                <img src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/our-history-2012.jpg.jpg"
+                                    alt="" srcset="">
+                            </div>
+                            <div class="text">
+                                <div class="year">2012 г.</div>
+                                Открылись первые пункты выдачи заказов сайта
+                                “63pokupki”. Теперь участники могли забрать свою покупку в удобном для них пункте в рамках его
+                                графика работы.
+                            </div>
+                        </div>        
+                      </div>
+                      <!-- Slider-4 -->
+                      <div class="slider__contents">
+                        <div class="card card-4">
+                            <div class="image">
+                                <img src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/our-history-2016.svg"
+                                    alt="" srcset="">
+                            </div>
+                            <div class="text">
+                                <div class="year">2016 г.</div>
+                                Существенно расширилась сеть пунктов выдачи по всей России.
+                            </div>
+                        </div>        
+                      </div>
+                      <div class="slider__contents">
+                        <!-- Slier-5 -->
+                        <div class="card card-5">
+                            <div class="image">
+                                <img src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/our-history-2017.jpg"
+                                    alt="" srcset="">
+                            </div>
+                            <div class="text">
+                                <div class="year">2017 г.</div>
+                                Количество зарегистрированных пользователей превысило
+                                200 тыс. человек
+                            </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="text">
-                        <div class="year">2009 г.</div>
-                        Основательница проекта - Ольга Пешкичева, будучи в декрете, впервые организовала на своем сайте
-                        совместную закупку товаров напрямую
-                        от производителей по оптовым ценам. Это были, конечно же, детские товары.
-                    </div>
-                </div>
-                <div class="card card-2">
-                    <div class="image">
-                        <img src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/our-history-2010.jpg"
-                            alt="" srcset="">
-                    </div>
-                    <div class="text">
-                        <div class="year">2010 г.</div>
-                        Уже появился первый склад, сформировался пул постоянных партнеров.
-                    </div>
-                </div>
-                <div class="card card-3">
-                    <div class="image">
-                        <img src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/our-history-2012.jpg.jpg"
-                            alt="" srcset="">
-                    </div>
-                    <div class="text">
-                        <div class="year">2012 г.</div>
-                        Открылись первые пункты выдачи заказов сайта
-                        “63pokupki”. Теперь участники могли забрать свою покупку в удобном для них пункте в рамках его
-                        графика работы.
-                    </div>
-                </div>
-                <div class="card card-4">
-                    <div class="image">
-                        <img src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/our-history-2016.svg"
-                            alt="" srcset="">
-                    </div>
-                    <div class="text">
-                        <div class="year">2016 г.</div>
-                        Существенно расширилась сеть пунктов выдачи по всей России.
-                    </div>
-                </div>
-                <div class="card card-5">
-                    <div class="image">
-                        <img src="https://63pokupkifiles.fra1.cdn.digitaloceanspaces.com/about-us__photo/our-history-2017.jpg"
-                            alt="" srcset="">
-                    </div>
-                    <div class="text">
-                        <div class="year">2017 г.</div>
-                        Количество зарегистрированных пользователей превысило
-                        200 тыс. человек
-                    </div>
-                </div>
+                  </div>
             </div>
 
             <!-- Desktop -->
@@ -2225,6 +2338,29 @@
                 }
             });
     </script> -->
+
+    <script>
+        let linesMedium = document.querySelector(".lines-medium");
+
+        if (linesMedium) {
+            let btn         = linesMedium.querySelectorAll(".slider__nav"),
+                slider_item = linesMedium.querySelectorAll(".slider__contents");
+            
+            btn.forEach((b, i) => {
+                b.addEventListener('click', () => {
+
+                    slider_item.forEach((si, o) => {
+                        if (si.classList.contains("visible") && i !== o) {
+                            si.classList.remove("visible")
+                        } else if (i === o && !si.classList.contains("visible")) {
+                            si.classList.add("visible");
+                        }
+                    })
+                })
+            })    
+
+        }
+    </script>
 
 </body>
 
