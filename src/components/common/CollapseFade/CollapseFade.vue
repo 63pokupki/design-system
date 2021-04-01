@@ -28,6 +28,10 @@ export default {
             type: Object,
             default: () => {},
         },
+        rawHtmlData: {
+            type: String,
+            default: '',
+        },
     },
     render(h, { data, props, listeners, slots }) {
         const slot = slots().default;
@@ -37,6 +41,12 @@ export default {
         };
 
         const maxHeight = props.open ? 'initial' : props.minHeightOnHide;
+        const unsafeRawHtmData = props.rawHtmlData;
+        const safeRawHtmlData =
+            unsafeRawHtmData &&
+            unsafeRawHtmData.search(/<*\/*script>*/gim) === -1
+                ? unsafeRawHtmData
+                : '';
 
         return (
             <div
@@ -59,15 +69,26 @@ export default {
                         class="spui-CollapseFade__arrow ds-icon icon-arrow-down"
                     ></i>
                 </div>
-                <div
-                    style={{
-                        ...props.bodyStyleObject,
-                        'max-height': maxHeight,
-                    }}
-                    class="spui-CollapseFade__body"
-                >
-                    {slot}
-                </div>
+                {safeRawHtmlData ? (
+                    <div
+                        domPropsInnerHTML={safeRawHtmlData}
+                        style={{
+                            ...props.bodyStyleObject,
+                            'max-height': maxHeight,
+                        }}
+                        class="spui-CollapseFade__body"
+                    ></div>
+                ) : (
+                    <div
+                        style={{
+                            ...props.bodyStyleObject,
+                            'max-height': maxHeight,
+                        }}
+                        class="spui-CollapseFade__body"
+                    >
+                        {slot}
+                    </div>
+                )}
             </div>
         );
     },
