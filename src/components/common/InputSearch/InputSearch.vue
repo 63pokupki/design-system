@@ -1,6 +1,4 @@
 <script>
-import uuid from 'short-uuid';
-
 const searchImg = require('@/images/important_images/search.svg');
 
 export default {
@@ -46,7 +44,6 @@ export default {
         const inputStyle = props.inputStyle || {};
         const buttonStyle = props.buttonStyle || {};
         const size = props.size || 'sm';
-        const uniqUuid = uuid.generate();
         const isSearchBtnVisible = Boolean(props.isSearchBtnVisible);
         const isClearBtnVisible = Boolean(props.isClearBtnVisible);
         const paddingRightCoefficient =
@@ -97,7 +94,7 @@ export default {
                     data.staticClass,
                 ]}
             >
-                <label for={uniqUuid}>
+                <label>
                     <input
                         style={inputStyle}
                         onKeyup={onKeyUpSearch}
@@ -106,13 +103,13 @@ export default {
                         class="spui-InputSearch__input"
                         type="text"
                         placeholder={placeholder}
-                        id={uniqUuid}
                     />
                 </label>
                 {isButtonsExist && (
                     <div class="spui-InputSearch__btns">
                         {isSearchBtnVisible && (
                             <button
+                                type="button"
                                 aria-label="Поиск"
                                 style={buttonStyle}
                                 onClick={onSearch}
@@ -127,6 +124,7 @@ export default {
                         )}
                         {isClearBtnVisible && (
                             <button
+                                type="button"
                                 aria-label="Очистить"
                                 style={buttonStyle}
                                 onClick={onClear}
