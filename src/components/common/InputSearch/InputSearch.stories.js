@@ -28,6 +28,31 @@ export const standart = () => ({
     `,
 });
 
+export const sizeLarge = () => ({
+    components: { InputSearch },
+    data() {
+        return {
+            value: '',
+            placeholder: 'Поиск по параметрам',
+        };
+    },
+    methods: {
+        /* eslint no-alert: "off" */
+        onSearch(value) {
+            alert(value);
+        },
+        /* eslint no-alert: "off" */
+        onClear() {
+            alert('Очистка');
+        },
+    },
+    template: `
+    <div>
+       <InputSearch :is-clear-btn-visible="true" size="lg" v-model="value" @onSearch="onSearch" @onClear="onClear" :placeholder="placeholder"></InputSearch>
+    </div>
+    `,
+});
+
 export const noSearchBtn = () => ({
     components: { InputSearch },
     data() {
