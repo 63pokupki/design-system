@@ -48,7 +48,7 @@ export const sizeLarge = () => ({
     },
     template: `
     <div>
-       <InputSearch :is-clear-btn-visible="true" size="lg" v-model="value" @onSearch="onSearch" @onClear="onClear" :placeholder="placeholder"></InputSearch>
+       <InputSearch :is-clear-btn-visible="true" size="lg" v-model="value" @on-search="onSearch" @on-clear="onClear" :placeholder="placeholder"></InputSearch>
     </div>
     `,
 });

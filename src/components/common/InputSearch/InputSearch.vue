@@ -54,15 +54,18 @@ export default {
 
         const isButtonsExist = isSearchBtnVisible || isClearBtnVisible;
 
+        const onSearchHandler = listeners.onSearch || listeners['on-search'];
+        const onClearHandler = listeners.onClear || listeners['on-clear'];
+
         const onSearch = () => {
-            if (listeners.onSearch) {
-                listeners.onSearch(value);
+            if (onSearchHandler) {
+                onSearchHandler(value);
             }
         };
 
         const onClear = () => {
-            if (listeners.onClear) {
-                listeners.onClear();
+            if (onClearHandler) {
+                onClearHandler();
             }
         };
 
