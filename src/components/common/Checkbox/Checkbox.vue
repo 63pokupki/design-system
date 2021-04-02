@@ -1,6 +1,5 @@
 <template>
     <label
-        :for="uniqid"
         class="spui-Checkbox"
         :class="[
             _position,
@@ -14,7 +13,6 @@
         ]"
     >
         <input
-            :id="uniqid"
             v-model="_model"
             :value="val"
             class="spui-Checkbox__input"
@@ -42,7 +40,7 @@
 </template>
 
 <script>
-import uuid from 'short-uuid';
+import isEqual from 'lodash-es/isEqual';
 
 export default {
     name: 'Checkbox',
@@ -56,12 +54,6 @@ export default {
         val: {
             type: [Array, Object, String, Boolean, Number],
             default: 'Значение не передано',
-        },
-        /** Уникальный id элемента в пределах страницы,
-         * при отсутствии генерируется */
-        id: {
-            type: String,
-            default: '',
         },
         /** Отображать только текст без галочки */
         onlyText: {
@@ -103,7 +95,6 @@ export default {
     data() {
         return {
             base: 'spui-Checkbox',
-            uniqid: null,
         };
     },
     computed: {
@@ -132,7 +123,7 @@ export default {
             const value = this.val;
 
             if (Array.isArray(model)) {
-                return model.includes(value);
+                return model.some((val) => isEqual(val, value));
             }
             return model;
         },
@@ -160,14 +151,6 @@ export default {
         _type() {
             return `${this.base}_${this.type}`;
         },
-    },
-    /** Генерация uuid */
-    beforeMount() {
-        if (this.id) {
-            this.uniqid = this.id;
-        } else {
-            this.uniqid = uuid.generate();
-        }
     },
 };
 </script>

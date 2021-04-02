@@ -11,11 +11,13 @@
                 class="spui-DropdownTooltipWithSelect__heading"
             >{{ _heading }}:</span>
             <span
-                v-if="_value"
+                v-if="_value && !multiple"
                 class="spui-DropdownTooltipWithSelect__value"
-            >{{
-                getLabel(_value)
-            }}</span>
+            >{{ getLabel(_value) }}</span>
+            <span
+                v-if="_value && multiple"
+                class="spui-DropdownTooltipWithSelect__value"
+            >{{ getLabelForMultiple(_value) }}</span>
             <i
                 class="spui-DropdownTooltipWithSelect__arrow ds-icon icon-rectangle"
             />
@@ -25,14 +27,31 @@
             v-if="open"
             :forced="true"
         >
-            <div
-                v-for="(val, i) in values"
-                :key="i"
-                class="spui-DropdownTooltipWithSelect__val"
-                @click="() => onSelectValue(val)"
-            >
-                {{ getLabel(val) }}
-            </div>
+            <template v-if="!multiple">
+                <div
+                    v-for="(val, i) in values"
+                    :key="i"
+                    class="spui-DropdownTooltipWithSelect__val"
+                    @click="() => onSelectValue(val)"
+                >
+                    {{ getLabel(val) }}
+                </div>
+            </template>
+            <template v-if="multiple">
+                <Checkbox
+                    v-for="(val, i) in values"
+                    :key="i"
+                    v-model="_value"
+                    :val="val"
+                    type="primary"
+                    class="spui-DropdownTooltipWithSelect__val spui-DropdownTooltipWithSelect__multiple"
+                >{{ getLabel(val) }}</Checkbox>
+                <Button
+                    class="spui-DropdownTooltipWithSelect__apply"
+                    block
+                    @click="onApplyMultipleChoise"
+                >Применить</Button>
+            </template>
         </Tooltip>
     </span>
 </template>
@@ -41,11 +60,15 @@
 import { clickOutside } from '@/directives';
 import { capitalize } from '@/helpers';
 import Tooltip from '../Tooltip/Tooltip.vue';
+import Checkbox from '../Checkbox/Checkbox.vue';
+import Button from '../Button/Button.vue';
 
 export default {
     name: 'DropdownTooltipWithSelect',
     components: {
         Tooltip,
+        Checkbox,
+        Button,
     },
     directives: {
         'click-outside': clickOutside,
@@ -57,7 +80,7 @@ export default {
             default: 'Название не передано',
         },
         value: {
-            type: Object,
+            type: [Object, Array],
             required: true,
         },
         label: {
@@ -69,11 +92,16 @@ export default {
             required: true,
             default: () => [],
         },
+        multiple: {
+            type: Boolean,
+            default: false,
+        },
     },
     data() {
         return {
             base: 'spui-DropdownTooltipWithSelect',
             open: false,
+            multipleValue: [],
         };
     },
     computed: {
@@ -105,8 +133,13 @@ export default {
         },
         getLabel(value) {
             if (!value || !this.label || typeof this.label !== 'function') return null;
-
             return this.label(value);
+        },
+        getLabelForMultiple(values) {
+            return values.map((value) => this.getLabel(value)).join(', ');
+        },
+        onApplyMultipleChoise() {
+            this.$emit('onApplyMultipleChoise', this._value);
         },
     },
 };
