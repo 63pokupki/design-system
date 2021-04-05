@@ -4,7 +4,7 @@ $spui-DropdownTooltipWithSelect-font-weight: 600;
 $spui-DropdownTooltipWithSelect-color: #606266;
 $spui-DropdownTooltipWithSelect-colorOnHover: #36a5f2;
 $spui-DropdownTooltipWithSelect-colorOnActive: $spui-DropdownTooltipWithSelect-colorOnHover;
-$spui-DropdownTooltipWithSelect-row-spacing: 4px;
+$spui-DropdownTooltipWithSelect-row-spacing: 5px;
 $spui-DropdownTooltipWithSelect-values-spacing: 3px;
 $spui-DropdownTooltipWithSelect-arrow-size: 8px;
 
@@ -32,7 +32,7 @@ $spui-DropdownTooltipWithSelect-arrow-size: 8px;
     }
 
     &__heading {
-        line-height: 17px;
+        min-height: 18px;
         flex-shrink: 0;
         margin-right: $spui-DropdownTooltipWithSelect-row-spacing;
     }
@@ -44,12 +44,13 @@ $spui-DropdownTooltipWithSelect-arrow-size: 8px;
         text-overflow: ellipsis;
         max-width: 140px;
         white-space: nowrap;
+        min-height: 18px;
     }
 
     &__arrow {
         font-size: $spui-DropdownTooltipWithSelect-arrow-size;
         display: inline-flex;
-        margin-bottom: 1px;
+        margin-bottom: 2px;
     }
 
     &__val {
