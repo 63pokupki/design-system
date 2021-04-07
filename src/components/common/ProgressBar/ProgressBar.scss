@@ -30,10 +30,10 @@ $spui-ProgressBar_font: $font-primary;
 }
 
 .spui-ProgressBar_md {
-    height: 24px;
+    height: 26px;
 
     .spui-ProgressBar__progress {
-        height: 24px;
+        height: 26px;
     }
 
     .spui-ProgressBar__text {
@@ -43,14 +43,14 @@ $spui-ProgressBar_font: $font-primary;
 }
 
 .spui-ProgressBar_sm {
-    height: 18px;
+    height: 21px;
 
     .spui-ProgressBar__progress {
-        height: 18px;
+        height: 21px;
     }
 
     .spui-ProgressBar__text {
-        font-size: 10px;
-        line-height: 10px;
+        font-size: 12px;
+        line-height: 12px;
     }
 }
