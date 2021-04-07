@@ -9,6 +9,7 @@ import ItemBadge from './common/ItemBadge/ItemBadge.vue';
 import Modal from './common/Modal/Modal.vue';
 // import RangePrice from './common/RangePrice/RangePrice.vue';
 import Sidebar from './common/Sidebar/Sidebar.vue';
+import Rating from './common/Rating/Rating.vue';
 import Switcher from './common/Switcher/Switcher.vue';
 import Tooltip from './common/Tooltip/Tooltip.vue';
 import ProgressBar from './common/ProgressBar/ProgressBar.vue';
@@ -34,6 +35,7 @@ import lazy from '../directives/lazy';
 export {
     BtnFavorite,
     Button,
+    Rating,
     Checkbox,
     Collapse,
     DropdownModalWithSelect,

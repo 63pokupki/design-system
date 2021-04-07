@@ -1,0 +1,36 @@
+.spui-Rating {
+    $parent: &;
+
+    display: inline-flex;
+    cursor: default;
+    align-items: baseline;
+    color: #ffb21c;
+
+    &__icon {
+        font-size: 14px;
+        color: inherit;
+        cursor: inherit;
+
+        &::before {
+            cursor: inherit;
+        }
+    }
+
+    &__text {
+        font-weight: 700;
+        color: inherit;
+        font-size: 16px;
+    }
+
+    &.icon-pos-right {
+        #{$parent}__icon {
+            margin-left: 5px;
+        }
+    }
+
+    &.icon-pos-left {
+        #{$parent}__icon {
+            margin-right: 5px;
+        }
+    }
+}
