@@ -33,6 +33,9 @@ import { pluralize, capitalize } from '../helpers';
 import { clickOutside } from '../directives';
 import lazy from '../directives/lazy';
 
+/** Filters */
+import filterMaxStringLength from '../filters/filterMaxStringLength';
+
 export {
     BtnFavorite,
     Button,
@@ -66,4 +69,6 @@ export {
     /** Directives */
     clickOutside,
     lazy,
+    /** Filters */
+    filterMaxStringLength,
 };
