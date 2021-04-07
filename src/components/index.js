@@ -24,6 +24,7 @@ import ScrollIntoElementButtons from './common/ScrollIntoElementButtons/ScrollIn
 import BadgeCategoryTag from './specific/BadgeCategoryTag/BadgeCategoryTag.vue';
 import CollapseMultipleSelectList from './specific/CollapseMultipleSelectList/CollapseMultipleSelectList.vue';
 import InputSearchWithHints from './specific/InputSearchWithHints/InputSearchWithHints.vue';
+import PurchaseStatus from './specific/PurchaseStatus/PurchaseStatus.vue';
 
 /** Helpers */
 import { pluralize, capitalize } from '../helpers';
@@ -49,6 +50,7 @@ export {
     Tooltip,
     BadgeCategoryTag,
     CollapseMultipleSelectList,
+    PurchaseStatus,
     ProgressBar,
     Radio,
     SelectList,
