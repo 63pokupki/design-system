@@ -23,12 +23,18 @@ export const standart = () => ({
             label: (value) => value.key.label,
         };
     },
+    methods: {
+        onApplyChoise(value) {
+            console.log(value);
+        },
+    },
     template: `
             <DropdownTooltipWithSelect 
             v-model="value" 
             :values="values"
             :label="label"
-            heading="cортировка по">
+            heading="cортировка по"
+            @onApplyChoise="onApplyChoise">
             </DropdownTooltipWithSelect>`,
 });
 
