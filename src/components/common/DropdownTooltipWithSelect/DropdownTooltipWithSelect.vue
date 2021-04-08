@@ -149,7 +149,7 @@ export default {
         },
         onApplyMultipleChoise() {
             this.$emit('onApplyMultipleChoise', this._value);
-            this.setStateopen(false);
+            this.open = false;
         },
     },
 };
