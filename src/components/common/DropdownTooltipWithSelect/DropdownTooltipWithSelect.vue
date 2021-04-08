@@ -1,11 +1,15 @@
 <template>
     <span
-        v-click-outside="() => setStateopen(false)"
+        v-click-outside="onClickOutside"
         class="spui-DropdownTooltipWithSelect"
     >
         <span
             class="spui-DropdownTooltipWithSelect__wrapper"
-            @click="() => setStateopen(!open)"
+            @click="
+                () => {
+                    setStateopen(!open);
+                }
+            "
         >
             <span
                 class="spui-DropdownTooltipWithSelect__heading"
@@ -124,13 +128,17 @@ export default {
         },
     },
     methods: {
+        onClickOutside() {
+            if (this.open) this.setStateopen(false);
+        },
         setStateopen(value) {
             this.open = value;
+            this.$emit('onOpenStateChange', value);
         },
         onSelectValue(value) {
             this._value = value;
-            this.open = false;
             this.$emit('onApplyChoise', value);
+            this.setStateopen(false);
         },
         getLabel(value) {
             if (!value || !this.label || typeof this.label !== 'function') return null;
@@ -141,6 +149,7 @@ export default {
         },
         onApplyMultipleChoise() {
             this.$emit('onApplyMultipleChoise', this._value);
+            this.setStateopen(false);
         },
     },
 };

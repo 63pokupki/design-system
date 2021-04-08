@@ -27,6 +27,9 @@ export const standart = () => ({
         onApplyChoise(value) {
             console.log(value);
         },
+        onOpenStateChange(value) {
+            console.log('Смена состояния открытости', value);
+        },
     },
     template: `
             <DropdownTooltipWithSelect 
@@ -34,7 +37,8 @@ export const standart = () => ({
             :values="values"
             :label="label"
             heading="cортировка по"
-            @onApplyChoise="onApplyChoise">
+            @onApplyChoise="onApplyChoise"
+            @onOpenStateChange="onOpenStateChange">
             </DropdownTooltipWithSelect>`,
 });
 
