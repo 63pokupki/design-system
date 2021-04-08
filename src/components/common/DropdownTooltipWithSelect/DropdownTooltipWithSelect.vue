@@ -130,7 +130,7 @@ export default {
         onSelectValue(value) {
             this._value = value;
             this.open = false;
-            this.$emit('onApplyChoise', this._value);
+            this.$emit('onApplyChoise', value);
         },
         getLabel(value) {
             if (!value || !this.label || typeof this.label !== 'function') return null;
