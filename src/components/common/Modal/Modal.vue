@@ -16,10 +16,14 @@
                 </div>
                 <button
                     aria-label="Закрыть модальное окно"
+                    type="button"
                     class="spui-Modal__close"
                     @click="onClose"
                 >
-                    <i class="ds-icon icon-closing" />
+                    <i
+                        aria-hidden="true"
+                        class="ds-icon icon-closing"
+                    />
                 </button>
             </div>
             <slot
