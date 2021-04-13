@@ -14,14 +14,26 @@
             <span
                 class="spui-DropdownTooltipWithSelect__heading"
             >{{ _heading }}:</span>
+
             <span
                 v-if="_value && !multiple"
                 class="spui-DropdownTooltipWithSelect__value"
-            >{{ getLabel(_value) }}</span>
+            ><slot
+                name="label"
+                :label="getLabel(_value)"
+            >{{
+                getLabel(_value)
+            }}</slot></span>
+
             <span
                 v-if="_value && multiple"
                 class="spui-DropdownTooltipWithSelect__value"
-            >{{ getLabelForMultiple(_value) }}</span>
+            ><slot
+                name="label"
+                :label="getLabelForMultiple(_value)"
+            >{{
+                getLabelForMultiple(_value)
+            }}</slot></span>
             <i
                 class="spui-DropdownTooltipWithSelect__arrow ds-icon icon-rectangle"
             />
