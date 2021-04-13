@@ -42,11 +42,11 @@ export const standart = () => ({
             </DropdownTooltipWithSelect>`,
 });
 
-export const withDefaultSlot = () => ({
+export const withMultipleSlot = () => ({
     components: { DropdownTooltipWithSelect },
     data() {
         return {
-            value: { key: { label: 'популярности' }, value: '0' },
+            value: [{ key: { label: 'популярности' }, value: '0' }],
             values: [
                 { key: { label: 'популярности' }, value: '0' },
                 { key: { label: 'возрастанию цены' }, value: '0' },
@@ -59,22 +59,19 @@ export const withDefaultSlot = () => ({
         };
     },
     methods: {
-        onApplyChoise(value) {
-            console.log(value);
-        },
-        onOpenStateChange(value) {
-            console.log('Смена состояния открытости', value);
+        onApplyMultipleChoise(values) {
+            console.log(values);
         },
     },
     template: `
             <DropdownTooltipWithSelect 
             v-model="value" 
+            :multiple="true"
             :values="values"
             :label="label"
-            heading="cортировка по"
-            @onApplyChoise="onApplyChoise"
-            @onOpenStateChange="onOpenStateChange">
-            Контент слота
+            @onApplyMultipleChoise="onApplyMultipleChoise"
+            heading="фильтр по">
+            <template #multiple-before-apply-btn>Контент слота</template>
             </DropdownTooltipWithSelect>`,
 });
 

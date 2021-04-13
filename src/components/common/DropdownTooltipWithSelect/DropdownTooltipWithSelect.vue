@@ -50,6 +50,7 @@
                     type="primary"
                     class="spui-DropdownTooltipWithSelect__val spui-DropdownTooltipWithSelect__multiple"
                 >{{ getLabel(val) }}</Checkbox>
+                <slot name="multiple-before-apply-btn" />
                 <Button
                     class="spui-DropdownTooltipWithSelect__apply"
                     block
