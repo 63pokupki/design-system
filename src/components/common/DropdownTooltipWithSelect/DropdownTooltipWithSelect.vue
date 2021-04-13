@@ -56,6 +56,7 @@
                     @click="onApplyMultipleChoise"
                 >Применить</Button>
             </template>
+            <slot />
         </Tooltip>
     </span>
 </template>
