@@ -27,6 +27,27 @@ export const text = () => ({
                 </Input>`,
 });
 
+export const isRequired = () => ({
+    components: { Input },
+    data() {
+        return {
+            value: '',
+        };
+    },
+    methods: {
+        onEnter(value) {
+            console.log('onEnter', value);
+        },
+    },
+    template: `<Input 
+                    v-model="value" 
+                    @enter="onEnter"
+                    type="text"
+                    is-required
+                    label="Имя пользователя">
+                </Input>`,
+});
+
 export const withoutLabel = () => ({
     components: { Input },
     data() {

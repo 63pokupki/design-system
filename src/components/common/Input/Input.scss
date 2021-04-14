@@ -144,3 +144,12 @@
         color: #6c757d;
     }
 }
+
+.spui-Input.is-required {
+    .spui-Input__label {
+        &::after {
+            content: ' *';
+            color: #ff3c3c;
+        }
+    }
+}

@@ -14,8 +14,7 @@ export default {
         },
         placeholder: {
             type: String,
-            required: false,
-            default: 'Введите значение',
+            default: '',
         },
         type: {
             type: String,
@@ -74,6 +73,10 @@ export default {
             type: Boolean,
             default: true,
         },
+        isRequired: {
+            type: Boolean,
+            default: false,
+        },
     },
     render: (h, { data, props, listeners, scopedSlots }) => {
         const {
@@ -93,6 +96,7 @@ export default {
             styleLabel,
             mask,
             passwordIsVisible,
+            isRequired,
         } = props;
 
         const pressEnterHandler = listeners.enter;
@@ -159,6 +163,7 @@ export default {
                         'is-display-as-block': isDisplayAsBlock,
                         'is-error': isError,
                         'is-valid': isValid,
+                        'is-required': isRequired,
                     },
                     data.class,
                     data.staticClass,
