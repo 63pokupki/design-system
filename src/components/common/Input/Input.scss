@@ -5,7 +5,17 @@
     display: inline-block;
     font-weight: 600;
 
+    input:-internal-autofill-selected {
+        background-color: #fff;
+    }
+
+    input:-webkit-autofill {
+        box-shadow: 0 0 0 50px white inset;
+        -webkit-box-shadow: 0 0 0 50px white inset;
+    }
+
     &__input {
+        appearance: none;
         font-family: inherit;
         font: inherit;
         cursor: inherit;
@@ -21,6 +31,8 @@
         height: 42px;
         display: inline-block;
         padding: 0 20px 0 10px;
+        filter: none;
+        -webkit-filter: none;
 
         &::placeholder {
             font-weight: 400;
