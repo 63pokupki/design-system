@@ -1,5 +1,6 @@
 import BtnFavorite from './common/BtnFavorite/BtnFavorite.vue';
 import Button from './common/Button/Button.vue';
+import Input from './common/Input/Input.vue';
 import Checkbox from './common/Checkbox/Checkbox.vue';
 import Collapse from './common/Collapse/Collapse.vue';
 import DropdownModalWithSelect from './common/DropdownModalWithSelect/DropdownModalWithSelect.vue';
@@ -39,6 +40,7 @@ import filterMaxStringLength from '../filters/filterMaxStringLength';
 export {
     BtnFavorite,
     Button,
+    Input,
     Rating,
     Checkbox,
     Collapse,

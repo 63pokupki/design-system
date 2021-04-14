@@ -1,0 +1,146 @@
+.spui-Input {
+    font-family: 'Open Sans', 'Roboto', sans-serif;
+    font-size: 14px;
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
+
+    &__input {
+        font-family: inherit;
+        font: inherit;
+        cursor: inherit;
+        font-size: 100%;
+        line-height: 1.15;
+        margin: 0;
+        overflow: visible;
+        color: #1d1e1f;
+        border: 1px solid #606266;
+        border-radius: 2px;
+        outline: none;
+        font-weight: inherit;
+        height: 42px;
+        display: inline-block;
+        padding: 0 20px 0 10px;
+
+        &::placeholder {
+            font-weight: 400;
+        }
+
+        &:focus {
+            border-color: #36a6f2;
+
+            & ~ .spui-Input__label {
+                color: #36a6f2;
+            }
+        }
+    }
+
+    &__label {
+        color: #606266;
+        background-color: #fff;
+        font-weight: inherit;
+        position: absolute;
+        left: 6px;
+        top: -1px;
+        transform: translateY(-50%);
+        padding: 0 6px;
+    }
+
+    &__feedback {
+        color: #606266;
+        margin-top: 8px;
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    &__pswd-visibility-toggle {
+        @extend %reset-button;
+
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &.pswd-is-hidden {
+            &::before {
+                width: 25px;
+                height: 17px;
+                background-image: url('~images/important_images/password-input/passEye.svg');
+            }
+        }
+
+        &.pswd-is-visible {
+            &::before {
+                width: 25px;
+                height: 25px;
+                background-image: url('~images/important_images/password-input/passEyeClose.svg');
+            }
+        }
+
+        &::before {
+            content: '';
+            display: block;
+        }
+    }
+}
+
+.spui-Input.is-display-as-block {
+    width: 100%;
+    display: block;
+
+    .spui-Input__input {
+        width: 100%;
+        display: block;
+    }
+}
+
+.spui-Input.is-error {
+    .spui-Input__input {
+        border-color: #ff3c3c;
+    }
+
+    .spui-Input__label {
+        color: #ff3c3c;
+    }
+
+    .spui-Input__feedback {
+        color: #ff3c3c;
+    }
+}
+
+.spui-Input.is-valid {
+    .spui-Input__input {
+        border-color: #28a745;
+    }
+
+    .spui-Input__label {
+        color: #28a745;
+    }
+
+    .spui-Input__feedback {
+        color: #28a745;
+    }
+}
+
+.spui-Input.is-disabled {
+    cursor: not-allowed;
+    color: #6c757d;
+
+    .spui-Input__input {
+        border-color: #6c757d;
+        color: #6c757d;
+    }
+
+    .spui-Input__label {
+        color: #6c757d;
+    }
+
+    .spui-Input__feedback {
+        color: #6c757d;
+    }
+}
