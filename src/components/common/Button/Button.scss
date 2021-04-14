@@ -107,10 +107,6 @@ $ButtonFontFamily: $font-primary;
 .spui-Button_primary {
     @extend %spui-Button_primary;
 
-    &:hover {
-        @extend %spui-Button_outline;
-    }
-
     &:active {
         @extend %spui-Button_active;
     }
