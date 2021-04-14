@@ -16,10 +16,10 @@ export default {
             type: String,
             default: '',
         },
+        // 'text', 'tel', 'url', 'email', 'password'
         type: {
             type: String,
             default: 'text',
-            validator: (value) => ['text', 'tel', 'url', 'email', 'password'].includes(value),
         },
         isDisabled: {
             type: Boolean,
