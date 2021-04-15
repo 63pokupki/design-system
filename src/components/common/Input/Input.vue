@@ -159,6 +159,9 @@ export default {
             typeResult = passwordIsVisible ? 'text' : 'password';
         }
 
+        const onFocus = () => listeners.focus && listeners.focus();
+        const onBlur = () => listeners.blur && listeners.blur();
+
         return (
             <label
                 class={[
@@ -195,6 +198,8 @@ export default {
                             onKeyup={onPressEnter}
                             value={value}
                             onInput={(e) => onInput(e.target.value)}
+                            onFocus={onFocus}
+                            onBlur={onBlur}
                             placeholder={placeholder}
                             class="spui-Input__input"
                             type={typeResult}

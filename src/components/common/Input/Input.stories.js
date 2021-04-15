@@ -236,10 +236,18 @@ export const password = () => ({
             console.log('onPasswordVisibleChange', value);
             this.isPasswordVisible = value;
         },
+        onBlur() {
+            console.log('blur');
+        },
+        onFocus() {
+            console.log('onFocus');
+        },
     },
     template: `<Input 
                     v-model="value" 
                     @enter="onEnter"
+                    @blur="onBlur"
+                    @focus="onFocus"
                     feedback-help="От 3 до 10 символов"
                     :is-display-as-block="false"
                     @password-visible-change="onPasswordVisibleChange"
