@@ -77,6 +77,10 @@ export default {
             type: Boolean,
             default: false,
         },
+        autocomplete: {
+            type: String,
+            default: 'new-password',
+        },
     },
     render: (h, { data, props, listeners, scopedSlots }) => {
         const {
@@ -97,6 +101,7 @@ export default {
             mask,
             passwordIsVisible,
             isRequired,
+            autocomplete,
         } = props;
 
         const pressEnterHandler = listeners.enter;
@@ -182,6 +187,7 @@ export default {
                             type={typeResult}
                             style={styleInput}
                             disabled={isDisabled}
+                            autocomplete={autocomplete}
                             mask={mask}
                         ></TheMask>
                     ) : (
@@ -193,6 +199,7 @@ export default {
                             class="spui-Input__input"
                             type={typeResult}
                             disabled={isDisabled}
+                            autocomplete={autocomplete}
                             style={styleInput}
                         ></input>
                     )}
