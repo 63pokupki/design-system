@@ -240,6 +240,8 @@ export const password = () => ({
     template: `<Input 
                     v-model="value" 
                     @enter="onEnter"
+                    feedback-help="От 3 до 10 символов"
+                    :is-display-as-block="false"
                     @password-visible-change="onPasswordVisibleChange"
                     :password-is-visible="isPasswordVisible"
                     type="password"

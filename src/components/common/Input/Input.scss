@@ -14,6 +14,10 @@
         -webkit-box-shadow: 0 0 0 50px white inset;
     }
 
+    &__wrapper {
+        position: relative;
+    }
+
     &__input {
         appearance: none;
         font-family: inherit;
@@ -69,7 +73,7 @@
         @extend %reset-button;
 
         position: absolute;
-        right: 10px;
+        right: 5px;
         top: 50%;
         transform: translateY(-50%);
         width: 40px;
@@ -108,6 +112,12 @@
     .spui-Input__input {
         width: 100%;
         display: block;
+    }
+}
+
+.spui-Input.is-password {
+    .spui-Input__input {
+        padding: 0 45px 0 10px;
     }
 }
 

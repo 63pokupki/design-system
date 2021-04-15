@@ -164,57 +164,60 @@ export default {
                         'is-error': isError,
                         'is-valid': isValid,
                         'is-required': isRequired,
+                        'is-password': typeIsPassword,
                     },
                     data.class,
                     data.staticClass,
                 ]}
                 style={styleElement}
             >
-                {mask ? (
-                    <TheMask
-                        vOn:keyup_native={onPressEnter}
-                        value={value}
-                        onInput={onInput}
-                        placeholder={placeholder}
-                        class="spui-Input__input"
-                        type={typeResult}
-                        style={styleInput}
-                        disabled={isDisabled}
-                        mask={mask}
-                    ></TheMask>
-                ) : (
-                    <input
-                        onKeyup={onPressEnter}
-                        value={value}
-                        onInput={(e) => onInput(e.target.value)}
-                        placeholder={placeholder}
-                        class="spui-Input__input"
-                        type={typeResult}
-                        disabled={isDisabled}
-                        style={styleInput}
-                    ></input>
-                )}
+                <div class="spui-Input__wrapper">
+                    {mask ? (
+                        <TheMask
+                            vOn:keyup_native={onPressEnter}
+                            value={value}
+                            onInput={onInput}
+                            placeholder={placeholder}
+                            class="spui-Input__input"
+                            type={typeResult}
+                            style={styleInput}
+                            disabled={isDisabled}
+                            mask={mask}
+                        ></TheMask>
+                    ) : (
+                        <input
+                            onKeyup={onPressEnter}
+                            value={value}
+                            onInput={(e) => onInput(e.target.value)}
+                            placeholder={placeholder}
+                            class="spui-Input__input"
+                            type={typeResult}
+                            disabled={isDisabled}
+                            style={styleInput}
+                        ></input>
+                    )}
+                    {typeIsPassword && (
+                        <button
+                            onClick={onPasswordVisibleChange}
+                            type="button"
+                            aria-label="Сменить видимость"
+                            class={[
+                                'spui-Input__pswd-visibility-toggle',
+                                {
+                                    'pswd-is-visible': passwordIsVisible,
+                                    'pswd-is-hidden': !passwordIsVisible,
+                                },
+                            ]}
+                        ></button>
+                    )}
+                    {labelText && (
+                        <span style={styleLabel} class="spui-Input__label">
+                            {labelText}
+                        </span>
+                    )}
+                </div>
                 {feedback && (
                     <span class="spui-Input__feedback">{feedback}</span>
-                )}
-                {typeIsPassword && (
-                    <button
-                        onClick={onPasswordVisibleChange}
-                        type="button"
-                        aria-label="Сменить видимость"
-                        class={[
-                            'spui-Input__pswd-visibility-toggle',
-                            {
-                                'pswd-is-visible': passwordIsVisible,
-                                'pswd-is-hidden': !passwordIsVisible,
-                            },
-                        ]}
-                    ></button>
-                )}
-                {labelText && (
-                    <span style={styleLabel} class="spui-Input__label">
-                        {labelText}
-                    </span>
                 )}
             </label>
         );
