@@ -85,16 +85,16 @@
         &.pswd-is-hidden {
             &::before {
                 width: 25px;
-                height: 17px;
-                background-image: url('~images/important_images/password-input/passEye.svg');
+                height: 25px;
+                background-image: url('~images/important_images/password-input/passEyeClose.svg');
             }
         }
 
         &.pswd-is-visible {
             &::before {
                 width: 25px;
-                height: 25px;
-                background-image: url('~images/important_images/password-input/passEyeClose.svg');
+                height: 17px;
+                background-image: url('~images/important_images/password-input/passEye.svg');
             }
         }
 
