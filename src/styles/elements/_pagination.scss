@@ -88,20 +88,20 @@
         }
     }
 
-    &__first-page,
-    &__last-page {
-        display: none;
-        color: $color-text-base;
-    }
+    // &__first-page,
+    // &__last-page {
+    //     display: none;
+    //     color: $color-text-base;
+    // }
 
-    @media (max-width: 767px) {
-        .pagination {
-            &__first-page,
-            &__last-page {
-                display: flex;
-            }
-        }
-    }
+    // @media (max-width: 767px) {
+    //     .pagination {
+    //         &__first-page,
+    //         &__last-page {
+    //             display: flex;
+    //         }
+    //     }
+    // }
 }
 
 @media (-moz-touch-enabled: 1), (pointer: coarse) {
