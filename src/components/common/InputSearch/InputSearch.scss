@@ -75,6 +75,23 @@ $spui-InputSearch_font: $font-primary;
         }
     }
 
+    &_md {
+        #{$parent}__btn {
+            width: 26px;
+            height: 26px;
+            font-size: 22px;
+        }
+
+        #{$parent}__btns {
+            right: 7px;
+        }
+
+        #{$parent}__input {
+            padding-left: 13px;
+            height: 32px;
+        }
+    }
+
     &_lg {
         #{$parent}__btn {
             width: 28px;
@@ -95,6 +112,28 @@ $spui-InputSearch_font: $font-primary;
 
 .spui-InputSearch {
     &.spui-InputSearch_sm {
+        &.padding-right-x0 {
+            .spui-InputSearch__input {
+                padding-right: 13px;
+            }
+        }
+
+        &.padding-right-x1 {
+            .spui-InputSearch__input {
+                padding-right: 35px;
+            }
+        }
+
+        &.padding-right-x2 {
+            .spui-InputSearch__input {
+                padding-right: 60px;
+            }
+        }
+    }
+}
+
+.spui-InputSearch {
+    &.spui-InputSearch_md {
         &.padding-right-x0 {
             .spui-InputSearch__input {
                 padding-right: 13px;
