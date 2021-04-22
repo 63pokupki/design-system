@@ -3,12 +3,16 @@ $spui-InputSearch_font: $font-primary;
 .spui-InputSearch {
     position: relative;
     font-family: $spui-InputSearch_font;
+    font-size: 12px;
 
     &__input {
         background: #fff;
         border: 1.5px solid #36a6f2;
         border-radius: 48px;
         width: 100%;
+        font-family: inherit;
+        font-size: inherit;
+        font: 400 12px $spui-InputSearch_font;
 
         &:focus {
             outline: unset;
@@ -16,7 +20,9 @@ $spui-InputSearch_font: $font-primary;
 
         &::placeholder {
             color: $color-text-light-grey;
-            font-size: 12px;
+            font-size: inherit;
+            font-family: inherit;
+            font: 400 12px $spui-InputSearch_font;
         }
 
         &::-ms-clear {
