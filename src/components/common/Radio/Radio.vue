@@ -26,12 +26,12 @@
         >
             <slot name="default" />
         </span>
-        <div class="spui-Radio__fake">
+        <span class="spui-Radio__fake">
             <i
                 v-if="_checked"
                 class="spui-Radio__icon ds-icon icon-check-in-checkbox"
             />
-        </div>
+        </span>
         <span
             v-if="position == 'left' && $slots.default"
             class="spui-Radio__text"

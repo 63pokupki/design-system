@@ -24,12 +24,12 @@
         >
             <slot name="default" />
         </span>
-        <div class="spui-Checkbox__fake">
+        <span class="spui-Checkbox__fake">
             <i
                 v-if="_checked"
                 class="spui-Checkbox__icon ds-icon icon-check-in-checkbox"
             />
-        </div>
+        </span>
         <span
             v-if="position == 'left' && $slots.default"
             class="spui-Checkbox__text"
