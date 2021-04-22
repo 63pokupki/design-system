@@ -33,6 +33,32 @@ export const standart = () => ({
             </DropdownModalWithSelect>`,
 });
 
+export const withSlot = () => ({
+    components: { DropdownModalWithSelect, Tooltip },
+    data() {
+        return {
+            value: { key: { label: 'популярности' }, value: '0' },
+            values: [
+                { key: { label: 'популярности' }, value: '0' },
+                { key: { label: 'возрастанию цены' }, value: '0' },
+                { key: { label: 'убыванию цены' }, value: '0' },
+                { key: { label: 'новизне' }, value: '0' },
+                { key: { label: 'названию' }, value: '0' },
+                { key: { label: 'заполненности рядов' }, value: '0' },
+            ],
+            label: (value) => value.key.label,
+        };
+    },
+    template: `
+            <DropdownModalWithSelect 
+            v-model="value"
+            :values="values"
+            :label="label"
+            heading="cортировка по:">
+            Контент слота
+            </DropdownModalWithSelect>`,
+});
+
 export const objectValues = () => ({
     components: { DropdownModalWithSelect },
     data() {

@@ -4,6 +4,7 @@
         :class="{ 'is-visible': visible }"
     >
         <button
+            type="button"
             aria-label="Подняться наверх"
             class="spui-ScrollIntoElementButtons__up spui-ScrollIntoElementButtons__btn"
             @click="onTargetUpClick"
@@ -11,6 +12,7 @@
             <i class="ds-icon icon-arrow-up" />
         </button>
         <button
+            type="button"
             aria-label="Опуститься вниз"
             class="spui-ScrollIntoElementButtons__down spui-ScrollIntoElementButtons__btn"
             @click="onTargetDownClick"

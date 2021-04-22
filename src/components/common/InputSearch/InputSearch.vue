@@ -71,9 +71,9 @@ export default {
                 (event.code === 13 ||
                     event.keyCode === 13 ||
                     event.key === 'Enter') &&
-                listeners.onSearch
+                onSearchHandler
             ) {
-                listeners.onSearch(value);
+                onSearchHandler(value);
             }
         };
 

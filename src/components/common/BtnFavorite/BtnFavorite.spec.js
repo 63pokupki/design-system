@@ -17,12 +17,6 @@ describe('BtnFavorite.vue', () => {
         expect(wrapper.exists()).toBeTruthy();
     });
 
-    it('Снимок стандартного состояния', () => {
-        const wrapper = mountComponent();
-
-        expect(wrapper.html()).toMatchSnapshot();
-    });
-
     it('Проверка состояния активности', () => {
         const wrapper = mountComponent({
             propsData: { isActive: true },
@@ -30,7 +24,6 @@ describe('BtnFavorite.vue', () => {
 
         expect(wrapper.classes('is-active')).toBe(true);
         expect(wrapper.find('i').classes('icon-heart-filled')).toBe(true);
-        expect(wrapper.html()).toMatchSnapshot();
     });
 
     it('Проверка состояния загрузки', () => {
@@ -39,7 +32,6 @@ describe('BtnFavorite.vue', () => {
         });
 
         expect(wrapper.classes('is-loading')).toBe(true);
-        expect(wrapper.html()).toMatchSnapshot();
     });
 
     it('Обработка нажатия', () => {
