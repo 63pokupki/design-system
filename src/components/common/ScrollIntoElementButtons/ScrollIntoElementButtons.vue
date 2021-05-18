@@ -30,9 +30,17 @@ export default {
             type: String,
             required: true,
         },
+        targetUpBlockPosition: {
+            type: String,
+            default: 'start',
+        },
         targetDownId: {
             type: String,
             required: true,
+        },
+        targetDownBlockPosition: {
+            type: String,
+            default: 'start',
         },
         fade: {
             type: Boolean,
@@ -96,7 +104,7 @@ export default {
         onTargetUpClick() {
             if (this.targetUpEl) {
                 this.targetUpEl.scrollIntoView({
-                    block: 'start',
+                    block: this.targetUpBlockPosition,
                     behavior: 'smooth',
                 });
             }
@@ -104,7 +112,7 @@ export default {
         onTargetDownClick() {
             if (this.targetDownEl) {
                 this.targetDownEl.scrollIntoView({
-                    block: 'start',
+                    block: this.targetDownBlockPosition,
                     behavior: 'smooth',
                 });
             }
