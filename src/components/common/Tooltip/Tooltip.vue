@@ -41,15 +41,18 @@ export default {
         _forced() {
             return this.forced ? 'has-tooltip-force' : 'has-tooltip';
         },
+        parent() {
+            return this.$el.parentElement;
+        },
     },
     mounted() {
-        this.$el.parentElement.classList.add(this._forced);
+        this.parent && this.parent.classList.add(this._forced);
     },
     updated() {
-        this.$el.parentElement.classList.add(this._forced);
+        this.parent && this.parent.classList.add(this._forced);
     },
     beforeDestroy() {
-        this.$el.parentElement.classList.remove(this._forced);
+        this.parent && this.parent.classList.remove(this._forced);
     },
 };
 </script>
@@ -63,6 +66,7 @@ export default {
 .has-tooltip {
     cursor: pointer;
     position: relative;
+
     &:hover > .spui-Tooltip {
         visibility: visible;
         opacity: 1;
@@ -75,6 +79,7 @@ export default {
 .has-tooltip-force {
     cursor: pointer;
     position: relative;
+
     .spui-Tooltip {
         visibility: visible !important;
         opacity: 1 !important;

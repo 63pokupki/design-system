@@ -1,6 +1,4 @@
 <script>
-import uuid from 'short-uuid';
-
 const searchImg = require('@/images/important_images/search.svg');
 
 export default {
@@ -35,19 +33,36 @@ export default {
             type: Boolean,
             default: true,
         },
+        isClearBtnVisible: {
+            type: Boolean,
+            default: false,
+        },
     },
     render: (h, { data, props, listeners }) => {
         const value = props.value || '';
         const placeholder = props.placeholder || 'Поиск';
         const inputStyle = props.inputStyle || {};
         const buttonStyle = props.buttonStyle || {};
-        const size = props.buttonStyle || 'sm';
-        const uniqUuid = uuid.generate();
+        const size = props.size || 'sm';
         const isSearchBtnVisible = Boolean(props.isSearchBtnVisible);
+        const isClearBtnVisible = Boolean(props.isClearBtnVisible);
+        const paddingRightCoefficient =
+            Number(isSearchBtnVisible) + Number(isClearBtnVisible);
+
+        const isButtonsExist = isSearchBtnVisible || isClearBtnVisible;
+
+        const onSearchHandler = listeners.onSearch || listeners['on-search'];
+        const onClearHandler = listeners.onClear || listeners['on-clear'];
 
         const onSearch = () => {
-            if (listeners.onSearch) {
-                listeners.onSearch(value);
+            if (onSearchHandler) {
+                onSearchHandler(value);
+            }
+        };
+
+        const onClear = () => {
+            if (onClearHandler) {
+                onClearHandler();
             }
         };
 
@@ -56,9 +71,9 @@ export default {
                 (event.code === 13 ||
                     event.keyCode === 13 ||
                     event.key === 'Enter') &&
-                listeners.onSearch
+                onSearchHandler
             ) {
-                listeners.onSearch(value);
+                onSearchHandler(value);
             }
         };
 
@@ -74,11 +89,12 @@ export default {
                 class={[
                     'spui-InputSearch',
                     `spui-InputSearch_${size}`,
+                    `padding-right-x${paddingRightCoefficient}`,
                     data.class,
                     data.staticClass,
                 ]}
             >
-                <label for={uniqUuid}>
+                <label>
                     <input
                         style={inputStyle}
                         onKeyup={onKeyUpSearch}
@@ -87,22 +103,37 @@ export default {
                         class="spui-InputSearch__input"
                         type="text"
                         placeholder={placeholder}
-                        id={uniqUuid}
                     />
                 </label>
-                {isSearchBtnVisible && (
-                    <button
-                        aria-label="Поиск"
-                        style={buttonStyle}
-                        onClick={onSearch}
-                        class="spui-InputSearch__btn"
-                    >
-                        <img
-                            alt="Поиск"
-                            class="spui-InputSearch__img"
-                            src={searchImg}
-                        />
-                    </button>
+                {isButtonsExist && (
+                    <div class="spui-InputSearch__btns">
+                        {isSearchBtnVisible && (
+                            <button
+                                type="button"
+                                aria-label="Поиск"
+                                style={buttonStyle}
+                                onClick={onSearch}
+                                class="spui-InputSearch__btn spui-InputSearch__submit"
+                            >
+                                <img
+                                    alt="Поиск"
+                                    class="spui-InputSearch__img"
+                                    src={searchImg}
+                                />
+                            </button>
+                        )}
+                        {isClearBtnVisible && (
+                            <button
+                                type="button"
+                                aria-label="Очистить"
+                                style={buttonStyle}
+                                onClick={onClear}
+                                class="spui-InputSearch__btn spui-InputSearch__clear"
+                            >
+                                <i class="ds-icon icon-stop"></i>
+                            </button>
+                        )}
+                    </div>
                 )}
             </div>
         );

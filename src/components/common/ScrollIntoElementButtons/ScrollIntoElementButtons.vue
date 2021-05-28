@@ -4,6 +4,7 @@
         :class="{ 'is-visible': visible }"
     >
         <button
+            type="button"
             aria-label="Подняться наверх"
             class="spui-ScrollIntoElementButtons__up spui-ScrollIntoElementButtons__btn"
             @click="onTargetUpClick"
@@ -11,6 +12,7 @@
             <i class="ds-icon icon-arrow-up" />
         </button>
         <button
+            type="button"
             aria-label="Опуститься вниз"
             class="spui-ScrollIntoElementButtons__down spui-ScrollIntoElementButtons__btn"
             @click="onTargetDownClick"
@@ -28,9 +30,17 @@ export default {
             type: String,
             required: true,
         },
+        targetUpBlockPosition: {
+            type: String,
+            default: 'start',
+        },
         targetDownId: {
             type: String,
             required: true,
+        },
+        targetDownBlockPosition: {
+            type: String,
+            default: 'start',
         },
         fade: {
             type: Boolean,
@@ -94,7 +104,7 @@ export default {
         onTargetUpClick() {
             if (this.targetUpEl) {
                 this.targetUpEl.scrollIntoView({
-                    block: 'start',
+                    block: this.targetUpBlockPosition,
                     behavior: 'smooth',
                 });
             }
@@ -102,7 +112,7 @@ export default {
         onTargetDownClick() {
             if (this.targetDownEl) {
                 this.targetDownEl.scrollIntoView({
-                    block: 'start',
+                    block: this.targetDownBlockPosition,
                     behavior: 'smooth',
                 });
             }

@@ -42,6 +42,8 @@ export default {
                     {values &&
                         values.map((val) => (
                             <button
+                                aria-label={`Показывать по: ${val}`}
+                                type="button"
                                 onClick={() => onClick(val)}
                                 class={[
                                     'spui-RadioSelectList__value',

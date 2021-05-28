@@ -1,0 +1,35 @@
+.spui-PurchaseStatus {
+    $parent: &;
+
+    display: inline-flex;
+    align-items: center;
+    font-family: 'Open-sans', sans-serif;
+
+    &__icon {
+        font-size: 30px;
+        color: inherit;
+        cursor: inherit;
+
+        &::before {
+            cursor: inherit;
+        }
+    }
+
+    &__text {
+        font-weight: 600;
+        color: inherit;
+        font-size: 12px;
+    }
+
+    &.icon-pos-right {
+        #{$parent}__icon {
+            margin-left: 12px;
+        }
+    }
+
+    &.icon-pos-left {
+        #{$parent}__icon {
+            margin-right: 12px;
+        }
+    }
+}

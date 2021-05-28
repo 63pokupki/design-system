@@ -19,7 +19,7 @@ module.exports = {
         },
         '@storybook/addon-knobs/register',
         '@storybook/addon-links/register',
-        '@storybook/addon-backgrounds/register',
+        '@storybook/addon-backgrounds',
         '@storybook/addon-a11y',
     ],
 };

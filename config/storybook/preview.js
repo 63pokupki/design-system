@@ -1,7 +1,5 @@
-/* eslint-disable import/no-extraneous-dependencies */
-import { addParameters } from '@storybook/vue';
-
-addParameters({
+// eslint-disable-next-line import/prefer-default-export
+export const parameters = {
     backgrounds: {
         default: 'white',
         values: [
@@ -10,4 +8,4 @@ addParameters({
             { name: 'dark', value: '#171717' },
         ],
     },
-});
+};

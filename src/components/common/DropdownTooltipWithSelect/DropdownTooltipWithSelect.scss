@@ -4,7 +4,7 @@ $spui-DropdownTooltipWithSelect-font-weight: 600;
 $spui-DropdownTooltipWithSelect-color: #606266;
 $spui-DropdownTooltipWithSelect-colorOnHover: #36a5f2;
 $spui-DropdownTooltipWithSelect-colorOnActive: $spui-DropdownTooltipWithSelect-colorOnHover;
-$spui-DropdownTooltipWithSelect-row-spacing: 4px;
+$spui-DropdownTooltipWithSelect-row-spacing: 5px;
 $spui-DropdownTooltipWithSelect-values-spacing: 3px;
 $spui-DropdownTooltipWithSelect-arrow-size: 8px;
 
@@ -17,10 +17,6 @@ $spui-DropdownTooltipWithSelect-arrow-size: 8px;
     color: $spui-DropdownTooltipWithSelect-color;
     cursor: pointer;
 
-    &:hover {
-        color: $spui-DropdownTooltipWithSelect-colorOnHover;
-    }
-
     &:active {
         color: $spui-DropdownTooltipWithSelect-colorOnActive;
     }
@@ -29,10 +25,14 @@ $spui-DropdownTooltipWithSelect-arrow-size: 8px;
         display: inline-flex;
         align-items: center;
         flex-wrap: wrap;
+
+        &:hover {
+            color: $spui-DropdownTooltipWithSelect-colorOnHover;
+        }
     }
 
     &__heading {
-        line-height: 17px;
+        min-height: 18px;
         flex-shrink: 0;
         margin-right: $spui-DropdownTooltipWithSelect-row-spacing;
     }
@@ -40,12 +40,17 @@ $spui-DropdownTooltipWithSelect-arrow-size: 8px;
     &__value {
         border-bottom: 1px solid $spui-DropdownTooltipWithSelect-colorOnActive;
         margin-right: $spui-DropdownTooltipWithSelect-row-spacing;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 140px;
+        white-space: nowrap;
+        min-height: 18px;
     }
 
     &__arrow {
         font-size: $spui-DropdownTooltipWithSelect-arrow-size;
         display: inline-flex;
-        margin-bottom: 1px;
+        margin-bottom: 2px;
     }
 
     &__val {
@@ -55,5 +60,15 @@ $spui-DropdownTooltipWithSelect-arrow-size: 8px;
         &:hover {
             color: $spui-DropdownTooltipWithSelect-colorOnActive;
         }
+    }
+
+    &__multiple {
+        display: flex;
+        margin-bottom: 8px;
+    }
+
+    ::v-deep &__apply {
+        margin-top: 14px;
+        height: 28px;
     }
 }

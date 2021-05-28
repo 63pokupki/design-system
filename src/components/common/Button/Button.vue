@@ -72,6 +72,7 @@ export default {
             <button
                 aria-label={props.ariaLabel}
                 onClick={onClick}
+                type="button"
                 disabled={isDisabled}
                 class={[
                     'spui-Button',

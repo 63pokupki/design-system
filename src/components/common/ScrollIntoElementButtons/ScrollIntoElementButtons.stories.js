@@ -15,7 +15,7 @@ export const standart = () => ({
     template: `
     <div>
         <div style="height: 2000px; background: green;"></div>
-       <ScrollIntoElementButtons target-up-id="root" target-down-id="root" ></ScrollIntoElementButtons>
+       <ScrollIntoElementButtons target-up-id="root" target-up-block-position="start" target-down-block-position="end" target-down-id="root" ></ScrollIntoElementButtons>
     </div>
     `,
 });

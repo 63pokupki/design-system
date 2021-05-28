@@ -13,6 +13,24 @@ $spui-InputSearchWithHints_z3: $spui-InputSearchWithHints_z2 + 1;
         z-index: $spui-InputSearchWithHints_z2;
     }
 
+    &__matched-purchase {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        left: 0;
+        display: inline;
+        line-height: 42px;
+        padding-left: 65px;
+        font-size: 13px;
+        white-space: nowrap;
+        width: calc(100% - 65px - 100px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: gray;
+        z-index: $spui-InputSearchWithHints_z2;
+        pointer-events: none;
+    }
+
     &__input {
         background: #fff;
         border: 1.5px solid #36a6f2;
@@ -65,6 +83,14 @@ $spui-InputSearchWithHints_z3: $spui-InputSearchWithHints_z2 + 1;
         bottom: 50%;
         left: 0;
         transform: translateY(100%);
+    }
+
+    &__divider {
+        padding: 0 20px;
+        font-size: 12px;
+        line-height: 24px;
+        font-weight: 600;
+        color: #484848;
     }
 
     &__text {
@@ -144,7 +170,7 @@ $spui-InputSearchWithHints_z3: $spui-InputSearchWithHints_z2 + 1;
 
         &::before {
             position: absolute;
-            content: "";
+            content: '';
             width: 0;
             height: 0;
             left: -13px;

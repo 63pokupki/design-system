@@ -47,6 +47,8 @@
                         </slot>
                     </Radio>
                 </div>
+
+                <slot />
             </div>
         </Modal>
     </div>

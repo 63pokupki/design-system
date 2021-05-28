@@ -24,7 +24,7 @@ module.exports = {
     'ds-utils': ['./src/styles/utils/_ds-utils.scss', './src/js/util.js'],
     // Иконки для категорий закупок
     'categories-icons-sprite': [
-        './src/categories-icons-sprite/categories/categories-icons.js',
+        './src/categories-icons-sprite/categories/categories-icons.js', './src/styles/elements/svg-category-icons.scss',
     ],
     // Итоговые стили дизайн системы - включаются в конечную сборку
     'ds-ui-kit': ['./src/styles/ds-all-style.scss'],
