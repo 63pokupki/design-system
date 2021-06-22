@@ -35,7 +35,7 @@
         "core-js": "^3.9.1",
         "lodash-es": "^4.17.21",
         "short-uuid": "^3.1.1",
-        "vue": "^2.6.12",
+        "vue": "^2.6.13",
         "vue-carousel": "git+https://github.com/nullilac/vue-carousel.git",
         "vue-slider-component": "^3.2.4",
         "vue-the-mask": "^0.11.1"
