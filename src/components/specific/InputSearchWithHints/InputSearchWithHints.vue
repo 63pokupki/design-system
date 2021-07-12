@@ -3,12 +3,12 @@
         <div class="spui-InputSearchWithHints__input-wrapper">
             <label class="spui-InputSearchWithHints__label">
                 <input
-                    v-model="_value"
+                    :value="_value"
                     class="spui-InputSearchWithHints__input"
                     type="text"
                     autocomplete="off"
                     placeholder="Поиск"
-                    @input="fixMobileSearch"
+                    @input="onInputValue"
                     @keyup.enter="onSearch"
                     @keyup.up="onKeyUp"
                     @keyup.down="onKeyDown"
@@ -253,18 +253,8 @@ export default {
             }
             return false;
         },
-        _value: {
-            get() {
-                return this.value;
-            },
-            set(value) {
-                this.$emit('input', value);
-                this.emitHintsOpenState(true);
-
-                if (this.category === 'items') {
-                    this.$emit('input-by-items');
-                }
-            },
+        _value() {
+            return this.value;
         },
         _trimmed() {
             return this._value.trim();
@@ -274,14 +264,15 @@ export default {
         },
     },
     methods: {
-        isEqual,
-        // Попытка пофиксить багу на мобильных
-        fixMobileSearch(e) {
-            // Имитируем нажатие клавиши
-            e.keyup();
-            // и фокус
-            e.focus();
+        onInputValue(event) {
+            this.$emit('input', event.target.value);
+            this.emitHintsOpenState(true);
+
+            if (this.category === 'items') {
+                this.$emit('input-by-items');
+            }
         },
+        isEqual,
         /** Событие смены состояния показа выбора категорий поиска - товары/форум */
         emitCategoryOpenState(value) {
             this.$emit('category-open-change', value);
