@@ -1,6 +1,6 @@
 {
     "name": "@63pokupki/design-system",
-    "version": "1.1.130",
+    "version": "1.1.131",
     "description": "UI component kit and design-system for 63 Pokupki project",
     "author": {
         "name": "63pokupki"
@@ -135,7 +135,6 @@
             "jest-serializer-vue"
         ]
     },
-    "_id": "@63pokupki/design-system@0.0.575",
     "bugs": {
         "url": "https://github.com/63pokupki/design-system/issues"
     },
