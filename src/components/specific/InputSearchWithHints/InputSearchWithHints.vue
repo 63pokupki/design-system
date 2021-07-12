@@ -6,7 +6,9 @@
                     v-model="_value"
                     class="spui-InputSearchWithHints__input"
                     type="text"
+                    autocomplete="off"
                     placeholder="Поиск"
+                    @input="fixMobileSearch"
                     @keyup.enter="onSearch"
                     @keyup.up="onKeyUp"
                     @keyup.down="onKeyDown"
@@ -273,6 +275,13 @@ export default {
     },
     methods: {
         isEqual,
+        // Попытка пофиксить багу на мобильных
+        fixMobileSearch(e) {
+            // Имитируем нажатие клавиши
+            e.keyup();
+            // и фокус
+            e.focus();
+        },
         /** Событие смены состояния показа выбора категорий поиска - товары/форум */
         emitCategoryOpenState(value) {
             this.$emit('category-open-change', value);
