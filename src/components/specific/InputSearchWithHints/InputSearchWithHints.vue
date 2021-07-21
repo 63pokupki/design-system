@@ -3,12 +3,11 @@
         <div class="spui-InputSearchWithHints__input-wrapper">
             <label class="spui-InputSearchWithHints__label">
                 <input
-                    :value="_value"
+                    v-model="_value"
                     class="spui-InputSearchWithHints__input"
                     type="text"
                     autocomplete="off"
                     placeholder="Поиск"
-                    @input="onInputValue"
                     @keyup.enter="onSearch"
                     @keyup.up="onKeyUp"
                     @keyup.down="onKeyDown"
@@ -253,8 +252,18 @@ export default {
             }
             return false;
         },
-        _value() {
-            return this.value;
+        _value: {
+            get() {
+                return this.value;
+            },
+            set(value) {
+                this.$emit('input', value);
+                this.emitHintsOpenState(true);
+
+                if (this.category === 'items') {
+                    this.$emit('input-by-items');
+                }
+            },
         },
         _trimmed() {
             return this._value.trim();
@@ -264,14 +273,6 @@ export default {
         },
     },
     methods: {
-        onInputValue(event) {
-            this.$emit('input', event.target.value);
-            this.emitHintsOpenState(true);
-
-            if (this.category === 'items') {
-                this.$emit('input-by-items');
-            }
-        },
         isEqual,
         /** Событие смены состояния показа выбора категорий поиска - товары/форум */
         emitCategoryOpenState(value) {
