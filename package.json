@@ -35,7 +35,7 @@
         "core-js": "^3.12.1",
         "lodash-es": "^4.17.21",
         "short-uuid": "^3.1.1",
-        "vue": "^2.6.12",
+        "vue": "^2.6.14",
         "vue-carousel": "git+https://github.com/nullilac/vue-carousel.git",
         "vue-slider-component": "^3.2.13",
         "vue-the-mask": "^0.11.1"
@@ -104,7 +104,7 @@
         "vue-jest": "^3.0.7",
         "vue-loader": "^15.9.3",
         "vue-style-loader": "^4.1.3",
-        "vue-template-compiler": "^2.6.11",
+        "vue-template-compiler": "^2.6.14",
         "webpack": "^4.44.1",
         "webpack-cli": "^3.3.12",
         "webpack-dev-server": "^3.11.0"
