@@ -146,6 +146,7 @@ input {
     //Info-block
     &__info-block {
         display: flex;
+        flex-direction: column;
         width: 100%;
         justify-content: space-between;
         margin: -10px 0 0 0;
@@ -154,8 +155,7 @@ input {
 
     &__txt-info {
         display: flex;
-        width: 50%;
-        max-width: 170px;
+        width: 100%;
         padding: 0 15px 0 0;
         font-weight: 600;
         font-size: 11px;
@@ -178,6 +178,7 @@ input {
         display: flex;
         justify-content: flex-end;
         width: 100%;
+        height: 0;
         text-align: left;
         font-weight: 600;
         font-size: 12px;
@@ -187,6 +188,7 @@ input {
 
         &-email,
         &-phone {
+            height: 0;
             max-width: 152px;
         }
 
