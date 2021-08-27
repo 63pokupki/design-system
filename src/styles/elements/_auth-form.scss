@@ -104,29 +104,6 @@
             color: $click-load-color;
             border-bottom-color: $color-primary;
 
-            &::before {
-                content: "";
-                position: absolute;
-                top: 39px;
-                left: calc(50% - 124px);
-                display: flex;
-                width: 11px;
-                height: 11px;
-                background: url("~images/important_images/auth-form/rectangle-tab-aith.svg");
-                transform: rotateY(180deg);
-            }
-
-            &::after {
-                content: "";
-                position: absolute;
-                top: 39px;
-                right: calc(50% - 124px);
-                display: flex;
-                width: 11px;
-                height: 11px;
-                background: url("~images/important_images/auth-form/rectangle-tab-aith.svg");
-            }
-
             @media (max-width: 767px) {
                 &::before {
                     left: calc(50% - 86px);
@@ -402,10 +379,6 @@
         }
     }
 
-    &__login-container {
-        margin-right: 65px;
-    }
-
     &__btn-container {
         display: flex;
         justify-content: center;
@@ -569,10 +542,6 @@
             .auth-form__txt {
                 margin: 20px 0 30px;
             }
-        }
-
-        .auth-form__login-container {
-            margin-right: 42px;
         }
     }
 
