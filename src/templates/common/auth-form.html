@@ -153,6 +153,36 @@
                                                     пользователем</span>
                                             </div>
                                         </div>
+                                        <div class="auth-form__phone">
+                                            <!-- Телефон -->
+                                            <div class="ds-inputs-component">
+                                                <div class="ds-inputs-form  input-phone">
+                                                    <span class="snowflake"></span>
+                                                    <input id="ds-inputs-form__phone" class="ds-inputs-form__input"
+                                                        type="tel" name=""
+                                                        data-validate-url="/forum/phpBB3/app.php/phone/validate"
+                                                        value=""
+                                                        tabindex="8"
+                                                        autocomplete="tel"
+                                                        placeholder="+7(xxx) xxx-xx-xx"
+                                                        required>
+                                                    <label class="ds-inputs-form__label"
+                                                        for="ds-inputs-form__input-phone"></label>
+                                                </div>
+                                                <div class="ds-inputs-form__info-block ds-inputs-form__info-block-phone">
+                                                    <span class="ds-inputs-form__txt-info phone">
+                                                        Будет отправлено СМС с кодом подтверждения
+                                                        <i class="ds-icon ds-inputs-form__icon-info icon-info has-tooltip">
+                                                            <!-- <span class="tooltip  tooltip_right"></span> -->
+                                                        </i>
+                                                    </span>
+                                                    <span class="ds-inputs-form__txt-error"> Уже
+                                                        используется другим
+                                                        пользователем
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>    
                                     </div>
                                     <!-- Блок инпутов пароль -->
                                     <div class="auth-form__pass-container">
@@ -199,36 +229,6 @@
 
                                 </div>
                                 <div class="auth-form__phone-container">
-                                    <div class="auth-form__phone">
-                                        <!-- Телефон -->
-                                        <div class="ds-inputs-component">
-                                            <div class="ds-inputs-form  input-phone">
-                                                <span class="snowflake"></span>
-                                                <input id="ds-inputs-form__phone" class="ds-inputs-form__input"
-                                                    type="tel" name=""
-                                                    data-validate-url="/forum/phpBB3/app.php/phone/validate"
-                                                    value=""
-                                                    tabindex="8"
-                                                    autocomplete="tel"
-                                                    placeholder="+7(xxx) xxx-xx-xx"
-                                                    required>
-                                                <label class="ds-inputs-form__label"
-                                                    for="ds-inputs-form__input-phone"></label>
-                                            </div>
-                                            <div class="ds-inputs-form__info-block ds-inputs-form__info-block-phone">
-                                                <span class="ds-inputs-form__txt-info phone">
-                                                    Будет отправлено СМС с кодом подтверждения
-                                                    <i class="ds-icon ds-inputs-form__icon-info icon-info has-tooltip">
-                                                        <!-- <span class="tooltip  tooltip_right"></span> -->
-                                                    </i>
-                                                </span>
-                                                <span class="ds-inputs-form__txt-error"> Уже
-                                                    используется другим
-                                                    пользователем
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
                                     <div class="auth-form__phone-txt">
                                         <div class="auth-form__txt-footnote">
                                             Регистрируясь на Сайте, вы заключаете
@@ -500,9 +500,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-                            </div>
-                            <div class="auth-form__phone-container">
                                 <div class="auth-form__phone">
                                     <!-- Телефон -->
                                     <div class="ds-inputs-component">
@@ -552,6 +549,9 @@
                                             target="_blank">Политики конфиденциальности</a>.
                                     </div>
                                 </div>
+
+                            </div>
+                            <div class="auth-form__phone-container">
 
                             </div>
                         </div>
@@ -1065,6 +1065,32 @@
                                                 пользователем</span>
                                         </div>
                                     </div>
+                                    <!-- телефон -->
+                                    <div class="auth-form__phone">
+                                        <!-- Телефон -->
+                                        <div class="ds-inputs-component">
+                                            <div class="ds-inputs-form  input-phone">
+                                                <span class="snowflake"></span>
+                                                <input id="ds-inputs-form__phone" class="ds-inputs-form__input" type="tel"
+                                                    name="" data-validate-url="/forum/phpBB3/app.php/phone/validate"
+                                                    tabindex="8" placeholder="+7(xxx) xxx-xx-xx">
+                                                <label class="ds-inputs-form__label" for="ds-inputs-form__input-phone"></label>
+                                            </div>
+                                            <div class="ds-inputs-form__info-block ds-inputs-form__info-block-phone">
+                                                <span class="ds-inputs-form__txt-info phone">
+                                                    Будет отправлено СМС с кодом подтверждения
+                                                    <i class="ds-icon ds-inputs-form__icon-info icon-info has-tooltip">
+                                                        <!-- <span class="tooltip  tooltip_right"></span> -->
+                                                    </i>
+                                                </span>
+                                                <span class="ds-inputs-form__txt-error ds-inputs-form__txt-error-phone"> Уже
+                                                    используется другим
+                                                    пользователем
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+    
                                 </div>
                                 <!-- Блок инпутов пароль -->
                                 <div class="auth-form__pass-container">
@@ -1110,30 +1136,6 @@
     
                             </div>
                             <div class="auth-form__phone-container">
-                                <div class="auth-form__phone">
-                                    <!-- Телефон -->
-                                    <div class="ds-inputs-component">
-                                        <div class="ds-inputs-form  input-phone">
-                                            <span class="snowflake"></span>
-                                            <input id="ds-inputs-form__phone" class="ds-inputs-form__input" type="tel"
-                                                name="" data-validate-url="/forum/phpBB3/app.php/phone/validate"
-                                                tabindex="8" placeholder="+7(xxx) xxx-xx-xx">
-                                            <label class="ds-inputs-form__label" for="ds-inputs-form__input-phone"></label>
-                                        </div>
-                                        <div class="ds-inputs-form__info-block ds-inputs-form__info-block-phone">
-                                            <span class="ds-inputs-form__txt-info phone">
-                                                Будет отправлено СМС с кодом подтверждения
-                                                <i class="ds-icon ds-inputs-form__icon-info icon-info has-tooltip">
-                                                    <!-- <span class="tooltip  tooltip_right"></span> -->
-                                                </i>
-                                            </span>
-                                            <span class="ds-inputs-form__txt-error ds-inputs-form__txt-error-phone"> Уже
-                                                используется другим
-                                                пользователем
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
                                 <div class="auth-form__phone-txt">
                                     <div class="auth-form__txt-footnote">
                                         Регистрируясь на Сайте, вы заключаете
@@ -1241,6 +1243,31 @@
                                                 пользователем</span>
                                         </div>
                                     </div>
+                                    <div class="auth-form__phone">
+                                        <!-- Телефон -->
+                                        <div class="ds-inputs-component is-error">
+                                            <div class="ds-inputs-form  input-phone">
+                                                <span class="snowflake"></span>
+                                                <input id="ds-inputs-form__phone" class="ds-inputs-form__input" type="tel"
+                                                    name="" data-validate-url="/forum/phpBB3/app.php/phone/validate"
+                                                    tabindex="8" placeholder="+7(xxx) xxx-xx-xx">
+                                                <label class="ds-inputs-form__label" for="ds-inputs-form__input-phone"></label>
+                                            </div>
+                                            <div class="ds-inputs-form__info-block ds-inputs-form__info-block-phone">
+                                                <span class="ds-inputs-form__txt-info phone">
+                                                    Будет отправлено СМС с кодом подтверждения
+                                                    <i class="ds-icon ds-inputs-form__icon-info icon-info has-tooltip">
+                                                        <!-- <span class="tooltip  tooltip_right"></span> -->
+                                                    </i>
+                                                </span>
+                                                <span class="ds-inputs-form__txt-error ds-inputs-form__txt-error-phone"> Уже
+                                                    используется другим
+                                                    пользователем
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+    
                                 </div>
                                 <!-- Блок инпутов пароль -->
                                 <div class="auth-form__pass-container">
@@ -1286,30 +1313,6 @@
 
                             </div>
                             <div class="auth-form__phone-container">
-                                <div class="auth-form__phone">
-                                    <!-- Телефон -->
-                                    <div class="ds-inputs-component is-error">
-                                        <div class="ds-inputs-form  input-phone">
-                                            <span class="snowflake"></span>
-                                            <input id="ds-inputs-form__phone" class="ds-inputs-form__input" type="tel"
-                                                name="" data-validate-url="/forum/phpBB3/app.php/phone/validate"
-                                                tabindex="8" placeholder="+7(xxx) xxx-xx-xx">
-                                            <label class="ds-inputs-form__label" for="ds-inputs-form__input-phone"></label>
-                                        </div>
-                                        <div class="ds-inputs-form__info-block ds-inputs-form__info-block-phone">
-                                            <span class="ds-inputs-form__txt-info phone">
-                                                Будет отправлено СМС с кодом подтверждения
-                                                <i class="ds-icon ds-inputs-form__icon-info icon-info has-tooltip">
-                                                    <!-- <span class="tooltip  tooltip_right"></span> -->
-                                                </i>
-                                            </span>
-                                            <span class="ds-inputs-form__txt-error ds-inputs-form__txt-error-phone"> Уже
-                                                используется другим
-                                                пользователем
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
                                 <div class="auth-form__phone-txt">
                                     <div class="auth-form__txt-footnote">
                                         Регистрируясь на Сайте, вы заключаете
