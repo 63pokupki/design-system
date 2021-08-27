@@ -105,7 +105,6 @@
             border-bottom-right-radius: 0;
             font-weight: 600;
             color: $click-load-color;
-            box-shadow: 0 0 15px rgba(49, 140, 202, 0.2);
 
             &::before {
                 content: "";
@@ -146,7 +145,6 @@
             border-bottom-right-radius: 0;
             font-weight: 600;
             color: $click-load-color;
-            box-shadow: 0 0 15px rgba(49, 140, 202, 0.2);
 
             &::before {
                 display: none;
@@ -185,7 +183,7 @@
         background: #fff;
         border-radius: 10px;
         position: relative;
-        box-shadow: 0 7px 15px rgba(49, 140, 202, 0.2);
+        box-shadow: 0 0 5px rgba(49, 140, 202, 0.2);
     }
 
     // Форма
