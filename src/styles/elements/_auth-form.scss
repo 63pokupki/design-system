@@ -136,6 +136,17 @@
     }
 
     &__left-tab {
+        position: relative;
+        // Серая вертикальная полоска между кнопками
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            width: 2px;
+            height: 32px;
+            background: #eee;
+        }
+
         &.is-active {
             background: #fff;
             position: relative;
@@ -144,15 +155,6 @@
 
             &::before {
                 display: none;
-            }
-            // Серая вертикальная полоска между кнопками
-            &::after {
-                content: "";
-                position: absolute;
-                right: 0;
-                width: 2px;
-                height: 32px;
-                background: #eee;
             }
 
             @media (max-width: 767px) {
