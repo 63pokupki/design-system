@@ -385,6 +385,7 @@
 
     &__login-pass-container {
         display: flex;
+        flex-direction: column;
     }
 
     &__login-container,
@@ -420,8 +421,8 @@
 
     &__phone-container {
         display: flex;
+        flex-direction: column;
         width: 100%;
-        justify-content: space-between;
     }
 
     &__phone {
