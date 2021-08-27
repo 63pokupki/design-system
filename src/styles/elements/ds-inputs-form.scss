@@ -81,6 +81,10 @@ input {
         filter: none;
         -webkit-filter: none;
     }
+
+    &.input-password-repeat {
+        min-height: 85px;
+    }
 }
 
 .ds-inputs-form {
