@@ -78,17 +78,17 @@
         max-width: 230px;
         height: 61px;
         background: #fff;
-        font-size: 15px;
+        font-size: 16px;
+        font-weight: 600;
         user-select: none;
         cursor: pointer;
-        color: #1d1e1f;
+        color: $color-text-base;
         border-bottom: 2px solid #eee;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
 
         &:hover {
             color: $click-load-color;
-            font-weight: 600;
         }
 
         @media (max-width: 767px) {
@@ -101,7 +101,6 @@
         &.is-active {
             background: #fff;
             position: relative;
-            font-weight: 600;
             color: $click-load-color;
             border-bottom-color: $color-primary;
 
@@ -140,7 +139,6 @@
         &.is-active {
             background: #fff;
             position: relative;
-            font-weight: 600;
             color: $click-load-color;
             border-bottom-color: $color-primary;
 
