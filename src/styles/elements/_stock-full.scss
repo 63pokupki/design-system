@@ -21,6 +21,7 @@
             left: 0;
             z-index: 2;
             background: linear-gradient(0deg, #fff 0%, rgba(255, 255, 255, 0) 105%);
+            pointer-events: none;
         }
     }
 
@@ -35,6 +36,7 @@
     &__col {
         margin-right: 32px;
         width: 100%;
+        max-width: calc(74%);
     }
 
     &__stock-cond {

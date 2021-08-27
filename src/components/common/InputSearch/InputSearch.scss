@@ -12,7 +12,6 @@ $spui-InputSearch_font: $font-primary;
         width: 100%;
         font-family: inherit;
         font-size: inherit;
-        font: 400 12px $spui-InputSearch_font;
 
         &:focus {
             outline: unset;
@@ -22,7 +21,6 @@ $spui-InputSearch_font: $font-primary;
             color: $color-text-light-grey;
             font-size: inherit;
             font-family: inherit;
-            font: 400 12px $spui-InputSearch_font;
         }
 
         &::-ms-clear {

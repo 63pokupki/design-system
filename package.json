@@ -1,6 +1,6 @@
 {
     "name": "@63pokupki/design-system",
-    "version": "1.1.118",
+    "version": "1.1.133",
     "description": "UI component kit and design-system for 63 Pokupki project",
     "author": {
         "name": "63pokupki"
@@ -30,14 +30,14 @@
     ],
     "dependencies": {
         "@63pokupki/onboarding-core": "^1.0.6",
-        "@babel/runtime": "^7.13.10",
+        "@babel/runtime": "^7.14.0",
         "assign-deep": "^1.0.1",
-        "core-js": "^3.9.1",
+        "core-js": "^3.12.1",
         "lodash-es": "^4.17.21",
         "short-uuid": "^3.1.1",
-        "vue": "^2.6.12",
+        "vue": "^2.6.14",
         "vue-carousel": "git+https://github.com/nullilac/vue-carousel.git",
-        "vue-slider-component": "^3.2.4",
+        "vue-slider-component": "^3.2.13",
         "vue-the-mask": "^0.11.1"
     },
     "devDependencies": {
@@ -85,7 +85,7 @@
         "lint-staged": "^10.5.2",
         "mini-css-extract-plugin": "^0.11.0",
         "node-sass": "^4.14.1",
-        "postcss": "^7.0.32",
+        "postcss": "^8.2.10",
         "postcss-cli": "^7.1.1",
         "postcss-import": "^12.0.1",
         "postcss-loader": "^3.0.0",
@@ -104,7 +104,7 @@
         "vue-jest": "^3.0.7",
         "vue-loader": "^15.9.3",
         "vue-style-loader": "^4.1.3",
-        "vue-template-compiler": "^2.6.11",
+        "vue-template-compiler": "^2.6.14",
         "webpack": "^4.44.1",
         "webpack-cli": "^3.3.12",
         "webpack-dev-server": "^3.11.0"
@@ -135,7 +135,6 @@
             "jest-serializer-vue"
         ]
     },
-    "_id": "@63pokupki/design-system@0.0.575",
     "bugs": {
         "url": "https://github.com/63pokupki/design-system/issues"
     },

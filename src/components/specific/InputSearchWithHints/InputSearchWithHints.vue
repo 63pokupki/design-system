@@ -6,6 +6,7 @@
                     v-model="_value"
                     class="spui-InputSearchWithHints__input"
                     type="text"
+                    autocomplete="off"
                     placeholder="Поиск"
                     @keyup.enter="onSearch"
                     @keyup.up="onKeyUp"
