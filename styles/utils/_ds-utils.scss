@@ -1,0 +1,184 @@
+/* Внутренние стили дизайн системы - они не должны включаться в конечную сборку! */
+$color-primary: #36a6f2;
+
+body {
+    background: #eef2f4;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+        background-color: #dbdbdb;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #2ca1f0;
+    }
+
+    @media screen and (max-width: 1350px) {
+        padding: 0 20px;
+    }
+}
+
+.ds-home {
+    cursor: pointer;
+    width: 52px;
+    height: 52px;
+    background: $color-primary;
+    border-radius: 50%;
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 70px;
+    left: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+    &::after {
+        content: "";
+        width: 30px;
+        height: 30px;
+        background: url('~images/important_images/back.svg') no-repeat center center;
+        background-size: cover;
+    }
+}
+
+.ds-title {
+    width: 100%;
+    text-align: center;
+    color: #343b4c;
+    margin-block-start: 1.5em;
+    margin-block-end: 1.5em;
+}
+
+.ds-wrapper {
+    max-width: 1300px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
+}
+
+.ds-text {
+    margin: 20px auto;
+}
+
+.ds-code-wrapper {
+    max-width: 1300px;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.5);
+}
+
+// обозначение интерактивности элемента
+.ds-i {
+    position: relative;
+
+    &::before {
+        content: "Интерактивный элемент";
+        display: block;
+        position: absolute;
+        background: #ffe869;
+        padding: 10px 12px;
+        line-height: 15px;
+        color: #171717;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 600;
+        font-style: normal;
+        min-width: 120px;
+        box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+        bottom: 50%;
+        right: -15px;
+        left: auto;
+        transform: translate(100%, 50%);
+        text-align: center;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        background: #ffe869;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        transform: translateY(-50%) rotate(45deg);
+        right: -21px;
+        top: 50%;
+    }
+}
+
+.ds-divider {
+    margin: 20px;
+}
+
+.ds-wrapper > svg {
+    width: 50px;
+    height: 50px;
+    margin: 0 20px 20px 0;
+}
+
+.ds-сontent-list {
+    li {
+        margin-bottom: 5px;
+        font-size: 16px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        padding: 5px;
+        background: #93d4ff;
+        border-bottom: 2px solid $color-primary;
+    }
+}
+
+.ds-hl {
+    font-weight: 600;
+    background: #93d4ff;
+    padding: 2px 8px;
+    margin: 0 3px;
+    color: black;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.ds-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// переопределение кнопки "Copy" в примерах кода
+.code-toolbar > .toolbar button {
+    color: black !important;
+    font-weight: bold !important;
+    padding: 0.5em 0.6em !important;
+    background: rgb(235, 234, 234) !important;
+    cursor: pointer !important;
+}
+
+pre[class*="language-"] {
+    padding: 2rem !important;
+    font-size: 1rem !important;
+    background: #171717 !important;
+    border-radius: 10px !important;
+    max-height: 500px !important;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+        padding: 0 2px;
+        background-color: #dbdbdb;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $color-primary;
+    }
+}

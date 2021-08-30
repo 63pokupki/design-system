@@ -1,0 +1,126 @@
+@import "~styles/utils/_variables";
+@import "~styles/utils/_mixins";
+
+// Общее
+body {
+    font-family: $font-primary;
+    font-size: 14px;
+    padding: 0;
+    background: white;
+}
+
+body.ds {
+    margin: 0;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 20px;
+
+    @media screen and (max-width: 1024px) {
+        padding: 0;
+    }
+}
+
+.wrapper-header,
+.wrapper-footer {
+    max-width: 1184px;
+    margin: 0 auto;
+}
+
+// Здесь находятся вспомогательные классы, состояния и элементы
+
+// жирный шрифт
+.bold {
+    font-weight: 700;
+}
+
+// полужирный шрифт
+.semi-bold {
+    font-weight: 600;
+}
+
+// обычный шрифт
+.normal {
+    font-weight: normal;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-25 {
+    width: 25%;
+}
+
+.ta-c {
+    text-align: center;
+}
+
+// вешается на body чтобы предотвращать пролистывание
+.disable-scroll {
+    overflow: hidden;
+}
+
+.disable-transition {
+    transition: unset !important;
+
+    * {
+        transition: unset !important;
+    }
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+// базовая кнопка, сброс стилей
+button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    padding: unset;
+    display: inline-flex;
+    align-items: center;
+    color: inherit;
+    justify-content: center;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    font: 600 14px $font-primary;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+// скрывает элементы предназначенные только для сенсорных устройств
+@media screen and (min-width: 1025px) {
+    .touch-only {
+        display: none;
+    }
+}
+
+// @media screen and (max-width: $desctop) {
+//     .nav-bc-bar {
+//         display: none !important;
+//     }
+// }

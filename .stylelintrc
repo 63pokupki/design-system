@@ -1,0 +1,23 @@
+{
+    "plugins": [
+        "stylelint-scss"
+    ],
+    "extends": "stylelint-config-standard",
+    "rules": {
+        "font-family-no-missing-generic-family-keyword": null,
+        "declaration-block-no-shorthand-property-overrides": null,
+        "declaration-colon-newline-after": null,
+        "no-duplicate-selectors": null,
+        "no-descending-specificity": null,
+        "indentation": 4,
+        "at-rule-no-unknown": null,
+        "selector-pseudo-element-no-unknown": [
+            true,
+            {
+                "ignorePseudoElements": [
+                    "v-deep"
+                ]
+            }
+        ]
+    }
+}

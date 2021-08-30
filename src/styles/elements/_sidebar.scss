@@ -1,0 +1,136 @@
+// боковая панель
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    min-width: 100vw;
+    height: 100%;
+    min-height: 100vh;
+    z-index: 100;
+
+    .sidebar__body {
+        top: 0;
+        left: 0;
+        position: fixed;
+        overflow-y: auto;
+        overflow-x: hidden;
+        max-width: 90%;
+        min-width: 280px;
+        height: 100%;
+        z-index: 50;
+        visibility: hidden;
+        transform: translate(-100%, 0, 0);
+        background: $background-color-primary;
+        padding-bottom: 80px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .sidebar__background {
+        position: fixed;
+        top: 0;
+        visibility: hidden;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 40;
+        background: rgb(96, 98, 102);
+        opacity: 0;
+    }
+
+    .sidebar__close {
+        position: fixed;
+        right: 5px;
+        top: 25px;
+        width: 20px;
+        height: 20px;
+        z-index: 60;
+
+        &:active {
+            @include deep-click();
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 5px;
+            background: white;
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+
+    .btn-bg {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 62px;
+        padding: 0 10px;
+        position: sticky;
+        bottom: -50px;
+        background: $background-color-primary;
+        box-shadow: 0 -4px 16px rgba(18, 20, 77, 0.08);
+    }
+
+    @media screen and (min-width: $mobile) {
+        .sidebar__close {
+            right: 15px;
+            top: 10px;
+            width: 35px;
+            height: 35px;
+        }
+    }
+}
+
+// положение сайдбара справа
+.sidebar_right {
+    left: auto;
+    right: 0;
+
+    .sidebar__body {
+        left: auto;
+        right: 0;
+        transform: translate(100%, 0, 0);
+    }
+
+    .sidebar__background {
+        left: auto;
+        right: 0;
+    }
+
+    .sidebar__close {
+        right: auto;
+        left: 5px;
+    }
+
+    @media screen and (min-width: $mobile) {
+        .sidebar__close {
+            left: 15px;
+            top: 10px;
+            width: 35px;
+            height: 35px;
+        }
+    }
+}
+
+// состояние активного сайдбара
+.sidebar_is-active {
+    visibility: visible;
+    display: flex;
+
+    .sidebar__body {
+        transform: translate(0, 0, 0);
+        visibility: visible;
+    }
+
+    .sidebar__background {
+        opacity: 0.8;
+        visibility: visible;
+    }
+}

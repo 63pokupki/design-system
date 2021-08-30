@@ -1,0 +1,52 @@
+
+.ds-popover {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: auto;
+    max-height: 0;
+    background-color: $color-graphics-elements;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    transition: all 0.5s ease;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 20;
+
+    &::before {
+        content: "";
+        position: absolute;
+        display: flex;
+        width: 8px;
+        height: 8px;
+        background: url('~images/important_images/active_custom_card/triangle-modal.svg') center / cover;
+        top: -6px;
+        right: 15px;
+    }
+
+    &.is-visible {
+        max-height: 1000px;
+        visibility: visible;
+        transition: all 0.5s ease;
+        opacity: 1;
+        z-index: 20;
+    }
+
+    &_warning {
+        position: absolute;
+        bottom: -20px;
+        right: 3px;
+        padding: 5px;
+        box-shadow: none;
+        font-size: 11px;
+        background: $error-light;
+        color: #606266;
+
+        &::before {
+            left: 20px;
+            background: #ffd7d7;
+            transform: rotate(45deg) translateX(3px);
+        }
+    }
+}

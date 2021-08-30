@@ -1,0 +1,129 @@
+.pagination {
+    display: flex;
+    flex-direction: row;
+    margin: unset;
+    padding: unset;
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 24px;
+        height: 24px;
+        margin: 0 2px;
+        border-radius: 2px;
+        background: $pagination-color;
+        cursor: pointer;
+        padding: 0 5px;
+        font-size: 12px;
+        font-weight: 600;
+        text-decoration: none;
+        color: $color-text-base;
+
+        &:hover {
+            background: $color-primary;
+            color: #fff;
+        }
+
+        &.is-active {
+            background: $color-primary;
+            color: #fff;
+        }
+
+        a {
+            font-size: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            color: $color-text-base;
+        }
+
+        &:hover {
+            background: $color-primary;
+
+            a {
+                color: #fff;
+            }
+
+            .ds-icon {
+                color: #fff;
+            }
+        }
+
+        &.is-active {
+            background: $color-primary;
+
+            a {
+                color: #fff;
+            }
+        }
+
+        &.is-disabled {
+            pointer-events: none;
+
+            .ds-icon {
+                color: #e2e3e5;
+            }
+        }
+    }
+    // Переход на конкретную страницу
+    &__go-page {
+        display: none;
+        background: $color-primary;
+    }
+
+    .icon-arrow-back {
+        transform: scaleX(-1);
+        color: #fff;
+    }
+
+    .ds-icon {
+        font-size: 8px;
+    }
+
+    // Стрелки на первую/последнюю страницу
+    .icon-arrow {
+        &-left,
+        &-right {
+            color: $color-text-base;
+        }
+    }
+
+    // &__first-page,
+    // &__last-page {
+    //     display: none;
+    //     color: $color-text-base;
+    // }
+
+    // @media (max-width: 767px) {
+    //     .pagination {
+    //         &__first-page,
+    //         &__last-page {
+    //             display: flex;
+    //         }
+    //     }
+    // }
+}
+
+@media (-moz-touch-enabled: 1), (pointer: coarse) {
+    .pagination {
+        &__item:hover {
+            background: $pagination-color;
+
+            a {
+                color: $color-text-base;
+
+                .ds-icon {
+                    color: $color-text-base;
+                }
+            }
+        }
+
+        &__item.is-active {
+            background: $color-primary;
+
+            a {
+                color: #fff;
+            }
+        }
+    }
+}

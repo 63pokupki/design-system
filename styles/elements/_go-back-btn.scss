@@ -1,0 +1,26 @@
+.go-back-btn {
+    display: flex;
+    align-items: center;
+    color: $color-text-base;
+    text-decoration: none;
+
+    &__icon {
+        font-size: 16px;
+    }
+
+    &__text {
+        margin-left: 15px;
+        font-weight: bold;
+        font-size: 12px;
+        text-transform: uppercase;
+        white-space: nowrap;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &:hover {
+        color: $color-primary;
+        text-decoration: none;
+    }
+}

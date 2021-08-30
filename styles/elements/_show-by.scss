@@ -1,0 +1,82 @@
+.show-by {
+    display: flex;
+    align-items: flex-end;
+
+    &__text {
+        font-size: 12px;
+        line-height: 17px;
+        color: $color-text-base;
+        margin-right: 15px;
+    }
+
+    &__item {
+        margin-right: 4px;
+        color: $color-inactive;
+        font-size: 14px;
+        font-weight: $font-weight-primary;
+
+        &:hover {
+            color: $color-primary;
+        }
+
+        &:first-child {
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                width: 30px;
+                height: 30px;
+                transform: translate(-10px, -5px);
+                -webkit-transform: translate(-10px, -5px);
+                -moz-transform: translate(-10px, -5px);
+                -ms-transform: translate(-10px, -5px);
+                -o-transform: translate(-10px, -5px);
+            }
+        }
+
+        &:last-child {
+            margin-right: 0;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                width: 30px;
+                height: 30px;
+                transform: translate(-2px, -5px);
+                -webkit-transform: translate(-2px, -5px);
+                -moz-transform: translate(-2px, -5px);
+                -ms-transform: translate(-2px, -5px);
+                -o-transform: translate(-2px, -5px);
+            }
+        }
+
+        &:active {
+            @include deep-click(0.9);
+        }
+
+        &.is-selected {
+            position: relative;
+            color: $color-text-base;
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                left: -3px;
+                height: 1px;
+                width: 23px;
+                background: $color-primary;
+            }
+        }
+    }
+}

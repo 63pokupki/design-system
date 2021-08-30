@@ -1,0 +1,78 @@
+// шапка для сенсорных устройств
+.header-touch {
+    padding: 8px 10px;
+    position: relative;
+    border-bottom: 1px solid rgba(49, 140, 202, 0.25);
+    background: $background-color-primary;
+
+    .user-profile-menu {
+        position: absolute;
+        z-index: 3;
+        bottom: -1px;
+        left: 0;
+        transform: translateY(100%);
+        display: none;
+
+        .tooltip {
+            transform: translate(-20%, 100%);
+
+            &::before {
+                left: calc(20% - 3px);
+            }
+        }
+
+        &.is-active {
+            display: inline-block;
+        }
+
+        @media screen and (orientation: landscape) and (max-width: 1024px) {
+            height: calc(100vh - 56px);
+            overflow-y: auto;
+            padding-bottom: 50px;
+        }
+
+        @media screen and (max-width: 480px) {
+            width: 100%;
+            height: calc(100vh - 56px);
+            overflow-y: auto;
+            padding-bottom: 50px;
+        }
+    }
+
+    &__menu-opened {
+        position: relative;
+        color: $color-primary;
+
+        &::after {
+            position: absolute;
+            content: "";
+            bottom: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 7px 7px 0 7px;
+            border-color: #cbe2f2 transparent transparent transparent;
+            z-index: 5;
+        }
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        width: 95px;
+    }
+
+    &__caption-icon-w {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

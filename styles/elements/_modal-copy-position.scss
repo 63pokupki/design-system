@@ -1,0 +1,201 @@
+.modal-copy-position {
+    .modal {
+        &__wrap {
+            padding: 30px;
+            width: 550px;
+        }
+
+        &__btn-close {
+            margin: 6px 5px 0 0;
+
+            &::after,
+            &::before {
+                display: none;
+            }
+        }
+
+        &__header {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        &__position-name {
+            text-align: center;
+            font-weight: 600;
+            margin: 0 0 20px 0;
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            min-width: 100%;
+            overflow: visible;
+
+            .btn {
+                &-container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 10px;
+
+                    .ds-btn {
+                        max-width: 160px;
+                        width: 100%;
+                        height: 32px;
+                        font-size: 14px;
+                        padding: 0 18px;
+                    }
+                }
+
+                &-copy {
+                    margin-right: 25px;
+                }
+            }
+        }
+        // Select
+        &__select-position-wrap {
+            display: flex;
+            width: 100%;
+            height: 48px;
+            margin: 0 0 20px 0;
+            position: relative;
+
+            .ds-triangle {
+                position: absolute;
+                right: 0;
+                top: 0;
+                z-index: 14;
+                margin: 17px 10px 0 0;
+
+                &::after {
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+        }
+
+        &__select-position {
+            width: 100%;
+            padding: 15px 0 15px 15px;
+            background: transparent;
+            font-size: 16px;
+            color: $color-text-base;
+            border: 0;
+            appearance: none;
+            outline: none;
+            cursor: pointer;
+            position: absolute;
+            z-index: 12;
+
+            &:focus {
+                ~.modal__select {
+                    border-color: $click-load-color;
+
+                    &-purchase::after {
+                        color: $color-primary;
+                    }
+
+                    &-catalog::after {
+                        color: $color-primary;
+                    }
+                }
+            }
+
+            >option {
+                background: $background-color-primary;
+                cursor: pointer;
+            }
+        }
+
+        &__select {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            min-height: 50px;
+            margin-bottom: 20px;
+            padding: 0;
+            background: $background-color-primary;
+            border: 1px solid $color-inactive;
+            border-radius: 3px;
+            cursor: pointer;
+            z-index: 10;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 13px;
+                top: -11px;
+                background: #fff;
+                width: 70px;
+                height: 15px;
+                text-align: center;
+                font-size: 14px;
+                font-weight: 600;
+                color: $color-inactive;
+            }
+
+            &-purchase::after {
+                content: "Закупка";
+            }
+
+            &-catalog::after {
+                content: "Каталог";
+            }
+        }
+
+        &__selected-position {
+            font-size: 16px;
+            color: $color-text-base;
+
+            &::after {
+                content: "";
+            }
+        }
+
+        &__toggle-list {
+            width: 100%;
+            width: calc(100% + 4px);
+            height: auto;
+            max-height: 0;
+            position: absolute;
+            bottom: -4px;
+            left: -2px;
+            transform: translateY(100%);
+            padding: 0;
+            margin: 0;
+            background: #fff;
+            border: 2px solid $click-load-color;
+            border-radius: 3px;
+            color: $color-text-base;
+            list-style: none;
+            opacity: 0;
+            z-index: 10;
+            overflow-y: auto;
+
+            li {
+                padding: 5px 0 5px 15px;
+
+                &:hover {
+                    background: $modal-copy-selected-color;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .modal-copy-position {
+        .modal {
+            &__wrap {
+                padding: 30px 15px;
+                width: 320px;
+            }
+        }
+    }
+}

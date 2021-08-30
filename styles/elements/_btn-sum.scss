@@ -1,0 +1,67 @@
+.btn-sum {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &:hover {
+        .btn-sum__sum-num {
+            border-bottom: 1px solid $color-primary;
+        }
+    }
+
+    &__sum-num {
+        width: 34px;
+        margin: 0 2px;
+        font-size: 16px;
+        appearance: none;
+        border: none;
+        text-align: center;
+        border-bottom: 1px solid transparent;
+
+        &:active,
+        &:focus {
+            border-bottom: 1px solid $color-primary;
+        }
+    }
+
+    &__minus,
+    &__plus {
+        position: relative;
+        flex-shrink: 0;
+        width: 24px;
+        height: 24px;
+        min-width: 20px;
+        border-radius: 50%;
+        background: rgba(54, 166, 242, 0.5);
+        color: #fff;
+
+        &:hover {
+            background: #0080f6;
+        }
+
+        &:active {
+            transform: scale(0.95);
+            background: $color-primary;
+        }
+
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            width: 5px;
+            height: 2px;
+            background: #fff;
+        }
+    }
+
+    &__plus {
+        &::before {
+            width: 10px;
+            transform: rotate(90deg);
+        }
+
+        &::after {
+            width: 10px;
+        }
+    }
+}

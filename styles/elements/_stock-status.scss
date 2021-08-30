@@ -1,0 +1,140 @@
+$stock-status-color-open: #00ca34;
+$stock-status-color-fix: #00ca34;
+$stock-status-color-soon-stop: #e39700;
+$stock-status-color-sorting: #edb900;
+$stock-status-color-close: #f32e2e;
+$stock-status-color-pay: #f32e2e;
+$stock-status-color-delivery: $color-primary;
+$stock-status-color-waiting-cargo: #12d1af;
+$stock-status-color-waiting-invoice: #cc6bf9;
+$stock-status-color-ready: #30b4ff;
+
+// статус закупки
+.stock-status {
+    display: flex;
+    align-items: center;
+
+    &__icon {
+        font-size: 24px;
+        cursor: default;
+        text-align: center;
+        min-width: 50px;
+
+        &::before {
+            cursor: default;
+        }
+    }
+
+    &__text {
+        font-size: 14px;
+        margin-left: 10px;
+        font-weight: bold;
+    }
+
+    // статусы
+    &.is-open {
+        color: $stock-status-color-open;
+
+        .stock-status__icon {
+            &::before {
+                content: $icon-box;
+            }
+        }
+    }
+
+    &.is-fix {
+        color: $stock-status-color-open;
+
+        .stock-status__icon {
+            &::before {
+                content: $icon-box;
+            }
+        }
+    }
+
+    &.is-soon-stop {
+        color: $stock-status-color-soon-stop;
+
+        .stock-status__icon {
+            &::before {
+                content: $icon-box;
+            }
+        }
+    }
+
+    &.is-sorting {
+        color: $stock-status-color-sorting;
+
+        .stock-status__icon {
+            font-size: 30px;
+
+            &::before {
+                content: $icon-sort;
+            }
+        }
+    }
+
+    &.is-close {
+        color: $stock-status-color-close;
+
+        .stock-status__icon {
+            &::before {
+                content: $icon-stop;
+            }
+        }
+    }
+
+    &.is-delivery {
+        color: $stock-status-color-delivery;
+
+        .stock-status__icon {
+            &::before {
+                content: $icon-boxes;
+            }
+        }
+    }
+
+    &.is-waiting-cargo {
+        color: $stock-status-color-waiting-cargo;
+
+        .stock-status__icon {
+            font-size: 30px;
+
+            &::before {
+                content: $icon-car;
+            }
+        }
+    }
+
+    &.is-waiting-invoice {
+        color: $stock-status-color-waiting-invoice;
+
+        .stock-status__icon {
+            &::before {
+                content: $icon-sandglass;
+            }
+        }
+    }
+
+    &.is-pay {
+        color: $stock-status-color-pay;
+
+        .stock-status__icon {
+            &::before {
+                content: $icon-ruble;
+            }
+        }
+    }
+
+    &.is-ready {
+        color: $stock-status-color-ready;
+
+        .stock-status__icon {
+            font-size: 38px;
+
+            &::before {
+                content: $icon-map-mark;
+            }
+        }
+    }
+}

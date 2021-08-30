@@ -1,0 +1,46 @@
+// блок рекомендаций товаров
+.items-recomendation {
+    &__slider {
+        display: block;
+        background-color: white;
+    }
+
+    &__wrap {
+        margin: 0 -15px 0;
+    }
+
+    &__heading {
+        font-weight: bold;
+        font-size: 18px;
+        color: #4b4b4b;
+    }
+
+    .slider-viewing {
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        // Стилизованный скролл
+        &::-webkit-scrollbar {
+            height: 7px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 3px;
+            background: $color-primary;
+            width: 30px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: #e0eef7;
+            border-radius: 3px;
+        }
+    }
+
+    .stock-card-vertical-wrapper {
+        width: 288px;
+    }
+
+    .stock-card-vertical-wrapper:hover .stock-card-vertical {
+        box-shadow: unset;
+    }
+}

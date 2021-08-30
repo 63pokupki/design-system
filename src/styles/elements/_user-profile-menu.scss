@@ -1,0 +1,40 @@
+.user-profile-menu {
+    padding: 5px;
+    color: $color-text-heading;
+    min-width: 305px;
+    box-shadow: 0 0 16px rgba(105, 153, 247, 0.25);
+
+    .user-profile-menu__rating {
+        margin-right: 10px;
+        display: block;
+    }
+
+    .user-profile-menu__profile {
+        margin-right: 30px;
+        max-width: 180px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .user-profile-menu__close {
+        width: 22px;
+        height: 22px;
+
+        &::before,
+        &::after {
+            height: 2px;
+        }
+    }
+
+    .user-profile-menu__close-w {
+        margin-left: auto;
+    }
+
+    .link {
+        color: #38393b;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+}

@@ -1,0 +1,127 @@
+$main-padding-modal: 15px;
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+    &.is-visible {
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.5s;
+
+        .modal__bg {
+            opacity: 1;
+            visibility: visible;
+            transition: all 0.5s;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+    }
+
+    &__bg {
+        position: fixed;
+        top: 0;
+        // bottom: 0;
+        bottom: -60px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        min-height: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        z-index: 1000;
+        transition: all 0.5s;
+        opacity: 0;
+        visibility: hidden;
+
+        &.is-visible {
+            opacity: 1;
+            visibility: visible;
+            transition: all 0.5s;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+    }
+
+    &__wrap {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        max-width: 95%;
+        max-height: 95%;
+        background: #fff;
+        padding: $main-padding-modal;
+        z-index: 1001;
+
+        .modal__btn-close {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 35px;
+            height: 35px;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+            z-index: 5;
+
+            &:hover {
+                .icon-close {
+                    &::after,
+                    &::before {
+                        background-color: $color-primary;
+                    }
+                }
+            }
+
+            &:active {
+                &::before {
+                    width: 15px;
+                }
+
+                &::after {
+                    width: 15px;
+                    left: 10px;
+                }
+            }
+
+            &::after,
+            &::before {
+                content: "";
+                position: absolute;
+                width: 19px;
+                height: 3px;
+                background-color: #000;
+                display: none;
+            }
+
+            &::after {
+                transform: rotate(45deg);
+                left: 8px;
+            }
+
+            &::before {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    &__header {
+        margin: 15px 0 20px 0;
+    }
+
+    &__content {
+        overflow: auto;
+    }
+}

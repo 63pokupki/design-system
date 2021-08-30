@@ -1,0 +1,9 @@
+// кнопка Отметить позицию для организатора
+.org-get-position-btn {
+    font-size: 20px;
+    color: $color-primary;
+
+    &:active {
+        @include deep-click(0.9);
+    }
+}

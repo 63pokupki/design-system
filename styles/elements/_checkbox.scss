@@ -1,0 +1,122 @@
+//  Чекбокс
+.checkbox {
+    display: inline-flex;
+    padding-left: 25px;
+    min-width: 18px;
+    min-height: 14px;
+
+    &__input {
+        display: none;
+    }
+
+    &__label {
+        user-select: none;
+        cursor: pointer;
+        position: relative;
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: translateX(-25px);
+            background: white;
+            border: 1px solid rgba(49, 140, 202, 0.75);
+            border-radius: 2px;
+            width: 18px;
+            height: 18px;
+        }
+
+        &::after {
+            content: "";
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 5px;
+            transform: translateX(-21px) rotate(-45deg);
+            border-bottom: 2px solid $color-primary;
+            border-left: 2px solid $color-primary;
+            width: 10px;
+            height: 6px;
+        }
+    }
+}
+
+.checkbox__input:checked + .checkbox__label {
+    &::after {
+        display: block;
+    }
+}
+
+.checkbox_no-chx {
+    padding-left: unset;
+
+    .checkbox__label {
+        &::before {
+            display: none;
+        }
+    }
+
+    .checkbox__input:checked + .checkbox__label {
+        &::after {
+            display: none;
+        }
+    }
+
+    .checkbox__input:checked {
+        ~ .checkbox__label {
+            color: $color-primary;
+        }
+    }
+}
+
+.checkbox_circle {
+    .checkbox__label {
+        &::before {
+            border-radius: 50%;
+        }
+    }
+}
+
+.checkbox_inverted {
+    .checkbox__label {
+        &::before {
+            background: $color-primary;
+            border: 1px solid $color-primary;
+        }
+
+        &::after {
+            border-bottom: 2px solid white;
+            border-left: 2px solid white;
+        }
+    }
+}
+
+.checkbox_accent {
+    .checkbox__input:checked + .checkbox__label {
+        &::before {
+            background: $color-primary;
+            border: 1px solid $color-primary;
+        }
+
+        &::after {
+            border-bottom: 2px solid white;
+            border-left: 2px solid white;
+        }
+    }
+}
+
+.checkbox_dot {
+    .checkbox__label {
+        &::after {
+            width: 12px;
+            height: 12px;
+            background-color: $color-primary;
+            border-radius: 50%;
+            left: -1px;
+            top: 3px;
+            // border: 2px solid $color-primary;
+        }
+    }
+}

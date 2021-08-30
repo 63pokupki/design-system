@@ -1,0 +1,91 @@
+.input-range {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+
+    &__active {
+        position: absolute;
+        height: 2px;
+        min-width: 0;
+        max-width: 100%;
+        margin: 0;
+        background-color: $color-primary;
+        z-index: 4;
+    }
+}
+
+input[type="range"].input-range__right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+
+input[type="range"].input-range__left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+
+input[type="range"] {
+    width: 100%;
+    -webkit-appearance: none;
+    background: #9ad2f8;
+    height: 2px;
+    border: none;
+    margin: 0;
+    border-style: none;
+    outline: none;
+    outline-offset: 0;
+    pointer-events: none; //Отключает взаимодействие с мышью
+    &::-moz-focus-inner {
+        border-style: none;
+    }
+
+    &::-moz-focus-outer {
+        border-style: none;
+    }
+}
+
+// Ползунок в Chrome, Opera, Safari
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: $color-primary;
+    border: 1px solid #fff !important;
+    width: 16px;
+    height: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    pointer-events: all; // Позволяет взаимодействовать с нижележащими элементами(Ползунками)
+    z-index: 2;
+    position: relative;
+
+    &:active {
+        background: $color-active;
+    }
+}
+
+// Ползунок в FireFox
+input[type="range"]::-moz-range-thumb {
+    background: $color-primary;
+    border: 1px solid #fff !important;
+    width: 16px;
+    height: 16px;
+    z-index: 2;
+    border-radius: 10px;
+    cursor: pointer;
+    appearance: none;
+    position: relative;
+    pointer-events: all; // Позволяет взаимодействовать с нижележащими элементами(Ползунками)
+    &:active {
+        background: $color-active;
+    }
+}
+// Трек в FireFox
+input[type="range"]::-moz-range-track {
+    outline: none;
+    z-index: 4;
+    pointer-events: none;
+}

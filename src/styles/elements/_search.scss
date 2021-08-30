@@ -1,0 +1,75 @@
+// input типа поиск
+.search {
+    position: relative;
+    width: 100%;
+
+    &__bar {
+        background: #fff;
+        border: 1.5px solid $color-primary;
+        border-radius: 48px;
+        padding-left: 20px;
+        padding-right: 50px;
+        height: 42px;
+        width: 100%;
+
+        &:focus {
+            outline: unset;
+        }
+
+        &::placeholder {
+            color: $color-text-light-grey;
+            font-size: 12px;
+        }
+
+        &::-ms-clear {
+            display: none;
+        }
+    }
+
+    &__button {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        border-radius: 50%;
+        transform: translateY(-50%);
+
+        &:active {
+            transform: translateY(-50%) scale(0.9);
+        }
+    }
+
+    &__category {
+        top: 50%;
+        right: 55px;
+        transform: translateY(-50%);
+        position: absolute;
+    }
+
+    &__button-clear {
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        top: 50%;
+        right: 12px;
+        color: $color-primary;
+        font-size: 24px;
+        border-radius: 50%;
+        transform: translateY(-50%);
+
+        &:active {
+            transform: translateY(-50%) scale(0.9);
+        }
+    }
+    // Поиск с кнопкой очистки
+    &.search-clear {
+        .search__button {
+            right: 35px;
+        }
+    }
+}
+
+.search.has-categories {
+    .search__bar {
+        padding-right: 145px;
+    }
+}

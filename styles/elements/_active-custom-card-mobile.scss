@@ -1,0 +1,457 @@
+.card-active-custom__wrap.is-toggle {
+    &.mobile {
+        .card-active-custom__toggle-block {
+            max-height: 1000px;
+            margin-top: 0;
+            visibility: visible;
+            opacity: 1;
+            transition: all 0.8s;
+        }
+
+        .card-active-custom__header {
+            .icon-arrow-down {
+                transform: rotate(-180deg);
+                transition: all $transition-slow;
+            }
+        }
+    }
+}
+
+.icon-arrow-down {
+    transition: all $transition-slow;
+}
+
+.card-active-custom__wrap.mobile {
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+    max-width: 768px;
+    padding: 0;
+    margin: 0 0 10px 0;
+
+    .card-active-custom__header {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .card-active-custom__purchase-block {
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        align-items: center;
+        margin: 0 0 12px 0;
+
+        p {
+            margin: 11px 0 11px 5px;
+            font-size: 11px;
+            color: $dark-grey-color;
+        }
+
+        span {
+            font-size: 11px;
+            font-weight: 600;
+        }
+    }
+
+    // Стрелка справа вверху
+    .icon-arrow-down {
+        font-size: 6px;
+    }
+
+    .card-active-custom__heading {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 15px;
+        padding-right: 35px;
+        font-weight: bold;
+
+        a {
+            color: $dark-brown-color;
+            text-decoration: none;
+        }
+
+        h3 {
+            margin: 0;
+        }
+
+        .rating-star-org {
+            margin-bottom: 5px;
+        }
+    }
+
+    .card-active-custom__collection {
+        margin-bottom: 20px;
+    }
+
+    .card-active-custom__purchaseStatus {
+        font-size: 12px;
+
+        .stock-status__text {
+            font-size: 12px;
+        }
+    }
+
+    .card-active-custom__statusbar {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin: 0 0 18px 0;
+
+        .statusbar {
+            width: 100%;
+            margin-right: 25px;
+
+            &__line {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .card-active-custom__like-single {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        .icon-heart {
+            font-size: 22px;
+            color: $color-primary;
+        }
+    }
+
+    .card-active-custom__organizer-block {
+        margin-bottom: 5px;
+        position: relative;
+
+        .organizer-block {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            p {
+                margin-right: 5px;
+            }
+
+            &__name-wrap {
+                margin: 0;
+            }
+
+            &__name {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: auto;
+
+                div {
+                    color: #000;
+                    margin-right: 10px;
+                }
+
+                p {
+                    font-size: 11px;
+                    margin-top: 1px;
+                }
+            }
+        }
+
+        .rating-star-org {
+            align-items: baseline;
+            height: 17px;
+
+            &__icon {
+                font-size: 11px;
+            }
+        }
+
+        .card-active-custom__like-single {
+            position: absolute;
+            right: 0;
+            top: -2px;
+        }
+    }
+
+    .card-active-custom__toggle-block {
+        height: auto;
+        max-height: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.5s;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .card-active-custom__img {
+        width: 100%;
+        min-width: 320px;
+        max-width: 100%;
+        max-height: 100%;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .card-active-custom__slider-img {
+        justify-content: center;
+        position: relative;
+        // max-height: 295px;
+        height: auto;
+        background: transparent;
+
+        .slider-wrap {
+            // max-width: 320px;
+            max-width: max-content;
+            min-height: 100%;
+            transform: translateX(0);
+        }
+
+        .slider-viewing {
+            max-width: 320px;
+            max-height: 320px;
+            height: 100%;
+        }
+
+        .arrow {
+            &::after,
+            &::before {
+                background: $color-primary;
+            }
+        }
+
+        .btn-l,
+        .btn-r {
+            position: absolute;
+            width: 45px;
+            height: 45px;
+            top: 40%;
+            // padding-right: 30px;
+            background: rgba(255, 255, 255, 0.8);
+
+            .arrow {
+                background: none;
+            }
+
+            &:active {
+                width: 42px;
+                height: 42px;
+            }
+        }
+
+        .btn-r {
+            right: 0;
+        }
+
+        .btn-l {
+            left: 0;
+            z-index: 12;
+        }
+
+        img {
+            margin: 10px 10px 10px 0;
+        }
+    }
+
+    .card-active-custom__slider-items {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-height: auto;
+        width: 320px;
+        position: relative;
+    }
+
+    //Подкатегории
+    .card-active-custom__img-subcategory {
+        display: flex;
+        position: relative;
+        justify-content: center;//Андрей
+        max-width: 100%;
+        max-height: 100%;
+        // margin-right: 20px;
+
+        img {
+            width: 100%;
+            margin: 0;
+            object-fit: contain;
+        }
+    }
+
+    .hover-translucend {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 45px;
+        padding: 0 8px;
+        background: rgba(255, 255, 255, 0.8);
+        transition: 0.4s;
+        cursor: pointer;
+        z-index: 10;
+
+        p {
+            visibility: visible;
+            margin: 0;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 14px;
+            text-align: center;
+            color: $dark-grey-color;
+        }
+
+        p:nth-child(1) {
+            max-width: 50%;
+            text-align: left;
+        }
+
+        p:nth-child(2) {
+            font-size: 14px;
+            font-weight: 600;
+        }
+    }
+
+    .card-active-custom__hashtags {
+        display: inline-flex;
+        position: relative;
+        justify-content: space-evenly;
+
+        a {
+            color: $color-primary;
+            font-weight: 700;
+            text-decoration: none;
+            pointer-events: none;
+        }
+
+        span {
+            color: $color-primary;
+            font-weight: 700;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 1px;
+            top: 50%;
+            background: $color-primary;
+        }
+
+        &::after {
+            right: -15px;
+        }
+
+        &::before {
+            left: -15px;
+        }
+    }
+
+    .card-active-custom__description {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+        padding-right: 30px;
+        margin: 10px 0 0 0;
+        padding: 0 15px 15px 15px;
+    }
+
+    .card-active-custom__description-txt {
+        // white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        margin: 15px 0 0 0;
+
+        a,
+        p {
+            padding-right: 0;
+            font-size: 12px;
+            color: $dark-brown-color;
+            // white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            font-weight: 400;
+        }
+
+        &.is-toggle a {
+            white-space: normal;
+        }
+    }
+
+    .card-active-custom__delivery-date,
+    .card-active-custom__payment-method {
+        span {
+            color: #4b4b4b;
+        }
+    }
+
+    .card-active-custom__delivery-date,
+    .card-active-custom__payment-method,
+    .card-active-custom__access-lvl {
+        margin-right: 5px;
+    }
+
+    .card-active-custom__description-status {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0;
+    }
+
+    .card-active-custom__delivery-date,
+    .card-active-custom__access-lvl,
+    .card-active-custom__payment-method,
+    .card-active-custom__comments {
+        display: flex;
+        flex-direction: column;
+
+        p {
+            font-size: 11px;
+            font-weight: 600;
+            color: $dark-brown-color;
+            white-space: nowrap;
+        }
+
+        span {
+            font-size: 11px;
+            font-weight: 400;
+        }
+
+        a {
+            color: $color-primary;
+
+            span {
+                color: $color-primary;
+            }
+        }
+    }
+
+    .card-active-custom__delivery-date,
+    .card-active-custom__access-lvl,
+    .card-active-custom__payment-method {
+        p {
+            margin-bottom: 2px;
+        }
+    }
+
+    .card-active-custom__comments {
+        p {
+            margin-bottom: -2px;
+        }
+
+        span {
+            font-weight: normal;
+        }
+    }
+}
+
+//Кнопка "галка" в хедере
+.arrow-wrap {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: all 0.8s;
+}

@@ -1,0 +1,552 @@
+// @import "variables.scss";
+.card-active-custom__wrap {
+    margin: 0 0 10px 0;
+
+    &.tablet {
+        min-width: 768px;
+
+        &.card-active-custom__wrap {
+            width: 100%;
+            cursor: pointer;
+        }
+
+        &.is-toggle {
+            .card-active-custom__toggle-block {
+                max-height: 1000px;
+                margin-top: 5px;
+                visibility: visible;
+                opacity: 1;
+                transition: all 0.8s;
+
+                .img-container_middle {
+                    height: auto;
+                    visibility: visible;
+                    opacity: 1;
+                    transition: all 1s;
+
+                    img {
+                        visibility: visible;
+                        height: auto;
+                        opacity: 1;
+                        transition: all 2s;
+                    }
+                }
+            }
+
+            .organizer-block__rating {
+                visibility: visible;
+                opacity: 1;
+                transition: all 0.3s;
+            }
+
+            .icon-arrow-down {
+                transform: rotate(180deg);
+                transition: all $transition-slow;
+            }
+
+            &:hover {
+                &::after {
+                    box-shadow: none;
+                }
+            }
+
+            .card-active-custom__header-statusbar {
+                display: flex;
+            }
+
+            .card-active-custom__header-collection {
+                display: flex;
+            }
+
+            .card-active-custom__header-left {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+        }
+
+        .icon-arrow-down {
+            transition: all $transition-slow;
+        }
+        //ОТображает изображения в подкатергориях
+        &.desktop-subcat {
+            &.desktop {
+                .card-active-custom__img-subcategory {
+                    display: flex;
+                    min-width: 152px;
+                }
+
+                .card-active-custom__img-wrap {
+                    width: 100%;
+                    max-width: 544px;
+                }
+
+                .card-active-custom__img-tablet {
+                    display: none;
+                }
+
+                .card-active-custom__description {
+                    .suitable-catalogs {
+                        display: flex;
+                    }
+
+                    .slider {
+                        display: flex;
+                    }
+                }
+            }
+        }
+
+        .slider-items {
+            margin-right: 0;
+        }
+
+        .card-active-custom__header {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            cursor: pointer;
+
+            &-heading {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin-right: 20px;
+            }
+
+            &-collection {
+                display: none;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                margin: 0 0 10px 0;
+            }
+
+            &-statusbar {
+                display: none;
+                justify-content: flex-start;
+                align-items: center;
+                flex-wrap: nowrap;
+                width: 100%;
+                max-width: 235px;
+                margin: 10px 0 20px 0;
+
+                .statusbar {
+                    display: inline-flex;
+                    width: 100%;
+                    max-width: 235px;
+                    margin-right: 10px;
+
+                    p {
+                        font-style: normal;
+                        font-size: 11px;
+                        line-height: 15px;
+
+                        span {
+                            font-weight: bold;
+                        }
+                    }
+                }
+
+                .icon-heart {
+                    font-size: 24px;
+                    color: $color-primary;
+
+                    &:hover {
+                        @extend .icon-heart-filled;
+                    }
+                }
+            }
+
+            // Избранное 04.2020
+            .favorite {
+                margin: 5px 0 0 0;
+
+                &__action {
+                    font-size: 11px;
+                }
+
+                .like__icon {
+                    max-width: 50px;
+                    font-size: 26px;
+                }
+            }
+
+            .card-active-custom__status-block {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                align-items: baseline;
+                flex-shrink: 0;
+                width: 210px;
+
+                .like {
+                    display: flex;
+                    align-items: flex-start;
+                }
+
+                p {
+                    margin: 0 5px 0 0;
+                    font-size: 11px;
+                }
+            }
+        }
+
+        .card-active-custom__btn-toggle {
+            display: flex;
+            position: absolute;
+            top: -10px;
+            right: 0;
+            transition: all 0.8s;
+        }
+
+        .card-active-custom__header-heading-wrap {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .card-active-custom__heading {
+            display: block;
+            align-items: flex-start;
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 19px;
+            flex-shrink: 2;
+            // margin: 0 0 10px 0;
+            padding: 0 60px 0 0;
+
+            a {
+                color: $dark-brown-color;
+                text-decoration: none;
+                margin: 0 10px 0 0;
+            }
+
+            .rating-star-org_icon {
+                width: 15px;
+                height: 15px;
+            }
+
+            .rating-star-org_value {
+                font-size: 16px;
+            }
+        }
+
+        //Левый блок шапки
+        .card-active-custom__collection {
+            display: flex;
+            margin: 5px 0;
+            position: relative;
+        }
+
+        .card-active-custom__collection.start {
+            .stock-status__text {
+                color: #0dc53d;
+
+                &::before {
+                    content: "Сбор ";
+                    color: #0dc53d;
+                }
+            }
+
+            .stock-status__icon {
+                color: #0dc53d;
+            }
+        }
+
+        .card-active-custom__collection.stop {
+            .stock-status__text {
+                color: #ff8000;
+
+                &::before {
+                    content: "Скоро стоп ";
+                }
+            }
+
+            .stock-status__icon {
+                color: #ff8000;
+            }
+        }
+
+        //Правый блок шапки
+        .card-active-custom__org-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 0 25px 0 0;
+        }
+
+        .card-active-custom__header-right-block {
+            display: flex;
+            flex-direction: column;
+            padding-left: 5%;
+            margin-right: 20px;
+        }
+        // .organizer-block__rating {
+        //     visibility: hidden;
+        //     opacity: 0;
+        //     transition: all .3s;
+        // }
+
+        .card-active-custom__purchase-block {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            flex-shrink: 0;
+            font-size: 11px;
+            margin: 12px 0 0 0;
+
+            // Отображаем в свёрнутом состоянии
+            &.short {
+                display: flex;
+                height: 25px;
+                margin: 0 0 10px 0;
+            }
+            // Скрываем в раскрытом состоянии
+            &.toggle {
+                display: none;
+                margin: 0 0 20px 0;
+            }
+
+            p {
+                margin: 0 10px 0 5px;
+                color: $dark-grey-color;
+                white-space: nowrap;
+            }
+
+            span {
+                color: $dark-grey-color;
+                font-weight: 600;
+                white-space: nowrap;
+            }
+        }
+
+        .card-active-custom__like {
+            .icon-like {
+                stroke-width: 2;
+            }
+        }
+
+        //Выпадающий блок
+        .card-active-custom__toggle-block {
+            display: flex;
+            height: auto;
+            max-height: 0;
+            overflow: hidden;
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.5s;
+
+            .card-active-custom__comments {
+                margin-right: 10px;
+            }
+
+            .img-container_middle {
+                height: 0;
+                visibility: hidden;
+                opacity: 0;
+                transition: all 0.5s;
+
+                img {
+                    visibility: hidden;
+                    height: 0;
+                    transition: all 0.5s;
+                }
+            }
+
+            //Подкатегории
+            .card-active-custom__img-subcategory {
+                display: flex;
+                position: relative;
+                max-width: 190px;
+                max-height: 175px;
+                margin-right: 15px;
+                min-width: 175px;
+                min-height: 175px;
+
+                .hover-translucend {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    position: absolute;
+                    // left: 0;
+                    // right: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 45px;
+                    background: rgba(255, 255, 255, 0.8);
+                    transition: 0.4s;
+                    visibility: visible;
+                    cursor: pointer;
+
+                    p {
+                        visibility: visible;
+                        margin: 0;
+                        font-size: 12px;
+                        font-weight: 600;
+                        line-height: 14px;
+                        text-align: center;
+                        color: $dark-grey-color;
+                    }
+
+                    p:nth-child(1) {
+                        max-width: 50%;
+                    }
+                }
+
+                img {
+                    width: auto;
+                }
+            }
+
+            //Слайдер
+            .slider {
+                margin: 20px 0 0 0;
+
+                .slider-wrap {
+                    max-width: 305px;
+                }
+            }
+        }
+
+        .card-active-custom__hashtags {
+            display: flex;
+            width: 100%;
+            justify-content: flex-start;
+
+            a {
+                margin-right: 15px;
+                color: $color-primary;
+                font-size: 12px;
+                font-weight: 700;
+                text-decoration: none;
+                pointer-events: none;
+            }
+
+            &.hidden {
+                display: none;
+            }
+
+            span {
+                color: $color-primary;
+                font-weight: 700;
+            }
+        }
+
+        .card-active-custom__description-status {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 20px;
+        }
+
+        .card-active-custom__delivery-date,
+        .card-active-custom__access-lvl,
+        .card-active-custom__payment-method,
+        .card-active-custom__comments {
+            display: flex;
+            flex-direction: column;
+            margin-right: 15px;
+
+            p {
+                font-size: 11px;
+                font-weight: 600;
+                margin-bottom: 2px;
+                color: $dark-brown-color;
+                white-space: nowrap;
+            }
+
+            span {
+                font-size: 12px;
+                color: $light-grey-color-txt;
+            }
+
+            a {
+                font-size: 12px;
+                color: $color-primary;
+
+                span {
+                    font-size: 12px;
+                    color: $color-primary;
+                }
+            }
+        }
+
+        .card-active-custom__comments {
+            p {
+                margin-bottom: 0;
+            }
+        }
+
+        .card-active-custom__delivery-date {
+            p:nth-child(1) {
+                margin: 0 0 5px 0;
+            }
+        }
+
+        .card-active-custom__description-txt {
+            display: flex;
+            // max-height: 40px;
+            height: auto;
+            margin: 10px 0 5px 0;
+            font-size: 12px;
+            line-height: 16px;
+            text-align: left;
+
+            //Класс is-toggle открывает полное описание по клику
+            &.is-toggle {
+                max-height: 200px;
+
+                a {
+                    white-space: normal;
+                }
+            }
+
+            a {
+                padding-right: 40px;
+                overflow: hidden; //фиксирует высоту и ширину
+                cursor: pointer;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                transition: all 0.3s;
+            }
+        }
+
+        .card-active-custom__toggle-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            min-width: 380px;
+            max-height: 240px;
+            margin: 0 15px 0 0;
+        }
+
+        .card-active-custom__description {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-width: 305px;
+            max-width: 650px;
+        }
+
+        .card-active-custom__img-wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            // max-width: 350px;
+            height: 100%;
+            max-height: 190px;
+        }
+    }
+}

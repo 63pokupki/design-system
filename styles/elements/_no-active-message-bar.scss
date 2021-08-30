@@ -1,0 +1,15 @@
+// Сообщение что нет активного сбора, строка
+.no-active-message-bar {
+    width: 100%;
+    text-align: center;
+    background: $stock-status-add-color;
+    padding: 15px;
+
+    &.is-hidden {
+        display: none;
+    }
+
+    &__link {
+        margin-left: 5px;
+    }
+}

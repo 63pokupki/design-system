@@ -1,0 +1,16 @@
+.rating-star-org {
+    display: inline-flex;
+    align-items: center;
+    height: 15px;
+
+    &__icon {
+        width: 12px;
+        color: #ffb21c;
+    }
+
+    &__value {
+        margin-left: 8px;
+        font-weight: bold;
+        color: #ffb21c;
+    }
+}

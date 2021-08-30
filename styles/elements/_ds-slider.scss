@@ -1,0 +1,180 @@
+.slider {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 280px;
+    height: auto;
+    background: #edf5fa;
+    padding: 10px 0;
+
+    // Скрываем все кнопки
+    &.no-btn {
+        .slider {
+            padding: 10px;
+        }
+
+        .btn-l,
+        .btn-r {
+            display: none;
+        }
+    }
+
+    // Скрываем левую кнопку
+    &.no-l-btn {
+        .btn-l {
+            pointer-events: none;
+
+            img {
+                visibility: hidden;
+            }
+        }
+    }
+
+    // Скрываем правую кнопку
+    &.no-r-btn {
+        .btn-r {
+            pointer-events: none;
+
+            img {
+                visibility: hidden;
+            }
+        }
+    }
+
+    .btn-l,
+    .btn-r {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25px;
+        min-width: 25px;
+        cursor: pointer;
+
+        img {
+            max-height: 12px;
+            margin: 0 auto;
+        }
+
+        &:hover {
+            background: #daebf5;
+        }
+    }
+
+    .btn-r {
+        img {
+            transform: rotate(180deg);
+        }
+    }
+
+    .slider-viewing {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+
+        p.slider__heading {
+            margin: 0;
+            margin-bottom: 10px;
+            font-size: 10px;
+            font-weight: 600;
+        }
+    }
+
+    .slider-wrap {
+        display: flex;
+        flex-direction: row;
+
+        .slider-items {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            width: 225px;
+            // margin-right: 40px;
+            font-size: 12px;
+            white-space: nowrap;
+            // Для активных закупок
+            &:nth-of-type(3n) {
+                margin-right: 0 !important;
+            }
+
+            a {
+                font-size: 12px;
+                font-weight: 700;
+                text-decoration: none;
+                color: $color-primary;
+                max-width: 170px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+}
+
+// Слайдер с баннерами
+// v2
+.slider-banners {
+    max-width: 800px;
+    position: relative;
+    overflow: hidden;
+    margin: 10px auto 20px auto;
+    background: transparent;
+
+    .ds-icon {
+        z-index: 2;
+    }
+
+    .icon-arrow-left {
+        position: absolute;
+        left: 0;
+        top: calc(50% - 25px);
+        padding: 10px;
+        color: $color-primary;
+        font-size: 30px;
+
+        &:hover {
+            color: $color-text-base;
+        }
+    }
+
+    .icon-arrow-right {
+        position: absolute;
+        right: 0;
+        top: calc(50% - 25px);
+        padding: 10px;
+        color: $color-primary;
+        font-size: 30px;
+
+        &:hover {
+            color: $color-text-base;
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        max-height: 100px;
+    }
+
+    &__container {
+        display: flex;
+        transition: transform 0.7s ease;
+    }
+
+    @media (max-width: 600px) {
+        .icon-arrow-right,
+        .icon-arrow-left {
+            font-size: 20px;
+            top: calc(50% - 20px);
+        }
+    }
+}
+
+.slide {
+    flex: 0 0 100%;
+    max-width: 100%;
+}

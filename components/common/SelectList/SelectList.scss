@@ -1,0 +1,42 @@
+.spui-SelectList {
+    padding-top: 3px;
+
+    &__input {
+        display: none;
+    }
+
+    &__tooltip {
+        font-size: 10px !important;
+    }
+
+    &__label {
+        cursor: pointer;
+        user-select: none;
+        font-size: 12px;
+        padding: 3px 5px;
+        border-radius: 12px;
+        margin-right: 5px;
+        margin-bottom: 3px;
+        min-width: 23px;
+        display: inline-flex;
+        align-items: center;
+        color: #1d1e1f;
+        justify-content: center;
+        font-family: $font-primary;
+
+        &:hover {
+            color: #36a6f2;
+        }
+
+        &.is-selected {
+            color: white;
+            background-color: #36a6f2;
+            transition: background-color 0.25s ease, color 0.25s ease;
+        }
+    }
+}
+
+.spui-SelectList_error {
+    position: relative;
+    outline: 1px solid #ffafaf;
+}

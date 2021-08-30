@@ -1,0 +1,29 @@
+.category-card {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: white;
+    text-decoration: none;
+    box-shadow: 0 0 4px #dbdbdb;
+    border-radius: 4px;
+    font-size: 12px;
+    padding: 6px 12px 6px 10px;
+    // padding: 15px 20px 15px 15px;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+        box-shadow: 0 0 4px $color-primary;
+    }
+
+    &__icon {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+
+    &__text {
+        user-select: none;
+        color: #4b4b4b;
+    }
+}

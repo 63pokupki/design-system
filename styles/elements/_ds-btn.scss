@@ -1,0 +1,105 @@
+// стандартная кнопка
+
+$button-font-size: 12px;
+$button-border-radius: 24px;
+
+// кнопка с категориями
+.menu-btn {
+    color: $color-primary;
+
+    &__icon {
+        margin-right: 10px;
+        font-size: 16px;
+    }
+
+    &__text {
+        font-size: 14px;
+    }
+
+    &:active {
+        .menu-btn__icon {
+            @include deep-click();
+        }
+    }
+}
+
+.ds-btn {
+    cursor: pointer;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    color: $color-primary;
+    background: white;
+    border: 1px solid $color-primary;
+    border-radius: $button-border-radius;
+    padding: 7px 18px;
+    font-weight: 600;
+    font-size: $button-font-size;
+    text-decoration: none;
+    line-height: 135%;
+    transition: background $transition-ultra-fast, color $transition-ultra-fast;
+
+    &.is-loader {
+        & {
+            min-width: 160px;
+            min-height: 32px;
+            padding: 0 18px;
+        }
+
+        .ds-btn__text {
+            display: none;
+        }
+
+        .ds-loader {
+            display: inline-flex;
+        }
+    }
+
+    &::first-letter {
+        text-transform: capitalize;
+    }
+
+    &__text {
+        &::first-letter {
+            text-transform: capitalize;
+        }
+    }
+
+    &:hover,
+    &_hover {
+        color: white;
+        background: $color-primary;
+    }
+
+    &_disabled {
+        color: $color-primary;
+        background: white;
+        opacity: 0.6;
+        user-select: none;
+        pointer-events: none;
+    }
+
+    &_flex {
+        display: flex;
+        width: 100%;
+    }
+
+    &_inverse {
+        background: $color-primary;
+        color: white;
+
+        &:hover {
+            color: $color-primary;
+            background: white;
+        }
+    }
+
+    .ds-loader {
+        display: none;
+    }
+
+    &:active {
+        @include deep-click(0.95);
+    }
+}

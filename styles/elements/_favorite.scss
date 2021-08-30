@@ -1,0 +1,67 @@
+// блок добавить в избранное
+.favorite {
+    display: flex;
+    align-items: center;
+
+    &__icon {
+        font-size: 28px;
+        color: $color-primary;
+        user-select: none;
+
+        &:active {
+            @include deep-click(0.9);
+        }
+    }
+
+    &__text {
+        display: flex;
+        margin-left: 10px;
+        flex-direction: column;
+    }
+
+    &__action {
+        font-weight: 600;
+        font-size: 12px;
+        justify-content: flex-start;
+        text-align: left;
+        white-space: nowrap;
+
+        &:active {
+            @include deep-click(0.975);
+        }
+    }
+
+    &__already {
+        font-size: 11px;
+        line-height: 18px;
+        color: rgba(96, 98, 102, 0.75);
+    }
+
+    // всплывашка избранное
+    .tooltip {
+        span {
+            white-space: nowrap;
+        }
+    }
+
+    // Избранное в корзине
+    &__cart {
+        .favorite__already {
+            display: none;
+        }
+
+        .favorite__action {
+            font-size: 12px;
+            font-weight: normal;
+        }
+
+        .like__icon {
+            font-size: 14px;
+            color: #ff4e4e;
+        }
+
+        .favorite__text {
+            margin-left: 5px;
+        }
+    }
+}

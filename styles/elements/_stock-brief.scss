@@ -1,0 +1,205 @@
+// краткая информация о закупке
+.stock-brief {
+    display: flex;
+    align-items: stretch;
+    padding: 5px 40px;
+    width: 100%;
+    max-width: 1120px;
+    background-color: white;
+    box-shadow: 0 2px 16px rgba(0, 44, 128, 0.18);
+
+    &__tags {
+        display: flex;
+        flex-direction: column;
+        margin-right: 30px;
+
+        .has-tooltip {
+            background: #ff6565;
+            width: 56px;
+            height: 20px;
+            color: white;
+            font-weight: 700;
+            text-align: center;
+            padding: 2px;
+        }
+    }
+
+    &__left {
+        width: 100%;
+        margin-right: 25px;
+        flex-shrink: 1.2;
+
+        .stock-brief__row {
+            &:nth-child(1) {
+                justify-content: space-between;
+            }
+        }
+    }
+
+    &__right {
+        flex-shrink: 0;
+        margin-left: auto;
+    }
+
+    &__old-design {
+        position: relative;
+        font-size: 11px;
+        margin-left: 10px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            width: 200px;
+            height: 40px;
+            transform: translate(-27px, -15px);
+        }
+    }
+
+    &__favorite {
+        .favorite__icon {
+            min-width: 29px;
+        }
+    }
+
+    // тег
+    &__tag {
+        font-size: 11px;
+        color: #1e2023b7;
+        min-width: 32px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    // название закупки
+    &__heading {
+        color: $color-text-heading;
+        font-weight: bold;
+        font-size: 16px;
+        height: 48px;
+        line-height: 100%;
+        max-width: 560px;
+        margin: 0;
+
+        h1 {
+            color: inherit;
+            font-weight: inherit;
+            font-size: inherit;
+            line-height: inherit;
+            display: inline;
+        }
+
+        &::first-letter {
+            text-transform: capitalize;
+        }
+
+        @media (max-width: 1023px) {
+            display: none;
+        }
+    }
+
+    &__status-icon {
+        margin-right: 15px;
+    }
+
+    // колонка
+    &__col {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    // строка
+    &__row {
+        display: flex;
+        align-items: center;
+        height: 50px;
+        line-height: 100%;
+
+        &:last-child {
+            margin-bottom: unset;
+        }
+    }
+
+    &__row-heading {
+        align-items: baseline;
+    }
+
+    & &__rating {
+        font-size: 30px;
+        line-height: inherit;
+        font-weight: bold;
+    }
+
+    &__org {
+        margin-right: 30px;
+    }
+
+    &__send {
+        margin-right: 30px;
+        max-width: 176px;
+    }
+
+    &__discuss {
+        max-width: 192px;
+        position: relative;
+
+        .num-of-discussions {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+        }
+    }
+}
+
+.stock-brief_disabled {
+    .stock-brief__data {
+        color: $color-inactive;
+    }
+
+    .stock-brief__heading {
+        color: $color-inactive;
+    }
+
+    .stock-brief__status {
+        font-size: 12px;
+
+        &.is-hidden {
+            display: none;
+        }
+    }
+
+    .stock-brief__status-added {
+        font-size: 12px;
+        font-weight: 700;
+
+        .link_hover {
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                width: 100px;
+                height: 30px;
+                transform: translate(-5px, -5px);
+                -webkit-transform: translate(-5px, -5px);
+                -moz-transform: translate(-5px, -5px);
+                -ms-transform: translate(-5px, -5px);
+                -o-transform: translate(-5px, -5px);
+            }
+        }
+
+        &.is-hidden {
+            display: none;
+        }
+    }
+}

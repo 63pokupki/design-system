@@ -1,0 +1,207 @@
+.stock-rows {
+    display: flex;
+    align-items: flex-start;
+    line-height: initial;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 20px;
+        background: linear-gradient(266deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.7371323529411764) 35%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    // блок нумерации
+    &__numeration {
+        background: rgba(196, 196, 196, 0.25);
+        margin-right: 10px;
+        text-align: center;
+        border-radius: 10px;
+        padding: 5px 1px;
+        min-width: 20px;
+    }
+
+    // блок с ячейками
+    &__values {
+        padding: 5px 1px;
+        overflow-x: auto;
+    }
+
+    &__org {
+        padding: 5px 1px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    // заголовок нумерации и ячеек
+    &__numeration-label,
+    &__values-label,
+    &__org-label {
+        font-weight: 600;
+        font-size: 11px;
+        color: $color-text-base;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+
+    // ряд с ячейками
+    &__row {
+        display: flex;
+        flex-wrap: nowrap;
+        margin-bottom: 4px;
+    }
+
+    // ячейка нумерации
+    &__num {
+        font-weight: 600;
+        font-size: 11px;
+        color: $color-text-base;
+        padding: 0 2px;
+        user-select: none;
+        border: 1px solid transparent;
+        margin-bottom: 4px;
+    }
+
+    .rows-org-chx {
+        margin-bottom: 4px;
+    }
+}
+
+.rows-org-chx {
+    display: inline-flex;
+    padding-left: 30px;
+    min-width: 18px;
+    min-height: 18px;
+
+    &__input {
+        display: none;
+    }
+
+    &__label {
+        user-select: none;
+        cursor: pointer;
+        position: relative;
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(-25px, -50%);
+            background: url("~images/important_images/lock-open.svg") no-repeat center center;
+            border: 1px solid $color-primary;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+        }
+
+        &::after {
+            content: "";
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(-25px, -50%);
+            background: url("~images/important_images/lock.svg") no-repeat center center;
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    &__input:checked + &__label {
+        &::before {
+            border: 1px solid $error-primary;
+            background: white;
+        }
+
+        &::after {
+            display: block;
+        }
+    }
+
+    .tooltip {
+        font-size: 12px;
+        text-align: center;
+        min-width: 150px;
+    }
+
+    &__fix {
+        display: block;
+    }
+
+    &__unfix {
+        display: none;
+    }
+
+    &__input:checked ~ &__fix {
+        display: none;
+    }
+
+    &__input:checked ~ &__unfix {
+        display: block;
+    }
+}
+
+// ячейка позиции
+.stock-rows-cell {
+    display: inline-flex;
+    font-weight: 600;
+    align-items: center;
+    font-size: 11px;
+    color: $color-text-base;
+    border-radius: 2px;
+    padding: 0 2px;
+    margin-right: 4px;
+    user-select: none;
+    border: 1px solid transparent;
+
+    // состояния позиции
+    &.is-free {
+        border: 1px solid rgba(49, 140, 202, 0.6);
+        background: white;
+    }
+
+    &.is-your {
+        background: $color-primary;
+        color: white;
+    }
+
+    &.is-busy {
+        background: $color-stock-rows-is-busy;
+    }
+
+    &.is-fixed {
+        background: #c5b5ab;
+        color: white;
+    }
+
+    &.is-row {
+        background: rgba(196, 196, 196, 0.25);
+    }
+}
+
+.stock-rows-legend {
+    display: flex;
+    align-items: center;
+
+    .stock-rows-cell {
+        width: 17px;
+        height: 17px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-right: 25px;
+    }
+
+    &__text {
+        font-size: 11px;
+        color: $color-text-base;
+        margin-left: 3px;
+    }
+}

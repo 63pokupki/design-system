@@ -1,0 +1,102 @@
+.ds-loader {
+    width: 45px;
+    height: 45px;
+    margin: 0 auto;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: url("~images/important_images/loader.svg") no-repeat center;
+        background-size: contain;
+        animation: rotate 5s infinite linear;
+    }
+    // Позволяет центрировать лоадер по центру при прокрутке
+    &_sticky {
+        position: sticky;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &_bg {
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: $background-color-primary;
+            opacity: 0.8;
+        }
+    }
+
+    &_large {
+        width: 100px;
+        height: 100px;
+    }
+
+    &_small {
+        width: 25px;
+        height: 25px;
+    }
+    // Центрирует по странице даже при прокрутке
+    &_center {
+        position: sticky;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+// Контейнер
+
+.ds-loader-container {
+    padding: 100px 0 0 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 99;
+    background-color: white;
+    opacity: 0.8;
+
+    &_bottom {
+        align-items: flex-end;
+    }
+    // Задний фон нужен для совместного использования с ds-loader_sticky
+    &_bg {
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: $background-color-primary;
+            opacity: 0.8;
+        }
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .ds-loader-container {
+        position: fixed;
+    }
+
+    .ds-loader_bg {
+        margin: auto;
+    }
+}

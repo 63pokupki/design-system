@@ -1,0 +1,457 @@
+.stock-m-info {
+    border-bottom: 1px solid rgba(49, 140, 202, 0.5);
+
+    &__cond-t-w {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+
+        @media screen and (min-width: 768px) {
+            width: 100%;
+            max-width: 580px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__cond-bar-w {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__heading {
+        text-align: center;
+        font-size: 16px;
+        color: $color-text-heading;
+        padding: 10px 20px;
+        margin: 0;
+        line-height: 28px;
+
+        @media (min-width: 1024px) {
+            display: none;
+        }
+    }
+
+    .stock-brief__data {
+        display: inline-block;
+        width: 100%;
+        margin: 0 auto 20px auto;
+        text-align: center;
+        font-size: 14px;
+        color: $color-text-heading;
+    }
+
+    &__old-design {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto 20px;
+        font-size: 12px;
+        position: relative;
+        z-index: 10;
+    }
+
+    &__img-w {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        max-height: 278px;
+        overflow: hidden;
+    }
+
+    &__img {
+        max-width: 100%;
+        max-height: 100%;
+        height: auto;
+        width: auto;
+    }
+
+    &__cond {
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 24px 20px 10px;
+        max-width: unset;
+
+        .stock-cond__row {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__bar {
+        width: 280px;
+    }
+
+    &__status {
+        max-width: 250px;
+    }
+
+    &__go-catalog {
+        background: #008eed;
+        border: 1px solid #008eed;
+        font-weight: bold;
+        font-size: 12px;
+        max-width: 196px;
+
+        @media screen and (min-width: 768px) {
+            max-width: 278px;
+            font-size: 14px;
+            padding: 10px 18px;
+        }
+    }
+
+    &__favorite {
+        .favorite {
+            &__text {
+                display: none;
+
+                @media screen and (min-width: 768px) {
+                    display: flex;
+                }
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+            .favorite__text {
+                display: none;
+            }
+        }
+    }
+
+    &__tabs-expand {
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+        padding: 10px 0;
+
+        @media (min-width: 1184px) {
+            padding: 45px 0 10px 0;
+        }
+    }
+
+    &__tabs {
+        padding: 20px;
+
+        .stock-cond {
+            max-width: unset;
+        }
+
+        .stock-tabs__sections {
+            max-height: 100px;
+            overflow: hidden;
+            position: relative;
+
+            &::after {
+                content: "";
+                width: 100%;
+                height: 80px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: 2;
+                background: linear-gradient(0deg, #fff, hsla(0, 0%, 100%, 0) 105.88%);
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+    }
+
+    &__tabs.is-expanded {
+        .stock-tabs__sections {
+            max-height: unset;
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    &__collapse {
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+
+        .collapse-section {
+            overflow: hidden;
+
+            &__heading {
+                display: block;
+                width: 100%;
+                font-size: 14px;
+                font-weight: normal;
+                padding: 12px 40px 12px 20px;
+
+                &::after {
+                    right: 20px;
+                    width: 9px;
+                    height: 9px;
+                }
+            }
+
+            &__body {
+                padding: 15px 20px;
+                display: none;
+                line-height: 24px;
+            }
+
+            &__body.padding-unset {
+                padding: 0;
+            }
+        }
+    }
+
+    &__collapse.is-expanded {
+        .collapse-section {
+            &__heading {
+                background: rgba(0, 142, 237, 0.15);
+            }
+
+            &__body {
+                max-height: unset;
+                margin-top: 0;
+                display: block;
+            }
+        }
+    }
+
+    &__grid {
+        padding: 35px 10px 0;
+
+        .stock-sizes-grid__prev,
+        .stock-sizes-grid__next {
+            height: 25px;
+            width: 25px;
+            font-size: 16px;
+        }
+
+        .stock-sizes-grid__prev {
+            left: -15px;
+        }
+
+        .stock-sizes-grid__next {
+            right: -15px;
+        }
+    }
+
+    &__reviews {
+        line-height: initial;
+
+        .stock-reviews__info {
+            min-width: 75px;
+        }
+
+        .stock-reviews__no-reviews {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 15px 0;
+
+            span {
+                text-align: center;
+
+                &.nowrap {
+                    white-space: nowrap;
+                }
+            }
+
+            &.is-hidden {
+                display: none;
+            }
+        }
+
+        .stock-reviews__review {
+            padding: 15px 20px;
+            border-bottom: 4px solid #bfe3fb;
+        }
+
+        .stock-reviews__send {
+            padding: 15px 20px;
+            flex-direction: column;
+        }
+
+        .stock-reviews__send-name {
+            margin: 0 0 10px 10px;
+        }
+
+        .stock-reviews__textarea-w {
+            position: relative;
+            width: 100%;
+        }
+
+        .stock-reviews__textarea {
+            width: 100%;
+            margin: 0 0 10px;
+        }
+
+        .stock-reviews__attach {
+            color: $color-primary;
+            top: 5px;
+            right: 5px;
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            font-size: 20px;
+        }
+
+        .stock-reviews__send-btn {
+            align-self: center;
+            padding: 7px 18px;
+            margin-top: 15px;
+        }
+
+        .stock-reviews__attached-img {
+            margin-top: 8px;
+            width: 66px;
+            height: 66px;
+        }
+
+        .stock-reviews__attach-list {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .stock-reviews__attach-list-item {
+            position: relative;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .stock-reviews__attach-list-delete {
+            position: absolute;
+            top: 3px;
+            right: 3px;
+            font-size: 18px;
+            color: $color-primary;
+            background: white;
+            border-radius: 50%;
+            padding: 0;
+            transform: translate(50%, -50%);
+        }
+
+        .stock-reviews__attach-list-img {
+            width: 44px;
+            height: 44px;
+        }
+    }
+
+    &__org-profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 25px 40px;
+
+        @media (max-width: 767px) {
+            padding: 0 25px 40px;
+        }
+
+        .org-profile {
+            margin: 0 0 2px 0;
+
+            &__image-wrapper {
+                width: 48px;
+                height: 48px;
+            }
+
+            &__image {
+                border-radius: 50%;
+                max-width: 48px;
+                max-height: 48px;
+            }
+
+            &__text {
+                @media screen and (min-width: 768px) {
+                    max-width: unset;
+                    margin: 0 5px;
+                }
+            }
+        }
+
+        .stock-m-info__meta-text {
+            margin-top: 10px;
+            margin-bottom: 18px;
+        }
+    }
+
+    &__meta-text {
+        font-size: 12px;
+        align-items: center;
+        color: $color-text-light-grey;
+        margin-bottom: 20px;
+        margin-top: 0;
+    }
+
+    &__buttons {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__discuss {
+        max-width: 175px;
+        position: relative;
+        margin-right: 30px;
+
+        .num-of-discussions {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+        }
+    }
+}
+
+.stock-m-info.is-disabled {
+    position: relative;
+
+    // убираем засветление
+    .stock-m-info__org-profile,
+    .stock-m-info__go-catalog,
+    .stock-m-info__status {
+        position: relative;
+        z-index: 6;
+    }
+
+    .stock-m-info__status {
+        max-width: 280px;
+
+        &.is-hidden {
+            display: none;
+        }
+    }
+
+    .stock-m-info__section-collapse {
+        position: relative;
+        z-index: 7;
+    }
+
+    .stock-m-info__collapse.is-expanded {
+        .collapse-section__heading {
+            color: $dark-brown-color;
+        }
+    }
+
+    .collapse-section__heading {
+        color: grey;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: hsla(0, 0%, 100%, 0.4);
+        z-index: 5;
+    }
+}

@@ -1,0 +1,95 @@
+.catalog-list {
+    width: 100%;
+    margin-bottom: 5px;
+
+    &__category {
+        border-top: 1px solid $color-primary;
+        padding: 10px;
+        background: #e8f3f9;
+        font-weight: bold;
+        font-size: 13px;
+        color: $color-primary;
+        border-radius: 0 0 2px 2px;
+    }
+
+    &__subcategory {
+        padding: 12px 10px 0;
+        margin: unset;
+        font-size: 12px;
+        font-weight: 600;
+        // color: darken($color-text-heading, 10%);
+        color: $color-text-heading;
+        text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+    }
+
+    &__subcategory-list {
+        list-style: none;
+        padding: 0;
+        margin: 12px 0 0 0;
+        font-size: 12px;
+        color: $color-text-heading;
+
+        .catalog-list__item {
+            font-weight: normal;
+            font-size: 12px;
+            color: $color-text-heading;
+        }
+    }
+
+    &__item.has-badge {
+        padding-right: 30px;
+
+        .catalog-list__badge-retail-price,
+        .catalog-list__badge-sale {
+            user-select: none;
+            position: absolute;
+            text-align: center;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            top: 6px;
+            right: -14px;
+            width: 50px;
+            font-size: 9px;
+            line-height: 10px;
+            transform: rotate(45deg);
+        }
+
+        .catalog-list__badge-retail-price {
+            background: $color-primary;
+            border-bottom: 1px solid #1a6aa1;
+        }
+
+        .catalog-list__badge-sale {
+            background: #ff4242;
+            border-bottom: 1px solid #a83131;
+        }
+    }
+
+    &__item {
+        padding: 0 5px 12px 0;
+        font-size: 11px;
+        color: $color-text-base;
+        overflow: hidden;
+        position: relative;
+        text-shadow: none;
+
+        &:last-child {
+            padding-bottom: 15px;
+        }
+    }
+
+    // переопределяем вид и позицию чекбоксов
+    .checkbox {
+        width: 100%;
+
+        &__label {
+            line-height: 18px;
+            width: 100%;
+
+            &:hover {
+                color: $color-primary;
+            }
+        }
+    }
+}

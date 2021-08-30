@@ -1,0 +1,22 @@
+.old-form-payment {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    div {
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+
+    &__btn-check-pay {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 268px;
+        height: 44px;
+        background: #36a6f2;
+        color: #fff;
+        border-radius: 50px;
+    }
+}

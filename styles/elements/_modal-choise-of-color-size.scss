@@ -1,0 +1,187 @@
+
+.modal-choise-of-color-size {
+    overflow: hidden;
+
+    .modal {
+        &__wrap {
+            max-height: 80vh;
+            position: fixed;
+
+            .icon-cart {
+                margin: 2px 0 0 3px;
+                font-size: 15px;
+                font-weight: 600;
+            }
+
+            max-width: 310px;
+        }
+
+        &__btn-close {
+            margin: 6px 5px 0 0;
+
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            min-width: 100%;
+            // margin: 0 7px 5px 0;
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: relative;
+
+            h5 {
+                margin: 0 0 5px 3px;
+                font-weight: 600;
+                max-width: 90%;
+
+                &::first-letter {
+                    text-transform: uppercase;
+                }
+            }
+
+            .link_hover {
+                justify-content: flex-start;
+                margin: 0 0 10px 3px;
+                padding: 0;
+                font-size: 11px;
+                color: $color-text-light-grey;
+            }
+
+            .item-params-list {
+                &__item {
+                    list-style: none;
+                    color: #858585;
+                    margin-bottom: 5px;
+                }
+
+                &__item.is-selected {
+                    transition: background-color $transition-fast, color $transition-fast;
+                    background-color: $color-primary;
+                    color: white;
+                }
+
+                &.is-expanded {
+                    max-height: 250px;
+                    transition: all 1s;
+                }
+            }
+
+            &-color {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                margin: 0 0 10px 0;
+            }
+
+            &-size {
+                display: flex;
+                flex-direction: column;
+                margin: 0 0 20px 0;
+                position: relative;
+
+                .item-params-list__item {
+                    padding: 3px 5px;
+                }
+            }
+        }
+
+        &__btn-container {
+            display: flex;
+            position: sticky;
+            bottom: 0;
+            left: 0;
+            background: $background-color-primary;
+
+            .btn-add-to-card {
+                max-height: 32px;
+                min-width: 160px;
+            }
+
+            .ds-loader {
+                display: none;
+                justify-content: center;
+                min-width: 160px;
+            }
+
+            &.is-load {
+                .btn-add-to-card {
+                    display: none;
+                }
+
+                .ds-loader {
+                    display: inline-flex;
+                }
+            }
+        }
+
+        &__btn-sum {
+            display: flex;
+            flex-direction: row;
+            width: 80px;
+            margin-right: 32px;
+            margin: 0 30px 0 5px;
+            align-items: center;
+
+            &-num {
+                width: 35px;
+                margin: 0 5px;
+                font-size: 16px;
+                appearance: none;
+                border: none;
+                text-align: center;
+            }
+        }
+
+        &__minus,
+        &__plus {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            min-width: 20px;
+            border-radius: 50%;
+            background: $color-inactive;
+            color: #fff;
+
+            &:active {
+                transform: scale(0.95);
+            }
+
+            &::after,
+            &::before {
+                content: "";
+                position: absolute;
+                width: 5px;
+                height: 2px;
+                background: #fff;
+            }
+
+            &:hover {
+                background: $color-primary;
+            }
+        }
+
+        &__plus {
+            &::before {
+                width: 8px;
+                transform: rotate(90deg);
+            }
+
+            &::after {
+                width: 8px;
+            }
+        }
+    }
+
+    // Для Сани
+    .item-page-d__params.params {
+        .ds-popover {
+            bottom: -47px;
+        }
+    }
+}

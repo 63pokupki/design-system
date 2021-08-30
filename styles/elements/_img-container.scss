@@ -1,0 +1,64 @@
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //Опции: Изменение размера в зависимости от экрана или потребностей
+    //Резиновый
+    &_resp {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        max-height: inherit;
+
+        img {
+            min-width: 100%;
+            max-height: inherit;
+            object-fit: contain;
+        }
+    }
+    //Для очень больших экранов
+    &_extra-large {
+        max-width: 1000px;
+        min-width: 300px;
+        max-height: 500px;
+        min-height: 100px;
+    }
+    //Для больших
+    &_large {
+        max-width: 500px;
+        min-width: 300px;
+        max-height: 300px;
+        min-height: 100px;
+    }
+    //Для средних
+    &_middle {
+        max-width: 250px;
+        min-width: 150px;
+        max-height: 152px;
+        min-height: 50px;
+    }
+    //Для маленьких
+    &_small {
+        max-width: 100px;
+        min-width: 50px;
+        max-height: 50px;
+        min-height: 25px;
+    }
+
+    &_extra-large,
+    &_large,
+    &_middle,
+    &_small,
+    &_resp {
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    img {
+        display: none;
+    }
+}

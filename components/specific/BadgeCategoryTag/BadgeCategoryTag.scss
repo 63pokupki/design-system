@@ -1,0 +1,45 @@
+.spui-BadgeCategoryTag {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-family: $font-primary;
+    border: 1px solid #36a6f2;
+    color: #36a6f2;
+    font-weight: bold;
+    transition: background-color 0.1s ease, border-color 0.1s ease;
+
+    &:hover,
+    &:active {
+        transition: background-color 0.1s ease, border-color 0.1s ease;
+        background-color: #e0eef7;
+        border-color: #e0eef7;
+    }
+
+    &:active {
+        transform: scale(0.975);
+    }
+
+    &_lg {
+        padding: 5px 16px;
+        font-size: 14px;
+    }
+
+    &_sm {
+        padding: 4px 18px;
+        font-size: 12px;
+    }
+
+    &_block {
+        display: flex;
+        width: 100%;
+    }
+}
+
+.spui-BadgeCategoryTag_active {
+    transition: background-color 0.1s ease, border-color 0.1s ease;
+    background-color: #e0eef7;
+    border-color: #e0eef7;
+}

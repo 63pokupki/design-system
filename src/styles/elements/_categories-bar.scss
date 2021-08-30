@@ -1,0 +1,81 @@
+// меню с категориями горизонтальное
+.categories-bar {
+    background: #d7edfc;
+    border-radius: 24px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 14px 60px 11px 32px;
+    position: relative;
+
+    &__button {
+        margin-right: 50px;
+        flex-shrink: 0;
+        margin-bottom: 5px;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        width: calc(100% - 170px);
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        justify-content: space-between;
+    }
+
+    &__item {
+        margin-right: 30px;
+        margin-bottom: 5px;
+
+        &.is-promotional {
+            color: #ff7182;
+
+            a {
+                color: inherit;
+            }
+        }
+    }
+
+    &__item:last-child {
+        margin-right: unset;
+    }
+
+    .categories-bar__menu {
+        visibility: hidden;
+        opacity: 0;
+        max-height: 0;
+        padding: 0;
+        overflow: hidden;
+        position: absolute;
+        left: 12px;
+        bottom: -10px;
+        z-index: 21;
+        min-width: 650px;
+        transform: translateY(100%);
+        box-shadow: 0 1px 16px rgba(105, 153, 247, 0.35);
+        transition: opacity $transition-slow, visibility $transition-slow;
+
+        .multi-level-menu__column {
+            padding-bottom: 15px;
+        }
+    }
+
+    .multi-level-menu__item > .multi-level-menu__column {
+        border: none;
+    }
+
+    // раскрывает подменю с категориями
+    .categories-bar__menu.is-visible {
+        visibility: visible;
+        overflow: visible;
+        max-height: initial;
+        opacity: 1;
+        padding: 30px;
+        transition: opacity $transition-slow, visibility $transition-slow;
+    }
+}

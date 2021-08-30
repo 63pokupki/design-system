@@ -1,0 +1,37 @@
+// блок шапки, содержит touch и desctop блоки
+.header {
+    .header-touch {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        transition: top 0.2s linear;
+
+        &.is-hidden {
+            top: -60px;
+        }
+    }
+
+    .header-desctop {
+        display: none;
+    }
+
+    @media screen and (min-width: 1024px) {
+        .header-desctop {
+            display: block;
+        }
+
+        .header-touch {
+            display: none;
+        }
+    }
+}
+
+// режим гостя
+.header.is-guest {
+    .header-desctop__search {
+        margin-right: 100px;
+        margin-left: unset;
+    }
+}

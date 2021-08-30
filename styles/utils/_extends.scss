@@ -1,0 +1,13 @@
+// сброс стилей кнопки
+%reset-button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    padding: unset;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+
+    &:focus {
+        outline: none;
+    }
+}

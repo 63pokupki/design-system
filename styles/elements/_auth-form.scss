@@ -1,0 +1,854 @@
+.auth-form {
+    display: inline-block;
+    // min-width: 300px;
+    margin: 0 auto;
+
+    @media (max-width: 992px) {
+        max-width: 748px;
+    }
+
+    @media (max-width: 767px) {
+        width: 100%;
+        max-width: 90vw;
+        padding: 0 15px;
+    }
+
+    &__bg {
+        display: flex;
+        width: 100%;
+        padding: 40px 0;
+    }
+
+    &__txt {
+        text-align: center;
+        font-size: 12px;
+        color: $color-text-base;
+        margin: 20px 0 30px 0;
+
+        &-footnote {
+            max-width: 349px;
+            margin: 0;
+            padding: 0;
+            font-size: 11px;
+            line-height: 15px;
+        }
+    }
+
+    .ds-inputs-form__txt-info {
+        font-weight: normal;
+    }
+
+    .ds-inputs-form__txt-error {
+        font-weight: normal;
+    }
+
+    &.is-active {
+        .auth-form__form-sign-up {
+            display: flex;
+        }
+
+        .auth-form__form-sign-in {
+            display: none;
+        }
+    }
+
+    &__tab-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        background: transparent;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    // Чекбокс
+    &__auth-tabs {
+        display: none;
+        background: transparent;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        color: #1d1e1f;
+    }
+    // лейблы-табы
+    &__right-tab,
+    &__left-tab {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        max-width: 230px;
+        height: 61px;
+        background: #fff;
+        font-size: 16px;
+        font-weight: 600;
+        user-select: none;
+        cursor: pointer;
+        color: $color-text-base;
+        border-bottom: 2px solid #eee;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+
+        &:hover {
+            color: $click-load-color;
+        }
+
+        @media (max-width: 767px) {
+            font-size: 13px;
+            max-width: none;
+        }
+    }
+
+    &__right-tab {
+        &.is-active {
+            background: #fff;
+            position: relative;
+            color: $click-load-color;
+            border-bottom-color: $color-primary;
+
+            @media (max-width: 767px) {
+                &::before {
+                    left: calc(50% - 86px);
+                }
+            }
+        }
+    }
+
+    &__left-tab {
+        position: relative;
+        // Серая вертикальная полоска между кнопками
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            width: 2px;
+            height: 32px;
+            background: #eee;
+        }
+
+        &.is-active {
+            background: #fff;
+            position: relative;
+            color: $click-load-color;
+            border-bottom-color: $color-primary;
+
+            &::before {
+                display: none;
+            }
+
+            @media (max-width: 767px) {
+                &::after {
+                    right: calc(0% - 9px);
+                }
+            }
+
+            @media (min-width: 768px) and (max-width: 991) {
+                &::after {
+                    right: calc(50% - 115px);
+                }
+            }
+        }
+    }
+
+    &__form-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 20px;
+        background: #fff;
+        border-radius: 10px;
+        position: relative;
+        box-shadow: 0 0 5px rgba(49, 140, 202, 0.2);
+    }
+
+    // Форма
+    &__form {
+        display: flex;
+        width: 100%;
+        background: #fff;
+        position: relative;
+        padding: 20px 0;
+        border-radius: 10px;
+
+        // авторизация
+        &-sign-in {
+            @media (min-width: 768px) {
+                min-width: 455px;
+            }
+
+            &.is-error {
+                >.ds-inputs-form {
+                    background: #fff1f1;
+                    border-color: $color-input-border-error;
+
+                    >input {
+                        background: #fff1f1;
+                    }
+
+                    &::before {
+                        color: $color-input-border-error;
+                    }
+                }
+
+                .auth-form__error-message {
+                    visibility: visible;
+                }
+
+                .ds-inputs-form__label {
+                    &::before {
+                        color: $color-input-border-error !important;
+                    }
+                }
+
+                input {
+                    background: $color-input-bg-error;
+                    border-color: $color-input-border-error;
+                }
+            }
+
+            .ds-inputs-form__txt-error-login {
+                display: none;
+            }
+        }
+        // Форма регистрации
+        &-sign-up {
+            // display: none;
+            flex-direction: column;
+
+            &.is-enter-code {
+                .auth-form__phone-container,
+                .auth-form__login-pass-container,
+                .auth-form__txt,
+                .auth-form__heading,
+                .auth-form__btn-container {
+                    display: none;
+                }
+
+                .auth-form__enter-code {
+                    display: flex;
+
+                    .auth-form__heading,
+                    .auth-form__btn-container {
+                        display: flex;
+                    }
+                }
+            }
+
+            .ds-inputs-form__txt-error-password-repeat {
+                @media (max-width: 767px) {
+                    white-space: nowrap;
+                }
+            }
+
+            .auth-form__login-pass-container,
+            .auth-form__phone-container {
+                @media (min-width: 993px) {
+                    .ds-inputs-form__input {
+                        min-width: 350px;
+                    }
+                }
+            }
+
+            @media (max-width: 767px) {
+                .auth-form__heading {
+                    margin: 0;
+                    font-size: 18px;
+                }
+
+                .auth-form__txt {
+                    margin: 20px 0 0;
+                }
+
+                .auth-form__content-container {
+                    padding: 5px 15px 28px;
+                }
+
+                .ds-inputs-component {
+                    min-height: 85px;
+                }
+            }
+        }
+        // Форма входа
+        &-sign-in {
+            display: flex;
+            width: 100%;
+            max-width: 455px;
+            flex-direction: column;
+            justify-content: flex-start;
+
+            @media (max-width: 767px) {
+                max-width: none;
+
+                .auth-form__content-container {
+                    padding: 0 13px;
+                }
+            }
+        }
+
+        // Поле логина
+        .input-login {
+            margin-bottom: 10px;
+        }
+
+        .input-password {
+            margin-top: 13px;
+        }
+    }
+
+    &__need-auth {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 245px;
+        margin: 0 auto 20px;
+        text-align: center;
+        color: #000;
+    }
+
+    &__checkbox {
+        margin: 9px 0;
+        font-size: 12px;
+        font-weight: normal;
+        color: $color-text-base;
+    }
+
+    &__checkbox-remember {
+        margin-top: 0;
+    }
+
+    //Сообщение об ошибке
+    &__error-message {
+        display: flex;
+        justify-content: flex-end;
+        visibility: hidden;
+        align-self: flex-end;
+        margin: 10px 0;
+        font-weight: normal;
+        font-size: 14px;
+        color: $color-input-border-error;
+    }
+    // Кнопка вход
+    &__btn-enter {
+        width: 200px;
+        margin: 17px auto 25px;
+        min-height: 45px;
+        border: 1px solid $click-load-color;
+        font-weight: 600;
+        font-size: 16px;
+        color: $click-load-color;
+    }
+
+    // ЗАбыли пароль?
+    &__link-to-recovery-password {
+        text-align: center;
+        font-size: 13px;
+        font-weight: 600;
+        margin: 0 0 10px 0;
+        appearance: none;
+        color: $color-primary;
+    }
+
+    // ЗАголовок формы
+    &__heading {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0 0 10px 0;
+        font-size: 22px;
+        font-weight: 600;
+        text-align: center;
+        color: $color-text-heading;
+    }
+
+    // РЕГИСТРАЦИЯ
+
+    &__login-pass-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__login-container,
+    &__pass-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        max-width: 350px;
+
+        @media (max-width: 767px) {
+            max-width: none;
+        }
+    }
+
+    &__btn-container {
+        display: flex;
+        justify-content: center;
+        margin: 10px 0;
+    }
+
+    &__btn-register {
+        width: 220px;
+        height: 45px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    &__phone-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &__phone {
+        display: flex;
+        width: 100%;
+        max-width: 350px;
+        margin: 0;
+
+        @media (max-width: 767px) {
+            max-width: none;
+        }
+    }
+
+    &__phone-txt {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 350px;
+        margin: 0;
+
+        @media (max-width: 767px) {
+            max-width: none;
+        }
+    }
+
+    .auth-form__txt-footnote {
+        @media (max-width: 767px) {
+            max-width: none;
+        }
+    }
+
+    //Блок Ошибка указаных данных
+    &__txt-error {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 26px;
+        max-height: 26px;
+        margin: 15px 0;
+        background: $color-input-bg-error;
+        font-size: 13px;
+        font-weight: 600;
+        color: $color-input-border-error;
+        visibility: hidden;
+
+        &.is-visible {
+            visibility: visible;
+        }
+    }
+
+    &__btn-recovery {
+        width: 220px;
+        height: 45px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    // Введите код из смс
+    &__enter-code {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+
+        @media (min-width: 768px) {
+            min-width: 444px;
+        }
+
+        &.is-error {
+            .auth-form__txt-error {
+                visibility: visible;
+            }
+
+            .ds-inputs-form__input {
+                background: $color-input-bg-error;
+                border-color: $color-input-border-error;
+
+                &:focus {
+                    ~.ds-inputs-form__label {
+                        &::before {
+                            color: $color-input-border-error;
+                        }
+                    }
+                }
+            }
+
+            .ds-inputs-form__label {
+                &::before {
+                    color: $color-input-border-error;
+                }
+            }
+        }
+
+        .ds-inputs-component {
+            min-height: 45px;
+
+            @media (min-width: 768px) {
+                max-width: 175px;
+            }
+        }
+
+        .ds-inputs-form {
+            min-width: 100%;
+            margin: 23px 0 0 0;
+        }
+
+        .ds-inputs-form__input {
+            font-size: 18px;
+
+            @media (min-width: 768px) {
+                max-width: 176px;
+            }
+        }
+
+        .auth-form__txt-error {
+            margin: 0;
+            background: transparent;
+            font-size: 12px;
+            font-weight: 600;
+        }
+    }
+
+    &__btn-confirm {
+        width: 220px;
+        height: 45px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    &__send-repeated {
+        font-size: 12px;
+        color: $color-text-base;
+        text-decoration: underline;
+    }
+
+    @media (min-width: 768px) {
+        .auth-form__heading {
+            font-size: 22px;
+        }
+
+        .auth-form__form-password-recovery {
+            .auth-form__txt {
+                margin: 20px 0 30px;
+            }
+        }
+    }
+
+    @media (max-width: 992px) and (min-width: 768px) {
+
+        // Вход на сайт
+        .auth-form__form-sign-in {
+            .ds-inputs-component {
+                min-width: 350px;
+            }
+
+            .auth-form__content-container {
+                padding: 0 52px;
+            }
+
+            .auth-form__heading {
+                margin: 0 0 10px 0;
+            }
+        }
+        //------------------------//
+
+        // Восстановление пароля
+        .auth-form__form-password-recovery {
+            .auth-form__content-container {
+                padding: 0 52px;
+            }
+        }
+        //------------------------//
+
+        .auth-form__heading {
+            margin: 0;
+        }
+
+        .auth-form__txt {
+            margin: 10px 0 15px;
+        }
+
+        .auth-form__content-container {
+            padding: 0 23px;
+        }
+
+        .ds-inputs-form__icon-info {
+            top: 2px;
+        }
+
+        .ds-inputs-component {
+            min-width: 330px;
+        }
+
+        .auth-form__enter-code {
+            .ds-inputs-component {
+                min-width: 175px;
+            }
+        }
+    }
+
+    &__phone-container {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    @media (max-width: 992px) {
+        .ds-inputs-form__info-block-phone {
+            flex-direction: column-reverse;
+            margin: -7px 0 0;
+
+            .ds-inputs-form__txt-info,
+            .ds-inputs-form__txt-error {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .ds-inputs-form__txt-error {
+                display: none;
+            }
+        }
+
+        .ds-inputs-component {
+            &.is-error {
+                .ds-inputs-form__txt-error {
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        .auth-form {
+            max-width: 455px;
+
+            &__login-pass-container,
+            &__phone-container {
+                display: block;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        .auth-form__phone-container {
+            .auth-form__txt-footnote {
+                margin: 0;
+            }
+        }
+
+        .ds-inputs-form {
+            &__txt-error-login {
+                max-width: 140px;
+            }
+
+            &__info-block-phone {
+                .ds-inputs-form__txt-error {
+                    margin: 0 0 10px 0;
+                }
+
+                .ds-inputs-form__txt-info {
+                    width: 100%;
+                    max-width: 205px;
+                    padding: 0 0 0 30px;
+                }
+
+                .ds-inputs-form__icon-info {
+                    top: 5px;
+                    font-size: 20px;
+                }
+            }
+
+            &__info-block-mail {
+                flex-direction: column;
+
+                .ds-inputs-form__txt-info {
+                    flex-wrap: wrap;
+                    width: 100%;
+                    max-width: 168px;
+                    padding: 0;
+                    font-size: 12px;
+                    font-weight: normal;
+                    line-height: 12px;
+
+                    >span {
+                        white-space: nowrap;
+                        line-height: 0px;
+                    }
+                }
+            }
+
+            &__txt-info-pass {
+                white-space: nowrap;
+            }
+
+            &__txt-error-email {
+                width: auto;
+                line-height: 12px;
+            }
+
+            &__txt-error-phone {
+                max-width: 133px;
+            }
+        }
+
+        .auth-form {
+            &__login-pass-container,
+            &__phone-container {
+                justify-content: center;
+            }
+
+            &__login-container {
+                margin-right: 0 !important;
+            }
+
+            &__txt-footnote {
+                padding: 0;
+            }
+            //Регистрируясь на сайте
+            &__phone-txt {
+                margin: 13px 0;
+            }
+
+            &__form-sign-up {
+                max-width: none;
+            }
+
+            &__right-tab {
+                &::after {
+                    right: calc(50% - 10px);
+                }
+            }
+
+            &__form-password-recovery {
+                max-width: 305px;
+
+                @media (max-width: 767px) {
+                    max-width: none;
+                }
+
+                .auth-form__txt {
+                    padding: 0 50px;
+                }
+                // .auth-form__txt-error {
+                //     margin: -10px 0 15px 0;
+                // }
+            }
+
+            &__txt-error {
+                font-size: 12px;
+            }
+        }
+    }
+
+    // Восстановление пароля
+    &__form-password-recovery {
+        display: block;
+        width: 100%;
+        max-width: 455px;
+        padding: 20px 0 28px 0;
+
+        @media (min-width: 768px) {
+            min-width: 455px;
+
+            .auth-form__content-container {
+                padding: 0 39px;
+            }
+        }
+
+        // Если сообщение отправлено
+        &.is-send {
+            .auth-form__txt,
+            .ds-inputs-component,
+            .auth-form__txt-or,
+            .auth-form__btn-recovery,
+            .auth-form__txt-error {
+                display: none;
+            }
+
+            .auth-form__form-password-recovery-txt {
+                display: block;
+                padding: 50px 39px;
+            }
+
+            .link_colored {
+                display: block;
+            }
+
+            @media (max-width: 767px) {
+                .auth-form__form-password-recovery-txt {
+                    padding: 30px 20px;
+                }
+            }
+        }
+
+        .auth-form__content-container {
+            padding: 0 15px;
+        }
+
+        .ds-inputs-component {
+            min-height: auto;
+        }
+
+        .ds-inputs-form {
+            margin-bottom: 5px;
+        }
+
+        &.is-error {
+            .auth-form__txt-error {
+                visibility: visible;
+            }
+        }
+
+        &.is-hidden {
+            display: none;
+        }
+
+        .auth-form__heading {
+            font-size: 18px;
+        }
+
+        .link_colored {
+            display: none;
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+
+    &__form-password-recovery-txt {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 600;
+        color: $color-text-base;
+        line-height: 20px;
+    }
+
+    // Контейнер контента
+    &__content-container {
+        display: block;
+        padding: 0 39px;
+    }
+    // Блок "или"
+    &__txt-or {
+        display: block;
+        max-height: 12px;
+        text-align: center;
+        font-size: 13px;
+        color: $color-text-light-grey;
+    }
+}
