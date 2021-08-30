@@ -17,10 +17,6 @@
         display: flex;
         width: 100%;
         padding: 40px 0;
-        background: url("~images/important_images/auth-form/auth-form-bg.png");
-        background-position: center;
-        background-size: cover;
-        background-repeat: repeat;
     }
 
     &__txt {
@@ -31,7 +27,7 @@
 
         &-footnote {
             max-width: 349px;
-            margin: 13px 0 0 0;
+            margin: 0;
             padding: 0;
             font-size: 11px;
             line-height: 15px;
@@ -63,7 +59,6 @@
         background: transparent;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
-        transform: translateY(12px);
     }
     // Чекбокс
     &__auth-tabs {
@@ -82,17 +77,18 @@
         width: 50%;
         max-width: 230px;
         height: 61px;
-        padding: 0 0 12px 0;
-        border-radius: 10px;
-        // background: #ffffff;
-        font-size: 15px;
+        background: #fff;
+        font-size: 16px;
+        font-weight: 600;
         user-select: none;
         cursor: pointer;
-        color: #1d1e1f;
+        color: $color-text-base;
+        border-bottom: 2px solid #eee;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
 
         &:hover {
             color: $click-load-color;
-            font-weight: 600;
         }
 
         @media (max-width: 767px) {
@@ -105,34 +101,8 @@
         &.is-active {
             background: #fff;
             position: relative;
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
-            font-weight: 600;
             color: $click-load-color;
-            box-shadow: 0 0 15px rgba(49, 140, 202, 0.2);
-
-            &::before {
-                content: "";
-                position: absolute;
-                top: 39px;
-                left: calc(50% - 124px);
-                display: flex;
-                width: 11px;
-                height: 11px;
-                background: url("~images/important_images/auth-form/rectangle-tab-aith.svg");
-                transform: rotateY(180deg);
-            }
-
-            &::after {
-                content: "";
-                position: absolute;
-                top: 39px;
-                right: calc(50% - 124px);
-                display: flex;
-                width: 11px;
-                height: 11px;
-                background: url("~images/important_images/auth-form/rectangle-tab-aith.svg");
-            }
+            border-bottom-color: $color-primary;
 
             @media (max-width: 767px) {
                 &::before {
@@ -143,28 +113,25 @@
     }
 
     &__left-tab {
+        position: relative;
+        // Серая вертикальная полоска между кнопками
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            width: 2px;
+            height: 32px;
+            background: #eee;
+        }
+
         &.is-active {
             background: #fff;
             position: relative;
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
-            font-weight: 600;
             color: $click-load-color;
-            box-shadow: 0 0 15px rgba(49, 140, 202, 0.2);
+            border-bottom-color: $color-primary;
 
             &::before {
                 display: none;
-            }
-
-            &::after {
-                content: "";
-                position: absolute;
-                top: 39px;
-                right: calc(50% - 124px);
-                display: flex;
-                width: 11px;
-                height: 11px;
-                background: url("~images/important_images/auth-form/rectangle-tab-aith.svg");
             }
 
             @media (max-width: 767px) {
@@ -189,7 +156,7 @@
         background: #fff;
         border-radius: 10px;
         position: relative;
-        box-shadow: 0 7px 15px rgba(49, 140, 202, 0.2);
+        box-shadow: 0 0 5px rgba(49, 140, 202, 0.2);
     }
 
     // Форма
@@ -395,6 +362,7 @@
 
     &__login-pass-container {
         display: flex;
+        flex-direction: column;
     }
 
     &__login-container,
@@ -409,10 +377,6 @@
         @media (max-width: 767px) {
             max-width: none;
         }
-    }
-
-    &__login-container {
-        margin-right: 65px;
     }
 
     &__btn-container {
@@ -430,15 +394,15 @@
 
     &__phone-container {
         display: flex;
+        flex-direction: column;
         width: 100%;
-        justify-content: space-between;
     }
 
     &__phone {
         display: flex;
         width: 100%;
         max-width: 350px;
-        margin: 0 42px 0 0;
+        margin: 0;
 
         @media (max-width: 767px) {
             max-width: none;
@@ -579,10 +543,6 @@
                 margin: 20px 0 30px;
             }
         }
-
-        .auth-form__login-container {
-            margin-right: 42px;
-        }
     }
 
     @media (max-width: 992px) and (min-width: 768px) {
@@ -712,6 +672,8 @@
             }
 
             &__info-block-mail {
+                flex-direction: column;
+
                 .ds-inputs-form__txt-info {
                     flex-wrap: wrap;
                     width: 100%;
