@@ -63,7 +63,7 @@
 - переходим в консоль, выполняем **npm i**
 - улыбаемся и машем.
                         
- #### Clien.web
+ #### Client.web
 
 - Переходим в src/modules/header/images/categories-tags и меняем картинки
 - далее в src/modules/header/components/desktop/header-categories-tags.vue меняем адресс у ссылки как делали в SP проекте
