@@ -2,6 +2,8 @@
 .org-profile {
     display: flex;
     align-items: center;
+    width: 100%;
+    max-width: 230px;
 
     &__image-wrapper {
         display: inline-flex;
