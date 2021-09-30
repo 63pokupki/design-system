@@ -145,6 +145,14 @@
                 margin-top: 10px;
             }
         }
+
+        .collapse-section.is-expanded .collapse-section__body {
+            margin-top: 15px;
+        }
+
+        .collapse-section {
+            margin: 0;
+        }
     }
 
     .stock-card-vertical-wrapper:hover .stock-card-vertical {

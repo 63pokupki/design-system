@@ -82,6 +82,10 @@
         .stock-cond__row {
             margin-bottom: 20px;
         }
+
+        .ds-purchase-status .ds-icon {
+            font-size: 28px;
+        }
     }
 
     &__bar {
@@ -179,6 +183,10 @@
             display: none;
         }
 
+        &.collapse-section {
+            margin: 0 0 7px 0;
+        }
+
         .collapse-section {
             overflow: hidden;
 
@@ -187,7 +195,8 @@
                 width: 100%;
                 font-size: 14px;
                 font-weight: normal;
-                padding: 12px 40px 12px 20px;
+                // padding: 12px 40px 12px 20px;
+                padding: 5px 40px 5px 20px;
 
                 &::after {
                     right: 20px;
@@ -354,6 +363,7 @@
         }
 
         .org-profile {
+            justify-content: space-evenly;
             margin: 0 0 2px 0;
 
             &__image-wrapper {
@@ -398,6 +408,7 @@
 
     &__discuss {
         max-width: 175px;
+        min-width: 156px;
         position: relative;
         margin-right: 30px;
 
