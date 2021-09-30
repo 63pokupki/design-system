@@ -183,6 +183,10 @@
             display: none;
         }
 
+        &.collapse-section {
+            margin: 0 0 7px 0;
+        }
+
         .collapse-section {
             overflow: hidden;
 
@@ -191,7 +195,8 @@
                 width: 100%;
                 font-size: 14px;
                 font-weight: normal;
-                padding: 12px 40px 12px 20px;
+                // padding: 12px 40px 12px 20px;
+                padding: 5px 40px 5px 20px;
 
                 &::after {
                     right: 20px;
