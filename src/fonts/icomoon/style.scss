@@ -1,5 +1,9 @@
 @import "~fonts/icomoon/variables";
 
+.icon-fast-delivery::before {
+    content: "\e93d";
+}
+
 .icon-phone::before {
     content: "\e93c";
 }
