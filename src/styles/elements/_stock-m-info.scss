@@ -359,11 +359,11 @@
         padding: 20px 25px 40px;
 
         @media (max-width: 767px) {
-            padding: 0 25px 40px;
+            padding: 10px 25px 40px;
         }
 
         .org-profile {
-            justify-content: space-evenly;
+            justify-content: center;
             margin: 0 0 2px 0;
 
             &__image-wrapper {
