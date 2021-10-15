@@ -52,7 +52,8 @@ export default {
             case 2:
                 return '#ffe100';
             case 3:
-                return '#e89a00';
+                // return '#e89a00';
+                return '#ffe100';
             case 4:
                 return '#cc6bf9';
             case 5:
