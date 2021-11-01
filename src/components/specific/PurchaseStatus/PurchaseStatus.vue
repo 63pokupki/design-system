@@ -50,7 +50,6 @@ export default {
             case 1:
                 return '#00c533';
             case 2:
-                return '#ffe100';
             case 3:
                 return '#e89a00';
             case 4:
