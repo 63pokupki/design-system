@@ -37,7 +37,7 @@
         "short-uuid": "^3.1.1",
         "vue": "^2.6.14",
         "vue-carousel": "git+https://github.com/nullilac/vue-carousel.git",
-        "vue-slider-component": "^3.2.14",
+        "vue-slider-component": "^3.2.15",
         "vue-the-mask": "^0.11.1"
     },
     "devDependencies": {
