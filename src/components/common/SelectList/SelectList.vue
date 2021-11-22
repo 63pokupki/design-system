@@ -122,7 +122,7 @@ export default {
             },
         },
     },
-    beforeMount() {
+    created() {
         this.uuid = uuid.generate();
     },
     methods: {
