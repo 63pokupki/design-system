@@ -123,7 +123,9 @@ export default {
         },
     },
     created() {
-        this.uuid = uuid.generate();
+        if (!this.uuid) {
+            this.uuid = uuid.generate();
+        }
     },
     methods: {
         fnCompareIsSelected(value, values) {
