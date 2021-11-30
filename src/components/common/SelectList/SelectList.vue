@@ -122,8 +122,10 @@ export default {
             },
         },
     },
-    beforeMount() {
-        this.uuid = uuid.generate();
+    mounted() {
+        this.$nextTick(function () {
+            this.uuid = uuid.generate();
+        });
     },
     methods: {
         fnCompareIsSelected(value, values) {
