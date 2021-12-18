@@ -1,5 +1,9 @@
 @import "~fonts/icomoon/variables";
 
+.icon-pickup-address::before {
+    content: "\e947";
+}
+
 .icon-copy::before {
     content: "\e946";
 }
