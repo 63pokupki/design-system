@@ -81,6 +81,10 @@ export default {
             type: String,
             default: 'new-password',
         },
+        autofocus: {
+            type: Boolean,
+            default: false,
+        },
     },
     render: (h, { data, props, listeners, scopedSlots }) => {
         const {
@@ -102,6 +106,7 @@ export default {
             passwordIsVisible,
             isRequired,
             autocomplete,
+            autofocus,
         } = props;
 
         const pressEnterHandler = listeners.enter;
@@ -206,6 +211,7 @@ export default {
                             disabled={isDisabled}
                             autocomplete={autocomplete}
                             style={styleInput}
+                            autofocus={autofocus}
                         ></input>
                     )}
                     {typeIsPassword && (
