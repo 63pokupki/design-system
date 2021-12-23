@@ -16,7 +16,7 @@
             >{{ _heading }}:</span>
 
             <span
-                v-if="_value && !multiple"
+                v-if="_value && !multiple && showLableValue"
                 class="spui-DropdownTooltipWithSelect__value"
             ><slot
                 name="label"
@@ -26,7 +26,7 @@
             }}</slot></span>
 
             <span
-                v-if="_value && multiple"
+                v-if="_value && multiple && showLableValue"
                 class="spui-DropdownTooltipWithSelect__value"
             ><slot
                 name="label"
@@ -113,6 +113,10 @@ export default {
         multiple: {
             type: Boolean,
             default: false,
+        },
+        showLableValue: {
+            type: Boolean,
+            default: true,
         },
     },
     data() {
