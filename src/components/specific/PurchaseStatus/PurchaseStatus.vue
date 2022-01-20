@@ -62,7 +62,8 @@ export default {
             case 7:
                 return '#3dd2b7';
             case 8:
-                return '#00c533';
+                return '#966d56';
+                // return '#00c533';
             case 9:
                 return '#318cca';
             case 11:
