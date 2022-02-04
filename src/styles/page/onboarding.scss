@@ -151,6 +151,8 @@ $onboarding-media-touch: 1024px;
             max-width: 100%;
             margin: 0;
             font-size: 12px;
+            z-index: 10;
+            text-shadow: 1px 1px 2px #fff, 1px 1px 0 #fff;
         }
 
         .introjs-button {
@@ -167,9 +169,10 @@ $onboarding-media-touch: 1024px;
             display: block;
             content: "";
             position: absolute;
-            left: 50%;
-            top: -2px;
-            transform: translate(-50%, -100%);
+            left: 18%;
+            // top: -2px;
+            bottom: -110px;
+            transform: translate(-50%, -100%) scaleX(-1);
             width: 102px;
             height: 109px;
             background: url("~images/important_images/onboarding/lisa-mobile.png") no-repeat center;
