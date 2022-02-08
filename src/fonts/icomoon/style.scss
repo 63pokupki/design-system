@@ -1,33 +1,19 @@
 @import "~fonts/icomoon/variables";
 
+.icon-soon-stop::before {
+    content: "\e944";
+}
+
+.icon-exclamation-triangle::before {
+    content: "\e945";
+}
+
 .icon-pickup-address::before {
-    content: "\e947";
+    content: "\e942";
 }
 
 .icon-copy::before {
-    content: "\e946";
-}
-
-.icon-exclamation-triangle .path1::before {
-    content: "\e942";
-    color: rgb(255, 101, 101);
-}
-
-.icon-exclamation-triangle .path2::before {
     content: "\e943";
-    margin-left: -1.0908203125em;
-    color: rgb(255, 255, 255);
-}
-
-.icon-soon-stop .path1::before {
-    content: "\e944";
-    color: rgb(255, 178, 28);
-}
-
-.icon-soon-stop .path2::before {
-    content: "\e945";
-    margin-left: -1em;
-    color: rgb(255, 255, 255);
 }
 
 .icon-trash::before {
