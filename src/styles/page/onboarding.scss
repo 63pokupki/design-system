@@ -87,6 +87,7 @@ $onboarding-media-touch: 1024px;
 
         .introjs-tooltiptext {
             position: relative;
+            padding-right: 45px;
 
             &::before {
                 content: "";
