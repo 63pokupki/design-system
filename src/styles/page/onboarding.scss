@@ -169,14 +169,15 @@ $onboarding-media-touch: 1024px;
             display: block;
             content: "";
             position: absolute;
-            left: 18%;
+            left: 8%;
             // top: -2px;
             bottom: -110px;
             transform: translate(-50%, -100%) scaleX(-1);
-            width: 102px;
-            height: 109px;
-            background: url("~images/important_images/onboarding/lisa-mobile.png") no-repeat center;
+            width: 70px;
+            height: 98px;
+            background: url("~images/important_images/onboarding/lisa-mobile-outer.png") no-repeat center;
             background-size: contain;
+            z-index: 10;
         }
     }
 }
