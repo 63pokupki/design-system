@@ -87,6 +87,7 @@ $onboarding-media-touch: 1024px;
 
         .introjs-tooltiptext {
             position: relative;
+            padding-right: 45px;
 
             &::before {
                 content: "";
@@ -151,6 +152,8 @@ $onboarding-media-touch: 1024px;
             max-width: 100%;
             margin: 0;
             font-size: 12px;
+            z-index: 10;
+            text-shadow: 1px 1px 2px #fff, 1px 1px 0 #fff;
         }
 
         .introjs-button {
@@ -167,13 +170,15 @@ $onboarding-media-touch: 1024px;
             display: block;
             content: "";
             position: absolute;
-            left: 50%;
-            top: -2px;
-            transform: translate(-50%, -100%);
-            width: 102px;
-            height: 109px;
-            background: url("~images/important_images/onboarding/lisa-mobile.png") no-repeat center;
+            left: 8%;
+            // top: -2px;
+            bottom: -110px;
+            transform: translate(-50%, -100%) scaleX(-1);
+            width: 70px;
+            height: 98px;
+            background: url("~images/important_images/onboarding/lisa-mobile-outer.png") no-repeat center;
             background-size: contain;
+            z-index: 10;
         }
     }
 }
