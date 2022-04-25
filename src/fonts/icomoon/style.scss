@@ -1,5 +1,9 @@
 @import "~fonts/icomoon/variables";
 
+.icon-bell-notif::before {
+    content: "\e954";
+}
+
 .icon-id-card-solid::before {
     content: "\e946";
 }
