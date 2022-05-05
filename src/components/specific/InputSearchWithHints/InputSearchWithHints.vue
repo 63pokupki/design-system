@@ -35,6 +35,7 @@
         </div>
         <!-- блок выпадающей категории поиска -->
         <div
+            v-if="false"
             class="spui-InputSearchWithHints__category"
             @click="onCategoryClick"
         >
