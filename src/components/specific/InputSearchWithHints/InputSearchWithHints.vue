@@ -127,6 +127,24 @@
                     />
                 </div>
             </template>
+            <template v-if="orgs && orgs.length > 0">
+                <div class="spui-InputSearchWithHints__divider">
+                    Организаторы
+                </div>
+                <div
+                    v-for="(org, i) in orgs"
+                    :key="`o-${i}`"
+                    class="spui-InputSearchWithHints__hint"
+                    :class="{ focus: isEqual(org, focusElement) }"
+                    @click="() => onOrgClick(org)"
+                >
+                    <!-- eslint-disable vue/no-v-html -->
+                    <span
+                        class="spui-InputSearchWithHints__text"
+                        v-html="highlightOrg(org)"
+                    />
+                </div>
+            </template>
         </div>
     </div>
 </template>
@@ -162,6 +180,10 @@ export default {
             type: Array,
             default: () => [],
         },
+        orgs: {
+            type: Array,
+            default: () => [],
+        },
         fnHintLabel: {
             type: Function,
             required: true,
@@ -179,6 +201,14 @@ export default {
             required: true,
         },
         fnPurchaseId: {
+            type: Function,
+            required: true,
+        },
+        fnOrgLabel: {
+            type: Function,
+            required: true,
+        },
+        fnOrgId: {
             type: Function,
             required: true,
         },
@@ -310,6 +340,10 @@ export default {
             const raw = this.fnPurchaseLabel(purchase);
             return this.highlight(raw);
         },
+        highlightOrg(org) {
+            const raw = this.fnOrgLabel(org);
+            return this.highlight(raw);
+        },
         onHintClick(hint) {
             this.$emit('search', {
                 value: this.fnHintLabel(hint),
@@ -337,6 +371,15 @@ export default {
             this.emitHintsOpenState(false);
             this.focusIndex = -1;
         },
+        onOrgClick(org) {
+            this.$emit('search', {
+                value: this.fnOrgId(org),
+                items: this.isCategoryItemsSelected,
+                type: 'orgs',
+            });
+            this.emitHintsOpenState(false);
+            this.focusIndex = -1;
+        },
         onCategoryClick() {
             this.emitCategoryOpenState(true);
         },
@@ -359,7 +402,8 @@ export default {
                 const label =
                     this.fnHintLabel(this.focusElement) ||
                     this.fnBrandLabel(this.focusElement) ||
-                    this.fnPurchaseId(this.focusElement);
+                    this.fnPurchaseId(this.focusElement) ||
+                    this.fnOrgId(this.focusElement);
                 params.value = label;
                 params.type = this.focusElementType;
             }

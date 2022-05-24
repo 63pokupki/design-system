@@ -62,11 +62,19 @@ export const standart = () => ({
                     stock_id: '6773',
                 },
             ],
+            orgs: [
+                { 
+                    user_id: 46878,
+                    org_name: 'ЛЕНОЧКА',
+                },
+            ],
             fnHintLabel: (hint) => hint.label,
             fnHintCount: (hint) => hint.count,
             fnBrandLabel: (brand) => brand.brand_name,
             fnPurchaseLabel: (purchase) => purchase.purchase_name,
             fnPurchaseId: (purchase) => purchase.stock_id,
+            fnOrgLabel: (org) => org.org_name,
+            fnOrgId: (org) => String(org.user_id),
         };
     },
     methods: {
@@ -98,6 +106,7 @@ export const standart = () => ({
         :hints="hints"
         :brands="brands"
         :purchases="purchases"
+        :orgs="orgs"
         :is-hints-open="isHintsOpen" 
         :is-category-open="isCategoryOpen"
         :fn-hint-label="fnHintLabel"
@@ -105,6 +114,8 @@ export const standart = () => ({
         :fn-brand-label="fnBrandLabel"
         :fn-purchase-label="fnPurchaseLabel"
         :fn-purchase-id="fnPurchaseId"
+        :fn-org-label="fnOrgLabel"
+        :fn-org-id="fnOrgId"
         @hints-open-change="onHintsOpenChange" 
         @category-open-change="onCategoryOpenChange" 
         @input-by-items="onInputByItems" 
