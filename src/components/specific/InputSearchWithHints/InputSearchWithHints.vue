@@ -225,8 +225,8 @@ export default {
     },
     computed: {
         elements() {
-            const { hints, brands, purchases } = this;
-            return [].concat(hints).concat(brands).concat(purchases);
+            const { hints, brands, purchases, orgs } = this;
+            return [].concat(hints).concat(brands).concat(purchases).concat(orgs);
         },
         intervals() {
             const { hints, brands, purchases } = this;
