@@ -1,7 +1,15 @@
 @import "~fonts/icomoon/variables";
 
-.icon-bell-notif::before {
+.icon-regular-bell::before {
     content: "\e954";
+}
+
+.icon-bell-slash::before {
+    content: "\e955";
+}
+
+.icon-bell-on::before {
+    content: "\e956";
 }
 
 .icon-id-card-solid::before {
