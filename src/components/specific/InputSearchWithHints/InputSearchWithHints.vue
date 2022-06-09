@@ -9,8 +9,8 @@
                     autocomplete="off"
                     placeholder="Поиск"
                     @keyup.enter="onSearch"
-                    @keyup.up="onKeyUp"
-                    @keyup.down="onKeyDown"
+                    @keydown.up="onKeyUp"
+                    @keydown.down="onKeyDown"
                 >
             </label>
 
@@ -229,7 +229,7 @@ export default {
             return [].concat(hints).concat(brands).concat(purchases).concat(orgs);
         },
         intervals() {
-            const { hints, brands, purchases } = this;
+            const { hints, brands, purchases, orgs } = this;
             return {
                 items: hints.length > 0 ? [0, hints.length] : [-1, -1],
                 brands:
@@ -241,6 +241,13 @@ export default {
                         ? [
                             hints.length + brands.length,
                             hints.length + brands.length + purchases.length,
+                        ]
+                        : [-1, -1],
+                orgs:
+                    orgs.length > 0
+                        ? [
+                            hints.length + brands.length + purchases.length,
+                            hints.length + brands.length + purchases.length + orgs.length,
                         ]
                         : [-1, -1],
             };
