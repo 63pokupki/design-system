@@ -3,7 +3,8 @@
         <div class="spui-InputSearchWithHints__input-wrapper">
             <label class="spui-InputSearchWithHints__label">
                 <input
-                    v-model="_value"
+                    :value="_value"
+                    @input="_value = $event.target.value"
                     class="spui-InputSearchWithHints__input"
                     type="text"
                     autocomplete="off"
