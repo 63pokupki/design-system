@@ -270,11 +270,11 @@ export default {
         },
         isCategorySearch: {
             type: Boolean,
-            default: true,
+            default: false,
         },
         categoriesSearch: {
             type: Array,
-            default: [],
+            default: () => [],
         },
         isCategorySearchOpen: {
             type: Boolean,

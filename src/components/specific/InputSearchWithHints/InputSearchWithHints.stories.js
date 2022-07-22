@@ -15,6 +15,7 @@ export const standart = () => ({
             isHintsOpen: false,
             isCategoryOpen: false,
             isCategorySearchOpen: false,
+            isCategorySearch: true,
             categoriesSearch: ['По закупке','По сайту'],
             categorySearch: 'По закупке',
             hints: [
@@ -115,6 +116,7 @@ export const standart = () => ({
         :purchases="purchases"
         :orgs="orgs"
         :is-hints-open="isHintsOpen" 
+        :isCategorySearch="isCategorySearch"
         :is-category-open="isCategoryOpen"
         :is-category-search-open="isCategorySearchOpen"
         :categoriesSearch="categoriesSearch"
