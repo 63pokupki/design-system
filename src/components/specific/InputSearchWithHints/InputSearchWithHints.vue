@@ -67,6 +67,61 @@
             </div>
         </div>
         <div
+            v-if="isCategorySearch"
+            class="spui-InputSearchWithHints__category"
+            @click="onCategorySearchClick"
+        >
+            <!-- добавить .dropdown-fixed-list_expanded для раскрытия меню категорий -->
+            <div
+                class="spui-dropdown-fixed-list spui-dropdown-fixed-list-category-search"
+                :class="{ 'is-expanded': isCategorySearchOpen }"
+            >
+                <!-- текущее значение -->
+                <label
+                    v-if="!isCategorySearchOpen"
+                    class="spui-Radio"
+                >
+                    <input
+                        class="spui-Radio__input"
+                        type="radio"
+                    >
+                    <span class="spui-Radio__fake active">
+                        <i
+                            class="spui-Radio__icon ds-icon icon-check-in-checkbox"
+                        />
+                    </span>
+                </label>
+                <span class="spui-dropdown-fixed-list__current">{{
+                    categoriesSearch[indexCategorySearch]
+                }}</span>
+                <!-- лист всех значений -->
+                <ul class="spui-dropdown-fixed-list__list">
+                    <li
+                        class="spui-dropdown-fixed-list__list-item"
+                        v-for="(categorySearch, i) in categoriesSearch"
+                        :key="i"
+                        @click.stop="() => onCategorySearchSelect(categorySearch, i)"
+                    >
+                        <label
+                            class="spui-Radio"
+                        >
+                            <input
+                                class="spui-Radio__input"
+                                type="radio"
+                            >
+                            <span :class="['spui-Radio__fake',{'active': indexCategorySearch === i}]">
+                                <i
+                                    v-if="indexCategorySearch === i"
+                                    class="spui-Radio__icon ds-icon icon-check-in-checkbox"
+                                />
+                            </span>
+                        </label>
+                        {{ categorySearch }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div
             v-if="isHintsOpen && category === 'items'"
             class="spui-InputSearchWithHints__hints"
         >
@@ -213,6 +268,18 @@ export default {
             type: Function,
             required: true,
         },
+        isCategorySearch: {
+            type: Boolean,
+            default: true,
+        },
+        categoriesSearch: {
+            type: Array,
+            default: [],
+        },
+        isCategorySearchOpen: {
+            type: Boolean,
+            default: false,
+        },
     },
     data() {
         return {
@@ -222,6 +289,7 @@ export default {
                 forum: 'По форуму',
             },
             focusIndex: -1,
+            indexCategorySearch: 0
         };
     },
     computed: {
@@ -325,6 +393,14 @@ export default {
             this.category = category;
             this.emitCategoryOpenState(false);
         },
+        emitCategorySearchOpenState(value) {
+            this.$emit('category-search-open-change', value, this.categorySearch);
+        },
+        onCategorySearchSelect(categorySearch, index) {
+            this.categorySearch = categorySearch;
+            this.indexCategorySearch = index;
+            this.emitCategorySearchOpenState(false);
+        },
         highlight(raw) {
             const lowercased = raw.toLowerCase();
             const search = this._lowercased;
@@ -390,6 +466,9 @@ export default {
         },
         onCategoryClick() {
             this.emitCategoryOpenState(true);
+        },
+        onCategorySearchClick() {
+            this.emitCategorySearchOpenState(true);
         },
         onSearch() {
             const params = {
