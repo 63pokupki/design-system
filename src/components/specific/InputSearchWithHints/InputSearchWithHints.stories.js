@@ -14,6 +14,9 @@ export const standart = () => ({
             text: 'платье',
             isHintsOpen: false,
             isCategoryOpen: false,
+            isCategorySearchOpen: false,
+            categoriesSearch: ['По закупке','По сайту'],
+            categorySearch: 'По закупке',
             hints: [
                 {
                     id: 104,
@@ -93,6 +96,10 @@ export const standart = () => ({
         onCategoryOpenChange(value) {
             this.isCategoryOpen = value;
         },
+        onCategorySearchOpenChange(value, categorySearch) {
+            this.isCategorySearchOpen = value;
+            this.categorySearch = categorySearch;
+        },
         onInputByItems() {
             console.log('Запрос к подсказкам для автодополнения');
         },
@@ -109,6 +116,8 @@ export const standart = () => ({
         :orgs="orgs"
         :is-hints-open="isHintsOpen" 
         :is-category-open="isCategoryOpen"
+        :is-category-search-open="isCategorySearchOpen"
+        :categoriesSearch="categoriesSearch"
         :fn-hint-label="fnHintLabel"
         :fn-hint-count="fnHintCount"
         :fn-brand-label="fnBrandLabel"
@@ -117,7 +126,8 @@ export const standart = () => ({
         :fn-org-label="fnOrgLabel"
         :fn-org-id="fnOrgId"
         @hints-open-change="onHintsOpenChange" 
-        @category-open-change="onCategoryOpenChange" 
+        @category-open-change="onCategoryOpenChange"
+        @category-search-open-change="onCategorySearchOpenChange"
         @input-by-items="onInputByItems" 
         @search="onSearch"></InputSearchWithHints>`,
 });
