@@ -77,20 +77,6 @@
                 :class="{ 'is-expanded': isCategorySearchOpen }"
             >
                 <!-- текущее значение -->
-                <label
-                    v-if="!isCategorySearchOpen"
-                    class="spui-Radio"
-                >
-                    <input
-                        class="spui-Radio__input"
-                        type="radio"
-                    >
-                    <span class="spui-Radio__fake active">
-                        <i
-                            class="spui-Radio__icon ds-icon icon-check-in-checkbox"
-                        />
-                    </span>
-                </label>
                 <span class="spui-dropdown-fixed-list__current">{{
                     categoriesSearch[indexCategorySearch]
                 }}</span>
@@ -102,20 +88,6 @@
                         :key="i"
                         @click.stop="() => onCategorySearchSelect(categorySearch, i)"
                     >
-                        <label
-                            class="spui-Radio"
-                        >
-                            <input
-                                class="spui-Radio__input"
-                                type="radio"
-                            >
-                            <span :class="['spui-Radio__fake',{'active': indexCategorySearch === i}]">
-                                <i
-                                    v-if="indexCategorySearch === i"
-                                    class="spui-Radio__icon ds-icon icon-check-in-checkbox"
-                                />
-                            </span>
-                        </label>
                         {{ categorySearch }}
                     </li>
                 </ul>
