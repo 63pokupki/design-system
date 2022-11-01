@@ -32,9 +32,12 @@ $spui-Collapse-body-color: #1d1e1f;
     padding: $spui-Collapse-padding;
 
     &__head {
-        cursor: pointer;
         user-select: none;
         padding: $spui-Collapse-head-padding;
+
+        &_pointer {
+            cursor: pointer;
+        }
     }
 
     &__heading {

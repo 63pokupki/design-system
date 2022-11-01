@@ -4,11 +4,12 @@
         class="spui-Collapse"
     >
         <div
-            class="spui-Collapse__head"
+            :class="[{ 'spui-Collapse__head_pointer': bCollapse }, 'spui-Collapse__head']"
             @click="_model = !_model"
         >
             <div class="spui-Collapse__heading">
-                <span>{{ _heading }}</span><i class="spui-Collapse__arrow ds-icon icon-arrow-down" />
+                <span>{{ _heading }}</span>
+                <i v-if="bCollapse" class="spui-Collapse__arrow ds-icon icon-arrow-down" />
             </div>
             <div class="spui-Collapse__metainfo">
                 {{ _metainfo }}
@@ -53,6 +54,11 @@ export default {
             type: Boolean,
             default: false,
         },
+        // возможность сворачивать секцию
+        bCollapse: {
+            type: Boolean,
+            default: true,
+        }
     },
     data() {
         return {
@@ -62,7 +68,7 @@ export default {
     computed: {
         _model: {
             get() {
-                return this.value;
+                return !this.bCollapse ? true : this.value;
             },
             set(value) {
                 this.$emit('input', value);

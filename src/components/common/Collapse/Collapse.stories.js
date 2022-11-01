@@ -121,3 +121,26 @@ export const withSlots = () => ({
         );
     },
 });
+
+export const withSlotsAndOffCollapse = () => ({
+    components: { Collapse, Checkbox },
+    data() {
+        return {
+            opened: false,
+            checked: true,
+        };
+    },
+    render() {
+        return (
+            <Collapse
+                v-model={this.opened}
+                heading="Со слотами - задаются только отступы и базовый размер текста"
+                bCollapse={false}
+            >
+                <template slot="beforebody">Слот перед телом секции</template>
+                Текст секции
+                <template slot="afterbody">Слот после тела секции</template>
+            </Collapse>
+        );
+    },
+});
