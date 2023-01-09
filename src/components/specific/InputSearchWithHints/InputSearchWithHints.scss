@@ -193,11 +193,6 @@ $spui-InputSearchWithHints_z3: $spui-InputSearchWithHints_z2 + 1;
         }
         &::before {
             content: '';
-            display: none;
-        }
-        &::after {
-            position: absolute;
-            content: '';
             width: 0;
             height: 0;
             right: 3px;
@@ -207,6 +202,10 @@ $spui-InputSearchWithHints_z3: $spui-InputSearchWithHints_z2 + 1;
             border: 4px solid transparent;
             border-top: 4px solid $color-text-base;
             z-index: 2;
+        }
+        &::after {
+            content: '';
+            display: none;
         }
     }
     // состояние .dropdown-fixed-list
@@ -240,13 +239,23 @@ $spui-InputSearchWithHints_z3: $spui-InputSearchWithHints_z2 + 1;
             flex-direction: column;
             position: relative;
             right: -10px;
-            top: -13px;
-            padding: 5px 20px 5px 10px;
+            top: -19px;
+            padding: 10px 14px 10px 24px;
             transform: translateY(50%);
         }
 
         &::before {
-            left: 0;
+            position: absolute;
+            content: '';
+            width: 0;
+            height: 0;
+            right: 3px;
+            top: calc(50% + 3px);
+            transform: translateY(-50%);
+            display: block;
+            border: 4px solid transparent;
+            border-top: 4px solid $color-text-base;
+            z-index: 2;
         }
         &::after {
             right: 17px;
@@ -255,6 +264,10 @@ $spui-InputSearchWithHints_z3: $spui-InputSearchWithHints_z2 + 1;
 
     .spui-dropdown-fixed-list__list-item {
         display: flex;
+
+        &_active {
+            border-bottom: 0.5px #5caef8 solid;
+        }
     }
 
 }

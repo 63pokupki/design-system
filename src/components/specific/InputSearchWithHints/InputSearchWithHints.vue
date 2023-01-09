@@ -84,6 +84,7 @@
                 <ul class="spui-dropdown-fixed-list__list">
                     <li
                         class="spui-dropdown-fixed-list__list-item"
+                        :class="[categorySearch === categoriesSearch[indexCategorySearch] ? 'spui-dropdown-fixed-list__list-item_active' : '']"
                         v-for="(categorySearch, i) in categoriesSearch"
                         :key="i"
                         @click.stop="() => onCategorySearchSelect(categorySearch, i)"
