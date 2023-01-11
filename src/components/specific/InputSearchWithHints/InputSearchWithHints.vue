@@ -81,7 +81,8 @@
                     categoriesSearch[indexCategorySearch]
                 }}</span>
                 <!-- лист всех значений -->
-                <ul class="spui-dropdown-fixed-list__list">
+                <ul v-click-outside="onClickOutside"
+                    class="spui-dropdown-fixed-list__list">
                     <li
                         class="spui-dropdown-fixed-list__list-item"
                         :class="[categorySearch === categoriesSearch[indexCategorySearch] ? 'spui-dropdown-fixed-list__list-item_active' : '']"
@@ -181,9 +182,13 @@
 <script>
 import isEqual from 'lodash-es/isEqual';
 import inRange from 'lodash-es/inRange';
+import {clickOutside} from "@/directives";
 
 export default {
     name: 'InputSearchWithHints',
+    directives: {
+        'click-outside': clickOutside,
+    },
     props: {
         value: {
             type: String,
@@ -489,6 +494,9 @@ export default {
             ) {
                 this.focusIndex += 1;
             }
+        },
+        onClickOutside() {
+            this.emitCategoryOpenState(false);
         },
     },
 };
