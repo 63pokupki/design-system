@@ -10,19 +10,21 @@
             <template slot="beforebody">
                 <div class="spui-CollapseMultipleSelectList__controls">
                     <span>{{ _selectedPositionsNumber }}</span>
-                    <span
-                        ><span
+                    <span>
+                        <span
                             class="spui-CollapseMultipleSelectList__all"
                             @click="onSelectAll"
-                            >Выбрать все</span
                         >
+                            Выбрать все
+                        </span>
                         <span
                             v-show="_displayClearButton"
                             class="spui-CollapseMultipleSelectList__clear"
                             @click="onClear"
-                            >Очистить</span
-                        ></span
-                    >
+                        >
+                            Очистить
+                        </span>
+                    </span>
                 </div>
                 <InputSearch
                     v-if="displaySearchInput"
