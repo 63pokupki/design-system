@@ -1,26 +1,28 @@
 <template>
     <div class="spui-CollapseMultipleSelectList">
-        <slot
-            v-if="_isSlotBeforeExist"
-            name="before"
-        />
+        <slot v-if="_isSlotBeforeExist" name="before" />
         <Collapse
             v-model="_open"
             :heading="heading"
             :metainfo="_metainfo"
+            :bCollapse="bCollapse"
         >
             <template slot="beforebody">
                 <div class="spui-CollapseMultipleSelectList__controls">
                     <span>{{ _selectedPositionsNumber }}</span>
-                    <span><span
-                              class="spui-CollapseMultipleSelectList__all"
-                              @click="onSelectAll"
-                          >Выбрать все</span>
+                    <span
+                        ><span
+                            class="spui-CollapseMultipleSelectList__all"
+                            @click="onSelectAll"
+                            >Выбрать все</span
+                        >
                         <span
                             v-show="_displayClearButton"
                             class="spui-CollapseMultipleSelectList__clear"
                             @click="onClear"
-                        >Очистить</span></span>
+                            >Очистить</span
+                        ></span
+                    >
                 </div>
                 <InputSearch
                     v-if="displaySearchInput"
@@ -41,10 +43,7 @@
                 :fn-compare="fnCompare"
                 @click.native="onClick"
             />
-            <template
-                v-show="_displayMoreButton"
-                slot="afterbody"
-            >
+            <template v-show="_displayMoreButton" slot="afterbody">
                 <div
                     class="spui-CollapseMultipleSelectList__more"
                     @click="onChangeExpand"
@@ -65,10 +64,7 @@
         >
             Применить
         </Tooltip>
-        <slot
-            v-if="_isSlotAfterExist"
-            name="after"
-        />
+        <slot v-if="_isSlotAfterExist" name="after" />
     </div>
 </template>
 
@@ -144,6 +140,11 @@ export default {
             type: Boolean,
             default: true,
         },
+        // возможность сворачивать секцию
+        bCollapse: {
+            type: Boolean,
+            default: true,
+        },
     },
     data() {
         return {
@@ -201,18 +202,18 @@ export default {
                 const all = this.values.length;
 
                 switch (selected) {
-                case 0:
-                    return 'Выберите параметр';
+                    case 0:
+                        return 'Выберите параметр';
 
-                case all:
-                    return 'Выбрано все';
+                    case all:
+                        return 'Выбрано все';
 
-                default:
-                    return `${selected} ${pluralize(selected, [
-                        'позиция',
-                        'позиции',
-                        'позиций',
-                    ])}`;
+                    default:
+                        return `${selected} ${pluralize(selected, [
+                            'позиция',
+                            'позиции',
+                            'позиций',
+                        ])}`;
                 }
             },
         },
@@ -241,7 +242,7 @@ export default {
                 if (this._value && this._value.length) {
                     const str = this._value.reduce(
                         (acc, el) => `${acc + this.label(el)}, `,
-                        '',
+                        ''
                     );
                     const sliced = str.slice(0, str.length - 2);
                     return sliced;
