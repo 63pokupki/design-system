@@ -70,6 +70,7 @@
             v-if="isCategorySearch"
             class="spui-InputSearchWithHints__category"
             @click="onCategorySearchClick"
+            v-click-outside="onClickOutside"
         >
             <!-- добавить .dropdown-fixed-list_expanded для раскрытия меню категорий -->
             <div
@@ -81,8 +82,7 @@
                     categoriesSearch[indexCategorySearch]
                 }}</span>
                 <!-- лист всех значений -->
-                <ul v-click-outside="onClickOutside"
-                    class="spui-dropdown-fixed-list__list">
+                <ul class="spui-dropdown-fixed-list__list">
                     <li
                         class="spui-dropdown-fixed-list__list-item"
                         :class="[categorySearch === categoriesSearch[indexCategorySearch] ? 'spui-dropdown-fixed-list__list-item_active' : '']"
