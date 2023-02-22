@@ -74,6 +74,7 @@
         >
             <!-- добавить .dropdown-fixed-list_expanded для раскрытия меню категорий -->
             <div
+                 @click="onClickHideState"
                 class="spui-dropdown-fixed-list spui-dropdown-fixed-list-category-search"
                 :class="{ 'is-expanded': isCategorySearchOpen }"
             >
@@ -498,6 +499,16 @@ export default {
         onClickOutside() {
             this.emitCategoryOpenState(false);
         },
+        /**Закрыть модалку при клике на "Дроп даун"*/
+        onClickHideState() {
+            event.stopPropagation();
+            if (this.isCategorySearchOpen) {
+                this.emitCategoryOpenState(false);
+            } else {
+                this.emitCategorySearchOpenState(true);
+            }
+        },
+        
     },
 };
 </script>
